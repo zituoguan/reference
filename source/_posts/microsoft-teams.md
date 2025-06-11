@@ -7,80 +7,80 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 38 keyboard shortcuts found in Microsoft Teams
+  Microsoft Teams 中 38 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### General
+### 常规
 
-| Shortcut   | Action                  |
+| 快捷键     | 操作                  |
 | ---------- | ----------------------- |
-| `Ctrl` `.` | Show keyboard shortcuts |
-| `Ctrl` `E` | Go to search            |
-| `Ctrl` `/` | Show commands           |
-| `Ctrl` `G` | Goto                    |
-| `Ctrl` `N` | Start new chat          |
-| `Ctrl` `,` | Open settings           |
-| `F1`       | Open help               |
-| `Esc`      | Close                   |
-| `Ctrl` `=` | Zoom in                 |
-| `Ctrl` `-` | Zoom out                |
-| `Ctrl` `0` | Return to default zoom  |
+| `Ctrl` `.` | 显示键盘快捷键          |
+| `Ctrl` `E` | 转到搜索                |
+| `Ctrl` `/` | 显示命令                |
+| `Ctrl` `G` | 转到                    |
+| `Ctrl` `N` | 开始新聊天              |
+| `Ctrl` `,` | 打开设置                |
+| `F1`       | 打开帮助                |
+| `Esc`      | 关闭                    |
+| `Ctrl` `=` | 放大                    |
+| `Ctrl` `-` | 缩小                    |
+| `Ctrl` `0` | 恢复默认缩放            |
 
 {.shortcuts}
 
-### Navigation
+### 导航
 
-| Shortcut              | Action                     |
+| 快捷键                | 操作                     |
 | --------------------- | -------------------------- |
-| `Ctrl` `1`            | Open activity              |
-| `Ctrl` `2`            | Open chat                  |
-| `Ctrl` `3`            | Open teams                 |
-| `Ctrl` `4`            | Open calendar              |
-| `Ctrl` `5`            | Open calls                 |
-| `Ctrl` `6`            | Open files                 |
-| `Alt` `Up`            | Go to previous list item   |
-| `Alt` `Down`          | Go to next list item       |
-| `Ctrl` `Shift` `Up`   | Move selected team up      |
-| `Ctrl` `Shift` `Down` | Move selected team down    |
-| `Ctrl` `Shift` `F6`   | Go to the previous section |
-| `Ctrl` `F6`           | Go to the next section     |
+| `Ctrl` `1`            | 打开活动                   |
+| `Ctrl` `2`            | 打开聊天                   |
+| `Ctrl` `3`            | 打开团队                   |
+| `Ctrl` `4`            | 打开日历                   |
+| `Ctrl` `5`            | 打开通话                   |
+| `Ctrl` `6`            | 打开文件                   |
+| `Alt` `Up`            | 转到上一个列表项           |
+| `Alt` `Down`          | 转到下一个列表项           |
+| `Ctrl` `Shift` `Up`   | 上移选定的团队             |
+| `Ctrl` `Shift` `Down` | 下移选定的团队             |
+| `Ctrl` `Shift` `F6`   | 转到上一节                 |
+| `Ctrl` `F6`           | 转到下一节                 |
 
 {.shortcuts}
 
-### Messaging
+### 消息
 
-| Shortcut           | Action                            |
+| 快捷键             | 操作                            |
 | ------------------ | --------------------------------- |
-| `Alt` `Shift` `C`  | Go to compose box                 |
-| `Ctrl` `Shift` `X` | Expand compose box                |
-| `Ctrl` `Enter`     | Send, in the expanded compose box |
-| `Ctrl` `O`         | Attach a file                     |
-| `Shift` `Enter`    | Start a new line                  |
-| `Alt` `Shift` `R`  | Reply to thread                   |
+| `Alt` `Shift` `C`  | 转到撰写框                        |
+| `Ctrl` `Shift` `X` | 展开撰写框                        |
+| `Ctrl` `Enter`     | 在展开的撰写框中发送              |
+| `Ctrl` `O`         | 附加文件                          |
+| `Shift` `Enter`    | 开始新的一行                      |
+| `Alt` `Shift` `R`  | 回复话题                          |
 
 {.shortcuts}
 
-### Meetings and Calls
+### 会议和通话
 
-| Shortcut               | Action                |
+| 快捷键                 | 操作                  |
 | ---------------------- | --------------------- |
-| `Ctrl` `Shift` `A`     | Accept video call     |
-| `Ctrl` `Shift` `S`     | Accept audio call     |
-| `Ctrl` `Shift` `D`     | Decline call          |
-| `Ctrl` `Shift` `C`     | Start audio call      |
-| `Ctrl` `Shift` `U`     | Start video call      |
-| `Ctrl` `Shift` `M`     | Toggle mute           |
-| `Ctrl` `Shift` `O`     | Toggle video          |
-| `Ctrl` `Shift` `F`     | Toggle fullscreen     |
-| `Ctrl` `Shift` `Space` | Go to sharing toolbar |
+| `Ctrl` `Shift` `A`     | 接受视频通话          |
+| `Ctrl` `Shift` `S`     | 接受音频通话          |
+| `Ctrl` `Shift` `D`     | 拒绝通话              |
+| `Ctrl` `Shift` `C`     | 开始音频通话          |
+| `Ctrl` `Shift` `U`     | 开始视频通话          |
+| `Ctrl` `Shift` `M`     | 切换静音              |
+| `Ctrl` `Shift` `O`     | 切换视频              |
+| `Ctrl` `Shift` `F`     | 切换全屏              |
+| `Ctrl` `Shift` `Space` | 转到共享工具栏        |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Microsoft Teams](https://support.microsoft.com/en-us/office/keyboard-shortcuts-for-microsoft-teams-2e8e2a70-e8d8-4a19-949b-4c36dd5292d2)
+- [Microsoft Teams 的键盘快捷键](https://support.microsoft.com/en-us/office/keyboard-shortcuts-for-microsoft-teams-2e8e2a70-e8d8-4a19-949b-4c36dd5292d2)
   _(support.microsoft.com)_

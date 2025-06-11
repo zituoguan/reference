@@ -5,169 +5,169 @@ tags:
   - DB
   - RDBMS
 categories:
-  - Database
+  - 数据库
 date: 2021-01-11 14:19:24
 intro: |
-  The [PostgreSQL](https://www.postgresql.org/docs/current/) cheat sheet provides you with the common PostgreSQL commands and statements.
+  [PostgreSQL](https://www.postgresql.org/docs/current/) 速查表为您提供了常用的 PostgreSQL 命令和语句。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门指南
 
-### Getting started
+### 快速入门
 
-Switch and connect
+切换并连接
 
 ```shell script
 $ sudo -u postgres psql
 ```
 
-List all databases
+列出所有数据库
 
 ```shell script
 postgres=# \l
 ```
 
-Connect to the database named postgres
+连接到名为 postgres 的数据库
 
 ```shell script
 postgres=# \c postgres
 ```
 
-Disconnect
+断开连接
 
 ```shell script
 postgres=# \q
 postgres=# \!
 ```
 
-### psql commands {.col-span-2}
+### psql 命令 {.col-span-2}
 
-| Option              | Example                                      | Description                    |
-| ------------------- | -------------------------------------------- | :----------------------------- |
-| `[-d] <database>`   | psql -d mydb                                 | Connecting to database         |
-| `-U`                | psql -U john mydb                            | Connecting as a specific user  |
-| `-h` `-p`           | psql -h localhost -p 5432 mydb               | Connecting to a host/port      |
-| `-U` `-h` `-p` `-d` | psql -U admin -h 192.168.1.5 -p 2506 -d mydb | Connect remote PostgreSQL      |
-| `-W`                | psql -W mydb                                 | Force password                 |
-| `-c`                | psql -c '\c postgres' -c '\dt'               | Execute a SQL query or command |
-| `-H`                | psql -c "\l+" -H postgres > database.html    | Generate HTML report           |
-| `-l`                | psql -l                                      | List all databases             |
-| `-f`                | psql mydb -f file.sql                        | Execute commands from a file   |
-| `-V`                | psql -V                                      | Print the psql version         |
+| 选项                | 示例                                         | 描述                       |
+| ------------------- | -------------------------------------------- | :------------------------- |
+| `[-d] <数据库>`     | psql -d mydb                                 | 连接到数据库               |
+| `-U`                | psql -U john mydb                            | 以特定用户身份连接         |
+| `-h` `-p`           | psql -h localhost -p 5432 mydb               | 连接到主机/端口            |
+| `-U` `-h` `-p` `-d` | psql -U admin -h 192.168.1.5 -p 2506 -d mydb | 连接远程 PostgreSQL        |
+| `-W`                | psql -W mydb                                 | 强制输入密码               |
+| `-c`                | psql -c '\c postgres' -c '\dt'               | 执行 SQL 查询或命令        |
+| `-H`                | psql -c "\l+" -H postgres > database.html    | 生成 HTML 报告             |
+| `-l`                | psql -l                                      | 列出所有数据库             |
+| `-f`                | psql mydb -f file.sql                        | 从文件执行命令             |
+| `-V`                | psql -V                                      | 打印 psql 版本             |
 
 {.show-header}
 
-### Getting help
+### 获取帮助
 
 | -           | -                              |
 | ----------- | :----------------------------- |
-| `\h`        | Help on syntax of SQL commands |
-| `\h` DELETE | DELETE SQL statement syntax    |
-| `\?`        | List of PostgreSQL command     |
+| `\h`        | SQL 命令语法帮助               |
+| `\h` DELETE | DELETE SQL 语句语法            |
+| `\?`        | PostgreSQL 命令列表            |
 
-Run in PostgreSQL console
+在 PostgreSQL 控制台中运行
 
-## PostgreSQL Working
+## PostgreSQL 操作
 
-### Recon
+### 侦察
 
-Show version
+显示版本
 
 ```
 SHOW SERVER_VERSION;
 ```
 
-Show system status
+显示系统状态
 
 ```sql {.wrap}
 \conninfo
 ```
 
-Show environmental variables
+显示环境变量
 
 ```sql {.wrap}
 SHOW ALL;
 ```
 
-List users
+列出用户
 
 ```sql {.wrap}
 SELECT rolname FROM pg_roles;
 ```
 
-Show current user
+显示当前用户
 
 ```sql {.wrap}
 SELECT current_user;
 ```
 
-Show current user's permissions
+显示当前用户的权限
 
 ```
 \du
 ```
 
-Show current database
+显示当前数据库
 
 ```sql {.wrap}
 SELECT current_database();
 ```
 
-Show all tables in database
+显示数据库中的所有表
 
 ```sql {.wrap}
 \dt
 ```
 
-List functions
+列出函数
 
 ```sql {.wrap}
-\df <schema>
+\df <模式名>
 ```
 
-### Databases
+### 数据库
 
-List databases
+列出数据库
 
 ```sql {.wrap}
 \l
 ```
 
-Connect to database
+连接到数据库
 
 ```sql {.wrap}
-\c <database_name>
+\c <数据库名>
 ```
 
-Show current database
+显示当前数据库
 
 ```sql {.wrap}
 SELECT current_database();
 ```
 
-[Create database](http://www.postgresql.org/docs/current/static/sql-createdatabase.html)
+[创建数据库](http://www.postgresql.org/docs/current/static/sql-createdatabase.html)
 
 ```sql {.wrap}
-CREATE DATABASE <database_name> WITH OWNER <username>;
+CREATE DATABASE <数据库名> WITH OWNER <用户名>;
 ```
 
-[Drop database](http://www.postgresql.org/docs/current/static/sql-dropdatabase.html)
+[删除数据库](http://www.postgresql.org/docs/current/static/sql-dropdatabase.html)
 
 ```sql {.wrap}
-DROP DATABASE IF EXISTS <database_name>;
+DROP DATABASE IF EXISTS <数据库名>;
 ```
 
-[Rename database](http://www.postgresql.org/docs/current/static/sql-alterdatabase.html)
+[重命名数据库](http://www.postgresql.org/docs/current/static/sql-alterdatabase.html)
 
 ```sql {.wrap}
-ALTER DATABASE <old_name> RENAME TO <new_name>;
+ALTER DATABASE <旧名称> RENAME TO <新名称>;
 ```
 
-### Tables
+### 表
 
-List tables, in current db
+列出当前数据库中的表
 
 ```sql {.wrap}
 \dt
@@ -175,7 +175,7 @@ List tables, in current db
 SELECT table_schema,table_name FROM information_schema.tables ORDER BY table_schema,table_name;
 ```
 
-List tables, globally
+全局列出表
 
 ```sql {.wrap}
 \dt *.*.
@@ -183,208 +183,208 @@ List tables, globally
 SELECT * FROM pg_catalog.pg_tables
 ```
 
-List table schema
+列出表结构
 
 ```sql {.wrap}
-\d <table_name>
-\d+ <table_name>
+\d <表名>
+\d+ <表名>
 
 SELECT column_name, data_type, character_maximum_length
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE table_name = '<table_name>';
+WHERE table_name = '<表名>';
 ```
 
-[Create table](http://www.postgresql.org/docs/current/static/sql-createtable.html)
+[创建表](http://www.postgresql.org/docs/current/static/sql-createtable.html)
 
 ```sql {.wrap}
-CREATE TABLE <table_name>(
-  <column_name> <column_type>,
-  <column_name> <column_type>
+CREATE TABLE <表名>(
+  <列名> <列类型>,
+  <列名> <列类型>
 );
 ```
 
-Create table, with an auto-incrementing primary key
+创建带自增主键的表
 
 ```sql {.wrap}
-CREATE TABLE <table_name> (
-  <column_name> SERIAL PRIMARY KEY
+CREATE TABLE <表名> (
+  <列名> SERIAL PRIMARY KEY
 );
 ```
 
-[Delete table](http://www.postgresql.org/docs/current/static/sql-droptable.html)
+[删除表](http://www.postgresql.org/docs/current/static/sql-droptable.html)
 
 ```sql {.wrap}
-DROP TABLE IF EXISTS <table_name> CASCADE;
+DROP TABLE IF EXISTS <表名> CASCADE;
 ```
 
-### Permissions
+### 权限
 
-Become the postgres user, if you have permission errors
+如果遇到权限错误，成为 postgres 用户
 
 ```shell
 sudo su - postgres
 psql
 ```
 
-[Grant](http://www.postgresql.org/docs/current/static/sql-grant.html) all permissions on database
+[授予](http://www.postgresql.org/docs/current/static/sql-grant.html)数据库所有权限
 
 ```sql {.wrap}
-GRANT ALL PRIVILEGES ON DATABASE <db_name> TO <user_name>;
+GRANT ALL PRIVILEGES ON DATABASE <数据库名> TO <用户名>;
 ```
 
-Grant connection permissions on database
+授予数据库连接权限
 
 ```sql {.wrap}
-GRANT CONNECT ON DATABASE <db_name> TO <user_name>;
+GRANT CONNECT ON DATABASE <数据库名> TO <用户名>;
 ```
 
-Grant permissions on schema
+授予模式权限
 
 ```sql {.wrap}
-GRANT USAGE ON SCHEMA public TO <user_name>;
+GRANT USAGE ON SCHEMA public TO <用户名>;
 ```
 
-Grant permissions to functions
+授予函数权限
 
 ```sql {.wrap}
-GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO <user_name>;
+GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO <用户名>;
 ```
 
-Grant permissions to select, update, insert, delete, on a all tables
+授予对所有表的选择、更新、插入、删除权限
 
 ```sql {.wrap}
-GRANT SELECT, UPDATE, INSERT ON ALL TABLES IN SCHEMA public TO <user_name>;
+GRANT SELECT, UPDATE, INSERT ON ALL TABLES IN SCHEMA public TO <用户名>;
 ```
 
-Grant permissions, on a table
+授予对表的权限
 
 ```sql {.wrap}
-GRANT SELECT, UPDATE, INSERT ON <table_name> TO <user_name>;
+GRANT SELECT, UPDATE, INSERT ON <表名> TO <用户名>;
 ```
 
-Grant permissions, to select, on a table
+授予对表选择的权限
 
 ```sql {.wrap}
-GRANT SELECT ON ALL TABLES IN SCHEMA public TO <user_name>;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO <用户名>;
 ```
 
-### Columns
+### 列
 
-[Add column](http://www.postgresql.org/docs/current/static/sql-altertable.html)
+[添加列](http://www.postgresql.org/docs/current/static/sql-altertable.html)
 
 ```sql {.wrap}
-ALTER TABLE <table_name> IF EXISTS
-ADD <column_name> <data_type> [<constraints>];
+ALTER TABLE <表名> IF EXISTS
+ADD <列名> <数据类型> [<约束>];
 ```
 
-Update column
+更新列
 
 ```sql {.wrap}
-ALTER TABLE <table_name> IF EXISTS
-ALTER <column_name> TYPE <data_type> [<constraints>];
+ALTER TABLE <表名> IF EXISTS
+ALTER <列名> TYPE <数据类型> [<约束>];
 ```
 
-Delete column
+删除列
 
 ```sql {.wrap}
-ALTER TABLE <table_name> IF EXISTS
-DROP <column_name>;
+ALTER TABLE <表名> IF EXISTS
+DROP <列名>;
 ```
 
-Update column to be an auto-incrementing primary key
+更新列为自增主键
 
 ```sql {.wrap}
-ALTER TABLE <table_name>
-ADD COLUMN <column_name> SERIAL PRIMARY KEY;
+ALTER TABLE <表名>
+ADD COLUMN <列名> SERIAL PRIMARY KEY;
 ```
 
-Insert into a table, with an auto-incrementing primary key
+向带自增主键的表中插入数据
 
 ```sql {.wrap}
-INSERT INTO <table_name>
-VALUES (DEFAULT, <value1>);
+INSERT INTO <表名>
+VALUES (DEFAULT, <值1>);
 
 
-INSERT INTO <table_name> (<column1_name>,<column2_name>)
-VALUES ( <value1>,<value2> );
+INSERT INTO <表名> (<列1名>,<列2名>)
+VALUES ( <值1>,<值2> );
 ```
 
-### Data
+### 数据
 
-[Select](http://www.postgresql.org/docs/current/static/sql-select.html) all data
+[选择](http://www.postgresql.org/docs/current/static/sql-select.html)所有数据
 
 ```sql {.wrap}
-SELECT * FROM <table_name>;
+SELECT * FROM <表名>;
 ```
 
-Read one row of data
+读取一行数据
 
 ```sql {.wrap}
-SELECT * FROM <table_name> LIMIT 1;
+SELECT * FROM <表名> LIMIT 1;
 ```
 
-Search for data
+搜索数据
 
 ```sql {.wrap}
-SELECT * FROM <table_name> WHERE <column_name> = <value>;
+SELECT * FROM <表名> WHERE <列名> = <值>;
 ```
 
-[Insert](http://www.postgresql.org/docs/current/static/sql-insert.html) data
+[插入](http://www.postgresql.org/docs/current/static/sql-insert.html)数据
 
 ```sql {.wrap}
-INSERT INTO <table_name> VALUES( <value_1>, <value_2> );
+INSERT INTO <表名> VALUES( <值1>, <值2> );
 ```
 
-[Update](http://www.postgresql.org/docs/current/static/sql-update.html) data
+[更新](http://www.postgresql.org/docs/current/static/sql-update.html)数据
 
 ```sql {.wrap}
-UPDATE <table_name>
-SET <column_1> = <value_1>, <column_2> = <value_2>
-WHERE <column_1> = <value>;
+UPDATE <表名>
+SET <列1> = <值1>, <列2> = <值2>
+WHERE <列1> = <值>;
 ```
 
-[Delete](http://www.postgresql.org/docs/current/static/sql-delete.html) all data
+[删除](http://www.postgresql.org/docs/current/static/sql-delete.html)所有数据
 
 ```sql {.wrap}
-DELETE FROM <table_name>;
+DELETE FROM <表名>;
 ```
 
-Delete specific data
+删除特定数据
 
 ```sql {.wrap}
-DELETE FROM <table_name>
-WHERE <column_name> = <value>;
+DELETE FROM <表名>
+WHERE <列名> = <值>;
 ```
 
-### Users
+### 用户
 
-List roles
+列出角色
 
 ```sql {.wrap}
 SELECT rolname FROM pg_roles;
 ```
 
-[Create user](http://www.postgresql.org/docs/current/static/sql-createuser.html)
+[创建用户](http://www.postgresql.org/docs/current/static/sql-createuser.html)
 
 ```sql {.wrap}
-CREATE USER <user_name> WITH PASSWORD '<password>';
+CREATE USER <用户名> WITH PASSWORD '<密码>';
 ```
 
-[Drop user](http://www.postgresql.org/docs/current/static/sql-dropuser.html)
+[删除用户](http://www.postgresql.org/docs/current/static/sql-dropuser.html)
 
 ```sql {.wrap}
-DROP USER IF EXISTS <user_name>;
+DROP USER IF EXISTS <用户名>;
 ```
 
-[Alter](http://www.postgresql.org/docs/current/static/sql-alterrole.html) user password
+[修改](http://www.postgresql.org/docs/current/static/sql-alterrole.html)用户密码
 
 ```sql {.wrap}
-ALTER ROLE <user_name> WITH PASSWORD '<password>';
+ALTER ROLE <用户名> WITH PASSWORD '<密码>';
 ```
 
-### Schema
+### 模式
 
-List schemas
+列出模式
 
 ```sql {.wrap}
 \dn
@@ -394,176 +394,172 @@ SELECT schema_name FROM information_schema.schemata;
 SELECT nspname FROM pg_catalog.pg_namespace;
 ```
 
-[Create schema](http://www.postgresql.org/docs/current/static/sql-createschema.html)
+[创建模式](http://www.postgresql.org/docs/current/static/sql-createschema.html)
 
 ```sql {.wrap}
-CREATE SCHEMA IF NOT EXISTS <schema_name>;
+CREATE SCHEMA IF NOT EXISTS <模式名>;
 ```
 
-[Drop schema](http://www.postgresql.org/docs/current/static/sql-dropschema.html)
+[删除模式](http://www.postgresql.org/docs/current/static/sql-dropschema.html)
 
 ```sql {.wrap}
-DROP SCHEMA IF EXISTS <schema_name> CASCADE;
+DROP SCHEMA IF EXISTS <模式名> CASCADE;
 ```
 
-### Dates
+### 日期
 
-Show [current date](https://www.postgresql.org/docs/15/functions-datetime.html#FUNCTIONS-DATETIME-CURRENT) YYYY-MM-DD
+显示[当前日期](https://www.postgresql.org/docs/15/functions-datetime.html#FUNCTIONS-DATETIME-CURRENT) YYYY-MM-DD
 
 ```sql {.wrap}
 SELECT current_date;
 ```
 
-Calculate
-[age](<https://www.postgresql.org/docs/15/functions-datetime.html#:~:text=age%20(%20timestamp%2C%20timestamp%20)%20%E2%86%92%20interval>)
-between two dates
+计算两个日期之间的[年龄](<https://www.postgresql.org/docs/15/functions-datetime.html#:~:text=age%20(%20timestamp%2C%20timestamp%20)%20%E2%86%92%20interval>)
 
 ```sql {.wrap}
 SELECT age(timestamp, timestamp);
 ```
 
-Show [current time](https://www.postgresql.org/docs/15/functions-datetime.html#FUNCTIONS-DATETIME-CURRENT) with time
-zone
+显示带时区的[当前时间](https://www.postgresql.org/docs/15/functions-datetime.html#FUNCTIONS-DATETIME-CURRENT)
 
 ```sql {.wrap}
 SELECT current_time;
 ```
 
-[Make](<https://www.postgresql.org/docs/15/functions-datetime.html#:~:text=make_date%20(%20year%20int%2C%20month%20int%2C%20day%20int%20)%20%E2%86%92%20date>)
-dates using integers
+使用整数[创建](<https://www.postgresql.org/docs/15/functions-datetime.html#:~:text=make_date%20(%20year%20int%2C%20month%20int%2C%20day%20int%20)%20%E2%86%92%20date>)日期
 
 ```sql {.wrap}
 SELECT make_date(2021,03,25);
 ```
 
-## PostgreSQL Commands
+## PostgreSQL 命令
 
-### Tables
+### 表
 
 | -                | -                               |
 | ---------------- | :------------------------------ |
-| `\d <table>`     | Describe table                  |
-| `\d+ <table>`    | Describe table with details     |
-| `\dt`            | List tables from current schema |
-| `\dt *.*`        | List tables from all schemas    |
-| `\dt <schema>.*` | List tables for a schema        |
-| `\dp`            | List table access privileges    |
-| `\det[+]`        | List foreign tables             |
+| `\d <表>`        | 描述表                          |
+| `\d+ <表>`       | 描述表（带详细信息）            |
+| `\dt`            | 列出当前模式的表                |
+| `\dt *.*`        | 列出所有模式的表                |
+| `\dt <模式>.*`   | 列出指定模式的表                |
+| `\dp`            | 列出表访问权限                  |
+| `\det[+]`        | 列出外部表                      |
 
-### Query buffer
+### 查询缓冲区
 
 | -            | -                                  |
 | ------------ | :--------------------------------- |
-| `\e [FILE]`  | Edit the query buffer (or file)    |
-| `\ef [FUNC]` | Edit function definition           |
-| `\p`         | Show the contents                  |
-| `\r`         | Reset (clear) the query buffer     |
-| `\s [FILE]`  | Display history or save it to file |
-| `\w FILE`    | Write query buffer to file         |
+| `\e [文件]`  | 编辑查询缓冲区（或文件）           |
+| `\ef [函数]` | 编辑函数定义                       |
+| `\p`         | 显示内容                           |
+| `\r`         | 重置（清除）查询缓冲区             |
+| `\s [文件]`  | 显示历史记录或将其保存到文件       |
+| `\w 文件`    | 将查询缓冲区写入文件               |
 
-### Informational {.row-span-4}
+### 信息性 {.row-span-4}
 
 | -               | -                               |
 | --------------- | :------------------------------ |
-| `\l[+]`         | List all databases              |
-| `\dn[S+]`       | List schemas                    |
-| `\di[S+]`       | List indexes                    |
-| `\du[+]`        | List roles                      |
-| `\ds[S+]`       | List sequences                  |
-| `\df[antw][S+]` | List functions                  |
-| `\deu[+]`       | List user mappings              |
-| `\dv[S+]`       | List views                      |
-| `\dl`           | List large objects              |
-| `\dT[S+]`       | List data types                 |
-| `\da[S]`        | List aggregates                 |
-| `\db[+]`        | List tablespaces                |
-| `\dc[S+]`       | List conversions                |
-| `\dC[+]`        | List casts                      |
-| `\ddp`          | List default privileges         |
-| `\dd[S]`        | Show object descriptions        |
-| `\dD[S+]`       | List domains                    |
-| `\des[+]`       | List foreign servers            |
-| `\dew[+]`       | List foreign-data wrappers      |
-| `\dF[+]`        | List text search configurations |
-| `\dFd[+]`       | List text search dictionaries   |
-| `\dFp[+]`       | List text search parsers        |
-| `\dFt[+]`       | List text search templates      |
-| `\dL[S+]`       | List procedural languages       |
-| `\do[S]`        | List operators                  |
-| `\dO[S+]`       | List collations                 |
-| `\drds`         | List per-database role settings |
-| `\dx[+]`        | List extensions                 |
+| `\l[+]`         | 列出所有数据库                  |
+| `\dn[S+]`       | 列出模式                        |
+| `\di[S+]`       | 列出索引                        |
+| `\du[+]`        | 列出角色                        |
+| `\ds[S+]`       | 列出序列                        |
+| `\df[antw][S+]` | 列出函数                        |
+| `\deu[+]`       | 列出用户映射                    |
+| `\dv[S+]`       | 列出视图                        |
+| `\dl`           | 列出大对象                      |
+| `\dT[S+]`       | 列出数据类型                    |
+| `\da[S]`        | 列出聚合函数                    |
+| `\db[+]`        | 列出表空间                      |
+| `\dc[S+]`       | 列出转换                        |
+| `\dC[+]`        | 列出类型转换                    |
+| `\ddp`          | 列出默认权限                    |
+| `\dd[S]`        | 显示对象描述                    |
+| `\dD[S+]`       | 列出域                          |
+| `\des[+]`       | 列出外部服务器                  |
+| `\dew[+]`       | 列出外部数据包装器              |
+| `\dF[+]`        | 列出文本搜索配置                |
+| `\dFd[+]`       | 列出文本搜索字典                |
+| `\dFp[+]`       | 列出文本搜索解析器              |
+| `\dFt[+]`       | 列出文本搜索模板                |
+| `\dL[S+]`       | 列出过程语言                    |
+| `\do[S]`        | 列出操作符                      |
+| `\dO[S+]`       | 列出排序规则                    |
+| `\drds`         | 列出每个数据库的角色设置        |
+| `\dx[+]`        | 列出扩展                        |
 
-`S`: show system objects, `+`: additional detail
+`S`: 显示系统对象, `+`: 附加详细信息
 
-### Connection
+### 连接
 
 | -                      | -                           |
 | ---------------------- | :-------------------------- |
-| `\c [DBNAME]`          | Connect to new database     |
-| `\encoding [ENCODING]` | Show or set client encoding |
-| `\password [USER]`     | Change the password         |
-| `\conninfo`            | Display information         |
+| `\c [数据库名]`        | 连接到新数据库              |
+| `\encoding [编码]`     | 显示或设置客户端编码        |
+| `\password [用户]`     | 更改密码                    |
+| `\conninfo`            | 显示连接信息                |
 
-### Formatting
+### 格式化
 
 | -                         | -                                          |
 | ------------------------- | :----------------------------------------- |
-| `\a`                      | Toggle between unaligned and aligned       |
-| `\C [STRING]`             | Set table title, or unset if none          |
-| `\f [STRING]`             | Show or set field separator for unaligned  |
-| `\H`                      | Toggle HTML output mode                    |
-| <code>\t [on\|off]</code> | Show only rows                             |
-| `\T [STRING]`             | Set or unset HTML \<table\> tag attributes |
-| <code>\x [on\|off]</code> | Toggle expanded output                     |
+| `\a`                      | 在未对齐和对齐之间切换                     |
+| `\C [字符串]`             | 设置表标题，如果无则取消设置               |
+| `\f [字符串]`             | 显示或设置未对齐输出的字段分隔符           |
+| `\H`                      | 切换 HTML 输出模式                         |
+| <code>\t [on\|off]</code> | 仅显示行                                   |
+| `\T [字符串]`             | 设置或取消设置 HTML \<table\> 标签属性     |
+| <code>\x [on\|off]</code> | 切换扩展输出模式                           |
 
-### Input/Output
+### 输入/输出
 
 | -                 | -                                                              |
 | ----------------- | :------------------------------------------------------------- |
-| `\copy ...`       | Import/export table<br> _See also:_ [copy](#import-export-csv) |
-| `\echo [STRING]`  | Print string                                                   |
-| `\i FILE`         | Execute file                                                   |
-| `\o [FILE]`       | Export all results to file                                     |
-| `\qecho [STRING]` | String to output stream                                        |
+| `\copy ...`       | 导入/导出表<br> _另请参阅:_ [copy](#导入导出-csv)               |
+| `\echo [字符串]`  | 打印字符串                                                     |
+| `\i 文件`         | 执行文件                                                       |
+| `\o [文件]`       | 将所有结果导出到文件                                           |
+| `\qecho [字符串]` | 将字符串输出到输出流                                           |
 
-### Variables
+### 变量
 
 | -                     | -                                             |
 | --------------------- | :-------------------------------------------- |
-| `\prompt [TEXT] NAME` | Set variable                                  |
-| `\set [NAME [VALUE]]` | Set variable _(or list all if no parameters)_ |
-| `\unset NAME`         | Delete variable                               |
+| `\prompt [文本] 名称` | 设置变量                                      |
+| `\set [名称 [值]]`    | 设置变量 _（如果没有参数则列出所有变量）_       |
+| `\unset 名称`         | 删除变量                                      |
 
-### Misc
+### 其他
 
 | -                              | -                    |
 | ------------------------------ | :------------------- |
-| `\cd [DIR]`                    | Change the directory |
-| <code>\timing [on\|off]</code> | Toggle timing        |
-| `\! [COMMAND]`                 | Execute in shell     |
-| `\! ls -l`                     | List all in shell    |
+| `\cd [目录]`                   | 更改目录             |
+| <code>\timing [on\|off]</code> | 切换计时             |
+| `\! [命令]`                    | 在 shell 中执行      |
+| `\! ls -l`                     | 在 shell 中列出所有  |
 
-### Large Objects
+### 大对象
 
-- `\lo_export LOBOID FILE`
-- `\lo_import FILE [COMMENT]`
+- `\lo_export LOBOID 文件`
+- `\lo_import 文件 [注释]`
 - `\lo_list`
 - `\lo_unlink LOBOID`
 
 {.marker-none}
 
-## Miscellaneous
+## 其他事项
 
-### Backup
+### 备份
 
-Use pg_dumpall to backup all databases
+使用 pg_dumpall 备份所有数据库
 
 ```shell script
 $ pg_dumpall -U postgres > all.sql
 ```
 
-Use pg_dump to backup a database
+使用 pg_dump 备份数据库
 
 ```shell script
 $ pg_dump -d mydb -f mydb_backup.sql
@@ -571,24 +567,24 @@ $ pg_dump -d mydb -f mydb_backup.sql
 
 | -    | -                                              |
 | ---- | :--------------------------------------------- |
-| `-a` | Dump only the data, not the schema             |
-| `-s` | Dump only the schema, no data                  |
-| `-c` | Drop database before recreating                |
-| `-C` | Create database before restoring               |
-| `-t` | Dump the named table(s) only                   |
-| `-F` | Format (`c`: custom, `d`: directory, `t`: tar) |
+| `-a` | 仅转储数据，不转储模式                         |
+| `-s` | 仅转储模式，不转储数据                         |
+| `-c` | 在重新创建之前删除数据库                       |
+| `-C` | 在恢复之前创建数据库                           |
+| `-t` | 仅转储指定的表                                 |
+| `-F` | 格式 (`c`: 自定义, `d`: 目录, `t`: tar)        |
 
-Use `pg_dump -?` to get the full list of options
+使用 `pg_dump -?` 获取完整的选项列表
 
-### Restore
+### 恢复
 
-Restore a database with psql
+使用 psql 恢复数据库
 
 ```shell script
 $ psql -U user mydb < mydb_backup.sql
 ```
 
-Restore a database with pg_restore
+使用 pg_restore 恢复数据库
 
 ```shell script
 $ pg_restore -d mydb mydb_backup.sql -c
@@ -596,62 +592,62 @@ $ pg_restore -d mydb mydb_backup.sql -c
 
 | -    | -                                                                            |
 | ---- | :--------------------------------------------------------------------------- |
-| `-U` | Specify a database user                                                      |
-| `-c` | Drop database before recreating                                              |
-| `-C` | Create database before restoring                                             |
-| `-e` | Exit if an error has encountered                                             |
-| `-F` | Format (`c`: custom, `d`: directory, `t`: tar, `p`: plain text sql(default)) |
+| `-U` | 指定数据库用户                                                               |
+| `-c` | 在重新创建之前删除数据库                                                     |
+| `-C` | 在恢复之前创建数据库                                                         |
+| `-e` | 如果遇到错误则退出                                                           |
+| `-F` | 格式 (`c`: 自定义, `d`: 目录, `t`: tar, `p`: 纯文本 SQL (默认))              |
 
 {.marker-none}
 
-Use `pg_restore -?` to get the full list of options
+使用 `pg_restore -?` 获取完整的选项列表
 
-### Remote access
+### 远程访问
 
-Get location of postgresql.conf
+获取 postgresql.conf 的位置
 
 ```shell script
 $ psql -U postgres -c 'SHOW config_file'
 ```
 
-Append to postgresql.conf
+附加到 postgresql.conf
 
 ```shell script
 listen_addresses = '*'
 ```
 
-Append to pg_hba.conf (Same location as postgresql.conf)
+附加到 pg_hba.conf (与 postgresql.conf 位置相同)
 
 ```shell script
 host  all  all  0.0.0.0/0  md5
 host  all  all  ::/0       md5
 ```
 
-Restart PostgreSQL server
+重启 PostgreSQL 服务器
 
 ```shell script
 $ sudo systemctl restart postgresql
 ```
 
-### Import/Export CSV
+### 导入/导出 CSV
 
-Export table into CSV file
-
-```shell script
-\copy table TO '<path>' CSV
-\copy table(col1,col1) TO '<path>' CSV
-\copy (SELECT...) TO '<path>' CSV
-```
-
-Import CSV file into table
+将表导出到 CSV 文件
 
 ```shell script
-\copy table FROM '<path>' CSV
-\copy table(col1,col1) FROM '<path>' CSV
+\copy 表 TO '<路径>' CSV
+\copy 表(列1,列2) TO '<路径>' CSV
+\copy (SELECT...) TO '<路径>' CSV
 ```
 
-See also: [Copy](https://www.postgresql.org/docs/current/sql-copy.html)
+将 CSV 文件导入到表
 
-## Also see
+```shell script
+\copy 表 FROM '<路径>' CSV
+\copy 表(列1,列2) FROM '<路径>' CSV
+```
+
+另请参阅: [Copy](https://www.postgresql.org/docs/current/sql-copy.html)
+
+## 另请参阅
 
 - [Posgres-cheatsheet](https://gist.github.com/apolloclark/ea5466d5929e63043dcf#posgres-cheatsheet) _(gist.github.com)_

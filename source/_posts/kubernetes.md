@@ -6,49 +6,49 @@ tags:
   - config
   - format
 categories:
-  - Programming
+  - 编程
 intro: |
-  This page contains a list of commonly used kubectl commands and flags.
+  此页面包含常用 kubectl 命令和标志的列表。
 plugins:
   - copyCode
 ---
 
-## Viewing and finding resources {.cols-2}
+## 查看和查找资源 {.cols-2}
 
-### Nodes
+### 节点
 
 ```bash
-kubectl get no # Display all node information
-kubectl get no -o wide # Show more information about all nodes
-kubectl describe no # Display node details
-kubectl get no -o yaml # Display node details in yaml format
-kubectl get node --selector=[label_name] # Filter the node with the specified label
+kubectl get no # 显示所有节点信息
+kubectl get no -o wide # 显示所有节点的更多信息
+kubectl describe no # 显示节点详细信息
+kubectl get no -o yaml # 以 yaml 格式显示节点详细信息
+kubectl get node --selector=[label_name] # 筛选具有指定标签的节点
 kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type="ExternalIP")].address}'
-# Output the field information defined by the jsonpath expression
-kubectl top node [node_name] # Display node (CPU/memory/storage) usage
+# 输出由 jsonpath 表达式定义的字段信息
+kubectl top node [node_name] # 显示节点（CPU/内存/存储）使用情况
 ```
 
-Resource name: nodes, abbreviation: no
+资源名称：nodes，缩写：no
 
 ### Pods
 
 ```bash
-kubectl get po # Display all container group information
+kubectl get po # 显示所有容器组信息
 kubectl get po -o wide
 kubectl describe po
-kubectl get po --show-labels # View the labels of the container group
+kubectl get po --show-labels # 查看容器组的标签
 kubectl get po -l app=nginx
 kubectl get po -o yaml
 kubectl get pod [pod_name] -o yaml --export
 kubectl get pod [pod_name] -o yaml --export > nameoffile.yaml
-# Export container group information to yaml file in yaml format
+# 将容器组信息以 yaml 格式导出到 yaml 文件
 kubectl get pods --field-selector status.phase=Running
-# Use the field selector to filter out container group information
+# 使用字段选择器筛选出容器组信息
 ```
 
-Resource name: pods, abbreviation: po
+资源名称：pods，缩写：po
 
-### Namespaces
+### 命名空间
 
 ```bash
 kubectl get ns
@@ -56,7 +56,7 @@ kubectl get ns -o yaml
 kubectl describe ns
 ```
 
-Resource name: namespaces, abbreviation: ns
+资源名称：namespaces，缩写：ns
 
 ### Deployments
 
@@ -67,7 +67,7 @@ kubectl get deploy -o wide
 kubectl get deploy -o yaml
 ```
 
-Resource name: deployments, abbreviation: deploy
+资源名称：deployments，缩写：deploy
 
 ### Services
 
@@ -79,7 +79,7 @@ kubectl get svc -o yaml
 kubectl get svc --show-labels
 ```
 
-Resource name: services, abbreviation: svc
+资源名称：services，缩写：svc
 
 ### Daemon Sets
 
@@ -90,7 +90,7 @@ kubectl describe ds [daemonset_name] -n [namespace_name]
 kubectl get ds [ds_name] -n [ns_name] -o yaml
 ```
 
-Resource name: daemonsets, abbreviation: ds
+资源名称：daemonsets，缩写：ds
 
 ### Events
 
@@ -100,9 +100,9 @@ kubectl get events -n kube-system
 kubectl get events -w
 ```
 
-Resource name: events, abbreviation: ev
+资源名称：events，缩写：ev
 
-### Logs
+### 日志
 
 ```bash
 kubectl logs [pod_name]
@@ -112,7 +112,7 @@ kubectl logs -f -c [container_name] [pod_name]
 kubectl logs [pod_name] > pod.log
 ```
 
-### Service Accounts
+### 服务账户
 
 ```bash
 kubectl get sa
@@ -121,7 +121,7 @@ kubectl get serviceaccounts default -o yaml >./sa.yaml
 kubectl replace serviceaccount default -f ./sa.yaml
 ```
 
-Resource name: serviceaccounts, abbreviation: ev
+资源名称：serviceaccounts，缩写：sa (注意：原文此处缩写为 ev，应为 sa)
 
 ### Replica Sets
 
@@ -132,7 +132,7 @@ kubectl get rs -o wide
 kubectl get rs -o yaml
 ```
 
-Resource name: replicasets, abbreviation: rs
+资源名称：replicasets，缩写：rs
 
 ### Roles
 
@@ -151,7 +151,7 @@ kubectl get secrets -o yaml
 
 ### Config maps
 
-Resource name: configmaps, abbreviation: cm
+资源名称：configmaps，缩写：cm
 
 ```bash
 kubectl get cm
@@ -161,7 +161,7 @@ kubectl get cm --all-namespaces -o yaml
 
 ### Ingresses
 
-Resource name: ingresses, abbreviation: ing
+资源名称：ingresses，缩写：ing
 
 ```bash
 kubectl get ing
@@ -170,7 +170,7 @@ kubectl get ing --all-namespaces
 
 ### Persistent Volumes
 
-Resource name: persistentvolumes, abbreviation: pv
+资源名称：persistentvolumes，缩写：pv
 
 ```bash
 kubectl get pv
@@ -179,7 +179,7 @@ kubectl describe pv
 
 ### Persistent volume declaration
 
-Resource name: persistentvolumeclaims, abbreviation: pvc
+资源名称：persistentvolumeclaims，缩写：pvc
 
 ```bash
 kubectl get pvc
@@ -188,14 +188,14 @@ kubectl describe pvc
 
 ### storage class
 
-Resource name: storageclasses, Abbreviation: sc
+资源名称：storageclasses，缩写：sc
 
 ```bash
 kubectl get sc
 kubectl get sc -o yaml
 ```
 
-### Multiple resources
+### 多种资源
 
 ```bash
 kubectl get svc, po
@@ -204,35 +204,35 @@ kubectl get all
 kubectl get all --all-namespaces
 ```
 
-## Updating resources
+## 更新资源
 
-### Taint
+### 污点
 
 ```bash
 kubectl taint [node_name] [taint_name]
 ```
 
-### Label
+### 标签
 
 ```bash
 kubectl label [node_name] disktype=ssd
 kubectl label [pod_name] env=prod
 ```
 
-### Maintain/Schedulable
+### 维护/可调度
 
 ```bash
-kubectl cordon [node_name] # node maintenance
-kubectl uncordon [node_name] # node is schedulable
+kubectl cordon [node_name] # 节点维护
+kubectl uncordon [node_name] # 节点可调度
 ```
 
-### clear
+### 清空
 
 ```bash
-kubectl drain [node_name] # empty the node
+kubectl drain [node_name] # 清空节点
 ```
 
-### Node/Pod {.row-span-2}
+### 节点/Pod {.row-span-2}
 
 ```bash
 kubectl delete node [node_name]
@@ -241,7 +241,7 @@ kubectl edit node [node_name]
 kubectl edit pod [pod_name]
 ```
 
-### Stateless/Namespaced {.row-span-2}
+### 无状态/命名空间 {.row-span-2}
 
 ```bash
 kubectl edit deploy [deploy_name]
@@ -266,23 +266,23 @@ kubectl edit ds [ds_name] -n kube-system
 kubectl delete ds [ds_name]
 ```
 
-### Service account
+### 服务账户
 
 ```bash
 kubectl edit sa [sa_name]
 kubectl delete sa [sa_name]
 ```
 
-### Notes
+### 注解
 
 ```bash
 kubectl annotate po [pod_name] [annotation]
 kubectl annotateno [node_name]
 ```
 
-## Create resources
+## 创建资源
 
-### Create pod
+### 创建 pod
 
 ```bash
 kubectl create -f [name_of_file]
@@ -292,13 +292,13 @@ kubectl run [pod_name] --generator=run-pod/v1 --image=nginx
 kubectl run [pod_name] --image=nginx --restart=Never
 ```
 
-### Create Service
+### 创建 Service
 
 ```bash
 kubectl create svc nodeport [svc_name] --tcp=8080:80
 ```
 
-### Create a stateless application
+### 创建无状态应用
 
 ```bash
 kubectl create -f [name_of_file]
@@ -306,20 +306,20 @@ kubectl apply -f [name_of_file]
 kubectl create deploy [deploy_name] --image=nginx
 ```
 
-### interaction
+### 交互
 
 ```bash
 kubectl run [pod_name] --image=busybox --rm -it --restart=Never --sh
 ```
 
-### Output YAML
+### 输出 YAML
 
 ```bash
 kubectl create deploy [deploy_name] --image=nginx --dry-run -o yaml > deploy.yaml
 kubectl get po [pod_name] -o yaml --export > pod.yaml
 ```
 
-### Help
+### 帮助
 
 ```bash
 kubectl -h
@@ -328,15 +328,15 @@ kubectl run -h
 kubectl explain deploy.spec
 ```
 
-## Miscellaneous
+## 其他
 
-### APIs
+### API
 
 ```bash
 kubectl get --raw /apis/metrics.k8s.io/
 ```
 
-### Information
+### 信息
 
 ```bash
 kubectl config
@@ -344,6 +344,6 @@ kubectl cluster-info
 kubectl get componentstatus
 ```
 
-## Also See
+## 另请参阅
 
-- [Kubernetes Official Documentation](https://kubernetes.io/zh-cn/docs/reference/kubectl/) _(kubernetes.io)_
+- [Kubernetes 官方文档](https://kubernetes.io/zh-cn/docs/reference/kubectl/) _(kubernetes.io)_

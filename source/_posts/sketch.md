@@ -7,246 +7,246 @@ tags:
   -
   - mac
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 149 keyboard shortcuts found in Sketch. This application is MacOS-only.
+  一份包含 Sketch 中 149 个键盘快捷键的可视化速查表。此应用程序仅适用于 MacOS。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### General {.row-span-2}
+### 常规 {.row-span-2}
 
-| Shortcut                | Action                  |
+| 快捷键                | 操作                  |
 | ----------------------- | ----------------------- |
-| `Cmd` `C`               | Copy                    |
-| `Cmd` `X`               | Cut                     |
-| `Cmd` `V`               | Paste                   |
-| `Cmd` `Shift` `V`       | Paste over selection    |
-| `Space` `(drag)`        | Pan Canvas              |
-| `Cmd` `Shift` `N`       | New page                |
-| `Fn` `Up`               | Previous page           |
-| `Fn` `Down`             | Next page               |
-| `Cmd` `+`               | Zoom in                 |
-| `Cmd` `-`               | Zoom out                |
-| `Ctrl` `R`              | Toggle rulers           |
-| `Ctrl` `P`              | Toggle pixels           |
-| `Ctrl` `X`              | Toggle pixel grid       |
-| `Ctrl` `G`              | Toggle grid             |
-| `Ctrl` `L`              | Toggle layout           |
-| `Ctrl` `E`              | Toggle slices           |
-| `Ctrl` `F`              | Toggle prototyping      |
-| `Cmd` `F`               | Filter in Layer List    |
-| `Cmd` `Ctrl` `K`        | Run custom plugin       |
-| `Cmd` `Z`               | Undo                    |
-| `Cmd` `Shift` `Z`       | Redo                    |
-| `Cmd` `N`               | New document            |
-| `Cmd` `Shift` `N`       | New Cloud document      |
-| `Cmd` `O`               | Open document           |
-| `Cmd` `Shift` `O`       | Open Cloud document     |
-| `Cmd` `W`               | Close window            |
-| `Cmd` `S`               | Save document           |
-| `Cmd` `Shift` `S`       | Duplicate document      |
-| `Cmd` `Shift` `Opt` `S` | Save document as...     |
-| `Cmd` `Shift` `P`       | Page setup              |
-| `Cmd` `,`               | Open Preferences window |
-| `Cmd` `H`               | Hide Sketch             |
-| `Cmd` `Q`               | Quit Sketch             |
-| `Cmd` `Shift` `?`       | Open the Help menu      |
-| `Cmd` `P`               | Open Preview window     |
+| `Cmd` `C`               | 复制                    |
+| `Cmd` `X`               | 剪切                    |
+| `Cmd` `V`               | 粘贴                    |
+| `Cmd` `Shift` `V`       | 粘贴并覆盖所选内容    |
+| `Space` `(拖动)`        | 平移画布              |
+| `Cmd` `Shift` `N`       | 新建页面                |
+| `Fn` `Up`               | 上一页                |
+| `Fn` `Down`             | 下一页                |
+| `Cmd` `+`               | 放大                    |
+| `Cmd` `-`               | 缩小                    |
+| `Ctrl` `R`              | 切换标尺                |
+| `Ctrl` `P`              | 切换像素                |
+| `Ctrl` `X`              | 切换像素网格            |
+| `Ctrl` `G`              | 切换网格                |
+| `Ctrl` `L`              | 切换布局                |
+| `Ctrl` `E`              | 切换切片                |
+| `Ctrl` `F`              | 切换原型                |
+| `Cmd` `F`               | 在图层列表中筛选        |
+| `Cmd` `Ctrl` `K`        | 运行自定义插件          |
+| `Cmd` `Z`               | 撤销                    |
+| `Cmd` `Shift` `Z`       | 重做                    |
+| `Cmd` `N`               | 新建文档                |
+| `Cmd` `Shift` `N`       | 新建云文档              |
+| `Cmd` `O`               | 打开文档                |
+| `Cmd` `Shift` `O`       | 打开云文档              |
+| `Cmd` `W`               | 关闭窗口                |
+| `Cmd` `S`               | 保存文档                |
+| `Cmd` `Shift` `S`       | 复制文档                |
+| `Cmd` `Shift` `Opt` `S` | 文档另存为...           |
+| `Cmd` `Shift` `P`       | 页面设置                |
+| `Cmd` `,`               | 打开偏好设置窗口        |
+| `Cmd` `H`               | 隐藏 Sketch             |
+| `Cmd` `Q`               | 退出 Sketch             |
+| `Cmd` `Shift` `?`       | 打开帮助菜单            |
+| `Cmd` `P`               | 打开预览窗口            |
 
 {.shortcuts}
 
-### Inserting Layers
+### 插入图层
 
-| Shortcut | Action            |
+| 快捷键 | 操作            |
 | -------- | ----------------- |
-| `R`      | Rectangle         |
-| `O`      | Oval              |
-| `L`      | Line              |
-| `U`      | Rounded rectangle |
-| `V`      | Vector tool       |
-| `P`      | Pencil tool       |
-| `T`      | Text tool         |
-| `A`      | Artboard tool     |
-| `S`      | Slice tool        |
-| `H`      | Hotspot tool      |
+| `R`      | 矩形              |
+| `O`      | 椭圆              |
+| `L`      | 直线              |
+| `U`      | 圆角矩形          |
+| `V`      | 矢量工具          |
+| `P`      | 铅笔工具          |
+| `T`      | 文本工具          |
+| `A`      | 画板工具          |
+| `S`      | 切片工具          |
+| `H`      | 热区工具          |
 
 {.shortcuts}
 
-### Selecting Layers
+### 选择图层
 
-| Shortcut          | Action                         |
+| 快捷键          | 操作                         |
 | ----------------- | ------------------------------ |
-| `Cmd` `A`         | Select all                     |
-| `Cmd` `Shift` `A` | Select all Artboards           |
-| `Fn` `Right`      | Select next Artboard           |
-| `Fn` `Left`       | Select previous Artboard       |
-| `Cmd` `Shift` `J` | Reveal selection in Layer List |
+| `Cmd` `A`         | 全选                     |
+| `Cmd` `Shift` `A` | 选择所有画板           |
+| `Fn` `Right`      | 选择下一个画板           |
+| `Fn` `Left`       | 选择上一个画板           |
+| `Cmd` `Shift` `J` | 在图层列表中显示所选内容 |
 
 {.shortcuts}
 
-### Moving and Resizing Layers
+### 移动和调整图层大小
 
-| Shortcut                   | Action                                                                  |
+| 快捷键                   | 操作                                                                  |
 | -------------------------- | ----------------------------------------------------------------------- |
-| `Opt`                      | Display distance between other layers (while hovering)                  |
-| `Cmd` `D`                  | Duplicate                                                               |
-| `(arrows)`                 | Nudge layer any direction by 1px                                        |
-| `Shift` `(arrows)`         | Nudge layer any direction by 10px                                       |
-| `Cmd` `K`                  | Scale layer                                                             |
-| `Cmd` `Right/Down`         | Expand by 1px                                                           |
-| `Cmd` `Left/Up`            | Contract by 1px                                                         |
-| `Cmd` `Shift` `Right/Down` | Expand by 10px                                                          |
-| `Cmd` `Shift` `Left/Up`    | Contract by 10px                                                        |
-| `Ctrl` `Opt`               | Show distance to baseline or cap height on text layers (while hovering) |
+| `Opt`                      | 显示与其他图层的距离 (悬停时)                  |
+| `Cmd` `D`                  | 复制                                                               |
+| `(方向键)`                 | 向任意方向微移图层 1px                                        |
+| `Shift` `(方向键)`         | 向任意方向微移图层 10px                                       |
+| `Cmd` `K`                  | 缩放图层                                                             |
+| `Cmd` `Right/Down`         | 扩展 1px                                                           |
+| `Cmd` `Left/Up`            | 收缩 1px                                                           |
+| `Cmd` `Shift` `Right/Down` | 扩展 10px                                                          |
+| `Cmd` `Shift` `Left/Up`    | 收缩 10px                                                          |
+| `Ctrl` `Opt`               | 显示到文本图层基线或大写字母高度的距离 (悬停时) |
 
 {.shortcuts}
 
-### Editing Layers
+### 编辑图层
 
-| Shortcut          | Action                                        |
+| 快捷键          | 操作                                        |
 | ----------------- | --------------------------------------------- |
-| `Enter`           | Edit layer                                    |
-| `Esc`             | Finish editing                                |
-| `Opt` `Tab`       | Focus X position input field in the Inspector |
-| `Del`             | Delete layer                                  |
-| `Cmd` `Opt` `C`   | Copy style                                    |
-| `Cmd` `Opt` `V`   | Paste style                                   |
-| `Ctrl` `S`        | Sync shared style                             |
-| `Opt` `Ctrl` `S`  | Reset shared style                            |
-| `W`               | Add link to Artboard                          |
-| `F`               | Toggle fill                                   |
-| `B`               | Toggle border                                 |
-| `Ctrl` `C`        | Pick color                                    |
-| `0-9`             | Edit layer opacity                            |
-| `Cmd` `Shift` `T` | Transform shape                               |
-| `Cmd` `Shift` `R` | Rotate layer                                  |
-| `Cmd` `Ctrl` `M`  | Use as mask                                   |
-| `Cmd` `Esc`       | Return to instance                            |
-| `Cmd` `Opt` `U`   | Union multiple layers                         |
-| `Cmd` `Opt` `S`   | Subtract multiple layers                      |
-| `Cmd` `Opt` `I`   | Intersect multiple layers                     |
-| `Cmd` `Opt` `X`   | Difference multiple layers                    |
+| `Enter`           | 编辑图层                                    |
+| `Esc`             | 完成编辑                                    |
+| `Opt` `Tab`       | 聚焦检查器中的 X 位置输入框 |
+| `Del`             | 删除图层                                    |
+| `Cmd` `Opt` `C`   | 复制样式                                    |
+| `Cmd` `Opt` `V`   | 粘贴样式                                    |
+| `Ctrl` `S`        | 同步共享样式                             |
+| `Opt` `Ctrl` `S`  | 重置共享样式                            |
+| `W`               | 添加链接到画板                          |
+| `F`               | 切换填充                                   |
+| `B`               | 切换描边                                   |
+| `Ctrl` `C`        |拾取颜色                                    |
+| `0-9`             | 编辑图层不透明度                            |
+| `Cmd` `Shift` `T` | 变换形状                               |
+| `Cmd` `Shift` `R` | 旋转图层                               |
+| `Cmd` `Ctrl` `M`  | 用作蒙版                                   |
+| `Cmd` `Esc`       | 返回实例                               |
+| `Cmd` `Opt` `U`   | 合并多个图层                         |
+| `Cmd` `Opt` `S`   | 减去顶层 (多个图层)                      |
+| `Cmd` `Opt` `I`   | 相交 (多个图层)                          |
+| `Cmd` `Opt` `X`   | 排除重叠 (多个图层)                      |
 
 {.shortcuts}
 
-### Vector Editing
+### 矢量编辑
 
-| Shortcut        | Action                         |
+| 快捷键        | 操作                         |
 | --------------- | ------------------------------ |
-| `Cmd` `Opt` `O` | Open or close path             |
-| `Tab`           | Selects next point             |
-| `Opt`           | Show all handle control points |
-| `1`             | Straight point type            |
-| `2`             | Mirrored point type            |
-| `3`             | Disconnected point type        |
-| `4`             | Asymmetric point type          |
+| `Cmd` `Opt` `O` | 打开或闭合路径             |
+| `Tab`           | 选择下一个点             |
+| `Opt`           | 显示所有手柄控制点 |
+| `1`             | 直线点类型            |
+| `2`             | 镜像点类型            |
+| `3`             | 断开点类型            |
+| `4`             | 不对称点类型          |
 
 {.shortcuts}
 
-### Text Editing {.row-span-2}
+### 文本编辑 {.row-span-2}
 
-| Shortcut                | Action                     |
+| 快捷键                | 操作                     |
 | ----------------------- | -------------------------- |
-| `Cmd` `Shift` `Opt` `V` | Paste as rich text         |
-| `Cmd` `T`               | Change typeface            |
-| `Cmd` `B`               | Bold                       |
-| `Cmd` `I`               | Italic                     |
-| `Cmd` `U`               | Underline                  |
-| `Cmd` `Opt` `+`         | Increase font size         |
-| `Cmd` `Opt` `-`         | Decrease font size         |
-| `Ctrl` `Opt` `L`        | Increase character spacing |
-| `Ctrl` `Opt` `T`        | Decrease character spacing |
-| `Cmd` `Shift` `[`       | Align left                 |
-| `Cmd` `Shift` `\`       | Align center               |
-| `Cmd` `Shift` `]`       | Align right                |
-| `Cmd` `Opt` `Space`     | Emoji and symbols          |
-| `Cmd` `Opt` `O`         | Convert to outlines        |
-| `Shift` `Enter`         | Insert a line break        |
+| `Cmd` `Shift` `Opt` `V` | 粘贴为富文本         |
+| `Cmd` `T`               | 更改字体            |
+| `Cmd` `B`               | 加粗                       |
+| `Cmd` `I`               | 斜体                       |
+| `Cmd` `U`               | 下划线                  |
+| `Cmd` `Opt` `+`         | 增大字号         |
+| `Cmd` `Opt` `-`         | 减小字号         |
+| `Ctrl` `Opt` `L`        | 增加字符间距 |
+| `Ctrl` `Opt` `T`        | 减小字符间距 |
+| `Cmd` `Shift` `[`       | 左对齐                 |
+| `Cmd` `Shift` `\`       | 居中对齐               |
+| `Cmd` `Shift` `]`       | 右对齐                 |
+| `Cmd` `Opt` `Space`     | 表情符号和符号          |
+| `Cmd` `Opt` `O`         | 转换为轮廓        |
+| `Shift` `Enter`         | 插入换行符        |
 
 {.shortcuts}
 
-### Arranging Layers {.row-span-2}
+### 排列图层 {.row-span-2}
 
-| Shortcut                 | Action                            |
+| 快捷键                 | 操作                            |
 | ------------------------ | --------------------------------- |
-| `Cmd` `G`                | Group                             |
-| `Cmd` `Shift` `G`        | Ungroup                           |
-| `Cmd` `R`                | Rename layer                      |
-| `Tab`                    | Select next layer in group        |
-| `Shift` `Tab`            | Select previous layer in group    |
-| `Enter`                  | Selects layer inside group        |
-| `Esc`                    | Selects parent group              |
-| `Cmd` `]`                | Bring forward                     |
-| `Cmd` `Opt` `]`          | Bring to front                    |
-| `Cmd` `[`                | Send backward                     |
-| `Cmd` `Opt` `[`          | Send to back                      |
-| `Cmd` `Shift` `Opt` `Up` | Move up, out of group or Artboard |
-| `Cmd` `Ctrl` `H`         | Distribute horizontally           |
-| `Cmd` `Ctrl` `V`         | Distribute vertically             |
-| `Cmd` `Shift` `H`        | Hide or show layer                |
-| `Cmd` `Shift` `L`        | Lock or unlock layer              |
+| `Cmd` `G`                |编组                             |
+| `Cmd` `Shift` `G`        | 取消编组                           |
+| `Cmd` `R`                | 重命名图层                      |
+| `Tab`                    | 选择组内下一个图层        |
+| `Shift` `Tab`            | 选择组内上一个图层    |
+| `Enter`                  | 选择组内图层        |
+| `Esc`                    | 选择父级组              |
+| `Cmd` `]`                | 上移一层                     |
+| `Cmd` `Opt` `]`          | 置于顶层                     |
+| `Cmd` `[`                | 下移一层                     |
+| `Cmd` `Opt` `[`          | 置于底层                     |
+| `Cmd` `Shift` `Opt` `Up` | 向上移出组或画板 |
+| `Cmd` `Ctrl` `H`         | 水平分布           |
+| `Cmd` `Ctrl` `V`         | 垂直分布           |
+| `Cmd` `Shift` `H`        | 隐藏或显示图层                |
+| `Cmd` `Shift` `L`        | 锁定或解锁图层                |
 
 {.shortcuts}
 
-### Exporting Layers
+### 导出图层
 
-| Shortcut          | Action                   |
+| 快捷键          | 操作                   |
 | ----------------- | ------------------------ |
-| `Cmd` `Shift` `E` | Export                   |
-| `Cmd` `E`         | Export selected layer(s) |
+| `Cmd` `Shift` `E` | 导出                   |
+| `Cmd` `E`         | 导出所选图层(们) |
 
 {.shortcuts}
 
-### Zoom and Focus
+### 缩放和聚焦
 
-| Shortcut                | Action                             |
+| 快捷键                | 操作                             |
 | ----------------------- | ---------------------------------- |
-| `Cmd` `0`               | Zoom to 100%                       |
-| `Cmd` `1`               | Zoom to all elements on Canvas     |
-| `Cmd` `2`               | Zoom to selected layer(s)          |
-| `Cmd` `3`               | Center selected layer(s) in Canvas |
-| `Shift` <code>\`</code> | Temporarily zoom out to 100%       |
-| `Cmd` `Ctrl` `F`        | Toggle full screen                 |
-| `Cmd` `Opt` `1`         | Show or hide Layer list            |
-| `Cmd` `Opt` `2`         | Show or hide Inspector             |
-| `Cmd` `.`               | Enter presentation mode            |
-| `Cmd` `Opt` `T`         | Show or hide Toolbar               |
+| `Cmd` `0`               | 缩放到 100%                       |
+| `Cmd` `1`               | 缩放以适应画布上的所有元素     |
+| `Cmd` `2`               | 缩放以适应所选图层(们)          |
+| `Cmd` `3`               | 将所选图层(们)居中于画布 |
+| `Shift` <code>\`</code> | 临时缩放到 100%       |
+| `Cmd` `Ctrl` `F`        | 切换全屏                 |
+| `Cmd` `Opt` `1`         | 显示或隐藏图层列表            |
+| `Cmd` `Opt` `2`         | 显示或隐藏检查器             |
+| `Cmd` `.`               | 进入演示模式            |
+| `Cmd` `Opt` `T`         | 显示或隐藏工具栏               |
 
 {.shortcuts}
 
-### Text Fields
+### 文本字段
 
-| Shortcut       | Action                |
+| 快捷键       | 操作                |
 | -------------- | --------------------- |
-| `Opt` `Tab`    | Focus Inspector       |
-| `Tab`          | Select next field     |
-| `Shift` `Tab`  | Select previous field |
-| `Enter`        | Confirm change        |
-| `Esc`          | Clear change          |
-| `Up`           | Increase value by 1   |
-| `Down`         | Decrease value by 1   |
-| `Shift` `Up`   | Increase value by 10  |
-| `Shift` `Down` | Decrease value by 10  |
-| `Opt` `Up`     | Increase value by 0.1 |
-| `Opt` `Down`   | Decrease value by 0.1 |
+| `Opt` `Tab`    | 聚焦检查器       |
+| `Tab`          | 选择下一个字段     |
+| `Shift` `Tab`  | 选择上一个字段 |
+| `Enter`        | 确认更改        |
+| `Esc`          | 清除更改        |
+| `Up`           | 数值增加 1   |
+| `Down`         | 数值减少 1   |
+| `Shift` `Up`   | 数值增加 10  |
+| `Shift` `Down` | 数值减少 10  |
+| `Opt` `Up`     | 数值增加 0.1 |
+| `Opt` `Down`   | 数值减少 0.1 |
 
 {.shortcuts}
 
-### Miscellaneous
+### 其他
 
-| Shortcut               | Action                                                              |
+| 快捷键               | 操作                                                              |
 | ---------------------- | ------------------------------------------------------------------- |
-| `Shift`                | Launch Sketch with all plugins disabled (hold on startup)           |
-| `Cmd` `Ctrl` `D`       | Detach from Symbol                                                  |
-| `Cmd` `Ctrl` `Opt` `D` | Detach all contents from Symbol                                     |
-| `Cmd` `Shift` `D`      | Refresh Data                                                        |
-| `Cmd` `Ctrl` `R`       | Run last-used plugin again                                          |
-| `0-9`                  | With a gradient stop selected, position it between 0% and 100%      |
-| `=`                    | Position selected gradient stop directly between two existing stops |
+| `Shift`                | 启动 Sketch 时禁用所有插件 (启动时按住)           |
+| `Cmd` `Ctrl` `D`       | 从组件分离                                                  |
+| `Cmd` `Ctrl` `Opt` `D` | 从组件分离所有内容                                     |
+| `Cmd` `Shift` `D`      | 刷新数据                                                        |
+| `Cmd` `Ctrl` `R`       | 再次运行上次使用的插件                                          |
+| `0-9`                  | 选中渐变点时，将其定位在 0% 到 100% 之间      |
+| `=`                    | 将选定的渐变点直接定位在两个现有渐变点之间 |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Sketch](https://www.sketch.com/docs/shortcuts/) _(www.sketch.com)_
+- [Sketch 键盘快捷键](https://www.sketch.com/docs/shortcuts/) _(www.sketch.com)_

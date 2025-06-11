@@ -7,98 +7,98 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 35 keyboard shortcuts found on Bitbucket
+  Bitbucket 35 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### All pages
+### 所有页面
 
-| Shortcut | Action                              |
+| 快捷键 | 操作                              |
 | -------- | ----------------------------------- |
-| `?`      | Display keyboard shortcuts          |
-| `[`      | Expand and collapse left navigation |
-| `/`      | Focus the site search               |
+| `?`      | 显示键盘快捷键          |
+| `[`      | 展开和折叠左侧导航 |
+| `/`      | 聚焦站点搜索               |
 
 {.shortcuts}
 
-### Most pages (except Your Work and Source)
+### 大多数页面（“您的工作”和“源代码”除外）
 
-| Shortcut | Action                         |
+| 快捷键 | 操作                         |
 | -------- | ------------------------------ |
-| `.`      | Open the Omnibar               |
-| `J`      | Select next item               |
-| `K`      | Select previous item           |
-| `Enter`  | View selected item             |
-| `G` `D`  | Go to Your Work dashboard      |
-| `G` `A`  | Go to your Personal Settings   |
-| `Esc`    | Dismiss dialog or remove focus |
-| `U`      | Go back                        |
+| `.`      | 打开 Omnibar               |
+| `J`      | 选择下一个项目               |
+| `K`      | 选择上一个项目           |
+| `Enter`  | 查看所选项目             |
+| `G` `D`  | 前往“您的工作”仪表板      |
+| `G` `A`  | 前往您的个人设置   |
+| `Esc`    | 关闭对话框或移除焦点 |
+| `U`      | 返回                        |
 
 {.shortcuts}
 
-### Repository pages (except for Source)
+### 仓库页面（“源代码”除外）
 
-| Shortcut | Action                        |
+| 快捷键 | 操作                        |
 | -------- | ----------------------------- |
-| `C` `R`  | Create a repository           |
-| `I` `R`  | Import a repository           |
-| `R` `S`  | Open repository source        |
-| `R` `C`  | Open repository commits       |
-| `R` `B`  | Open repository branches      |
-| `R` `P`  | Open repository pull requests |
-| `R` `I`  | Open repository issues        |
-| `R` `W`  | Open repository wiki          |
-| `R` `D`  | Open repository downloads     |
-| `R` `A`  | Open repository settings      |
-| `F`      | Search for file               |
+| `C` `R`  | 创建仓库           |
+| `I` `R`  | 导入仓库           |
+| `R` `S`  | 打开仓库源代码        |
+| `R` `C`  | 打开仓库提交       |
+| `R` `B`  | 打开仓库分支      |
+| `R` `P`  | 打开仓库拉取请求 |
+| `R` `I`  | 打开仓库问题        |
+| `R` `W`  | 打开仓库 Wiki          |
+| `R` `D`  | 打开仓库下载     |
+| `R` `A`  | 打开仓库设置      |
+| `F`      | 搜索文件               |
 
 {.shortcuts}
 
-### Repository pages (except for Source and Settings) {.row-span-2}
+### 仓库页面（“源代码”和“设置”除外） {.row-span-2}
 
-| Shortcut | Action                   |
+| 快捷键 | 操作                   |
 | -------- | ------------------------ |
-| `X` `F`  | Fork repository          |
-| `X` `B`  | Create branch            |
-| `X` `C`  | Compare branches or tags |
-| `X` `P`  | Create pull request      |
-| `X` `I`  | Create issue             |
+| `X` `F`  | 复刻仓库          |
+| `X` `B`  | 创建分支            |
+| `X` `C`  | 比较分支或标签 |
+| `X` `P`  | 创建拉取请求      |
+| `X` `I`  | 创建问题             |
 
 {.shortcuts}
 
-### Pull requests {.row-span-2}
+### 拉取请求 {.row-span-2}
 
-| Shortcut       | Action                                  |
+| 快捷键       | 操作                                  |
 | -------------- | --------------------------------------- |
-| `Ctrl` `Enter` | Submit a comment                        |
-| `T` `C`        | Toggle display of inline comments       |
-| `P` `D`        | Switch to the pull request diff tab     |
-| `P` `C`        | Switch to the pull request commits tab  |
-| `P` `A`        | Switch to the pull request activity tab |
-| `Shift` `T`    | Show the list of tasks                  |
+| `Ctrl` `Enter` | 提交评论                        |
+| `T` `C`        | 切换内联评论显示       |
+| `P` `D`        | 切换到拉取请求“差异”选项卡     |
+| `P` `C`        | 切换到拉取请求“提交”选项卡  |
+| `P` `A`        | 切换到拉取请求“活动”选项卡 |
+| `Shift` `T`    | 显示任务列表                  |
 
 {.shortcuts}
 
-### Repository pages with sidebar
+### 带侧边栏的仓库页面
 
-| Shortcut | Action                            |
+| 快捷键 | 操作                            |
 | -------- | --------------------------------- |
-| `]`      | Expand and collapse right sidebar |
+| `]`      | 展开和折叠右侧边栏 |
 
 {.shortcuts}
 
-### Repository source
+### 仓库源代码
 
-| Shortcut | Action                |
+| 快捷键 | 操作                |
 | -------- | --------------------- |
-| `F`      | Focus the file filter |
+| `F`      | 聚焦文件筛选器 |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Bitbucket](https://confluence.atlassian.com/bitbucket/keyboard-shortcuts-269980511.html)
+- [Bitbucket 键盘快捷键](https://confluence.atlassian.com/bitbucket/keyboard-shortcuts-269980511.html)
   _(confluence.atlassian.com)_

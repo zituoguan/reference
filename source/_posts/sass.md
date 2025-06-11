@@ -6,22 +6,22 @@ label: CSS
 tags:
   - css
 categories:
-  - Programming
+  - 编程
 intro: |
-  This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).
+  这是一个快速参考备忘单，列出了 [SASS](https://sass-lang.com) 最有用的功能。
 plugins:
   - copyCode
   - runCode
 ---
 
-## Sass Basics
+## Sass 基础
 
-### Introduction
+### 简介
 
-- [Documentation](https://sass-lang.com/documentation) _(sass-lang.com)_
-- [Learn X in Y minutes](https://learnxinyminutes.com/docs/sass/) _(learnxinyminutes.com)_
+- [文档](https://sass-lang.com/documentation) _(sass-lang.com)_
+- [X分钟学习Y](https://learnxinyminutes.com/docs/sass/) _(learnxinyminutes.com)_
 
-### Variables
+### 变量
 
 ```scss
 $defaultLinkColor: #46eac2;
@@ -31,7 +31,7 @@ a {
 }
 ```
 
-### String interpolation
+### 字符串插值
 
 ```scss
 $wk: -webkit-;
@@ -41,19 +41,19 @@ $wk: -webkit-;
 }
 ```
 
-### Comments
+### 注释
 
 ```scss
 /*
- Block comments
- Block comments
- Block comments
+ 块注释
+ 块注释
+ 块注释
 */
 
-// Line comments
+// 行注释
 ```
 
-### Mixins
+### Mixins (混合)
 
 ```scss
 @mixin heading-font {
@@ -65,9 +65,9 @@ h1 {
 }
 ```
 
-See: [Mixins](#sass-mixins)
+参见: [Mixins](#sass-mixins)
 
-### Nesting {.row-span-2}
+### 嵌套 {.row-span-2}
 
 ```scss
 .markdown-body {
@@ -80,18 +80,18 @@ See: [Mixins](#sass-mixins)
 }
 ```
 
-#### to properties
+#### 属性嵌套
 
 ```scss
 text: {
-  // like text-align: center
+  // 类似于 text-align: center
   align: center;
-  // like text-transform: uppercase
+  // 类似于 text-transform: uppercase
   transform: uppercase;
 }
 ```
 
-### Extend
+### Extend (继承)
 
 ```scss
 .button {
@@ -105,22 +105,22 @@ text: {
 }
 ```
 
-### @import
+### @import (导入)
 
 ```scss
 @import "./other_sass_file";
 @import "/code", "lists";
 
-// Plain CSS @imports
+// 普通 CSS @imports
 @import "theme.css";
 @import url(theme);
 ```
 
-The `.sass` or `.sass` extension is optional.
+`.sass` 或 `.scss` 扩展名是可选的。
 
-## Sass Mixins
+## Sass Mixins (混合)
 
-### Parameters
+### 参数
 
 ```scss
 @mixin font-size($n) {
@@ -134,7 +134,7 @@ body {
 }
 ```
 
-### Default values
+### 默认值
 
 ```scss
 @mixin pad($n: 10px) {
@@ -148,7 +148,7 @@ body {
 }
 ```
 
-### Default variable
+### 默认变量
 
 ```scss
 $default-padding: 10px;
@@ -162,7 +162,7 @@ body {
 }
 ```
 
-## Sass Color functions {.cols-2}
+## Sass 颜色函数 {.cols-2}
 
 ### rgba
 
@@ -172,63 +172,63 @@ rgba(100, 120, 140, .5)
 rgba($color, .5)
 ```
 
-### Mixing
+### 混合 (Mixing)
 
 ```scss
 mix($a, $b, 10%)   // 10% a, 90% b
 ```
 
-### Modifying HSLA
+### 修改 HSLA
 
 ```scss
-darken($color, 5%)
-lighten($color, 5%)
+darken($color, 5%)    // 变暗
+lighten($color, 5%)   // 变亮
 ```
 
 ```scss
-saturate($color, 5%)
-desaturate($color, 5%)
-grayscale($color)
+saturate($color, 5%)    // 增加饱和度
+desaturate($color, 5%)  // 降低饱和度
+grayscale($color)       // 灰度
 ```
 
 ```scss
-adjust-hue($color, 15deg)
-complement($color)    // like adjust-hue(_, 180deg)
-invert($color)
+adjust-hue($color, 15deg) // 调整色相
+complement($color)        // 补色，类似于 adjust-hue(_, 180deg)
+invert($color)            // 反色
 ```
 
 ```scss
-fade-in($color, .5)   // aka opacify()
-fade-out($color, .5)  // aka transparentize()
-rgba($color, .5)      // sets alpha to .5
+fade-in($color, .5)   // 淡入，也写作 opacify()
+fade-out($color, .5)  // 淡出，也写作 transparentize()
+rgba($color, .5)      // 设置 alpha 透明度为 .5
 ```
 
-### Getting individual values
+### 获取单个值
 
 #### HSLA
 
 ```scss
-hue($color)         // 0deg..360deg
-saturation($color)  // 0%..100%
-lightness($color)   // 0%..100%
-alpha($color)       // 0..1 (aka opacity())
+hue($color)         // 色相 0deg..360deg
+saturation($color)  // 饱和度 0%..100%
+lightness($color)   // 亮度 0%..100%
+alpha($color)       // 透明度 0..1 (也写作 opacity())
 ```
 
 #### RGB
 
 ```scss
-red($color)         // 0..255
-green($color)
-blue($color)
+red($color)         // 红色值 0..255
+green($color)       // 绿色值
+blue($color)        // 蓝色值
 ```
 
-See: [hue()](http://sass-lang.com/documentation/Sass/Script/Functions.html#hue-instance_method),
+参见: [hue()](http://sass-lang.com/documentation/Sass/Script/Functions.html#hue-instance_method),
 [red()](http://sass-lang.com/documentation/Sass/Script/Functions.html#red-instance_method)
 
-### Adjustments
+### 调整 (Adjustments)
 
 ```scss
-// Changes by fixed amounts
+// 按固定值更改
 adjust-color($color, $blue: 5)
 adjust-color($color, $lightness: -30%) // darken(_, 30%)
 adjust-color($color, $alpha: -0.4)     // fade-out(_, .4)
@@ -236,74 +236,74 @@ adjust-color($color, $hue: 30deg)      // adjust-hue(_, 15deg)
 ```
 
 ```scss
-// Changes via percentage
+// 按百分比更改
 scale-color($color, $lightness: 50%)
 ```
 
 ```scss
-// Changes one property completely
+// 完全更改一个属性
 change-color($color, $hue: 180deg)
 change-color($color, $blue: 250)
 ```
 
-Supported: `$red`, `$green`, `$blue`, `$hue`, `$saturation`, `$lightness`, `$alpha`
+支持: `$red`, `$green`, `$blue`, `$hue`, `$saturation`, `$lightness`, `$alpha`
 
-## Sass Other functions {.cols-2}
+## Sass 其他函数 {.cols-2}
 
-### Strings
+### 字符串
 
 ```scss
-unquote('hello')
-quote(hello)
+unquote('hello')  // 移除引号
+quote(hello)      // 添加引号
 ```
 
 ```scss
-to-upper-case(hello)
-to-lower-case(hello)
+to-upper-case(hello) // 转大写
+to-lower-case(hello) // 转小写
 ```
 
 ```scss
-str-length(hello world)
-str-slice(hello, 2, 5)     // "ello" - it's 1-based, not 0-based
+str-length(hello world)    // 字符串长度
+str-slice(hello, 2, 5)     // "ello" - 基于1的索引，而非基于0
 str-insert("abcd", "X", 1) // "Xabcd"
 ```
 
-### Units
+### 单位
 
 ```scss
 unit(3em)        // 'em'
 unitless(100px)  // false
 ```
 
-### Numbers
+### 数字
 
 ```scss
-floor(3.5)
-ceil(3.5)
-round(3.5)
-abs(3.5)
+floor(3.5) // 向下取整
+ceil(3.5)  // 向上取整
+round(3.5) // 四舍五入
+abs(3.5)   // 绝对值
 ```
 
 ```scss
-min(1, 2, 3)
-max(1, 2, 3)
+min(1, 2, 3) // 最小值
+max(1, 2, 3) // 最大值
 ```
 
 ```scss
 percentage(.5)   // 50%
-random(3)        // 0..3
+random(3)        // 0..3 之间的随机数
 ```
 
-### Misc
+### 其他
 
 ```scss
-variable-exists(red)    // checks for $red
-mixin-exists(red-text)  // checks for @mixin red-text
-function-exists(redify)
+variable-exists(red)    // 检查 $red 是否存在
+mixin-exists(red-text)  // 检查 @mixin red-text 是否存在
+function-exists(redify) // 检查函数 redify 是否存在
 ```
 
 ```scss
-global-variable-exists(red)
+global-variable-exists(red) // 检查全局变量 $red 是否存在
 ```
 
 ```scss
@@ -315,24 +315,24 @@ selector-replace(...)
 selector-unify(...)
 ```
 
-## Sass Feature checks {.cols-2}
+## Sass 特性检查 {.cols-2}
 
-### Feature check
+### 特性检查
 
 ```scss
 feature-exists(global-variable-shadowing)
 ```
 
-### Features
+### 特性
 
-- global-variable-shadowing
-- extend-selector-pseudoclass
-- units-level-3
-- at-error
+- global-variable-shadowing (全局变量覆盖)
+- extend-selector-pseudoclass (继承选择器伪类)
+- units-level-3 (单位级别3)
+- at-error (@error指令)
 
-## Sass Loops
+## Sass 循环
 
-### For loops
+### For 循环
 
 ```scss
 @for $i from 1 through 4 {
@@ -342,7 +342,7 @@ feature-exists(global-variable-shadowing)
 }
 ```
 
-### Each loops (simple)
+### Each 循环 (简单)
 
 ```scss
 $menu-items: home about contact;
@@ -354,7 +354,7 @@ $menu-items: home about contact;
 }
 ```
 
-### Each loops (nested)
+### Each 循环 (嵌套)
 
 ```scss
 $backgrounds: (home, "home.jpg"), (about, "about.jpg");
@@ -366,7 +366,7 @@ $backgrounds: (home, "home.jpg"), (about, "about.jpg");
 }
 ```
 
-### While loops
+### While 循环
 
 ```scss
 $i: 6;
@@ -378,9 +378,9 @@ $i: 6;
 }
 ```
 
-## Sass Other features
+## Sass 其他特性
 
-### Conditionals {.row-span-2}
+### 条件语句 {.row-span-2}
 
 ```scss
 @if $position == "left" {
@@ -394,32 +394,32 @@ $i: 6;
 }
 ```
 
-### Interpolation
+### 插值
 
 ```scss
-.#{$klass} { ... }      // Class
-call($function-name)    // Functions
+.#{$klass} { ... }      // 类名
+call($function-name)    // 函数
 
 @media #{$tablet}
 font: #{$size}/#{$line-height}
 url("#{$background}.jpg")
 ```
 
-### Lists
+### 列表 (Lists)
 
 ```scss
 $list: (a b c);
 
-nth($list, 1)  // starts with 1
-length($list)
+nth($list, 1)  // 获取第n个元素，从1开始
+length($list)  // 列表长度
 
-@each $item in $list { ... }
+@each $item in $list { ... } // 遍历列表
 ```
 
-### Maps {.col-span-2}
+### 映射 (Maps) {.col-span-2}
 
 ```scss
 $map: (key1: value1, key2: value2, key3: value3);
 
-map-get($map, key1)
+map-get($map, key1) // 获取映射中键的值
 ```

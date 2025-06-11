@@ -6,17 +6,17 @@ tags:
   - config
   - format
 categories:
-  - Programming
+  - 编程
 intro: |
-  A quick reference cheatsheet of what's new in JavaScript for ES2015, ES2016, ES2017, ES2018 and beyond
+  一份关于 ES2015、ES2016、ES2017、ES2018 及更高版本中 JavaScript 新增功能的快速参考备忘单
 plugins:
   - copyCode
   - runCode
 ---
 
-## Getting Started
+## 入门
 
-### Block-scoped {.row-span-2}
+### 块级作用域 {.row-span-2}
 
 #### Let
 
@@ -24,7 +24,7 @@ plugins:
 function fn () {
   let x = 0
   if (true) {
-    let x = 1 // only inside this `if`
+    let x = 1 // 只在这个 `if` 内部有效
   }
 }
 ```
@@ -35,18 +35,18 @@ function fn () {
 const a = 1;
 ```
 
-`let` is the new `var`. Constants (`const`) work just like `let`, but cannot be reassigned. See:
-[Let and const](https://babeljs.io/learn-es2015/#let--const)
+`let` 是新的 `var`。常量 (`const`) 的工作方式与 `let` 类似，但不能被重新赋值。参见：
+[Let 和 const](https://babeljs.io/learn-es2015/#let--const)
 
-### Template Strings {.row-span-2}
+### 模板字符串 {.row-span-2}
 
-#### Interpolation
+#### 插值
 
 ```js
 const message = `Hello ${name}`;
 ```
 
-#### Multi-line string
+#### 多行字符串
 
 ```js
 const str = `
@@ -55,28 +55,28 @@ the world
 `;
 ```
 
-Templates and multiline strings. See: [template strings](https://babeljs.io/learn-es2015/#template-strings)
+模板和多行字符串。参见：[模板字符串](https://babeljs.io/learn-es2015/#template-strings)
 
-### Binary and octal literals
+### 二进制和八进制字面量
 
 ```js
 let bin = 0b1010010;
 let oct = 0o755;
 ```
 
-See: [Binary and Octal Literals](https://babeljs.io/learn-es2015/#binary-and-octal-literals)
+参见：[二进制和八进制字面量](https://babeljs.io/learn-es2015/#binary-and-octal-literals)
 
-### Exponential Operator
+### 指数运算符
 
 ```js {1}
 const byte = 2 ** 8;
 ```
 
-Same as: Math.pow(2, 8)
+等同于：Math.pow(2, 8)
 
-### New library additions
+### 新增库
 
-#### New string methods
+#### 新的字符串方法
 
 ```js
 "hello".repeat(3);
@@ -88,7 +88,7 @@ Same as: Math.pow(2, 8)
 "\u1E9B\u0323".normalize("NFC");
 ```
 
-#### New Number Methods
+#### 新的 Number 方法
 
 ```js
 Number.EPSILON;
@@ -96,7 +96,7 @@ Number.isInteger(Infinity); // false
 Number.isNaN("NaN"); // false
 ```
 
-#### New Math methods
+#### 新的 Math 方法
 
 ```js
 Math.acosh(3); // 1.762747174039086
@@ -104,24 +104,24 @@ Math.hypot(3, 4); // 5
 Math.imul(Math.pow(2, 32) - 1, Math.pow(2, 32) - 2); // 2
 ```
 
-#### New Array methods
+#### 新的 Array 方法
 
 ```js
-//return a real array
+//返回一个真正的数组
 Array.from(document.querySelectorAll("*"));
-//similar to new Array(...), but without the special single-argument behavior
+//类似于 new Array(...)，但没有特殊的单参数行为
 Array.of(1, 2, 3);
 ```
 
-See: [New library additions](https://babeljs.io/learn-es2015/#math--number--string--object-apis)
+参见：[新增库](https://babeljs.io/learn-es2015/#math--number--string--object-apis)
 
-### kind
+### 类
 
 ```js
 class Circle extends Shape {
 ```
 
-#### Constructor
+#### 构造函数
 
 ```js {1}
 constructor (radius) {
@@ -129,7 +129,7 @@ constructor (radius) {
 }
 ```
 
-#### method
+#### 方法
 
 ```js {1}
 getArea () {
@@ -137,7 +137,7 @@ getArea () {
 }
 ```
 
-#### Call the superclass method
+#### 调用超类方法
 
 ```js {2}
 expand(n) {
@@ -145,7 +145,7 @@ expand(n) {
 }
 ```
 
-#### Static methods
+#### 静态方法
 
 ```js {1}
 static createFromDiameter(diameter) {
@@ -153,11 +153,11 @@ static createFromDiameter(diameter) {
 }
 ```
 
-Syntactic sugar for prototypes. See: [classes](https://babeljs.io/learn-es2015/#classes)
+原型的语法糖。参见：[类](https://babeljs.io/learn-es2015/#classes)
 
-### Private class
+### 私有类
 
-The javascript default field is public (`public`), if you need to indicate private, you can use (`#`)
+JavaScript 默认字段是公共的 (`public`)，如果需要表示私有，可以使用 (`#`)
 
 ```js
 class Dog {
@@ -166,18 +166,18 @@ class Dog {
     this.#name = name;
   }
   printName() {
-    // Only private fields can be called inside the class
+    // 只有私有字段可以在类内部调用
     console.log(`Your name is ${this.#name}`);
   }
 }
 
 const dog = new Dog("putty");
 //console.log(this.#name)
-//Private identifiers are not allowed outside class bodies.
+//私有标识符不允许在类主体之外使用。
 dog.printName();
 ```
 
-#### Static private class
+#### 静态私有类
 
 ```js
 class ClassWithPrivate {
@@ -192,7 +192,7 @@ class ClassWithPrivate {
 
 ## Promises
 
-### make the commitment
+### 创建 Promise
 
 ```js {1}
 new Promise((resolve, reject) => {
@@ -204,9 +204,9 @@ new Promise((resolve, reject) => {
 });
 ```
 
-for asynchronous programming. See: [Promises](https://babeljs.io/learn-es2015/#promises)
+用于异步编程。参见：[Promises](https://babeljs.io/learn-es2015/#promises)
 
-### Using Promises
+### 使用 Promises
 
 ```js{2,3}
 promise
@@ -214,20 +214,20 @@ promise
   .catch((error) => { ··· })
 ```
 
-### Using Promises in finally
+### 在 finally 中使用 Promises
 
 ```js {4}
 promise
   .then((result) => { ··· })
   .catch((error) => { ··· })
   .finally(() => {
-    /*logic independent of success/error */
+    /* 独立于成功/错误逻辑 */
   })
 ```
 
-The handler is called when the promise is fulfilled or rejected
+当 promise 被 fulfilled 或 rejected 时，处理程序会被调用
 
-### Promise function
+### Promise 函数
 
 ```js
 Promise.all(···)
@@ -246,20 +246,20 @@ async function run () {
 }
 ```
 
-`async` functions are another way to use functions. See:
-[Async Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+`async` 函数是使用函数的另一种方式。参见：
+[Async 函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)
 
-## Destructuring
+## 解构
 
-### Destructuring assignment
+### 解构赋值
 
-#### Arrays
+#### 数组
 
 ```js {1}
 const [first, last] = ["Nikola", "Tesla"];
 ```
 
-#### Objects
+#### 对象
 
 ```js {1}
 let { title, author } = {
@@ -268,9 +268,9 @@ let { title, author } = {
 };
 ```
 
-Supports matching arrays and objects. See: [Destructuring](https://babeljs.io/learn-es2015/#destructuring)
+支持匹配数组和对象。参见：[解构](https://babeljs.io/learn-es2015/#destructuring)
 
-### Defaults
+### 默认值
 
 ```js
 const scores = [22, 33];
@@ -280,13 +280,13 @@ const [math = 50, sci = 50, arts = 50] = scores;
 ---
 
 ```js
-//Result:
+//结果:
 //math === 22, sci === 33, arts === 50
 ```
 
-A default value can be assigned when destructuring an array or object
+解构数组或对象时可以分配默认值
 
-### Function parameters
+### 函数参数
 
 ```js {1}
 function greet({ name, greeting }) {
@@ -300,9 +300,9 @@ function greet({ name, greeting }) {
 greet({ name: "Larry", greeting: "Ahoy" });
 ```
 
-Destructuring of objects and arrays can also be done in function parameters
+对象和数组的解构也可以在函数参数中完成
 
-### Defaults
+### 默认值
 
 ```js {1}
 function greet({ name = "Rauno" } = {}) {
@@ -317,7 +317,7 @@ greet(); // Hi Rauno!
 greet({ name: "Larry" }); // Hi Larry!
 ```
 
-### Reassign keys
+### 重命名键
 
 ```js {1}
 function printCoordinates({ left: x, top: y }) {
@@ -331,9 +331,9 @@ function printCoordinates({ left: x, top: y }) {
 printCoordinates({ left: 25, top: 90 });
 ```
 
-This example assigns `x` to the value of the `left` key
+此示例将 `x` 赋值为 `left` 键的值
 
-### Loop
+### 循环
 
 ```js {1}
 for (let {title, artist} of songs) {
@@ -341,21 +341,21 @@ for (let {title, artist} of songs) {
 }
 ```
 
-Assignment expressions also work in loops
+赋值表达式也适用于循环
 
-### Object Deconstruction
+### 对象解构
 
 ```js {1}
 const { id, ...detail } = song;
 ```
 
-Use the `rest(...)` operator to extract some keys individually and the rest of the keys in the object
+使用 `rest(...)` 运算符单独提取一些键，其余键则在对象中
 
-## Spread Operator {.cols-2}
+## 展开运算符 {.cols-2}
 
-### Object Extensions
+### 对象扩展
 
-#### with object extensions
+#### 使用对象扩展
 
 ```js {2}
 const options = {
@@ -364,18 +364,18 @@ const options = {
 };
 ```
 
-#### No object extension
+#### 不使用对象扩展
 
 ```js
 const options = Object.assign({}, defaults, { visible: true });
 ```
 
-The object spread operator allows you to build new objects from other objects. See:
-[Object Spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+对象展开运算符允许您从其他对象构建新对象。参见：
+[对象展开](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
-### Array Expansion
+### 数组扩展
 
-#### with array extension
+#### 使用数组扩展
 
 ```js{2,3}
 const users = [
@@ -385,20 +385,20 @@ const users = [
 ]
 ```
 
-#### No array expansion
+#### 不使用数组扩展
 
 ```js
 const users = admins.concat(editors).concat(["rstacruz"]);
 ```
 
-The spread operator allows you to build new arrays in the same way. See:
-[Spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+展开运算符允许您以相同的方式构建新数组。参见：
+[展开运算符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
-## Functions
+## 函数
 
-### Function parameters {.row-span-3}
+### 函数参数 {.row-span-3}
 
-#### Default parameters
+#### 默认参数
 
 ```js {1}
 function greet(name = "Jerry") {
@@ -406,28 +406,28 @@ function greet(name = "Jerry") {
 }
 ```
 
-#### Rest parameters
+#### Rest 参数
 
 ```js {1}
 function fn(x, ...y) {
-  // y is an array
+  // y 是一个数组
   return x * y.length;
 }
 ```
 
-#### Extensions
+#### 扩展
 
 ```js {1}
 fn(...[1, 2, 3]);
-//same as fn(1, 2, 3)
+//等同于 fn(1, 2, 3)
 ```
 
-Default (default), rest, spread (extension). See:
-[function parameters](https://babeljs.io/learn-es2015/#default--rest--spread)
+默认 (default)、rest、展开 (extension)。参见：
+[函数参数](https://babeljs.io/learn-es2015/#default--rest--spread)
 
-### Arrow function {.row-span-3}
+### 箭头函数 {.row-span-3}
 
-#### Arrow functions
+#### 箭头函数
 
 ```js {1}
 setTimeout(() => {
@@ -435,7 +435,7 @@ setTimeout(() => {
 })
 ```
 
-#### with parameters
+#### 带参数
 
 ```js {1}
 readFile('text.txt', (err, data) => {
@@ -443,21 +443,21 @@ readFile('text.txt', (err, data) => {
 })
 ```
 
-#### implicit return
+#### 隐式返回
 
 ```js{1,4,5,6}
 arr.map(n => n*2)
-//no curly braces = implicit return
-//Same as: arr.map(function (n) { return n*2 })
+//没有花括号 = 隐式返回
+//等同于: arr.map(function (n) { return n*2 })
 arr.map(n => ({
   result: n*2
 }))
-//Implicitly returning an object requires parentheses around the object
+//隐式返回对象需要在对象周围加上括号
 ```
 
-Like a function, but preserves `this`. See: [Arrow functions](https://babeljs.io/learn-es2015/#arrows-and-lexical-this)
+类似于函数，但保留 `this`。参见：[箭头函数](https://babeljs.io/learn-es2015/#arrows-and-lexical-this)
 
-### Parameter setting default value
+### 参数设置默认值
 
 ```js
 function log(x, y = "World") {
@@ -469,7 +469,7 @@ log("Hello", "China"); // Hello China
 log("Hello", ""); // Hello
 ```
 
-### Used in conjunction with destructuring assignment defaults
+### 与解构赋值默认值结合使用
 
 ```js
 function foo({ x, y = 5 } = {}) {
@@ -479,29 +479,29 @@ function foo({ x, y = 5 } = {}) {
 foo(); // undefined 5
 ```
 
-### name attribute
+### name 属性
 
 ```js
 function foo() {}
 foo.name; // "foo"
 ```
 
-### length property
+### length 属性
 
 ```js
 function foo(a, b) {}
 foo.length; // 2
 ```
 
-## Objects
+## 对象
 
-### Shorthand Syntax
+### 简写语法
 
 ```js
 module.exports = { hello, bye };
 ```
 
-same below:
+等同于：
 
 ```js
 module.exports = {
@@ -510,9 +510,9 @@ module.exports = {
 };
 ```
 
-See: [Object Literals Enhanced](https://babeljs.io/learn-es2015/#enhanced-object-literals)
+参见：[增强的对象字面量](https://babeljs.io/learn-es2015/#enhanced-object-literals)
 
-### method
+### 方法
 
 ```js {2}
 const App = {
@@ -520,12 +520,12 @@ const App = {
     console.log("running");
   },
 };
-//Same as: App = { start: function () {···} }
+//等同于: App = { start: function () {···} }
 ```
 
-See: [Object Literals Enhanced](https://babeljs.io/learn-es2015/#enhanced-object-literals)
+参见：[增强的对象字面量](https://babeljs.io/learn-es2015/#enhanced-object-literals)
 
-### Getters and setters
+### Getters 和 setters
 
 ```js{2,5}
 const App = {
@@ -538,21 +538,21 @@ const App = {
 }
 ```
 
-See: [Object Literals Enhanced](https://babeljs.io/learn-es2015/#enhanced-object-literals)
+参见：[增强的对象字面量](https://babeljs.io/learn-es2015/#enhanced-object-literals)
 
-### Computed property name
+### 计算属性名
 
 ```js {3}
 let event = "click";
 let handlers = {
   [`on${event}`]: true,
 };
-//Same as: handlers = { 'onclick': true }
+//等同于: handlers = { 'onclick': true }
 ```
 
-See: [Object Literals Enhanced](https://babeljs.io/learn-es2015/#enhanced-object-literals)
+参见：[增强的对象字面量](https://babeljs.io/learn-es2015/#enhanced-object-literals)
 
-### Extract value
+### 提取值
 
 ```js{3,5}
 const fatherJS = { age: 57, name: "Zhang San" }
@@ -562,64 +562,64 @@ Object.entries(fatherJS)
 //[["age", 57], ["name", "Zhang San"]]
 ```
 
-## Modules module
+## 模块 module
 
-### Imports import
+### 导入 import
 
 ```js
 import "helpers";
-//aka: require('···')
+//即: require('···')
 ```
 
 ---
 
 ```js
 import Express from "express";
-//aka: const Express = require('···').default || require('···')
+//即: const Express = require('···').default || require('···')
 ```
 
 ---
 
 ```js
 import { indent } from "helpers";
-//aka: const indent = require('···').indent
+//即: const indent = require('···').indent
 ```
 
 ---
 
 ```js
 import * as Helpers from "helpers";
-//aka: const Helpers = require('···')
+//即: const Helpers = require('···')
 ```
 
 ---
 
 ```js
 import { indentSpaces as indent } from "helpers";
-//aka: const indent = require('···').indentSpaces
+//即: const indent = require('···').indentSpaces
 ```
 
-`import` is the new `require()`. See: [Module imports](https://babeljs.io/learn-es2015/#modules)
+`import` 是新的 `require()`。参见：[模块导入](https://babeljs.io/learn-es2015/#modules)
 
-### Exports export
+### 导出 export
 
 ```js
 export default function () { ··· }
-//aka: module.exports.default = ···
+//即: module.exports.default = ···
 ```
 
 ---
 
 ```js
 export function mymethod () { ··· }
-//aka: module.exports.mymethod = ···
+//即: module.exports.mymethod = ···
 ```
 
 ---
 
 ```js
 export const pi = 3.14159;
-//aka: module.exports.pi = ···
+//即: module.exports.pi = ···
 ```
 
 ---
@@ -637,29 +637,29 @@ export { firstName, lastName, year };
 export * from "lib/math";
 ```
 
-`export` is the new `module.exports`. See: [Module exports](https://babeljs.io/learn-es2015/#modules)
+`export` 是新的 `module.exports`。参见：[模块导出](https://babeljs.io/learn-es2015/#modules)
 
-### `as` keyword renaming
+### `as` 关键字重命名
 
 ```js{2,8,12-14}
 import {
-  lastName as surname // import rename
+  lastName as surname // 导入重命名
 } from './profile.js';
 
 function v1() { ... }
 function v2() { ... }
 
 export { v1 as default };
-//Equivalent to export default v1;
+//等同于 export default v1;
 
 export {
-  v1 as streamV1, // export rename
-  v2 as streamV2, // export rename
-  v2 as streamLatestVersion // export rename
+  v1 as streamV1, // 导出重命名
+  v2 as streamV2, // 导出重命名
+  v2 as streamLatestVersion // 导出重命名
 };
 ```
 
-### Dynamically load modules
+### 动态加载模块
 
 ```js
 button.addEventListener("click", (event) => {
@@ -668,14 +668,14 @@ button.addEventListener("click", (event) => {
       dialogBox.open();
     })
     .catch((error) => {
-      /*Error handling */
+      /*错误处理 */
     });
 });
 ```
 
-[ES2020 Proposal](https://github.com/tc39/proposal-dynamic-import) introduce `import()` function
+[ES2020 提案](https://github.com/tc39/proposal-dynamic-import) 引入了 `import()` 函数
 
-### import() allows module paths to be dynamically generated
+### import() 允许动态生成模块路径
 
 ```js
 const main = document.querySelector("main");
@@ -691,34 +691,34 @@ import(`./modules/${someVariable}.js`)
 
 ### import.meta
 
-[ES2020](https://github.com/tc39/proposal-import-meta) Added a meta property `import.meta` to the `import` command,
-which returns the meta information of the current module
+[ES2020](https://github.com/tc39/proposal-import-meta) 为 `import` 命令添加了一个元属性 `import.meta`，
+它返回当前模块的元信息
 
 ```js
 new URL("data.txt", import.meta.url);
 ```
 
-In the Node.js environment, `import.meta.url` always returns a local path, that is, a string of the `file:URL` protocol,
-such as `file:/// home/user/foo.js`
+在 Node.js 环境中，`import.meta.url` 总是返回一个本地路径，即 `file:URL` 协议的字符串，
+例如 `file:/// home/user/foo.js`
 
-### Import Assertions {.col-span-2}
+### 导入断言 {.col-span-2}
 
-#### static import
+#### 静态导入
 
 ```js
 import json from "./package.json" assert { type: "json" };
-//Import all objects in the json file
+//导入 json 文件中的所有对象
 ```
 
-#### Dynamic Import
+#### 动态导入
 
 ```js
 const json = await import("./package.json", { assert: { type: "json" } });
 ```
 
-## Generators
+## 生成器
 
-### Generator function
+### 生成器函数
 
 ```js
 function* idMaker() {
@@ -738,9 +738,9 @@ gen.next().value; // → 1
 gen.next().value; // → 2
 ```
 
-it's complicated. See: [Generators](https://babeljs.io/learn-es2015/#generators)
+这很复杂。参见：[生成器](https://babeljs.io/learn-es2015/#generators)
 
-### For..of + iterator {.row-span-2}
+### For..of + 迭代器 {.row-span-2}
 
 ```js
 let fibonacci = {
@@ -757,15 +757,15 @@ let fibonacci = {
 };
 
 for (var n of fibonacci) {
-  // truncate sequence at 1000
+  // 在 1000 处截断序列
   if (n > 1000) break;
   console.log(n);
 }
 ```
 
-For iterating over generators and arrays. See: [For..of iteration](https://babeljs.io/learn-es2015/#iterators--forof)
+用于迭代生成器和数组。参见：[For..of 迭代](https://babeljs.io/learn-es2015/#iterators--forof)
 
-### Relationship with Iterator interface
+### 与 Iterator 接口的关系
 
 ```js
 var gen = {};
@@ -778,24 +778,25 @@ gen[Symbol.iterator] = function* () {
 [...gen]; // => [1, 2, 3]
 ```
 
-The `Generator` function is assigned to the `Symbol.iterator` property, so that the `gen` object has the `Iterator`
-interface, which can be traversed by the `...` operator
+`Generator` 函数被赋值给 `Symbol.iterator` 属性，因此 `gen` 对象具有 `Iterator`
+接口，可以通过 `...` 运算符进行遍历
 
-### Symbol.iterator property
+### Symbol.iterator 属性
 
 ```js
 function* gen() {
-  /*some code */
+  /*一些代码 */
 }
 var g = gen();
 
 g[Symbol.iterator]() === g; // true
 ```
 
-`gen` is a `Generator` function, calling it will generate a traverser object `g`. Its `Symbol.iterator` property, which
-is also an iterator object generation function, returns itself after execution
+`gen` 是一个 `Generator` 函数，调用它会生成一个遍历器对象 `g`。它的 `Symbol.iterator` 属性，
+也是一个迭代器对象生成函数，执行后返回自身
 
-## see also
+## 另见
 
-- [Learn ES2015](https://babeljs.io/docs/en/learn/)_(babeljs.io)_
-- [ECMAScript 6 Features Overview](https://github.com/lukehoban/es6features#readme) _(github.com)_
+- [学习 ES2015](https://babeljs.io/docs/en/learn/)_(babeljs.io)_
+- [ECMAScript 6 特性概览](https://github.com/lukehoban/es6features#readme) _(github.com)_
+

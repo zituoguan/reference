@@ -7,271 +7,271 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 187 keyboard shortcuts found in Blender
+  Blender 中 187 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### Universal
+### 通用
 
-| Shortcut            | Action                                                                                                                        |
+| 快捷键              | 操作                                                                                                                          |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `Esc`               | Cancels Blender functions without changes                                                                                     |
-| `Space`             | Open the toolbox                                                                                                              |
-| `Tab`               | Start or quit edit mode                                                                                                       |
-| `F1`                | Loads a Blender file, changes the window to a file window                                                                     |
-| `Shift` `F1`        | Appends parts from other files, or loads as library data                                                                      |
-| `F2`                | Writes a Blender file, changes the window to a file window                                                                    |
-| `Shift` `F2`        | Exports the scene as a DXF file                                                                                               |
-| `Ctrl` `F2`         | Exports the scene as a VRML1 file                                                                                             |
-| `F3`                | Writes a picture, if a picture has been rendered, and the file format is as indicated in the display buttons                  |
-| `Ctrl` `F3`         | Saves a screen dump of the active window                                                                                      |
-| `Ctrl` `Shift` `F3` | Saves a screen dump of the whole Blender screen                                                                               |
-| `F4`                | Displays the logic context                                                                                                    |
-| `F5`                | Displays the shading context, light, material, or world sub-contexts                                                          |
-| `F6`                | Displays the shading context and texture sub-context                                                                          |
-| `F7`                | Displays the object context                                                                                                   |
-| `F8`                | Displays the shading context and world sub-context                                                                            |
-| `F9`                | Displays the editing context                                                                                                  |
-| `F10`               | Displays the scene context                                                                                                    |
-| `F11`               | Hides or shows the render window                                                                                              |
-| `F12`               | Starts the rendering from the active camera                                                                                   |
-| `Left`              | Go to the previous frame                                                                                                      |
-| `Shift` `Left`      | Go to the first frame                                                                                                         |
-| `Right`             | Go to the next frame                                                                                                          |
-| `Shift` `Right`     | Go to the last frame                                                                                                          |
-| `Up`                | Go forward 10 frames                                                                                                          |
-| `Down`              | Go back 10 frames                                                                                                             |
-| `Alt` `A`           | Change the current Blender window to animation playback mode, the cursor changes to a counter                                 |
-| `Alt` `Shift` `A`   | Change the current window and all 3D windows to animation playback mode                                                       |
-| `I`                 | Insert key menu, this menu differs from window to window                                                                      |
-| `J`                 | Toggle the render buffers                                                                                                     |
-| `Ctrl` `O`          | Opens the last saved file                                                                                                     |
-| `Q`                 | Quit Blender                                                                                                                  |
-| `Ctrl` `Alt` `T`    | Timer menu, this menu offers access to information about drawing speed                                                        |
-| `Ctrl` `U`          | Save user defaults, current project settings are written to the default file that will be loaded every time you start Blender |
-| `Ctrl` `W`          | Write file without opening a file window                                                                                      |
-| `Alt` `W`           | Write videoscape file                                                                                                         |
-| `Ctrl` `X`          | Erase everything except the render buffer, the default scene is reloaded                                                      |
-| `Ctrl` `Y`          | Redo                                                                                                                          |
-| `Ctrl` `Z`          | Undo                                                                                                                          |
-| `Ctrl` `Shift` `Z`  | Redo                                                                                                                          |
+| `Esc`               | 取消 Blender 功能且不保存更改                                                                                                   |
+| `Space`             | 打开工具箱                                                                                                                    |
+| `Tab`               | 进入或退出编辑模式                                                                                                            |
+| `F1`                | 加载 Blender 文件，将窗口更改为文件窗口                                                                                       |
+| `Shift` `F1`        | 从其他文件附加部件，或作为库数据加载                                                                                          |
+| `F2`                | 保存 Blender 文件，将窗口更改为文件窗口                                                                                       |
+| `Shift` `F2`        | 将场景导出为 DXF 文件                                                                                                         |
+| `Ctrl` `F2`         | 将场景导出为 VRML1 文件                                                                                                       |
+| `F3`                | 保存图片，如果图片已渲染，并且文件格式如显示按钮中所示                                                                        |
+| `Ctrl` `F3`         | 保存活动窗口的屏幕截图                                                                                                        |
+| `Ctrl` `Shift` `F3` | 保存整个 Blender 屏幕的屏幕截图                                                                                               |
+| `F4`                | 显示逻辑上下文                                                                                                                |
+| `F5`                | 显示着色上下文、灯光、材质或世界子上下文                                                                                      |
+| `F6`                | 显示着色上下文和纹理子上下文                                                                                                  |
+| `F7`                | 显示对象上下文                                                                                                                |
+| `F8`                | 显示着色上下文和世界子上下文                                                                                                  |
+| `F9`                | 显示编辑上下文                                                                                                                |
+| `F10`               | 显示场景上下文                                                                                                                |
+| `F11`               | 隐藏或显示渲染窗口                                                                                                            |
+| `F12`               | 从活动摄像机开始渲染                                                                                                          |
+| `Left`              | 转到上一帧                                                                                                                    |
+| `Shift` `Left`      | 转到第一帧                                                                                                                    |
+| `Right`             | 转到下一帧                                                                                                                    |
+| `Shift` `Right`     | 转到最后一帧                                                                                                                  |
+| `Up`                | 前进 10 帧                                                                                                                    |
+| `Down`              | 后退 10 帧                                                                                                                    |
+| `Alt` `A`           | 将当前 Blender 窗口更改为动画播放模式，光标变为计数器                                                                         |
+| `Alt` `Shift` `A`   | 将当前窗口和所有 3D 窗口更改为动画播放模式                                                                                    |
+| `I`                 | 插入键菜单，此菜单因窗口而异                                                                                                  |
+| `J`                 | 切换渲染缓冲区                                                                                                                |
+| `Ctrl` `O`          | 打开上次保存的文件                                                                                                            |
+| `Q`                 | 退出 Blender                                                                                                                  |
+| `Ctrl` `Alt` `T`    | 计时器菜单，此菜单提供有关绘图速度的信息                                                                                      |
+| `Ctrl` `U`          | 保存用户默认设置，当前项目设置将写入默认文件，每次启动 Blender 时都会加载该文件                                                 |
+| `Ctrl` `W`          | 保存文件而不打开文件窗口                                                                                                      |
+| `Alt` `W`           | 保存 Videoscape 文件                                                                                                          |
+| `Ctrl` `X`          | 删除除渲染缓冲区外的所有内容，重新加载默认场景                                                                                |
+| `Ctrl` `Y`          | 重做                                                                                                                          |
+| `Ctrl` `Z`          | 撤销                                                                                                                          |
+| `Ctrl` `Shift` `Z`  | 重做                                                                                                                          |
 
 {.shortcuts}
 
-### Object Mode
+### 对象模式
 
-| Shortcut                | Action                                                                                                                                                |
+| 快捷键                  | 操作                                                                                                                                                |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Home`                  | All objects in the visible layer are displayed completely, centered in the window                                                                     |
-| `PgUp`                  | Select the next object key, if more than one is selected the selection is shifted up cyclically                                                       |
-| `Shift` `PgUp`          | Add to selection the next object key                                                                                                                  |
-| `PgDn`                  | Select the previous object key, if more than one is selected the selection is shifted up cyclically                                                   |
-| `Shift` `PgDn`          | Adds to selection the previous object key                                                                                                             |
-| <code>\`</code>         | Select all layers                                                                                                                                     |
-| `Shift` <code>\`</code> | Revert to the previous layer setting                                                                                                                  |
-| `Tab`                   | Start or stop edit mode                                                                                                                               |
-| `A`                     | Selects or deselects all                                                                                                                              |
-| `Ctrl` `A`              | Apply size and rotation                                                                                                                               |
-| `Ctrl` `Shift` `A`      | If the active object is automatically duplicated, brings up a menu for actually creating the objects                                                  |
-| `Shift` `A`             | Brings up the add menu, the toolbox items that start with ADD                                                                                         |
-| `B`                     | Border select, draws a rectangle with the left mouse to select objects                                                                                |
-| `Shift` `B`             | Render border, this only works in camera view mode                                                                                                    |
-| `C`                     | Center view, the position of the 3D cursor becomes the new center of the 3D window                                                                    |
-| `Alt` `C`               | Convert menu, depending on the active object a popup menu is displayed enabling you to convert certain types of ObData                                |
-| `Ctrl` `C`              | Copy menu, this menu copies information from the active object to selected objects                                                                    |
-| `Shift` `C`             | Center zero view, the 3D cursor is set to zero and the view is changed so all objects can be displayed                                                |
-| `D`                     | Display draw mode menu                                                                                                                                |
-| `Shift` `D`             | Add duplicate, the selected objects are duplicated                                                                                                    |
-| `Alt` `D`               | Add linked duplicate, linked duplicates of the selected objects are created                                                                           |
-| `Ctrl` `D`              | Draw the texture image as wire                                                                                                                        |
-| `Alt` `E`               | Start or stop edit mode                                                                                                                               |
-| `F`                     | If selected object is a mash, toggles face select mode on or off                                                                                      |
-| `Ctrl` `F`              | Sort faces, the faces of the active mesh object are sorted based on the current view in the 3D window                                                 |
-| `G`                     | Grab mode, or translation mode                                                                                                                        |
-| `Alt` `G`               | Clears translations, given in grab mode                                                                                                               |
-| `Shift` `G`             | Group selection                                                                                                                                       |
-| `I`                     | Insert object key, a keyposition is inserted in the current frame of all selected objects                                                             |
-| `Ctrl` `J`              | Join objects, all selected objects of the same type are added to the active object                                                                    |
-| `K`                     | Show keys, the draw key option is turned on for all selected objects                                                                                  |
-| `Shift` `K`             | Display popup menu for showing and selecting all keys                                                                                                 |
-| `L`                     | Makes selected object local, makes library linked objects local for the current scene                                                                 |
-| `Ctrl` `L`              | Link selected, links some of the active object data to all selected objects                                                                           |
-| `Shift` `L`             | Select linked, selected all objects somehow linked to the active object                                                                               |
-| `M`                     | Move selected objects to another layer                                                                                                                |
-| `Ctrl` `M`              | Mirror menu, it is possible to mirror an object along the X, Y, or Z axis                                                                             |
-| `N`                     | Number panel, the location, rotation, and scaling of the active object are displayed and can be modified                                              |
-| `Alt` `O`               | Clear origin, the origin is erased for all child objects, which causes them to move ot the exact location of the parent objects                       |
-| `Shift` `O`             | If the selected object is a mesh, toggles the subsurf on or off                                                                                       |
-| `Ctrl` `P`              | Make selected objects the children of the active object                                                                                               |
-| `Alt` `P`               | Clears parent relation, user is asked if they wish to keep or clear parent-induced transforms                                                         |
-| `R`                     | Rotate mode, works on selected objects                                                                                                                |
-| `Alt` `R`               | Clears rotation, the X, Y, and Z rotations of selected objects are set to zero                                                                        |
-| `S`                     | Size mode or scaling mode, works on selected objects                                                                                                  |
-| `Alt` `S`               | Clears size, the X, Y, and Z dimensions of selected objects are set to 1                                                                              |
-| `Shift` `S`             | Opens the snap menu                                                                                                                                   |
-| `T`                     | Texture space mode, the position of dimensions of the texture space for the selected objects can be changed in the same manner for grab and size mode |
-| `Ctrl` `T`              | Makes selected objects track the active object                                                                                                        |
-| `Alt` `T`               | Clears old style track, constraint track is removed as all constrains are                                                                             |
-| `U`                     | Makes object single user, the inverse operation of link                                                                                               |
-| `V`                     | Switches in and out of vertex paint mode                                                                                                              |
-| `Alt` `V`               | Object image aspect, this hotkey sets the X and Y dimensions of the selected objects in relation to the dimensions of the image texture they have     |
-| `W`                     | Opens the object booleans menu                                                                                                                        |
-| `X`                     | Deletes selected objects                                                                                                                              |
-| `Z`                     | Toggles solid mode on or off                                                                                                                          |
-| `Shift` `Z`             | Toggles shaded mode on or off                                                                                                                         |
-| `Alt` `Z`               | Toggles textured mode on or off                                                                                                                       |
+| `Home`                  | 可见图层中的所有对象都完整显示，并在窗口中居中                                                                                                        |
+| `PgUp`                  | 选择下一个对象关键点，如果选择了多个，则选择将循环向上移动                                                                                            |
+| `Shift` `PgUp`          | 将下一个对象关键点添加到选择中                                                                                                                        |
+| `PgDn`                  | 选择上一个对象关键点，如果选择了多个，则选择将循环向上移动                                                                                            |
+| `Shift` `PgDn`          | 将上一个对象关键点添加到选择中                                                                                                                        |
+| <code>\`</code>         | 选择所有图层                                                                                                                                          |
+| `Shift` <code>\`</code> | 恢复到先前的图层设置                                                                                                                                  |
+| `Tab`                   | 开始或停止编辑模式                                                                                                                                    |
+| `A`                     | 全选或取消全选                                                                                                                                        |
+| `Ctrl` `A`              | 应用大小和旋转                                                                                                                                        |
+| `Ctrl` `Shift` `A`      | 如果活动对象是自动复制的，则会弹出一个菜单以实际创建对象                                                                                              |
+| `Shift` `A`             | 弹出添加菜单，即工具箱中以 ADD 开头的项目                                                                                                             |
+| `B`                     | 框选，用鼠标左键绘制一个矩形以选择对象                                                                                                                |
+| `Shift` `B`             | 渲染边框，这仅在摄像机视图模式下有效                                                                                                                  |
+| `C`                     | 居中视图，3D 光标的位置成为 3D 窗口的新中心                                                                                                           |
+| `Alt` `C`               | 转换菜单，根据活动对象显示一个弹出菜单，使您能够转换某些类型的 ObData                                                                                 |
+| `Ctrl` `C`              | 复制菜单，此菜单将信息从活动对象复制到选定对象                                                                                                        |
+| `Shift` `C`             | 居中归零视图，3D 光标设置为零，并且视图已更改，以便可以显示所有对象                                                                                   |
+| `D`                     | 显示绘制模式菜单                                                                                                                                      |
+| `Shift` `D`             | 添加副本，复制选定的对象                                                                                                                              |
+| `Alt` `D`               | 添加链接副本，创建选定对象的链接副本                                                                                                                  |
+| `Ctrl` `D`              | 将纹理图像绘制为线框                                                                                                                                  |
+| `Alt` `E`               | 开始或停止编辑模式                                                                                                                                    |
+| `F`                     | 如果选定的对象是网格，则打开或关闭面选择模式                                                                                                          |
+| `Ctrl` `F`              | 对面进行排序，活动网格对象的面根据 3D 窗口中的当前视图进行排序                                                                                        |
+| `G`                     | 抓取模式或平移模式                                                                                                                                    |
+| `Alt` `G`               | 清除平移，在抓取模式下给出                                                                                                                            |
+| `Shift` `G`             | 分组选择                                                                                                                                              |
+| `I`                     | 插入对象关键点，在所有选定对象的当前帧中插入一个关键点位置                                                                                            |
+| `Ctrl` `J`              | 合并对象，所有选定的相同类型的对象都将添加到活动对象中                                                                                                |
+| `K`                     | 显示关键点，为所有选定对象打开绘制关键点选项                                                                                                          |
+| `Shift` `K`             | 显示弹出菜单以显示和选择所有关键点                                                                                                                    |
+| `L`                     | 使选定对象成为本地对象，使库链接对象成为当前场景的本地对象                                                                                            |
+| `Ctrl` `L`              | 链接选定对象，将活动对象的某些数据链接到所有选定对象                                                                                                  |
+| `Shift` `L`             | 选择链接对象，选择以某种方式链接到活动对象的所有对象                                                                                                  |
+| `M`                     | 将选定对象移动到另一个图层                                                                                                                            |
+| `Ctrl` `M`              | 镜像菜单，可以沿 X、Y 或 Z 轴镜像对象                                                                                                                 |
+| `N`                     | 数字面板，显示并可以修改活动对象的位置、旋转和缩放                                                                                                    |
+| `Alt` `O`               | 清除原点，清除所有子对象的原点，这将导致它们移动到父对象的精确位置                                                                                    |
+| `Shift` `O`             | 如果选定的对象是网格，则打开或关闭细分曲面                                                                                                            |
+| `Ctrl` `P`              | 使选定对象成为活动对象的子对象                                                                                                                        |
+| `Alt` `P`               | 清除父子关系，询问用户是否希望保留或清除父级引起的变换                                                                                                |
+| `R`                     | 旋转模式，作用于选定对象                                                                                                                              |
+| `Alt` `R`               | 清除旋转，将选定对象的 X、Y 和 Z 旋转设置为零                                                                                                         |
+| `S`                     | 大小模式或缩放模式，作用于选定对象                                                                                                                    |
+| `Alt` `S`               | 清除大小，将选定对象的 X、Y 和 Z 尺寸设置为 1                                                                                                         |
+| `Shift` `S`             | 打开吸附菜单                                                                                                                                          |
+| `T`                     | 纹理空间模式，可以像抓取和大小模式一样更改选定对象的纹理空间的位置或尺寸                                                                              |
+| `Ctrl` `T`              | 使选定对象跟踪活动对象                                                                                                                                |
+| `Alt` `T`               | 清除旧式跟踪，约束跟踪与所有约束一样被移除                                                                                                            |
+| `U`                     | 使对象成为单一用户，链接的逆操作                                                                                                                      |
+| `V`                     | 进入或退出顶点绘制模式                                                                                                                                |
+| `Alt` `V`               | 对象图像纵横比，此热键根据选定对象所具有的图像纹理的尺寸设置其 X 和 Y 尺寸                                                                            |
+| `W`                     | 打开对象布尔菜单                                                                                                                                      |
+| `X`                     | 删除选定对象                                                                                                                                          |
+| `Z`                     | 打开或关闭实体模式                                                                                                                                    |
+| `Shift` `Z`             | 打开或关闭着色模式                                                                                                                                    |
+| `Alt` `Z`               | 打开或关闭纹理模式                                                                                                                                    |
 
 {.shortcuts}
 
-### Edit Mode - General
+### 编辑模式 - 通用
 
-| Shortcut     | Action                                                                                             |
+| 快捷键     | 操作                                                                                             |
 | ------------ | -------------------------------------------------------------------------------------------------- |
-| `Tab`        | Start or stop edit mode                                                                            |
-| `Alt` `E`    | Start or stop edit mode (alternative)                                                              |
-| `Ctrl` `Tab` | Switches between vertex select, edge select, and face select modes                                 |
-| `A`          | Select or unselect all                                                                             |
-| `B` `B`      | Circle select                                                                                      |
-| `Ctrl` `H`   | With vertices selected, this creates a hook object                                                 |
-| `N`          | Number panel, simpler than the object mode one                                                     |
-| `O`          | Switch in and out of proportional editing                                                          |
-| `Shift` `O`  | Toggles between smooth and sharp proportional editing                                              |
-| `P`          | Separate, you can choose to make a new object with all selected vertices, edges, faces, and curves |
-| `Ctrl` `P`   | Make vertex parent                                                                                 |
-| `Ctrl` `S`   | Shear, in edit mode this operation enables you to make selected forms slant                        |
-| `U`          | Undo                                                                                               |
-| `W`          | Displays specials popup menu                                                                       |
-| `Shift` `W`  | Warp, selected vertices can be bent into curves with this option                                   |
+| `Tab`        | 开始或停止编辑模式                                                                                 |
+| `Alt` `E`    | 开始或停止编辑模式（替代）                                                                         |
+| `Ctrl` `Tab` | 在顶点选择、边选择和面选择模式之间切换                                                               |
+| `A`          | 全选或取消全选                                                                                     |
+| `B` `B`      | 圆形选择                                                                                           |
+| `Ctrl` `H`   | 选中顶点后，此操作将创建一个钩子对象                                                                 |
+| `N`          | 数字面板，比对象模式的更简单                                                                       |
+| `O`          | 进入或退出比例编辑                                                                                 |
+| `Shift` `O`  | 在平滑和锐利比例编辑之间切换                                                                       |
+| `P`          | 分离，您可以选择使用所有选定的顶点、边、面和曲线创建一个新对象                                     |
+| `Ctrl` `P`   | 创建顶点父级                                                                                       |
+| `Ctrl` `S`   | 倾斜，在编辑模式下，此操作使您能够使选定的形状倾斜                                                 |
+| `U`          | 撤销                                                                                               |
+| `W`          | 显示特殊功能弹出菜单                                                                               |
+| `Shift` `W`  | 弯曲，使用此选项可以使选定的顶点弯曲成曲线                                                         |
 
 {.shortcuts}
 
-### Edit Mode - Mesh
+### 编辑模式 - 网格
 
-| Shortcut           | Action                                                                                                                  |
+| 快捷键           | 操作                                                                                                                  |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| `Ctrl` `+`         | Adds to selection all vertices connected by an edge to an already selected vertex                                       |
-| `Ctrl` `-`         | Removes from selection all vertices of the outer ring of selected vertices                                              |
-| `C`                | If using curve deformation, toggles the curve cyclic mode on or off                                                     |
-| `E`                | Extrude selected                                                                                                        |
-| `Shift` `E`        | Crease subsurf edge                                                                                                     |
-| `Ctrl` `E`         | Mark LSCM seam                                                                                                          |
-| `F`                | Make edge or face                                                                                                       |
-| `Shift` `F`        | Fill selected, all selected vertices that are bound by edges and form a closed polygon are filled with triangular faces |
-| `Alt` `F`          | Beauty fill, edges of all selected triangular faces are switched so equally sized faces are formed                      |
-| `Ctrl` `F`         | Flip faces, selected triangular faces are paired and common edge of each pair swapped                                   |
-| `H`                | Hide selected, all selected vertices and faces are hidden                                                               |
-| `Shift` `H`        | Hide not selected, all non-selected vertices and faces are hidden                                                       |
-| `Alt` `H`          | Reveal, all hidden vertices and faces are drawn again                                                                   |
-| `Alt` `J`          | Join faces, selected triangular faces are joined in pairs and transformed to quads                                      |
-| `K`                | Knife tool menu                                                                                                         |
-| `L`                | Select linked                                                                                                           |
-| `Shift` `L`        | Deselect linked                                                                                                         |
-| `Ctrl` `L`         | Select linked selected                                                                                                  |
-| `M`                | Mirror, opens a popup asking for the axis to mirror                                                                     |
-| `Alt` `M`          | Merges selected vertices as barycentrum or at cursor depending on selection made on popup                               |
-| `Ctrl` `N`         | Calculate normals outside                                                                                               |
-| `Ctrl` `Shift` `N` | Calculate normals inside                                                                                                |
-| `Alt` `S`          | Scales each vertex in the direction of its local normal                                                                 |
-| `Ctrl` `T`         | Make triangles, all selected faces are converted to triangles                                                           |
-| `U`                | Undo                                                                                                                    |
-| `Shift` `U`        | Redo                                                                                                                    |
-| `Alt` `U`          | Undo menu                                                                                                               |
-| `W`                | Special menu                                                                                                            |
-| `X`                | Erase selected                                                                                                          |
-| `Y`                | Split, this command splits the selected part of a mesh without deleting faces                                           |
+| `Ctrl` `+`         | 将通过边连接到已选定顶点的所有顶点添加到选择中                                                                          |
+| `Ctrl` `-`         | 从选择中移除选定顶点外环的所有顶点                                                                                      |
+| `C`                | 如果使用曲线变形，则打开或关闭曲线循环模式                                                                              |
+| `E`                | 拉伸选定项                                                                                                              |
+| `Shift` `E`        | 折痕细分曲面边                                                                                                          |
+| `Ctrl` `E`         | 标记 LSCM 接缝                                                                                                          |
+| `F`                | 创建边或面                                                                                                              |
+| `Shift` `F`        | 填充选定项，所有由边界定并形成闭合多边形的选定顶点都将填充三角形面                                                      |
+| `Alt` `F`          | 美化填充，所有选定三角形面的边都将切换，以便形成大小相等的面                                                              |
+| `Ctrl` `F`         | 翻转面，选定的三角形面将配对，并且每对的公共边将交换                                                                    |
+| `H`                | 隐藏选定项，所有选定的顶点和面都将隐藏                                                                                  |
+| `Shift` `H`        | 隐藏未选定项，所有未选定的顶点和面都将隐藏                                                                              |
+| `Alt` `H`          | 显示，所有隐藏的顶点和面都将再次绘制                                                                                    |
+| `Alt` `J`          | 合并面，选定的三角形面将成对合并并转换为四边形                                                                          |
+| `K`                | 刻刀工具菜单                                                                                                            |
+| `L`                | 选择链接项                                                                                                              |
+| `Shift` `L`        | 取消选择链接项                                                                                                          |
+| `Ctrl` `L`         | 选择链接的选定项                                                                                                        |
+| `M`                | 镜像，打开一个弹出窗口，要求选择镜像轴                                                                                  |
+| `Alt` `M`          | 根据弹出窗口中的选择，将选定的顶点合并为重心或光标处                                                                    |
+| `Ctrl` `N`         | 计算外部法线                                                                                                            |
+| `Ctrl` `Shift` `N` | 计算内部法线                                                                                                            |
+| `Alt` `S`          | 沿其局部法线方向缩放每个顶点                                                                                            |
+| `Ctrl` `T`         | 创建三角形，所有选定的面都将转换为三角形                                                                                |
+| `U`                | 撤销                                                                                                                    |
+| `Shift` `U`        | 重做                                                                                                                    |
+| `Alt` `U`          | 撤销菜单                                                                                                                |
+| `W`                | 特殊菜单                                                                                                                |
+| `X`                | 删除选定项                                                                                                              |
+| `Y`                | 分割，此命令分割网格的选定部分而不删除面                                                                                |
 
 {.shortcuts}
 
-### Edit Mode - Curve
+### 编辑模式 - 曲线
 
-| Shortcut    | Action                                                                                 |
+| 快捷键    | 操作                                                                                 |
 | ----------- | -------------------------------------------------------------------------------------- |
-| `C`         | Set the selected curves to cyclic or turn cyclic off                                   |
-| `E`         | Extrude curve                                                                          |
-| `F`         | Add segment, a segment is added between two selected vertices at the end of two curves |
-| `H`         | Toggle handle align or free                                                            |
-| `Shift` `H` | Set handle to auto                                                                     |
-| `Ctrl` `H`  | Calculate handles                                                                      |
-| `L`         | Select linked                                                                          |
-| `Shift` `L` | Deselect linked                                                                        |
-| `M`         | Mirror selected control points exactly as for vertices in a mesh                       |
-| `T`         | Tilt mode, specify an extra axis rotation for each vertex in a 3D curve                |
-| `Alt` `T`   | Clear tilt                                                                             |
-| `V`         | Vector handle                                                                          |
-| `W`         | The special menu for curves appears                                                    |
-| `X`         | Erase selected                                                                         |
+| `C`         | 将选定的曲线设置为循环或关闭循环                                                       |
+| `E`         | 拉伸曲线                                                                               |
+| `F`         | 添加段，在两条曲线末端的两个选定顶点之间添加一个段                                     |
+| `H`         | 切换手柄对齐或自由                                                                     |
+| `Shift` `H` | 将手柄设置为自动                                                                       |
+| `Ctrl` `H`  | 计算手柄                                                                               |
+| `L`         | 选择链接项                                                                             |
+| `Shift` `L` | 取消选择链接项                                                                         |
+| `M`         | 镜像选定的控制点，与网格中的顶点完全相同                                               |
+| `T`         | 倾斜模式，为 3D 曲线中的每个顶点指定额外的轴旋转                                       |
+| `Alt` `T`   | 清除倾斜                                                                               |
+| `V`         | 矢量手柄                                                                               |
+| `W`         | 出现曲线的特殊菜单                                                                     |
+| `X`         | 删除选定项                                                                             |
 
 {.shortcuts}
 
-### Edit Mode - Surface
+### 编辑模式 - 曲面
 
-| Shortcut    | Action                                                                                 |
+| 快捷键    | 操作                                                                                 |
 | ----------- | -------------------------------------------------------------------------------------- |
-| `C`         | Toggle cyclic menu                                                                     |
-| `E`         | Extrude selected                                                                       |
-| `F`         | Add segment, a segment is added between two selected vertices at the end of two curves |
-| `L`         | Select linked                                                                          |
-| `Shift` `L` | Deselect linked                                                                        |
-| `M`         | Mirror selected control points exactly as for vertices in a mesh                       |
-| `Shift` `R` | Select row, starting with the last selected vertex                                     |
-| `W`         | The special menu for surfaces appears                                                  |
-| `X`         | Erase selected                                                                         |
+| `C`         | 切换循环菜单                                                                           |
+| `E`         | 拉伸选定项                                                                             |
+| `F`         | 添加段，在两条曲线末端的两个选定顶点之间添加一个段                                     |
+| `L`         | 选择链接项                                                                             |
+| `Shift` `L` | 取消选择链接项                                                                         |
+| `M`         | 镜像选定的控制点，与网格中的顶点完全相同                                               |
+| `Shift` `R` | 选择行，从最后选定的顶点开始                                                           |
+| `W`         | 出现曲面的特殊菜单                                                                     |
+| `X`         | 删除选定项                                                                             |
 
 {.shortcuts}
 
-### Edit Mode - Font
+### 编辑模式 - 字体
 
-| Shortcut        | Action                                        |
+| 快捷键        | 操作                                        |
 | --------------- | --------------------------------------------- |
-| `Right`         | Move text cursor one position forward         |
-| `Shift` `Right` | Move text cursor to the end of the line       |
-| `Left`          | Move text cursor one position backwards       |
-| `Shift` `Left`  | Move text cursor to the start of the line     |
-| `Down`          | Move text cursor one line forward             |
-| `Shift` `Down`  | Move text cursor to the end of the text       |
-| `Up`            | Move text cursor one line back                |
-| `Shift` `Up`    | Move text cursor to the beginning of the text |
-| `Alt` `U`       | Reload original data                          |
-| `Alt` `V`       | Paste text                                    |
+| `Right`         | 将文本光标向前移动一个位置                    |
+| `Shift` `Right` | 将文本光标移动到行尾                          |
+| `Left`          | 将文本光标向后移动一个位置                    |
+| `Shift` `Left`  | 将文本光标移动到行首                          |
+| `Down`          | 将文本光标向前移动一行                        |
+| `Shift` `Down`  | 将文本光标移动到文本末尾                      |
+| `Up`            | 将文本光标向后移动一行                        |
+| `Shift` `Up`    | 将文本光标移动到文本开头                      |
+| `Alt` `U`       | 重新加载原始数据                              |
+| `Alt` `V`       | 粘贴文本                                      |
 
 {.shortcuts}
 
-### VertexPaint
+### 顶点绘制
 
-| Shortcut    | Action                                                                      |
+| 快捷键    | 操作                                                                      |
 | ----------- | --------------------------------------------------------------------------- |
-| `Shift` `K` | All vertex colors are erased, they are changed to the current drawing color |
-| `U`         | Undo, press twice redos the undone                                          |
-| `W`         | Shared vertexcol, the colors of all faces that share vertices are blended   |
+| `Shift` `K` | 所有顶点颜色都将被擦除，它们将更改为当前的绘制颜色                          |
+| `U`         | 撤销，按两次可重做已撤销的操作                                              |
+| `W`         | 共享顶点颜色，共享顶点的所有面的颜色都将混合                                |
 
 {.shortcuts}
 
-### UV Editor
+### UV 编辑器
 
-| Shortcut  | Action                                                                                        |
+| 快捷键  | 操作                                                                                        |
 | --------- | --------------------------------------------------------------------------------------------- |
-| `E`       | LSCM unwrapping, launches on the faces visible in the UV editor                               |
-| `P`       | Pin selected vertices, they will stay in place on the UV editor when executing an LSCM unwrap |
-| `Alt` `P` | Un-pin selected vertices                                                                      |
+| `E`       | LSCM 展开，在 UV 编辑器中可见的面启动                                                         |
+| `P`       | 固定选定的顶点，在执行 LSCM 展开时，它们将保留在 UV 编辑器中的位置                            |
+| `Alt` `P` | 取消固定选定的顶点                                                                            |
 
 {.shortcuts}
 
-### FaceSelect
+### 面选择
 
-| Shortcut | Action                                                                                                       |
+| 快捷键 | 操作                                                                                                       |
 | -------- | ------------------------------------------------------------------------------------------------------------ |
-| `Tab`    | Switches to edit mode                                                                                        |
-| `F`      | With multiple, co-planar faces selected, this will merge them into one FGon so long as they remain co-planar |
-| `L`      | Select linked UVs                                                                                            |
-| `R`      | Calls a menu allowing to rotate the UV coordinates or the vertex col                                         |
-| `U`      | Calls the UV Calculation menu                                                                                |
+| `Tab`    | 切换到编辑模式                                                                                               |
+| `F`      | 选中多个共面面后，只要它们保持共面，此操作就会将它们合并为一个 FGon                                          |
+| `L`      | 选择链接的 UV                                                                                                |
+| `R`      | 调用一个菜单，允许旋转 UV 坐标或顶点颜色                                                                     |
+| `U`      | 调用 UV 计算菜单                                                                                             |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Blender](https://download.blender.org/documentation/BlenderHotkeyReference.pdf)
+- [Blender 键盘快捷键](https://download.blender.org/documentation/BlenderHotkeyReference.pdf)
   _(download.blender.org)_

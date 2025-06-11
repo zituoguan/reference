@@ -1,16 +1,16 @@
 ---
-title: Emoji
+title: Emoji 表情符号
 date: 2020-12-15 18:28:43
 background: bg-[#ebbe46]
 tags:
 categories:
-  - Other
-intro: Some of the emoji codes are not super easy to remember, so here is a little cheat sheet.
+  - 其他
+intro: 有些 Emoji 代码不太容易记住，这里提供一个简易速查表。
 ---
 
-## Getting Started
+## 入门
 
-### People
+### 人物
 
 | -                              | -                                |
 | ------------------------------ | -------------------------------- |
@@ -192,7 +192,7 @@ intro: Some of the emoji codes are not super easy to remember, so here is a litt
 | :speech_balloon:               | `:speech_balloon:`               |
 | :thought_balloon:              | `:thought_balloon:`              |
 
-### Symbols
+### 符号
 
 | -                                 | -                                   |
 | --------------------------------- | ----------------------------------- |
@@ -388,7 +388,7 @@ intro: Some of the emoji codes are not super easy to remember, so here is a litt
 | :small_red_triangle:              | `:small_red_triangle:`              |
 | :small_red_triangle_down:         | `:small_red_triangle_down:`         |
 
-### Objects {.row-span-2}
+### 物体 {.row-span-2}
 
 | -                                | -                                  |
 | -------------------------------- | ---------------------------------- |
@@ -653,7 +653,7 @@ intro: Some of the emoji codes are not super easy to remember, so here is a litt
 | :tomato:                         | `:tomato:`                         |
 | :corn:                           | `:corn:`                           |
 
-### Places
+### 地点
 
 | -                         | -                           |
 | ------------------------- | --------------------------- |
@@ -764,7 +764,7 @@ intro: Some of the emoji codes are not super easy to remember, so here is a litt
 | :uk:                      | `:uk:`                      |
 | :de:                      | `:de:`                      |
 
-### Nature
+### 自然
 
 | -                              | -                                |
 | ------------------------------ | -------------------------------- |
@@ -882,3 +882,4 @@ intro: Some of the emoji codes are not super easy to remember, so here is a litt
 | :milky_way:                    | `:milky_way:`                    |
 | :partly_sunny:                 | `:partly_sunny:`                 |
 | :carrot:                       | `:carrot:`                       |
+

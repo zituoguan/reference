@@ -1,16 +1,16 @@
-<%- partial('_partial/index/hero') %>
-<section class="home max-container">
+<%- partial('_partial/index/hero') %> <!-- 引入“英雄”区域 (hero section) 模板 -->
+<section class="home max-container"> <!-- 主页容器 -->
     <div class="w-full lg:w-2/3 flex flex-col mx-auto justify-center mt-10">
-        <%- partial('_partial/index/recommend') %>
+        <%- partial('_partial/index/recommend') %> <!-- 引入“推荐” (recommend section) 模板 -->
         <div class="mt-6">
-            <% theme.index_categories.forEach(function (category) { %>
-                <h2 class="sm:text-xl font-medium mt-12 mb-2 text-slate-800 dark:text-slate-300"><%- category %></h2>
-                <div class="h-1 bg-slate-200 dark:bg-slate-900 ounded-full overflow-hidden mb-6">
+            <% theme.index_categories.forEach(function (category) { %> <!-- 遍历主题中配置的首页分类 -->
+                <h2 class="sm:text-xl font-medium mt-12 mb-2 text-slate-800 dark:text-slate-300"><%- category %></h2> <!-- 显示分类名称 -->
+                <div class="h-1 bg-slate-200 dark:bg-slate-900 ounded-full overflow-hidden mb-6"> <!-- 分类标题下的装饰线条 -->
                     <div class="w-24 h-full bg-emerald-500 dark:bg-slate-800"></div>
                 </div>
-                <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800">
-                    <% site.categories.findOne({name: category}).posts.sort('date').map(function(post){ %>
-                        <%- partial('_partial/index/card', {
+                <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800"> <!-- 文章卡片网格布局 -->
+                    <% site.categories.findOne({name: category}).posts.sort('date').map(function(post){ %> <!-- 查找当前分类下的文章，按日期排序并遍历 -->
+                        <%- partial('_partial/index/card', { // 为每篇文章引入“卡片” (card) 模板，并传递数据
                             url: url_for(post.path),
                             title: post.title,
                             label: post.label,
@@ -23,4 +23,5 @@
         </div>
     </div>
 </section>
-<%- partial('_partial/index/request') %>
+<%- partial('_partial/index/request') %> <!-- 引入“请求” (request section) 模板 -->
+

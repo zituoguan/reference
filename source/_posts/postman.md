@@ -7,58 +7,58 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 23 keyboard shortcuts found in Postman
+  Postman 中 23 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Navigational Shortcuts
+### 导航快捷键
 
-| Shortcut           | Action                           |
-| ------------------ | -------------------------------- |
-| `Ctrl` `Alt` `1`   | Focus Sidebar                    |
-| `Ctrl` `Alt` `2`   | Focus Builder                    |
-| `Ctrl` `#`         | Focus on #th tab                 |
-| `Ctrl` `Shift` `/` | Switch between tabs              |
-| `Down`             | Move to next item                |
-| `Up`               | Move to previous item            |
-| `Right`            | Expand collection/folder         |
-| `Left`             | Collapse collection/folder       |
-| `Shift` `Down`     | Select current AND next item     |
-| `Shift` `Up`       | Select current AND previous item |
-| `Ctrl` `F`         | Search sidebar                   |
-| `Enter`            | Open request in a tab            |
+| 快捷键             | 操作                           |
+| ------------------ | ------------------------------ |
+| `Ctrl` `Alt` `1`   | 聚焦侧边栏                     |
+| `Ctrl` `Alt` `2`   | 聚焦构建器                     |
+| `Ctrl` `#`         | 聚焦第 # 个标签页              |
+| `Ctrl` `Shift` `/` | 切换标签页                     |
+| `Down`             | 移动到下一个项目               |
+| `Up`               | 移动到上一个项目               |
+| `Right`            | 展开集合/文件夹                |
+| `Left`             | 折叠集合/文件夹                |
+| `Shift` `Down`     | 选择当前和下一个项目           |
+| `Shift` `Up`       | 选择当前和上一个项目           |
+| `Ctrl` `F`         | 搜索侧边栏                     |
+| `Enter`            | 在标签页中打开请求             |
 
 {.shortcuts}
 
-### Manipulation Shortcuts
+### 操作快捷键
 
-| Shortcut   | Action      |
+| 快捷键     | 操作        |
 | ---------- | ----------- |
-| `Ctrl` `C` | Copy        |
-| `Ctrl` `V` | Paste       |
-| `Delete`   | Delete      |
-| `Ctrl` `D` | Duplicate   |
-| `Ctrl` `E` | Edit/Rename |
+| `Ctrl` `C` | 复制        |
+| `Ctrl` `V` | 粘贴        |
+| `Delete`   | 删除        |
+| `Ctrl` `D` | 创建副本    |
+| `Ctrl` `E` | 编辑/重命名 |
 
 {.shortcuts}
 
-### Global Shortcuts
+### 全局快捷键
 
-| Shortcut           | Action         |
-| ------------------ | -------------- |
-| `Ctrl` `S`         | Save           |
-| `Ctrl` `Shift` `S` | Save As        |
-| `Ctrl` `Enter`     | Send Request   |
-| `Ctrl` `\`         | Toggle Sidebar |
-| `Ctrl` `L`         | Jump to URL    |
-| `Ctrl` `Alt` `C`   | Open Console   |
+| 快捷键             | 操作              |
+| ------------------ | ----------------- |
+| `Ctrl` `S`         | 保存              |
+| `Ctrl` `Shift` `S` | 另存为            |
+| `Ctrl` `Enter`     | 发送请求          |
+| `Ctrl` `\`         | 切换侧边栏显示    |
+| `Ctrl` `L`         | 跳转到 URL        |
+| `Ctrl` `Alt` `C`   | 打开控制台        |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Postman](https://learning.getpostman.com/docs/postman/launching_postman/keyboard_shortcuts/)
+- [Postman 键盘快捷键](https://learning.getpostman.com/docs/postman/launching_postman/keyboard_shortcuts/)
   _(learning.getpostman.com)_

@@ -7,99 +7,99 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 50 keyboard shortcuts found on the Shopify website
+  Shopify 网站上 50 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### General Shortcuts
+### 常规快捷键
 
-| Shortcut    | Action                  |
+| 快捷键      | 操作                  |
 | ----------- | ----------------------- |
-| `?`         | Keyboard help           |
-| `S`         | Focus search bar        |
-| `F`         | Focus filter bar        |
-| `B` `Y` `E` | Log out                 |
-| `M` `E`     | Your profile            |
-| `O` `S`     | Open the store switcher |
+| `?`         | 键盘帮助                |
+| `S`         | 聚焦搜索栏              |
+| `F`         | 聚焦筛选栏              |
+| `B` `Y` `E` | 登出                    |
+| `M` `E`     | 你的个人资料            |
+| `O` `S`     | 打开店铺切换器          |
 
 {.shortcuts}
 
-### Adding Items
+### 添加项目
 
-| Shortcut | Action         |
+| 快捷键 | 操作           |
 | -------- | -------------- |
-| `A` `P`  | Add product    |
-| `A` `C`  | Add collection |
-| `A` `D`  | Add discount   |
-| `A` `O`  | Add order      |
-| `A` `U`  | Add customer   |
-| `A` `B`  | Add blog post  |
-| `A` `L`  | Add blog       |
-| `A` `G`  | Add page       |
+| `A` `P`  | 添加产品       |
+| `A` `C`  | 添加产品系列   |
+| `A` `D`  | 添加折扣       |
+| `A` `O`  | 添加订单       |
+| `A` `U`  | 添加客户       |
+| `A` `B`  | 添加博客文章   |
+| `A` `L`  | 添加博客       |
+| `A` `G`  | 添加页面       |
 
 {.shortcuts}
 
-### Admin Panel I
+### 管理面板 I
 
-| Shortcut    | Action                         |
+| 快捷键      | 操作                         |
 | ----------- | ------------------------------ |
-| `G` `H`     | Go to home                     |
-| `G` `P` `P` | Go to products                 |
-| `G` `N`     | Go to analytics                |
-| `G` `D`     | Go to discounts                |
-| `G` `A`     | Go to apps                     |
-| `G` `B` `C` | Go to abandoned checkouts      |
-| `G` `P` `I` | Go to products, inventory      |
-| `G` `P` `G` | Go to products, gift cards     |
-| `G` `W` `B` | Go to online store, blog posts |
-| `G` `W` `T` | Go to online store, themes     |
-| `G` `W` `D` | Go to online store, domains    |
-| `G` `T` `L` | Go to settings, locations      |
+| `G` `H`     | 前往主页                       |
+| `G` `P` `P` | 前往产品                       |
+| `G` `N`     | 前往分析                       |
+| `G` `D`     | 前往折扣                       |
+| `G` `A`     | 前往应用                       |
+| `G` `B` `C` | 前往弃单                       |
+| `G` `P` `I` | 前往产品，库存                 |
+| `G` `P` `G` | 前往产品，礼品卡               |
+| `G` `W` `B` | 前往在线商店，博客文章         |
+| `G` `W` `T` | 前往在线商店，主题             |
+| `G` `W` `D` | 前往在线商店，域名             |
+| `G` `T` `L` | 前往设置，地点                 |
 
 {.shortcuts}
 
-### Admin Panel II
+### 管理面板 II
 
-| Shortcut    | Action                         |
+| 快捷键      | 操作                         |
 | ----------- | ------------------------------ |
-| `G` `S` `P` | Go to settings, payments       |
-| `G` `S` `S` | Go to settings, shipping       |
-| `G` `S` `N` | Go to settings, notifications  |
-| `G` `S` `F` | Go to settings, files          |
-| `G` `S` `W` | Go to settings, online store   |
-| `G` `S` `L` | Go to settings, sales channels |
-| `G` `O`     | Go to orders                   |
-| `G` `C`     | Go to customers                |
-| `G` `M`     | Go to marketing                |
-| `G` `L`     | Go to sales channels           |
-| `G` `S`     | Go to settings                 |
-| `G` `P` `T` | Go to products, transfers      |
-| `G` `P` `C` | Go to products, collections    |
+| `G` `S` `P` | 前往设置，付款                 |
+| `G` `S` `S` | 前往设置，配送                 |
+| `G` `S` `N` | 前往设置，通知                 |
+| `G` `S` `F` | 前往设置，文件                 |
+| `G` `S` `W` | 前往设置，在线商店             |
+| `G` `S` `L` | 前往设置，销售渠道             |
+| `G` `O`     | 前往订单                       |
+| `G` `C`     | 前往客户                       |
+| `G` `M`     | 前往营销                       |
+| `G` `L`     | 前往销售渠道                   |
+| `G` `S`     | 前往设置                       |
+| `G` `P` `T` | 前往产品，转移                 |
+| `G` `P` `C` | 前往产品，产品系列             |
 
 {.shortcuts}
 
-### Admin Panel III
+### 管理面板 III
 
-| Shortcut    | Action                        |
+| 快捷键      | 操作                        |
 | ----------- | ----------------------------- |
-| `G` `W` `O` | Go to online store, overview  |
-| `G` `W` `P` | Go to online store, pages     |
-| `G` `W` `N` | Go to line store, navigation  |
-| `G` `T` `O` | Go to point of sale, overview |
-| `G` `S` `G` | Go to settings, general       |
-| `G` `S` `C` | Go to settings, checkout      |
-| `G` `S` `X` | Go to settings, taxes         |
-| `G` `S` `I` | Go to settings, gift cards    |
-| `G` `S` `A` | Go to settings, account       |
-| `G` `S` `T` | Go to settings, point of sale |
-| `G` `S` `B` | Go to settings, billing       |
+| `G` `W` `O` | 前往在线商店，概览            |
+| `G` `W` `P` | 前往在线商店，页面            |
+| `G` `W` `N` | 前往在线商店，导航            |
+| `G` `T` `O` | 前往销售终端，概览            |
+| `G` `S` `G` | 前往设置，常规                |
+| `G` `S` `C` | 前往设置，结账                |
+| `G` `S` `X` | 前往设置，税务                |
+| `G` `S` `I` | 前往设置，礼品卡              |
+| `G` `S` `A` | 前往设置，账户                |
+| `G` `S` `T` | 前往设置，销售终端            |
+| `G` `S` `B` | 前往设置，账单                |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Shopify](https://help.shopify.com/en/manual/productivity-tools/keyboard-shortcuts)
+- [Shopify 键盘快捷键](https://help.shopify.com/en/manual/productivity-tools/keyboard-shortcuts)
   _(help.shopify.com)_

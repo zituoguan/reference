@@ -4,27 +4,26 @@ date: 2022-12-30 09:51:44
 background: bg-[#2a338a]
 tags:
 categories:
-  - Programming
+  - 编程
 intro: |
-  This cheat sheet summarizes a reference list of [LaTeX](https://www.latex-project.org/) commonly used display math notation and some application examples of [KaTeX](https://katex.org/).
+  此速查表汇总了 [LaTeX](https://www.latex-project.org/) 常用显示数学符号的参考列表以及 [KaTeX](https://katex.org/) 的一些应用示例。
 plugins:
   - katex
   - copyCode
 ---
 
-## Getting Started
+## 开始
 
-### Introduction
+### 简介
 
-[LaTeX](https://www.latex-project.org/) A TEX-based typesetting system suitable for producing scientific, mathematical,
-and physical documents of high print quality.
+[LaTeX](https://www.latex-project.org/) 一种基于 TeX 的排版系统，适用于制作高印刷质量的科学、数学和物理文档。
 
-- [LaTeX official website](https://www.latex-project.org/) _(latex-project.org)_
-- [KaTeX official website](https://katex.org/) _(katex.org)_
+- [LaTeX 官方网站](https://www.latex-project.org/) _(latex-project.org)_
+- [KaTeX 官方网站](https://katex.org/) _(katex.org)_
 
-And [KaTeX](https://katex.org/) handles only a smaller subset of LaTeX's mathematical notation for display on the web
+而 [KaTeX](https://katex.org/) 只处理 LaTeX 数学符号的一个较小子集，用于在 Web 上显示。
 
-### Example
+### 示例
 
 ```KaTeX
 % \f is defined as #1f(#2) using the macro
@@ -42,18 +41,18 @@ f\relax(x) = \int_{-\infty}^\infty
     \,d\xi
 ```
 
-### Inline
+### 行内
 
 ```markdown
-Based on KaTeX in one lineExample  
-Example： `KaTeX:\int_0^\infty x^2 dx`
+基于 KaTeX 的单行示例
+示例： `KaTeX:\int_0^\infty x^2 dx`
 ```
 
-Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
+基于 KaTeX 的单行显示示例： `KaTeX:\int_0^\infty x^2 dx`
 
-## Supported Functions
+## 支持的函数
 
-### Accents {.col-span-2 .row-span-2}
+### 重音符号 {.col-span-2 .row-span-2}
 
 | :-                                             | :-                                                                     | :-                                                               |
 | :--------------------------------------------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------- |
@@ -70,7 +69,7 @@ Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
 | `KaTeX:\hat{\theta}` <pur>`\hat{\theta}`</pur> | `KaTeX:\underline{AB}` <pur>`\underline{AB}`</pur>                     | `KaTeX:\underlinesegment{AB}` <pur>`\underlinesegment{AB}`</pur> |
 | `KaTeX:\widehat{ac}` <pur>`\widehat{ac}`</pur> | `KaTeX:\widecheck{ac}` <pur>`\widecheck{ac}`</pur>                     | `KaTeX:\underbar{X}` <pur>`\underbar{X}`</pur>                   |
 
-### Emphasis in \text&lcub;...&rcub;
+### \text&lcub;...&rcub; 中的强调
 
 | :-                                                   | :-                               |
 | :--------------------------------------------------- | :------------------------------- |
@@ -81,7 +80,7 @@ Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
 | `KaTeX:\^{a}` <pur>`\^{a}`</pur>                     | `KaTeX:\u{a}` <pur>`\u{a}`</pur> |
 | `KaTeX:\r{a}` <pur>`\r{a}`</pur>                     |
 
-### Delimiter Sizing
+### 分隔符大小调整
 
 | :-                                  | :-                                       |
 | :---------------------------------- | :--------------------------------------- |
@@ -97,9 +96,9 @@ Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
 | `\right`  | `\bigg` | `\biggl` | `\biggm` | `\biggr` |
 | `\`       | `\Bigg` | `\Biggl` | `\Biggm` | `\Biggr` |
 
-### Greek and Hebrew letters {.col-span-3}
+### 希腊和希伯来字母 {.col-span-3}
 
-| preview          | method                | preview         | method               | preview          | method                | preview             | method                   | preview         | method               | preview          | method                |
+| 预览             | 方法                  | 预览            | 方法                 | 预览             | 方法                  | 预览                | 方法                     | 预览            | 方法                 | 预览             | 方法                  |
 | :--------------- | :-------------------- | :-------------- | :------------------- | :--------------- | :-------------------- | :------------------ | :----------------------- | :-------------- | :------------------- | :--------------- | :-------------------- |
 | `KaTeX:\alpha`   | <pur>`\alpha`</pur>   | `KaTeX:\kappa`  | <pur>`\kappa`</pur>  | `KaTeX:\psi`     | <pur>`\psi`</pur>     | `KaTeX:\digamma`    | <pur>`\digamma`</pur>    | `KaTeX:\Delta`  | <pur>`\Delta`</pur>  | `KaTeX:\Theta`   | <pur>`\Theta`</pur>   |
 | `KaTeX:\beta`    | <pur>`\beta`</pur>    | `KaTeX:\lambda` | <pur>`\lambda`</pur> | `KaTeX:\rho`     | <pur>`\rho`</pur>     | `KaTeX:\varepsilon` | <pur>`\varepsilon`</pur> | `KaTeX:\Gamma`  | <pur>`\Gamma`</pur>  | `KaTeX:\Upsilon` | <pur>`\Upsilon`</pur> |
@@ -112,7 +111,7 @@ Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
 
 {.left-align}
 
-#### Other letters
+#### 其他字母
 
 | :-               | :-                    | :-               | :-                    | :-               | :-                    | :-                 | :-                      | :-                 | :-                      |
 | :--------------- | :-------------------- | :--------------- | :-------------------- | :--------------- | :-------------------- | :----------------- | :---------------------- | :----------------- | :---------------------- |
@@ -128,9 +127,9 @@ Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
 
 {.left-align}
 
-### Alphabets and Unicode {.col-span-3}
+### 字母表和 Unicode {.col-span-3}
 
-| preview             | method                   | preview           | method                 | preview           | method                 | preview             | method                   |
+| 预览                | 方法                     | 预览              | 方法                   | 预览              | 方法                   | 预览                | 方法                     |
 | :------------------ | :----------------------- | :---------------- | :--------------------- | :---------------- | :--------------------- | :------------------ | :----------------------- |
 | `KaTeX:\Alpha`      | <pur>`\Alpha`</pur>      | `KaTeX:\Beta`     | <pur>`\Beta`</pur>     | `KaTeX:\Gamma`    | <pur>`\Gamma`</pur>    | `KaTeX:\Delta`      | <pur>`\Delta`</pur>      |
 | `KaTeX:\Epsilon`    | <pur>`\Epsilon`</pur>    | `KaTeX:\Zeta`     | <pur>`\Zeta`</pur>     | `KaTeX:\Eta`      | <pur>`\Eta`</pur>      | `KaTeX:\Theta`      | <pur>`\Theta`</pur>      |
@@ -153,7 +152,7 @@ Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
 
 {.show-header left-align}
 
-### Annotation {.col-span-3}
+### 注释 {.col-span-3}
 
 | :-                                                    | :-                             | :-                                       | :-                                            |
 | :---------------------------------------------------- | :----------------------------- | :--------------------------------------- | :-------------------------------------------- |
@@ -161,7 +160,7 @@ Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
 | `KaTeX:\bcancel{5}`                                   | <pur>`\bcancel{5}`</pur>       | `KaTeX:\underbrace{a+b+c}_{\text{note}}` | <pur>`\underbrace{a+b+c}_{\text{note}}`</pur> |
 | `KaTeX:\xcancel{ABC}`                                 | <pur>`\xcancel{ABC}`</pur>     | `KaTeX:\not =`                           | <pur>`\not =`</pur>                           |
 | `KaTeX:\sout{abc}`                                    | <pur>`\sout{abc}`</pur>        | `KaTeX:\boxed{\pi=\frac c d}`            | <pur>`\boxed{\pi=\frac c d}`</pur>            |
-| `KaTeX:\$a_{\angl n}` _<red>MD syntax conflict</red>_ | <pur>`$a_{\angl n}`</pur>      | `KaTeX:a_\angln`                         | <pur>`a_\angln`</pur>                         |
+| `KaTeX:\$a_{\angl n}` _<red>MD 语法冲突</red>_        | <pur>`$a_{\angl n}`</pur>      | `KaTeX:a_\angln`                         | <pur>`a_\angln`</pur>                         |
 | `KaTeX:\phase{-78^\circ}`                             | <pur>`\phase{-78^\circ}`</pur> |
 
 <pur>\tag{hi} x+y^{2x}</pur>
@@ -176,7 +175,7 @@ Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
 \tag*{hi} x+y^{2x}
 ```
 
-### Vertical layout {.col-span-3}
+### 垂直布局 {.col-span-3}
 
 | :-                                     | :-                                          | :-                      | :-                           | :-                                                          | :-                                                    |
 | :------------------------------------- | :------------------------------------------ | :---------------------- | :--------------------------- | :---------------------------------------------------------- | :---------------------------------------------------- |
@@ -185,7 +184,7 @@ Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
 | `KaTeX:_u^o`                           | <pur>`_u^o`</pur>                           | `KaTeX:\underset{!}{=}` | <pur>`\underset{!}{=}`</pur> | `KaTeX:a+\left(\vcenter{\hbox{$\frac{\frac a b}c$}}\right)` | `a+\left(\vcenter{\hbox{$\frac{\frac a b}c$}}\right)` |
 | `KaTeX:\sum_{\substack{0<i<m\\0<j<n}}` | <pur>`\sum_{\substack{0<i<m\\0<j<n}}`</pur> |                         |                              |                                                             |                                                       |
 
-### Overlap and Spacing {.col-span-3}
+### 重叠和间距 {.col-span-3}
 
 | :-                                                     | :-                                 | :-                                    |
 | :----------------------------------------------------- | :--------------------------------- | :------------------------------------ |
@@ -198,7 +197,7 @@ Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
 \sum_{\mathclap{1\le i\le j\le n}} x_{ij}
 ```
 
-### `KaTeX:\LaTeX` math constructs {.col-span-3}
+### `KaTeX:\LaTeX` 数学结构 {.col-span-3}
 
 | 预览                    | 方法                         | 预览                    | 方法                         | 预览                         | 方法                              |
 | :---------------------- | :--------------------------- | :---------------------- | :--------------------------- | :--------------------------- | :-------------------------------- |
@@ -207,31 +206,30 @@ Example based on KaTeX showing on one line: `KaTeX:\int_0^\infty x^2 dx`
 | `KaTeX:\sqrt{abc}`      | <pur>`\sqrt{abc}`</pur>      | `KaTeX:\widehat{abc}`   | <pur>`\widehat{abc}`</pur>   | `KaTeX:\overbrace{abc}`      | <pur>`\overbrace{abc}`</pur>      |
 | `KaTeX:\sqrt[n]{abc}`   | <pur>`\sqrt[n]{abc}`</pur>   | `KaTeX:\widetilde{abc}` | <pur>`\widetilde{abc}`</pur> | `KaTeX:\underbrace{abc}`     | <pur>`\underbrace{abc}`</pur>     |
 
-### Delimiters {.col-span-3}
+### 分隔符 {.col-span-3}
 
-| preview                                      | method                           | preview                 | method                         | preview     | method              | preview                          | method                                 | preview                 | method                       |
+| 预览                                         | 方法                             | 预览                 | 方法                         | 预览     | 方法              | 预览                          | 方法                                 | 预览                 | 方法                       |
 | :------------------------------------------- | :------------------------------- | :---------------------- | :----------------------------- | :---------- | :------------------ | :------------------------------- | :------------------------------------- | :---------------------- | :--------------------------- |
 | `KaTeX:()`                                   | <pur>`()`</pur>                  | `KaTeX:\lparen \rparen` | <pur>`\lparen` `\rparen`</pur> | `KaTeX:⌈ ⌉` | <pur>`⌈ ⌉`</pur>    | `KaTeX:\lceil \rceil`            | <pur>`\lceil` `\rceil`</pur>           | `KaTeX:\uparrow`        | <pur>`\uparrow`</pur>        |
 | `KaTeX:[]`                                   | <pur>`[]`</pur>                  | `KaTeX:\lbrack \rbrack` | <pur>`\lbrack` `\rbrack`</pur> | `KaTeX:⌊ ⌋` | <pur>`⌊ ⌋`</pur>    | `KaTeX:\lfloor \rfloor`          | <pur>`\lfloor` `\rfloor`</pur>         | `KaTeX:\downarrow`      | <pur>`\downarrow`</pur>      |
 | `KaTeX:\{ \}`                                | <pur>`{}`</pur>                  | `KaTeX:\lbrace \rbrace` | <pur>`\lbrace` `\rbrace`</pur> | `KaTeX:⎰⎱`  | <pur>`⎰⎱`</pur>     | `KaTeX:\lmoustache  \rmoustache` | <pur>`\lmoustache` `\rmoustache`</pur> | `KaTeX:\updownarrow`    | <pur>`\updownarrow`</pur>    |
 | `KaTeX:⟨ ⟩`                                  | <pur>`⟨⟩`</pur>                  | `KaTeX:\langle \rangle` | <pur>`\langle` `\rangle`</pur> | `KaTeX:⟮ ⟯` | <pur>`⟮ ⟯`</pur>    | `KaTeX:\lgroup \rgroup`          | <pur>`\lgroup` `\rgroup`</pur>         | `KaTeX:\Uparrow`        | <pur>`\Uparrow`</pur>        |
 | `KaTeX:∣`                                    | <pur>`\|`</pur>                  | `KaTeX:\vert`           | <pur>`\vert`</pur>             | `KaTeX:┌ ┐` | <pur>`┌ ┐`</pur>    | `KaTeX:\ulcorner \urcorner`      | <pur>`\ulcorner` `\urcorner`</pur>     | `KaTeX:\Downarrow`      | <pur>`\Downarrow`</pur>      |
-| `KaTeX:\|` _(<red>MD syntax conflict</red>)_ | <pur><code>\\&#124;</code></pur> | `KaTeX:\Vert`           | <pur>`\Vert`</pur>             | `KaTeX:└ ┘` | <pur>`└ ┘`</pur>    | `KaTeX:\llcorner \lrcorner`      | <pur>`\llcorner` `\lrcorner`</pur>     | `KaTeX:\Updownarrow`    | <pur>`\Updownarrow`</pur>    |
+| `KaTeX:\|` _(<red>MD 语法冲突</red>)_        | <pur><code>\\&#124;</code></pur> | `KaTeX:\Vert`           | <pur>`\Vert`</pur>             | `KaTeX:└ ┘` | <pur>`└ ┘`</pur>    | `KaTeX:\llcorner \lrcorner`      | <pur>`\llcorner` `\lrcorner`</pur>     | `KaTeX:\Updownarrow`    | <pur>`\Updownarrow`</pur>    |
 | `KaTeX:∣ ∣`                                  | <pur>`\lvert` `\rvert`</pur>     | `KaTeX:\lVert \rVert`   | <pur>`\lVert` `\rVert`</pur>   |             | <pur>`\left.`</pur> |                                  | <pur>`\right.`</pur>                   | `KaTeX:\backslash`      | <pur>`\backslash`</pur>      |
 | `KaTeX:\lang` `KaTeX:\rang`                  | <pur>`\lang` `\rang`<pur>        | `KaTeX:\lt \gt`         | <pur>`\lt \gt`</pur>           | `KaTeX:⟦ ⟧` | <pur>`⟦ ⟧`</pur>    | `KaTeX:\llbracket \rrbracket`    | <pur>`\llbracket` `\rrbracket`</pur>   | `KaTeX:\lBrace \rBrace` | <pur>`\lBrace \rBrace`</pur> |
 
 {.show-header left-align}
 
-The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used to match the height of the separators
-`KaTeX:s_1` and `KaTeX:s_2` to the height of their content, e.g. :
+表达式对 `\left` `KaTeX:s_1` 和 `\right` `KaTeX:s_2` 可用于使分隔符 `KaTeX:s_1` 和 `KaTeX:s_2` 的高度与其内容的高度相匹配，例如：
 
-| :-              | :-           | :-               | :-              | :-           | :-               | :-                 | :-           | :-              |
+| :-              | :-           | :-               | :-               | :-           | :-               | :-                 | :-           | :-              |
 | :-------------- | :----------- | :--------------- | :-------------- | :----------- | :--------------- | :----------------- | :----------- | :-------------- |
 | `KaTeX:\left\|` | `KaTeX:expr` | `KaTeX:\right\|` | `KaTeX:\left\{` | `KaTeX:expr` | `KaTeX:\right\}` | `KaTeX:\left\Vert` | `KaTeX:expr` | `KaTeX:\right.` |
 
-### Variable Size Symbols {.col-span-3}
+### 可变大小符号 {.col-span-3}
 
-| preview         | method               | preview       | method             | preview           | method                 | preview            | method                  | preview           | method                 |
+| 预览            | 方法                 | 预览          | 方法               | 预览              | 方法                   | 预览               | 方法                    | 预览              | 方法                   |
 | :-------------- | :------------------- | :------------ | :----------------- | :---------------- | :--------------------- | :----------------- | :---------------------- | :---------------- | :--------------------- |
 | `KaTeX:\sum`    | <pur>`\sum`</pur>    | `KaTeX:\int`  | <pur>`\int`</pur>  | `KaTeX:\biguplus` | <pur>`\biguplus`</pur> | `KaTeX:\bigoplus`  | <pur>`\bigoplus`</pur>  | `KaTeX:\bigvee`   | <pur>`\bigvee`</pur>   |
 | `KaTeX:\prod`   | <pur>`\prod`</pur>   | `KaTeX:\oint` | <pur>`\oint`</pur> | `KaTeX:\bigcap`   | <pur>`\bigcap`</pur>   | `KaTeX:\bigotimes` | <pur>`\bigotimes`</pur> | `KaTeX:\bigwedge` | <pur>`\bigwedge`</pur> |
@@ -239,9 +237,9 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 {.show-header left-align}
 
-### standard function name{.col-span-3}
+### 标准函数名{.col-span-3}
 
-| preview         | method               | preview         | method               | preview         | method               | preview         | method               |
+| 预览            | 方法                 | 预览            | 方法                 | 预览            | 方法                 | 预览            | 方法                 |
 | :-------------- | :------------------- | :-------------- | :------------------- | :-------------- | :------------------- | :-------------- | :------------------- |
 | `KaTeX:\arccos` | <pur>`\arccos`</pur> | `KaTeX:\arcsin` | <pur>`\arcsin`</pur> | `KaTeX:\arcsin` | <pur>`\arcsin`</pur> | `KaTeX:\arg`    | <pur>`\arg`</pur>    |
 | `KaTeX:\cos`    | <pur>`\cos`</pur>    | `KaTeX:\cosh`   | <pur>`\cosh`</pur>   | `KaTeX:\cot`    | <pur>`\cot`</pur>    | `KaTeX:\coth`   | <pur>`\coth`</pur>   |
@@ -254,26 +252,26 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 {.show-header left-align}
 
-#### Function names should be in roman font, not italics, for example:
+#### 函数名应使用罗马字体，而非斜体，例如：
 
-| :-         | :-                         | :-                  | :-                    |
-| :--------- | :------------------------- | :------------------ | :-------------------- |
-| Correct:   | <pur>`\tan(at-n\pi)`</pur> | `KaTeX:\rightarrow` | `KaTeX:\tan(at-n\pi)` |
-| Incorrect: | <pur>`tan(at-n\pi)`</pur>  | `KaTeX:\rightarrow` | `KaTeX:tan(at-n\pi)`  |
+| :-     | :-                         | :-                  | :-                    |
+| :----- | :------------------------- | :------------------ | :-------------------- |
+| 正确： | <pur>`\tan(at-n\pi)`</pur> | `KaTeX:\rightarrow` | `KaTeX:\tan(at-n\pi)` |
+| 错误： | <pur>`tan(at-n\pi)`</pur>  | `KaTeX:\rightarrow` | `KaTeX:tan(at-n\pi)`  |
 
 {.left-align}
 
-### Logic and Set Theory{.col-span-3}
+### 逻辑与集合论{.col-span-3}
 
-| :-               | :-                    | :-                  | :-                       | :-                      | :-                           | :-                         | :-                                      |
-| :--------------- | :-------------------- | :------------------ | :----------------------- | :---------------------- | :--------------------------- | :------------------------- | :-------------------------------------- |
-| `KaTeX:\forall`  | <pur>`\forall`</pur>  | `KaTeX:\complement` | <pur>`\complement`</pur> | `KaTeX:\therefore`      | <pur>`\therefore`</pur>      | `KaTeX:\emptyset`          | <pur>`\emptyset`</pur>                  |
-| `KaTeX:\exists`  | <pur>`\exists`</pur>  | `KaTeX:\subset`     | <pur>`\subset`</pur>     | `KaTeX:\because`        | <pur>`\because`</pur>        | `KaTeX:\empty`             | <pur>`\empty`</pur>                     |
-| `KaTeX:\exist`   | <pur>`\exist`</pur>   | `KaTeX:\supset`     | <pur>`\supset`</pur>     | `KaTeX:\mapsto`         | <pur>`\mapsto`</pur>         | `KaTeX:\varnothing`        | <pur>`\varnothing`</pur>                |
-| `KaTeX:\nexists` | <pur>`\nexists`</pur> | `KaTeX:\mid`        | <pur>`\mid`</pur>        | `KaTeX:\to`             | <pur>`\to`</pur>             | `KaTeX:\implies`           | <pur>`\implies`</pur>                   |
-| `KaTeX:\in`      | <pur>`\in`</pur>      | `KaTeX:\land`       | <pur>`\land`</pur>       | `KaTeX:\gets`           | <pur>`\gets`</pur>           | `KaTeX:\impliedby`         | <pur>`\impliedby`</pur>                 |
-| `KaTeX:\isin`    | <pur>`\isin`</pur>    | `KaTeX:\lor`        | <pur>`\lor`</pur>        | `KaTeX:\leftrightarrow` | <pur>`\leftrightarrow`</pur> | `KaTeX:\iff`               | <pur>`\iff`</pur>                       |
-| `KaTeX:\notin`   | <pur>`\notin`</pur>   | `KaTeX:\ni`         | <pur>`\ni`</pur>         | `KaTeX:\notni`          | <pur>`\notni`</pur>          | `KaTeX:\neg` `KaTeX:\lnot` | <pur>`\neg`</pur> or <pur>`\lnot`</pur> |
+| :-               | :-                    | :-                  | :-                       | :-                      | :-                           | :-                         | :-                                         |
+| :--------------- | :-------------------- | :------------------ | :----------------------- | :---------------------- | :--------------------------- | :------------------------- | :----------------------------------------- |
+| `KaTeX:\forall`  | <pur>`\forall`</pur>  | `KaTeX:\complement` | <pur>`\complement`</pur> | `KaTeX:\therefore`      | <pur>`\therefore`</pur>      | `KaTeX:\emptyset`          | <pur>`\emptyset`</pur>                     |
+| `KaTeX:\exists`  | <pur>`\exists`</pur>  | `KaTeX:\subset`     | <pur>`\subset`</pur>     | `KaTeX:\because`        | <pur>`\because`</pur>        | `KaTeX:\empty`             | <pur>`\empty`</pur>                        |
+| `KaTeX:\exist`   | <pur>`\exist`</pur>   | `KaTeX:\supset`     | <pur>`\supset`</pur>     | `KaTeX:\mapsto`         | <pur>`\mapsto`</pur>         | `KaTeX:\varnothing`        | <pur>`\varnothing`</pur>                   |
+| `KaTeX:\nexists` | <pur>`\nexists`</pur> | `KaTeX:\mid`        | <pur>`\mid`</pur>        | `KaTeX:\to`             | <pur>`\to`</pur>             | `KaTeX:\implies`           | <pur>`\implies`</pur>                      |
+| `KaTeX:\in`      | <pur>`\in`</pur>      | `KaTeX:\land`       | <pur>`\land`</pur>       | `KaTeX:\gets`           | <pur>`\gets`</pur>           | `KaTeX:\impliedby`         | <pur>`\impliedby`</pur>                    |
+| `KaTeX:\isin`    | <pur>`\isin`</pur>    | `KaTeX:\lor`        | <pur>`\lor`</pur>        | `KaTeX:\leftrightarrow` | <pur>`\leftrightarrow`</pur> | `KaTeX:\iff`               | <pur>`\iff`</pur>                          |
+| `KaTeX:\notin`   | <pur>`\notin`</pur>   | `KaTeX:\ni`         | <pur>`\ni`</pur>         | `KaTeX:\notni`          | <pur>`\notni`</pur>          | `KaTeX:\neg` `KaTeX:\lnot` | <pur>`\neg`</pur> 或 <pur>`\lnot`</pur> |
 
 {.left-align}
 
@@ -283,7 +281,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 | :------------------------------- | :---------------------------------- | :------------------- | :---------------------- |
 | `KaTeX:\Set{ x \| x<\frac 1 2 }` | <pur>\Set{ x \| x<\frac 1 2 }</pur> | `KaTeX:\set{x\|x<5}` | <pur>\set{x\|x<5}</pur> |
 
-### special symbols{.col-span-3}
+### 特殊符号{.col-span-3}
 
 | :-                 | :-                    | :-                 | :-                    | :-                                             | :-                                                  |
 | :----------------- | :-------------------- | :----------------- | :-------------------- | :--------------------------------------------- | :-------------------------------------------------- |
@@ -292,9 +290,9 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 {.left-align}
 
-## Operator
+## 运算符
 
-### Mathematical operator {.col-span-3 row-span-2}
+### 数学运算符 {.col-span-3 row-span-2}
 
 | :-                                 | :-                                      | :-              | :-                   | :-               | :-                    | :-                        | :-                             |
 | :--------------------------------- | :-------------------------------------- | :-------------- | :------------------- | :--------------- | :-------------------- | :------------------------ | :----------------------------- |
@@ -316,7 +314,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 {.left-align}
 
-### Big operator {.col-span-2}
+### 大型运算符 {.col-span-2}
 
 | :-             | :-                  | :-                | :-                     | :-                 | :-                      | :-                | :-                     |
 | :------------- | :------------------ | :---------------- | :--------------------- | :----------------- | :---------------------- | :---------------- | :--------------------- |
@@ -328,7 +326,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 {.left-align}
 
-### Fractions and binomials {.row-span-2}
+### 分数和二项式 {.row-span-2}
 
 | :-                                  | :-                                       | :-                                  | :-                                       |
 | :---------------------------------- | :--------------------------------------- | :---------------------------------- | :--------------------------------------- |
@@ -355,7 +353,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 {.left-align}
 
-### Binary operator {.col-span-3}
+### 二元运算符 {.col-span-3}
 
 | :-                | :-                     | :-                      | :-                           | :-                      | :-                           | :-                       | :-                            |
 | :---------------- | :--------------------- | :---------------------- | :--------------------------- | :---------------------- | :--------------------------- | :----------------------- | :---------------------------- |
@@ -380,48 +378,48 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 {.left-align}
 
-## Relation
+## 关系
 
-### Relation {.col-span-3}
+### 关系符 {.col-span-3}
 
-| :-                        | :-                                                          | :-                     | :-                                                       | :-                     | :-                          | :-                        | :-                                              |
-| :------------------------ | :---------------------------------------------------------- | :--------------------- | :------------------------------------------------------- | :--------------------- | :-------------------------- | :------------------------ | :---------------------------------------------- |
-| `KaTeX:=`                 | <pur>`=`</pur>                                              | `KaTeX:\doteqdot`      | <pur>`\doteqdot`</pur>                                   | `KaTeX:\lessapprox`    | <pur>`\lessapprox`</pur>    | `KaTeX:\smile`            | <pur>`\smile`</pur>                             |
-| `KaTeX:<`                 | <pur>`<`</pur>                                              | `KaTeX:\eqcirc`        | <pur>`\eqcirc`</pur>                                     | `KaTeX:\lesseqgtr`     | <pur>`\lesseqgtr`</pur>     | `KaTeX:\sqsubset`         | <pur>`\sqsubset`</pur>                          |
-| `KaTeX:>`                 | <pur>`>`</pur>                                              | `KaTeX:\eqcolon`       | <pur>`\eqcolon`</pur> or <pur>`\minuscolon`</pur>        | `KaTeX:\lesseqqgtr`    | <pur>`\lesseqqgtr`</pur>    | `KaTeX:\sqsubseteq`       | <pur>`\sqsubseteq`</pur>                        |
-| `KaTeX::`                 | <pur>`:`</pur>                                              | `KaTeX:\Eqcolon`       | <pur>`\Eqcolon`</pur> or <pur>`\minuscoloncolon`</pur>   | `KaTeX:\lessgtr`       | <pur>`\lessgtr`</pur>       | `KaTeX:\sqsupset`         | <pur>`\sqsupset`</pur>                          |
-| `KaTeX:\approx`           | <pur>`\approx`</pur>                                        | `KaTeX:\eqqcolon`      | <pur>`\eqqcolon`</pur> or <pur>`\equalscolon`</pur>      | `KaTeX:\lesssim`       | <pur>`\lesssim`</pur>       | `KaTeX:\sqsupseteq`       | <pur>`\sqsupseteq`</pur>                        |
-| `KaTeX:\approxcolon`      | <pur>`\approxcolon`</pur>                                   | `KaTeX:\Eqqcolon`      | <pur>`\Eqqcolon`</pur> or <pur>`\equalscoloncolon`</pur> | `KaTeX:\ll`            | <pur>`\ll`</pur>            | `KaTeX:\Subset`           | <pur>`\Subset`</pur>                            |
-| `KaTeX:\approxcoloncolon` | <pur>`\approxcoloncolon`</pur>                              | `KaTeX:\eqsim`         | <pur>`\eqsim`</pur>                                      | `KaTeX:\lll`           | <pur>`\lll`</pur>           | `KaTeX:\subset`           | <pur>`\subset`</pur> or <pur>`\sub`</pur>       |
-| `KaTeX:\approxeq`         | <pur>`\approxeq`</pur>                                      | `KaTeX:\eqslantgtr`    | <pur>`\eqslantgtr`</pur>                                 | `KaTeX:\llless`        | <pur>`\llless`</pur>        | `KaTeX:\subseteq`         | <pur>`\subseteq`</pur> or <pur>`\sube`</pur>    |
-| `KaTeX:\asymp`            | <pur>`\asymp`</pur>                                         | `KaTeX:\eqslantless`   | <pur>`\eqslantless`</pur>                                | `KaTeX:\lt`            | <pur>`\lt`</pur>            | `KaTeX:\subseteqq`        | <pur>`\subseteqq`</pur>                         |
-| `KaTeX:\backepsilon`      | <pur>`\backepsilon`</pur>                                   | `KaTeX:\equiv`         | <pur>`\equiv`</pur>                                      | `KaTeX:\mid`           | <pur>`\mid`</pur>           | `KaTeX:\succ`             | <pur>`\succ`</pur>                              |
-| `KaTeX:\backsim`          | <pur>`\backsim`</pur>                                       | `KaTeX:\fallingdotseq` | <pur>`\fallingdotseq`</pur>                              | `KaTeX:\models`        | <pur>`\models`</pur>        | `KaTeX:\succapprox`       | <pur>`\succapprox`</pur>                        |
-| `KaTeX:\backsimeq`        | <pur>`\backsimeq`</pur>                                     | `KaTeX:\frown`         | <pur>`\frown`</pur>                                      | `KaTeX:\multimap`      | <pur>`\multimap`</pur>      | `KaTeX:\succcurlyeq`      | <pur>`\succcurlyeq`</pur>                       |
-| `KaTeX:\between`          | <pur>`\between`</pur>                                       | `KaTeX:\ge`            | <pur>`\ge`</pur>                                         | `KaTeX:\origof`        | <pur>`\origof`</pur>        | `KaTeX:\succeq`           | <pur>`\succeq`</pur>                            |
-| `KaTeX:\bowtie`           | <pur>`\bowtie`</pur>                                        | `KaTeX:\geq`           | <pur>`\geq`</pur>                                        | `KaTeX:\owns`          | <pur>`\owns`</pur>          | `KaTeX:\succsim`          | <pur>`\succsim`</pur>                           |
-| `KaTeX:\bumpeq`           | <pur>`\bumpeq`</pur>                                        | `KaTeX:\geqq`          | <pur>`\geqq`</pur>                                       | `KaTeX:\parallel`      | <pur>`\parallel`</pur>      | `KaTeX:\Supset`           | <pur>`\Supset`</pur>                            |
-| `KaTeX:\Bumpeq`           | <pur>`\Bumpeq`</pur>                                        | `KaTeX:\geqslant`      | <pur>`\geqslant`</pur>                                   | `KaTeX:\perp`          | <pur>`\perp`</pur>          | `KaTeX:\supset`           | <pur>`\supset`</pur>                            |
-| `KaTeX:\circeq`           | <pur>`\circeq`</pur>                                        | `KaTeX:\gg`            | <pur>`\gg`</pur>                                         | `KaTeX:\pitchfork`     | <pur>`\pitchfork`</pur>     | `KaTeX:\supseteq`         | <pur>`\supseteq`</pur> or <pur>`\supe`</pur>    |
-| `KaTeX:\colonapprox`      | <pur>`\colonapprox`</pur>                                   | `KaTeX:\ggg`           | <pur>`\ggg`</pur>                                        | `KaTeX:\prec`          | <pur>`\prec`</pur>          | `KaTeX:\supseteqq`        | <pur>`\supseteqq`</pur>                         |
-| `KaTeX:\Colonapprox`      | <pur>`\Colonapprox`</pur> or <pur>`\coloncolonapprox`</pur> | `KaTeX:\gggtr`         | <pur>`\gggtr`</pur>                                      | `KaTeX:\precapprox`    | <pur>`\precapprox`</pur>    | `KaTeX:\thickapprox`      | <pur>`\thickapprox`</pur>                       |
-| `KaTeX:\coloneq`          | <pur>`\coloneq`</pur> or <pur>`\colonminus`</pur>           | `KaTeX:\gt`            | <pur>`\gt`</pur>                                         | `KaTeX:\preccurlyeq`   | <pur>`\preccurlyeq`</pur>   | `KaTeX:\thicksim`         | <pur>`\thicksim`</pur>                          |
-| `KaTeX:\Coloneq`          | <pur>`\Coloneq`</pur> or <pur>`\coloncolonminus`</pur>      | `KaTeX:\gtrapprox`     | <pur>`\gtrapprox`</pur>                                  | `KaTeX:\preceq`        | <pur>`\preceq`</pur>        | `KaTeX:\trianglelefteq`   | <pur>`\trianglelefteq`</pur>                    |
-| `KaTeX:\coloneqq`         | <pur>`\coloneqq`</pur> or <pur>`\colonequals`</pur>         | `KaTeX:\gtreqless`     | <pur>`\gtreqless`</pur>                                  | `KaTeX:\precsim`       | <pur>`\precsim`</pur>       | `KaTeX:\triangleq`        | <pur>`\triangleq`</pur>                         |
-| `KaTeX:\Coloneqq`         | <pur>`\Coloneqq`</pur> or <pur>`\coloncolonequals`</pur>    | `KaTeX:\gtreqqless`    | <pur>`\gtreqqless`</pur>                                 | `KaTeX:\propto`        | <pur>`\propto`</pur>        | `KaTeX:\trianglerighteq`  | <pur>`\trianglerighteq`</pur>                   |
-| `KaTeX:\colonsim`         | <pur>`\colonsim`</pur>                                      | `KaTeX:\gtrless`       | <pur>`\gtrless`</pur>                                    | `KaTeX:\risingdotseq`  | <pur>`\risingdotseq`</pur>  | `KaTeX:\varpropto`        | <pur>`\varpropto`</pur>                         |
-| `KaTeX:\Colonsim`         | <pur>`\Colonsim`</pur> or <pur>`\coloncolonsim`</pur>       | `KaTeX:\gtrsim`        | <pur>`\gtrsim`</pur>                                     | `KaTeX:\shortmid`      | <pur>`\shortmid`</pur>      | `KaTeX:\vartriangle`      | <pur>`\vartriangle`</pur>                       |
-| `KaTeX:\cong`             | <pur>`\cong`</pur>                                          | `KaTeX:\imageof`       | <pur>`\imageof`</pur>                                    | `KaTeX:\shortparallel` | <pur>`\shortparallel`</pur> | `KaTeX:\vartriangleleft`  | <pur>`\vartriangleleft`</pur>                   |
-| `KaTeX:\curlyeqprec`      | <pur>`\curlyeqprec`</pur>                                   | `KaTeX:\in`            | <pur>`\in`</pur> or <pur>`\isin`</pur>                   | `KaTeX:\sim`           | <pur>`\sim`</pur>           | `KaTeX:\vartriangleright` | <pur>`\vartriangleright`</pur>                  |
-| `KaTeX:\curlyeqsucc`      | <pur>`\curlyeqsucc`</pur>                                   | `KaTeX:\Join`          | <pur>`\Join`</pur>                                       | `KaTeX:\simcolon`      | <pur>`\simcolon`</pur>      | `KaTeX:\vcentcolon`       | <pur>`\vcentcolon`</pur> or <pur>`\ratio`</pur> |
-| `KaTeX:\dashv`            | <pur>`\dashv`</pur>                                         | `KaTeX:\le`            | <pur>`\le`</pur>                                         | `KaTeX:\simcoloncolon` | <pur>`\simcoloncolon`</pur> | `KaTeX:\vdash`            | <pur>`\vdash`</pur>                             |
-| `KaTeX:\dblcolon`         | <pur>`\dblcolon`</pur> or <pur>`\coloncolon`</pur>          | `KaTeX:\leq`           | <pur>`\leq`</pur>                                        | `KaTeX:\simeq`         | <pur>`\simeq`</pur>         | `KaTeX:\vDash`            | <pur>`\vDash`</pur>                             |
-| `KaTeX:\doteq`            | <pur>`\doteq`</pur>                                         | `KaTeX:\leqq`          | <pur>`\leqq`</pur>                                       | `KaTeX:\smallfrown`    | <pur>`\smallfrown`</pur>    | `KaTeX:\Vdash`            | <pur>`\Vdash`</pur>                             |
-| `KaTeX:\Doteq`            | <pur>`\Doteq`</pur>                                         | `KaTeX:\leqslant`      | <pur>`\leqslant`</pur>                                   | `KaTeX:\smallsmile`    | <pur>`\smallsmile`</pur>    | `KaTeX:\Vvdash`           | <pur>`\Vvdash`</pur>                            |
+| :-                        | :-                                                              | :-                     | :-                                                          | :-                     | :-                          | :-                        | :-                                                 |
+| :------------------------ | :-------------------------------------------------------------- | :--------------------- | :---------------------------------------------------------- | :--------------------- | :-------------------------- | :------------------------ | :------------------------------------------------- |
+| `KaTeX:=`                 | <pur>`=`</pur>                                                  | `KaTeX:\doteqdot`      | <pur>`\doteqdot`</pur>                                      | `KaTeX:\lessapprox`    | <pur>`\lessapprox`</pur>    | `KaTeX:\smile`            | <pur>`\smile`</pur>                                |
+| `KaTeX:<`                 | <pur>`<`</pur>                                                  | `KaTeX:\eqcirc`        | <pur>`\eqcirc`</pur>                                        | `KaTeX:\lesseqgtr`     | <pur>`\lesseqgtr`</pur>     | `KaTeX:\sqsubset`         | <pur>`\sqsubset`</pur>                             |
+| `KaTeX:>`                 | <pur>`>`</pur>                                                  | `KaTeX:\eqcolon`       | <pur>`\eqcolon`</pur> 或 <pur>`\minuscolon`</pur>           | `KaTeX:\lesseqqgtr`    | <pur>`\lesseqqgtr`</pur>    | `KaTeX:\sqsubseteq`       | <pur>`\sqsubseteq`</pur>                           |
+| `KaTeX::`                 | <pur>`:`</pur>                                                  | `KaTeX:\Eqcolon`       | <pur>`\Eqcolon`</pur> 或 <pur>`\minuscoloncolon`</pur>      | `KaTeX:\lessgtr`       | <pur>`\lessgtr`</pur>       | `KaTeX:\sqsupset`         | <pur>`\sqsupset`</pur>                             |
+| `KaTeX:\approx`           | <pur>`\approx`</pur>                                            | `KaTeX:\eqqcolon`      | <pur>`\eqqcolon`</pur> 或 <pur>`\equalscolon`</pur>         | `KaTeX:\lesssim`       | <pur>`\lesssim`</pur>       | `KaTeX:\sqsupseteq`       | <pur>`\sqsupseteq`</pur>                           |
+| `KaTeX:\approxcolon`      | <pur>`\approxcolon`</pur>                                       | `KaTeX:\Eqqcolon`      | <pur>`\Eqqcolon`</pur> 或 <pur>`\equalscoloncolon`</pur>    | `KaTeX:\ll`            | <pur>`\ll`</pur>            | `KaTeX:\Subset`           | <pur>`\Subset`</pur>                               |
+| `KaTeX:\approxcoloncolon` | <pur>`\approxcoloncolon`</pur>                                  | `KaTeX:\eqsim`         | <pur>`\eqsim`</pur>                                         | `KaTeX:\lll`           | <pur>`\lll`</pur>           | `KaTeX:\subset`           | <pur>`\subset`</pur> 或 <pur>`\sub`</pur>          |
+| `KaTeX:\approxeq`         | <pur>`\approxeq`</pur>                                          | `KaTeX:\eqslantgtr`    | <pur>`\eqslantgtr`</pur>                                    | `KaTeX:\llless`        | <pur>`\llless`</pur>        | `KaTeX:\subseteq`         | <pur>`\subseteq`</pur> 或 <pur>`\sube`</pur>       |
+| `KaTeX:\asymp`            | <pur>`\asymp`</pur>                                             | `KaTeX:\eqslantless`   | <pur>`\eqslantless`</pur>                                   | `KaTeX:\lt`            | <pur>`\lt`</pur>            | `KaTeX:\subseteqq`        | <pur>`\subseteqq`</pur>                            |
+| `KaTeX:\backepsilon`      | <pur>`\backepsilon`</pur>                                       | `KaTeX:\equiv`         | <pur>`\equiv`</pur>                                         | `KaTeX:\mid`           | <pur>`\mid`</pur>           | `KaTeX:\succ`             | <pur>`\succ`</pur>                                 |
+| `KaTeX:\backsim`          | <pur>`\backsim`</pur>                                           | `KaTeX:\fallingdotseq` | <pur>`\fallingdotseq`</pur>                                 | `KaTeX:\models`        | <pur>`\models`</pur>        | `KaTeX:\succapprox`       | <pur>`\succapprox`</pur>                           |
+| `KaTeX:\backsimeq`        | <pur>`\backsimeq`</pur>                                         | `KaTeX:\frown`         | <pur>`\frown`</pur>                                         | `KaTeX:\multimap`      | <pur>`\multimap`</pur>      | `KaTeX:\succcurlyeq`      | <pur>`\succcurlyeq`</pur>                          |
+| `KaTeX:\between`          | <pur>`\between`</pur>                                           | `KaTeX:\ge`            | <pur>`\ge`</pur>                                            | `KaTeX:\origof`        | <pur>`\origof`</pur>        | `KaTeX:\succeq`           | <pur>`\succeq`</pur>                               |
+| `KaTeX:\bowtie`           | <pur>`\bowtie`</pur>                                            | `KaTeX:\geq`           | <pur>`\geq`</pur>                                           | `KaTeX:\owns`          | <pur>`\owns`</pur>          | `KaTeX:\succsim`          | <pur>`\succsim`</pur>                              |
+| `KaTeX:\bumpeq`           | <pur>`\bumpeq`</pur>                                            | `KaTeX:\geqq`          | <pur>`\geqq`</pur>                                          | `KaTeX:\parallel`      | <pur>`\parallel`</pur>      | `KaTeX:\Supset`           | <pur>`\Supset`</pur>                               |
+| `KaTeX:\Bumpeq`           | <pur>`\Bumpeq`</pur>                                            | `KaTeX:\geqslant`      | <pur>`\geqslant`</pur>                                      | `KaTeX:\perp`          | <pur>`\perp`</pur>          | `KaTeX:\supset`           | <pur>`\supset`</pur>                               |
+| `KaTeX:\circeq`           | <pur>`\circeq`</pur>                                            | `KaTeX:\gg`            | <pur>`\gg`</pur>                                            | `KaTeX:\pitchfork`     | <pur>`\pitchfork`</pur>     | `KaTeX:\supseteq`         | <pur>`\supseteq`</pur> 或 <pur>`\supe`</pur>       |
+| `KaTeX:\colonapprox`      | <pur>`\colonapprox`</pur>                                       | `KaTeX:\ggg`           | <pur>`\ggg`</pur>                                           | `KaTeX:\prec`          | <pur>`\prec`</pur>          | `KaTeX:\supseteqq`        | <pur>`\supseteqq`</pur>                            |
+| `KaTeX:\Colonapprox`      | <pur>`\Colonapprox`</pur> 或 <pur>`\coloncolonapprox`</pur>      | `KaTeX:\gggtr`         | <pur>`\gggtr`</pur>                                         | `KaTeX:\precapprox`    | <pur>`\precapprox`</pur>    | `KaTeX:\thickapprox`      | <pur>`\thickapprox`</pur>                          |
+| `KaTeX:\coloneq`          | <pur>`\coloneq`</pur> 或 <pur>`\colonminus`</pur>                | `KaTeX:\gt`            | <pur>`\gt`</pur>                                            | `KaTeX:\preccurlyeq`   | <pur>`\preccurlyeq`</pur>   | `KaTeX:\thicksim`         | <pur>`\thicksim`</pur>                             |
+| `KaTeX:\Coloneq`          | <pur>`\Coloneq`</pur> 或 <pur>`\coloncolonminus`</pur>           | `KaTeX:\gtrapprox`     | <pur>`\gtrapprox`</pur>                                     | `KaTeX:\preceq`        | <pur>`\preceq`</pur>        | `KaTeX:\trianglelefteq`   | <pur>`\trianglelefteq`</pur>                       |
+| `KaTeX:\coloneqq`         | <pur>`\coloneqq`</pur> 或 <pur>`\colonequals`</pur>              | `KaTeX:\gtreqless`     | <pur>`\gtreqless`</pur>                                     | `KaTeX:\precsim`       | <pur>`\precsim`</pur>       | `KaTeX:\triangleq`        | <pur>`\triangleq`</pur>                            |
+| `KaTeX:\Coloneqq`         | <pur>`\Coloneqq`</pur> 或 <pur>`\coloncolonequals`</pur>         | `KaTeX:\gtreqqless`    | <pur>`\gtreqqless`</pur>                                    | `KaTeX:\propto`        | <pur>`\propto`</pur>        | `KaTeX:\trianglerighteq`  | <pur>`\trianglerighteq`</pur>                      |
+| `KaTeX:\colonsim`         | <pur>`\colonsim`</pur>                                          | `KaTeX:\gtrless`       | <pur>`\gtrless`</pur>                                       | `KaTeX:\risingdotseq`  | <pur>`\risingdotseq`</pur>  | `KaTeX:\varpropto`        | <pur>`\varpropto`</pur>                            |
+| `KaTeX:\Colonsim`         | <pur>`\Colonsim`</pur> 或 <pur>`\coloncolonsim`</pur>            | `KaTeX:\gtrsim`        | <pur>`\gtrsim`</pur>                                        | `KaTeX:\shortmid`      | <pur>`\shortmid`</pur>      | `KaTeX:\vartriangle`      | <pur>`\vartriangle`</pur>                          |
+| `KaTeX:\cong`             | <pur>`\cong`</pur>                                              | `KaTeX:\imageof`       | <pur>`\imageof`</pur>                                       | `KaTeX:\shortparallel` | <pur>`\shortparallel`</pur> | `KaTeX:\vartriangleleft`  | <pur>`\vartriangleleft`</pur>                      |
+| `KaTeX:\curlyeqprec`      | <pur>`\curlyeqprec`</pur>                                       | `KaTeX:\in`            | <pur>`\in`</pur> 或 <pur>`\isin`</pur>                      | `KaTeX:\sim`           | <pur>`\sim`</pur>           | `KaTeX:\vartriangleright` | <pur>`\vartriangleright`</pur>                     |
+| `KaTeX:\curlyeqsucc`      | <pur>`\curlyeqsucc`</pur>                                       | `KaTeX:\Join`          | <pur>`\Join`</pur>                                          | `KaTeX:\simcolon`      | <pur>`\simcolon`</pur>      | `KaTeX:\vcentcolon`       | <pur>`\vcentcolon`</pur> 或 <pur>`\ratio`</pur>    |
+| `KaTeX:\dashv`            | <pur>`\dashv`</pur>                                             | `KaTeX:\le`            | <pur>`\le`</pur>                                            | `KaTeX:\simcoloncolon` | <pur>`\simcoloncolon`</pur> | `KaTeX:\vdash`            | <pur>`\vdash`</pur>                                |
+| `KaTeX:\dblcolon`         | <pur>`\dblcolon`</pur> 或 <pur>`\coloncolon`</pur>               | `KaTeX:\leq`           | <pur>`\leq`</pur>                                           | `KaTeX:\simeq`         | <pur>`\simeq`</pur>         | `KaTeX:\vDash`            | <pur>`\vDash`</pur>                                |
+| `KaTeX:\doteq`            | <pur>`\doteq`</pur>                                             | `KaTeX:\leqq`          | <pur>`\leqq`</pur>                                          | `KaTeX:\smallfrown`    | <pur>`\smallfrown`</pur>    | `KaTeX:\Vdash`            | <pur>`\Vdash`</pur>                                |
+| `KaTeX:\Doteq`            | <pur>`\Doteq`</pur>                                             | `KaTeX:\leqslant`      | <pur>`\leqslant`</pur>                                      | `KaTeX:\smallsmile`    | <pur>`\smallsmile`</pur>    | `KaTeX:\Vvdash`           | <pur>`\Vvdash`</pur>                               |
 
 {.left-align}
 
-### Negative relationship {.col-span-3}
+### 否定关系 {.col-span-3}
 
 | :-                 | :-                      | :-                      | :-                           | :-                        | :-                             | :-                     | :-                          |
 | :----------------- | :---------------------- | :---------------------- | :--------------------------- | :------------------------ | :----------------------------- | :--------------------- | :-------------------------- |
@@ -443,7 +441,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 `KaTeX:\not =` <pur>`\not =`</pur>
 
-### Arrow {.col-span-3}
+### 箭头 {.col-span-3}
 
 | :-                        | :-                             | :-                           | :-                                | :-                         | :-                              |
 | :------------------------ | :----------------------------- | :--------------------------- | :-------------------------------- | :------------------------- | :------------------------------ |
@@ -496,54 +494,54 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 | `KaTeX:\xtofrom{abc}`            | <pur>`\xtofrom{abc}`</pur>            | `KaTeX:\xmapsto{abc}`             | <pur>`\xmapsto{abc}`</pur>             |
 | `KaTeX:\xlongequal{abc}`         | <pur>`\xlongequal{abc}`</pur>         |                                   |                                        |
 
-## Symbols and Punctuation
+## 符号和标点
 
-### Symbols and Punctuation {.col-span-3}
+### 符号和标点 {.col-span-3}
 
-| :-                                | :-                                        | :-                           | :-                                | :-                            | :-                                 |
-| :-------------------------------- | :---------------------------------------- | :--------------------------- | :-------------------------------- | :---------------------------- | :--------------------------------- |
-| `KaTeX:% comment`                 | <pur>`% comment`</pur>                    | `KaTeX:\dots`                | <pur>`\dots`</pur>                | `KaTeX:\KaTeX`                | <pur>`\KaTeX`</pur>                |
-| `KaTeX:\%`                        | <pur>`\%`</pur>                           | `KaTeX:\cdots`               | <pur>`\cdots`</pur>               | `KaTeX:\LaTeX`                | <pur>`\LaTeX`</pur>                |
-| `KaTeX:\#`                        | <pur>`\#`</pur>                           | `KaTeX:\ddots`               | <pur>`\ddots`</pur>               | `KaTeX:\TeX`                  | <pur>`\TeX`</pur>                  |
-| `KaTeX:\&`                        | <pur>`\&`</pur>                           | `KaTeX:\ldots`               | <pur>`\ldots`</pur>               | `KaTeX:\nabla`                | <pur>`\nabla`</pur>                |
-| `KaTeX:\_`                        | <pur>`\_`</pur>                           | `KaTeX:\vdots`               | <pur>`\vdots`</pur>               | `KaTeX:\infty`                | <pur>`\infty`</pur>                |
-| `KaTeX:\text{\textunderscore}`    | <pur>`\text{\textunderscore}`</pur>       | `KaTeX:\dotsb`               | <pur>`\dotsb`</pur>               | `KaTeX:\infin`                | <pur>`\infin`</pur>                |
-| `KaTeX:\text{--}`                 | <pur>`\text{--}`</pur>                    | `KaTeX:\dotsc`               | <pur>`\dotsc`</pur>               | `KaTeX:\checkmark`            | <pur>`\checkmark`</pur>            |
-| `KaTeX:\text{\textendash}`        | <pur>`\text{\textendash}`</pur>           | `KaTeX:\dotsi`               | <pur>`\dotsi`</pur>               | `KaTeX:\dag`                  | <pur>`\dag`</pur>                  |
-| `KaTeX:\text{---}`                | <pur>`\text{---}`</pur>                   | `KaTeX:\dotsm`               | <pur>`\dotsm`</pur>               | `KaTeX:\dagger`               | <pur>`\dagger`</pur>               |
-| `KaTeX:\text{\textemdash}`        | <pur>`\text{\textemdash}`</pur>           | `KaTeX:\dotso`               | <pur>`\dotso`</pur>               | `KaTeX:\text{\textdagger}`    | <pur>`\text{\textdagger}`</pur>    |
-| `KaTeX:\text{\textasciitilde}`    | <pur>`\text{\textasciitilde}`</pur>       | `KaTeX:\sdot`                | <pur>`\sdot`</pur>                | `KaTeX:\ddag`                 | <pur>`\ddag`</pur>                 |
-| `KaTeX:\text{\textasciicircum}`   | <pur>`\text{\textasciicircum}`</pur>      | `KaTeX:\mathellipsis`        | <pur>`\mathellipsis`</pur>        | `KaTeX:\ddagger`              | <pur>`\ddagger`</pur>              |
-| <code>KaTeX:\`</code>             | <pur>\`</pur>                             | `KaTeX:\text{\textellipsis}` | <pur>`\text{\textellipsis}`</pur> | `KaTeX:\text{\textdaggerdbl}` | <pur>`\text{\textdaggerdbl}`</pur> |
-| `KaTeX:\text{\textquoteleft}`     | <pur>`text{\textquoteleft}`</pur>         | `KaTeX:\Box`                 | <pur>`\Box`</pur>                 | `KaTeX:\Dagger`               | <pur>`\Dagger`</pur>               |
-| `KaTeX:\lq`                       | <pur>`\lq`</pur>                          | `KaTeX:\square`              | <pur>`\square`</pur>              | `KaTeX:\angle`                | <pur>`\angle`</pur>                |
-| `KaTeX:\text{\textquoteright}`    | <pur>`\text{\textquoteright}`</pur>       | `KaTeX:\blacksquare`         | <pur>`\blacksquare`</pur>         | `KaTeX:\measuredangle`        | <pur>`\measuredangle`</pur>        |
-| `KaTeX:\rq`                       | <pur>`\rq`</pur>                          | `KaTeX:\triangle`            | <pur>`\triangle`</pur>            | `KaTeX:\sphericalangle`       | <pur>`\sphericalangle`</pur>       |
-| `KaTeX:\text{\textquotedblleft}`  | <pur>`\text{\textquotedblleft}`</pur>     | `KaTeX:\triangledown`        | <pur>`\triangledown`</pur>        | `KaTeX:\top`                  | <pur>`\top`</pur>                  |
-| `KaTeX:"`                         | <pur>`"`</pur>                            | `KaTeX:\triangleleft`        | <pur>`\triangleleft`</pur>        | `KaTeX:\bot`                  | <pur>`\bot`</pur>                  |
-| `KaTeX:\text{\textquotedblright}` | <pur>`\text{\textquotedblright}`</pur>    | `KaTeX:\triangleright`       | <pur>`\triangleright`</pur>       | `KaTeX:\$`                    | <pur>`\$`</pur>                    |
-| `KaTeX:\colon`                    | <pur>`\colon`</pur>                       | `KaTeX:\bigtriangledown`     | <pur>`\bigtriangledown`</pur>     | `KaTeX:\text{\textdollar}`    | <pur>`\text{\textdollar}`</pur>    |
-| `KaTeX:\backprime`                | <pur>`\backprime`</pur>                   | `KaTeX:\bigtriangleup`       | <pur>`\bigtriangleup`</pur>       | `KaTeX:\pounds`               | <pur>`\pounds`</pur>               |
-| `KaTeX:\prime`                    | <pur>`\prime`</pur>                       | `KaTeX:\blacktriangle`       | <pur>`\blacktriangle`</pur>       | `KaTeX:\mathsterling`         | <pur>`\mathsterling`</pur>         |
-| `KaTeX:\text{\textless}`          | <pur>`\text{\textless}`</pur>             | `KaTeX:\blacktriangledown`   | <pur>`\blacktriangledown`</pur>   | `KaTeX:\text{\textsterling}`  | <pur>`\text{\textsterling}`</pur>  |
-| `KaTeX:\text{\textgreater}`       | <pur>`\text{\textgreater}`</pur>          | `KaTeX:\blacktriangleleft`   | <pur>`\blacktriangleleft`</pur>   | `KaTeX:\yen`                  | <pur>`\yen`</pur>                  |
-| `KaTeX:\text{\textbar}`           | <pur>`\text{\textbar}`</pur>              | `KaTeX:\blacktriangleright`  | <pur>`\blacktriangleright`</pur>  | `KaTeX:\surd`                 | <pur>`\surd`</pur>                 |
-| `KaTeX:\text{\textbardbl}`        | <pur>`\text{\textbardbl}`</pur>           | `KaTeX:\diamond`             | <pur>`\diamond`</pur>             | `KaTeX:\degree`               | <pur>`\degree`</pur>               |
-| `KaTeX:\text{\textbraceleft}`     | <pur>`\text{\textbraceleft}`</pur>        | `KaTeX:\Diamond`             | <pur>`\Diamond`</pur>             | `KaTeX:\text{\textdegree}`    | <pur>`\text{\textdegree}`</pur>    |
-| `KaTeX:\text{\textbraceright}`    | <pur>`\text{\textbraceright}`</pur>       | `KaTeX:\lozenge`             | <pur>`\lozenge`</pur>             | `KaTeX:\mho`                  | <pur>`\mho`</pur>                  |
-| `KaTeX:\text{\textbackslash}`     | <pur>`\text{\textbackslash}`</pur>        | `KaTeX:\blacklozenge`        | <pur>`\blacklozenge`</pur>        | `KaTeX:\diagdown`             | <pur>`\diagdown`</pur>             |
-| `KaTeX:\text{\P}`                 | <pur>`\text{\P}`</pur> or <pur>`\P`</pur> | `KaTeX:\star`                | <pur>`\star`</pur>                | `KaTeX:\diagup`               | <pur>`\diagup`</pur>               |
-| `KaTeX:\text{\S}`                 | <pur>`\text{\S}`</pur> or <pur>`\S`</pur> | `KaTeX:\bigstar`             | <pur>`\bigstar`</pur>             | `KaTeX:\flat`                 | <pur>`\flat`</pur>                 |
-| `KaTeX:\text{\sect}`              | <pur>`\text{\sect}`</pur>                 | `KaTeX:\clubsuit`            | <pur>`\clubsuit`</pur>            | `KaTeX:\natural`              | <pur>`\natural`</pur>              |
-| `KaTeX:\copyright`                | <pur>`\copyright`</pur>                   | `KaTeX:\clubs`               | <pur>`\clubs`</pur>               | `KaTeX:\sharp`                | <pur>`\sharp`</pur>                |
-| `KaTeX:\circledR`                 | <pur>`\circledR`</pur>                    | `KaTeX:\diamondsuit`         | <pur>`\diamondsuit`</pur>         | `KaTeX:\heartsuit`            | <pur>`\heartsuit`</pur>            |
-| `KaTeX:\text{\textregistered}`    | <pur>`\text{\textregistered}`</pur>       | `KaTeX:\diamonds`            | <pur>`\diamonds`</pur>            | `KaTeX:\hearts`               | <pur>`\hearts`</pur>               |
-| `KaTeX:\circledS`                 | <pur>`\circledS`</pur>                    | `KaTeX:\spadesuit`           | <pur>`\spadesuit`</pur>           | `KaTeX:\spades`               | <pur>`\spades`</pur>               |
-| `KaTeX:\text{\textcircled a}`     | <pur>`\text{\textcircled a}`</pur>        | `KaTeX:\maltese`             | <pur>`\maltese`</pur>             | `KaTeX:\minuso`               | <pur>`\minuso`</pur>               |
+| :-                                | :-                                           | :-                           | :-                                | :-                            | :-                                    |
+| :-------------------------------- | :------------------------------------------- | :--------------------------- | :-------------------------------- | :---------------------------- | :------------------------------------ |
+| `KaTeX:% 注释`                    | <pur>`% 注释`</pur>                           | `KaTeX:\dots`                | <pur>`\dots`</pur>                | `KaTeX:\KaTeX`                | <pur>`\KaTeX`</pur>                   |
+| `KaTeX:\%`                        | <pur>`\%`</pur>                              | `KaTeX:\cdots`               | <pur>`\cdots`</pur>               | `KaTeX:\LaTeX`                | <pur>`\LaTeX`</pur>                   |
+| `KaTeX:\#`                        | <pur>`\#`</pur>                              | `KaTeX:\ddots`               | <pur>`\ddots`</pur>               | `KaTeX:\TeX`                  | <pur>`\TeX`</pur>                     |
+| `KaTeX:\&`                        | <pur>`\&`</pur>                              | `KaTeX:\ldots`               | <pur>`\ldots`</pur>               | `KaTeX:\nabla`                | <pur>`\nabla`</pur>                   |
+| `KaTeX:\_`                        | <pur>`\_`</pur>                              | `KaTeX:\vdots`               | <pur>`\vdots`</pur>               | `KaTeX:\infty`                | <pur>`\infty`</pur>                   |
+| `KaTeX:\text{\textunderscore}`    | <pur>`\text{\textunderscore}`</pur>          | `KaTeX:\dotsb`               | <pur>`\dotsb`</pur>               | `KaTeX:\infin`                | <pur>`\infin`</pur>                   |
+| `KaTeX:\text{--}`                 | <pur>`\text{--}`</pur>                       | `KaTeX:\dotsc`               | <pur>`\dotsc`</pur>               | `KaTeX:\checkmark`            | <pur>`\checkmark`</pur>               |
+| `KaTeX:\text{\textendash}`        | <pur>`\text{\textendash}`</pur>              | `KaTeX:\dotsi`               | <pur>`\dotsi`</pur>               | `KaTeX:\dag`                  | <pur>`\dag`</pur>                     |
+| `KaTeX:\text{---}`                | <pur>`\text{---}`</pur>                      | `KaTeX:\dotsm`               | <pur>`\dotsm`</pur>               | `KaTeX:\dagger`               | <pur>`\dagger`</pur>                  |
+| `KaTeX:\text{\textemdash}`        | <pur>`\text{\textemdash}`</pur>              | `KaTeX:\dotso`               | <pur>`\dotso`</pur>               | `KaTeX:\text{\textdagger}`    | <pur>`\text{\textdagger}`</pur>       |
+| `KaTeX:\text{\textasciitilde}`    | <pur>`\text{\textasciitilde}`</pur>          | `KaTeX:\sdot`                | <pur>`\sdot`</pur>                | `KaTeX:\ddag`                 | <pur>`\ddag`</pur>                    |
+| `KaTeX:\text{\textasciicircum}`   | <pur>`\text{\textasciicircum}`</pur>         | `KaTeX:\mathellipsis`        | <pur>`\mathellipsis`</pur>        | `KaTeX:\ddagger`              | <pur>`\ddagger`</pur>                 |
+| <code>KaTeX:\`</code>             | <pur>\`</pur>                                | `KaTeX:\text{\textellipsis}` | <pur>`\text{\textellipsis}`</pur> | `KaTeX:\text{\textdaggerdbl}` | <pur>`\text{\textdaggerdbl}`</pur>    |
+| `KaTeX:\text{\textquoteleft}`     | <pur>`text{\textquoteleft}`</pur>            | `KaTeX:\Box`                 | <pur>`\Box`</pur>                 | `KaTeX:\Dagger`               | <pur>`\Dagger`</pur>                  |
+| `KaTeX:\lq`                       | <pur>`\lq`</pur>                             | `KaTeX:\square`              | <pur>`\square`</pur>              | `KaTeX:\angle`                | <pur>`\angle`</pur>                   |
+| `KaTeX:\text{\textquoteright}`    | <pur>`\text{\textquoteright}`</pur>          | `KaTeX:\blacksquare`         | <pur>`\blacksquare`</pur>         | `KaTeX:\measuredangle`        | <pur>`\measuredangle`</pur>           |
+| `KaTeX:\rq`                       | <pur>`\rq`</pur>                             | `KaTeX:\triangle`            | <pur>`\triangle`</pur>            | `KaTeX:\sphericalangle`       | <pur>`\sphericalangle`</pur>          |
+| `KaTeX:\text{\textquotedblleft}`  | <pur>`\text{\textquotedblleft}`</pur>        | `KaTeX:\triangledown`        | <pur>`\triangledown`</pur>        | `KaTeX:\top`                  | <pur>`\top`</pur>                     |
+| `KaTeX:"`                         | <pur>`"`</pur>                               | `KaTeX:\triangleleft`        | <pur>`\triangleleft`</pur>        | `KaTeX:\bot`                  | <pur>`\bot`</pur>                     |
+| `KaTeX:\text{\textquotedblright}` | <pur>`\text{\textquotedblright}`</pur>       | `KaTeX:\triangleright`       | <pur>`\triangleright`</pur>       | `KaTeX:\$`                    | <pur>`\$`</pur>                       |
+| `KaTeX:\colon`                    | <pur>`\colon`</pur>                          | `KaTeX:\bigtriangledown`     | <pur>`\bigtriangledown`</pur>     | `KaTeX:\text{\textdollar}`    | <pur>`\text{\textdollar}`</pur>       |
+| `KaTeX:\backprime`                | <pur>`\backprime`</pur>                      | `KaTeX:\bigtriangleup`       | <pur>`\bigtriangleup`</pur>       | `KaTeX:\pounds`               | <pur>`\pounds`</pur>                  |
+| `KaTeX:\prime`                    | <pur>`\prime`</pur>                          | `KaTeX:\blacktriangle`       | <pur>`\blacktriangle`</pur>       | `KaTeX:\mathsterling`         | <pur>`\mathsterling`</pur>            |
+| `KaTeX:\text{\textless}`          | <pur>`\text{\textless}`</pur>                | `KaTeX:\blacktriangledown`   | <pur>`\blacktriangledown`</pur>   | `KaTeX:\text{\textsterling}`  | <pur>`\text{\textsterling}`</pur>     |
+| `KaTeX:\text{\textgreater}`       | <pur>`\text{\textgreater}`</pur>             | `KaTeX:\blacktriangleleft`   | <pur>`\blacktriangleleft`</pur>   | `KaTeX:\yen`                  | <pur>`\yen`</pur>                     |
+| `KaTeX:\text{\textbar}`           | <pur>`\text{\textbar}`</pur>                 | `KaTeX:\blacktriangleright`  | <pur>`\blacktriangleright`</pur>  | `KaTeX:\surd`                 | <pur>`\surd`</pur>                    |
+| `KaTeX:\text{\textbardbl}`        | <pur>`\text{\textbardbl}`</pur>              | `KaTeX:\diamond`             | <pur>`\diamond`</pur>             | `KaTeX:\degree`               | <pur>`\degree`</pur>                  |
+| `KaTeX:\text{\textbraceleft}`     | <pur>`\text{\textbraceleft}`</pur>           | `KaTeX:\Diamond`             | <pur>`\Diamond`</pur>             | `KaTeX:\text{\textdegree}`    | <pur>`\text{\textdegree}`</pur>       |
+| `KaTeX:\text{\textbraceright}`    | <pur>`\text{\textbraceright}`</pur>          | `KaTeX:\lozenge`             | <pur>`\lozenge`</pur>             | `KaTeX:\mho`                  | <pur>`\mho`</pur>                     |
+| `KaTeX:\text{\textbackslash}`     | <pur>`\text{\textbackslash}`</pur>           | `KaTeX:\blacklozenge`        | <pur>`\blacklozenge`</pur>        | `KaTeX:\diagdown`             | <pur>`\diagdown`</pur>                |
+| `KaTeX:\text{\P}`                 | <pur>`\text{\P}`</pur> 或 <pur>`\P`</pur>    | `KaTeX:\star`                | <pur>`\star`</pur>                | `KaTeX:\diagup`               | <pur>`\diagup`</pur>                  |
+| `KaTeX:\text{\S}`                 | <pur>`\text{\S}`</pur> 或 <pur>`\S`</pur>    | `KaTeX:\bigstar`             | <pur>`\bigstar`</pur>             | `KaTeX:\flat`                 | <pur>`\flat`</pur>                    |
+| `KaTeX:\text{\sect}`              | <pur>`\text{\sect}`</pur>                    | `KaTeX:\clubsuit`            | <pur>`\clubsuit`</pur>            | `KaTeX:\natural`              | <pur>`\natural`</pur>                 |
+| `KaTeX:\copyright`                | <pur>`\copyright`</pur>                      | `KaTeX:\clubs`               | <pur>`\clubs`</pur>               | `KaTeX:\sharp`                | <pur>`\sharp`</pur>                   |
+| `KaTeX:\circledR`                 | <pur>`\circledR`</pur>                      | `KaTeX:\diamondsuit`         | <pur>`\diamondsuit`</pur>         | `KaTeX:\heartsuit`            | <pur>`\heartsuit`</pur>               |
+| `KaTeX:\text{\textregistered}`    | <pur>`\text{\textregistered}`</pur>          | `KaTeX:\diamonds`            | <pur>`\diamonds`</pur>            | `KaTeX:\hearts`               | <pur>`\hearts`</pur>                  |
+| `KaTeX:\circledS`                 | <pur>`\circledS`</pur>                       | `KaTeX:\spadesuit`           | <pur>`\spadesuit`</pur>           | `KaTeX:\spades`               | <pur>`\spades`</pur>                  |
+| `KaTeX:\text{\textcircled a}`     | <pur>`\text{\textcircled a}`</pur>           | `KaTeX:\maltese`             | <pur>`\maltese`</pur>             | `KaTeX:\minuso`               | <pur>`\minuso`</pur>                  |
 
-## Environments
+## 环境
 
-### Environments 1
+### 环境 1
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -565,7 +563,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 <!--rehype:style=flex:1;-->
 
-### Environments 2
+### 环境 2
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -585,7 +583,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 \end{array}
 ```
 
-### Environments 3
+### 环境 3
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -607,7 +605,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 <!--rehype:style=flex:1;-->
 
-### Environments 4
+### 环境 4
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -625,7 +623,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 \end{bmatrix}
 ```
 
-### Environments 5
+### 环境 5
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -647,7 +645,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 <!--rehype:style=flex:1;-->
 
-### Environments 6
+### 环境 6
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -669,7 +667,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 
 <!--rehype:style=flex:1;-->
 
-### Environments 7
+### 环境 7
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -687,7 +685,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 \end{Bmatrix}
 ```
 
-### Environments 8
+### 环境 8
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -713,7 +711,7 @@ The pair of expressions `\left` `KaTeX:s_1` and `\right` `KaTeX:s_2` can be used
 \end{array}
 ```
 
-### Environments 9
+### 环境 9
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -731,7 +729,7 @@ x = \begin{cases}
 \end{cases}
 ```
 
-### Environments 10
+### 环境 10
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -749,7 +747,7 @@ x = \begin{cases}
 \end{rcases}⇒…
 ```
 
-### Environments 11
+### 环境 11
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -769,7 +767,7 @@ x = \begin{cases}
 \end{smallmatrix}
 ```
 
-### Environments 12
+### 环境 12
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -791,7 +789,7 @@ x = \begin{cases}
 \end{subarray}}
 ```
 
-### Environments 13
+### 环境 13
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -813,7 +811,7 @@ x = \begin{cases}
 \end{equation}
 ```
 
-### Environments 14
+### 环境 14
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -833,7 +831,7 @@ x = \begin{cases}
 \end{align}
 ```
 
-### Environments 15
+### 环境 15
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -853,7 +851,7 @@ x = \begin{cases}
 \end{gather}
 ```
 
-### Environments 16
+### 环境 16
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -873,7 +871,7 @@ x = \begin{cases}
 \end{alignat}
 ```
 
-### Environments 17
+### 环境 17
 
 <!--rehype:body-style=display: flex;flex-direction: row;justify-content: flex-start;-->
 
@@ -895,9 +893,9 @@ x = \begin{cases}
 \end{CD}
 ```
 
-## Lists
+## 列表
 
-### Unordered List
+### 无序列表
 
 <!--rehype:style=flex:1;-->
 
@@ -910,7 +908,7 @@ x = \begin{cases}
 ```
 
 
-### Ordered List
+### 有序列表
 
 <!--rehype:style=flex:1;-->
 
@@ -922,9 +920,9 @@ x = \begin{cases}
 \begin{enumerate}
 ```
 
-## Style, Color, Size and Font
+## 样式、颜色、大小和字体
 
-### Color
+### 颜色
 
 | :-                                    | :-                                         |
 | :------------------------------------ | :----------------------------------------- |
@@ -934,7 +932,7 @@ x = \begin{cases}
 | `KaTeX:\colorbox{aqua}{$F=ma$}`       | <pur>`\colorbox{aqua}{$F=ma$}`</pur>       |
 | `KaTeX:\fcolorbox{red}{aqua}{$F=ma$}` | <pur>`\fcolorbox{red}{aqua}{$F=ma$}`</pur> |
 
-### Font {.col-span-2}
+### 字体 {.col-span-2}
 
 | :-                | :-                     | :-                     | :-                          | :-                       | :-                          |
 | :---------------- | :--------------------- | :--------------------- | :-------------------------- | :----------------------- | :-------------------------- |
@@ -944,7 +942,7 @@ x = \begin{cases}
 | `KaTeX:\Large AB` | <pur>`\Large AB`</pur> | `KaTeX:\Large AB`      | <pur>`\Large AB`</pur>      | `KaTeX:\scriptsize AB`   | <pur>\scriptsize AB</pur>   |
 | `KaTeX:\large AB` | <pur>`\large AB`</pur> | `KaTeX:\large AB`      | <pur>`\large AB`</pur>      | `KaTeX:\tiny AB`         | <pur>\tiny AB</pur>         |
 
-### Style {.col-span-3}
+### 样式 {.col-span-3}
 
 | :-                                | :-                                    | :-                             | :-                                 |
 | :-------------------------------- | :------------------------------------ | :----------------------------- | :--------------------------------- |
@@ -953,8 +951,8 @@ x = \begin{cases}
 | `KaTeX:\lim\limits_x`             | <pur>\lim\limits_x</pur>              | `KaTeX:\lim\nolimits_x`        | <pur>\lim\nolimits_x</pur>         |
 | `KaTeX:\verb!x^2!`                | <pur>\verb!x^2!</pur>                 |
 
-## Also See
+## 另请参阅
 
-- [LaTeX official website](https://www.latex-project.org/) _(latex-project.org)_
-- [KaTeX official website](https://katex.org/) _(katex.org)_
+- [LaTeX 官方网站](https://www.latex-project.org/) _(latex-project.org)_
+- [KaTeX 官方网站](https://katex.org/) _(katex.org)_
 - [symbols.pdf](https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf) _(cmor-faculty.rice.edu)_

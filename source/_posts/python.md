@@ -3,25 +3,25 @@ title: Python
 date: 2020-12-23 18:41:20
 background: bg-[#436b97]
 tags:
-  - script
-  - interpret
+  - 脚本
+  - 解释型
 categories:
-  - Programming
+  - 编程
 intro: |
-  The [Python](https://www.python.org/) cheat sheet is a one-page reference sheet for the Python 3 programming language.
+  [Python](https://www.python.org/) 速查表是 Python 3 编程语言的单页参考表。
 plugins:
   - copyCode
   - runCode
 ---
 
-## Getting Started
+## 入门
 
-### Introduction
+### 简介
 
 - [Python](https://www.python.org/) _(python.org)_
-- [Python Document](https://docs.python.org/3/index.html) _(docs.python.org)_
-- [Learn X in Y minutes](https://learnxinyminutes.com/docs/python/) _(learnxinyminutes.com)_
-- [Regex in python](/regex#regex-in-python) _(cheatsheets.zip)_
+- [Python 文档](https://docs.python.org/3/index.html) _(docs.python.org)_
+- [X分钟学习Python](https://learnxinyminutes.com/docs/python/) _(learnxinyminutes.com)_
+- [Python中的正则表达式](/regex#regex-in-python) _(r3f.cn)_
 
 ### Hello World
 
@@ -30,9 +30,9 @@ plugins:
 Hello, World!
 ```
 
-The famous "Hello World" program in Python
+Python 中著名的 "Hello World" 程序
 
-### Variables
+### 变量
 
 ```python
 age = 18      # age is of type int
@@ -40,23 +40,23 @@ name = "John" # name is now of type str
 print(name)
 ```
 
-Python can't declare a variable without assignment.
+Python 不能在没有赋值的情况下声明变量。
 
-### Data Types {.row-span-2}
+### 数据类型 {.row-span-2}
 
 |                                    |          |
 | ---------------------------------- | -------- |
-| `str`                              | Text     |
-| `int`, `float`, `complex`          | Numeric  |
-| `list`, `tuple`, `range`           | Sequence |
-| `dict`                             | Mapping  |
-| `set`, `frozenset`                 | Set      |
-| `bool`                             | Boolean  |
-| `bytes`, `bytearray`, `memoryview` | Binary   |
+| `str`                              | 文本     |
+| `int`, `float`, `complex`          | 数字     |
+| `list`, `tuple`, `range`           | 序列     |
+| `dict`                             | 映射     |
+| `set`, `frozenset`                 | 集合     |
+| `bool`                             | 布尔     |
+| `bytes`, `bytearray`, `memoryview` | 二进制   |
 
-See: [Data Types](#python-built-in-data-types)
+参见: [数据类型](#python-built-in-data-types)
 
-### Slicing String
+### 字符串切片
 
 ```python
 >>> msg = "Hello, World!"
@@ -64,9 +64,9 @@ See: [Data Types](#python-built-in-data-types)
 llo
 ```
 
-See: [Strings](#python-strings)
+参见: [字符串](#python-strings)
 
-### Lists
+### 列表
 
 ```python
 mylist = []
@@ -76,7 +76,7 @@ for item in mylist:
     print(item) # prints out 1,2
 ```
 
-See: [Lists](#python-lists)
+参见: [列表](#python-lists)
 
 ### If Else
 
@@ -88,9 +88,9 @@ else:
     print("num is not greater than 0")
 ```
 
-See: [Flow control](#python-flow-control)
+参见: [流程控制](#python-flow-control)
 
-### Loops
+### 循环
 
 ```python
 for item in range(6):
@@ -100,9 +100,9 @@ else:
     print("Finally finished!")
 ```
 
-See: [Loops](#python-loops)
+参见: [循环](#python-loops)
 
-### Functions
+### 函数
 
 ```python
 >>> def my_function():
@@ -112,9 +112,9 @@ See: [Loops](#python-loops)
 Hello from a function
 ```
 
-See: [Functions](#python-functions)
+参见: [函数](#python-functions)
 
-### File Handling {.col-span-2}
+### 文件处理 {.col-span-2}
 
 ```python
 with open("myfile.txt", "r", encoding='utf8') as file:
@@ -122,9 +122,9 @@ with open("myfile.txt", "r", encoding='utf8') as file:
         print(line)
 ```
 
-See: [File Handling](#python-file-handling)
+参见: [文件处理](#python-file-handling)
 
-### Arithmetic
+### 算术运算
 
 ```python
 result = 10 + 30 # => 40
@@ -136,10 +136,10 @@ result = 25 % 2  # => 1
 result = 5 ** 3  # => 125
 ```
 
-The `/` means quotient of x and y, and the `//` means floored quotient of x and y, also see
+`/` 表示 x 和 y 的商，`//` 表示 x 和 y 的向下取整除法，另请参阅
 [StackOverflow](https://stackoverflow.com/a/183870/13192320)
 
-### Plus-Equals
+### 加等于
 
 ```python
 counter = 0
@@ -153,23 +153,23 @@ message = "Part 1."
 message += "Part 2."
 ```
 
-### f-Strings (Python 3.6+)
+### f-字符串 (Python 3.6+)
 
 ```python
->>> website = 'cheatsheets.zip'
+>>> website = 'r3f.cn'
 >>> f"Hello, {website}"
-"Hello, cheatsheets.zip"
+"Hello, r3f.cn"
 
 >>> num = 10
 >>> f'{num} + 10 = {num + 10}'
 '10 + 10 = 20'
 ```
 
-See: [Python F-Strings](#python-f-strings-since-python-3-6)
+参见: [Python F-字符串](#python-f-strings-since-python-3-6)
 
-## Python Built-in Data Types
+## Python 内置数据类型
 
-### Strings
+### 字符串
 
 ```python
 hello = "Hello World"
@@ -180,9 +180,9 @@ Lorem ipsum dolor sit amet,
 consectetur adipiscing elit """
 ```
 
-See: [Strings](#python-strings)
+参见: [字符串](#python-strings)
 
-### Numbers
+### 数字
 
 ```python
 x = 1    # int
@@ -193,7 +193,7 @@ z = 1j   # complex
 <class 'int'>
 ```
 
-### Booleans
+### 布尔值
 
 ```python
 my_bool = True
@@ -203,7 +203,7 @@ bool(0)     # => False
 bool(1)     # => True
 ```
 
-### Lists
+### 列表
 
 ```python
 list1 = ["apple", "banana", "cherry"]
@@ -212,9 +212,9 @@ list3 = [1, 5, 7, 9, 3]
 list4 = list((1, 5, 7, 9, 3))
 ```
 
-See: [Lists](#python-lists)
+参见: [列表](#python-lists)
 
-### Tuple
+### 元组
 
 ```python
 my_tuple = (1, 2, 3)
@@ -223,17 +223,17 @@ my_tuple = tuple((1, 2, 3))
 tupla = (1, 2, 3, 'python')
 
 print(tupla[0])       # Output: 1
-print(tupla.count(1)) # Count occurrences
-print(tupla.index(2)) # Find index
+print(tupla.count(1)) # 计算出现次数
+print(tupla.index(2)) # 查找索引
 
 tupla1 = (1, 2, 3)
 tupla2 = ('a', 'b')
 
-len(tuple) → Returns the number of elements.
-in → Checks if an element exists in the tuple.
-Concatenation (+) → Combines two tuples.
-Repetition (*) → Repeats a tuple.
-Slicing (tuple[start:end]) → Extracts a subtuple.
+len(tuple) → 返回元素数量。
+in → 检查元素是否存在于元组中。
+Concatenation (+) → 合并两个元组。
+Repetition (*) → 重复一个元组。
+Slicing (tuple[start:end]) → 提取子元组。
 
 print(len(tupla1))       # Output: 3
 print(2 in tupla1)       # Output: True
@@ -241,22 +241,22 @@ print(tupla1 + tupla2)   # Output: (1, 2, 3, 'a', 'b')
 print(tupla1[1:])        # Output: (2, 3)
 
 # unpacking
-a, b, c, d = tupla   # Each value goes into a variable
+a, b, c, d = tupla   # 每个值赋给一个变量
 
 ```
 
-Similar to List but immutable
+与列表类似，但不可变
 
-### Set
+### 集合
 
 ```python
 set1 = {"a", "b", "c"}
 set2 = set(("a", "b", "c"))
 ```
 
-Set of unique items/objects
+唯一项目/对象的集合
 
-### Dictionary
+### 字典
 
 ```python {.wrap}
 >>> empty_dict = {}
@@ -274,11 +274,11 @@ dict_keys(['one', 'two', 'three', 'four'])
 4
 ```
 
-Key: Value pair, JSON like object
+键值对，类似 JSON 的对象
 
-### Casting
+### 类型转换
 
-#### Integers
+#### 整数
 
 ```python
 x = int(1)   # x will be 1
@@ -286,7 +286,7 @@ y = int(2.8) # y will be 2
 z = int("3") # z will be 3
 ```
 
-#### Floats
+#### 浮点数
 
 ```python
 x = float(1)     # x will be 1.0
@@ -295,7 +295,7 @@ z = float("3")   # z will be 3.0
 w = float("4.2") # w will be 4.2
 ```
 
-#### Strings
+#### 字符串
 
 ```python
 x = str("s1") # x will be 's1'
@@ -303,66 +303,65 @@ y = str(2)    # y will be '2'
 z = str(3.0)  # z will be '3.0'
 ```
 
-## Python Advanced Data Types
+## Python 高级数据类型
 
-### Heaps {.col-span-2 .row-span-3}
+### 堆 {.col-span-2 .row-span-3}
 
 ```python
 import heapq
 
 myList = [9, 5, 4, 1, 3, 2]
-heapq.heapify(myList) # turn myList into a Min Heap
+heapq.heapify(myList) # 将 myList 转换为最小堆
 print(myList)    # => [1, 3, 2, 5, 9, 4]
-print(myList[0]) # first value is always the smallest in the heap
+print(myList[0]) # 堆中的第一个值始终是最小的
 
-heapq.heappush(myList, 10) # insert 10
-x = heapq.heappop(myList)  # pop and return smallest item
+heapq.heappush(myList, 10) # 插入 10
+x = heapq.heappop(myList)  # 弹出并返回最小项
 print(x)                   # => 1
 ```
 
-#### Negate all values to use Min Heap as Max Heap
+#### 取反所有值以将最小堆用作最大堆
 
 ```python
 myList = [9, 5, 4, 1, 3, 2]
-myList = [-val for val in myList] # multiply by -1 to negate
+myList = [-val for val in myList] # 乘以 -1 取反
 heapq.heapify(myList)
 
 x = heapq.heappop(myList)
-print(-x) # => 9 (making sure to multiply by -1 again)
+print(-x) # => 9 (确保再次乘以 -1)
 ```
 
-Heaps are binary trees for which every parent node has a value less than or equal to any of its children. Useful for
-accessing min/max value quickly. Time complexity: O(n) for heapify, O(log n) push and pop. See:
+堆是二叉树，其中每个父节点的值都小于或等于其任何子节点的值。用于快速访问最小值/最大值。时间复杂度：heapify 为 O(n)，push 和 pop 为 O(log n)。参见：
 [Heapq](https://docs.python.org/3/library/heapq.html)
 
-### Stacks and Queues {.row-span-3}
+### 栈和队列 {.row-span-3}
 
 ```python
 from collections import deque
 
-q = deque()          # empty
-q = deque([1, 2, 3]) # with values
+q = deque()          # 空
+q = deque([1, 2, 3]) # 带值
 
-q.append(4)     # append to right side
-q.appendleft(0) # append to left side
+q.append(4)     # 追加到右侧
+q.appendleft(0) # 追加到左侧
 print(q)    # => deque([0, 1, 2, 3, 4])
 
-x = q.pop() # remove & return from right
-y = q.popleft() # remove & return from left
+x = q.pop() # 从右侧移除并返回
+y = q.popleft() # 从左侧移除并返回
 print(x)    # => 4
 print(y)    # => 0
 print(q)    # => deque([1, 2, 3])
 
-q.rotate(1) # rotate 1 step to the right
+q.rotate(1) # 向右旋转1步
 print(q)    # => deque([3, 1, 2])
 ```
 
-Deque is a double-ended queue with O(1) time for append/pop operations from both sides. Used as stacks and queues. See:
+Deque 是一个双端队列，两端追加/弹出操作的时间复杂度为 O(1)。用作栈和队列。参见：
 [Deque](https://docs.python.org/3/library/collections.html#collections.deque)
 
-## Python Strings
+## Python 字符串
 
-### Array-like
+### 类数组
 
 ```python
 >>> hello = "Hello, World"
@@ -372,9 +371,9 @@ e
 d
 ```
 
-Get the character at position 1 or last
+获取位置 1 或最后一个字符
 
-### Looping
+### 循环
 
 ```python
 >>> for char in "foo":
@@ -384,9 +383,9 @@ o
 o
 ```
 
-Loop through the letters in the word "foo"
+遍历单词 "foo" 中的字母
 
-### Slicing string {.row-span-4}
+### 字符串切片 {.row-span-4}
 
 ```java
  ┌───┬───┬───┬───┬───┬───┬───┐
@@ -426,7 +425,7 @@ Loop through the letters in the word "foo"
 'baco'
 ```
 
-#### With a stride
+#### 带步长
 
 ```python
 >>> s = '12345' * 5
@@ -442,7 +441,7 @@ Loop through the letters in the word "foo"
 '5432154321543215432154321'
 ```
 
-### String Length
+### 字符串长度
 
 ```python
 >>> hello = "Hello, World!"
@@ -450,9 +449,9 @@ Loop through the letters in the word "foo"
 13
 ```
 
-The len() function returns the length of a string
+len() 函数返回字符串的长度
 
-### Multiple copies
+### 多份拷贝
 
 ```python
 >>> s = '===+'
@@ -461,7 +460,7 @@ The len() function returns the length of a string
 '===+===+===+===+===+===+===+===+'
 ```
 
-### Check String
+### 检查字符串
 
 ```python
 >>> s = 'spam'
@@ -472,7 +471,7 @@ True
 
 ```
 
-### Concatenates
+### 连接
 
 ```python
 >>> s = 'spam'
@@ -483,7 +482,7 @@ True
 'spamegg'
 ```
 
-### Formatting {.col-span-2}
+### 格式化 {.col-span-2}
 
 ```python
 name = "John"
@@ -496,7 +495,7 @@ age = 23
 print("%s is %d years old." % (name, age))
 ```
 
-#### format() Method
+#### format() 方法
 
 ```python
 txt1 = "My name is {fname}, I'm {age}".format(fname="John", age=36)
@@ -504,7 +503,7 @@ txt2 = "My name is {0}, I'm {1}".format("John", 36)
 txt3 = "My name is {}, I'm {}".format("John", 36)
 ```
 
-### Input
+### 输入
 
 ```python
 >>> name = input("Enter your name: ")
@@ -513,9 +512,9 @@ Enter your name: Tom
 'Tom'
 ```
 
-Get input data from console
+从控制台获取输入数据
 
-### Join
+### 连接 (Join)
 
 ```python
 >>> "#".join(["John", "Peter", "Vicky"])
@@ -529,14 +528,14 @@ Get input data from console
 True
 ```
 
-## Python F-Strings (Since Python 3.6+)
+## Python F-字符串 (Python 3.6+ 起)
 
-### f-Strings usage
+### f-字符串用法
 
 ```python
->>> website = 'cheatsheets.zip'
+>>> website = 'r3f.cn'
 >>> f"Hello, {website}"
-"Hello, cheatsheets.zip"
+"Hello, r3f.cn"
 
 >>> num = 10
 >>> f'{num} + 10 = {num + 10}'
@@ -558,40 +557,40 @@ True
 "Hello!\n    I'm Eric.\n    I'm 27."
 ```
 
-it is available since Python 3.6, also see:
-[Formatted string literals](https://docs.python.org/3/reference/lexical_analysis.html#f-strings)
+自 Python 3.6 起可用，另请参阅：
+[格式化字符串字面值](https://docs.python.org/3/reference/lexical_analysis.html#f-strings)
 
-### f-Strings Fill Align
+### f-字符串填充对齐
 
 ```python
->>> f'{"text":10}'     # [width]
+>>> f'{"text":10}'     # [宽度]
 'text      '
->>> f'{"test":*>10}'   # fill left
+>>> f'{"test":*>10}'   # 左填充
 '******test'
->>> f'{"test":*<10}'   # fill right
+>>> f'{"test":*<10}'   # 右填充
 'test******'
->>> f'{"test":*^10}'   # fill center
+>>> f'{"test":*^10}'   # 居中填充
 '***test***'
->>> f'{12345:0>10}'    # fill with numbers
+>>> f'{12345:0>10}'    # 用数字填充
 '0000012345'
 ```
 
-### f-Strings Type
+### f-字符串类型
 
 ```python
->>> f'{10:b}'        # binary type
+>>> f'{10:b}'        # 二进制类型
 '1010'
->>> f'{10:o}'        # octal type
+>>> f'{10:o}'        # 八进制类型
 '12'
->>> f'{200:x}'       # hexadecimal type
+>>> f'{200:x}'       # 十六进制类型
 'c8'
 >>> f'{200:X}'
 'C8'
->>> f'{345600000000:e}' # scientific notation
+>>> f'{345600000000:e}' # 科学计数法
 '3.456000e+11'
->>> f'{65:c}'       # character type
+>>> f'{65:c}'       # 字符类型
 'A'
->>> f'{10:#b}'      # [type] with notation (base)
+>>> f'{10:#b}'      # [类型] 带表示法 (基数)
 '0b1010'
 >>> f'{10:#o}'
 '0o12'
@@ -599,34 +598,34 @@ it is available since Python 3.6, also see:
 '0xa'
 ```
 
-### F-Strings Others
+### F-字符串其他
 
 ```python
->>> f'{-12345:0=10}'  # negative numbers
+>>> f'{-12345:0=10}'  # 负数
 '-000012345'
->>> f'{12345:010}'    # [0] shortcut (no align)
+>>> f'{12345:010}'    # [0] 快捷方式 (无对齐)
 '0000012345'
 >>> f'{-12345:010}'
 '-000012345'
->>> import math       # [.precision]
+>>> import math       # [.精度]
 >>> math.pi
 3.141592653589793
 >>> f'{math.pi:.2f}'
 '3.14'
->>> f'{1000000:,.2f}' # [grouping_option]
+>>> f'{1000000:,.2f}' # [分组选项]
 '1,000,000.00'
 >>> f'{1000000:_.2f}'
 '1_000_000.00'
->>> f'{0.25:0%}'      # percentage
+>>> f'{0.25:0%}'      # 百分比
 '25.000000%'
 >>> f'{0.25:.0%}'
 '25%'
 ```
 
-### F-Strings Sign
+### F-字符串符号
 
 ```python
->>> f'{12345:+}'      # [sign] (+/-)
+>>> f'{12345:+}'      # [符号] (+/-)
 '+12345'
 >>> f'{-12345:+}'
 '-12345'
@@ -636,9 +635,9 @@ it is available since Python 3.6, also see:
 '-000012345'
 ```
 
-## Python Lists
+## Python 列表
 
-### Defining
+### 定义
 
 ```python
 >>> li1 = []
@@ -655,7 +654,7 @@ it is available since Python 3.6, also see:
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### Generate {.col-span-2}
+### 生成 {.col-span-2}
 
 ```python
 >>> list(filter(lambda x : x % 2 == 1, range(1, 20)))
@@ -671,7 +670,7 @@ it is available since Python 3.6, also see:
 [6, 7]
 ```
 
-### Append
+### 追加
 
 ```python
 >>> li = []
@@ -689,16 +688,16 @@ it is available since Python 3.6, also see:
 [1, 2, 4, 3]
 ```
 
-### List Slicing {.col-span-2 .row-span-3}
+### 列表切片 {.col-span-2 .row-span-3}
 
-Syntax of list slicing:
+列表切片语法：
 
 ```python
 a_list[start:end]
 a_list[start:end:step]
 ```
 
-#### Slicing
+#### 切片
 
 ```python
 >>> a = ['spam', 'egg', 'bacon', 'tomato', 'ham', 'lobster']
@@ -710,7 +709,7 @@ a_list[start:end:step]
 ['egg', 'bacon', 'tomato']
 ```
 
-#### Omitting index
+#### 省略索引
 
 ```python
 >>> a[:4]
@@ -727,7 +726,7 @@ a_list[start:end:step]
 ['spam', 'egg', 'bacon', 'tomato', 'ham', 'lobster']
 ```
 
-#### With a stride
+#### 带步长
 
 ```python
 ['spam', 'egg', 'bacon', 'tomato', 'ham', 'lobster']
@@ -743,7 +742,7 @@ a_list[start:end:step]
 ['lobster', 'ham', 'tomato', 'bacon', 'egg', 'spam']
 ```
 
-### Remove
+### 移除
 
 ```python
 >>> li = ['bread', 'butter', 'milk']
@@ -756,7 +755,7 @@ a_list[start:end:step]
 ['butter']
 ```
 
-### Access
+### 访问
 
 ```python
 >>> li = ['a', 'b', 'c', 'd']
@@ -770,7 +769,7 @@ Traceback (most recent call last):
 IndexError: list index out of range
 ```
 
-### Concatenating {.row-span-2}
+### 连接 {.row-span-2}
 
 ```python
 >>> odd = [1, 3, 5]
@@ -782,7 +781,7 @@ IndexError: list index out of range
 [1, 3, 5, 9, 11, 13]
 ```
 
-### Sort & Reverse {.row-span-2}
+### 排序和反转 {.row-span-2}
 
 ```python
 >>> li = [3, 1, 3, 2, 5]
@@ -794,7 +793,7 @@ IndexError: list index out of range
 [5, 3, 3, 2, 1]
 ```
 
-### Count
+### 计数
 
 ```python
 >>> li = [3, 1, 3, 2, 5]
@@ -802,7 +801,7 @@ IndexError: list index out of range
 2
 ```
 
-### Repeating
+### 重复
 
 ```python
 >>> li = ["re"] * 3
@@ -810,9 +809,9 @@ IndexError: list index out of range
 ['re', 're', 're']
 ```
 
-## Python Flow control
+## Python 流程控制
 
-### Basic
+### 基本
 
 ```python
 num = 5
@@ -824,7 +823,7 @@ else:
     print("num is indeed 10.")
 ```
 
-### One line (ternary operator)
+### 单行 (三元运算符)
 
 ```python
 >>> a = 330
@@ -859,9 +858,9 @@ match x:
     print("multiple")
 ```
 
-## Python Loops
+## Python 循环
 
-### Basic
+### 基本
 
 ```python
 primes = [2, 3, 5, 7]
@@ -869,18 +868,18 @@ for prime in primes:
     print(prime)
 ```
 
-Prints: 2 3 5 7
+打印: 2 3 5 7
 
-### With index
+### 带索引
 
 ```python
 animals = ["dog", "cat", "mouse"]
-# enumerate() adds counter to an iterable
+# enumerate() 为可迭代对象添加计数器
 for i, value in enumerate(animals):
     print(i, value)
 ```
 
-Prints: 0 dog 1 cat 2 mouse
+打印: 0 dog 1 cat 2 mouse
 
 ### While
 
@@ -888,10 +887,10 @@ Prints: 0 dog 1 cat 2 mouse
 x = 0
 while x < 4:
     print(x)
-    x += 1  # Shorthand for x = x + 1
+    x += 1  # x = x + 1 的简写
 ```
 
-Prints: 0 1 2 3
+打印: 0 1 2 3
 
 ### Break
 
@@ -900,11 +899,11 @@ x = 0
 for index in range(10):
     x = index * 10
     if index == 5:
-    	break
+      break
     print(x)
 ```
 
-Prints: 0 10 20 30 40
+打印: 0 10 20 30 40
 
 ### Continue
 
@@ -912,36 +911,36 @@ Prints: 0 10 20 30 40
 for index in range(3, 8):
     x = index * 10
     if index == 5:
-    	continue
+      continue
     print(x)
 ```
 
-Prints: 30 40 60 70
+打印: 30 40 60 70
 
 ### Range
 
 ```python
 for i in range(4):
-    print(i) # Prints: 0 1 2 3
+    print(i) # 打印: 0 1 2 3
 
 for i in range(4, 8):
-    print(i) # Prints: 4 5 6 7
+    print(i) # 打印: 4 5 6 7
 
 for i in range(4, 10, 2):
-    print(i) # Prints: 4 6 8
+    print(i) # 打印: 4 6 8
 ```
 
-### With zip()
+### 使用 zip()
 
 ```python
 words = ['Mon', 'Tue', 'Wed']
 nums = [1, 2, 3]
-# Use zip to pack into a tuple list
+# 使用 zip 打包成元组列表
 for w, n in zip(words, nums):
     print('%d:%s, ' %(n, w))
 ```
 
-Prints: 1:Mon, 2:Tue, 3:Wed,
+打印: 1:Mon, 2:Tue, 3:Wed,
 
 ### for/else
 
@@ -955,18 +954,18 @@ else:
     print("Not found!")
 ```
 
-Also see: [Python Tips](https://book.pythontips.com/en/latest/for_-_else.html)
+另请参阅: [Python 技巧](https://book.pythontips.com/en/latest/for_-_else.html)
 
-## Python Functions
+## Python 函数
 
-### Basic
+### 基本
 
 ```python
 def hello_world():
     print('Hello, World!')
 ```
 
-### Return
+### 返回
 
 ```python
 def add(x, y):
@@ -976,7 +975,7 @@ def add(x, y):
 add(5, 6)    # => 11
 ```
 
-### Positional arguments
+### 位置参数
 
 ```python
 def varargs(*args):
@@ -985,9 +984,9 @@ def varargs(*args):
 varargs(1, 2, 3)  # => (1, 2, 3)
 ```
 
-Type of "args" is tuple.
+"args" 的类型是元组。
 
-### Keyword arguments
+### 关键字参数
 
 ```python
 def keyword_args(**kwargs):
@@ -997,9 +996,9 @@ def keyword_args(**kwargs):
 keyword_args(big="foot", loch="ness")
 ```
 
-Type of "kwargs" is dict.
+"kwargs" 的类型是字典。
 
-### Returning multiple
+### 返回多个值
 
 ```python
 def swap(x, y):
@@ -1010,7 +1009,7 @@ y = 2
 x, y = swap(x, y)  # => x = 2, y = 1
 ```
 
-### Default Value
+### 默认值
 
 ```python
 def add(x, y=10):
@@ -1020,7 +1019,7 @@ add(5)      # => 15
 add(5, 20)  # => 25
 ```
 
-### Anonymous functions
+### 匿名函数
 
 ```python
 # => True
@@ -1030,16 +1029,16 @@ add(5, 20)  # => 25
 (lambda x, y: x ** 2 + y ** 2)(2, 1)
 ```
 
-## Python Modules
+## Python 模块
 
-### Import modules
+### 导入模块
 
 ```python
 import math
 print(math.sqrt(16))  # => 4.0
 ```
 
-### From a module
+### 从模块导入
 
 ```python
 from math import ceil, floor
@@ -1047,13 +1046,13 @@ print(ceil(3.7))   # => 4.0
 print(floor(3.7))  # => 3.0
 ```
 
-### Import all
+### 导入所有
 
 ```python
 from math import *
 ```
 
-### Shorten module
+### 缩短模块名
 
 ```python
 import math as m
@@ -1062,18 +1061,18 @@ import math as m
 math.sqrt(16) == m.sqrt(16)
 ```
 
-### Functions and attributes
+### 函数和属性
 
 ```python
 import math
 dir(math)
 ```
 
-## Python File Handling
+## Python 文件处理
 
-### Read file
+### 读取文件
 
-#### Line by line
+#### 逐行读取
 
 ```python
 with open("myfile.txt") as file:
@@ -1081,7 +1080,7 @@ with open("myfile.txt") as file:
         print(line)
 ```
 
-#### With line number
+#### 带行号
 
 ```python
 file = open('myfile.txt', 'r')
@@ -1089,9 +1088,9 @@ for i, line in enumerate(file, start=1):
     print("Number %s: %s" % (i, line))
 ```
 
-### String
+### 字符串
 
-#### Write a string
+#### 写入字符串
 
 ```python
 contents = {"aa": 12, "bb": 21}
@@ -1099,7 +1098,7 @@ with open("myfile1.txt", "w+") as file:
     file.write(str(contents))
 ```
 
-#### Read a string
+#### 读取字符串
 
 ```python
 with open('myfile1.txt', "r+") as file:
@@ -1107,9 +1106,9 @@ with open('myfile1.txt', "r+") as file:
 print(contents)
 ```
 
-### Object
+### 对象
 
-#### Write an object
+#### 写入对象
 
 ```python
 contents = {"aa": 12, "bb": 21}
@@ -1117,7 +1116,7 @@ with open("myfile2.txt", "w+") as file:
     file.write(json.dumps(contents))
 ```
 
-#### Read an object
+#### 读取对象
 
 ```python
 with open('myfile2.txt', "r+") as file:
@@ -1125,14 +1124,14 @@ with open('myfile2.txt', "r+") as file:
 print(contents)
 ```
 
-### Delete a File
+### 删除文件
 
 ```python
 import os
 os.remove("myfile.txt")
 ```
 
-### Check and Delete
+### 检查并删除
 
 ```python
 import os
@@ -1142,26 +1141,26 @@ else:
     print("The file does not exist")
 ```
 
-### Delete Folder
+### 删除文件夹
 
 ```python
 import os
 os.rmdir("myfolder")
 ```
 
-## Python Classes & Inheritance
+## Python 类和继承
 
-### Defining
+### 定义
 
 ```python
 class MyNewClass:
     pass
 
-# Class Instantiation
+# 类实例化
 my = MyNewClass()
 ```
 
-### Constructors
+### 构造函数
 
 ```python
 class Animal:
@@ -1175,12 +1174,12 @@ dog = Animal('Woof')
 print(dog.voice)    # => Woof
 ```
 
-### Method
+### 方法
 
 ```python
 class Dog:
 
-    # Method of the class
+    # 类的方法
     def bark(self):
         print("Ham-Ham")
 
@@ -1188,7 +1187,7 @@ charlie = Dog()
 charlie.bark()   # => "Ham-Ham"
 ```
 
-### Class Variables {.row-span-2}
+### 类变量 {.row-span-2}
 
 ```python
 class MyClass:
@@ -1203,7 +1202,7 @@ x = MyClass()
 print(x.class_variable)
 ```
 
-### Super() Function {.row-span-2}
+### Super() 函数 {.row-span-2}
 
 ```python
 class ParentClass:
@@ -1213,7 +1212,7 @@ class ParentClass:
 class ChildClass(ParentClass):
     def print_test(self):
         print("Child Method")
-        # Calls the parent's print_test()
+        # 调用父类的 print_test()
         super().print_test()
 ```
 
@@ -1226,7 +1225,7 @@ Child Method
 Parent Method
 ```
 
-### repr() method
+### repr() 方法
 
 ```python
 class Employee:
@@ -1240,14 +1239,14 @@ john = Employee('John')
 print(john)  # => John
 ```
 
-### User-defined exceptions
+### 用户定义异常
 
 ```python
 class CustomError(Exception):
     pass
 ```
 
-### Polymorphism
+### 多态
 
 ```python
 class ParentClass:
@@ -1265,7 +1264,7 @@ obj_A.print_self() # => A
 obj_B.print_self() # => B
 ```
 
-### Overriding
+### 重写
 
 ```python
 class ParentClass:
@@ -1280,7 +1279,7 @@ child_instance = ChildClass()
 child_instance.print_self() # => Child
 ```
 
-### Inheritance
+### 继承
 
 ```python
 class Animal:
@@ -1298,16 +1297,16 @@ print(Yoki.legs) # => 4
 Yoki.sound()     # => Woof!
 ```
 
-## Python Type Hints (Since Python 3.5)
+## Python 类型提示 (Python 3.5 起)
 
-### Variable & Parameter
+### 变量和参数
 
 ```python
 string: str = "ha"
 times: int = 3
 
 
-# wrong hit, but run correctly
+# 错误的提示，但能正确运行
 result: str = 1 + 2
 print(result)  # => 3
 
@@ -1318,7 +1317,7 @@ def say(name: str, start: str = "Hi"):
 print(say("Python"))  # => Hi, Python
 ```
 
-### Built-in date type
+### 内置数据类型
 
 ```python
 from typing import Dict, Tuple, List
@@ -1336,7 +1335,7 @@ statuses: Tuple[str, ...] = (
 codes: List[int] = (0, 1, -1, -2)
 ```
 
-### Built-in date type (3.10+)
+### 内置数据类型 (3.10+)
 
 ```python
 bill: dict[str, float] = {
@@ -1352,7 +1351,7 @@ statuses: tuple[str, ...] = (
 codes: list[int] = (0, 1, -1, -2)
 ```
 
-### Positional argument
+### 位置参数
 
 ```python
 def calc_summary(*args: int):
@@ -1361,9 +1360,9 @@ def calc_summary(*args: int):
 print(calc_summary(3, 1, 4))  # => 8
 ```
 
-Indicate all arguments' type is int.
+表示所有参数的类型都是 int。
 
-### Returned
+### 返回值
 
 ```python
 def say_hello(name) -> str:
@@ -1373,7 +1372,7 @@ var = "Python"
 print(say_hello(var))  # => Hello, Python
 ```
 
-### Union returned
+### 联合类型返回值
 
 ```python
 from typing import Union
@@ -1382,9 +1381,9 @@ def resp200(meaningful) -> Union[int, str]:
     return "OK" if meaningful else 200
 ```
 
-Means returned value type may be int or str.
+表示返回值类型可能是 int 或 str。
 
-### Keyword argument
+### 关键字参数
 
 ```python
 def calc_summary(**kwargs: int):
@@ -1393,9 +1392,9 @@ def calc_summary(**kwargs: int):
 print(calc_summary(a=1, b=2))  # => 3
 ```
 
-Indicate all parameters' value type is int.
+表示所有参数值的类型都是 int。
 
-### Multiple returns
+### 多返回值
 
 ```python
 def resp200() -> (int, str):
@@ -1406,16 +1405,16 @@ print(returns)  # => (200, 'OK')
 print(type(returns))  # tuple
 ```
 
-### Union returned (3.10+)
+### 联合类型返回值 (3.10+)
 
 ```python
 def resp200(meaningful) -> int | str:
     return "OK" if meaningful else 200
 ```
 
-Since Python 3.10
+自 Python 3.10 起
 
-### Property
+### 属性
 
 ```python
 class Employee:
@@ -1428,7 +1427,7 @@ class Employee:
         self.graduated: bool = False
 ```
 
-### Self instance
+### Self 实例
 
 ```python
 class Employee:
@@ -1442,7 +1441,7 @@ class Employee:
         return type(self)(self.name)
 ```
 
-### Self instance (3.11+)
+### Self 实例 (3.11+)
 
 ```python
 from typing import Self
@@ -1456,16 +1455,16 @@ class Employee:
         return self
 ```
 
-### Type & Generic {.col-span-2}
+### 类型和泛型 {.col-span-2}
 
 ```python
 from typing import TypeVar, Type
 
 T = TypeVar("T")
 
-# "mapper" is a type, like int, str, MyClass and so on.
-# "default" is an instance of type T, such as 314, "string", MyClass() and so on.
-# returned is an instance of type T too.
+# "mapper" 是一个类型，如 int、str、MyClass 等。
+# "default" 是类型 T 的一个实例，如 314、"string"、MyClass() 等。
+# 返回的也是类型 T 的一个实例。
 def converter(raw, mapper: Type[T], default: T) -> T:
     try:
         return mapper(raw)
@@ -1476,7 +1475,7 @@ raw: str = input("Enter an integer: ")
 result: int = converter(raw, mapper=int, default=0)
 ```
 
-### Function {.col-span-2}
+### 函数 {.col-span-2}
 
 ```python
 from typing import TypeVar, Callable, Any
@@ -1489,15 +1488,15 @@ def converter(raw, mapper: Callable[[Any], T], default: T) -> T:
     except:
         return default
 
-# Callable[[Any], ReturnType] means a function declare like:
+# Callable[[Any], ReturnType] 表示一个函数声明如下：
 # def func(arg: Any) -> ReturnType:
 #     pass
 
-# Callable[[str, int], ReturnType] means a function declare like:
+# Callable[[str, int], ReturnType] 表示一个函数声明如下：
 # def func(string: str, times: int) -> ReturnType:
 #     pass
 
-# Callable[..., ReturnType] means a function declare like:
+# Callable[..., ReturnType] 表示一个函数声明如下：
 # def func(*args, **kwargs) -> ReturnType:
 #     pass
 
@@ -1508,46 +1507,44 @@ resp = dict(code=0, message="OK", data=[])
 successed: bool = converter(resp["message"], mapper=is_success, default=False)
 ```
 
-## Python Operators
+## Python 运算符
 
-### Walrus {.col-span-2}
+### 海象运算符 {.col-span-2}
 
 ```python
 values = [1, "text", True, "", 2]
 i = 0
 
-# It assigns a value to a variable and compares it in a boolean expression
+# 它将值赋给变量并在布尔表达式中进行比较
 while (data := values[i]):
 
     print(data, end=",")
     i = i + 1
 
-# Expected result: 1, "text", True
+# 预期结果: 1, "text", True
 ```
 
-## Miscellaneous
+## 其他
 
-### Comments
+### 注释
 
 ```python
-# This is a single line comments.
+# 这是单行注释。
 ```
 
 ```python
-""" Multiline strings can be written
-    using three "s, and are often used
-    as documentation.
+""" 可以使用三个 " 来编写多行字符串，
+    并且通常用作文档。
 """
 ```
 
 ```python
-''' Multiline strings can be written
-    using three 's, and are often used
-    as documentation.
+''' 可以使用三个 ' 来编写多行字符串，
+    并且通常用作文档。
 '''
 ```
 
-### Generators
+### 生成器
 
 ```python
 def double_numbers(iterable):
@@ -1555,9 +1552,9 @@ def double_numbers(iterable):
         yield i + i
 ```
 
-Generators help you make lazy code.
+生成器帮助您编写惰性代码。
 
-### Generator to list
+### 生成器转列表
 
 ```python
 values = (-x for x in [1,2,3,4,5])
@@ -1567,18 +1564,18 @@ gen_to_list = list(values)
 print(gen_to_list)
 ```
 
-### Handle exceptions {.col-span-3}
+### 处理异常 {.col-span-3}
 
 ```python
 try:
-    # Use "raise" to raise an error
+    # 使用 "raise" 抛出错误
     raise IndexError("This is an index error")
 except IndexError as e:
-    pass                 # Pass is just a no-op. Usually you would do recovery here.
+    pass                 # Pass 只是一个空操作。通常你会在这里进行恢复操作。
 except (TypeError, NameError):
-    pass                 # Multiple exceptions can be handled together, if required.
-else:                    # Optional clause to the try/except block. Must follow all except blocks
-    print("All good!")   # Runs only if the code in try raises no exceptions
-finally:                 # Execute under all circumstances
+    pass                 # 如果需要，可以一起处理多个异常。
+else:                    # try/except 块的可选子句。必须在所有 except 块之后
+    print("All good!")   # 仅当 try 中的代码没有引发异常时运行
+finally:                 # 在任何情况下都会执行
     print("We can clean up resources here")
 ```

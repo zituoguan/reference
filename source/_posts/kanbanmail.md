@@ -7,77 +7,77 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 29 keyboard shortcuts found in KanbanMail
+  KanbanMail 中 29 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Global
+### 全局
 
-| Shortcut   | Action            |
+| 快捷键     | 操作            |
 | ---------- | ----------------- |
-| `Ctrl` `\` | Toggle split view |
+| `Ctrl` `\` | 切换拆分视图 |
 
 {.shortcuts}
 
-### Board
+### 看板
 
-| Shortcut   | Action                                       |
+| 快捷键     | 操作                                       |
 | ---------- | -------------------------------------------- |
-| `C`        | Open composer                                |
-| `Ctrl` `N` | New note in the to-do column                 |
-| `/`        | Focus the search bar                         |
-| `Esc`      | Clear search, if it's on                     |
-| `1-5`      | Select the first thread in column \<number\> |
+| `C`        | 打开编辑器                                |
+| `Ctrl` `N` | 在待办事项列中新建笔记                 |
+| `/`        | 聚焦搜索栏                         |
+| `Esc`      | 如果搜索栏已激活，则清除搜索                     |
+| `1-5`      | 选择第 \<数字\> 列中的第一个主题 |
 
 {.shortcuts}
 
-### Email {.row-span-2}
+### 邮件 {.row-span-2}
 
-| Shortcut    | Action                                   |
+| 快捷键      | 操作                                   |
 | ----------- | ---------------------------------------- |
-| `S`         | Star or unstar                           |
-| `I`         | Mark as important or not important       |
-| `U`         | Mark as read or unread                   |
-| `Shift` `P` | Pin                                      |
-| `R`         | Reply                                    |
-| `A`         | Reply all                                |
-| `F`         | Forward                                  |
-| `E`         | Move to archived                         |
-| `1-5`       | Move to column \<number\>                |
-| `Shift` `3` | Move to trash                            |
-| `P`         | Go to the previous message in the thread |
-| `N`         | Go to the next message in the thread     |
-| `Shift` `U` | Unsubscribe                              |
-| `Enter`     | Open selected thread                     |
-| `Esc`       | Close thread viewer, if open             |
-| `Esc`       | Clear selected threads                   |
+| `S`         | 加星或取消加星                           |
+| `I`         | 标记为重要或不重要       |
+| `U`         | 标记为已读或未读                         |
+| `Shift` `P` | 置顶                                      |
+| `R`         | 回复                                    |
+| `A`         | 全部回复                                |
+| `F`         | 转发                                    |
+| `E`         | 移动到已存档                         |
+| `1-5`       | 移动到第 \<数字\> 列                |
+| `Shift` `3` | 移动到回收站                            |
+| `P`         | 转到主题中的上一封邮件 |
+| `N`         | 转到主题中的下一封邮件     |
+| `Shift` `U` | 取消订阅                              |
+| `Enter`     | 打开选定的主题                     |
+| `Esc`       | 如果主题查看器已打开，则关闭             |
+| `Esc`       | 清除选定的主题                   |
 
 {.shortcuts}
 
-### Composer
+### 编辑器
 
-| Shortcut       | Action         |
+| 快捷键       | 操作         |
 | -------------- | -------------- |
-| `Ctrl` `Enter` | Send email     |
-| `Ctrl` `S`     | Save as draft  |
-| `Esc`          | Close composer |
+| `Ctrl` `Enter` | 发送邮件     |
+| `Ctrl` `S`     | 保存为草稿  |
+| `Esc`          | 关闭编辑器 |
 
 {.shortcuts}
 
-### Editor
+### 编辑器
 
-| Shortcut   | Action        |
+| 快捷键     | 操作        |
 | ---------- | ------------- |
-| `Ctrl` `B` | Bold          |
-| `Ctrl` `I` | Italic        |
-| `Ctrl` `U` | Underline     |
-| `Ctrl` `K` | Add hyperlink |
+| `Ctrl` `B` | 粗体          |
+| `Ctrl` `I` | 斜体        |
+| `Ctrl` `U` | 下划线     |
+| `Ctrl` `K` | 添加超链接 |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for KanbanMail](https://guides.kanbanmail.app/keyboard-shortcuts) _(guides.kanbanmail.app)_
+- [KanbanMail 键盘快捷键](https://guides.kanbanmail.app/keyboard-shortcuts) _(guides.kanbanmail.app)_

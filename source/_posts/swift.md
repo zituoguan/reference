@@ -7,20 +7,20 @@ tags:
   - iOS
   - iPadOS
 categories:
-  - Programming
+  - 编程
 intro: |
-  This cheat sheet provides examples of using Swift that cover basic Swift knowledge, control flow etc.
+  本速查表提供了 Swift 使用示例，涵盖了 Swift 基础知识、控制流等。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门
 
-### Variable {.row-span-2}
+### 变量 {.row-span-2}
 
 ```swift
-var score = 0  // Variable
-let pi = 3.14  // Constant
+var score = 0  // 变量
+let pi = 3.14  // 常量
 
 var greeting = "Hello"
 var numberOfToys = 8
@@ -30,10 +30,10 @@ var numberOfToys: Int = 8
 numberOfToys += 1
 
 print(numberOfToys)
-// prints "9"
+// 打印 "9"
 ```
 
-### Type annotations
+### 类型注解
 
 ```swift
 var greeting: String = "Hello"
@@ -42,13 +42,13 @@ var isMorning: Bool = true
 var price: Double = 8.99
 ```
 
-### Arithmetic operators {.row-span-3}
+### 算术运算符 {.row-span-3}
 
-- `+` Add
-- `-` Subtraction
-- `*` Multiplication
-- `/` Division
-- `%` Remainder
+- `+` 加
+- `-` 减
+- `*` 乘
+- `/` 除
+- `%` 余
 
 {.cols-2 .marker-none}
 
@@ -56,64 +56,64 @@ var price: Double = 8.99
 
 ```swift
 var x = 0
-x = 4 + 2 // x is now 6
-x = 4 - 2 // x is now 2
-x = 4 * 2 // x is now 8
-x = 4 / 2 // x is now 2
-x = 4 % 2 // x is now 0
+x = 4 + 2 // x 现在是 6
+x = 4 - 2 // x 现在是 2
+x = 4 * 2 // x 现在是 8
+x = 4 / 2 // x 现在是 2
+x = 4 % 2 // x 现在是 0
 ```
 
 ---
 
-- `+=` Adds and assigns sums
-- `-=` subtract and assign the difference
-- `*=` Multiplication and assignment
-- `/=` Divide and assign quotient
-- `%=` Divide and assign remainder
+- `+=` 加并赋值
+- `-=` 减并赋值
+- `*=` 乘并赋值
+- `/=` 除并赋值
+- `%=` 取余并赋值
 
 {.marker-none}
 
-#### Compound Assignment Operators
+#### 复合赋值运算符
 
 ```swift
 var numberOfDogs = 100
 numberOfDogs += 1
 print("There are \(numberOfDogs) Dalmatians!")
 
-// print: There are 101 Dalmatians!
+// 打印: There are 101 Dalmatians!
 ```
 
-### String interpolation
+### 字符串插值
 
 ```swift
 var apples = 6
 print("I have \(apples) apples!")
 
-// print: I have 6 apples!
+// 打印: I have 6 apples!
 ```
 
-### Multi-line string
+### 多行字符串
 
 ```swift
 let myLongString = """
 Swift?
-This is my favorite language!
-Yeah!
+这是我最喜欢的语言！
+是的！
 """
 ```
 
-### Code Comments
+### 代码注释
 
 ```swift
-// This line represents a comment in Swift.
+// 这行代表 Swift 中的注释。
 
 /*
-This is all commented out.
-None will run!
+这全部都被注释掉了。
+都不会运行！
 */
 ```
 
-### Form a tuple {.col-span-2}
+### 形成元组 {.col-span-2}
 
 ```swift
 let player = ("Maya", 5, 150)
@@ -122,44 +122,44 @@ print(player) // ("Maya", 5, 150)
 print("\(player.0): level \(player.1), \(player.2) pts") // Maya: level 5, 150 pts
 ```
 
-### Decompose tuple
+### 分解元组
 
 ```swift
 let player = (name: "Maya", level: 5)
 let (currentName, curLevel) = player
 print("\(currentName): level \(curLevel)")
-// print: Maya: level 5
+// 打印: Maya: level 5
 ```
 
-### Special comment syntax (MARK)
+### 特殊注释语法 (MARK)
 
 ```swift
-// MARK: -view settings
+// MARK: -视图设置
 ```
 
-`MARK` can be used to display comments in the column
+`MARK` 可用于在列中显示注释
 
-### Special comment syntax (TODO)
+### 特殊注释语法 (TODO)
 
 ```swift
-// TODO: update logic to accommodate data changes
+// TODO: 更新逻辑以适应数据更改
 ```
 
-`TODO` is used to display reminders of things that need to be done
+`TODO` 用于显示需要完成的事项提醒
 
-### Special Comment Syntax (FIXME)
+### 特殊注释语法 (FIXME)
 
 ```swift
-// FIXME: Fix buggy behavior when making changes to existing entries
+// FIXME: 修复对现有条目进行更改时的错误行为
 ```
 
-`FIXME` is used to display reminders about things that need to be fixed
+`FIXME` 用于显示需要修复的事项提醒
 
-## Variable
+## 变量
 
-### Variable declaration
+### 变量声明
 
-Variables are declared with `var`:
+变量使用 `var` 声明：
 
 ```swift
 var greeting = "Hello"
@@ -167,7 +167,7 @@ var numberOfToys = 8
 var isMorning = true
 ```
 
-For clarity, variable declarations can contain type annotations:
+为清晰起见，变量声明可以包含类型注解：
 
 ```swift
 var greeting: String = "Hello"
@@ -175,19 +175,19 @@ var numberOfToys: Int = 8
 var isMorning: Bool = true
 ```
 
-Variables are mutable. Their values be changed:
+变量是可变的。它们的值可以更改：
 
 ```swift
 var numberOfToys: Int = 8
 numberOfToys += 1
 
 print(numberOfToys)
-// print "9"
+// 打印 "9"
 ```
 
-### Constants
+### 常量
 
-Constants are declared with `let`:
+常量使用 `let` 声明：
 
 ```swift
 let greeting = "Hello"
@@ -195,7 +195,7 @@ let numberOfToys = 8
 let isMorning = true
 ```
 
-For clarity, constant declarations can contain type annotations:
+为清晰起见，常量声明可以包含类型注解：
 
 ```swift
 let greeting: String = "Hello"
@@ -203,15 +203,15 @@ let numberOfToys: Int = 8
 let isMorning: Bool = true
 ```
 
-Constants are immutable. Their values be changed:
+常量是不可变的。它们的值不能更改：
 
 ```swift
 let numberOfToys: Int = 8
 numberOfToys += 1
-// Error: numberOfToys is immutable
+// 错误: numberOfToys 是不可变的
 ```
 
-### Computed variables (get and set) {.row-span-3}
+### 计算变量 (get 和 set) {.row-span-3}
 
 ```swift
 import Foundation
@@ -220,7 +220,7 @@ let df = DateFormatter()
 df.dateFormat = "d MMMM yyyy"
 
 guard var birth = df.date(from: "5 June 1999") else {
-    print("Date is not valid")
+    print("日期无效")
     return
 }
 
@@ -233,15 +233,14 @@ var age: Int {
 
 print(age) // 23
 guard let birth2 = df.date(from: "5 June 2002") else {
-    print("Date is not valid")
+    print("日期无效")
     return
 }
 birth = birth2
 print(age) // 20
 ```
 
-In the example below, distanceInFeet has a `getter` and a `setter`. Because of the `setter`, the `getter` requires the
-keyword `get`:
+在下面的示例中，`distanceInFeet` 有一个 `getter` 和一个 `setter`。由于 `setter` 的存在，`getter` 需要关键字 `get`：
 
 ```swift
 var distanceInMeters: Float = 100
@@ -272,103 +271,103 @@ print(distanceInFeet)   // 2624.0
 ```swift
 var distance = 5 {
   willSet {
-    print("The distance will be set")
+    print("距离将被设置")
   }
 }
 
-distance = 10 // print: distance will be set
+distance = 10 // 打印: 距离将被设置
 ```
 
-The new value can be accessed in `willSet`:
+新值可以在 `willSet` 中访问：
 
 ```swift
 var distance = 5 {
   willSet(newDistance) {
-    print("The distance will be set \(newDistance)")
+    print("距离将被设置为 \(newDistance)")
   }
 }
 
-distance = 10 // print: distance will be set to 10
+distance = 10 // 打印: 距离将被设置为 10
 ```
 
-`willSet` can be used to execute some code before setting the variable value
+`willSet` 可用于在设置变量值之前执行一些代码
 
 ### didSet
 
 ```swift
 var distance = 5 {
   didSet {
-    print("The distance is set to \(distance)")
-    print("Its old value is: \(oldValue)")
+    print("距离已设置为 \(distance)")
+    print("它的旧值是: \(oldValue)")
   }
 }
-distance = 10 // print: distance will be set to 10
-              // print: its old value is: 5
+distance = 10 // 打印: 距离已设置为 10
+              // 打印: 它的旧值是: 5
 ```
 
-### willSet and didSet
+### willSet 和 didSet
 
 ```swift
 var distance = 5 {
   willSet(newDistance) {
-    print("The distance will be set to \(newDistance)")
+    print("距离将被设置为 \(newDistance)")
   }
   didSet {
-    print("The distance is set to \(distance)")
-    print("Its old value is: \(oldValue)")
+    print("距离已设置为 \(distance)")
+    print("它的旧值是: \(oldValue)")
   }
 }
 distance = 10
 ```
 
-## Conditions
+## 条件
 
-### if statement
+### if 语句
 
 ```swift
 var halloween = true
 if halloween {
-  print("Trick or treat!")
+  print("不给糖就捣蛋！")
 }
-// print: Trick or treat!
+// 打印: 不给糖就捣蛋！
 if 5 > 3 {
-  print("5 is greater than 3")
+  print("5 大于 3")
 } else {
-  print("5 is not more than 3")
+  print("5 不大于 3")
 }
-// output: "5 is greater than 3"
+// 输出: "5 大于 3"
 ```
 
-### else statement
+### else 语句
 
 ```swift
 var turbulence = false
 
 if turbulence {
-  print("Please sit down.")
+  print("请坐好。")
 } else {
-  print("You are free to move around.")
+  print("您可以自由走动。")
 }
-// print: You are free to move around.
+// 打印: 您可以自由走动。
 ```
 
-### else if statement
+### else if 语句
 
 ```swift
 var weather = "rainy"
 if weather == "sunny" {
-  print("Get some sunscreen")
+  print("涂点防晒霜")
 } else if weather == "rainy" {
-  print("Take an umbrella")
+  print("带把伞")
 } else if weather == "snowing" {
-  print("Put on your snow boots")
+  print("穿上你的雪地靴")
 } else {
-  print("Invalid weather")
+  print("无效的天气")
 }
-// print: take an umbrella
+// 打印: 带把伞
 ```
 
-### Comparison Operators
+### 比较运算符
 
 ```swift
 5 > 1      // true
@@ -379,46 +378,45 @@ if weather == "sunny" {
 "B" != "b" // true
 ```
 
--`<` less than <br> -`>` greater than <br> -`<=` less than or equal to <br> -`>=` greater than or equal to <br> -`==` is
-equal to <br> -`!=` is not equal to
+-`<` 小于 <br> -`>` 大于 <br> -`<=` 小于等于 <br> -`>=` 大于等于 <br> -`==` 等于 <br> -`!=` 不等于
 
-### Range Operators
+### 范围运算符
 
 ```swift
-a...b      // numbers between a and b (including both a and b)
-a..<b      // numbers between a and b (including a but excluding b)
-...b      // numbers till b (including b)
+a...b      // a 和 b 之间的数字 (包括 a 和 b)
+a..<b      // a 和 b 之间的数字 (包括 a 但不包括 b)
+...b      // 直到 b 的数字 (包括 b)
 ```
 
--`a...b` Closed Range <br> -`a..<b` Half-Open Range <br> -`...b` One-Sided Range
+-`a...b` 闭区间 <br> -`a..<b` 半开区间 <br> -`...b` 单边区间
 
-### Ternary conditional operator
+### 三元条件运算符
 
 ```swift
 var driverLicense = true
 
 driverLicense
-    ? print("driver seat") : print("passenger seat")
-// print: driver's seat
+    ? print("驾驶座") : print("乘客座")
+// 打印: 驾驶座
 ```
 
-### switch statement
+### switch 语句
 
 ```swift
 var secondaryColor = "green"
 
 switch secondaryColor {
   case "orange":
-    print("A mixture of red and yellow")
+    print("红色和黄色的混合物")
   case "purple":
-    print("A mix of red and blue")
+    print("红色和蓝色的混合物")
   default:
-    print("This may not be a secondary color")
+    print("这可能不是二次色")
 }
-// print: mix of blue and yellow
+// 打印: 蓝色和黄色的混合物
 ```
 
-### switch statement: interval matching
+### switch 语句：区间匹配
 
 ```swift
 let year = 1905
@@ -426,58 +424,58 @@ var artPeriod: String
 
 switch year {
   case 1860...1885:
-    artPeriod = "Impressionism"
+    artPeriod = "印象派"
   case 1886...1910:
-    artPeriod = "Post-Impressionism"
+    artPeriod = "后印象派"
   default:
-    artPeriod = "Unknown"
+    artPeriod = "未知"
 }
-// print: post-impressionism
+// 打印: 后印象派
 ```
 
-### switch statement: composite case
+### switch 语句：复合情况
 
 ```swift
 let service = "Seamless"
 
 switch service {
 case "Uber", "Lyft":
-    print("travel")
+    print("出行")
   case "DoorDash", "Seamless", "GrubHub":
-    print("Restaurant delivery")
+    print("餐厅外卖")
   case "Instacart", "FreshDirect":
-    print("Grocery Delivery")
+    print("生鲜配送")
   default:
-    print("Unknown service")
+    print("未知服务")
 }
-// print: restaurant takeaway
+// 打印: 餐厅外卖
 ```
 
-### switch statement: where clause
+### switch 语句：where 子句
 
 ```swift
 let num = 7
 
 switch num {
   case let x where x % 2 == 0:
-    print("\(num) is even")
+    print("\(num) 是偶数")
   case let x where x % 2 == 1:
-    print("\(num) odd number")
+    print("\(num) 是奇数")
   default:
-    print("\(num) is invalid")
+    print("\(num) 无效")
 }
 
-// print: 7 odd
+// 打印: 7 是奇数
 ```
 
-### Logical Operators
+### 逻辑运算符
 
 ```swift
 !true  // false
 !false //true
 ```
 
-### Logical Operators &&
+### 逻辑运算符 &&
 
 ```swift
 true && true   // true
@@ -486,7 +484,7 @@ false && true  // false
 false && false // false
 ```
 
-### Logical operators ||
+### 逻辑运算符 ||
 
 ```swift
 true || true   // true
@@ -495,82 +493,80 @@ false || true  // true
 false || false // false
 ```
 
-### Combined Logical Operators
+### 组合逻辑运算符
 
 ```swift
 !false && true || false // true
 ```
 
-`!false && true` first evaluates and returns `true` Then, the expression, `true` || `false` evaluates and returns the
-final result `true`
+`!false && true` 首先计算并返回 `true` 然后，表达式 `true || false` 计算并返回最终结果 `true`
 
 ```swift
 false || true && false // false
 ```
 
-`true && false` first evaluates to return `false` Then, the expression, `false` || `false` evaluates and returns the
-final result `false`
+`true && false` 首先计算并返回 `false` 然后，表达式 `false || false` 计算并返回最终结果 `false`
 
-### Control the order of execution
+### 控制执行顺序
 
 ```swift
 
-// without parentheses:
+// 没有括号:
 true || true && false || false
 //----> true
 
-// with brackets:
+// 有括号:
 (true || true) && (false || false)
 //----> false
 
 ```
 
-### Simple guards
+### 简单卫语句
 
 ```swift
 func greet(name: String?) {
   guard let unwrapped = name else {
-    print("Hello guest!")
+    print("你好，客人！")
     return
   }
-  print("Hello \(unwrapped)!")
+  print("你好 \(unwrapped)！")
 }
-greet(name: "Asma") // output: Hello Asma!
-greet(name: nil)    // output: Hello guest!
+greet(name: "Asma") // 输出: 你好 Asma！
+greet(name: nil)    // 输出: 你好，客人！
 ```
 
-## cycle
+## 循环
 
-### scope
+### 范围
 
 ```swift
 let zeroToThree = 0...3
 //zeroToThree: 0, 1, 2, 3
 ```
 
-### stride() function
+### stride() 函数
 
 ```swift
 for oddNum in stride(from: 1, to: 5, by: 2) {
   print(oddNum)
 }
-// print: 1
-// print: 3
+// 打印: 1
+// 打印: 3
 ```
 
-### for-in loop
+### for-in 循环
 
 ```swift
 for char in "hehe" {
   print(char)
 }
-// print: h
-// print: e
-// print: h
-// print: e
+// 打印: h
+// 打印: e
+// 打印: h
+// 打印: e
 ```
 
-### continue keyword
+### continue 关键字
 
 ```swift
 for num in 0...5 {
@@ -579,14 +575,14 @@ for num in 0...5 {
   }
   print(num)
 }
-// print: 1
-// print: 3
-// print: 5
+// 打印: 1
+// 打印: 3
+// 打印: 5
 ```
 
-The `continue` keyword will force the loop to continue for the next iteration
+`continue` 关键字将强制循环继续下一次迭代
 
-### break keyword
+### break 关键字
 
 ```swift
 for char in "supercalifragilistic" {
@@ -595,25 +591,25 @@ if char == "c" {
   }
   print(char)
 }
-// print: s
-// print: u
-// print: p
-// print: e
-// print: r
+// 打印: s
+// 打印: u
+// 打印: p
+// 打印: e
+// 打印: r
 ```
 
-### Use underscores
+### 使用下划线
 
 ```swift
 for _ in 1...3 {
   print("Ole")
 }
-// print: Ole
-// print: Ole
-// print: Ole
+// 打印: Ole
+// 打印: Ole
+// 打印: Ole
 ```
 
-### while loop
+### while 循环
 
 ```swift
 var counter = 1
@@ -623,66 +619,64 @@ while counter < stopNum {
   print(counter)
   counter += 1
 }
-// loop to print until the stop condition is met
+// 循环打印直到满足停止条件
 ```
 
-A `while` loop accepts a condition and keeps executing its body code while the provided condition is `true`. If the
-condition is never false, the loop will keep running and the program will get stuck in an `infinite loop`
+`while` 循环接受一个条件，并在提供的条件为 `true` 时继续执行其主体代码。如果条件永远不为 false，循环将一直运行，程序将陷入 `无限循环`
 
-## Arrays and collections
+## 数组和集合
 
-### Array
+### 数组
 
 ```swift
 var scores = [Int]()
-// array is empty: []
+// 数组为空: []
 ```
 
-### .count property
+### .count 属性
 
 ```swift
 var grocery = ["🥓", "🥞", "🍪", "🥛", "🍊"]
 print(grocery.count)
-// print: 5
+// 打印: 5
 ```
 
-### index {.row-span-2}
+### 索引 {.row-span-2}
 
-The index refers to the item's position in the ordered list, and a single element is retrieved from the array using the
-subscript syntax `array[index]`.
+索引指的是项目在有序列表中的位置，使用下标语法 `array[index]` 从数组中检索单个元素。
 
 ```swift
 var vowels = ["a", "e", "i", "o", "u"]
 
-print(vowels[0]) // prints: a
-print(vowels[1]) // prints: e
-print(vowels[2]) // print: i
-print(vowels[3]) // prints: o
-print(vowels[4]) // prints: u
+print(vowels[0]) // 打印: a
+print(vowels[1]) // 打印: e
+print(vowels[2]) // 打印: i
+print(vowels[3]) // 打印: o
+print(vowels[4]) // 打印: u
 ```
 
-Note: Swift arrays are zero-indexed, meaning the first element has index 0.
+注意：Swift 数组是零索引的，这意味着第一个元素的索引为 0。
 
-### Initialize with array literal
+### 使用数组字面量初始化
 
 ```swift
-// use type inference:
+// 使用类型推断:
 var snowfall = [2.4, 3.6, 3.4, 1.8, 0.0]
-// explicit type:
+// 显式类型:
 var temp: [Int] = [33, 31, 30, 38, 44]
 ```
 
-### Initialize with default value
+### 使用默认值初始化
 
 ```swift
 var teams = [Int](repeating: 0, count: 3)
-print(teams) // prints: [0, 0, 0]
-// or with Array type
+print(teams) // 打印: [0, 0, 0]
+// 或者使用 Array 类型
 var sizes = Array<Int>(repeating: 0, count: 3)
-print(sizes) // prints: [0, 0, 0]
+print(sizes) // 打印: [0, 0, 0]
 ```
 
-### .append() method and += operator
+### .append() 方法和 += 运算符
 
 ```swift
 var gymBadges = ["Boulder", "Cascade"]
@@ -692,7 +686,7 @@ gymBadges += ["Rainbow", "Soul"]
 // "Rainbow", "Soul"]
 ```
 
-### .insert() and .remove() methods
+### .insert() 和 .remove() 方法
 
 ```swift
 var moon = ["🌖", "🌗", "🌘", "🌑"]
@@ -703,19 +697,19 @@ moon.remove(at: 4)
 // ["🌕", "🌖", "🌗", "🌘"]
 ```
 
-### Iterate over an array
+### 遍历数组
 
 ```swift
 var employees = ["Peter", "Denial", "Jame"]
 for person in employees {
   print(person)
 }
-// print: Peter
-// print: Denial
-// print: Jam
+// 打印: Peter
+// 打印: Denial
+// 打印: Jam
 ```
 
-### Collection (Set)
+### 集合 (Set)
 
 ```swift
 var paintingsInMOMA: Set = [
@@ -725,24 +719,24 @@ var paintingsInMOMA: Set = [
 ]
 ```
 
-We can use a collection (`Set`) to store `unique` elements of the same data type
+我们可以使用集合 (`Set`) 来存储相同数据类型的 `唯一` 元素
 
-### Empty collection (Set)
+### 空集合 (Set)
 
 ```swift
 var team = Set<String>()
 
 print(team)
-// print: []
+// 打印: []
 ```
 
-### Populate the collection
+### 填充集合
 
 ```swift
 var vowels: Set = ["a", "e", "i", "o","u"]
 ```
 
-To create a set filled with values, use the `Set` keyword before the assignment operator.
+要创建一个填充了值的集合，请在赋值运算符之前使用 `Set` 关键字。
 
 ### .insert()
 
@@ -751,18 +745,18 @@ var cookieJar: Set = [
   "Chocolate Chip",
   "Oatmeal Raisin"
 ]
-// add a new element
+// 添加一个新元素
 cookieJar.insert("Peanut Butter Chip")
 ```
 
-### .remove() and .removeAll() methods
+### .remove() 和 .removeAll() 方法
 
 ```swift
 var oddNumbers: Set = [1, 2, 3, 5]
 
-// remove existing element
+// 删除现有元素
 oddNumbers.remove(2)
-// remove all elements
+// 删除所有元素
 oddNumbers.removeAll()
 ```
 
@@ -770,66 +764,66 @@ oddNumbers.removeAll()
 
 ```swift
 var names: Set = ["Rosa", "Doug", "Waldo"]
-print(names.contains("Lola")) // print: false
+print(names.contains("Lola")) // 打印: false
 
 if names.contains("Waldo"){
-  print("There's Waldo!")
+  print("Waldo 在这里！")
 } else {
-  print("Where's Waldo?")
+  print("Waldo 在哪里？")
 }
-// print: There's Waldo!
+// 打印: Waldo 在这里！
 ```
 
-### .isEmpty property
+### .isEmpty 属性
 
 ```swift
 var emptyList = [String]()
-print(emptyList.isEmpty)     // print: true
+print(emptyList.isEmpty)     // 打印: true
 
 var populatedList: [Int] = [1, 2, 3]
-print(populatedList.isEmpty) // print: false
+print(populatedList.isEmpty) // 打印: false
 ```
 
-### Iterate over a collection
+### 遍历集合
 
 ```swift
 var recipe: Set = ["Egg", "Flour", "Sugar"]
 
 for ingredient in recipe {
-  print ("Include \(ingredient) in the recipe")
+  print ("在食谱中加入 \(ingredient)")
 }
 ```
 
-### .isEmpty property
+### .isEmpty 属性
 
 ```swift
 var emptySet = Set<String>()
-print(emptySet.isEmpty)     // print: true
+print(emptySet.isEmpty)     // 打印: true
 
 var populatedSet: Set = [1, 2, 3]
-print(populatedSet.isEmpty) // print: false
+print(populatedSet.isEmpty) // 打印: false
 ```
 
-### .count property
+### .count 属性
 
 ```swift
 var band: Set = ["Peter", "Denial", "Jame"]
 
-print("The band has \(band.count) players.")
-// print: Band has 4 players.
+print("乐队有 \(band.count) 名队员。")
+// 打印: 乐队有 4 名队员。
 ```
 
-### .intersection() Intersection
+### .intersection() 交集
 
 ```swift
 var setA: Set = ["A", "B", "C", "D"]
 var setB: Set = ["C", "D", "E", "F"]
 
 var setC = setA.intersection(setB)
-print(setC) // print: ["D", "C"]
+print(setC) // 打印: ["D", "C"]
 ```
 
-### .union()
+### .union() 并集
 
 ```swift
 var setA: Set = ["A", "B", "C", "D"]
@@ -837,10 +831,10 @@ var setB: Set = ["C", "D", "E", "F"]
 
 var setC = setA.union(setB)
 print(setC)
-// print: ["B", "A", "D", "F", "C", "E"]
+// 打印: ["B", "A", "D", "F", "C", "E"]
 ```
 
-### .symmetricDifference() Symmetric difference
+### .symmetricDifference() 对称差集
 
 ```swift
 var setA: Set = ["A", "B", "C", "D"]
@@ -848,10 +842,10 @@ var setB: Set = ["C", "D", "E", "F"]
 
 var setC = setA.symmetricDifference(setB)
 print(setC)
-// print: ["B", "E", "F", "A"]
+// 打印: ["B", "E", "F", "A"]
 ```
 
-### .subtracting() Subtraction
+### .subtracting() 差集
 
 ```swift
 var setA: Set = ["A", "B", "C", "D"]
@@ -859,12 +853,12 @@ var setB: Set = ["C", "D"]
 
 var setC = setA.subtracting(setB)
 print(setC)
-// print: ["B", "A"]
+// 打印: ["B", "A"]
 ```
 
-## dictionary
+## 字典
 
-### Base Dictionary
+### 基本字典
 
 ```swift
 var dictionaryName = [
@@ -874,9 +868,9 @@ var dictionaryName = [
 ]
 ```
 
-An `unordered` collection of pairs of data or key-value pairs
+一个 `无序` 的数据对或键值对集合
 
-### Keys
+### 键
 
 ```swift
 var fruitStand = [
@@ -886,9 +880,9 @@ var fruitStand = [
 ]
 ```
 
-Each `key` is `unique` even if they all contain the same `value`
+每个 `键` 都是 `唯一` 的，即使它们都包含相同的 `值`
 
-### Type Consistency
+### 类型一致性
 
 ```swift
 var numberOfSides = [
@@ -898,9 +892,9 @@ var numberOfSides = [
 ]
 ```
 
-Contains only `String` keys and `Int` values
+仅包含 `String` 键和 `Int` 值
 
-### Initialize and populate the dictionary
+### 初始化并填充字典
 
 ```swift
 var employeeID = [
@@ -910,28 +904,28 @@ var employeeID = [
 ]
 ```
 
-### Initialize an empty dictionary
+### 初始化空字典
 
 ```swift
-// initializer syntax:
+// 初始化器语法:
 var yearlyFishPopulation = [Int: Int]()
 
-// Empty dictionary literal syntax:
+// 空字典字面量语法:
 var yearlyBirdPopulation: [Int: Int] = [:]
 ```
 
-### add to dictionary
+### 添加到字典
 
 ```swift
 var pronunciation = [
   "library": "lai·breh·ree",
   "apple": "a·pl"
 ]
-// new key: "programming", new value: "prow gra"
+// 新键: "programming", 新值: "prow gra"
 pronunciation["programming"] = "prow·gra"
 ```
 
-### Delete key-value pair {.row-span-2}
+### 删除键值对 {.row-span-2}
 
 ```swift
 var bookShelf = [
@@ -940,17 +934,17 @@ var bookShelf = [
   "Falling Up": "Shel Silverstein",
   "No, David!": "David Shannon"
 ]
-// remove value by setting key to nil
+// 通过将键设置为 nil 来删除值
 bookShelf["The BFG"] = nil
 
-// remove value using .removeValue()
+// 使用 .removeValue() 删除值
 bookShelf.removeValue(forKey: "Goodnight")
 
-// remove all values
+// 删除所有值
 bookShelf.removeAll()
 ```
 
-### Modify the key-value pair {.row-span-2}
+### 修改键值对 {.row-span-2}
 
 ```swift
 var change = [
@@ -959,40 +953,38 @@ var change = [
   "Nickel": 0.05
 ]
 
-// Change the value using subscript syntax
+// 使用下标语法更改值
 change["Quarter"] = .25
 
-// Change the value using .updateValue()
+// 使用 .updateValue() 更改值
 change.updateValue(.10, forKey: "Dime")
 ```
 
-To change the value of a key-value pair, use the `.updateValue()` method or the subscript syntax by appending brackets
-`[ ]` with the existing keys within to the name of the dictionary, then adding the assignment operator _(`= `)_ followed
-by the modified value
+要更改键值对的值，请使用 `.updateValue()` 方法或下标语法，方法是在字典名称后附加方括号 `[ ]` 并在其中包含现有键，然后添加赋值运算符 _(`= `)_ 后跟修改后的值
 
-### .isEmpty property
+### .isEmpty 属性
 
 ```swift
 var bakery = [String:Int]()
 
-// check if the dictionary is empty
-print(bakery.isEmpty) // prints true
+// 检查字典是否为空
+print(bakery.isEmpty) // 打印 true
 bakery["Cupcakes"] = 12
-// check if the dictionary is empty
-print(bakery.isEmpty) // print false
+// 检查字典是否为空
+print(bakery.isEmpty) // 打印 false
 ```
 
-### .count property
+### .count 属性
 
 ```swift
 var fruitStand = [
   "Apples": 12,
-  "Oranges", 17
+  "Oranges": 17 // 注意：这里原文可能有误，应该是 "Oranges": 17
 ]
-print(fruitStand.count) // print: 2
+print(fruitStand.count) // 打印: 2
 ```
 
-### Assigning values to variables
+### 将值赋给变量
 
 ```swift
 var hex = [
@@ -1001,65 +993,64 @@ var hex = [
   "blue": "#0000ff",
 ]
 
-print("Blue hexadecimal code \(hex["blue"])")
-// print: blue hex code Optional("#0000ff")
+print("蓝色十六进制代码 \(hex["blue"])")
+// 打印: 蓝色十六进制代码 Optional("#0000ff")
 
 if let redHex = hex["red"] {
-  print("red hexadecimal code \(redHex)")
+  print("红色十六进制代码 \(redHex)")
 }
-// print: red hex code #ff0000
+// 打印: 红色十六进制代码 #ff0000
 ```
 
-Assigning the value of a key-value pair to a variable will return an optional value. To extract values, use the optional
-expansion
+将键值对的值赋给变量将返回一个可选值。要提取值，请使用可选展开
 
-### Traversing the dictionary
+### 遍历字典
 
 ```swift
 var emojiMeaning = [
-  "🤔": "Thinking Face",
-  "😪": "Sleepy Face",
-  "😵": "Dizzy Face"
+  "🤔": "思考脸",
+  "😪": "困倦脸",
+  "😵": "眩晕脸"
 ]
-// loop through keys and values
+// 遍历键和值
 for (emoji, meaning) in emojiMeaning {
-  print("\(emoji) is called '\(meaning)Emoji'")
+  print("\(emoji) 被称为 '\(meaning)Emoji'")
 }
-// iterate through keys only
+// 仅遍历键
 for emoji in emojiMeaning.keys {
   print(emoji)
 }
-// iterate through values only
+// 仅遍历值
 for meaning in emojiMeaning.values {
   print(meaning)
 }
 ```
 
-## function
+## 函数
 
-### Basic functions
+### 基本函数
 
 ```swift
 func washCar() -> Void {
-  print("Soap")
-  print("Scrub")
-  print("Rinse")
-  print("Dry")
+  print("肥皂")
+  print("擦洗")
+  print("冲洗")
+  print("擦干")
 }
 ```
 
-### Call functions
+### 调用函数
 
 ```swift
 func greetLearner() {
- print("Welcome to CheatSheets.zip!")
+ print("欢迎来到 r3f.cn！")
 }
-// function call:
+// 函数调用:
 greetLearner()
-// print: Welcome to CheatSheets.zip!
+// 打印: 欢迎来到 r3f.cn！
 ```
 
-### return value
+### 返回值
 
 ```swift
 let birthYear = 1994
@@ -1069,10 +1060,10 @@ func findAge() -> Int {
   return currentYear-birthYear
 }
 
-print(findAge()) // prints: 26
+print(findAge()) // 打印: 26
 ```
 
-### Multiple parameters {.col-span-2}
+### 多个参数 {.col-span-2}
 
 ```swift
 func convertFracToDec(numerator: Double, denominator: Double) -> Double {
@@ -1080,20 +1071,20 @@ func convertFracToDec(numerator: Double, denominator: Double) -> Double {
 }
 
 let decimal = convertFracToDec(numerator: 1.0, denominator: 2.0)
-print(decimal) // prints: 0.5
+print(decimal) // 打印: 0.5
 ```
 
-### Omit parameter labels
+### 省略参数标签
 
 ```swift
 func findDiff(_ a: Int, b: Int) -> Int {
   return a -b
 }
 
-print(findDiff(6, b: 4)) // prints: 2
+print(findDiff(6, b: 4)) // 打印: 2
 ```
 
-### return multiple values {.col-span-2}
+### 返回多个值 {.col-span-2}
 
 ```swift
 func smartphoneModel() -> (name: String, version: String, yearReleased: Int) {
@@ -1101,12 +1092,12 @@ func smartphoneModel() -> (name: String, version: String, yearReleased: Int) {
 }
 let phone = smartphoneModel()
 
-print(phone.name)         // print: iPhone
-print(phone.version)      // print: 8 Plus
-print(phone.yearReleased) // print: 2017
+print(phone.name)         // 打印: iPhone
+print(phone.version)      // 打印: 8 Plus
+print(phone.yearReleased) // 打印: 2017
 ```
 
-### Parameters & Arguments
+### 参数和实际参数
 
 ```swift
 func findSquarePerimet(side: Int) -> Int {
@@ -1114,58 +1105,58 @@ func findSquarePerimet(side: Int) -> Int {
 }
 
 let perimeter = findSquarePerimet(side: 5)
-print(perimeter) // print: 20
+print(perimeter) // 打印: 20
 
-// Parameter: side
-// Argument: 5
+// 参数: side
+// 实际参数: 5
 ```
 
-### Implicit return
+### 隐式返回
 
 ```swift
 func nextTotalSolarEclipse() -> String {
-  "April 8th, 2024 🌎"
+  "2024年4月8日 🌎"
 }
 
 print(nextTotalSolarEclipse())
-// print: April 8th, 2024 🌎
+// 打印: 2024年4月8日 🌎
 ```
 
-### Default parameters
+### 默认参数
 
 ```swift
-func greet(person: String = "guest") {
-  print("Hello \(person)")
+func greet(person: String = "客人") {
+  print("你好 \(person)")
 }
-greet() // Hello guest
-greet(person: "Aliya") // Hello Aliya
+greet() // 你好 客人
+greet(person: "Aliya") // 你好 Aliya
 ```
 
-### Input and output parameters {.row-span-2}
+### 输入输出参数 {.row-span-2}
 
 ```swift
-var currentSeason = "Winter"
+var currentSeason = "冬天"
 
 func season(month: Int, name: inout String) {
   switch month {
     case 1...2:
-      name = "Winter ⛄️"
+      name = "冬天 ⛄️"
     case 3...6:
-      name = "Spring 🌱"
+      name = "春天 🌱"
     case 7...9:
-      name = "Summer ⛱"
+      name = "夏天 ⛱"
     case 10...11:
-      name = "Autumn 🍂"
+      name = "秋天 🍂"
     default:
-      name = "Unknown"
+      name = "未知"
   }
 }
 season(month: 4, name: &currentSeason)
 
-print(currentSeason) // Spring 🌱
+print(currentSeason) // 春天 🌱
 ```
 
-### variable parameter
+### 可变参数
 
 ```swift
 func totalStudent(data: String...) -> Int {
@@ -1174,10 +1165,10 @@ func totalStudent(data: String...) -> Int {
 }
 
 print(totalStudent(data: "Denial", "Peter"))
-// print: 2
+// 打印: 2
 ```
 
-### Optional parameters
+### 可选参数
 
 ```swift
 func getFirstInitial(from name: String?) -> String? {
@@ -1185,12 +1176,11 @@ func getFirstInitial(from name: String?) -> String? {
 }
 ```
 
-Functions can accept optional types and return optional types. When a function cannot return a reasonable instance of
-the requested type, it should return `nil`
+函数可以接受可选类型并返回可选类型。当函数无法返回所请求类型的合理实例时，它应该返回 `nil`
 
-## structure
+## 结构体
 
-### Structure Creation
+### 结构体创建
 
 ```swift
 struct Building {
@@ -1203,10 +1193,9 @@ struct Building {
 }
 ```
 
-Structs or structs are used to programmatically represent real-life objects in code. A structure is created using the
-`struct` keyword, followed by its name, followed by a body containing its properties and methods
+结构体或 structs 用于在代码中以编程方式表示现实生活中的对象。结构体使用 `struct` 关键字创建，后跟其名称，然后是包含其属性和方法的主体
 
-### Default property values
+### 默认属性值
 
 ```swift
 struct Car {
@@ -1216,11 +1205,11 @@ struct Car {
 
 var reliantRobin = Car(numOfWheels: 3)
 
-print(reliantRobin.numOfWheels) // prints: 3
-print(reliantRobin.topSpeed)    // print: 80
+print(reliantRobin.numOfWheels) // 打印: 3
+print(reliantRobin.topSpeed)    // 打印: 80
 ```
 
-### Structural instance creation
+### 结构体实例创建
 
 ```swift
 struct Person {
@@ -1233,11 +1222,11 @@ struct Person {
   }
 }
 
-// Person instance:
+// Person 实例:
 var morty = Person(name: "Peter", age: 14)
 ```
 
-### init() method {.row-span-2}
+### init() 方法 {.row-span-2}
 
 ```swift
 struct TV {
@@ -1251,54 +1240,54 @@ struct TV {
 }
 ```
 
-Using the `TV` class
+使用 `TV` 类
 
 ```swift
 var newTV = TV(size: 65, type: "LED")
 ```
 
-### Check type
+### 检查类型
 
 ```swift
-print(type(of: "abc")) // print: String
-print(type(of: 123))   // print: 123
+print(type(of: "abc")) // 打印: String
+print(type(of: 123))   // 打印: Int (原文为 123，应为 Int)
 ```
 
-### Mutation method (mutating) {.row-span-2}
+### 异变方法 (mutating) {.row-span-2}
 
 ```swift
 struct Menu {
-  var menuItems = ["Fries", "Burgers"]
+  var menuItems = ["薯条", "汉堡"]
   mutating func addToMenu(dish: String) {
     self.menuItems.append(dish)
   }
 }
 ```
 
-Using the `Menu` class
+使用 `Menu` 类
 
 ```swift
 var dinerMenu = Menu()
-dinerMenu.addToMenu(dish: "Toast")
+dinerMenu.addToMenu(dish: "吐司")
 print(dinerMenu.menuItems)
-// prints: ["Fries", "Burgers", "Toast"]
+// 打印: ["薯条", "汉堡", "吐司"]
 ```
 
-### Structural methods
+### 结构体方法
 
 ```swift
 struct Dog {
   func bark() {
-    print("Woof")
+    print("汪")
   }
 }
 let fido = Dog()
-fido.bark() // prints: Woof
+fido.bark() // 打印: 汪
 ```
 
-## class
+## 类
 
-### reference type (class) {.row-span-2}
+### 引用类型 (class) {.row-span-2}
 
 ```swift
 class Player {
@@ -1317,7 +1306,7 @@ print(player1.name) // Isabella
 print(player2.name) // Isabella
 ```
 
-### instance of the class
+### 类的实例
 
 ```swift
 class Person {
@@ -1326,10 +1315,10 @@ class Person {
 }
 
 var sonny = Person()
-// sonny is now an instance of Person
+// sonny 现在是 Person 的一个实例
 ```
 
-### init() method {.row-span-2}
+### init() 方法 {.row-span-2}
 
 ```swift
 class Fruit {
@@ -1342,18 +1331,25 @@ class Fruit {
 }
 ```
 
-Using the Fruit class
+使用 Fruit 类
 
 ```swift
 let apple = Fruit(color: "red")
 ```
 
-A class can be initialized using the `init()` method and the corresponding initialization properties. In the `init()`
-method, the `self` keyword is used to refer to the actual instance of the class assigning property values
+可以使用 `init()` 方法和相应的初始化属性来初始化类。在 `init()` 方法中，`self` 关键字用于引用类的实际实例并分配属性值
 
-### Class Attributes
+### 类属性
 
 ```swift
+// 假设 Student 类已定义
+class Student {
+    var name: String = ""
+    var year: Int = 0
+    var gpa: Double = 0.0
+    var honors: Bool = false
+}
+
 var ferris = Student()
 
 ferris.name = "Ferris Bueller"
@@ -1362,9 +1358,9 @@ ferris.gpa = 3.81
 ferris.honors = false
 ```
 
-### Inherit {.row-span-2}
+### 继承 {.row-span-2}
 
-Suppose we have a BankAccount class:
+假设我们有一个 BankAccount 类：
 
 ```swift
 class BankAccount {
@@ -1378,7 +1374,7 @@ class BankAccount {
 }
 ```
 
-`SavingsAccount` extends `BankAccount` class
+`SavingsAccount` 继承 `BankAccount` 类
 
 ```swift
 class SavingsAccount: BankAccount {
@@ -1391,12 +1387,11 @@ class SavingsAccount: BankAccount {
 }
 ```
 
-The new `SavingsAccount` class (subclass) automatically gets all the characteristics of the `BankAccount` class
-(superclass). Additionally, the `SavingsAccount` class defines an `.interest` property and an `.addInterest()` method.
+新的 `SavingsAccount` 类（子类）自动获得 `BankAccount` 类（超类）的所有特性。此外，`SavingsAccount` 类定义了一个 `.interest` 属性和一个 `.addInterest()` 方法。
 
-### Example
+### 示例
 
-use data type
+使用数据类型
 
 ```swift
 class Student {
@@ -1404,10 +1399,17 @@ class Student {
   var year: Int
   var gpa: Double
   var honors: Bool
+  // 需要初始化器
+  init(name: String, year: Int, gpa: Double, honors: Bool) {
+      self.name = name
+      self.year = year
+      self.gpa = gpa
+      self.honors = honors
+  }
 }
 ```
 
-Use default property values
+使用默认属性值
 
 ```swift
 class Student {
@@ -1417,7 +1419,7 @@ class Student {
 }
 ```
 
-### This is an example of a struct definition and a class definition
+### 这是一个结构体定义和类定义的示例
 
 ```swift
 struct Resolution {
@@ -1432,17 +1434,16 @@ class VideoMode {
 }
 ```
 
-The `Resolution` structure definition and the `VideoMode` class definition only describe the appearance of `Resolution`
-or `VideoMode`, create an instance of the structure or class:
+`Resolution` 结构体定义和 `VideoMode` 类定义仅描述 `Resolution` 或 `VideoMode` 的外观，创建结构体或类的实例：
 
 ```swift
 let resolution = Resolution(width: 1920)
 let someVideoMode = VideoMode()
 ```
 
-## Enumerate
+## 枚举
 
-### Define the enumeration
+### 定义枚举
 
 ```swift
 enum Day {
@@ -1458,7 +1459,7 @@ enum Day {
 let casualWorkday: Day = .friday
 ```
 
-### Switch statement
+### Switch 语句
 
 ```swift
 enum Dessert {
@@ -1470,11 +1471,12 @@ enum Dessert {
 let customerOrder: Dessert = .cake(flavor: "Red Velvet")
 switch customerOrder {
   case let .cake(flavor):
-    print("You ordered a \(flavor) cake")
+    print("你点了一份 \(flavor) 蛋糕")
   case .brownie:
-    print("You ordered a chocolate cake")
+    print("你点了一份巧克力蛋糕") // 原文为 chocolate cake，但 case 是 brownie
+  // 应该补充 default 或其他 case
 }
-// prints: "You ordered a red velvet cake"
+// 打印: "你点了一份 red velvet 蛋糕"
 ```
 
 ### CaseIterable
@@ -1484,7 +1486,7 @@ enum Season: CaseIterable {
   case winter
   case spring
   case summer
-  case falls
+  case falls // 通常是 fall 或 autumn
 }
 
 for season in Season.allCases {
@@ -1492,21 +1494,20 @@ for season in Season.allCases {
 }
 ```
 
-Add conformance to the `CaseIterable` protocol to access the `allCases` property, which returns an array of all cases of
-the enumeration
+添加对 `CaseIterable` 协议的一致性以访问 `allCases` 属性，该属性返回枚举所有情况的数组
 
-### Original value
+### 原始值
 
 ```swift
 enum Beatle: String {
-  case john paul george ringo
+  case john, paul, george, ringo // 原文格式有误，应为逗号分隔或单独 case
 }
 
-print("The Beatles are \(Beatle.john.rawValue).")
-// print: The Beatles are john.
+print("披头士乐队是 \(Beatle.john.rawValue).")
+// 打印: 披头士乐队是 john.
 ```
 
-### Related values
+###关联值
 
 ```swift
 enum Dessert {
@@ -1518,7 +1519,7 @@ enum Dessert {
 let order: Dessert = .cake(flavor: "Red Velvet")
 ```
 
-### instance method {.row-span-2}
+### 实例方法 {.row-span-2}
 
 ```swift
 enum Traffic {
@@ -1533,27 +1534,26 @@ enum Traffic {
 var currentTraffic: Traffic = .light
 
 currentTraffic.reportAccident()
-// currentTraffic is now .heavy
+// currentTraffic 现在是 .heavy
 ```
 
-Just like classes and structs, enumerations can have instance methods. If an instance method mutates the value of the
-enum, it needs to be marked `mutating`
+就像类和结构体一样，枚举可以有实例方法。如果实例方法改变了枚举的值，则需要标记为 `mutating`
 
-### Initialize from primitive value
+### 从原始值初始化
 
 ```swift
 enum Hello: String {
   case english = "Hello"
-  case japanese = "Hello!"
+  case japanese = "こんにちは" // 原文为 "Hello!"，应为日文
   case emoji = "👋"
 }
-let hello1 = Hello(rawValue: "Hello!")
+let hello1 = Hello(rawValue: "こんにちは")
 let hello2 = Hello(rawValue: "Привет")
 print(hello1) // Optional(Hello.japanese)
 print(hello2) // nil
 ```
 
-### Computed properties
+### 计算属性
 
 ```swift
 enum ShirtSize: String {
@@ -1562,30 +1562,30 @@ enum ShirtSize: String {
   case large = "L"
   case extraLarge = "XL"
   var description: String {
-    return "The size of this shirt is \(self.rawValue)"
+    return "这件衬衫的尺码是 \(self.rawValue)"
   }
 }
 ```
 
-## Extensions
+## 扩展
 
-### What are extensions?
+### 什么是扩展？
 
-Extensions is a way to add new add new functionality to existing classes, structures, enumerations, or protocol types. This includes adding new methods, properties, initializers, and more.
+扩展是一种向现有类、结构体、枚举或协议类型添加新功能的方法。这包括添加新方法、属性、初始化器等。
 
-### Why use extensions?
+### 为什么使用扩展？
 
-Extensions are particularly useful for organizing and modularizing our code without needing to modify the original type, especially when we don't have access to the original source code.
+扩展对于组织和模块化我们的代码特别有用，而无需修改原始类型，尤其是在我们无法访问原始源代码时。
 
-### Extension syntax
+### 扩展语法
 
 ```swift
 extension SomeType {
-    // New functionalities to be added
+    // 要添加的新功能
 }
 ```
 
-### Computed properties
+### 计算属性
 
 ```swift
 extension Int {
@@ -1594,11 +1594,11 @@ extension Int {
     }
 }
 
-print(4.isEven) // Outputs: true
-print(7.isEven) // Outputs: false
+print(4.isEven) // 输出: true
+print(7.isEven) // 输出: false
 ```
 
-### Methods
+### 方法
 
 ```swift
 extension String {
@@ -1607,10 +1607,10 @@ extension String {
     }
 }
 
-print("abc".reverse()) // Output: cba
+print("abc".reverse()) // 输出: cba
 ```
 
-### Mutating methods
+### 异变方法
 
 ```swift
 extension Int {
@@ -1621,10 +1621,10 @@ extension Int {
 
 var number = 5
 number.square()
-print(number) // Output: 25
+print(number) // 输出: 25
 ```
 
-### Initializers
+### 初始化器
 
 ```swift
 extension Date {
@@ -1633,13 +1633,13 @@ extension Date {
     }
 }
 
-let timestamp = 1693982400.0 // Unix timestamp for 2023-09-06 06:40:00
+let timestamp = 1693982400.0 // 2023-09-06 06:40:00 的 Unix 时间戳
 if let date = Date(timestamp: timestamp) {
-    print(date) // Output: 2023-09-06 06:40:00 +0000
+    print(date) // 输出: 2023-09-06 06:40:00 +0000
 }
 ```
 
-### Subscripts
+### 下标
 
 ```swift
 extension String {
@@ -1648,38 +1648,38 @@ extension String {
     }
 }
 
-print("Swift"[0]) // Output: S
-print("Swift"[1]) // Output: w
-print("Swift"[2]) // Output: i
-print("Swift"[3]) // Output: f
-print("Swift"[4]) // Output: t
+print("Swift"[0]) // 输出: S
+print("Swift"[1]) // 输出: w
+print("Swift"[2]) // 输出: i
+print("Swift"[3]) // 输出: f
+print("Swift"[4]) // 输出: t
 ```
 
-### Protocol extensions {.row-span-2}
+### 协议扩展 {.row-span-2}
 
-It works pretty much like abstract classes when regarding a functionality we want to be available in all the classes that implements some protocol (without having to inherit from a base common class).
+当涉及到我们希望在实现某个协议的所有类中都可用的功能时（无需从公共基类继承），它的工作方式非常类似于抽象类。
 
 ```swift
-// Define a protocol
+// 定义一个协议
 protocol Describable {
     func describe() -> String
 }
 
-// Provide a default implementation using a protocol extension
+// 使用协议扩展提供默认实现
 extension Describable {
     func describe() -> String {
-        "This is a generic description"
+        "这是一个通用描述"
     }
 }
 
-// Define a struct that conforms Describable protocol
+// 定义一个遵循 Describable 协议的结构体
 struct Person: Describable {
     var name: String
     var age: Int
 
-    // Overriding the default implementation
+    // 覆盖默认实现
     func describe() -> String {
-        "My name is \(name) and I am \(age) years old."
+        "我的名字是 \(name)，我 \(age) 岁了。"
     }
 }
 
@@ -1687,21 +1687,21 @@ struct Employee: Describable {
     var name: String
     var age: Int
 
-    // Using the default implementation
+    // 使用默认实现
 }
 
-// By just implementing the protocol the describe() method is available
+// 只需实现协议，describe() 方法就可用了
 
 let person = Person(name: "Ivan", age: 21)
 let employee = Employee(name: "Saul", age: 25)
 
-print(person.describe()) // Output: My name is Ivan and I am 21 years old.
-print(employee.describe()) // Output: This is a generic description
+print(person.describe()) // 输出: 我的名字是 Ivan，我 21 岁了。
+print(employee.describe()) // 输出: 这是一个通用描述
 ```
 
-### Constraints for extensions
+### 扩展的约束
 
-This is especially useful when we want to add functionality to a type that conforms to a specific protocol or has certain conditions.
+当我们想要向符合特定协议或具有某些条件的类型添加功能时，这尤其有用。
 
 ```swift
 extension Array where Element: Numeric {
@@ -1711,19 +1711,19 @@ extension Array where Element: Numeric {
 }
 
 let numbers = [1, 2, 3, 4, 5]
-print(numbers.sum()) // Output: 15
+print(numbers.sum()) // 输出: 15
 
 let doubles = [1.5, 2.5, 3.5]
-print(doubles.sum()) // Output: 7.5
+print(doubles.sum()) // 输出: 7.5
 
-// This will not work because String is not Numeric
+// 这不起作用，因为 String 不是 Numeric
 // let strings = ["a", "b", "c"]
-// print(strings.sum()) // Error: Cannot invoke 'sum' with an array of strings
+// print(strings.sum()) // 错误：字符串数组无法调用 'sum'
 ```
 
-### Organizing code with extensions
+### 使用扩展组织代码
 
-Extensions are not limited to adding functionality; they are also handy for code organization. We can group related methods, properties or views in separate extensions.
+扩展不仅限于添加功能；它们对于代码组织也很有用。我们可以在单独的扩展中对相关的方法、属性或视图进行分组。
 
 ```swift
 import SwiftUI
@@ -1732,14 +1732,14 @@ struct HomeView: View {
     var body: some View {
         ScrollView {
             header
-            // Add other views
+            // 添加其他视图
         }
     }
 }
 
 extension HomeView {
     private var header: some View {
-        Text("Header ...")
+        Text("页眉 ...")
     }
 }
 
@@ -1748,17 +1748,17 @@ extension HomeView {
 }
 ```
 
-## Generics
+## 泛型
 
-### What are generics?
+### 什么是泛型？
 
-Generics in Swift are a feature that allows us to create functions, classes, structures, and protocols that can work with any data type.
+Swift 中的泛型是一项功能，允许我们创建可以与任何数据类型一起工作的函数、类、结构体和协议。
 
-### Why use generics?
+### 为什么使用泛型？
 
-Generics enable us to write clear and concise code that works with any data type. By using placeholders (like `T`), this reduces the risk of introducing bugs.
+泛型使我们能够编写清晰简洁的代码，该代码可与任何数据类型一起工作。通过使用占位符（如 `T`），这降低了引入错误的风险。
 
-### Type parameters {.row-span-2}
+### 类型参数 {.row-span-2}
 
 ```swift
 func foo<T, U>(a: T, b: U) {
@@ -1771,9 +1771,9 @@ struct Foo<T, U> {
 }
 ```
 
-The placeholders `T` is an example of a type parameter, are written inside angle brackets(such as `<T>`).
+占位符 `T` 是类型参数的一个示例，写在尖括号内（例如 `<T>`）。
 
-### Generic Data Structures
+### 泛型数据结构
 
 ```swift
 struct Box<T> {
@@ -1782,11 +1782,11 @@ struct Box<T> {
 let intBox = Box(value: 10)
 let stringBox = Box(value: "Hello")
 
-print(intBox.value) // Output: 10
-print(stringBox.value) // Output: "Hello"
+print(intBox.value) // 输出: 10
+print(stringBox.value) // 输出: "Hello"
 ```
 
-### Generic Functions {.row-span-2}
+### 泛型函数 {.row-span-2}
 
 ```swift
 func swapValues<T>(_ a: inout T, _ b: inout T) {
@@ -1798,31 +1798,31 @@ func swapValues<T>(_ a: inout T, _ b: inout T) {
 var a = 10
 var b = 20
 swapValues(&a, &b)
-print(a) // Output: 20
-print(b) // Output: 10
+print(a) // 输出: 20
+print(b) // 输出: 10
 
 var c = "Hello"
 var d = "World"
 swapValues(&c, &d)
-print(c) // Output: "World"
-print(d) // Output: "Hello"
+print(c) // 输出: "World"
+print(d) // 输出: "Hello"
 ```
 
-### Constraints on Generics
+### 泛型约束
 
 ```swift
 func sum<T: Numeric>(_ array: [T]) -> T {
     array.reduce(0, +)
 }
 
-print(sum([1, 1.5, 2])) // Output: 4.5
+print(sum([1, 1.5, 2])) // 输出: 4.5
 
-// This will not work because String is not Numeric
+// 这不起作用，因为 String 不是 Numeric
 // print(sum(["a", "b", "c"]))
-// Error: function 'sum' requires that 'String' conform to 'Numeric'
+// 错误：函数 'sum' 要求 'String' 符合 'Numeric'
 ```
 
-### Associated Types
+### 关联类型
 
 ```swift
 protocol Foo {
@@ -1831,9 +1831,9 @@ protocol Foo {
 }
 ```
 
-Associated types are used in protocols to define a placeholder for a type that will be specified later. They act as a generic placeholder. The exact type isn't defined in the protocol itself; instead, it's determined when a class, struct, or enum conforms to the protocol.
+关联类型用于协议中，以定义稍后将指定的类型的占位符。它们充当泛型占位符。确切的类型未在协议本身中定义；相反，它是在类、结构体或枚举符合协议时确定的。
 
-### Generic Protocols {.row-span-2}
+### 泛型协议 {.row-span-2}
 
 ```swift
 protocol Storage {
@@ -1856,21 +1856,21 @@ class SimpleStorage<T>: Storage {
 
 let intStorage = SimpleStorage<Int>()
 intStorage.store(item: 42)
-print(intStorage.retrieve() ?? "Empty")  // Output: 42
+print(intStorage.retrieve() ?? "Empty")  // 输出: 42
 ```
 
-### Generic Typealiases
+### 泛型类型别名
 
-Generic typealiases allow us to create a new name for an existing type (i.e., they would not introduce a new type).
+泛型类型别名允许我们为现有类型创建一个新名称（即，它们不会引入新类型）。
 
 ```swift
 typealias StringDictionary<T> = [String: T]
-typealias IntFunction<T> = (Int) -> Int
+typealias IntFunction<T> = (Int) -> Int // 这里的 T 似乎未使用，应为 (T) -> T 或 (Int) -> T
 typealias Vector<T> = (T, T, T)
 ```
 
-## Also See
+## 另请参阅
 
-- [Swift Documentation (Official)](https://www.swift.org/documentation/) _(swift.or)_
-- [Swift Programming Language (Official)](https://docs.swift.org/swift-book/) _(swift.or)_
-- [One-Stop Quick Reference for Swift Developers](https://swiftly.dev/) _(swiftly.dev)_
+- [Swift 文档 (官方)](https://www.swift.org/documentation/) _(swift.or)_
+- [Swift 编程语言 (官方)](https://docs.swift.org/swift-book/) _(swift.or)_
+- [Swift 开发者一站式快速参考](https://swiftly.dev/) _(swiftly.dev)_

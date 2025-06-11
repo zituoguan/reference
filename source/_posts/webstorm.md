@@ -5,203 +5,203 @@ background: bg-gradient-to-r from-emerald-300 to-blue-400 hover:from-emerald-400
 tags:
   - jetbrains
   - web
-  - shortcut
+  - 快捷键
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  This quick reference cheat sheet lists the default keyboard shortcuts for WebStorm running on Windows/Linux or Mac
+  本快速参考备忘单列出了在 Windows/Linux 或 Mac 上运行的 WebStorm 的默认键盘快捷键。
 ---
 
-## Webstorm Windows & Linux Keymap
+## Webstorm Windows 和 Linux 键盘映射
 
-### Editing {.row-span-5}
+### 编辑 {.row-span-5}
 
-| shortcut             | description                                     |
+| 快捷键               | 描述                                            |
 | -------------------- | ----------------------------------------------- |
-| `Ctrl` `Space`       | Basic code completion                           |
-| `Alt` `Enter`        | Show intention actions, quick fixes             |
-| `Ctrl` `P`           | Parameter info                                  |
-| `Ctrl` `Q`           | Quick documentation lookup                      |
-| `Ctrl` `mouse over`  | Brief Info                                      |
-| `Ctrl` `F1`          | Error or warning at caret                       |
-| `Alt` `Insert`       | Generate code...                                |
-| `Ctrl` `Alt` `T`     | Surround with...                                |
-| `Ctrl` `J`           | Insert Live template                            |
-| `Ctrl` `/`           | Comment/uncomment with line                     |
-| `Ctrl` `Shift` `/`   | Comment/uncomment with block                    |
-| `Ctrl` `W`           | Select successively increasing code blocks      |
-| `Ctrl` `Shift` `W`   | Decrease current selection to previous state    |
-| `Alt+Q`              | Context Info                                    |
-| `Ctrl` `Alt` `L`     | Reformat code                                   |
-| `Ctrl` `Alt` `I`     | Auto-indent line(s)                             |
-| `Tab`                | Indent selected lines                           |
-| `Shift` `Tab`        | Unindent selected lines                         |
-| `Ctrl` `Shift` `V`   | Paste from recent buffers...                    |
-| `Ctrl` `D`           | Duplicate current line or selected block        |
-| `Ctrl` `Y`           | Delete line at caret                            |
-| `Alt` `Shift` `Up`   | Move line up                                    |
-| `Alt` `Shift` `Down` | Move line down                                  |
-| `Ctrl` `Shift` `J`   | Join lines                                      |
-| `Ctrl` `Enter`       | Split lines                                     |
-| `Shift` `Enter`      | Start new line                                  |
-| `Ctrl` `Shift` `U`   | Toggle case for word at caret or selected block |
-| `Ctrl` `Shift` `]`   | Select till code block end                      |
-| `Ctrl` `Shift` `[`   | Select till code block start                    |
-| `Ctrl` `Delete`      | Delete to word end                              |
-| `Ctrl` `Backspace`   | Delete to word start                            |
-| `Ctrl` `+`           | Expand code block                               |
-| `Ctrl` `-`           | Collapse code block                             |
-| `Ctrl` `Shift` `+`   | Expand all                                      |
-| `Ctrl` `Shift` `-`   | Collapse all                                    |
-| `Ctrl` `F4`          | Close active editor tab                         |
+| `Ctrl` `Space`       | 基本代码补全                                    |
+| `Alt` `Enter`        | 显示意图操作和快速修复                          |
+| `Ctrl` `P`           | 参数信息                                        |
+| `Ctrl` `Q`           | 快速文档查询                                    |
+| `Ctrl` `mouse over`  | 简要信息                                        |
+| `Ctrl` `F1`          | 光标处错误或警告                                |
+| `Alt` `Insert`       | 生成代码...                                     |
+| `Ctrl` `Alt` `T`     | 包围...                                         |
+| `Ctrl` `J`           | 插入实时模板                                    |
+| `Ctrl` `/`           | 行注释/取消注释                                 |
+| `Ctrl` `Shift` `/`   | 块注释/取消注释                                 |
+| `Ctrl` `W`           | 连续选中递增的代码块                            |
+| `Ctrl` `Shift` `W`   | 将当前选中范围缩小到先前状态                    |
+| `Alt+Q`              | 上下文信息                                      |
+| `Ctrl` `Alt` `L`     | 重新格式化代码                                  |
+| `Ctrl` `Alt` `I`     | 自动缩进行                                      |
+| `Tab`                | 缩进选中行                                      |
+| `Shift` `Tab`        | 取消缩进选中行                                  |
+| `Ctrl` `Shift` `V`   | 从最近的剪贴板粘贴...                           |
+| `Ctrl` `D`           | 复制当前行或选中块                              |
+| `Ctrl` `Y`           | 删除光标所在行                                  |
+| `Alt` `Shift` `Up`   | 向上移动行                                      |
+| `Alt` `Shift` `Down` | 向下移动行                                      |
+| `Ctrl` `Shift` `J`   | 合并行                                          |
+| `Ctrl` `Enter`       | 拆分行                                          |
+| `Shift` `Enter`      | 开始新行                                        |
+| `Ctrl` `Shift` `U`   | 切换光标处单词或选中块的大小写                  |
+| `Ctrl` `Shift` `]`   | 选中至代码块末尾                                |
+| `Ctrl` `Shift` `[`   | 选中至代码块开头                                |
+| `Ctrl` `Delete`      | 删除至单词末尾                                  |
+| `Ctrl` `Backspace`   | 删除至单词开头                                  |
+| `Ctrl` `+`           | 展开代码块                                      |
+| `Ctrl` `-`           | 折叠代码块                                      |
+| `Ctrl` `Shift` `+`   | 全部展开                                        |
+| `Ctrl` `Shift` `-`   | 全部折叠                                        |
+| `Ctrl` `F4`          | 关闭活动编辑器选项卡                            |
 
 {.shortcuts}
 
-### General
+### 常规
 
-| shortcut             | description                    |
-| -------------------- | ------------------------------ |
-| `Double Shift`       | Search everywhere              |
-| `Ctrl` `Shift` `A`   | Find Action                    |
-| `Alt` `0...9`        | Open corresponding tool window |
-| `Ctrl` `Shift` `F12` | Toggle maximizing editor       |
-| `Alt` `Shift` `F`    | Add to Favorites               |
-| `Alt` `Shift` `I`    | Inspect current file           |
-| `Ctrl` <kbd>\`</kbd> | Quick switch current scheme    |
-| `Ctrl` `Alt` `S`     | Open Settings dialog           |
-| `Ctrl` `Tab`         | Switch between tool and tabs   |
-
-{.shortcuts}
-
-### Navigation {.row-span-4}
-
-| shortcut                       | description                               |
-| ------------------------------ | ----------------------------------------- |
-| `Ctrl` `B` _\|_ `Ctrl + Click` | Go to declaration                         |
-| `Ctrl` `N`                     | Go to class                               |
-| `Ctrl` `Shift` `N`             | Go to file                                |
-| `Ctrl` `Alt` `Shift` `N`       | Go to symbol                              |
-| `Alt` `Right`                  | Go to next editor tab                     |
-| `Alt` `Left`                   | Go to previous editor tab                 |
-| `F12`                          | Go back to previous tool window           |
-| `Esc`                          | Go to editor                              |
-| `Ctrl` `G`                     | Go to line                                |
-| `Ctrl` `E`                     | Recent files popup                        |
-| `Ctrl` `Alt` `Right`           | Navigate forward                          |
-| `Ctrl` `Alt` `Left`            | Navigate back                             |
-| `Ctrl` `Shift` `Backspace`     | Navigate to last edit location            |
-| `Alt` `F1`                     | Select current file or symbol in any view |
-| `Ctrl` `Alt` `B`               | Go to implementation(s)                   |
-| `Ctrl` `Shift` `I`             | Open quick definition lookup              |
-| `Ctrl` `Shift` `B`             | Go to type declaration                    |
-| `Ctrl` `U`                     | Go to super-method/super-class            |
-| `Alt` `Up`                     | Go to previous method                     |
-| `Alt` `Down`                   | Go to next method                         |
-| `Ctrl` `]` _/_ `[`             | Move to code block end/start              |
-| `Cltrl` `Shift` `M`            | Move caret to matching brace              |
-| `Ctrl` `F12`                   | File structure popup                      |
-| `Ctrl` `H`                     | Type hierarchy                            |
-| `Ctrl` `Alt` `H`               | Call hierarchy                            |
-| `F2` _/_ `Shift` `F2`          | Next/previous highlighted error           |
-| `F4` _/_ `Ctrl` `Enter`        | Jump to source                            |
-| `Alt` `Home`                   | Jump to navigation bar                    |
-| `F11`                          | Toggle bookmark                           |
-| `Ctrl` `Shift` `F11`           | Toggle bookmark with mnemonic             |
-| `Ctrl` `0...9`                 | Go to numbered bookmark                   |
-| `Shift` `F11`                  | Show bookmarks                            |
+| 快捷键               | 描述                                   |
+| -------------------- | -------------------------------------- |
+| `Double Shift`       | 全局搜索                               |
+| `Ctrl` `Shift` `A`   | 查找操作                               |
+| `Alt` `0...9`        | 打开对应的工具窗口                     |
+| `Ctrl` `Shift` `F12` | 切换编辑器最大化                       |
+| `Alt` `Shift` `F`    | 添加到收藏夹                           |
+| `Alt` `Shift` `I`    | 检查当前文件                           |
+| `Ctrl` <kbd>\`</kbd> | 快速切换当前方案                       |
+| `Ctrl` `Alt` `S`     | 打开设置对话框                         |
+| `Ctrl` `Tab`         | 在工具和选项卡之间切换                 |
 
 {.shortcuts}
 
-### Multiple carets and selections
+### 导航 {.row-span-4}
 
-| shortcut               | description                        |
+| 快捷键                         | 描述                                   |
+| ------------------------------ | -------------------------------------- |
+| `Ctrl` `B` _\|_ `Ctrl + Click` | 转到声明                               |
+| `Ctrl` `N`                     | 转到类                                 |
+| `Ctrl` `Shift` `N`             | 转到文件                               |
+| `Ctrl` `Alt` `Shift` `N`       | 转到符号                               |
+| `Alt` `Right`                  | 转到下一个编辑器选项卡                 |
+| `Alt` `Left`                   | 转到上一个编辑器选项卡                 |
+| `F12`                          | 返回上一个工具窗口                     |
+| `Esc`                          | 转到编辑器                             |
+| `Ctrl` `G`                     | 转到行                                 |
+| `Ctrl` `E`                     | 最近文件弹窗                           |
+| `Ctrl` `Alt` `Right`           | 向前导航                               |
+| `Ctrl` `Alt` `Left`            | 向后导航                               |
+| `Ctrl` `Shift` `Backspace`     | 导航到上次编辑位置                     |
+| `Alt` `F1`                     | 在任何视图中选择当前文件或符号         |
+| `Ctrl` `Alt` `B`               | 转到实现                               |
+| `Ctrl` `Shift` `I`             | 打开快速定义查找                       |
+| `Ctrl` `Shift` `B`             | 转到类型声明                           |
+| `Ctrl` `U`                     | 转到父方法/父类                        |
+| `Alt` `Up`                     | 转到上一个方法                         |
+| `Alt` `Down`                   | 转到下一个方法                         |
+| `Ctrl` `]` _/_ `[`             | 移动到代码块末尾/开头                  |
+| `Cltrl` `Shift` `M`            | 移动光标到匹配的括号                   |
+| `Ctrl` `F12`                   | 文件结构弹窗                           |
+| `Ctrl` `H`                     | 类型层级                               |
+| `Ctrl` `Alt` `H`               | 调用层级                               |
+| `F2` _/_ `Shift` `F2`          | 下一个/上一个高亮错误                  |
+| `F4` _/_ `Ctrl` `Enter`        | 跳转到源码                             |
+| `Alt` `Home`                   | 跳转到导航栏                           |
+| `F11`                          | 切换书签                               |
+| `Ctrl` `Shift` `F11`           | 使用助记符切换书签                     |
+| `Ctrl` `0...9`                 | 转到编号书签                           |
+| `Shift` `F11`                  | 显示书签                               |
+
+{.shortcuts}
+
+### 多光标和选择
+
+| 快捷键                 | 描述                               |
 | ---------------------- | ---------------------------------- |
-| `Alt` `Click`          | Add or remove caret                |
-| `Shift` `Ctrl + Alt-J` | Select all occurrences             |
-| `Alt` `J`              | Select next occurrence             |
-| `Alt` `Shift` `J`      | Unselect occurrence                |
-| `Esc`                  | Unselect all occurrences or carets |
+| `Alt` `Click`          | 添加或移除光标                     |
+| `Shift` `Ctrl + Alt-J` | 选中所有出现                       |
+| `Alt` `J`              | 选中下一个出现                     |
+| `Alt` `Shift` `J`      | 取消选中出现                       |
+| `Esc`                  | 取消选中所有出现或光标             |
 
 {.shortcuts}
 
-### Debugging
+### 调试
 
-| shortcut            | description         |
+| 快捷键              | 描述                |
 | ------------------- | ------------------- |
-| `F8`                | Step over           |
-| `F7`                | Step into           |
-| `Shift` `F7`        | Smart step into     |
-| `Shift` `F8`        | Step out            |
-| `Alt` `F9`          | Run to cursor       |
-| `Alt` `F8`          | Evaluate expression |
-| `F9`                | Resume program      |
-| `Ctrl` `F8`         | Toggle breakpoint   |
-| `Ctrl` `Shift` `F8` | View breakpoints    |
+| `F8`                | 单步跳过            |
+| `F7`                | 单步进入            |
+| `Shift` `F7`        | 智能单步进入        |
+| `Shift` `F8`        | 单步跳出            |
+| `Alt` `F9`          | 运行到光标处        |
+| `Alt` `F8`          | 评估表达式          |
+| `F9`                | 恢复程序            |
+| `Ctrl` `F8`         | 切换断点            |
+| `Ctrl` `Shift` `F8` | 查看断点            |
 
 {.shortcuts}
 
-### Running
+### 运行
 
-| shortcut             | description                           |
-| -------------------- | ------------------------------------- |
-| `Alt` `Shift` `F10`  | Select configuration and run          |
-| `Alt` `Shift` `F9`   | Select configuration and debug        |
-| `Shift` `F10`        | Run                                   |
-| `Shift` `F9`         | Debug                                 |
-| `Ctrl` `Shift` `F10` | Run context configuration from editor |
-| `Alt` `Shift` `R`    | Rerun tests                           |
-| `Alt` `F11`          | Run Gulp/Grunt/npm tasks              |
+| 快捷键               | 描述                                   |
+| -------------------- | -------------------------------------- |
+| `Alt` `Shift` `F10`  | 选择配置并运行                         |
+| `Alt` `Shift` `F9`   | 选择配置并调试                         |
+| `Shift` `F10`        | 运行                                   |
+| `Shift` `F9`         | 调试                                   |
+| `Ctrl` `Shift` `F10` | 从编辑器运行上下文配置                 |
+| `Alt` `Shift` `R`    | 重新运行测试                           |
+| `Alt` `F11`          | 运行 Gulp/Grunt/npm 任务               |
 
 {.shortcuts}
 
-### Usage Search
+### 用法搜索
 
-| shortcut            | description              |
+| 快捷键              | 描述                   |
 | ------------------- | ------------------------ |
-| `Alt` `F7`          | Find usages              |
-| `Ctrl` `F7`         | Find usages in file      |
-| `Ctrl` `Shift` `F7` | Highlight usages in file |
-| `Ctrl` `Alt` `F7`   | Show usages              |
+| `Alt` `F7`          | 查找用法                 |
+| `Ctrl` `F7`         | 在文件中查找用法         |
+| `Ctrl` `Shift` `F7` | 在文件中高亮显示用法     |
+| `Ctrl` `Alt` `F7`   | 显示用法                 |
 
 {.shortcuts}
 
-### VCS/Local History
+### VCS/本地历史
 
-| shortcut            | description             |
-| ------------------- | ----------------------- |
-| `Alt` <kbd>\`</kbd> | VCS quick popup         |
-| `Ctrl` `K`          | Commit project to VCS   |
-| `Ctrl` `T`          | Update project from VCS |
-| `Alt` `Shift` `C`   | View recent changes     |
-
-{.shortcuts}
-
-### Search/Replace
-
-| shortcut           | description     |
-| ------------------ | --------------- |
-| `Ctrl` `F`         | Find            |
-| `F3`               | Find next       |
-| `Shift` `F3`       | Find previous   |
-| `Ctrl` `Shift` `F` | Find in path    |
-| `Ctrl` `R`         | Replace         |
-| `Ctrl` `Shift` `R` | Replace in path |
+| 快捷键              | 描述                   |
+| ------------------- | ------------------------ |
+| `Alt` <kbd>\`</kbd> | VCS 快速弹窗             |
+| `Ctrl` `K`          | 提交项目到 VCS           |
+| `Ctrl` `T`          | 从 VCS 更新项目          |
+| `Alt` `Shift` `C`   | 查看最近更改             |
 
 {.shortcuts}
 
-### Refactoring
+### 搜索/替换
 
-| shortcut                | description               |
-| ----------------------- | ------------------------- |
-| `Ctrl` `Alt` `Shift +T` | Refactor this             |
-| `F5` _/_ `F6`           | Copy / Move               |
-| `Alt` `Delete`          | Safe Delete               |
-| `Shift` `F6`            | Rename                    |
-| `Ctrl` `F6`             | Change function signature |
-| `Ctrl` `Alt` `N`        | Inline Variable           |
-| `Ctrl` `Alt` `M`        | Extract Method            |
-| `Ctrl` `Alt` `V`        | Extract Variable          |
-| `Ctrl` `Alt` `C`        | Extract Constant          |
-| `Ctrl` `Alt` `P`        | Extract Parameter         |
+| 快捷键             | 描述             |
+| ------------------ | ---------------- |
+| `Ctrl` `F`         | 查找             |
+| `F3`               | 查找下一个       |
+| `Shift` `F3`       | 查找上一个       |
+| `Ctrl` `Shift` `F` | 在路径中查找     |
+| `Ctrl` `R`         | 替换             |
+| `Ctrl` `Shift` `R` | 在路径中替换     |
+
+{.shortcuts}
+
+### 重构
+
+| 快捷键                  | 描述                 |
+| ----------------------- | -------------------- |
+| `Ctrl` `Alt` `Shift +T` | 重构此项             |
+| `F5` _/_ `F6`           | 复制 / 移动          |
+| `Alt` `Delete`          | 安全删除             |
+| `Shift` `F6`            | 重命名               |
+| `Ctrl` `F6`             | 更改函数签名         |
+| `Ctrl` `Alt` `N`        | 内联变量             |
+| `Ctrl` `Alt` `M`        | 提取方法             |
+| `Ctrl` `Alt` `V`        | 提取变量             |
+| `Ctrl` `Alt` `C`        | 提取常量             |
+| `Ctrl` `Alt` `P`        | 提取参数             |
 
 {.shortcuts}

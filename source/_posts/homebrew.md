@@ -3,130 +3,130 @@ title: Homebrew
 date: 2023-04-12
 background: bg-[#fbb041]
 tags:
-  - packages manager
+  - 软件包管理器
   - macos
 categories:
-  - Toolkit
-intro: This is a quick reference cheat sheet to getting started with homebrew.
+  - 工具箱
+intro: 这是 Homebrew 入门的快速参考备忘单。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门指南
 
-### Install
+### 安装
 
-If not installed, install Command Line Tools (CLT)
+如果尚未安装，请安装命令行工具 (CLT)
 
 ```bash
 xcode-select --install
 ```
 
-Install Homebrew :
+安装 Homebrew：
 
 ```bash {.wrap}
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-[Official Website](https://brew.sh/) {.link-arrow}
+[官方网站](https://brew.sh/) {.link-arrow}
 
-### Commands
+### 命令
 
 |                            |                                        |
 | -------------------------- | -------------------------------------- |
-| `brew install git`         | Install a package                      |
-| `brew uninstall git`       | Uninstall a package                    |
-| `brew upgrade git`         | Upgrade package                        |
-| `brew unlink git`          | Unlink                                 |
-| `brew link git`            | Link                                   |
-| `brew switch git  1.0.0`   | Switch package version                 |
-| `brew list --versions git` | List the installed versions of package |
+| `brew install git`         | 安装一个软件包                      |
+| `brew uninstall git`       | 卸载一个软件包                    |
+| `brew upgrade git`         | 升级软件包                        |
+| `brew unlink git`          | 取消链接                                 |
+| `brew link git`            | 链接                                   |
+| `brew switch git  1.0.0`   | 切换软件包版本                 |
+| `brew list --versions git` | 列出软件包已安装的版本 |
 
-### Help
+### 帮助
 
-Display the version of Homebrew.
+显示 Homebrew 的版本。
 
 ```bash
 brew --version
 ```
 
-Print Help Information
+打印帮助信息
 
 ```bash
 brew help
 ```
 
-Print Help Info for a brew command
+打印 brew 命令的帮助信息
 
 ```bash
 brew help <sub-command>
 ```
 
-Check system for potential problems.
+检查系统是否存在潜在问题。
 
 ```bash
 brew doctor
 ```
 
-### Updates
+### 更新
 
-Fetch latest version of homebrew and formula
+获取 Homebrew 和配方的最新版本
 
 ```bash
 brew update
 ```
 
-Show formulae with an updated version available
+显示有可用更新版本的配方
 
 ```bash
 brew outdated
 ```
 
-Upgrade all outdated and unpinned brews
+升级所有过时且未固定的 brew
 
 ```bash
 brew upgrade
 ```
 
-Upgrade only the specified brew
+仅升级指定的 brew
 
 ```bash
 brew upgrade <formula>
 ```
 
-Prevent the specified formulae from being upgraded
+阻止指定的配方被升级
 
 ```bash
 brew pin <formula>
 ```
 
-Allow the specified formulae to be upgraded.
+允许指定的配方被升级。
 
 ```bash
 brew unpin <formula>
 ```
 
-### Repositories
+### 仓库
 
-List all the current tapped repositories (taps)
+列出所有当前的 tapped 仓库 (taps)
 
 ```bash
 brew tap
 ```
 
-Tap a formula repository from Github using https for tap https://github.com/user/homebrew-repo
+从 Github 使用 https tap 一个配方仓库，例如 tap https://github.com/user/homebrew-repo
 
 ```bash
 brew tap <user/repo>
 ```
 
-Tap a formula repository from the specified URL
+从指定的 URL tap 一个配方仓库
 
 ```bash
 brew tap <user/repo> <URL>
 ```
 
-Remove the given tap from the repository
+从仓库中移除给定的 tap
 
 ```bash
 brew untap <user/repo>
@@ -134,95 +134,95 @@ brew untap <user/repo>
 
 ### Cask
 
-Tap the Cask repository from Github.
+从 Github tap Cask 仓库。
 
 ```bash
 brew tap homebrew/cask
 ```
 
-List all the installed casks .
+列出所有已安装的 cask。
 
 ```bash
 brew cask list
 ```
 
-Search all known casks based on the substring text.
+根据子字符串文本搜索所有已知的 cask。
 
 ```bash
 brew search <text>
 ```
 
-Install the given cask.
+安装给定的 cask。
 
 ```bash
 brew cask install <cask>
 ```
 
-Reinstalls the given Cask
+重新安装给定的 Cask
 
 ```bash
 brew cask reinstall <cask>
 ```
 
-Uninstall the given cask.
+卸载给定的 cask。
 
 ```bash
 brew cask uninstall <cask>
 ```
 
-### Search, Install, Remove
+### 搜索、安装、移除
 
-List all the installed formulae.
+列出所有已安装的配方。
 
 ```bash
 brew list
 ```
 
-Display all locally available formulae for brewing.
+显示所有本地可用于 brewing 的配方。
 
 ```bash
 brew search
 ```
 
-Perform a substring search of formulae names for brewing.
+对用于 brewing 的配方名称进行子字符串搜索。
 
 ```bash
 brew search <text>
 ```
 
-Display information about the formula.
+显示关于配方的信息。
 
 ```bash
 brew info <formula>
 ```
 
-Install the formula.
+安装配方。
 
 ```bash
 brew install <formula>
 ```
 
-Uninstall the formula.
+卸载配方。
 
 ```bash
 brew uninstall <formula>
 ```
 
-### Cleanup
+### 清理
 
-Remove older versions of installed formulae.
+移除已安装配方的旧版本。
 
 ```bash
 brew cleanup
 ```
 
-Remove older versions of specified formula.
+移除指定配方的旧版本。
 
 ```bash
 brew cleanup <formula>
 ```
 
-Display all formula that will be removed (dry run)
+显示所有将被移除的配方（试运行）
 
 ```bash
 brew cleanup -n

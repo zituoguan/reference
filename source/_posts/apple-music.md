@@ -7,118 +7,118 @@ tags:
   -
   - mac
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 62 keyboard shortcuts found in the Apple Music app. This application is MacOS-only.
+  Apple Music 应用中 62 个键盘快捷键的可视化速查表。此应用程序仅适用于 MacOS。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Playing Music {.row-span-2}
+### 播放音乐 {.row-span-2}
 
-| Shortcut              | Action                                                   |
+| 快捷键                | 操作                                                     |
 | --------------------- | -------------------------------------------------------- |
-| `Space`               | Start playing or pause the selected song                 |
-| `Enter`               | Play the currently selected song from the beginning      |
-| `Cmd` `Opt` `Right`   | Move forward within a song                               |
-| `Cmd` `Opt` `Left`    | Move backward within a song                              |
-| `Cmd` `.`             | Stop playing the selected song                           |
-| `Right`               | When a song is playing, play the next song in a list     |
-| `Left`                | When a song is playing, play the previous song in a list |
-| `Cmd` `L`             | Show the currently playing song in the list              |
-| `Cmd` `Opt` `U`       | Show the Playing Next queue                              |
-| `Opt` `Right`         | Listen to the next album in a list                       |
-| `Opt` `Left`          | Listen to the previous album in a list                   |
-| `Cmd` `Up`            | Increase the volume                                      |
-| `Cmd` `Down`          | Decrease the volume                                      |
-| `Cmd` `Opt` `E`       | Open the equalizer                                       |
-| `Cmd` `Shift` `Right` | Go to the next chapter, if available                     |
-| `Cmd` `Shift` `Left`  | Go to the previous chapter, if available                 |
-| `Cmd` `U`             | Stream audio file at a specific URL to Music             |
+| `Space`               | 开始播放或暂停所选歌曲                                   |
+| `Enter`               | 从头开始播放当前所选歌曲                                 |
+| `Cmd` `Opt` `Right`   | 在歌曲中快进                                             |
+| `Cmd` `Opt` `Left`    | 在歌曲中快退                                             |
+| `Cmd` `.`             | 停止播放所选歌曲                                         |
+| `Right`               | 播放歌曲时，播放列表中的下一首歌曲                         |
+| `Left`                | 播放歌曲时，播放列表中的上一首歌曲                         |
+| `Cmd` `L`             | 在列表中显示当前播放的歌曲                               |
+| `Cmd` `Opt` `U`       | 显示“接着播放”队列                                       |
+| `Opt` `Right`         | 收听列表中的下一张专辑                                   |
+| `Opt` `Left`          | 收听列表中的上一张专辑                                   |
+| `Cmd` `Up`            | 增大音量                                                 |
+| `Cmd` `Down`          | 减小音量                                                 |
+| `Cmd` `Opt` `E`       | 打开均衡器                                               |
+| `Cmd` `Shift` `Right` | 前往下一章节 (如果可用)                                  |
+| `Cmd` `Shift` `Left`  | 前往上一章节 (如果可用)                                  |
+| `Cmd` `U`             | 将特定 URL 的音频文件流式传输到“音乐”                     |
 
 {.shortcuts}
 
-### Playlists
+### 播放列表
 
-| Shortcut          | Action                                                                   |
+| 快捷键            | 操作                                                                     |
 | ----------------- | ------------------------------------------------------------------------ |
-| `Cmd` `N`         | Create a new playlist                                                    |
-| `Cmd` `Shift` `N` | Create a playlist from a selection of songs                              |
-| `Cmd` `Opt` `N`   | Create a new Smart Playlist                                              |
-| `Opt` `Space`     | Start the Genius Shuffle                                                 |
-| `Cmd` `R`         | Refresh a Genius Playlist, when the playlist is selected                 |
-| `Cmd` `Del`       | Delete the selected playlist without confirmation                        |
-| `Opt` `Del`       | Delete the selected playlist and all songs it contains from your library |
-| `Opt` `Del`       | Delete the selected song from your library and all playlists             |
+| `Cmd` `N`         | 创建新播放列表                                                           |
+| `Cmd` `Shift` `N` | 从所选歌曲创建播放列表                                                   |
+| `Cmd` `Opt` `N`   | 创建新的智能播放列表                                                     |
+| `Opt` `Space`     | 启动 Genius 随机播放                                                     |
+| `Cmd` `R`         | 刷新 Genius 播放列表 (当播放列表被选中时)                                |
+| `Cmd` `Del`       | 删除所选播放列表 (无需确认)                                              |
+| `Opt` `Del`       | 从资料库中删除所选播放列表及其包含的所有歌曲                             |
+| `Opt` `Del`       | 从资料库和所有播放列表中删除所选歌曲                                     |
 
 {.shortcuts}
 
-### Window Options {.row-span-2}
+### 窗口选项 {.row-span-2}
 
-| Shortcut          | Action                                                    |
-| ----------------- | --------------------------------------------------------- |
-| `Cmd` `Shift` `M` | Open the MiniPlayer                                       |
-| `Cmd` `Shift` `F` | Open the Full Screen Player                               |
-| `Cmd` `Ctrl` `F`  | Toggle full-screen view                                   |
-| `Cmd` `/`         | Show or hide the status bar                               |
-| `Cmd` `I`         | Open the info window for the selected song                |
-| `Cmd` `N`         | In the info window, see information for the next song     |
-| `Cmd` `P`         | In the info window, see information for the previous song |
-| `Cmd` `Shift` `[` | Go to the previous pane in the info window                |
-| `Cmd` `Shift` `]` | Go to the next pane in the info window                    |
-| `Cmd` `J`         | Open the View Options window for the selected source      |
-| `Cmd` `T`         | Turn the visualizer on or off                             |
-| `?`               | See more options when a visual effect is showing          |
-| `Cmd` `R`         | Refresh Apple Music or the iTunes Store                   |
-| `Cmd` `0`         | Open the Music window                                     |
-| `Cmd` `W`         | Close the Music window                                    |
-| `Cmd` `M`         | Put the Music window in the Dock                          |
-| `Cmd` `H`         | Hide the Music window                                     |
-| `Cmd` `Opt` `H`   | Hide all other applications                               |
+| 快捷键            | 操作                                                                     |
+| ----------------- | ------------------------------------------------------------------------ |
+| `Cmd` `Shift` `M` | 打开迷你播放器                                                           |
+| `Cmd` `Shift` `F` | 打开全屏播放器                                                           |
+| `Cmd` `Ctrl` `F`  | 切换全屏视图                                                             |
+| `Cmd` `/`         | 显示或隐藏状态栏                                                         |
+| `Cmd` `I`         | 打开所选歌曲的信息窗口                                                   |
+| `Cmd` `N`         | 在信息窗口中，查看下一首歌曲的信息                                       |
+| `Cmd` `P`         | 在信息窗口中，查看上一首歌曲的信息                                       |
+| `Cmd` `Shift` `[` | 前往信息窗口中的上一个面板                                               |
+| `Cmd` `Shift` `]` | 前往信息窗口中的下一个面板                                               |
+| `Cmd` `J`         | 打开所选来源的显示选项窗口                                               |
+| `Cmd` `T`         | 打开或关闭可视化效果                                                     |
+| `?`               | 显示可视化效果时查看更多选项                                             |
+| `Cmd` `R`         | 刷新 Apple Music 或 iTunes Store                                         |
+| `Cmd` `0`         | 打开“音乐”窗口                                                           |
+| `Cmd` `W`         | 关闭“音乐”窗口                                                           |
+| `Cmd` `M`         | 将“音乐”窗口最小化到程序坞                                               |
+| `Cmd` `H`         | 隐藏“音乐”窗口                                                           |
+| `Cmd` `Opt` `H`   | 隐藏所有其他应用程序                                                     |
 
 {.shortcuts}
 
-### Library
+### 资料库
 
-| Shortcut          | Action                                             |
-| ----------------- | -------------------------------------------------- |
-| `Cmd` `O`         | Add a file to your library                         |
-| `Cmd` `Shift` `R` | Show where a song file is located                  |
-| `Cmd` `F`         | Select the search field                            |
-| `Cmd` `Z`         | Undo your last typing change while editing an item |
-| `Cmd` `X`         | Cut the selected song's information or artwork     |
-| `Cmd` `C`         | Copy the selected song's information or artwork    |
-| `Cmd` `V`         | Paste the selected song's information or artwork   |
-| `Cmd` `A`         | Select all the songs in the list                   |
-| `Cmd` `B`         | Show or hide the column browser                    |
-| `Cmd` `Shift` `A` | De-select all the songs in the list                |
+| 快捷键            | 操作                                                                     |
+| ----------------- | ------------------------------------------------------------------------ |
+| `Cmd` `O`         | 将文件添加到资料库                                                       |
+| `Cmd` `Shift` `R` | 显示歌曲文件的位置                                                       |
+| `Cmd` `F`         | 选择搜索栏                                                               |
+| `Cmd` `Z`         | 编辑项目时撤销上次键入的更改                                             |
+| `Cmd` `X`         | 剪切所选歌曲的信息或插图                                                 |
+| `Cmd` `C`         | 拷贝所选歌曲的信息或插图                                                 |
+| `Cmd` `V`         | 粘贴所选歌曲的信息或插图                                                 |
+| `Cmd` `A`         | 选择列表中的所有歌曲                                                     |
+| `Cmd` `B`         | 显示或隐藏栏浏览器                                                       |
+| `Cmd` `Shift` `A` | 取消选择列表中的所有歌曲                                                 |
 
 {.shortcuts}
 
 ### iTunes Store
 
-| Shortcut      | Action                                      |
-| ------------- | ------------------------------------------- |
-| `Opt` `Enter` | Initiate a search in the iTunes Store       |
-| `Cmd` `]`     | Go to the next page in the iTunes Store     |
-| `Cmd` `[`     | Go to the previous page in the iTunes Store |
-| `Cmd` `R`     | Reload the current page                     |
+| 快捷键        | 操作                                                                     |
+| ------------- | ------------------------------------------------------------------------ |
+| `Opt` `Enter` | 在 iTunes Store 中开始搜索                                               |
+| `Cmd` `]`     | 前往 iTunes Store 中的下一页                                             |
+| `Cmd` `[`     | 前往 iTunes Store 中的上一页                                             |
+| `Cmd` `R`     | 重新载入当前页面                                                         |
 
 {.shortcuts}
 
-### Other
+### 其他
 
-| Shortcut    | Action                                              |
-| ----------- | --------------------------------------------------- |
-| `Cmd` `,`   | Open Music Preferences                              |
-| `Cmd` `Q`   | Quit the Music app                                  |
-| `Cmd` `E`   | Eject a CD                                          |
-| `Cmd` `?`   | Open the Music Help menu                            |
-| `Cmd` `Opt` | Open a different music library, while opening Music |
+| 快捷键      | 操作                                                                     |
+| ----------- | ------------------------------------------------------------------------ |
+| `Cmd` `,`   | 打开“音乐”偏好设置                                                       |
+| `Cmd` `Q`   | 退出“音乐”应用                                                           |
+| `Cmd` `E`   | 推出 CD                                                                  |
+| `Cmd` `?`   | 打开“音乐”帮助菜单                                                       |
+| `Cmd` `Opt` | 打开“音乐”时打开其他音乐资料库                                           |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Music on Mac](https://support.apple.com/guide/music/keyboard-shortcuts-mus1019/mac)
+- [Mac 上“音乐”的键盘快捷键](https://support.apple.com/guide/music/keyboard-shortcuts-mus1019/mac)
   _(support.apple.com)_

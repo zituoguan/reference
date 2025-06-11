@@ -7,47 +7,47 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 18 keyboard shortcuts found on YouTube.com
+  YouTube.com 上 18 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### General I
+### 常规操作 I
 
-| Shortcut     | Action                                                                            |
+| 快捷键     | 操作                                                                            |
 | ------------ | --------------------------------------------------------------------------------- |
-| `Space`      | Play/Pause when the seek bar is selected, activate a button if a button has focus |
-| `K`          | Play/Pause in player                                                              |
-| `Left/Right` | Seek backward/forward 5 seconds                                                   |
-| `J`          | Seek backward 10 seconds in player                                                |
-| `L`          | Seek forward 10 seconds in player                                                 |
-| `Home`       | Seek to the beginning of the video                                                |
-| `End`        | Seek to the last seconds of the video                                             |
-| `Up`         | Increase volume 5%                                                                |
-| `Down`       | Decrease volume 5%                                                                |
-| `1-9`        | Seek to the 10-90% of the video                                                   |
+| `空格键`      | `当选择进度条时播放/暂停，若按钮有焦点则激活该按钮` |
+| `K`          | `在播放器中播放/暂停`                                                              |
+| `左/右方向键` | `后退/前进 5 秒`                                                   |
+| `J`          | `在播放器中后退 10 秒`                                                |
+| `L`          | `在播放器中前进 10 秒`                                                 |
+| `Home键`       | `跳转到视频开头`                                                |
+| `End键`        | `跳转到视频末尾`                                                 |
+| `上方向键`         | `音量增加 5%`                                                                |
+| `下方向键`         | `音量减少 5%`                                                                |
+| `1-9`        | `跳转到视频的 10%-90% 位置`                                                   |
 
 {.shortcuts}
 
-### General II
+### 常规操作 II
 
-| Shortcut    | Action                                                      |
+| 快捷键    | 操作                                                      |
 | ----------- | ----------------------------------------------------------- |
-| `0`         | Seek to the beginning of the video                          |
-| `Shift` `1` | Move between H1 headers                                     |
-| `/`         | Go to search box                                            |
-| `F`         | Activate full screen, press again (or Esc) to exit          |
-| `C`         | Activate closed captions and subtitles, press again to hide |
-| `Shift` `N` | Move to the next video                                      |
-| `Shift` `P` | Move to the previous video                                  |
-| `I`         | Launch the Miniplayer                                       |
-| `.`         | Move forward a single frame (while paused)                  |
-| `,`         | Move back a single frame (while paused)                     |
+| `0`         | `跳转到视频开头`                          |
+| `Shift` `1` | `在 H1 标题间移动`                                     |
+| `/`         | `转到搜索框`                                            |
+| `F`         | `激活全屏，再次按下（或 Esc键）则退出`          |
+| `C`         | `激活字幕，再次按下则隐藏` |
+| `Shift` `N` | `转到下一个视频`                                      |
+| `Shift` `P` | `转到上一个视频`                                  |
+| `I`         | `启动迷你播放器`                                       |
+| `.`         | `前进一帧（暂停时）`                  |
+| `,`         | `后退一帧（暂停时）`                     |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for YouTube](https://support.google.com/youtube/answer/7631406?hl=en) _(support.google.com)_
+- [YouTube 键盘快捷键](https://support.google.com/youtube/answer/7631406?hl=zh-CN) _(support.google.com)_

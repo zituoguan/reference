@@ -1,5 +1,5 @@
 ---
-title: Unity Shader Graph
+title: Unity Shader Graph（着色器视图）
 date: 2024-08-10 12:15:05
 background: bg-[#7c7c7c]
 label:
@@ -9,785 +9,769 @@ tags:
   - computer graphics
   - visual effects
 categories:
-  - Programming
+  - 编程
 intro: |
-  This is a visual cheat-sheet for the Unity Shader Graph. This tool is used to create custom shaders material in Unity, a popular game engine.
+  这是 Unity Shader Graph（着色器视图）的可视化速查表。该工具用于在流行的游戏引擎 Unity 中创建自定义着色器材质。
 ---
 
-## Shader Graph Nodes {.cols-2}
+## Shader Graph 节点 {.cols-2}
 
-<code>We are using <yel>**SAIT**</yel> to indicate the output type is "same as the input type".</code> {.col-span-2}
+<code>我们使用 <yel>**SAIT**</yel> 来表示输出类型与输入类型相同。</code> {.col-span-2}
 
-## 1. Attributes {.cols-2}
+## 1. 属性 {.cols-2}
 
-### Positioning {.row-span-2}
+### 定位 {.row-span-2}
 
-<yel>**Position**</yel> - provides vertex position
-- **Inputs**
+<yel>**Position (位置)**</yel> - 提供顶点位置
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | /     | No inputs               |
+  | /     | 无输入               |
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | `Vector3`| Provides vertex position|
+  | `Vector3`| 提供顶点位置|
   
   {.left-text}
 
 {.shortcuts .marker-round .cols-2}
 
-<yel>**Normal**</yel> - supplies surface normal direction
-- **Inputs**
+<yel>**Normal (法线)**</yel> - 提供表面法线方向
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | /     | No inputs               |
+  | /     | 无输入               |
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | `Vector3`| Provides surface normal |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**World Position**</yel> - returns the object's world space position
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | /     | No inputs               |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector3` | World space position   |
+  | `Vector3`| 提供表面法线 |
 
   {.left-text}
 
 {.shortcuts .marker-round .cols-2}
 
-<yel>**Object Position**</yel> - returns the object's local space position
-- **Inputs**
+<yel>**World Position (世界位置)**</yel> - 返回对象的世界空间位置
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | /     | No inputs               |
+  | /     | 无输入               |
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | `Vector3` | Local space position   |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**Screen Position**</yel> - returns the object's screen space position
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | /     | No inputs               |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Screen space position  |
+  | `Vector3` | 世界空间位置   |
 
   {.left-text}
 
 {.shortcuts .marker-round .cols-2}
 
-<yel>**Camera Position**</yel> - returns the camera's world space position
-- **Inputs**
+<yel>**Object Position (对象位置)**</yel> - 返回对象的局部空间位置
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | /     | No inputs               |
+  | /     | 无输入               |
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | `Vector3` | Camera world space position |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-### Timing
-
-<yel>**Time**</yel> - outputs various time-related values
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | /     | No inputs               |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Float`  | Time (T) - The total elapsed time since the start of the shader |
-  | `Float`  | Sin Time (T/8π) - A sine wave based on time                    |
-  | `Float`  | Cos Time (T/8π) - A cosine wave based on time                  |
-  | `Float`  | Delta Time - Time passed between the previous frame and the current frame |
+  | `Vector3` | 局部空间位置   |
 
   {.left-text}
 
 {.shortcuts .marker-round .cols-2}
 
-
-## 2. Math Operations {.cols-2}
-
-### Basic Math 
-
-<yel>**Add**</yel> - adds two values
-- **Inputs**
+<yel>**Screen Position (屏幕位置)**</yel> - 返回对象的屏幕空间位置
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | `Float` <br> `Vector` | First value  |
-  | `Float` <br> `Vector` | Second value |
+  | /     | 无输入               |
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | SAIT | Sum of the two inputs |
+  | `Vector4` | 屏幕空间位置  |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Camera Position (摄像机位置)**</yel> - 返回摄像机的世界空间位置
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | /     | 无输入               |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector3` | 摄像机世界空间位置 |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+### 计时
+
+<yel>**Time (时间)**</yel> - 输出各种与时间相关的值
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | /     | 无输入               |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Float`  | 时间 (T) - 自着色器启动以来经过的总时间 |
+  | `Float`  | 正弦时间 (T/8π) - 基于时间的正弦波                    |
+  | `Float`  | 余弦时间 (T/8π) - 基于时间的余弦波                  |
+  | `Float`  | 增量时间 - 上一帧与当前帧之间经过的时间 |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+
+## 2. 数学运算 {.cols-2}
+
+### 基本数学运算
+
+<yel>**Add (加法)**</yel> - 将两个值相加
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Float` <br> `Vector` | 第一个值  |
+  | `Float` <br> `Vector` | 第二个值 |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | SAIT | 两个输入的和 |
 
   {.left-text}
   
 {.shortcuts .marker-round .cols-2}
 
-<yel>**Subtract**</yel> - subtracts one value from another
-- **Inputs**
+<yel>**Subtract (减法)**</yel> - 从一个值中减去另一个值
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | `Float` <br> `Vector` | Minuend      |
-  | `Float` <br> `Vector` | Subtrahend   |
+  | `Float` <br> `Vector` | 被减数      |
+  | `Float` <br> `Vector` | 减数   |
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | SAIT | Difference of the two inputs |
+  | SAIT | 两个输入的差 |
 
   {.left-text}
   
 {.shortcuts .marker-round .cols-2}
 
-<yel>**Multiply**</yel> - multiplies two values
-- **Inputs**
+<yel>**Multiply (乘法)**</yel> - 将两个值相乘
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | `Float` <br> `Vector` <br> `Matrix` | First value |
-  | `Float` <br> `Vector` <br> `Matrix` | Second value|
+  | `Float` <br> `Vector` <br> `Matrix` | 第一个值 |
+  | `Float` <br> `Vector` <br> `Matrix` | 第二个值|
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | SAIT | The product of the two inputs |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-### Advanced Math {.row-span-2}
-
-<yel>**Power**</yel> - raises input to a power
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Float`  | Base                   |
-  | `Float`  | Exponent               |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Float`  | Result of base raised to the power of the exponent |
+  | SAIT | 两个输入的积 |
 
   {.left-text}
 
 {.shortcuts .marker-round .cols-2}
 
-<yel>**Sqrt**</yel> - square root of input
-- **Inputs**
+### 高级数学运算 {.row-span-2}
+
+<yel>**Power (幂)**</yel> - 计算输入的幂
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | `Float`  | Input value             |
+  | `Float`  | 底数                   |
+  | `Float`  | 指数               |
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | `Float`  | Square root of the input |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**Abs**</yel> - outputs absolute value
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Float` <br> `Vector` | Input value  |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | SAIT | Absolute value of the input |
+  | `Float`  | 底数相对于指数的幂的结果 |
 
   {.left-text}
 
 {.shortcuts .marker-round .cols-2}
 
-<yel>**Dot Product**</yel> - calculates dot product between two vectors
-- **Inputs**
+<yel>**Sqrt (平方根)**</yel> - 输入的平方根
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | `Vector3` <br> `Vector4` | First vector |
-  | `Vector3` <br> `Vector4` | Second vector|
+  | `Float`  | 输入值             |
 
   {.left-text}
 
-- **Outputs**
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Float`  | 输入的平方根 |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Abs (绝对值)**</yel> - 输出绝对值
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Float` <br> `Vector` | 输入值  |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | SAIT | 输入的绝对值 |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Dot Product (点积)**</yel> - 计算两个向量之间的点积
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector3` <br> `Vector4` | 第一个向量 |
+  | `Vector3` <br> `Vector4` | 第二个向量|
+
+  {.left-text}
+
+- **输出**
   - |-|-|
   | -------- |  ---------------------- |
-  |`Float`  | Dot product result |
+  |`Float`  | 点积结果 |
 
   {.left-text}
 
 {.shortcuts .marker-round .cols-2}
 
-<yel>**Cross Product**</yel> - calculates cross product between two vectors
-- **Inputs**
+<yel>**Cross Product (叉积)**</yel> - 计算两个向量之间的叉积
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | `Vector3` | First vector           |
-  | `Vector3` | Second vector          |
+  | `Vector3` | 第一个向量           |
+  | `Vector3` | 第二个向量          |
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | `Vector3` | Cross product result |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-### Trigonometry
-
-<yel>**Sin**</yel> - outputs sine of input
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Float`  | Input in radians        |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Float`  | Sine of the input       |
+  | `Vector3` | 叉积结果 |
 
   {.left-text}
 
 {.shortcuts .marker-round .cols-2}
 
-<yel>**Cos**</yel> - outputs cosine of input
-- **Inputs**
+### 三角函数
+
+<yel>**Sin (正弦)**</yel> - 输出输入的正弦值
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | `Float`  | Input in radians        |
+  | `Float`  | 输入（弧度）        |
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | `Float`  | Cosine of the input     |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-### Interpolation {.row-span-2}
-
-<yel>**Lerp**</yel> - linear interpolation between two values
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Float` <br> `Vector`  | Start value             |
-  | `Float` <br> `Vector`  | End value               |
-  | `Float` <br> `Vector`  | Interpolation factor (T)|
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | SAIT  | Interpolated result     |
+  | `Float`  | 输入的正弦值       |
 
   {.left-text}
 
 {.shortcuts .marker-round .cols-2}
 
-<yel>**Step**</yel> - creates a step between two thresholds
-- **Inputs**
+<yel>**Cos (余弦)**</yel> - 输出输入的余弦值
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | `Float` <br> `Vector`  | Threshold               |
-  | `Float` <br> `Vector`  | Input                   |
+  | `Float`  | 输入（弧度）        |
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | SAIT  | Step result             |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-
-## 3. Color Processing {.cols-2}
-
-### Basic Color Manipulation 
-
-<yel>**Color**</yel> - provides a constant color value
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | /     | No inputs               |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | RGBA color value       |
+  | `Float`  | 输入的余弦值     |
 
   {.left-text}
 
 {.shortcuts .marker-round .cols-2}
 
-<yel>**Add Color**</yel> - adds two color values
-- **Inputs**
+### 插值 {.row-span-2}
+
+<yel>**Lerp (线性插值)**</yel> - 在两个值之间进行线性插值
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | `Vector4` | First color            |
-  | `Vector4` | Second color           |
+  | `Float` <br> `Vector`  | 起始值             |
+  | `Float` <br> `Vector`  | 结束值               |
+  | `Float` <br> `Vector`  | 插值因子 (T)|
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | `Vector4` | Sum of the two colors  |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**Multiply Color**</yel> - multiplies two color values
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | First color            |
-  | `Vector4` | Second color           |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Product of the two colors |
+  | SAIT  | 插值结果     |
 
   {.left-text}
 
 {.shortcuts .marker-round .cols-2}
 
-<yel>**Lerp Color**</yel> - interpolates between two colors
-- **Inputs**
+<yel>**Step (阶跃)**</yel> - 在两个阈值之间创建一个阶跃
+- **输入**
   - |-|-|
   | -------- | ---------------------- |
-  | `Vector4` | Start color            |
-  | `Vector4` | End color              |
-  | `Float`   | Interpolation factor (T)|
+  | `Float` <br> `Vector`  | 阈值               |
+  | `Float` <br> `Vector`  | 输入                   |
 
   {.left-text}
 
-- **Outputs**
+- **输出**
   - |-|-|
   | -------- | ---------------------- |
-  | `Vector4` | Interpolated color     |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-### Color Adjustment {.row-span-2}
-
-<yel>**Saturation**</yel> - adjusts the saturation of input color
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Input color            |
-  | `Float`   | Saturation factor      |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Adjusted color         |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**Contrast**</yel> - adjusts contrast of input color
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Input color            |
-  | `Float`   | Contrast factor        |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Adjusted color         |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**Hue**</yel> - shifts the hue of the input color
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Input color            |
-  | `Float`   | Hue shift amount       |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Color with shifted hue |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**Invert Colors**</yel> - inverts the input color
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Input color            |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Inverted color         |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**Replace Color**</yel> - replaces a specific color in the input with a new color
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Input color            |
-  | `Vector4` | Target color           |
-  | `Vector4` | Replacement color      |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Color with replaced values |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**White Balance**</yel> - adjusts the white balance of input color
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Input color            |
-  | `Float`   | Temperature value      |
-  | `Float`   | Tint value             |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Adjusted color         |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-### Channel Operations
-
-<yel>**Channel Mixer**</yel> - modifies color channels independently
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Input color            |
-  | `Float`   | Red channel multiplier |
-  | `Float`   | Green channel multiplier |
-  | `Float`   | Blue channel multiplier |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Modified color         |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-## 4. Texture Processing {.cols-2}
-
-### Sampling 
-
-<yel>**Sample Texture**</yel> - retrieves color data from texture
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Texture (sampler)` | Texture input  |
-  | `Vector2` | UV coordinates         |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Color data from the texture |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**UV**</yel> - provides UV coordinates for texture mapping
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | /     | No inputs               |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector2` | UV coordinates         |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-### Manipulation {.row-span-2}
-
-<yel>**Tiling Offset**</yel> - adjusts tiling and offset of texture
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector2` | Tiling values          |
-  | `Vector2` | Offset values          |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector2` | Modified UV coordinates |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**Distortion**</yel> - warps the surface of the object
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Float`   | Distortion strength    |
-  | `Vector2` | UV coordinates         |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector2` | Warped UV coordinates  |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**Parallax**</yel> - simulates depth using parallax mapping
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | Texture (sampler) | Input texture  |
-  | `Vector2` | UV coordinates         |
-  | `Float`   | Depth value            |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector2` | Adjusted UV coordinates|
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-## 5. Effects {.cols-2}
-
-### Visual Effects {.row-span-2}
-
-<yel>**Fresnel Effect**</yel> - creates a glow effect on object edges
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector3` | View direction         |
-  | `Float`   | Power of the effect    |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Float`   | Fresnel effect value   |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-<yel>**Dissolve**</yel> - generates a dissolve transition effect
-
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Texture (sampler)` | Input texture  |
-  | `Float`   | Dissolve threshold     |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector4` | Dissolve effect output |
-
-  {.left-text}
-
-{.shortcuts .marker-round .cols-2}
-
-### Reflection {.row-span-2}
-
-<yel>**Reflection**</yel> - reflects based on surface normal direction
-- **Inputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector3` | Incident direction     |
-  | `Vector3` | Surface normal         |
-
-  {.left-text}
-
-- **Outputs**
-  - |-|-|
-  | -------- | ---------------------- |
-  | `Vector3` | Reflected direction    |
+  | SAIT  | 阶跃结果             |
 
   {.left-text}
 
 {.shortcuts .marker-round .cols-2}
 
 
+## 3. 颜色处理 {.cols-2}
 
-## Custom Function Node
+### 基本颜色操作
 
-### Steps to Create a Custom Function Node {.col-span-2}
+<yel>**Color (颜色)**</yel> - 提供一个恒定的颜色值
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | /     | 无输入               |
 
-- **Step 1: Add Custom Function Node in Shader Graph**
+  {.left-text}
 
-  - Right-click in Shader Graph and choose **"Create Node"** > **"Custom Function"**.
-  - Choose between **"String"** (for inline HLSL code) or **"File"** (for an external HLSL file).
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | RGBA 颜色值       |
 
-- **Step 2: Configure the Node in Shader Graph**
-  - Set the name of the node.
-  - If using **"File"**, ensure the external HLSL file name exactly matches the function name defined in the HLSL file. This ensures the function is correctly referenced in the Shader Graph pipeline.
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Add Color (颜色相加)**</yel> - 将两个颜色值相加
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 第一个颜色            |
+  | `Vector4` | 第二个颜色           |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 两个颜色的和  |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Multiply Color (颜色相乘)**</yel> - 将两个颜色值相乘
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 第一个颜色            |
+  | `Vector4` | 第二个颜色           |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 两个颜色的积 |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Lerp Color (颜色插值)**</yel> - 在两个颜色之间进行插值
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 起始颜色            |
+  | `Vector4` | 结束颜色              |
+  | `Float`   | 插值因子 (T)|
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 插值后的颜色     |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+### 颜色调整 {.row-span-2}
+
+<yel>**Saturation (饱和度)**</yel> - 调整输入颜色的饱和度
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 输入颜色            |
+  | `Float`   | 饱和度因子      |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 调整后的颜色         |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Contrast (对比度)**</yel> - 调整输入颜色的对比度
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 输入颜色            |
+  | `Float`   | 对比度因子        |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 调整后的颜色         |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Hue (色相)**</yel> - 调整输入颜色的色相
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 输入颜色            |
+  | `Float`   | 色相偏移量       |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 色相偏移后的颜色 |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Invert Colors (反色)**</yel> - 反转输入颜色
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 输入颜色            |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 反转后的颜色         |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Replace Color (替换颜色)**</yel> - 将输入中的特定颜色替换为新颜色
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 输入颜色            |
+  | `Vector4` | 目标颜色           |
+  | `Vector4` | 替换颜色      |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 替换值后的颜色 |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**White Balance (白平衡)**</yel> - 调整输入颜色的白平衡
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 输入颜色            |
+  | `Float`   | 色温值      |
+  | `Float`   | 色调值             |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 调整后的颜色         |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+### 通道操作
+
+<yel>**Channel Mixer (通道混合器)**</yel> - 独立修改颜色通道
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 输入颜色            |
+  | `Float`   | 红色通道乘数 |
+  | `Float`   | 绿色通道乘数 |
+  | `Float`   | 蓝色通道乘数 |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 修改后的颜色         |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+## 4. 纹理处理 {.cols-2}
+
+### 采样
+
+<yel>**Sample Texture (采样纹理)**</yel> - 从纹理中检索颜色数据
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Texture (sampler)` | 纹理输入  |
+  | `Vector2` | UV 坐标         |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 来自纹理的颜色数据 |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**UV (UV坐标)**</yel> - 提供用于纹理映射的 UV 坐标
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | /     | 无输入               |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector2` | UV 坐标         |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+### 操作 {.row-span-2}
+
+<yel>**Tiling Offset (平铺偏移)**</yel> - 调整纹理的平铺和偏移
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector2` | 平铺值          |
+  | `Vector2` | 偏移值          |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector2` | 修改后的 UV 坐标 |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Distortion (扭曲)**</yel> - 扭曲对象表面
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Float`   | 扭曲强度    |
+  | `Vector2` | UV 坐标         |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector2` | 扭曲后的 UV 坐标  |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Parallax (视差)**</yel> - 使用视差映射模拟深度
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | Texture (sampler) | 输入纹理  |
+  | `Vector2` | UV 坐标         |
+  | `Float`   | 深度值            |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector2` | 调整后的 UV 坐标|
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+## 5. 特效 {.cols-2}
+
+### 视觉特效 {.row-span-2}
+
+<yel>**Fresnel Effect (菲涅尔效应)**</yel> - 在对象边缘创建辉光效果
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector3` | 视图方向         |
+  | `Float`   | 特效强度    |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Float`   | 菲涅尔效应值   |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+<yel>**Dissolve (溶解)**</yel> - 生成溶解过渡效果
+
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Texture (sampler)` | 输入纹理  |
+  | `Float`   | 溶解阈值     |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector4` | 溶解效果输出 |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+### 反射 {.row-span-2}
+
+<yel>**Reflection (反射)**</yel> - 基于表面法线方向进行反射
+- **输入**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector3` | 入射方向     |
+  | `Vector3` | 表面法线         |
+
+  {.left-text}
+
+- **输出**
+  - |-|-|
+  | -------- | ---------------------- |
+  | `Vector3` | 反射方向    |
+
+  {.left-text}
+
+{.shortcuts .marker-round .cols-2}
+
+
+
+## 自定义函数节点
+
+### 创建自定义函数节点的步骤 {.col-span-2}
+
+- **步骤 1：在 Shader Graph 中添加自定义函数节点**
+
+  - 在 Shader Graph 中右键单击并选择 **“Create Node”** > **“Custom Function”**。
+  - 选择 **“String”**（用于内联 HLSL 代码）或 **“File”**（用于外部 HLSL 文件）。
+
+- **步骤 2：在 Shader Graph 中配置节点**
+  - 设置节点的名称。
+  - 如果使用 **“File”**，请确保外部 HLSL 文件名与 HLSL 文件中定义的函数名完全匹配。这可确保在 Shader Graph 管道中正确引用该函数。
   
-    <yel>**Example**</yel>: If the file is named `CustomFunction.hlsl`, the function inside it should also be named `CustomFunction`.
+    <yel>**示例**</yel>：如果文件名为 `CustomFunction.hlsl`，则其中的函数也应命名为 `CustomFunction`。
 
-- **Step 3: Add Inputs/Outputs in Shader Graph**
-  - Define the required `Inputs` and `Outputs` for the custom function in Shader Graph. These will automatically generate ports for you to connect other nodes.
+- **步骤 3：在 Shader Graph 中添加输入/输出**
+  - 在 Shader Graph 中为自定义函数定义所需的 `Inputs` 和 `Outputs`。这些将自动为您生成端口以连接其他节点。
   
-    <yel>**Example**</yel>:
-    - **Inputs**: `Float` (time), `Vector3` (position)
-    - **Outputs**: `Vector3` (new position)
+    <yel>**示例**</yel>：
+    - **输入**：`Float` (时间), `Vector3` (位置)
+    - **输出**：`Vector3` (新位置)
     
-    In the custom HLSL code, the `in` and `out` parameters correspond to these inputs and outputs:
-    - `in` represents the data coming into the function (e.g., `time`, `position`).
-    - `out` defines the return value (e.g., modified `position`).
+    在自定义 HLSL 代码中，`in` 和 `out` 参数对应于这些输入和输出：
+    - `in` 表示进入函数的数据（例如，`time`、`position`）。
+    - `out` 定义返回值（例如，修改后的 `position`）。
 
-- **Step 4: Write HLSL Code**
+- **步骤 4：编写 HLSL 代码**
 
-  - If using the **"String"** option:
-    - Directly write the HLSL code inside the custom function node editor in Shader Graph.
-    - Ensure that the `in` and `out` parameters match the inputs and outputs you defined in Shader Graph.
+  - 如果使用 **“String”** 选项：
+    - 直接在 Shader Graph 中的自定义函数节点编辑器内编写 HLSL 代码。
+    - 确保 `in` 和 `out` 参数与您在 Shader Graph 中定义的输入和输出匹配。
 
-    - <yel>**Example of inline code**</yel> (using **"String"** mode):
-
-      ```cpp
-      float3 CustomPosition(in float time, in float3 position, out float3 newPosition) {
-        newPosition = position + float3(sin(time), cos(time), 0.0);
-        return newPosition;
-      }
-      ```
-  
-  - If using the **"File"** option:
-    - Write the HLSL code in an external `.hlsl` file and reference the file in Shader Graph.
-
-    - <yel>**Example of an external HLSL file**</yel> (using **"File"** mode):
-
-      1. **1. Create an HLSL file** named `CustomPosition.hlsl`.
-
-      2. **2. Write the custom function** inside the file. The `in` and `out` parameters should match the Shader Graph inputs and outputs.
+    - <yel>**内联代码示例**</yel> (使用 **“String”** 模式)：
 
       ```cpp
       float3 CustomPosition(in float time, in float3 position, out float3 newPosition) {
@@ -795,28 +779,45 @@ intro: |
         return newPosition;
       }
       ```
-
-      3. **3. Save the file** in your project directory, for example, `Assets/Shaders/CustomPosition.hlsl`.
-
-      4. **4. Link the file** in Shader Graph:
-       - In the Custom Function Node, switch to **"File"** mode and reference `CustomPosition.hlsl`.
   
-- **Step 5: Use the Node in Shader Graph**
-  - Connect the custom function node’s input ports to other nodes, such as `Time` and `Position`, to feed data into the custom function.
-  - Connect the output port to apply the function result in the Shader Graph pipeline.
+  - 如果使用 **“File”** 选项：
+    - 在外部 `.hlsl` 文件中编写 HLSL 代码，并在 Shader Graph 中引用该文件。
 
-  - <yel>**Example Pipeline**</yel>:
+    - <yel>**外部 HLSL 文件示例**</yel> (使用 **“File”** 模式)：
 
-    - **Inputs**: `Time` (as a float) and `Position` (as a vector)
-    - **Outputs**: `Modified Position` (vector with new position)
+      1. **1. 创建一个 HLSL 文件**，名为 `CustomPosition.hlsl`。
+
+      2. **2. 在文件中编写自定义函数**。`in` 和 `out` 参数应与 Shader Graph 输入和输出匹配。
+
+      ```cpp
+      float3 CustomPosition(in float time, in float3 position, out float3 newPosition) {
+        newPosition = position + float3(sin(time), cos(time), 0.0);
+        return newPosition;
+      }
+      ```
+
+      3. **3. 将文件保存在您的项目目录中**，例如 `Assets/Shaders/CustomPosition.hlsl`。
+
+      4. **4. 在 Shader Graph 中链接文件**：
+       - 在自定义函数节点中，切换到 **“File”** 模式并引用 `CustomPosition.hlsl`。
   
-    This would make the custom node update an object's position based on time in the shader.
+- **步骤 5：在 Shader Graph 中使用节点**
+  - 将自定义函数节点的输入端口连接到其他节点（例如 `Time` 和 `Position`），以将数据馈送到自定义函数中。
+  - 连接输出端口以在 Shader Graph 管道中应用函数结果。
+
+  - <yel>**示例管道**</yel>：
+
+    - **输入**：`Time` (浮点型) 和 `Position` (向量)
+    - **输出**：`Modified Position` (带有新位置的向量)
+  
+    这将使自定义节点根据着色器中的时间更新对象的位置。
 
 {.marker-timeline .shortcuts}
 
 
-## Also see {.cols-1}
+## 另请参阅 {.cols-1}
 
-- [Unity Shader Graph documentation](https://docs.unity3d.com/Manual/shader-graph-overview.html)  _(docs.unity3d.com)_  
-- [Tianle Yuan's Unity Visual Effect notes](https://yuantianle.github.io/11_Game_Development/Unity/)
+- [Unity Shader Graph 文档](https://docs.unity3d.com/Manual/shader-graph-overview.html)  _(docs.unity3d.com)_  
+- [Tianle Yuan 的 Unity 视觉效果笔记](https://yuantianle.github.io/11_Game_Development/Unity/)
   _(yuantianle.com)_
+

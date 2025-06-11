@@ -58,7 +58,7 @@ hexo.extend.generator.register("list", function (locals) {
       .findOne({ name: category })
       .posts.sort("-date")
       .map(function (post) {
-        content += `- [${post.title}](https://cheatsheets.zip/${post.path}): ${post.intro.trim()}\n`;
+        content += `- [${post.title}](https://r3f.cn/${post.path}): ${post.intro.trim()}\n`;
       });
     content += `\n</details>\n\n`;
   });

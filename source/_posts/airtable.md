@@ -7,85 +7,85 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 36 keyboard shortcuts found in Airtable
+  一个包含 Airtable 中 36 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### General {.row-span-3}
+### 常规操作 {.row-span-3}
 
-| Shortcut           | Action                                                                                           |
+| 快捷键             | 功能                                                                                             |
 | ------------------ | ------------------------------------------------------------------------------------------------ |
-| `Ctrl` `Z`         | Undo action                                                                                      |
-| `Ctrl` `Shift` `Z` | Redo action                                                                                      |
-| `Ctrl` `P`         | Print the current table view or current expanded record (if inside an expanded record)           |
-| `Ctrl` `J`         | Opens the table switcher in the current base                                                     |
-| `Ctrl` `K`         | Opens the quick base switcher if on the home screen or inside a base                             |
-| `Ctrl` `Shift` `K` | Opens the view switcher in the current base                                                      |
-| `Ctrl` `Shift` `F` | Opens the filter menu in the current view, press enter to create a new filter                    |
-| `Ctrl` `Shift` `D` | Opens the grouped records menu in the current view, press enter to collapse or expand all groups |
-| `Ctrl` `Shift` `S` | Opens the sort menu in the current view, press enter to re-apply the most recent sort            |
-| `Ctrl` `Shift` `\` | Toggles blocks                                                                                   |
-| `Ctrl` `F`         | Opens the find bar, use esc to close it                                                          |
-| `Ctrl` `;`         | Sets the selected date/datetime field to now                                                     |
+| `Ctrl` `Z`         | 撤销操作                                                                                         |
+| `Ctrl` `Shift` `Z` | 重做操作                                                                                         |
+| `Ctrl` `P`         | 打印当前表格视图或当前展开的记录（如果在展开的记录中）                                             |
+| `Ctrl` `J`         | 在当前数据库中打开表格切换器                                                                       |
+| `Ctrl` `K`         | 如果在主屏幕或数据库内部，则打开快速数据库切换器                                                   |
+| `Ctrl` `Shift` `K` | 在当前数据库中打开视图切换器                                                                       |
+| `Ctrl` `Shift` `F` | 在当前视图中打开筛选菜单，按 Enter 创建新筛选器                                                    |
+| `Ctrl` `Shift` `D` | 在当前视图中打开分组记录菜单，按 Enter 折叠或展开所有分组                                          |
+| `Ctrl` `Shift` `S` | 在当前视图中打开排序菜单，按 Enter 重新应用最近的排序                                              |
+| `Ctrl` `Shift` `\` | 切换应用面板                                                                                     |
+| `Ctrl` `F`         | 打开查找栏，使用 Esc 关闭                                                                          |
+| `Ctrl` `;`         | 将所选日期/日期时间字段设置为当前时间                                                              |
 
 {.shortcuts}
 
-### Grid View {.row-span-3}
+### 网格视图 {.row-span-3}
 
-| Shortcut                  | Action                                                                                                  |
-| ------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `Ctrl` `C`                | Copy a cell or range of cells                                                                           |
-| `Ctrl` `X`                | Cut a cell or range of cells                                                                            |
-| `Ctrl` `V`                | Paste a cell (if you select a range of cells, you can paste the same value into multiple cells at once) |
-| `Space`                   | Expand the active record, use esc to return to the table                                                |
-| `Shift` `Space`           | Expand the active cell, you can then use arrow keys to move to different cells                          |
-| `PgUp`                    | Scrolls one screen up                                                                                   |
-| `PgDn`                    | Scrolls one screen down                                                                                 |
-| `Alt` `PgUp`              | Scrolls one screen left                                                                                 |
-| `Alt` `PgDn`              | Scrolls one screen right                                                                                |
-| `Ctrl` `(arrows)`         | Jump to the edge of the table                                                                           |
-| `Ctrl` `Shift` `(arrows)` | Jump to the edge of table and select cells                                                              |
-| `Shift` `(arrows)`        | Select range of cells, you can also click while holding shift to select cells                           |
-| `Shift` `Enter`           | Insert a record below the selected cell                                                                 |
-| `Enter`                   | Edit the selected cell                                                                                  |
-
-{.shortcuts}
-
-### Gallery View
-
-| Shortcut         | Action                    |
-| ---------------- | ------------------------- |
-| `Ctrl` `Up/Down` | Scroll to edge of gallery |
+| 快捷键                    | 功能                                                                                                   |
+| ------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `Ctrl` `C`                | 复制单元格或单元格区域                                                                                 |
+| `Ctrl` `X`                | 剪切单元格或单元格区域                                                                                 |
+| `Ctrl` `V`                | 粘贴单元格（如果选择单元格区域，可以一次将相同的值粘贴到多个单元格中）                                   |
+| `Space`                   | 展开活动记录，使用 Esc 返回表格                                                                        |
+| `Shift` `Space`           | 展开活动单元格，然后可以使用箭头键移动到不同的单元格                                                   |
+| `PgUp`                    | 向上滚动一屏                                                                                           |
+| `PgDn`                    | 向下滚动一屏                                                                                           |
+| `Alt` `PgUp`              | 向左滚动一屏                                                                                           |
+| `Alt` `PgDn`              | 向右滚动一屏                                                                                           |
+| `Ctrl` `(箭头键)`         | 跳转到表格边缘                                                                                         |
+| `Ctrl` `Shift` `(箭头键)` | 跳转到表格边缘并选择单元格                                                                             |
+| `Shift` `(箭头键)`        | 选择单元格区域，也可以按住 Shift 单击以选择单元格                                                      |
+| `Shift` `Enter`           | 在所选单元格下方插入记录                                                                               |
+| `Enter`                   | 编辑所选单元格                                                                                         |
 
 {.shortcuts}
 
-### Kanban View
+### 画廊视图
 
-| Shortcut       | Action                                        |
-| -------------- | --------------------------------------------- |
-| `Left`         | Scroll kanban board to the left by one stack  |
-| `Right`        | Scroll kanban board to the right by one stack |
-| `Ctrl` `Left`  | Scroll kanban board to the left edge          |
-| `Ctrl` `Right` | Scroll kanban board to the right edge         |
-| `Ctrl` `Up`    | Scroll all stacks to the top                  |
-| `Ctrl` `Down`  | Scroll all stacks to the bottom               |
+| 快捷键           | 功能              |
+| ---------------- | ----------------- |
+| `Ctrl` `Up/Down` | 滚动到画廊边缘    |
 
 {.shortcuts}
 
-### Expanded Record
+### 看板视图
 
-| Shortcut           | Action                                                       |
+| 快捷键         | 功能                                  |
+| -------------- | ------------------------------------- |
+| `Left`         | 将看板向左滚动一个堆叠                |
+| `Right`        | 将看板向右滚动一个堆叠                |
+| `Ctrl` `Left`  | 将看板滚动到左边缘                    |
+| `Ctrl` `Right` | 将看板滚动到右边缘                    |
+| `Ctrl` `Up`    | 将所有堆叠滚动到顶部                  |
+| `Ctrl` `Down`  | 将所有堆叠滚动到底部                  |
+
+{.shortcuts}
+
+### 展开的记录
+
+| 快捷键             | 功能                                                         |
 | ------------------ | ------------------------------------------------------------ |
-| `Ctrl` `Shift` `<` | Move to the previous record while viewing an expanded record |
-| `Ctrl` `Shift` `>` | Move to the next record while viewing an expanded record     |
-| `Esc`              | Close expanded record                                        |
+| `Ctrl` `Shift` `<` | 查看展开记录时移动到上一条记录                                 |
+| `Ctrl` `Shift` `>` | 查看展开记录时移动到下一条记录                                 |
+| `Esc`              | 关闭展开的记录                                               |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Airtable](https://support.airtable.com/hc/en-us/articles/204143385-Airtable-keyboard-shortcuts)
+- [Airtable 键盘快捷键](https://support.airtable.com/hc/en-us/articles/204143385-Airtable-keyboard-shortcuts)
   _(support.airtable.com)_

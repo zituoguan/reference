@@ -8,16 +8,16 @@ tags:
   - text
   - format
 categories:
-  - Programming
-intro: This is a quick reference cheat sheet to the Markdown syntax.
+  - 编程
+intro: 这是 Markdown 语法的快速参考备忘单。
 plugins:
   - copyCode
   - runCode
 ---
 
-## Markdown Quick Reference
+## Markdown 快速参考
 
-### Headers (atx style)
+### 标题 (atx 样式)
 
 <!-- prettier-ignore -->
 ```markdown
@@ -29,7 +29,7 @@ plugins:
 ###### h6
 ```
 
-### Headers (setext style)
+### 标题 (setext 样式)
 
 <!-- prettier-ignore -->
 ```markdown
@@ -40,110 +40,110 @@ Header 2
 --------
 ```
 
-### Blockquotes
+### 块引用
 
 ```markdown
-> This is  
-> a blockquote
+> 这是
+> 一个块引用
 >
-> > Nested  
-> > Blockquote
+> > 嵌套的
+> > 块引用
 ```
 
-### Unordered List {.row-span-2}
+### 无序列表 {.row-span-2}
 
 <!-- prettier-ignore -->
 ```markdown
-* Item 1
-* Item 2
-  * item 3a
-  * item 3b
+* 项目 1
+* 项目 2
+  * 项目 3a
+  * 项目 3b
 ```
 
-or
+或
 
 ```markdown
-- Item 1
-- Item 2
+- 项目 1
+- 项目 2
 ```
 
-or
+或
 
 <!-- prettier-ignore -->
 ```markdown
-_ Item 1
-+ Item 2
+_ 项目 1
++ 项目 2
 ```
 
-or
+或
 
 ```markdown
-- [ ] Checkbox off
-- [x] Checkbox on
+- [ ] 未选复选框
+- [x] 已选复选框
 ```
 
-### Ordered List
+### 有序列表
 
 ```markdown
-1. Item 1
-2. Item 2  
-   a. Item 3a  
-   b. Item 3b
+1. 项目 1
+2. 项目 2
+   a. 项目 3a
+   b. 项目 3b
 ```
 
-### Links
+### 链接
 
 ```markdown
-[link](http://google.com)
+[链接](http://google.com)
 
-[link][google]  
+[链接][google]
 [google]: http://google.com
 
 <http://google.com>
 ```
 
-### Emphasis
+### 强调
 
 <!-- prettier-ignore -->
 ```markdown
-*italic*  
-_italic_
+*斜体*
+_斜体_
 
-**bold**  
-__bold__
+**粗体**
+__粗体__
 
-`inline code`  
-~~struck out~~
+`行内代码`
+~~删除线~~
 ```
 
-### Horizontal line
+### 水平线
 
-Hyphens
+连字符
 
 <!-- prettier-ignore -->
 ```markdown
 ---
 ```
 
-Asterisks
+星号
 
 <!-- prettier-ignore -->
 ```markdown
 ***
 ```
 
-Underscores
+下划线
 
 <!-- prettier-ignore -->
 ```markdown
 ___
 ```
 
-### Code
+### 代码
 
 ````markdown
 ```javascript
-console.log("This is a block code");
+console.log("这是一个代码块");
 ```
 ````
 
@@ -157,12 +157,12 @@ console.log("This is a block code");
 ```
 
 ```markdown
-    4 space indent makes a code block
+    4 个空格缩进形成一个代码块
 ```
 
-### Escaped code
+### 转义代码
 
-Escaped code blocks can be done with more back ticks on the outside or a different symbol.
+转义代码块可以在外部使用更多的反引号或不同的符号。
 
 <!-- prettier-ignore -->
 `````markdown
@@ -180,72 +180,73 @@ echo hi
 
 `````
 
-#### Inline code
+#### 行内代码
 
 ```markdown
-`Inline code` has back-ticks around it
+`行内代码` 两边有反引号
 ```
 
-### Tables
+### 表格
 
 ```markdown
-| Left column | Center column | Right column |
+| 左对齐列 | 居中列 | 右对齐列 |
 | :---------- | :-----------: | -----------: |
-| Cell 1      |   Centered    |        $1600 |
-| Cell 2      |    Cell 3     |          $12 |
+| 单元格 1      |   居中    |        $1600 |
+| 单元格 2      |    单元格 3     |          $12 |
 ```
 
-Simple style
+简单样式
 
 <!-- prettier-ignore -->
 ```markdown
-Left column | Center column | Right column
+左对齐列 | 居中列 | 右对齐列
 :----------:|:-------------:|:-----------:
-   Cell 1   |   Centered    |    $1600
-   Cell 2   |    Cell 3     |     $12
+   单元格 1   |   居中    |    $1600
+   单元格 2   |    单元格 3     |     $12
 ```
 
-A markdown table generator: [tableconvert.com](https://tableconvert.com/)
+一个 Markdown 表格生成器：[tableconvert.com](https://tableconvert.com/)
 
-### Images {.col-span-2}
+### 图片 {.col-span-2}
 
 ```markdown
 ![GitHub Logo](/images/logo.png)
 
-![Alt Text](url)
+![替代文本](url)
 ```
 
-#### Image with link
+#### 带链接的图片
 
 ```markdown
 [![GitHub Logo](/images/logo.png)](https://github.com/)
 
-[![Alt Text](image_url)](link_url)
+[![替代文本](image_url)](link_url)
 ```
 
-#### Reference style
+#### 引用样式
 
 ```markdown
-![alt text][logo]
+![替代文本][logo]
 
-[logo]: /images/logo.png "Logo Title"
+[logo]: /images/logo.png "Logo 标题"
 ```
 
-### Backslash escapes
+### 反斜杠转义
 
-| Characters        | Escape                | Description           |
+| 字符              | 转义                  | 描述                  |
 | ----------------- | --------------------- | :-------------------- |
-| <code>\\</code>   | <code>\\\\</code>     | Backslash             |
-| <code>\`</code>   | <code>\\\`</code>     | Backtick              |
-| <code>\*</code>   | <code>\\\*</code>     | Asterisk              |
-| <code>\_</code>   | <code>\\\_</code>     | Underscore            |
-| <code>\{\}</code> | <code>\\\{\\\}</code> | Curly braces          |
-| <code>\[\]</code> | <code>\\\[\\\]</code> | Square brackets       |
-| <code>\(\)</code> | <code>\\\(\\\)</code> | Parentheses           |
-| <code>\#</code>   | <code>\\\#</code>     | Hash mark             |
-| <code>\+</code>   | <code>\\\+</code>     | Plus sign             |
-| <code>\-</code>   | <code>\\\-</code>     | Minus sign \(hyphen\) |
-| <code>\.</code>   | <code>\\\.</code>     | Dot                   |
-| <code>\!</code>   | <code>\\\!</code>     | Exclamation mark      |
+| <code>\\</code>   | <code>\\\\</code>     | 反斜杠                |
+| <code>\`</code>   | <code>\\\`</code>     | 反引号                |
+| <code>\*</code>   | <code>\\\*</code>     | 星号                  |
+| <code>\_</code>   | <code>\\\_</code>     | 下划线                |
+| <code>\{\}</code> | <code>\\\{\\\}</code> | 大括号                |
+| <code>\[\]</code> | <code>\\\[\\\]</code> | 方括号                |
+| <code>\(\)</code> | <code>\\\(\\\)</code> | 圆括号                |
+| <code>\#</code>   | <code>\\\#</code>     | 井号                  |
+| <code>\+</code>   | <code>\\\+</code>     | 加号                  |
+| <code>\-</code>   | <code>\\\-</code>     | 减号（连字符）        |
+| <code>\.</code>   | <code>\\\.</code>     | 点号                  |
+| <code>\!</code>   | <code>\\\!</code>     | 感叹号                |
 
 {.show-header}
+

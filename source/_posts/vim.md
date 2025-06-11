@@ -4,27 +4,27 @@ date: 2020-11-25 18:28:43
 background: bg-[#46933f]
 tags:
   - vi
-  - text
-  - editor
-  - terminal
-  - shortcut
+  - 文本
+  - 编辑器
+  - 终端
+  - 快捷键
 categories:
-  - Toolkit
+  - 工具箱
 intro: |
-  A useful collection of [Vim](http://www.vim.org/) 8.2 quick reference cheat sheets to help you learn vim editor faster.
+  一份实用的 [Vim](http://www.vim.org/) 8.2 快速参考备忘单集合，助您更快学习 Vim 编辑器。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门
 
-### Motion Diagrams {.row-span-2}
+### 移动示意图 {.row-span-2}
 
 ```bash
-▼/▶ Cursor   ▽/▷ Target
+▼/▶ 光标   ▽/▷ 目标
 ```
 
-#### Left-right motions
+#### 左右移动
 
 ```bash
 ┌───────────── |
@@ -36,745 +36,744 @@ plugins:
 │  │  ││ │ ┌── b      e ─┐ │ │  ││    │
 │  │  ││ │ │  ┌h      l┐ │ │ │  ││    │
 ▽  ▽  ▽▽ ▽ ▽  ▽▼      ▼▽ ▽ ▽ ▽  ▽▽    ▽
-   echo "A cheatsheet from quickref.me"
+   echo "一份来自 quickref.me 的备忘单"
 ```
 
-#### Up-down motions
+#### 上下移动
 
 ```bash
-                 - SCREEN 1 START
+                 - 屏幕 1 开始
    ┌─┬─────────▷ #!/usr/bin/python
    │ │     ┌───▷
-   │ │     │     print("Hello")
+   │ │     │     print("你好")
    │ │     { } ▶ print("Vim")
    │ │       │   print("!")
    │ │       └─▷
-   │ │ ┌───┬───▷ print("Welcome")
-G gg H M L k j ▶ print("to")
-│        │   └─▷ print("cheatsheets.zip")
+   │ │ ┌───┬───▷ print("欢迎")
+G gg H M L k j ▶ print("来到")
+│        │   └─▷ print("r3f.cn")
 │        │       print("/vim")
 │        │
 │        └─────▷
-│                - SCREEN 1 END
-└──────────────▷ print("SCREEN 2")
+│                - 屏幕 1 结束
+└──────────────▷ print("屏幕 2")
 ```
 
-### Motions {.row-span-2}
+### 移动 {.row-span-2}
 
-| Shortcut                       | Description       |
+| 快捷键                       | 描述       |
 | ------------------------------ | :---------------- |
-| `h` _\|_ `j` _\|_ `k` _\|_ `l` | Arrow keys        |
-| `<C-u>` _/_ `<C-d>`            | Half-page up/down |
-| `<C-b>` _/_ `<C-f>`            | Page up/down      |
+| `h` _\|_ `j` _\|_ `k` _\|_ `l` | 方向键        |
+| `<C-u>` _/_ `<C-d>`            | 上/下翻半页 |
+| `<C-b>` _/_ `<C-f>`            | 上/下翻页      |
 
 {.shortcuts}
 
-#### Words{.left-text}
+#### 单词{.left-text}
 
-| Shortcut     | Description               |
+| 快捷键     | 描述               |
 | ------------ | :------------------------ |
-| `b` _/_ `w`  | Previous/Next word        |
-| `ge` _/_ `e` | Previous/Next end of word |
+| `b` _/_ `w`  | 上一个/下一个单词        |
+| `ge` _/_ `e` | 上一个/下一个单词词尾 |
 
 {.shortcuts}
 
-#### Line
+#### 行
 
-| Shortcut             | Description                 |
+| 快捷键             | 描述                 |
 | -------------------- | :-------------------------- |
-| `0` _(zero)_ _/_ `$` | Start/End of line           |
-| `^`                  | Start of line _(non-blank)_ |
+| `0` _(零)_ _/_ `$` | 行首/行尾           |
+| `^`                  | 行首 _(非空白字符)_ |
 
 {.shortcuts}
 
-#### Character
+#### 字符
 
-| Shortcut                            | Description                         |
+| 快捷键                            | 描述                         |
 | ----------------------------------- | :---------------------------------- |
-| `Fe` _/_ `fe`                       | Move to previous/next `e`           |
-| `To` _/_ `to`                       | Move before/after previous/next `o` |
-| <code>\|</code>_/_ <code>n\|</code> | Go to first/`n`th column            |
+| `Fe` _/_ `fe`                       | 移动到上一个/下一个 `e`           |
+| `To` _/_ `to`                       | 移动到上一个/下一个 `o` 之前/之后 |
+| <code>\|</code>_/_ <code>n\|</code> | 跳转到第一列/第 `n` 列            |
 
 {.shortcuts}
 
-#### Document
+#### 文档
 
-| Shortcut       | Description              |
+| 快捷键       | 描述              |
 | -------------- | :----------------------- |
-| `gg` _/_ `G`   | First/Last line          |
-| `:n` _\|_ `nG` | Go to line `n`           |
-| `}` _/_ `{`    | Next/Previous empty line |
+| `gg` _/_ `G`   | 第一行/最后一行          |
+| `:n` _\|_ `nG` | 跳转到第 `n` 行           |
+| `}` _/_ `{`    | 下一个/上一个空行 |
 
 {.shortcuts}
 
-#### Window
+#### 窗口
 
-| Shortcut               | Description                 |
+| 快捷键               | 描述                 |
 | ---------------------- | :-------------------------- |
-| `H` _/_ `M` _/_ `L`    | Top/Middle/Bottom screen    |
-| `zt` _/_ `zz` _/_ `zb` | Top/Center/Bottom this line |
+| `H` _/_ `M` _/_ `L`    | 屏幕顶部/中部/底部    |
+| `zt` _/_ `zz` _/_ `zb` | 当前行置于屏幕顶部/中部/底部 |
 
 {.shortcuts}
 
-### Insert Mode
+### 插入模式
 
-| Shortcut               | Description                   |
+| 快捷键               | 描述                   |
 | ---------------------- | :---------------------------- |
-| `i` _/_ `a`            | Insert before/after cursor    |
-| `I` _/_ `A`            | Insert start/end of line      |
-| `o` _/_ `O` _(letter)_ | Insert new line below/above   |
-| `s` _/_ `S`            | Delete char/line and insert   |
-| `C` _/_ `cc`           | Change to end of/current line |
-| `gi`                   | Insert at last insert point   |
-| `Esc` _\|_ `<C-[>`     | Exit insert mode              |
+| `i` _/_ `a`            | 在光标前/后插入    |
+| `I` _/_ `A`            | 在行首/行尾插入      |
+| `o` _/_ `O` _(字母)_ | 在下方/上方插入新行   |
+| `s` _/_ `S`            | 删除字符/行并插入   |
+| `C` _/_ `cc`           | 修改至行尾/当前行 |
+| `gi`                   | 在上次插入点插入   |
+| `Esc` _\|_ `<C-[>`     | 退出插入模式              |
 
 {.shortcuts}
 
-### Saving and Exiting
+### 保存与退出
 
-| Shortcut                  | Description             |
+| 快捷键                  | 描述             |
 | ------------------------- | :---------------------- |
-| `:w`                      | Save                    |
-| `:q`                      | Close file              |
-| `:wq` _\|_ `:x` _\|_ `ZZ` | Save and quit           |
-| `:wqa`                    | Save and quit all files |
-| `:q!` _\|_ `ZQ`           | Force quit              |
-| `:qa`                     | Close all files         |
-| `:qa!`                    | Force quit all files    |
-| `:w` now.txt              | Write to `now.txt`      |
-| `:sav` new.txt            | Save and edit `new.txt` |
-| `:w` !sudo tee %          | Write to readonly file  |
+| `:w`                      | 保存                    |
+| `:q`                      | 关闭文件              |
+| `:wq` _\|_ `:x` _\|_ `ZZ` | 保存并退出           |
+| `:wqa`                    | 保存并退出所有文件 |
+| `:q!` _\|_ `ZQ`           | 强制退出              |
+| `:qa`                     | 关闭所有文件         |
+| `:qa!`                    | 强制退出所有文件    |
+| `:w` now.txt              | 写入 `now.txt`      |
+| `:sav` new.txt            | 保存并编辑 `new.txt` |
+| `:w` !sudo tee %          | 写入只读文件  |
 
 {.shortcuts}
 
-### Normal Mode
+### 普通模式
 
-| Shortcut              | Description                  |
+| 快捷键              | 描述                  |
 | --------------------- | :--------------------------- |
-| `r`                   | Replace one character        |
-| `R`                   | Enter Replace mode           |
-| `u` _/_ `3u`          | Undo changes `1` / `3` times |
-| `U`                   | Undo changes on one line     |
-| `J`                   | Join with next line          |
-| `<C-r>` _/_ 5 `<C-r>` | Redo changes `1` / `5` times |
+| `r`                   | 替换一个字符        |
+| `R`                   | 进入替换模式           |
+| `u` _/_ `3u`          | 撤销 `1` / `3` 次更改 |
+| `U`                   | 撤销对一行的更改     |
+| `J`                   | 与下一行合并           |
+| `<C-r>` _/_ 5 `<C-r>` | 重做 `1` / `5` 次更改 |
 
 {.shortcuts}
 
-### Cut and paste {.row-span-2}
+###剪切和粘贴 {.row-span-2}
 
-| Shortcut         | Description                   |
+| 快捷键         | 描述                   |
 | ---------------- | :---------------------------- |
-| `x`              | Delete character _(Cut)_      |
-| `p` _/_ `P`      | Paste after/before            |
-| `xp`             | Swap two characters           |
-| `D`              | Delete to end of line _(Cut)_ |
-| `dw`             | Delete word _(Cut)_           |
-| `dd`             | Delete line _(Cut)_           |
-| `ddp`            | Swap two lines                |
-| `yy`             | Yank line _(Copy)_            |
-| `"*p` _\|_ `"+p` | Paste from system clipboard   |
-| `"*y` _\|_ `"+y` | Paste to system clipboard     |
+| `x`              | 删除字符 _(剪切)_      |
+| `p` _/_ `P`      | 在之后/之前粘贴            |
+| `xp`             | 交换两个字符           |
+| `D`              | 删除至行尾 _(剪切)_ |
+| `dw`             | 删除单词 _(剪切)_           |
+| `dd`             | 删除行 _(剪切)_           |
+| `ddp`            | 交换两行           |
+| `yy`             | 复制行 _(复制)_           |
+| `"*p` _\|_ `"+p` | 从系统剪贴板粘贴   |
+| `"*y` _\|_ `"+y` | 复制到系统剪贴板   |
 
 {.shortcuts}
 
-#### In visual mode
+#### 可视模式下
 
-| Shortcut     | Description              |
+| 快捷键     | 描述              |
 | ------------ | :----------------------- |
-| `d` _\|_ `x` | Delete selection _(Cut)_ |
-| `s`          | Replace selection        |
-| `y`          | Yank selection _(Copy)_  |
+| `d` _\|_ `x` | 删除选中内容 _(剪切)_ |
+| `s`          | 替换选中内容        |
+| `y`          | 复制选中内容 _(复制)_  |
 
 {.shortcuts}
 
-### Repeating
+### 重复
 
-| Shortcut | Description                                 |
+| 快捷键 | 描述                                 |
 | -------- | :------------------------------------------ |
-| `.`      | Repeat last command                         |
-| `;`      | Repeat latest `f`, `t`, `F` or `T`          |
-| `,`      | Repeat latest `f`, `t`, `F` or `T` reversed |
-| `&`      | Repeat last `:s`                            |
-| `@:`     | Repeat a command-line command               |
+| `.`      | 重复上一个命令                         |
+| `;`      | 重复最新的 `f`, `t`, `F` 或 `T`          |
+| `,`      | 反向重复最新的 `f`, `t`, `F` 或 `T` |
+| `&`      | 重复上一个 `:s`                            |
+| `@:`     | 重复一个命令行命令               |
 
 {.shortcuts}
 
-### Visual mode
+### 可视模式
 
-| Shortcut    | Description             |
+| 快捷键    | 描述             |
 | ----------- | :---------------------- |
-| `v`         | Enter visual mode       |
-| `V`         | Enter visual line mode  |
-| `<C-v>`     | Enter visual block mode |
-| `ggVG`      | Select all text         |
-| `>` _/_ `<` | Shift text right/left   |
+| `v`         | 进入可视模式       |
+| `V`         | 进入可视行模式  |
+| `<C-v>`     | 进入可视块模式 |
+| `ggVG`      | 选中所有文本         |
+| `>` _/_ `<` | 文本右移/左移   |
 
 {.shortcuts}
 
-### Macros
+### 宏
 
 | -     | -                     |
 | ----- | :-------------------- |
-| `qi`  | Record macro `i`      |
-| `q`   | Stop recording macro  |
-| `@i`  | Run macro `i`         |
-| `7@i` | Run macro `i` 7 times |
-| `@@`  | Repeat last macro     |
+| `qi`  | 录制宏 `i`      |
+| `q`   | 停止录制宏  |
+| `@i`  | 运行宏 `i`         |
+| `7@i` | 运行宏 `i` 7 次 |
+| `@@`  | 重复上一个宏     |
 
 {.shortcuts}
 
-You can save macro for any letters not just `i`
+你可以为任何字母保存宏，不仅仅是 `i`
 
-## Vim Operators
+## Vim 操作符
 
-### Usage {.secondary}
+### 用法 {.secondary}
 
-| Shortcut | Description  |
+| 快捷键 | 描述  |
 | -------- | :----------- |
 | `d`      | <yel>w</yel> |
-| Operator | Motion       |
+| 操作符 | 移动       |
 
-Combine [operators](#available-operators) with [motions](#motions) to use them
+组合[操作符](#available-operators)和[移动](#motions)来使用它们
 
-### Available Operators {.row-span-2}
+### 可用操作符 {.row-span-2}
 
-| Shortcut | Description                     |
+| 快捷键 | 描述                     |
 | -------- | :------------------------------ |
-| `d`      | Delete                          |
-| `y`      | Yank _(copy)_                   |
-| `c`      | Change _(delete then insert)_   |
-| `p`      | Paste                           |
-| `=`      | Formats code                    |
-| `g~`     | Toggle case                     |
-| `gU`     | Uppercase                       |
-| `gu`     | Lowercase                       |
-| `>`      | Indent right                    |
-| `<`      | Indent left                     |
-| `!`      | Filter through external program |
+| `d`      | 删除                          |
+| `y`      | 复制 _(复制)_                   |
+| `c`      | 修改 _(删除后插入)_   |
+| `p`      | 粘贴                           |
+| `=`      | 格式化代码                    |
+| `g~`     | 切换大小写                     |
+| `gU`     | 转为大写                       |
+| `gu`     | 转为小写                       |
+| `>`      | 右缩进                     |
+| `<`      | 左缩进                     |
+| `!`      | 通过外部程序过滤 |
 
-### Examples {.row-span-2}
+### 示例 {.row-span-2}
 
-| Combination          | Description                           |
+| 组合          | 描述                           |
 | -------------------- | :------------------------------------ |
-| `d`<yel>d</yel>      | Delete current line                   |
-| `d`<yel>j</yel>      | Delete two lines                      |
-| `d`<yel>w</yel>      | Delete to next word                   |
-| `d`<yel>b</yel>      | Delete to beginning of word           |
-| `d`<yel>fa</yel>     | Delete until `a` char                 |
-| `d`<yel>/hello</yel> | Delete until `hello`                  |
-| `c`<yel>c</yel>      | Change current line, synonym with `S` |
-| `y`<yel>y</yel>      | Copy current line                     |
-| `>`<yel>j</yel>      | Indent 2 lines                        |
-| gg`d`<yel>G</yel>    | Delete a complete document            |
-| gg`=`<yel>G</yel>    | Indent a complete document            |
-| gg`y`<yel>G</yel>    | Copy a whole document                 |
+| `d`<yel>d</yel>      | 删除当前行                   |
+| `d`<yel>j</yel>      | 删除两行                      |
+| `d`<yel>w</yel>      | 删除到下一个单词                   |
+| `d`<yel>b</yel>      | 删除到单词开头           |
+| `d`<yel>fa</yel>     | 删除直到字符 `a`                 |
+| `d`<yel>/hello</yel> | 删除直到 `hello`                  |
+| `c`<yel>c</yel>      | 修改当前行，与 `S` 同义 |
+| `y`<yel>y</yel>      | 复制当前行                     |
+| `>`<yel>j</yel>      | 缩进 2 行                        |
+| gg`d`<yel>G</yel>    | 删除整个文档            |
+| gg`=`<yel>G</yel>    | 缩进整个文档            |
+| gg`y`<yel>G</yel>    | 复制整个文档            |
 
 {.show-header}
 
-### Counts
+### 计数
 
 ```
-[count] <operator> <motion>
-<operator> [count] <motion>
+[计数] <操作符> <移动>
+<操作符> [计数] <移动>
 ```
 
 ---
 
-| Combination      | Description                |
+| 组合      | 描述                |
 | ---------------- | :------------------------- |
-| 2`d`<yel>d</yel> | Delete `2` lines           |
-| 6`y`<yel>y</yel> | Copy `6` lines             |
-| `d`3<yel>w</yel> | Delete `3` words           |
-| `d`5<yel>j</yel> | Delete `5` lines downwards |
-| `>`4<yel>k</yel> | Indent `4` lines upwards   |
+| 2`d`<yel>d</yel> | 删除 `2` 行           |
+| 6`y`<yel>y</yel> | 复制 `6` 行             |
+| `d`3<yel>w</yel> | 删除 `3` 个单词           |
+| `d`5<yel>j</yel> | 向下删除 `5` 行 |
+| `>`4<yel>k</yel> | 向上缩进 `4` 行   |
 
-## Vim Text objects
+## Vim 文本对象
 
-### Usage {.secondary}
+### 用法 {.secondary}
 
-<!-- Confusing and should be fixed -->
+<!-- 令人困惑，应予以修正 -->
 
-| Shortcut |              Description               | -            |
+| 快捷键 |              描述               | -            |
 | -------- | :------------------------------------: | :----------- |
 | `v`      |     <pur>i</pur> _/_ <pur>a</pur>      | <yel>p</yel> |
-| Operator | <pur>i</pur>nner _/_ <pur>a</pur>round | Text object  |
+| 操作符 | <pur>i</pur>nner _/_ <pur>a</pur>round | 文本对象  |
 
-Operate with an [operator](#available-operators) inner or around text blocks
+使用[操作符](#available-operators)对文本块内部或周围进行操作
 
-### Text objects {.row-span-2}
+### 文本对象 {.row-span-2}
 
-| Shortcut                                             | Description                            |
+| 快捷键                                             | 描述                            |
 | ---------------------------------------------------- | :------------------------------------- |
-| <yel>p</yel>                                         | Paragraph                              |
-| <yel>w</yel>                                         | Word                                   |
-| <yel>W</yel>                                         | WORD <br/>_(surrounded by whitespace)_ |
-| <yel>s</yel>                                         | Sentence                               |
-| <yel>[</yel> <yel>(</yel> <yel>{</yel> <yel>\<</yel> | A [], (), or {} block                  |
-| <yel>]</yel> <yel>)</yel> <yel>}</yel> <yel>\></yel> | A [], (), or {} block                  |
-| <yel>'</yel> <yel>"</yel> <yel>\`</yel>              | A quoted string                        |
-| <yel>b</yel>                                         | A block [(                             |
-| <yel>B</yel>                                         | A block in [{                          |
-| <yel>t</yel>                                         | A HTML tag block                       |
+| <yel>p</yel>                                         | 段落                              |
+| <yel>w</yel>                                         | 单词                                   |
+| <yel>W</yel>                                         | 大写单词 <br/>_(被空白包围)_ |
+| <yel>s</yel>                                         | 句子                               |
+| <yel>[</yel> <yel>(</yel> <yel>{</yel> <yel>\<</yel> | 一个 [], (), 或 {} 块                  |
+| <yel>]</yel> <yel>)</yel> <yel>}</yel> <yel>\></yel> | 一个 [], (), 或 {} 块                  |
+| <yel>'</yel> <yel>"</yel> <yel>\`</yel>              | 一个引号括起来的字符串                        |
+| <yel>b</yel>                                         | 一个块 [(                             |
+| <yel>B</yel>                                         | 一个块 [{                          |
+| <yel>t</yel>                                         | 一个 HTML 标签块                       |
 
-See `:help text-objects`
+参见 `:help text-objects`
 
-### Delete
+### 删除
 
-| Shortcut                    | Description                           |
+| 快捷键                    | 描述                           |
 | --------------------------- | :------------------------------------ |
-| `d`<pur>i</pur><yel>w</yel> | Delete inner word                     |
-| `d`<pur>i</pur><yel>s</yel> | Delete inner sentence                 |
-| `d`<pur>i</pur><yel>"</yel> | Delete in quotes                      |
-| `d`<pur>a</pur><yel>"</yel> | Delete in quotes _(including quotes)_ |
-| `d`<pur>i</pur><yel>p</yel> | Delete a paragraph                    |
+| `d`<pur>i</pur><yel>w</yel> | 删除内部单词                     |
+| `d`<pur>i</pur><yel>s</yel> | 删除内部句子                 |
+| `d`<pur>i</pur><yel>"</yel> | 删除引号内内容                      |
+| `d`<pur>a</pur><yel>"</yel> | 删除引号内内容 _(包括引号)_ |
+| `d`<pur>i</pur><yel>p</yel> | 删除一个段落                    |
 
-### Selections
+### 选择
 
-| Shortcut                                            | Description                               |
+| 快捷键                                            | 描述                               |
 | --------------------------------------------------- | :---------------------------------------- |
-| `v`<pur>i</pur><yel>"</yel>                         | Select inner quotes "`...`{.underline}"   |
-| `v`<pur>a</pur><yel>"</yel>                         | Select quotes `"..."`{.underline}         |
-| `v`<pur>i</pur><yel>[</yel>                         | Select inner brackets [`...`{.underline}] |
-| `v`<pur>a</pur><yel>[</yel>                         | Select brackets `[...]`{.underline}       |
-| `v`<pur>i</pur><yel>w</yel>                         | Select inner word                         |
-| `v`<pur>i</pur><yel>p</yel>                         | Select inner paragraph                    |
-| `v`<pur>i</pur><yel>p</yel><pur>i</pur><yel>p</yel> | Select more paragraph                     |
+| `v`<pur>i</pur><yel>"</yel>                         | 选择引号内内容 "`...`{.underline}"   |
+| `v`<pur>a</pur><yel>"</yel>                         | 选择引号 `"..."`{.underline}         |
+| `v`<pur>i</pur><yel>[</yel>                         | 选择方括号内内容 [`...`{.underline}] |
+| `v`<pur>a</pur><yel>[</yel>                         | 选择方括号 `[...]`{.underline}       |
+| `v`<pur>i</pur><yel>w</yel>                         | 选择内部单词                         |
+| `v`<pur>i</pur><yel>p</yel>                         | 选择内部段落                     |
+| `v`<pur>i</pur><yel>p</yel><pur>i</pur><yel>p</yel> | 选择更多段落                     |
 
-### Misc
+### 其他
 
-| Shortcut                    | Description                          |
+| 快捷键                    | 描述                          |
 | --------------------------- | :----------------------------------- |
-| `c`<pur>i</pur><yel>w</yel> | Change inner word                    |
-| `c`<pur>i</pur><yel>"</yel> | Change inner quotes                  |
-| `c`<pur>i</pur><yel>t</yel> | Change inner tags (HTML)             |
-| `c`<pur>i</pur><yel>p</yel> | Change inner paragraph               |
-| `y`<pur>i</pur><yel>p</yel> | Yank inner paragraph                 |
-| `y`<pur>a</pur><yel>p</yel> | Yank paragraph _(including newline)_ |
+| `c`<pur>i</pur><yel>w</yel> | 修改内部单词                    |
+| `c`<pur>i</pur><yel>"</yel> | 修改引号内内容                  |
+| `c`<pur>i</pur><yel>t</yel> | 修改内部标签 (HTML)             |
+| `c`<pur>i</pur><yel>p</yel> | 修改内部段落                  |
+| `y`<pur>i</pur><yel>p</yel> | 复制内部段落                 |
+| `y`<pur>a</pur><yel>p</yel> | 复制段落 _(包括换行符)_ |
 
-## Vim Multiple files
+## Vim 多文件操作
 
-### Buffers
+### 缓冲区
 
 | -          | -                                |
 | ---------- | :------------------------------- |
-| `:e file`  | Edit a file in a new buffer      |
-| `:bn`      | Go to the next buffer            |
-| `:bp`      | Go to the previous buffer        |
-| `:bd`      | Remove file from buffer list     |
-| `:b 5`     | Open buffer #5                   |
-| `:b file`  | Go to a buffer by file           |
-| `:ls`      | List all open buffers            |
-| `:sp file` | Open and split window            |
-| `:vs file` | Open and vertically split window |
-| `:hid`     | Hide this buffer                 |
-| `:wn`      | Write file and move to next      |
-| `:tab ba`  | Edit all buffers as tabs         |
+| `:e file`  | 在新缓冲区中编辑文件      |
+| `:bn`      | 转到下一个缓冲区            |
+| `:bp`      | 转到上一个缓冲区            |
+| `:bd`      | 从缓冲区列表中移除文件     |
+| `:b 5`     | 打开缓冲区 #5                   |
+| `:b file`  | 按文件名转到缓冲区           |
+| `:ls`      | 列出所有打开的缓冲区            |
+| `:sp file` | 打开并分割窗口            |
+| `:vs file` | 打开并垂直分割窗口 |
+| `:hid`     | 隐藏此缓冲区                 |
+| `:wn`      | 写入文件并移至下一个      |
+| `:tab ba`  | 将所有缓冲区作为标签页编辑         |
 
-### Windows
+### 窗口
 
 | -                       | -                           |
 | ----------------------- | :-------------------------- |
-| `<C-w>` `s`             | Split window                |
-| `<C-w>` `v`             | Split window vertically     |
-| `<C-w>` `w`             | Switch windows              |
-| `<C-w>` `q`             | Quit a window               |
-| `<C-w>` `T`             | Break out into a new tab    |
-| `<C-w>` `x`             | Swap current with next      |
-| `<C-w>` `-` _/_ `+`     | Decrease/Increase height    |
-| `<C-w>` `<` _/_ `>`     | Decrease/Increase width     |
-| `<C-w>` <code>\|</code> | Max out the width           |
-| `<C-w>` `_`	  	  | Max out the height          |
-| `<C-w>` `=`             | Equally high and wide       |
-| `<C-w>` `h` _/_ `l`     | Go to the left/right window |
-| `<C-w>` `j` _/_ `k`     | Go to the up/down window    |
+| `<C-w>` `s`             | 分割窗口                |
+| `<C-w>` `v`             | 垂直分割窗口     |
+| `<C-w>` `w`             | 切换窗口              |
+| `<C-w>` `q`             | 关闭一个窗口              |
+| `<C-w>` `T`             | 拆分到新标签页    |
+| `<C-w>` `x`             | 与下一个交换      |
+| `<C-w>` `-` _/_ `+`     | 减小/增加高度    |
+| `<C-w>` `<` _/_ `>`     | 减小/增加宽度    |
+| `<C-w>` <code>\|</code> | 最大化宽度           |
+| `<C-w>` `_`	  	  | 最大化高度          |
+| `<C-w>` `=`             | 等高和等宽       |
+| `<C-w>` `h` _/_ `l`     | 转到左/右窗口 |
+| `<C-w>` `j` _/_ `k`     | 转到上/下窗口 |
 
 {.shortcuts}
 
-### Tabs
+### 标签页
 
-| Shortcut       | Description                       |
+| 快捷键       | 描述                       |
 | -------------- | :-------------------------------- |
-| `:tabe [file]` | <yel>E</yel>dit file in a new tab |
-| `:tabf [file]` | Open if exists in new tab         |
-| `:tabc`        | <yel>C</yel>lose current tab      |
-| `:tabo`        | Close <yel>o</yel>ther tabs       |
-| `:tabs`        | List all <yel>tabs</yel>          |
-| `:tabr`        | Go to fi<yel>r</yel>st tab        |
-| `:tabl`        | Go to <yel>l</yel>ast tab         |
-| `:tabm 0`      | <yel>M</yel>ove to position `0`   |
-| `:tabn`        | Go to <yel>n</yel>ext tab         |
-| `:tabp`        | Go to <yel>p</yel>revious tab     |
+| `:tabe [file]` | 在新标签页中<yel>编</yel>辑文件 |
+| `:tabf [file]` | 如果存在则在新标签页中打开         |
+| `:tabc`        | <yel>关</yel>闭当前标签页      |
+| `:tabo`        | 关闭<yel>其</yel>他标签页       |
+| `:tabs`        | 列出所有<yel>标签页</yel>          |
+| `:tabr`        | 转到<yel>第</yel>一个标签页        |
+| `:tabl`        | 转到<yel>最</yel>后一个标签页        |
+| `:tabm 0`      | <yel>移</yel>动到位置 `0`   |
+| `:tabn`        | 转到<yel>下</yel>一个标签页         |
+| `:tabp`        | 转到<yel>上</yel>一个标签页     |
 
-#### Normal mode
+#### 普通模式
 
-| Shortcut | Description                   |
+| 快捷键 | 描述                   |
 | -------- | :---------------------------- |
-| `gt`     | Go to <yel>n</yel>ext tab     |
-| `gT`     | Go to <yel>p</yel>revious tab |
-| `2gt`    | Go to tab number `2`          |
+| `gt`     | 转到<yel>下</yel>一个标签页     |
+| `gT`     | 转到<yel>上</yel>一个标签页 |
+| `2gt`    | 转到标签页编号 `2`          |
 
 {.shortcuts}
 
-## Vim Search and Replace
+## Vim 搜索和替换
 
-### Search
+### 搜索
 
 | -        | -                                   |
 | -------- | :---------------------------------- |
-| `/foo`   | Search forward                      |
-| `/foo\c` | Search forward _(case insensitive)_ |
-| `?foo`   | Search backward                     |
-| `/\v\d+` | Search with [regex](/regex)         |
-| `n`      | Next matching search pattern        |
-| `N`      | Previous match                      |
-| `*`      | Search for current word forward     |
-| `#`      | Search for current word backward    |
+| `/foo`   | 向前搜索                      |
+| `/foo\c` | 向前搜索 _(不区分大小写)_ |
+| `?foo`   | 向后搜索                     |
+| `/\v\d+` | 使用[正则表达式](/regex)搜索         |
+| `n`      | 下一个匹配的搜索模式        |
+| `N`      | 上一个匹配                      |
+| `*`      | 向前搜索当前单词     |
+| `#`      | 向后搜索当前单词    |
 
 {.shortcuts}
 
-### Replace LINE
+### 替换 行
 
 ```vim
-:[range]s/{pattern}/{str}/[flags]
+:[范围]s/{模式}/{字符串}/[标志]
 ```
 
 ---
 
 |                   |                                  |
 | ----------------- | :------------------------------- |
-| `:s/old/new`      | Replace first                    |
-| `:s/old/new/g`    | Replace all                      |
-| `:s/\vold/new/g`  | Replace all with [regex](/regex) |
-| `:s/old/new/gc`   | replace all _(Confirm)_          |
-| `:s/old/new/i`    | Ignore case replace first        |
-| `:2,6s/old/new/g` | Replace between lines `2`-`6`    |
+| `:s/old/new`      | 替换第一个                    |
+| `:s/old/new/g`    | 全部替换                      |
+| `:s/\vold/new/g`  | 使用[正则表达式](/regex)全部替换 |
+| `:s/old/new/gc`   | 全部替换 _(确认)_          |
+| `:s/old/new/i`    | 忽略大小写替换第一个        |
+| `:2,6s/old/new/g` | 替换第 `2`-`6` 行之间的内容    |
 
-### Replace FILE
+### 替换 文件
 
 ```vim
-:%s/{pattern}/{str}/[flags]
+:%s/{模式}/{字符串}/[标志]
 ```
 
 ---
 
 |                   |                                  |
 | ----------------- | :------------------------------- |
-| `:%s/old/new`     | Replace first                    |
-| `:%s/old/new/g`   | Replace all                      |
-| `:%s/old/new/gc`  | Replace all _(Confirm)_          |
-| `:%s/old/new/gi`  | Replace all _(ignore case)_      |
-| `:%s/\vold/new/g` | Replace all with [regex](/regex) |
+| `:%s/old/new`     | 替换第一个                    |
+| `:%s/old/new/g`   | 全部替换                      |
+| `:%s/old/new/gc`  | 全部替换 _(确认)_          |
+| `:%s/old/new/gi`  | 全部替换 _(忽略大小写)_      |
+| `:%s/\vold/new/g` | 使用[正则表达式](/regex)全部替换 |
 
-### Ranges {.row-span-2}
+### 范围 {.row-span-2}
 
 | -       | -                 |
 | ------- | :---------------- |
-| `%`     | Entire file       |
-| `’<,’>` | Current selection |
-| `5`     | Line `5`          |
-| `5,10`  | Lines `5` to `10` |
-| `$`     | Last line         |
-| `2,$`   | Lines `2` to Last |
-| `.`     | Current line      |
-| `,3`    | Next `3` lines    |
-| `-3,`   | Forward `3` lines |
+| `%`     | 整个文件       |
+| `’<,’>` | 当前选择 |
+| `5`     | 第 `5` 行          |
+| `5,10`  | 第 `5` 到 `10` 行 |
+| `$`     | 最后一行         |
+| `2,$`   | 第 `2` 行到最后一行 |
+| `.`     | 当前行         |
+| `,3`    | 接下来 `3` 行    |
+| `-3,`   | 向前 `3` 行 |
 
-### Global command {.row-span-2}
+### 全局命令 {.row-span-2}
 
 ```vim
-:[range]g/{pattern}/[command]
+:[范围]g/{模式}/[命令]
 ```
 
 ---
 
 |              |                                    |
 | ------------ | :--------------------------------- |
-| `:g/foo/d`   | Delete lines containing `foo`      |
-| `:g!/foo/d`  | Delete lines not containing `foo`  |
-| `:g/^\s*$/d` | Delete all blank lines             |
-| `:g/foo/t$`  | Copy lines containing `foo` to EOF |
-| `:g/foo/m$`  | Move lines containing `foo` to EOF |
-| `:g/^/m0`    | Reverse a file                     |
-| `:g/^/t.`    | Duplicate every line               |
+| `:g/foo/d`   | 删除包含 `foo` 的行      |
+| `:g!/foo/d`  | 删除不包含 `foo` 的行  |
+| `:g/^\s*$/d` | 删除所有空行             |
+| `:g/foo/t$`  | 将包含 `foo` 的行复制到文件末尾 |
+| `:g/foo/m$`  | 将包含 `foo` 的行移动到文件末尾 |
+| `:g/^/m0`    | 反转文件                     |
+| `:g/^/t.`    | 复制每一行               |
 
-### Inverse :g
+### 反向 :g
 
 ```vim
-:[range]v/{pattern}/[command]
+:[范围]v/{模式}/[命令]
 ```
 
 ---
 
 |            |                                                            |
 | ---------- | :--------------------------------------------------------- |
-| `:v/foo/d` | Delete lines not containing `foo`<br/>_(also `:g!/foo/d`)_ |
+| `:v/foo/d` | 删除不包含 `foo` 的行<br/>_(也写作 `:g!/foo/d`)_ |
 
-### Flags
+### 标志
 
 | -   | -                         |
 | --- | :------------------------ |
-| `g` | Replace all occurrences   |
-| `i` | Ignore case               |
-| `I` | Don't ignore case         |
-| `c` | Confirm each substitution |
+| `g` | 替换所有出现的地方   |
+| `i` | 忽略大小写               |
+| `I` | 不忽略大小写         |
+| `c` | 每次替换前确认 |
 
-### Substitute expression (magic)
+### 替换表达式 (魔法)
 
 | -             | -                                |
 | ------------- | :------------------------------- |
-| `&` _\|_ `\0` | Replace with the whole matched   |
-| `\1`...`\9`   | Replace with the group 0-9       |
-| `\u`          | Uppercase next letter            |
-| `\U`          | Uppercase following characters   |
-| `\l`          | Lowercase next letter            |
-| `\L`          | Lowercase following characters   |
-| `\e`          | End of `\u`, `\U`, `\l` and `\L` |
-| `\E`          | End of `\u`, `\U`, `\l` and `\L` |
+| `&` _\|_ `\0` | 用整个匹配项替换   |
+| `\1`...`\9`   | 用第 0-9 组替换       |
+| `\u`          | 下一个字母大写            |
+| `\U`          | 后续字符大写   |
+| `\l`          | 下一个字母小写            |
+| `\L`          | 后续字符小写   |
+| `\e`          | `\u`, `\U`, `\l` 和 `\L` 的结束 |
+| `\E`          | `\u`, `\U`, `\l` 和 `\L` 的结束 |
 
-### Examples {.col-span-2}
+### 示例 {.col-span-2}
 
 ```c {.wrap}
-:s/a\|b/xxx\0xxx/g		         # Modifies "a b"      to "xxxaxxx xxxbxxx"
-:s/test/\U& file/                # Modifies "test"     to "TEST FILE"
-:s/\(test\)/\U\1\e file/         # Modifies "test"     to "TEST file"
-:s/\v([abc])([efg])/\2\1/g	     # Modifies "af fa bg" to "fa fa gb"
-:s/\v\w+/\u\0/g		             # Modifies "bla bla"  to "Bla Bla"
-:s/\v([ab])|([cd])/\1x/g         # Modifies "a b c d"  to "ax bx x x"
-:%s/.*/\L&/                      # Modifies "HTML"     to "html"
-:s/\v<(.)(\w*)/\u\1\L\2/g        # Make every first letter of a word uppercase
-:%s/^\(.*\)\n\1/\1/              # Remove duplicate lines
-:%s/<\/\=\(\w\+\)\>/\U&/g        # Convert HTML-Tags to uppercase
-:g/^pattern/s/$/mytext           # Find and append text to the end
-:g/pattern/norm! @i              # Run a macro on matching lines
-/^\(.*\)\(\r\?\n\1\)\+$          # View the duplicates lines
-/\v^(.*)(\r?\n\1)+$              # View the duplicates lines (very magic)
-:v/./,/./-j                      # Compress blank lines into a blank line
-:g/<p1>/,/<p2>/d                 # Delete inclusively from <p1> to <p2>
+:s/a\|b/xxx\0xxx/g		         # 修改 "a b"      为 "xxxaxxx xxxbxxx"
+:s/test/\U& file/                # 修改 "test"     为 "TEST FILE"
+:s/\(test\)/\U\1\e file/         # 修改 "test"     为 "TEST file"
+:s/\v([abc])([efg])/\2\1/g	     # 修改 "af fa bg" 为 "fa fa gb"
+:s/\v\w+/\u\0/g		             # 修改 "bla bla"  为 "Bla Bla"
+:s/\v([ab])|([cd])/\1x/g         # 修改 "a b c d"  为 "ax bx x x"
+:%s/.*/\L&/                      # 修改 "HTML"     为 "html"
+:s/\v<(.)(\w*)/\u\1\L\2/g        # 使每个单词的首字母大写
+:%s/^\(.*\)\n\1/\1/              # 删除重复行
+:%s/<\/\=\(\w\+\)\>/\U&/g        # 将 HTML 标签转换为大写
+:g/^pattern/s/$/mytext           # 查找并追加文本到行尾
+:g/pattern/norm! @i              # 在匹配行上运行宏
+/^\(.*\)\(\r\?\n\1\)\+$          # 查看重复行
+/\v^(.*)(\r?\n\1)+$              # 查看重复行 (very magic)
+:v/./,/./-j                      # 将多个空行压缩为一个空行
+:g/<p1>/,/<p2>/d                 # 删除从 <p1> 到 <p2> (包含) 的内容
 ```
 
 ## Vimdiff
 
-### Usage {.secondary}
+### 用法 {.secondary}
 
 ```shell script
-
-$ vimdiff file1 file2 [file3]
-$ vim -d file1 file2 [file3]
+$ vimdiff 文件1 文件2 [文件3]
+$ vim -d 文件1 文件2 [文件3]
 ```
 
-### Editing {.row-span-2}
+### 编辑 {.row-span-2}
 
 ```
-:[range]diffget [bufspec]
-:[range]diffput [bufspec]
+:[范围]diffget [缓冲区指定]
+:[范围]diffput [缓冲区指定]
 ```
 
 ---
 
-| Shortcut            | Description             |
+| 快捷键            | 描述             |
 | ------------------- | :---------------------- |
-| `do` _/_ `:diffget` | Obtain (get) difference |
-| `dp` _/_ `:diffput` | Put difference          |
-| `:dif`              | Re-scan differences     |
-| `:diffo`            | Switch off diff mode    |
-| `:1,$+1diffget`     | Get all differences     |
-| `ZQ`                | Quit without changes    |
+| `do` _/_ `:diffget` | 获取 (get) 差异 |
+| `dp` _/_ `:diffput` | 应用 (put) 差异          |
+| `:dif`              | 重新扫描差异     |
+| `:diffo`            | 关闭差异模式    |
+| `:1,$+1diffget`     | 获取所有差异     |
+| `ZQ`                | 不保存更改退出    |
 
 {.shortcuts}
 
-See: [Ranges](#ranges)
+参见: [范围](#ranges)
 
-### Folds {.row-span-2}
+### 折叠 {.row-span-2}
 
-| Shortcut      | Description                  |
+| 快捷键      | 描述                  |
 | ------------- | :--------------------------- |
-| `zo` _/_ `zO` | Open                         |
-| `zc` _/_ `zC` | Close                        |
-| `za` _/_ `zA` | Toggle                       |
-| `zv`          | Open folds for this line     |
-| `zM`          | Close all                    |
-| `zR`          | Open all                     |
-| `zm`          | Fold more _(foldlevel += 1)_ |
-| `zr`          | Fold less _(foldlevel -= 1)_ |
-| `zx`          | Update folds                 |
+| `zo` _/_ `zO` | 打开                         |
+| `zc` _/_ `zC` | 关闭                        |
+| `za` _/_ `zA` | 切换                       |
+| `zv`          | 打开当前行的折叠     |
+| `zM`          | 关闭所有                    |
+| `zR`          | 打开所有                    |
+| `zm`          | 折叠更多 _(折叠级别 += 1)_ |
+| `zr`          | 折叠更少 _(折叠级别 -= 1)_ |
+| `zx`          | 更新折叠                 |
 
 {.shortcuts}
 
-### Jumping
+### 跳转
 
 <br>
 
-| Shortcut | Description         |
+| 快捷键 | 描述         |
 | -------- | :------------------ |
-| `]c`     | Next difference     |
-| `[c`     | Previous difference |
+| `]c`     | 下一个差异     |
+| `[c`     | 上一个差异 |
 
 {.shortcuts}
 
-## Miscellaneous
+## 其他
 
-### Case {.row-span-2}
+### 大小写 {.row-span-2}
 
-| Shortcut       | Description             |
+| 快捷键       | 描述             |
 | -------------- | :---------------------- |
-| `vU`           | _Uppercase_ character   |
-| `vu`           | _Lowercase_ character   |
-| `~`            | _Toggle case_ character |
-| `viw` `U`      | _Uppercase_ word        |
-| `viw` `u`      | _Lowercase_ word        |
-| `viw` `~`      | _Toggle case_ word      |
-| `VU` _/_ `gUU` | _Uppercase_ line        |
-| `Vu` _/_ `guu` | _Lowercase_ line        |
-| `V~` _/_ `g~~` | _Toggle case_ line      |
-| `gggUG`        | _Uppercase_ all text    |
-| `ggguG`        | _Lowercase_ all text    |
-| `ggg~G`        | _Toggle case_ all text  |
+| `vU`           | _大写_ 字符   |
+| `vu`           | _小写_ 字符   |
+| `~`            | _切换大小写_ 字符 |
+| `viw` `U`      | _大写_ 单词        |
+| `viw` `u`      | _小写_ 单词        |
+| `viw` `~`      | _切换大小写_ 单词      |
+| `VU` _/_ `gUU` | _大写_ 行        |
+| `Vu` _/_ `guu` | _小写_ 行        |
+| `V~` _/_ `g~~` | _切换大小写_ 行      |
+| `gggUG`        | _大写_ 所有文本    |
+| `ggguG`        | _小写_ 所有文本    |
+| `ggg~G`        | _切换大小写_ 所有文本  |
 
 {.shortcuts}
 
-### Jumping
+### 跳转
 
-| Shortcut | Description              |
+| 快捷键 | 描述              |
 | -------- | :----------------------- |
-| `<C-o>`  | Go back to previous      |
-| `<C-i>`  | Go forward               |
-| `gf`     | Go to file in cursor     |
-| `ga`     | Display hex, ascii value |
+| `<C-o>`  | 返回上一个位置      |
+| `<C-i>`  | 前进到下一个位置               |
+| `gf`     | 跳转到光标下的文件     |
+| `ga`     | 显示十六进制、ASCII 值 |
 
 {.shortcuts}
 
-### Misc command-lines {.row-span-2}
+### 其他命令行 {.row-span-2}
 
 | -              | -                                          |
 | -------------- | :----------------------------------------- |
-| `:h`           | Help open help view                        |
-| `:edit!`       | Reload current file                        |
-| `:2,8m0`       | Move lines `2`-`8` to `0`                  |
-| `:noh`         | Clear search highlights                    |
-| `:sort`        | Sort lines                                 |
-| `:ter`         | Open a terminal window                     |
-| `:set paste`   | Enable Insert Paste sub-mode               |
-| `:set nopaste` | disable Insert Paste sub-mode              |
-| `:cq`          | Exiting with an error<br/>_(aborting Git)_ |
+| `:h`           | 帮助 打开帮助视图                        |
+| `:edit!`       | 重新加载当前文件                        |
+| `:2,8m0`       | 将第 `2`-`8` 行移动到第 `0` 行                  |
+| `:noh`         | 清除搜索高亮                    |
+| `:sort`        | 排序行                               |
+| `:ter`         | 打开一个终端窗口                     |
+| `:set paste`   | 启用插入粘贴子模式               |
+| `:set nopaste` | 禁用插入粘贴子模式              |
+| `:cq`          | 带错误退出<br/>_(中止 Git)_ |
 
-### Navigating
+### 导航
 
-| Shortcut       | Description               |
+| 快捷键       | 描述               |
 | -------------- | :------------------------ |
-| `%`            | Nearest/matching `{[()]}` |
-| `[(` _\|_ `[{` | Previous `(` or `{`       |
-| `])` _\|_ `]{` | Next `)` or `}`           |
-| `[m`           | Previous method start     |
-| `[M`           | Previous method end       |
+| `%`            | 最近的/匹配的 `{[()]}` |
+| `[(` _\|_ `[{` | 上一个 `(` 或 `{`       |
+| `])` _\|_ `]{` | 下一个 `)` 或 `}`           |
+| `[m`           | 上一个方法开始     |
+| `[M`           | 上一个方法结束     |
 
 {.shortcuts}
 
-### Counters
+### 计数器
 
-| Shortcut | Description     |
+| 快捷键 | 描述     |
 | -------- | :-------------- |
-| `<C-a>`  | Increase number |
-| `<C-x>`  | Decrease number |
+| `<C-a>`  | 增加数字 |
+| `<C-x>`  | 减少数字 |
 
 {.shortcuts}
 
-### Tags {.row-span-2 .col-span-2}
+### 标签 {.row-span-2 .col-span-2}
 
-| Shortcut             | Description                                     |
+| 快捷键             | 描述                                     |
 | -------------------- | :---------------------------------------------- |
-| `:tag Classname`     | Jump to first definition of Classname           |
-| `<C-]>`              | Jump to definition                              |
-| `g]`                 | See all definitions                             |
-| `<C-t>`              | Go back to last tag                             |
-| `<C-o> <C-i>`        | Back/forward                                    |
-| `:tselect Classname` | Find definitions of Classname                   |
-| `:tjump Classname`   | Find definitions of Classname (auto-select 1st) |
+| `:tag Classname`     | 跳转到 Classname 的第一个定义           |
+| `<C-]>`              | 跳转到定义                              |
+| `g]`                 | 查看所有定义                             |
+| `<C-t>`              | 返回上一个标签                             |
+| `<C-o> <C-i>`        | 后退/前进                                    |
+| `:tselect Classname` | 查找 Classname 的定义                   |
+| `:tjump Classname`   | 查找 Classname 的定义 (自动选择第一个) |
 
 {.shortcuts}
 
-### Formatting
+### 格式化
 
 | -       | -                                |
 | ------- | -------------------------------- |
-| `:ce 8` | Center lines between `8` columns |
-| `:ri 4` | Right-align lines at `4` columns |
-| `:le`   | Left-align lines                 |
+| `:ce 8` | 在 `8` 列之间居中对齐行 |
+| `:ri 4` | 在第 `4` 列右对齐行 |
+| `:le`   | 左对齐行                 |
 
-See `:help formatting`
+参见 `:help formatting`
 
-### Marks {.col-span-2 .row-span-4}
+### 标记 {.col-span-2 .row-span-4}
 
-| Shortcut            | Description                                          |
+| 快捷键            | 描述                                          |
 | ------------------- | :--------------------------------------------------- |
-| <code>\`^</code>    | Last position of cursor in insert mode               |
-| <code>\`.</code>    | Last change in current buffer                        |
-| <code>\`"</code>    | Last exited current buffer                           |
-| <code>\`0</code>    | In last file edited                                  |
-| <code>''</code>     | Back to line in current buffer where jumped from     |
-| <code>\`\`</code>   | Back to position in current buffer where jumped from |
-| <code>\`[</code>    | To beginning of previously changed or yanked text    |
-| <code>\`]</code>    | To end of previously changed or yanked text          |
-| <code>\`&lt;</code> | To beginning of last visual selection                |
-| <code>\`&gt;</code> | To end of last visual selection                      |
-| `ma`                | Mark this cursor position as `a`                     |
-| <code>\`a</code>    | Jump to the cursor position `a`                      |
-| `'a`                | Jump to the beginning of the line with position `a`  |
-| <code>d'a</code>    | Delete from current line to line of mark `a`         |
-| <code>d\`a</code>   | Delete from current position to position of mark `a` |
-| <code>c'a</code>    | Change text from current line to line of `a`         |
-| <code>y\`a</code>   | Yank text from current position to position of `a`   |
-| `:marks`            | List all current marks                               |
-| `:delm a`           | Delete mark `a`                                      |
-| `:delm a-d`         | Delete marks `a`, `b`, `c`, `d`                      |
-| `:delm abc`         | Delete marks `a`, `b`, `c`                           |
+| <code>\`^</code>    | 插入模式下光标的最后位置               |
+| <code>\`.</code>    | 当前缓冲区中的最后更改                        |
+| <code>\`"</code>    | 最后退出的当前缓冲区                           |
+| <code>\`0</code>    | 在最后编辑的文件中                                  |
+| <code>''</code>     | 返回到当前缓冲区中跳转前的那一行     |
+| <code>\`\`</code>   | 返回到当前缓冲区中跳转前的那个位置 |
+| <code>\`[</code>    | 到先前更改或复制的文本的开头    |
+| <code>\`]</code>    | 到先前更改或复制的文本的末尾          |
+| <code>\`&lt;</code> | 到上一个可视选择的开头                |
+| <code>\`&gt;</code> | 到上一个可视选择的末尾                      |
+| `ma`                | 将此光标位置标记为 `a`                     |
+| <code>\`a</code>    | 跳转到光标位置 `a`                      |
+| `'a`                | 跳转到带有位置 `a` 的行的开头  |
+| <code>d'a</code>    | 从当前行删除到标记 `a` 所在的行         |
+| <code>d\`a</code>   | 从当前位置删除到标记 `a` 的位置 |
+| <code>c'a</code>    | 从当前行更改文本到 `a` 所在的行         |
+| <code>y\`a</code>   | 从当前位置复制文本到 `a` 的位置   |
+| `:marks`            | 列出所有当前标记                               |
+| `:delm a`           | 删除标记 `a`                                      |
+| `:delm a-d`         | 删除标记 `a`, `b`, `c`, `d`                      |
+| `:delm abc`         | 删除标记 `a`, `b`, `c`                           |
 
 {.shortcuts}
 
-### Calculator
+### 计算器
 
-| Shortcut         | Description      |
+| 快捷键         | 描述      |
 | ---------------- | :--------------- |
-| `<C-r>` `=` 7\*7 | Shows the result |
-| `<C-r>` `=` 10/2 | Shows the result |
+| `<C-r>` `=` 7\*7 | 显示结果 |
+| `<C-r>` `=` 10/2 | 显示结果 |
 
 {.shortcuts}
 
-Do this in INSERT mode
+在插入模式下执行此操作
 
 ### Shell
 
 | -            | -                              |
 | ------------ | :----------------------------- |
-| `:!<shell>`  | Interpret Shell Command        |
-| `:r!<shell>` | Read in output of shell        |
-| `:r!date`    | Insert date                    |
-| `:!!date`    | Replace current line with date |
+| `:!<shell>`  | 执行 Shell 命令        |
+| `:r!<shell>` | 读入 Shell 命令的输出        |
+| `:r!date`    | 插入日期                    |
+| `:!!date`    | 用日期替换当前行 |
 
-### Command line
+### 命令行
 
-| Shortcut     | Description                               |
+| 快捷键     | 描述                               |
 | ------------ | :---------------------------------------- |
-| `<C-r><C-w>` | Insert current word into the command line |
-| `<C-r>"`     | Paste from " register                     |
-| `<C-x><C-f>` | Auto-completion of path in insert mode    |
+| `<C-r><C-w>` | 将当前单词插入到命令行 |
+| `<C-r>"`     | 从 " 寄存器粘贴                     |
+| `<C-x><C-f>` | 在插入模式下自动补全路径    |
 
 {.shortcuts}
 
-### Tricks
+### 技巧
 
-Remove duplicate lines
+删除重复行
 
 ```shell script
 :sort | %!uniq -u
 ```
 
-To number the lines in the file
+给文件中的行编号
 
 ```shell script
 :%!cat -n
 ```
 
-Copy whole doc to clipboard
+复制整个文档到剪贴板
 
 ```shell script
 :%w !pbcopy            # Mac OS X
@@ -782,9 +781,9 @@ Copy whole doc to clipboard
 :%w !xsel -i -b        # GNU/Linux
 ```
 
-## Also see
+## 另请参阅
 
 - [Devhints](https://devhints.io/vim) _(devhints.io)_
-- [Vim cheatsheet](https://vim.rtorr.com/) _(vim.rotrr.com)_
-- [Vim documentation](http://vimdoc.sourceforge.net/htmldoc/) _(vimdoc.sourceforge.net)_
-- [Interactive Vim tutorial](http://openvim.com/) _(openvim.com)_
+- [Vim 备忘单](https://vim.rtorr.com/) _(vim.rotrr.com)_
+- [Vim 文档](http://vimdoc.sourceforge.net/htmldoc/) _(vimdoc.sourceforge.net)_
+- [交互式 Vim 教程](http://openvim.com/) _(openvim.com)_

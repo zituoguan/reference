@@ -1,113 +1,113 @@
 ---
-title: Grep
+title: Grep 命令
 date: 2020-11-25 18:28:43
 background: bg-emerald-400
 tags:
   - egrep
-  - search
-  - pattern
-  - text
+  - 搜索
+  - 模式
+  - 文本
 categories:
-  - Linux Command
+  - Linux 命令
 intro:
-  This cheat sheet is intended to be a quick reminder for the main concepts involved in using the command line program
-  grep and assumes you already understand its usage.
+  本速查表旨在快速回顾使用命令行程序 grep 所涉及的主要概念，并假定您已经了解其用法。
 plugins:
   - copyCode
 ---
 
-## Getting Started {.cols-5}
+## 入门 {.cols-5}
 
-### Usage {.col-span-2}
+### 用法 {.col-span-2}
 
-Search standard output (i.e. a stream of text)
-
-```shell script
-$ grep [options] search_string
-```
-
-Search for an exact string in file:
+搜索标准输出（即文本流）
 
 ```shell script
-$ grep [options] search_string path/to/file
+$ grep [选项] 搜索字符串
 ```
 
-Print lines in myfile.txt containing the string "mellon"
+在文件中搜索精确字符串：
+
+```shell script
+$ grep [选项] 搜索字符串 文件路径
+```
+
+打印 myfile.txt 文件中包含字符串 "mellon" 的行
 
 ```shell script
 $ grep 'mellon' myfile.txt
 ```
 
-Wildcards are accepted in filename.
+文件名中接受通配符。
 
-### Option examples {.col-span-3}
+### 选项示例 {.col-span-3}
 
-| Option | Example                                   | Operation                                            |
-| ------ | ----------------------------------------- | ---------------------------------------------------- |
-| `-i`   | grep -i ^DA demo.txt                      | Forgets about case sensitivity                       |
-| `-w`   | grep -w "of" demo.txt                     | Search only for the full word                        |
-| `-A`   | grep -A 3 'Exception' error.log           | Display 3 lines after matching string                |
-| `-B`   | grep -B 4 'Exception' error.log           | Display 4 lines before matching string               |
-| `-C`   | grep -C 5 'Exception' error.log           | Display 5 lines around matching string               |
-| `-r`   | grep -r 'cheatsheets.zip' /var/log/nginx/ | Recursive search _(within subdirs)_                  |
-| `-v`   | grep -v 'warning' /var/log/syslog         | Return all lines which don't match the pattern       |
-| `-e`   | grep -e '^al' filename                    | Use regex _(lines starting with 'al')_               |
-| `-E`   | grep -E 'ja(s\|cks)on' filename           | Extended regex _(lines containing jason or jackson)_ |
-| `-c`   | grep -c 'error' /var/log/syslog           | Count the number of matches                          |
-| `-l`   | grep -l 'robot' /var/log/\*               | Print the name of the file(s) of matches             |
-| `-o`   | grep -o search_string filename            | Only show the matching part of the string            |
-| `-n`   | grep -n "go" demo.txt                     | Show the line numbers of the matches                 |
+| 选项 | 示例                                      | 操作                                         |
+| ---- | ----------------------------------------- | -------------------------------------------- |
+| `-i` | grep -i ^DA demo.txt                      | 忽略大小写                                   |
+| `-w` | grep -w "of" demo.txt                     | 仅搜索完整单词                               |
+| `-A` | grep -A 3 'Exception' error.log           | 显示匹配字符串后的 3 行                      |
+| `-B` | grep -B 4 'Exception' error.log           | 显示匹配字符串前的 4 行                      |
+| `-C` | grep -C 5 'Exception' error.log           | 显示匹配字符串周围的 5 行                    |
+| `-r` | grep -r 'r3f.cn' /var/log/nginx/ | 递归搜索（包括子目录）                       |
+| `-v` | grep -v 'warning' /var/log/syslog         | 返回所有不匹配模式的行                       |
+| `-e` | grep -e '^al' filename                    | 使用正则表达式（以 'al' 开头的行）           |
+| `-E` | grep -E 'ja(s\|cks)on' filename           | 扩展正则表达式（包含 jason 或 jackson 的行） |
+| `-c` | grep -c 'error' /var/log/syslog           | 计算匹配项的数量                             |
+| `-l` | grep -l 'robot' /var/log/\*               | 打印匹配项所在的文件名                       |
+| `-o` | grep -o 搜索字符串 文件名                 | 仅显示字符串的匹配部分                       |
+| `-n` | grep -n "go" demo.txt                     | 显示匹配项的行号                             |
 
-## Grep regular expressions
+## Grep 正则表达式
 
-### Refer
+### 参考
 
-- [Regex syntax](/regex) _(cheatsheets.zip)_
-- [Regex examples](/regex#regex-examples) _(cheatsheets.zip)_
+- [正则表达式语法](/regex) _(r3f.cn)_
+- [正则表达式示例](/regex#regex-examples) _(r3f.cn)_
 
-Please refer to the full version of the regex cheat sheet for more complex requirements.
+对于更复杂的需求，请参考正则表达式速查表的完整版本。
 
-### Wildcards
+### 通配符
 
-| -               | -                                      |
-| --------------- | -------------------------------------- |
-| .               | Any character.                         |
-| `?            ` | Optional and can only occur once.      |
-| `*            ` | Optional and can occur more than once. |
-| `+            ` | Required and can occur more than once. |
+| -    | -                                      |
+| ---- | -------------------------------------- |
+| .    | 任意字符。                             |
+| `?  ` | 可选，且只能出现一次。                 |
+| `*  ` | 可选，且可以出现多次。                 |
+| `+  ` | 必需，且可以出现多次。                 |
 
-### Quantifiers
+### 量词
 
-| -               | -                                            |
-| --------------- | -------------------------------------------- |
-| `{n}          ` | Previous item appears exactly n times.       |
-| `{n,}         ` | Previous item appears n times or more.       |
-| `{,m}         ` | Previous item appears n times maximum.       |
-| `{n,m}        ` | Previous item appears between n and m times. |
+| -        | -                                            |
+| -------- | -------------------------------------------- |
+| `{n}    ` | 前一项恰好出现 n 次。                        |
+| `{n,}   ` | 前一项出现 n 次或更多次。                    |
+| `{,m}   ` | 前一项最多出现 m 次。                        |
+| `{n,m}  ` | 前一项出现 n 到 m 次之间。                   |
 
 ### POSIX
 
+| -             | -                                         |
+| ------------- | ----------------------------------------- |
+| `[:alpha:] `  | 任何大小写字母。                          |
+| `[:digit:] `  | 任何数字。                                |
+| `[:alnum:] `  | 任何大小写字母或数字。                    |
+| `[:space:]  ` | 任何空白字符。                            |
+
+### 字符
+
 | -               | -                                         |
 | --------------- | ----------------------------------------- |
-| `[:alpha:]   `  | Any lower and upper case letter.          |
-| `[:digit:]   `  | Any number.                               |
-| `[:alnum:]   `  | Any lower and upper case letter or digit. |
-| `[:space:]    ` | Any whites­pace.                          |
+| `[A-Z­a-z]    ` | 任何大小写字母。                          |
+| `[0-9]        ` | 任何数字。                                |
+| `[0-9­A-Z­a-z]` | 任何大小写字母或数字。                    |
 
-### Character
-
-| -               | -                                         |
-| --------------- | ----------------------------------------- |
-| `[A-Z­a-z]    ` | Any lower and upper case letter.          |
-| `[0-9]        ` | Any number.                               |
-| `[0-9­A-Z­a-z]` | Any lower and upper case letter or digit. |
-
-### Position
+### 位置
 
 |      |                    |
 | ---- | ------------------ |
-| `^ ` | Beginning of line. |
-| `$ ` | End of line.       |
-| `^$` | Empty line.        |
-| `\<` | Start of word.     |
-| `\>` | End of word.       |
+| `^ ` | 行首。             |
+| `$ ` | 行尾。             |
+| `^$` | 空行。             |
+| `\<` | 单词开头。         |
+| `\>` | 单词结尾。         |
+

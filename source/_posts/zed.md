@@ -4,109 +4,110 @@ date: 2025-04-20 19:30:23.390210907
 background: bg-[#3e4548]
 label:
 tags:
-  - text
-  - editor
-  - shortcut
+  - 文本
+  - 编辑器
+  - 快捷键
 categories:
-  - Keyboard Shortcuts
-intro: A visual cheat-sheet for the 50 keyboard shortcuts found in the Zed text editor.
+  - 键盘快捷键
+intro: Zed 文本编辑器中 50 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
 ### Zed
 
-| Shortcut               | Action                 |
+| 快捷键               | 操作                 |
 |------------------------|------------------------|
-| `Ctrl` `,`             | Open settings          |
-| `Ctrl` `Shift` `X`     | Open Extensions store  |
-| `Ctrl` `Q`             | Quit Zed               |
+| `Ctrl` `,`             | 打开设置          |
+| `Ctrl` `Shift` `X`     | 打开扩展商店  |
+| `Ctrl` `Q`             | 退出 Zed               |
 
 {.shortcuts}
 
-### File
+### 文件
 
-| Shortcut                   | Action              |
+| 快捷键                   | 操作              |
 |----------------------------|---------------------|
-| `Ctrl` `N`                 | New file            |
-| `Ctrl` `Shift` `N`         | New Window          |
-| `Ctrl` `O`                 | Open folder         |
-| `Ctrl` `Alt` `Shift` `O`   | Open remote folder  |
-| `Ctrl` `S`                 | Save                |
-| `Ctrl` `Shift` `S`         | Save As...          |
-| `Ctrl` `Alt` `S`           | Save All            |
-| `Ctrl` `Shift` `W`         | Close Window        |
+| `Ctrl` `N`                 | 新建文件            |
+| `Ctrl` `Shift` `N`         | 新建窗口          |
+| `Ctrl` `O`                 | 打开文件夹         |
+| `Ctrl` `Alt` `Shift` `O`   | 打开远程文件夹  |
+| `Ctrl` `S`                 | 保存                |
+| `Ctrl` `Shift` `S`         | 另存为...          |
+| `Ctrl` `Alt` `S`           | 全部保存            |
+| `Ctrl` `Shift` `W`         | 关闭窗口        |
 
 {.shortcuts}
 
-### Edit
+### 编辑
 
-| Shortcut               | Action              |
+| 快捷键               | 操作              |
 |------------------------|---------------------|
-| `Ctrl` `Z`             | Undo                |
-| `Ctrl` `Shift` `Z`     | Redo                |
-| `Ctrl` `X`             | Cut                 |
-| `Ctrl` `C`             | Copy                |
-| `Ctrl` `V`             | Paste               |
-| `Ctrl` `Shift` `F`     | Find in project     |
-| `Ctrl` `/`             | Toggle line comment |
+| `Ctrl` `Z`             | 撤销                |
+| `Ctrl` `Shift` `Z`     | 重做                |
+| `Ctrl` `X`             | 剪切                |
+| `Ctrl` `C`             | 复制                |
+| `Ctrl` `V`             | 粘贴                |
+| `Ctrl` `Shift` `F`     | 在项目中查找     |
+| `Ctrl` `/`             | 切换行注释 |
 
 {.shortcuts}
 
-### Selection
+### 选择
 
-| Shortcut                 | Action                  |
+| 快捷键                 | 操作                  |
 |--------------------------|-------------------------|
-| `Ctrl` `A`               | Select all              |
-| `Alt` `Shift` `Right`    | Expand selection        |
-| `Alt` `Shift` `Left`     | Shrink selection        |
-| `Alt` `Shift` `Up`       | Add cursor above        |
-| `Alt` `Shift` `Down`     | Add cursor below        |
-| `Ctrl` `Shift` `Down`    | Select next Occurrence  |
-| `Alt` `Up`               | Move line up            |
-| `Alt` `Down`             | Move line down          |
-| `Ctrl` `Shift` `D`       | Duplicate selection     |
+| `Ctrl` `A`               | 全选              |
+| `Alt` `Shift` `Right`    | 扩大选区        |
+| `Alt` `Shift` `Left`     | 缩小选区        |
+| `Alt` `Shift` `Up`       | 在上方添加光标        |
+| `Alt` `Shift` `Down`     | 在下方添加光标        |
+| `Ctrl` `Shift` `Down`    | 选择下一个匹配项  |
+| `Alt` `Up`               | 上移一行            |
+| `Alt` `Down`             | 下移一行            |
+| `Ctrl` `Shift` `D`       | 复制选区     |
 
 {.shortcuts}
 
-### View
+### 视图
 
-| Shortcut               | Action               |
+| 快捷键               | 操作               |
 |------------------------|----------------------|
-| `Ctrl` `B`             | Toggle Left Dock     |
-| `Ctrl` `Alt` `B`       | Toggle Right Dock    |
-| `Ctrl` `J`             | Toggle Bottom Dock   |
-| `Ctrl` `Alt` `Y`       | Close All Docks      |
-| `Ctrl` `K` `Up`        | Split Up             |
-| `Ctrl` `K` `Down`      | Split Down           |
-| `Ctrl` `K` `Left`      | Split Left           |
-| `Ctrl` `K` `Right`     | Split Right          |
-| `Ctrl` `Shift` `E`     | Project Panel        |
-| `Ctrl` `Shift` `B`     | Outline Panel        |
-| `Ctrl` `Shift` `C`     | Collab Panel         |
-| `Ctrl` ``` ` ```       | Terminal Panel       |
-| `Ctrl` `Shift` `M`     | Diagnostics          |
+| `Ctrl` `B`             | 切换左侧停靠栏     |
+| `Ctrl` `Alt` `B`       | 切换右侧停靠栏    |
+| `Ctrl` `J`             | 切换底部停靠栏   |
+| `Ctrl` `Alt` `Y`       | 关闭所有停靠栏      |
+| `Ctrl` `K` `Up`        | 向上拆分             |
+| `Ctrl` `K` `Down`      | 向下拆分             |
+| `Ctrl` `K` `Left`      | 向左拆分             |
+| `Ctrl` `K` `Right`     | 向右拆分             |
+| `Ctrl` `Shift` `E`     | 项目面板        |
+| `Ctrl` `Shift` `B`     | 大纲面板        |
+| `Ctrl` `Shift` `C`     | 协作面板         |
+| `Ctrl` ``` ` ```       | 终端面板       |
+| `Ctrl` `Shift` `M`     | 诊断          |
 
 {.shortcuts}
 
-### Go
+### 跳转
 
-| Shortcut              | Action                     |
+| 快捷键              | 操作                     |
 |-----------------------|----------------------------|
-| `Ctrl` `Alt` `-`      | Back                       |
-| `Ctrl` `Shift` `P`    | Command Palette…           |
-| `Ctrl` `E`            | Go to File…                |
-| `Ctrl` `Shift` `O`    | Go to Symbol in Editor…    |
-| `Ctrl` `G`            | Go to Line/Column…         |
-| `F12`                 | Go to Definition           |
-| `Ctrl` `F12`          | Go to Type Definition      |
-| `Alt` `Shift` `F12`   | Find All References        |
-| `F8`                  | Next Problem               |
-| `Shift` `F8`          | Previous Problem           |
+| `Ctrl` `Alt` `-`      | 后退                       |
+| `Ctrl` `Shift` `P`    | 命令面板…           |
+| `Ctrl` `E`            | 转到文件…                |
+| `Ctrl` `Shift` `O`    | 转到编辑器中的符号…    |
+| `Ctrl` `G`            | 转到行/列…         |
+| `F12`                 | 转到定义           |
+| `Ctrl` `F12`          | 转到类型定义      |
+| `Alt` `Shift` `F12`   | 查找所有引用        |
+| `F8`                  | 下一个问题               |
+| `Shift` `F8`          | 上一个问题           |
 
 {.shortcuts}
 
-## Also see
-- [Zed](https://zed.dev/)
-- [Zed GitHub](https://github.com/zed-industries/zed)
-- [Zed Documentation](https://zed.dev/docs)
+## 另请参阅
+- [Zed 官网](https://zed.dev/)
+- [Zed GitHub 仓库](https://github.com/zed-industries/zed)
+- [Zed 文档](https://zed.dev/docs)
+

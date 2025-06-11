@@ -7,49 +7,49 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 22 keyboard shortcuts found on SoundCloud
+  SoundCloud 上 22 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### General I
+### 常规操作 I
 
-| Shortcut        | Action               |
+| 快捷键        | 操作               |
 | --------------- | -------------------- |
-| `Space`         | Play or pause        |
-| `Shift` `Right` | Play next track      |
-| `Shift` `L`     | Repeat playing track |
-| `Shift` `Left`  | Play previous track  |
-| `Right`         | Seek forward         |
-| `L`             | Like playing track   |
-| `R`             | Repost playing track |
-| `S`             | Search               |
-| `G` `L`         | Navigate to likes    |
-| `G` `C`         | Navigate to library  |
+| `Space`         | 播放或暂停        |
+| `Shift` `Right` | 播放下一曲目      |
+| `Shift` `L`     | 重复播放当前曲目 |
+| `Shift` `Left`  | 播放上一曲目  |
+| `Right`         | 快进         |
+| `L`             | 喜欢当前播放曲目   |
+| `R`             | 转发当前播放曲目 |
+| `S`             | 搜索               |
+| `G` `L`         | 导航到喜欢列表    |
+| `G` `C`         | 导航到音乐库  |
 
 {.shortcuts}
 
-### General II
+### 常规操作 II
 
-| Shortcut       | Action                    |
+| 快捷键       | 操作                    |
 | -------------- | ------------------------- |
-| `G` `H`        | Navigate to history       |
-| `Shift` `S`    | Shuffle                   |
-| `Shift` `Down` | Decrease volume           |
-| `Shift` `Up`   | Increase volume           |
-| `M`            | Mute volume               |
-| `Left`         | Seek backwards            |
-| `0-9`          | Seek to position          |
-| `P`            | Navigate to playing track |
-| `H`            | Show keyboard shortcuts   |
-| `G` `S`        | Navigate to stream        |
-| `G` `P`        | Navigate to profile       |
-| `Q`            | Show next up              |
+| `G` `H`        | 导航到历史记录       |
+| `Shift` `S`    | 随机播放                   |
+| `Shift` `Down` | 减小音量           |
+| `Shift` `Up`   | 增大音量           |
+| `M`            | 静音               |
+| `Left`         | 快退            |
+| `0-9`          | 跳转到指定位置          |
+| `P`            | 导航到当前播放曲目 |
+| `H`            | 显示键盘快捷键   |
+| `G` `S`        | 导航到信息流        |
+| `G` `P`        | 导航到个人资料       |
+| `Q`            | 显示接下来播放              |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for SoundCloud](https://i.imgur.com/ZQf24je.png) _(i.imgur.com)_
+- [SoundCloud 键盘快捷键](https://i.imgur.com/ZQf24je.png) _(i.imgur.com)_

@@ -3,14 +3,14 @@ recent_posts_limits: 4
 
 # The categories and order displayed on the home page
 index_categories:
-  - Programming
-  - Toolkit
-  - Operating System
-  - Linux Command
+  - 编程
+  - 工具箱
+  - 操作系统
+  - Linux 命令
   - Python
-  - Database
-  - Keyboard Shortcuts
-  - Other
+  - 数据库
+  - 键盘快捷键
+  - 其他
 
 # Home recommended posts
 index_recommends:
@@ -27,7 +27,7 @@ index_recommends:
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
   enable: true
-  title: Related
+  title: 相关
   params:
     maxCount: 4
     #PPMixingRate: 0.0
@@ -37,7 +37,7 @@ related_posts:
 
 top_posts:
   enable: true
-  title: Top
+  title: 热门
   params:
     maxCount: 4
     PPMixingRate: 1.0

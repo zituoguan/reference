@@ -5,173 +5,170 @@ background: bg-[#4aa181]
 tags:
   - AI
   - AlanAI
-  - Prompts
-  - Tips
+  - 提示
+  - 技巧
 categories:
-  - Toolkit
+  - 工具箱
 intro:
-  This cheat sheet covers all major script concepts, client API methods, handlers and other tools to create a multimodal
-  conversational experience with Alan AI
+  此速查表涵盖了所有主要脚本概念、客户端 API 方法、处理程序以及其他工具，用于通过 Alan AI 创建多模式对话体验。
 ---
 
-### Legend
+### 图例
 
-- `pattern` — phrase to invoke a voice/text command or a response to be played
-- `value` — specified value
-- `params` — passed parameters
-- `action` — action to be performed
-- `output` — data outcome
-- `[...]` — optional data or parameters
+- `pattern` — 用于调用语音/文本命令或播放响应的短语
+- `value` — 指定的值
+- `params` — 传递的参数
+- `action` — 要执行的操作
+- `output` — 数据结果
+- `[...]` — 可选数据或参数
 
-## Dialog script
+## 对话脚本
 
-### Intents & patterns
+### 意图和模式
 
-Define a voice/text command to play a response
+定义一个语音/文本命令以播放响应
 
 ```{.wrap}
 intent('pattern'[, 'patternN'], reply('pattern'))
 ```
 
-Define a voice/text command to play a response or perform an action
+定义一个语音/文本命令以播放响应或执行操作
 
 ```{.wrap}
 intent('pattern'[, 'patternN'], p => { action })
 ```
 
-Define alternatives
+定义替代方案
 
 ```{.wrap}
 intent('phrase1|phrase2')
 ```
 
-Define optional words and phrases
+定义可选词语和短语
 
 ```{.wrap}
 intent('pattern (optional phrase|)')
 ```
 
-### Response functions
+### 响应函数
 
-Play a response (in case of multiple patterns, a response is picked at random)
+播放响应（如果存在多个模式，则随机选择一个响应）
 
 ```{.wrap}
 reply('pattern'[, 'patternN'])
 ```
 
-Play a response
+播放响应
 
 ```{.wrap}
 p.play('pattern')
 ```
 
-Define voice settings for the assistant reply: `accent (en, fr, de, it, ru, es)`, `gender (male/female)`, `voice type`,
-`speaking pitch`, `speaking rate`
+定义助手回复的语音设置：`口音 (en, fr, de, it, ru, es)`、`性别 (male/female)`、`语音类型`、`语调`、`语速`
 
 ```{.wrap}
 p.play([voice(code, gender, type, pitch, rate), ]'pattern')
 ```
 
-Define play options: `force:true` (execute if the button is inactive), `activate:true` (activate the button before),
-`deactivate:true` (deactivate the button after)
+定义播放选项：`force:true`（如果按钮未激活则执行），`activate:true`（之前激活按钮），`deactivate:true`（之后停用按钮）
 
 ```{.wrap}
 p.play('pattern'[, opts(options)])
 ```
 
-Send a command to the app
+向应用程序发送命令
 
 ```{.wrap}
 p.play({command:data})
 ```
 
-### User-defined slots
+### 用户定义的槽位
 
-Define a static list of values expected in the input
+定义输入中预期的静态值列表
 
 ```{.wrap}
 $(SLOTNAME value1|value2) => p.SLOTNAME.value
 ```
 
-Provide labels to classify or identify the slot values
+提供标签以分类或识别槽位值
 
 ```{.wrap}
 $(SLOTNAME value1~label1|value2~label2) => p.SLOTNAME.label
 ```
 
-Enable fuzzy matching to capture similar variants
+启用模糊匹配以捕获相似变体
 
 ```{.wrap}
 $(SLOTNAME~ value1|value2) => p.SLOTNAME.value
 ```
 
-Make a slot optional
+使槽位可选
 
 ```{.wrap}
 $(SLOTNAME value1|value2|)
 ```
 
-Capture several slot values
+捕获多个槽位值
 
 ```{.wrap}
 intent('$(SLOTNAME value1|value2) and $(SLOTNAME value1|value2 )') => p.SLOTNAME_ (array), p.SLOTNAME_[0].value, p.SLOTNAME_[1].value
 ```
 
-### Predefined slots
+### 预定义槽位
 
-Capture date values
+捕获日期值
 
 ```{.wrap}
 $(DATE) => p.DATE.value, p.DATE.moment, p.DATE.luxon
 ```
 
-Capture time values
+捕获时间值
 
 ```{.wrap}
 $(TIME) => p.TIME.value, p.TIME.moment
 ```
 
-Capture cardinal numbers
+捕获基数
 
 ```{.wrap}
 $(NUMBER) => p.NUMBER.value, p.NUMBER.number
 ```
 
-Capture ordinal numbers
+捕获序数
 
 ```{.wrap}
 $(ORDINAL) => p.ORDINAL.value, p.ORDINAL.number
 ```
 
-Capture locations
+捕获位置
 
 ```{.wrap}
 $(LOC) => p.LOC.value
 ```
 
-Capture names
+捕获名称
 
 ```{.wrap}
 $(NAME) => p.NAME.value
 ```
 
-### Dynamic slots
+### 动态槽位
 
-Define a dynamic slot at the project level
+在项目级别定义动态槽位
 
 ```{.wrap}
 project.name = {en: "value1|value2|value3"}
 $(SLOTNAME p:name) => p.SLOTNAME.value
 ```
 
-Define a dynamic slot at the dialog session level
+在对话会话级别定义动态槽位
 
 ```{.wrap}
 p.userData.name = {en: "value1|value2|value3"}
 $(SLOTNAME u:name) => p.SLOTNAME.value
 ```
 
-Get data for a dynamic slot with the visual state
+使用可视化状态获取动态槽位的数据
 
 ```{.wrap}
 let name = ["value1|value2|value3"]
@@ -179,228 +176,227 @@ p.visual.data = {en: name};
 $(SLOTNAME v:name) => p.SLOTNAME.value
 ```
 
-Define a dynamic slot in a short form
+以简短形式定义动态槽位
 
 ```{.wrap}
 project.name = {en: "value1|value2|value3"}
 $(p:name) => p.SLOTNAME.value
 ```
 
-Define labels for dynamic slots: see [User-defined slots](#user-defined-slots).
+定义动态槽位的标签：参见[用户定义的槽位](#user-defined-slots)。
 
-Enable fuzzy matching for dynamic slots: see [User-defined slots](#user-defined-slots).
+为动态槽位启用模糊匹配：参见[用户定义的槽位](#user-defined-slots)。
 
-Make a dynamic slot optional: see [User-defined slots](#user-defined-slots).
+使动态槽位可选：参见[用户定义的槽位](#user-defined-slots)。
 
-Capture several slot values: see [User-defined slots](#user-defined-slots).
+捕获多个槽位值：参见[用户定义的槽位](#user-defined-slots)。
 
-### RegEx slots
+### 正则表达式槽位
 
-Capture digit and/or letter combination
+捕获数字和/或字母组合
 
 ```{.wrap}
 const reg = "([A-Za-z]{1}\\s?){6}"
 $(SLOTNAME* ${reg}) => p.SLOTNAME.value
 ```
 
-Capture any user’s input
+捕获任何用户输入
 
 ```{.wrap}
 $(SLOTNAME* .+) => p.SLOTNAME.value
 ```
 
-### Contexts
+### 上下文
 
-Define a context
+定义上下文
 
 ```{.wrap}
 let contextName = context(() => { action })
 ```
 
-Activate a context
+激活上下文
 
 ```{.wrap}
 intent('pattern', p => {..., p.then(contextName)}
 ```
 
-Pass data to the context
+将数据传递到上下文
 
 ```{.wrap}
 p.then(contextName, state: {data:yourData}) => p.state.data
 ```
 
-Resolve a context
+解析上下文
 
 ```{.wrap}
 p.resolve([data:yourData])
 ```
 
-Reset a context
+重置上下文
 
 ```{.wrap}
 p.resetContext()
 ```
 
-Define intents to be matched at any time without switching the current context
+定义在任何时候都可匹配的意图，而无需切换当前上下文
 
 ```{.wrap}
 intent(noctx, 'pattern', ...) or noContext(() => {intent(...)})
 ```
 
-Play a prompt for an expected input
+为预期输入播放提示
 
 ```{.wrap}
 fallback('pattern1'[, 'patternN'])
 ```
 
-Title a context
+为上下文命名
 
 ```{.wrap}
 title('contextName')
 ```
 
-### Predefined objects
+### 预定义对象
 
-Store static device- and user-specific data passed from the client app
+存储从客户端应用程序传递的静态设备和用户特定数据
 
 ```{.wrap}
 authData.data => p.authData.data
 ```
 
-Store state data to be available globally at the project scope
+存储在项目范围内全局可用的状态数据
 
 ```{.wrap}
 project.info = {data:yourData} => project.info.data
 ```
 
-Store the intent match score
+存储意图匹配分数
 
 ```{.wrap}
 p.score
 ```
 
-Store data to be passed between contexts
+存储在上下文之间传递的数据
 
 ```{.wrap}
 p.state.data
 ```
 
-Store visual context data to be passed from the client app with `setVisualState()`
+存储通过 `setVisualState()` 从客户端应用程序传递的可视化上下文数据
 
 ```{.wrap}
 p.visual.data
 ```
 
-Store user-specific state data to be accessible during the dialog session
+存储在对话会话期间可访问的用户特定状态数据
 
 ```{.wrap}
 p.userData.data
 ```
 
-### Predefined callbacks
+### 预定义回调
 
-Define actions to be performed when the script is saved and dialog model is built
+定义在脚本保存和对话模型构建时要执行的操作
 
 ```{.wrap}
 onCreateProject(() => { action })
 ```
 
-Define actions to be performed when the dialog session starts
+定义在对话会话开始时要执行的操作
 
 ```{.wrap}
 onCreateUser((p) => { action })
 ```
 
-Define actions to be performed when the dialog session ends
+定义在对话会话结束时要执行的操作
 
 ```{.wrap}
 onCleanupUser((p) => { action })
 ```
 
-Define actions to be performed when the visual state is set
+定义在设置可视化状态时要执行的操作
 
 ```{.wrap}
 onVisualState((p, s) => { action })
 ```
 
-Define actions to be performed when a user event is triggered in the client app: `buttonReady`, `buttonClicked`,
-`micPermissionPrompt`, `micAllowed`, `firstActivate`, `showPopup`, `popupCloseClicked`, `recognized`
+定义在客户端应用程序中触发用户事件时要执行的操作：`buttonReady`、`buttonClicked`、`micPermissionPrompt`、`micAllowed`、`firstActivate`、`showPopup`、`popupCloseClicked`、`recognized`
 
 ```{.wrap}
 onUserEvent((p, e) => { action })
 ```
 
-Define actions to be performed when a context is activated
+定义在上下文激活时要执行的操作
 
 ```{.wrap}
 onEnter((p) => { action })
 ```
 
-### Q&A service
+### 问答服务
 
-Define a URL of a resource to be indexed
+定义要索引的资源的 URL
 
 ```{.wrap}
 corpus({url: url, depth: depthLevel})
 ```
 
-Define text corpus to be used by the assistant in the dialog
+定义助手在对话中使用的文本语料库
 
 ```{.wrap}
 corpus('text')
 ```
 
-### Built-in JS libraries
+### 内置 JS 库
 
-Make API calls
+进行 API 调用
 
 ```{.wrap}
 axios, request
 ```
 
-Work with time
+处理时间
 
 ```{.wrap}
 moment-timezone, luxon
 ```
 
-Work with arrays, numbers, objects, strings and so on
+处理数组、数字、对象、字符串等
 
 ```{.wrap}
 lodash
 ```
 
-### Other
+### 其他
 
-Provide a list of hints to help recognize specific terms
+提供提示列表以帮助识别特定术语
 
 ```{.wrap}
 recognitionHints('hint'[, 'hintN'])
 ```
 
-Write info messages to Alan Studio logs
+将信息消息写入 Alan Studio 日志
 
 ```{.wrap}
 console.log(data)
 ```
 
-Write error messages to Alan Studio logs
+将错误消息写入 Alan Studio 日志
 
 ```{.wrap}
 console.error(data)
 ```
 
-## Client SDK
+## 客户端 SDK
 
-### Client API methods
+### 客户端 API 方法
 
-Send information about the visual state from the client app to the dialog script
+从客户端应用程序向对话脚本发送有关可视化状态的信息
 
 ```{.wrap}
 setVisualState(visualStateData:object)
 ```
 
-Send data or perform actions without a voice/text command
+无需语音/文本命令即可发送数据或执行操作
 
 ```{.wrap}
 projectAPI.method = function(p, param, callback) {
@@ -411,92 +407,93 @@ projectAPI.method = function(p, param, callback) {
 callProjectApi(method:string, data:object, callback:function)
 ```
 
-Play a text message in the client app
+在客户端应用程序中播放文本消息
 
 ```{.wrap}
 playText(text:string)
 ```
 
-Send a text message to Alan as the user’s input
+将文本消息作为用户输入发送给 Alan
 
 ```{.wrap}
 sendText(text:string)
 ```
 
-Execute a command in the client app
+在客户端应用程序中执行命令
 
 ```{.wrap}
 playCommand(command:object)
 ```
 
-### Client API methods (continued)
+### 客户端 API 方法 (续)
 
-Activate the Alan button programmatically
+以编程方式激活 Alan 按钮
 
 ```{.wrap}
 activate()
 ```
 
-Deactivate the Alan button programmatically
+以编程方式停用 Alan 按钮
 
 ```{.wrap}
 deactivate()
 ```
 
-Check the Alan button state
+检查 Alan 按钮状态
 
 ```{.wrap}
 isActive()
 ```
 
-Remove the Alan button from the parent element, page (supported on Web, Ionic)
+从父元素、页面中移除 Alan 按钮（在 Web、Ionic 上受支持）
 
 ```{.wrap}
 remove()
 ```
 
-Check the state of the wake word (supported on iOS, Android)
+检查唤醒词的状态（在 iOS、Android 上受支持）
 
 ```{.wrap}
 getWakewordEnabled()
 ```
 
-Set the state of the wake word (supported on iOS, Android)
+设置唤醒词的状态（在 iOS、Android 上受支持）
 
 ```{.wrap}
 setWakewordEnabled(enabled:boolean)
 ```
 
-### Handlers
+### 处理程序
 
-// Examples are provided for the Web platform
+// 示例针对 Web 平台提供
 
-Handle commands sent from the dialog script to the client app
+处理从对话脚本发送到客户端应用程序的命令
 
 ```{.wrap}
 onCommand: function (commandData) { action }
 ```
 
-Handle Alan button state changes
+处理 Alan 按钮状态更改
 
 ```{.wrap}
 onButtonState: function (e) { action }
 ```
 
-Handle connection status to the virtual assistant project in the Alan Cloud
+处理与 Alan Cloud 中虚拟助手项目的连接状态
 
 ```{.wrap}
 onConnectionStatus: function (e) { action }
 ```
 
-Handle events received from Alan
+处理从 Alan 收到的事件
 
 ```{.wrap}
 onEvent: function (e) { action }
 ```
 
-## Also see
+## 另请参阅
 
-- [Alan AI website](https://alan.app)
-- [About the Alan Platform](https://alan.app/platform)
-- [Alan AI documentation](https://alan.app/docs)
+- [Alan AI 网站](https://alan.app)
+- [关于 Alan 平台](https://alan.app/platform)
+- [Alan AI 文档](https://alan.app/docs)
+

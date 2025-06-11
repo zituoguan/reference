@@ -3,414 +3,415 @@ title: VSCode
 date: 2021-12-16 13:41:00
 background: bg-[#5ba3e6]
 tags:
-  - text
-  - editor
-  - shortcut
+  - 文本
+  - 编辑器
+  - 快捷键
 categories:
-  - Toolkit
+  - 工具箱
 intro: |
-  This VSCode (Visual Studio Code) quick reference cheat sheet shows its keyboard shortcuts and commands.
+  这份 VSCode (Visual Studio Code) 快速参考备忘单展示了其键盘快捷键和命令。
 ---
 
-## Keyboard shortcuts for Windows
+## Windows 键盘快捷键
 
-### General
+### 常规
 
-| Shortcut              | Action                    |
+| 快捷键                | 操作                      |
 | --------------------- | ------------------------- |
-| `Ctrl` `Shift` `P`    | Show Command Palette      |
-| `Ctrl` `P`            | Quick Open, Go to File... |
-| `Ctrl` `Shift` `N`    | New window/instance       |
-| `Ctrl` `Shift` `W`    | Close window/instance     |
-| `Ctrl` `,`            | User Settings             |
-| `Ctrl` `K` `Ctrl` `S` | Keyboard Shortcuts        |
+| `Ctrl` `Shift` `P`    | 显示命令面板              |
+| `Ctrl` `P`            | 快速打开，转到文件...     |
+| `Ctrl` `Shift` `N`    | 新建窗口/实例             |
+| `Ctrl` `Shift` `W`    | 关闭窗口/实例             |
+| `Ctrl` `,`            | 用户设置                  |
+| `Ctrl` `K` `Ctrl` `S` | 键盘快捷方式              |
 
 {.shortcuts}
 
-### Basic Editing {.row-span-2}
+### 基本编辑 {.row-span-2}
 
-| Shortcut                | Action                             |
+| 快捷键                  | 操作                               |
 | ----------------------- | ---------------------------------- |
-| `Ctrl` `X`              | Cut line (empty selection)         |
-| `Ctrl` `C`              | Copy line (empty selection)        |
-| `Alt` `Up/Down`         | Move line up/down                  |
-| `Shift` `Alt` `Up/Down` | Copy line up/down                  |
-| `Ctrl` `Shift` `K`      | Delete line                        |
-| `Ctrl` `Enter`          | Insert line below                  |
-| `Ctrl` `Shift` `Enter`  | Insert line above                  |
-| `Ctrl` `Shift` `\`      | Jump to matching bracket           |
-| `Ctrl` `]/[`            | Indent/outdent line                |
-| `Home/End`              | Go to beginning/end of line        |
-| `Ctrl` `Home`           | Go to beginning of file            |
-| `Ctrl` `End`            | Go to end of file                  |
-| `Ctrl` `Up/Down`        | Scroll line up/down                |
-| `Alt` `PgUp/PgDown`     | Scroll page up/down                |
-| `Ctrl` `Shift` `[`      | Fold (collapse) region             |
-| `Ctrl` `Shift` `]`      | Unfold (uncollapse) region         |
-| `Ctrl` `K` `Ctrl` `[`   | Fold (collapse) all subregions     |
-| `Ctrl` `K` `Ctrl` `]`   | Unfold (uncollapse) all subregions |
-| `Ctrl` `K` `Ctrl` `0`   | Fold (collapse) all regions        |
-| `Ctrl` `K` `Ctrl` `J`   | Unfold (uncollapse) all regions    |
-| `Ctrl` `K` `Ctrl` `C`   | Add line comment                   |
-| `Ctrl` `K` `Ctrl` `U`   | Remove line comment                |
-| `Ctrl` `/`              | Toggle line comment                |
-| `Shift` `Alt` `A`       | Toggle block comment               |
-| `Alt` `Z`               | Toggle word wrap                   |
+| `Ctrl` `X`              | 剪切行 (空选择)                    |
+| `Ctrl` `C`              | 复制行 (空选择)                    |
+| `Alt` `Up/Down`         | 上/下移动行                        |
+| `Shift` `Alt` `Up/Down` | 上/下复制行                        |
+| `Ctrl` `Shift` `K`      | 删除行                             |
+| `Ctrl` `Enter`          | 在下方插入行                       |
+| `Ctrl` `Shift` `Enter`  | 在上方插入行                       |
+| `Ctrl` `Shift` `\`      | 跳转到匹配的括号                   |
+| `Ctrl` `]/[`            | 缩进/减少行缩进                    |
+| `Home/End`              | 转到行首/行尾                      |
+| `Ctrl` `Home`           | 转到文件开头                       |
+| `Ctrl` `End`            | 转到文件结尾                       |
+| `Ctrl` `Up/Down`        | 上/下滚动行                        |
+| `Alt` `PgUp/PgDown`     | 上/下滚动页面                      |
+| `Ctrl` `Shift` `[`      | 折叠 (收起) 区域                   |
+| `Ctrl` `Shift` `]`      | 展开 (展开) 区域                   |
+| `Ctrl` `K` `Ctrl` `[`   | 折叠 (收起) 所有子区域             |
+| `Ctrl` `K` `Ctrl` `]`   | 展开 (展开) 所有子区域             |
+| `Ctrl` `K` `Ctrl` `0`   | 折叠 (收起) 所有区域               |
+| `Ctrl` `K` `Ctrl` `J`   | 展开 (展开) 所有区域               |
+| `Ctrl` `K` `Ctrl` `C`   | 添加行注释                         |
+| `Ctrl` `K` `Ctrl` `U`   | 删除行注释                         |
+| `Ctrl` `/`              | 切换行注释                         |
+| `Shift` `Alt` `A`       | 切换块注释                         |
+| `Alt` `Z`               | 切换自动换行                       |
 
 {.shortcuts}
 
-### Navigation
+### 导航
 
-| Shortcut             | Action                          |
+| 快捷键               | 操作                            |
 | -------------------- | ------------------------------- |
-| `Ctrl` `T`           | Show all Symbols                |
-| `Ctrl` `G`           | Go to Line...                   |
-| `Ctrl` `P`           | Go to File...                   |
-| `Ctrl` `Shift` `O`   | Go to Symbol...                 |
-| `Ctrl` `Shift` `M`   | Show Problems panel             |
-| `F8`                 | Go to next error or warning     |
-| `Shift` `F8`         | Go to previous error or warning |
-| `Ctrl` `Shift` `Tab` | Navigate editor group history   |
-| `Alt` `Left/Right`   | Go back/forward                 |
-| `Ctrl` `M`           | Toggle Tab moves focus          |
+| `Ctrl` `T`           | 显示所有符号                    |
+| `Ctrl` `G`           | 转到行...                       |
+| `Ctrl` `P`           | 转到文件...                     |
+| `Ctrl` `Shift` `O`   | 转到符号...                     |
+| `Ctrl` `Shift` `M`   | 显示问题面板                    |
+| `F8`                 | 转到下一个错误或警告            |
+| `Shift` `F8`         | 转到上一个错误或警告            |
+| `Ctrl` `Shift` `Tab` | 导航编辑器组历史                |
+| `Alt` `Left/Right`   | 后退/前进                       |
+| `Ctrl` `M`           | 切换 Tab键移动焦点              |
 
 {.shortcuts}
 
-### Search and replace
+### 搜索和替换
 
-| Shortcut              | Action                                 |
+| 快捷键                | 操作                                   |
 | --------------------- | -------------------------------------- |
-| `Ctrl` `F`            | Find                                   |
-| `Ctrl` `H`            | Replace                                |
-| `F3`                  | Find next                              |
-| `Shift` `F3`          | Find previous                          |
-| `Alt` `Enter`         | Select all occurrences of Find match   |
-| `Ctrl` `D`            | Add selection to next Find match       |
-| `Ctrl` `K` `Ctrl` `D` | Move last selection to next Find match |
-| `Alt` `C/R/W`         | Toggle case-sensitive/regex/whole word |
+| `Ctrl` `F`            | 查找                                   |
+| `Ctrl` `H`            | 替换                                   |
+| `F3`                  | 查找下一个                             |
+| `Shift` `F3`          | 查找上一个                             |
+| `Alt` `Enter`         | 选择所有查找到的匹配项                 |
+| `Ctrl` `D`            | 将选择添加到下一个查找到的匹配项       |
+| `Ctrl` `K` `Ctrl` `D` | 将最后一个选择移动到下一个查找到的匹配项 |
+| `Alt` `C/R/W`         | 切换大小写敏感/正则表达式/全字匹配     |
 
 {.shortcuts}
 
-### Multi-cursor and selection
+### 多光标和选择
 
-| Shortcut                           | Action                                      |
+| 快捷键                             | 操作                                        |
 | ---------------------------------- | ------------------------------------------- |
-| `Alt` `Click`                      | Insert cursor                               |
-| `Ctrl` `Alt` `Up/Down`             | Insert cursor above/below                   |
-| `Ctrl` `U`                         | Undo last cursor operation                  |
-| `Shift` `Alt` `I`                  | Insert cursor at end of each line selected  |
-| `Ctrl` `I`                         | Select current line                         |
-| `Ctrl` `Shift` `L`                 | Select all occurrences of current selection |
-| `Ctrl` `F2`                        | Select all occurrences of current word      |
-| `Shift` `Alt` `Right`              | Expand selection                            |
-| `Shift` `Alt` `Left`               | Shrink selection                            |
-| `Shift` `Alt` `(drag mouse)`       | Column (box) selection                      |
-| `Ctrl` `Shift` `Alt` `(arrow key)` | Column (box) selection                      |
-| `Ctrl` `Shift` `Alt` `PgUp/PgDown` | Column (box) selection page up/down         |
+| `Alt` `Click`                      | 插入光标                                    |
+| `Ctrl` `Alt` `Up/Down`             | 在上方/下方插入光标                         |
+| `Ctrl` `U`                         | 撤销上一个光标操作                          |
+| `Shift` `Alt` `I`                  | 在每个选定行的末尾插入光标                  |
+| `Ctrl` `I`                         | 选择当前行                                  |
+| `Ctrl` `Shift` `L`                 | 选择所有当前选择的匹配项                    |
+| `Ctrl` `F2`                        | 选择所有当前单词的匹配项                    |
+| `Shift` `Alt` `Right`              | 扩展选择                                    |
+| `Shift` `Alt` `Left`               | 缩小选择                                    |
+| `Shift` `Alt` `(drag mouse)`       | 列 (框) 选择                                |
+| `Ctrl` `Shift` `Alt` `(arrow key)` | 列 (框) 选择                                |
+| `Ctrl` `Shift` `Alt` `PgUp/PgDown` | 列 (框) 选择向上/向下翻页                   |
 
 {.shortcuts}
 
-### Rich languages editing
+### 富文本语言编辑
 
-| Shortcut               | Action                      |
+| 快捷键                 | 操作                        |
 | ---------------------- | --------------------------- |
-| `Ctrl` `Space`         | Trigger suggestion          |
-| `Ctrl` `Shift` `Space` | Trigger parameter hints     |
-| `Shift` `Alt` `F`      | Format document             |
-| `Ctrl` `K` `Ctrl` `F`  | Format selection            |
-| `F12`                  | Go to Definition            |
-| `Alt` `F12`            | Peek Definition             |
-| `Ctrl` `K` `F12`       | Open Definition to the side |
-| `Ctrl` `.`             | Quick Fix                   |
-| `Shift` `F12`          | Show References             |
-| `F2`                   | Rename Symbol               |
-| `Ctrl` `K` `Ctrl` `X`  | Trim trailing whitespace    |
-| `Ctrl` `K` `M`         | Change file language        |
+| `Ctrl` `Space`         | 触发建议                    |
+| `Ctrl` `Shift` `Space` | 触发参数提示                |
+| `Shift` `Alt` `F`      | 格式化文档                  |
+| `Ctrl` `K` `Ctrl` `F`  | 格式化选定内容              |
+| `F12`                  | 转到定义                    |
+| `Alt` `F12`            | 查看定义                    |
+| `Ctrl` `K` `F12`       | 在侧边打开定义              |
+| `Ctrl` `.`             | 快速修复                    |
+| `Shift` `F12`          | 显示引用                    |
+| `F2`                   | 重命名符号                  |
+| `Ctrl` `K` `Ctrl` `X`  | 删除尾随空格                |
+| `Ctrl` `K` `M`         | 更改文件语言                |
 
 {.shortcuts}
 
-### Editor management
+### 编辑器管理
 
-| Shortcut                       | Action                                   |
+| 快捷键                         | 操作                                     |
 | ------------------------------ | ---------------------------------------- |
-| `Ctrl` `F4`                    | Close editor                             |
-| `Ctrl` `W`                     | Close editor                             |
-| `Ctrl` `K` `F`                 | Close folder                             |
-| `Ctrl` `\`                     | Split editor                             |
-| `Ctrl` `1/2/3`                 | Focus into 1st, 2nd, or 3rd editor group |
-| `Ctrl` `K` `Ctrl` `Left/Right` | Focus into previous/next editor group    |
-| `Ctrl` `Shift` `PgUp/PgDown`   | Move editor left/right                   |
-| `Ctrl` `K` `Left/Right`        | Move active editor group                 |
+| `Ctrl` `F4`                    | 关闭编辑器                               |
+| `Ctrl` `W`                     | 关闭编辑器                               |
+| `Ctrl` `K` `F`                 | 关闭文件夹                               |
+| `Ctrl` `\`                     | 拆分编辑器                               |
+| `Ctrl` `1/2/3`                 | 聚焦到第1、2或3个编辑器组                |
+| `Ctrl` `K` `Ctrl` `Left/Right` | 聚焦到上一个/下一个编辑器组              |
+| `Ctrl` `Shift` `PgUp/PgDown`   | 向左/向右移动编辑器                      |
+| `Ctrl` `K` `Left/Right`        | 移动活动编辑器组                         |
 
 {.shortcuts}
 
-### File management
+### 文件管理
 
-| Shortcut              | Action                                  |
+| 快捷键                | 操作                                    |
 | --------------------- | --------------------------------------- |
-| `Ctrl` `N`            | New File                                |
-| `Ctrl` `O`            | Open File...                            |
-| `Ctrl` `S`            | Save                                    |
-| `Ctrl` `Shift` `S`    | Save As...                              |
-| `Ctrl` `K` `S`        | Save All                                |
-| `Ctrl` `F4`           | Close                                   |
-| `Ctrl` `K` `Ctrl` `W` | Close All                               |
-| `Ctrl` `Shift` `T`    | Reopen closed editor                    |
-| `Ctrl` `K` `Enter`    | Keep preview mode editor open           |
-| `Ctrl` `Tab`          | Open next                               |
-| `Ctrl` `Shift` `Tab`  | Open previous                           |
-| `Ctrl` `K` `P`        | Copy path of active file                |
-| `Ctrl` `K` `R`        | Reveal active file in Explorer          |
-| `Ctrl` `K` `O`        | Show active file in new window/instance |
+| `Ctrl` `N`            | 新建文件                                |
+| `Ctrl` `O`            | 打开文件...                             |
+| `Ctrl` `S`            | 保存                                    |
+| `Ctrl` `Shift` `S`    | 另存为...                               |
+| `Ctrl` `K` `S`        | 全部保存                                |
+| `Ctrl` `F4`           | 关闭                                    |
+| `Ctrl` `K` `Ctrl` `W` | 全部关闭                                |
+| `Ctrl` `Shift` `T`    | 重新打开已关闭的编辑器                  |
+| `Ctrl` `K` `Enter`    | 保持预览模式编辑器打开                  |
+| `Ctrl` `Tab`          | 打开下一个                              |
+| `Ctrl` `Shift` `Tab`  | 打开上一个                              |
+| `Ctrl` `K` `P`        | 复制活动文件的路径                      |
+| `Ctrl` `K` `R`        | 在资源管理器中显示活动文件              |
+| `Ctrl` `K` `O`        | 在新窗口/实例中显示活动文件             |
 
 {.shortcuts}
 
-### Display
+### 显示
 
-| Shortcut           | Action                                     |
+| 快捷键             | 操作                                       |
 | ------------------ | ------------------------------------------ |
-| `F11`              | Toggle full screen                         |
-| `Shift` `Alt` `0`  | Toggle editor layout (horizontal/vertical) |
-| `Ctrl` `=/-`       | Zoom in/out                                |
-| `Ctrl` `B`         | Toggle Sidebar visibility                  |
-| `Ctrl` `Shift` `E` | Show Explorer/Toggle focus                 |
-| `Ctrl` `Shift` `F` | Show Search                                |
-| `Ctrl` `Shift` `G` | Show Source Control                        |
-| `Ctrl` `Shift` `D` | Show Debug                                 |
-| `Ctrl` `Shift` `X` | Show Extensions                            |
-| `Ctrl` `Shift` `H` | Replace in files                           |
-| `Ctrl` `Shift` `J` | Toggle Search details                      |
-| `Ctrl` `Shift` `U` | Show Output panel                          |
-| `Ctrl` `Shift` `V` | Open Markdown preview                      |
-| `Ctrl` `K` `V`     | Open Markdown preview to the side          |
-| `Ctrl` `K` `Z`     | Zen Mode (Esc Esc to exit)                 |
+| `F11`              | 切换全屏                                   |
+| `Shift` `Alt` `0`  | 切换编辑器布局 (水平/垂直)                 |
+| `Ctrl` `=/-`       | 放大/缩小                                  |
+| `Ctrl` `B`         | 切换侧边栏可见性                           |
+| `Ctrl` `Shift` `E` | 显示资源管理器/切换焦点                    |
+| `Ctrl` `Shift` `F` | 显示搜索                                   |
+| `Ctrl` `Shift` `G` | 显示源代码管理                             |
+| `Ctrl` `Shift` `D` | 显示调试                                   |
+| `Ctrl` `Shift` `X` | 显示扩展                                   |
+| `Ctrl` `Shift` `H` | 在文件中替换                               |
+| `Ctrl` `Shift` `J` | 切换搜索详情                               |
+| `Ctrl` `Shift` `U` | 显示输出面板                               |
+| `Ctrl` `Shift` `V` | 打开 Markdown 预览                         |
+| `Ctrl` `K` `V`     | 在侧边打开 Markdown 预览                   |
+| `Ctrl` `K` `Z`     | Zen 模式 (按 Esc Esc 退出)                 |
 
 {.shortcuts}
 
-### Debug
+### 调试
 
-| Shortcut              | Action            |
+| 快捷键                | 操作              |
 | --------------------- | ----------------- |
-| `F9`                  | Toggle breakpoint |
-| `F5`                  | Start/Continue    |
-| `Shift` `F5`          | Stop              |
-| `F11`                 | Step into         |
-| `Shift` `F11`         | Step out          |
-| `F10`                 | Step over         |
-| `Ctrl` `K` `Ctrl` `I` | Show hover        |
+| `F9`                  | 切换断点          |
+| `F5`                  | 启动/继续         |
+| `Shift` `F5`          | 停止              |
+| `F11`                 | 单步进入          |
+| `Shift` `F11`         | 单步跳出          |
+| `F10`                 | 单步跳过          |
+| `Ctrl` `K` `Ctrl` `I` | 显示悬停信息      |
 
 {.shortcuts}
 
-### Integrated terminal
+### 集成终端
 
-| Shortcut                       | Action                     |
+| 快捷键                         | 操作                       |
 | ------------------------------ | -------------------------- |
-| `Ctrl` <code>\`</code>         | Show integrated terminal   |
-| `Ctrl` `Shift` <code>\`</code> | Create new terminal        |
-| `Ctrl` `C`                     | Copy selection             |
-| `Ctrl` `V`                     | Paste into active terminal |
-| `Ctrl` `Up/Down`               | Scroll up/down             |
-| `Shift` `PgUp/PgDown`          | Scroll page up/down        |
-| `Ctrl` `Home/End`              | Scroll to top/bottom       |
+| `Ctrl` <code>\`</code>         | 显示集成终端               |
+| `Ctrl` `Shift` <code>\`</code> | 创建新终端                 |
+| `Ctrl` `C`                     | 复制选定内容               |
+| `Ctrl` `V`                     | 粘贴到活动终端             |
+| `Ctrl` `Up/Down`               | 上/下滚动                  |
+| `Shift` `PgUp/PgDown`          | 上/下翻页                  |
+| `Ctrl` `Home/End`              | 滚动到顶部/底部            |
 
 {.shortcuts}
 
-## Keyboard shortcuts for MacOS
+## MacOS 键盘快捷键
 
-### General
+### 常规
 
-| Shortcut     | Action                  |
+| 快捷键       | 操作                    |
 | ------------ | ----------------------- |
-| `⇧⌘P` / `F1` | Show Command Palette    |
-| `⌘P`         | Quick Open, Go to File… |
-| `⇧⌘N`        | New window/instance     |
-| `⌘W`         | Close window/instance   |
-| `⌘,`         | User Settings           |
-| `⌘K` `⌘S`    | Keyboard Shortcuts      |
+| `⇧⌘P` / `F1` | 显示命令面板            |
+| `⌘P`         | 快速打开，转到文件…     |
+| `⇧⌘N`        | 新建窗口/实例           |
+| `⌘W`         | 关闭窗口/实例           |
+| `⌘,`         | 用户设置                |
+| `⌘K` `⌘S`    | 键盘快捷方式            |
 
 {.shortcuts}
 
-### Basic editing {.row-span-2}
+### 基本编辑 {.row-span-2}
 
-| Shortcut             | Action                      |
+| 快捷键               | 操作                        |
 | -------------------- | --------------------------- |
-| `⌘X`                 | Cut line (empty selection)  |
-| `⌘C`                 | Copy line (empty selection) |
-| `⌥↓` / `⌥↑`          | Move line down/up           |
-| `⇧⌥↓` / `⇧⌥↑`        | Copy line down/up           |
-| `⇧⌘K`                | Delete line                 |
-| `⌘Enter` / `⇧⌘Enter` | Insert line below/above     |
-| `⇧⌘\`                | Jump to matching bracket    |
-| `⌘]` / `⌘[`          | Indent/outdent line         |
-| `Home` / `End`       | Go to beginning/end of line |
-| `⌘↑` / `⌘↓`          | Go to beginning/end of file |
-| `⌃PgUp` / `⌃PgDn`    | Scroll line up/down         |
-| `⌘PgUp` `/⌘PgDn`     | Scroll page up/down         |
-| `⌥⌘[` / `⌥⌘]`        | Fold/unfold region          |
-| `⌘K ⌘[` / `⌘K ⌘]`    | Fold/unfold all subregions  |
-| `⌘K ⌘0` / `⌘K ⌘J`    | Fold/unfold all regions     |
-| `⌘K ⌘C`              | Add line comment            |
-| `⌘K ⌘U`              | Remove line comment         |
-| `⌘/`                 | Toggle line comment         |
-| `⇧⌥A`                | Toggle block comment        |
-| `⌥Z`                 | Toggle word wrap            |
+| `⌘X`                 | 剪切行 (空选择)             |
+| `⌘C`                 | 复制行 (空选择)             |
+| `⌥↓` / `⌥↑`          | 向下/向上移动行             |
+| `⇧⌥↓` / `⇧⌥↑`        | 向下/向上复制行             |
+| `⇧⌘K`                | 删除行                      |
+| `⌘Enter` / `⇧⌘Enter` | 在下方/上方插入行           |
+| `⇧⌘\`                | 跳转到匹配的括号            |
+| `⌘]` / `⌘[`          | 缩进/减少行缩进             |
+| `Home` / `End`       | 转到行首/行尾               |
+| `⌘↑` / `⌘↓`          | 转到文件开头/结尾           |
+| `⌃PgUp` / `⌃PgDn`    | 上/下滚动行                 |
+| `⌘PgUp` `/⌘PgDn`     | 上/下滚动页面               |
+| `⌥⌘[` / `⌥⌘]`        | 折叠/展开区域               |
+| `⌘K ⌘[` / `⌘K ⌘]`    | 折叠/展开所有子区域         |
+| `⌘K ⌘0` / `⌘K ⌘J`    | 折叠/展开所有区域           |
+| `⌘K ⌘C`              | 添加行注释                  |
+| `⌘K ⌘U`              | 删除行注释                  |
+| `⌘/`                 | 切换行注释                  |
+| `⇧⌥A`                | 切换块注释                  |
+| `⌥Z`                 | 切换自动换行                |
 
 {.shortcuts}
 
-### Multi-cursor and selection {.row-span-2}
+### 多光标和选择 {.row-span-2}
 
-| Shortcut          | Action                                      |
+| 快捷键            | 操作                                        |
 | ----------------- | ------------------------------------------- |
-| `⌥ +`             | click Insert cursor                         |
-| `⌥⌘↑`             | Insert cursor above                         |
-| `⌥⌘↓`             | Insert cursor below                         |
-| `⌘U`              | Undo last cursor operation                  |
-| `⇧⌥I`             | Insert cursor at end of each line selected  |
-| `⌘L`              | Select current line                         |
-| `⇧⌘L`             | Select all occurrences of current selection |
-| `⌘F2`             | Select all occurrences of current word      |
-| `⌃⇧⌘→` / ←        | Expand / shrink selection                   |
-| `⇧⌥` + drag mouse | Column (box) selection                      |
-| `⇧⌥⌘↑` / ↓        | Column (box) selection up/down              |
-| `⇧⌥⌘←` / →        | Column (box) selection left/right           |
-| `⇧⌥⌘PgUp`         | Column (box) selection page up              |
-| `⇧⌥⌘PgDn`         | Column (box) selection page down            |
+| `⌥ +`             | 点击 插入光标                               |
+| `⌥⌘↑`             | 在上方插入光标                              |
+| `⌥⌘↓`             | 在下方插入光标                              |
+| `⌘U`              | 撤销上一个光标操作                          |
+| `⇧⌥I`             | 在每个选定行的末尾插入光标                  |
+| `⌘L`              | 选择当前行                                  |
+| `⇧⌘L`             | 选择所有当前选择的匹配项                    |
+| `⌘F2`             | 选择所有当前单词的匹配项                    |
+| `⌃⇧⌘→` / ←        | 扩展 / 缩小选择                             |
+| `⇧⌥` + drag mouse | 列 (框) 选择                                |
+| `⇧⌥⌘↑` / ↓        | 列 (框) 选择向上/向下                       |
+| `⇧⌥⌘←` / →        | 列 (框) 选择向左/向右                       |
+| `⇧⌥⌘PgUp`         | 列 (框) 选择向上翻页                        |
+| `⇧⌥⌘PgDn`         | 列 (框) 选择向下翻页                        |
 
 {.shortcuts}
 
-### Search and replace
+### 搜索和替换
 
-| Shortcut     | Action                                 |
+| 快捷键       | 操作                                   |
 | ------------ | -------------------------------------- |
-| `⌘F`         | Find                                   |
-| `⌥⌘F`        | Replace                                |
-| `⌘G` / `⇧⌘G` | Find next/previous                     |
-| `⌥Enter`     | Select all occurrences of Find match   |
-| `⌘D`         | Add selection to next Find match       |
-| `⌘K ⌘D`      | Move last selection to next Find match |
+| `⌘F`         | 查找                                   |
+| `⌥⌘F`        | 替换                                   |
+| `⌘G` / `⇧⌘G` | 查找下一个/上一个                      |
+| `⌥Enter`     | 选择所有查找到的匹配项                 |
+| `⌘D`         | 将选择添加到下一个查找到的匹配项       |
+| `⌘K ⌘D`      | 将最后一个选择移动到下一个查找到的匹配项 |
 
 {.shortcuts}
 
-### Rich languages editing
+### 富文本语言编辑
 
-| Shortcut     | Action                      |
+| 快捷键       | 操作                        |
 | ------------ | --------------------------- |
-| `⌃Space, ⌘I` | Trigger suggestion          |
-| `⇧⌘Space`    | Trigger parameter hints     |
-| `⇧⌥F`        | Format document             |
-| `⌘K ⌘F`      | Format selection            |
-| `F12`        | Go to Definition            |
-| `⌥F12`       | Peek Definition             |
-| `⌘K F12`     | Open Definition to the side |
-| `⌘.`         | Quick Fix                   |
-| `⇧F12`       | Show References             |
-| `F2`         | Rename Symbol               |
-| `⌘K ⌘X`      | Trim trailing whitespace    |
-| `⌘K M`       | Change file language        |
+| `⌃Space, ⌘I` | 触发建议                    |
+| `⇧⌘Space`    | 触发参数提示                |
+| `⇧⌥F`        | 格式化文档                  |
+| `⌘K ⌘F`      | 格式化选定内容              |
+| `F12`        | 转到定义                    |
+| `⌥F12`       | 查看定义                    |
+| `⌘K F12`     | 在侧边打开定义              |
+| `⌘.`         | 快速修复                    |
+| `⇧F12`       | 显示引用                    |
+| `F2`         | 重命名符号                  |
+| `⌘K ⌘X`      | 删除尾随空格                |
+| `⌘K M`       | 更改文件语言                |
 
 {.shortcuts}
 
-### Navigation
+### 导航
 
-| Shortcut     | Action                               |
+| 快捷键       | 操作                                 |
 | ------------ | ------------------------------------ |
-| `⌘T`         | Show all Symbols                     |
-| `⌃G`         | Go to Line...                        |
-| `⌘P`         | Go to File...                        |
-| `⇧⌘O`        | Go to Symbol...                      |
-| `⇧⌘M`        | Show Problems panel                  |
-| `F8` / `⇧F8` | Go to next/previous error or warning |
-| `⌃⇧Tab`      | Navigate editor group history        |
-| `⌃-` / `⌃⇧-` | Go back/forward                      |
-| `⌃⇧M`        | Toggle Tab moves focus               |
+| `⌘T`         | 显示所有符号                         |
+| `⌃G`         | 转到行...                            |
+| `⌘P`         | 转到文件...                          |
+| `⇧⌘O`        | 转到符号...                          |
+| `⇧⌘M`        | 显示问题面板                         |
+| `F8` / `⇧F8` | 转到下一个/上一个错误或警告          |
+| `⌃⇧Tab`      | 导航编辑器组历史                     |
+| `⌃-` / `⌃⇧-` | 后退/前进                            |
+| `⌃⇧M`        | 切换 Tab键移动焦点                   |
 
 {.shortcuts}
 
-### Editor management
+### 编辑器管理
 
-| Shortcut            | Action                                |
+| 快捷键              | 操作                                  |
 | ------------------- | ------------------------------------- |
-| `⌘W`                | Close editor                          |
-| `⌘K` `F`            | Close folder                          |
-| `⌘\`                | Split editor                          |
-| `⌘1` / `⌘2` / `⌘3`  | Focus into 1st, 2nd, 3rd editor group |
-| `⌘K ⌘←` / `⌘K ⌘→`   | Focus into previous/next editor group |
-| `⌘K ⇧⌘←` / `⌘K ⇧⌘→` | Move editor left/right                |
-| `⌘K ←` / `⌘K →`     | Move active editor group              |
+| `⌘W`                | 关闭编辑器                            |
+| `⌘K` `F`            | 关闭文件夹                            |
+| `⌘\`                | 拆分编辑器                            |
+| `⌘1` / `⌘2` / `⌘3`  | 聚焦到第1、2、3个编辑器组             |
+| `⌘K ⌘←` / `⌘K ⌘→`   | 聚焦到上一个/下一个编辑器组           |
+| `⌘K ⇧⌘←` / `⌘K ⇧⌘→` | 向左/向右移动编辑器                   |
+| `⌘K ←` / `⌘K →`     | 移动活动编辑器组                      |
 
 {.shortcuts}
 
-### File management {.row-span-2}
+### 文件管理 {.row-span-2}
 
-| Shortcut         | Action                                  |
+| 快捷键           | 操作                                    |
 | ---------------- | --------------------------------------- |
-| `⌘N`             | New File                                |
-| `⌘O`             | Open File...                            |
-| `⌘S`             | Save                                    |
-| `⇧⌘S`            | Save As...                              |
-| `⌥⌘S`            | Save All                                |
-| `⌘W`             | Close                                   |
-| `⌘K ⌘W`          | Close All                               |
-| `⇧⌘T`            | Reopen closed editor                    |
-| `⌘K`             | Enter Keep preview mode editor open     |
-| `⌃Tab` / `⌃⇧Tab` | Open next / previous                    |
-| `⌘K P`           | Copy path of active file                |
-| `⌘K R`           | Reveal active file in Finder            |
-| `⌘K O`           | Show active file in new window/instance |
+| `⌘N`             | 新建文件                                |
+| `⌘O`             | 打开文件...                             |
+| `⌘S`             | 保存                                    |
+| `⇧⌘S`            | 另存为...                               |
+| `⌥⌘S`            | 全部保存                                |
+| `⌘W`             | 关闭                                    |
+| `⌘K ⌘W`          | 全部关闭                                |
+| `⇧⌘T`            | 重新打开已关闭的编辑器                  |
+| `⌘K`             | Enter 保持预览模式编辑器打开            |
+| `⌃Tab` / `⌃⇧Tab` | 打开下一个 / 上一个                     |
+| `⌘K P`           | 复制活动文件的路径                      |
+| `⌘K R`           | 在 Finder 中显示活动文件                |
+| `⌘K O`           | 在新窗口/实例中显示活动文件             |
 
 {.shortcuts}
 
-### Display {.row-span-2}
+### 显示 {.row-span-2}
 
-| Shortcut     | Action                                     |
+| 快捷键       | 操作                                       |
 | ------------ | ------------------------------------------ |
-| `⌃⌘F`        | Toggle full screen                         |
-| `⌥⌘0`        | Toggle editor layout (horizontal/vertical) |
-| `⌘=` / `⇧⌘-` | Zoom in/out                                |
-| `⌘B`         | Toggle Sidebar visibility                  |
-| `⇧⌘E`        | Show Explorer / Toggle focus               |
-| `⇧⌘F`        | Show Search                                |
-| `⌃⇧G`        | Show Source Control                        |
-| `⇧⌘D`        | Show Debug                                 |
-| `⇧⌘X`        | Show Extensions                            |
-| `⇧⌘H`        | Replace in files                           |
-| `⇧⌘J`        | Toggle Search details                      |
-| `⇧⌘U`        | Show Output panel                          |
-| `⇧⌘V`        | Open Markdown preview                      |
-| `⌘K V`       | Open Markdown preview to the side          |
-| `⌘K Z`       | Zen Mode (Esc Esc to exit)                 |
+| `⌃⌘F`        | 切换全屏                                   |
+| `⌥⌘0`        | 切换编辑器布局 (水平/垂直)                 |
+| `⌘=` / `⇧⌘-` | 放大/缩小                                  |
+| `⌘B`         | 切换侧边栏可见性                           |
+| `⇧⌘E`        | 显示资源管理器 / 切换焦点                  |
+| `⇧⌘F`        | 显示搜索                                   |
+| `⌃⇧G`        | 显示源代码管理                             |
+| `⇧⌘D`        | 显示调试                                   |
+| `⇧⌘X`        | 显示扩展                                   |
+| `⇧⌘H`        | 在文件中替换                               |
+| `⇧⌘J`        | 切换搜索详情                               |
+| `⇧⌘U`        | 显示输出面板                               |
+| `⇧⌘V`        | 打开 Markdown 预览                         |
+| `⌘K V`       | 在侧边打开 Markdown 预览                   |
+| `⌘K Z`       | Zen 模式 (按 Esc Esc 退出)                 |
 
 {.shortcuts}
 
-### Debug
+### 调试
 
-| Shortcut       | Action            |
+| 快捷键         | 操作              |
 | -------------- | ----------------- |
-| `F9`           | Toggle breakpoint |
-| `F5`           | Start/Continue    |
-| `F11` / `⇧F11` | Step into/ out    |
-| `F10`          | Step over         |
-| `⇧F5`          | Stop              |
-| `⌘K ⌘I`        | Show hover        |
+| `F9`           | 切换断点          |
+| `F5`           | 启动/继续         |
+| `F11` / `⇧F11` | 单步进入/跳出     |
+| `F10`          | 单步跳过          |
+| `⇧F5`          | 停止              |
+| `⌘K ⌘I`        | 显示悬停信息      |
 
 {.shortcuts}
 
-### Integrated terminal
+### 集成终端
 
-| Shortcut          | Action                   |
+| 快捷键            | 操作                     |
 | ----------------- | ------------------------ |
-| <code>⌃\`</code>  | Show integrated terminal |
-| <code>⌃⇧\`</code> | Create new terminal      |
-| `⌘C`              | Copy selection           |
-| `⌘↑` / `↓`        | Scroll up/down           |
-| `PgUp` / `PgDn`   | Scroll page up/down      |
-| `⌘Home` / `End`   | Scroll to top/bottom     |
+| <code>⌃\`</code>  | 显示集成终端             |
+| <code>⌃⇧\`</code> | 创建新终端               |
+| `⌘C`              | 复制选定内容             |
+| `⌘↑` / `↓`        | 上/下滚动                |
+| `PgUp` / `PgDn`   | 上/下翻页                |
+| `⌘Home` / `End`   | 滚动到顶部/底部          |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
 - [VS Code Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
   _(code.visualstudio.com)_
 - [VS Code Keyboard shortcuts for macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
   _(code.visualstudio.com)_
+

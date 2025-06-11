@@ -7,44 +7,44 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 17 keyboard shortcuts found in the Obsidian knowledge base app.
+  Obsidian 知识库应用程序中 17 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### Default Shortcuts
+### 默认快捷键
 
-| Shortcut             | Action                      |
+| 快捷键               | 操作                        |
 | -------------------- | --------------------------- |
-| `Ctrl` `S`           | Save a file in the editor   |
-| `Ctrl` `N`           | Create a new note           |
-| `Ctrl` `P`           | Open the command palette    |
-| `Ctrl` `O`           | Open the quick switcher     |
-| `Ctrl` `Shift` `F`   | Search in all files         |
-| `Ctrl` `G`           | Open the graph view         |
-| `Ctrl` `Alt` `Left`  | Navigate backwards          |
-| `Ctrl` `Alt` `Right` | Navigate forwards           |
-| `Ctrl` `F`           | Search the current file     |
-| `Ctrl` `E`           | Toggle edit or preview mode |
-| `Ctrl` `,`           | Open settings               |
+| `Ctrl` `S`           | 保存编辑器中的文件            |
+| `Ctrl` `N`           | 创建新笔记                  |
+| `Ctrl` `P`           | 打开命令面板                |
+| `Ctrl` `O`           | 打开快速切换器              |
+| `Ctrl` `Shift` `F`   | 搜索所有文件                |
+| `Ctrl` `G`           | 打开关系图谱                |
+| `Ctrl` `Alt` `Left`  | 后退                        |
+| `Ctrl` `Alt` `Right` | 前进                        |
+| `Ctrl` `F`           | 搜索当前文件                |
+| `Ctrl` `E`           | 切换编辑或预览模式          |
+| `Ctrl` `,`           | 打开设置                    |
 
 {.shortcuts}
 
-### Editing
+### 编辑
 
-| Shortcut      | Action                          |
+| 快捷键        | 操作                          |
 | ------------- | ------------------------------- |
-| `Ctrl` `B`    | Bold selected text              |
-| `Ctrl` `I`    | Italic selected text            |
-| `Ctrl` `K`    | Insert an external link         |
-| `Ctrl` `]`    | Indent                          |
-| `Ctrl` `[`    | Unindent                        |
-| `Alt` `Enter` | Jump into the selected backlink |
+| `Ctrl` `B`    | 加粗选中文本                  |
+| `Ctrl` `I`    | 斜体选中文本                  |
+| `Ctrl` `K`    | 插入外部链接                  |
+| `Ctrl` `]`    | 缩进                          |
+| `Ctrl` `[`    | 取消缩进                      |
+| `Alt` `Enter` | 跳转到选中的反向链接            |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Obsidian](https://help.obsidian.md/How+to/Keyboard+shortcuts) _(help.obsidian.md)_
+- [Obsidian 键盘快捷键](https://help.obsidian.md/How+to/Keyboard+shortcuts) _(help.obsidian.md)_

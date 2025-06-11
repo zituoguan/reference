@@ -1,5 +1,5 @@
 ---
-title: Firefox
+title: Firefox 火狐浏览器
 date: 2022-11-23 16:23:31.703957
 background: bg-[#e34e4b]
 label:
@@ -7,207 +7,207 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 116 keyboard shortcuts found in Firefox
+  Firefox 火狐浏览器中 116 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Navigation
+### 导航
 
-| Shortcut           | Action                  |
+| 快捷键             | 操作                    |
 | ------------------ | ----------------------- |
-| `Alt` `Left`       | Back                    |
-| `Alt` `Right`      | Forward                 |
-| `Alt` `Home`       | Home                    |
-| `Ctrl` `O`         | Open File               |
-| `Ctrl` `R`         | Reload                  |
-| `Ctrl` `Shift` `R` | Reload (override cache) |
-| `Ctrl` `.`         | Stop                    |
+| `Alt` `Left`       | 后退                    |
+| `Alt` `Right`      | 前进                    |
+| `Alt` `Home`       | 主页                    |
+| `Ctrl` `O`         | 打开文件                |
+| `Ctrl` `R`         | 重新加载                |
+| `Ctrl` `Shift` `R` | 重新加载 (覆盖缓存)     |
+| `Ctrl` `.`         | 停止                    |
 
 {.shortcuts}
 
-### Current Page
+### 当前页面
 
-| Shortcut        | Action                             |
+| 快捷键          | 操作                               |
 | --------------- | ---------------------------------- |
-| `Tab`           | Focus Next Link or Input Field     |
-| `Shift` `Tab`   | Focus Previous Link or Input Field |
-| `Space`         | Go Down a Screen                   |
-| `Shift` `Space` | Go Up a Screen                     |
-| `Ctrl` `Down`   | Go to Bottom of Page               |
-| `Ctrl` `Up`     | Go to Top of Page                  |
-| `F6`            | Move to Next Frame                 |
-| `Shift` `F6`    | Move to Previous Frame             |
-| `Ctrl` `P`      | Print                              |
-| `Ctrl` `S`      | Save Page As                       |
-| `Ctrl` `+`      | Zoom In                            |
-| `Ctrl` `-`      | Zoom Out                           |
-| `Ctrl` `0`      | Zoom Reset                         |
+| `Tab`           | 聚焦下一个链接或输入框             |
+| `Shift` `Tab`   | 聚焦上一个链接或输入框             |
+| `Space`         | 向下滚动一屏                       |
+| `Shift` `Space` | 向上滚动一屏                       |
+| `Ctrl` `Down`   | 滚动到页面底部                     |
+| `Ctrl` `Up`     | 滚动到页面顶部                     |
+| `F6`            | 移动到下一个框架                   |
+| `Shift` `F6`    | 移动到上一个框架                   |
+| `Ctrl` `P`      | 打印                               |
+| `Ctrl` `S`      | 页面另存为                         |
+| `Ctrl` `+`      | 放大                               |
+| `Ctrl` `-`      | 缩小                               |
+| `Ctrl` `0`      | 重置缩放                           |
 
 {.shortcuts}
 
-### Editing
+### 编辑
 
-| Shortcut           | Action                  |
+| 快捷键             | 操作                    |
 | ------------------ | ----------------------- |
-| `Ctrl` `C`         | Copy                    |
-| `Ctrl` `X`         | Cut                     |
-| `Backspace`        | Delete                  |
-| `Home`             | Go to Beginning of Line |
-| `End`              | Go to End of Line       |
-| `Ctrl` `V`         | Paste                   |
-| `Ctrl` `Shift` `V` | Paste (as plain text)   |
-| `Ctrl` `Shift` `Z` | Redo                    |
-| `Ctrl` `A`         | Select All              |
-| `Ctrl` `Z`         | Undo                    |
+| `Ctrl` `C`         | 复制                    |
+| `Ctrl` `X`         |剪切                    |
+| `Backspace`        | 删除                    |
+| `Home`             | 转到行首                |
+| `End`              | 转到行尾                |
+| `Ctrl` `V`         | 粘贴                    |
+| `Ctrl` `Shift` `V` | 粘贴 (纯文本)           |
+| `Ctrl` `Shift` `Z` | 重做                    |
+| `Ctrl` `A`         | 全选                    |
+| `Ctrl` `Z`         | 撤销                    |
 
 {.shortcuts}
 
-### Search
+### 搜索
 
-| Shortcut           | Action                                             |
+| 快捷键             | 操作                                               |
 | ------------------ | -------------------------------------------------- |
-| `Ctrl` `F`         | Find                                               |
-| `Ctrl` `G`         | Find Again                                         |
-| `Ctrl` `Shift` `G` | Find Previous                                      |
-| `'`                | Quick Find within link-text only                   |
-| `/`                | Quick Find                                         |
-| `Esc`              | Close the Find or Quick Find bar                   |
-| `Ctrl` `K`         | Focus Search bar                                   |
-| `Ctrl` `Up/Down`   | Change the Default Search Engine                   |
-| `Alt` `Up/Down`    | View menu to switch, add, or manage search engines |
+| `Ctrl` `F`         | 查找                                               |
+| `Ctrl` `G`         | 查找下一个                                         |
+| `Ctrl` `Shift` `G` | 查找上一个                                         |
+| `'`                | 仅在链接文本内快速查找                             |
+| `/`                | 快速查找                                           |
+| `Esc`              | 关闭查找或快速查找栏                               |
+| `Ctrl` `K`         | 聚焦搜索栏                                         |
+| `Ctrl` `Up/Down`   | 更改默认搜索引擎                                   |
+| `Alt` `Up/Down`    | 查看菜单以切换、添加或管理搜索引擎                 |
 
 {.shortcuts}
 
-### Windows and Tabs {.row-span-2}
+### 窗口和标签页 {.row-span-2}
 
-| Shortcut                | Action                                       |
+| 快捷键                  | 操作                                         |
 | ----------------------- | -------------------------------------------- |
-| `Ctrl` `W`              | Close Tab                                    |
-| `Ctrl` `Shift` `W`      | Close Window                                 |
-| `Ctrl` `Tab`            | Cycle through Tabs in Recently Used Order    |
-| `Ctrl` `Q`              | Quit                                         |
-| `Ctrl` `PgUp`           | Go one Tab to the Left                       |
-| `Ctrl` `PgDown`         | Go one Tab to the Right                      |
-| `Ctrl` `Shift` `PgUp`   | Move Tab Left                                |
-| `Ctrl` `Shift` `PgDown` | Move Tab Right                               |
-| `Ctrl` `Shift` `Home`   | Move Tab in focus to start                   |
-| `Ctrl` `Shift` `End`    | Move Tab in focus to end                     |
-| `Ctrl` `M`              | Mute/Unmute Audio                            |
-| `Ctrl` `T`              | New Tab                                      |
-| `Ctrl` `N`              | New Window                                   |
-| `Ctrl` `Shift` `P`      | New Private Window                           |
-| `Alt` `Enter`           | Open Address in New Foreground Tab           |
-| `Enter`                 | Open Focused Bookmark or Link in Current Tab |
-| `Ctrl` `Enter`          | Open Focused Bookmark in New Foreground Tab  |
-| `Ctrl` `Shift` `Enter`  | Open Focused Bookmark in New Background Tab  |
-| `Ctrl` `Enter`          | Open Focused Link in New Background Tab      |
-| `Shift` `Enter`         | Open Focused Bookmark or Link in New Window  |
-| `Ctrl` `Shift` `T`      | Undo Close Tab                               |
-| `Ctrl` `Shift` `N`      | Undo Close Window                            |
-| `Ctrl` `1-8`            | Select Tab 1-8                               |
-| `Ctrl` `9`              | Select Last Tab                              |
-| `Ctrl` `Shift` `X`      | Moves the URL left or right                  |
+| `Ctrl` `W`              | 关闭标签页                                   |
+| `Ctrl` `Shift` `W`      | 关闭窗口                                     |
+| `Ctrl` `Tab`            | 按最近使用顺序循环切换标签页                 |
+| `Ctrl` `Q`              | 退出                                         |
+| `Ctrl` `PgUp`           | 转到左侧一个标签页                           |
+| `Ctrl` `PgDown`         | 转到右侧一个标签页                           |
+| `Ctrl` `Shift` `PgUp`   | 向左移动标签页                               |
+| `Ctrl` `Shift` `PgDown` | 向右移动标签页                               |
+| `Ctrl` `Shift` `Home`   | 将当前标签页移至开头                         |
+| `Ctrl` `Shift` `End`    | 将当前标签页移至末尾                         |
+| `Ctrl` `M`              | 静音/取消静音                                |
+| `Ctrl` `T`              | 新建标签页                                   |
+| `Ctrl` `N`              | 新建窗口                                     |
+| `Ctrl` `Shift` `P`      | 新建隐私窗口                                 |
+| `Alt` `Enter`           | 在新前景标签页中打开地址                     |
+| `Enter`                 | 在当前标签页中打开聚焦的书签或链接           |
+| `Ctrl` `Enter`          | 在新前景标签页中打开聚焦的书签               |
+| `Ctrl` `Shift` `Enter`  | 在新背景标签页中打开聚焦的书签               |
+| `Ctrl` `Enter`          | 在新背景标签页中打开聚焦的链接               |
+| `Shift` `Enter`         | 在新窗口中打开聚焦的书签或链接               |
+| `Ctrl` `Shift` `T`      | 撤销关闭标签页                               |
+| `Ctrl` `Shift` `N`      | 撤销关闭窗口                                 |
+| `Ctrl` `1-8`            | 选择标签页 1-8                               |
+| `Ctrl` `9`              | 选择最后一个标签页                           |
+| `Ctrl` `Shift` `X`      |向左或向右移动 URL                            |
 
 {.shortcuts}
 
-### History
+### 历史记录
 
-| Shortcut                | Action               |
+| 快捷键                  | 操作                 |
 | ----------------------- | -------------------- |
-| `Ctrl` `Shift` `H`      | History sidebar      |
-| `Ctrl` `Shift` `Delete` | Clear Recent History |
+| `Ctrl` `Shift` `H`      | 历史记录侧边栏       |
+| `Ctrl` `Shift` `Delete` | 清除最近的历史记录   |
 
 {.shortcuts}
 
-### Bookmarks
+### 书签
 
-| Shortcut                            | Action                     |
+| 快捷键                              | 操作                       |
 | ----------------------------------- | -------------------------- |
-| `Ctrl` `Shift` `D`                  | Bookmark All Tabs          |
-| `Ctrl` `D`                          | Bookmark This Page         |
-| `Ctrl` `B`                          | Bookmarks sidebar          |
-| `Ctrl` `Shift` `S`                  | Library window (Bookmarks) |
-| `(search field in Library)` `Space` | Search for all Bookmarks   |
+| `Ctrl` `Shift` `D`                  | 为所有标签页添加书签       |
+| `Ctrl` `D`                          | 为此页面添加书签           |
+| `Ctrl` `B`                          | 书签侧边栏                 |
+| `Ctrl` `Shift` `S`                  | 库窗口 (书签)            |
+| `(库中的搜索字段)` `Space`           | 搜索所有书签               |
 
 {.shortcuts}
 
-### Tools
+### 工具
 
-| Shortcut           | Action                 |
+| 快捷键             | 操作                   |
 | ------------------ | ---------------------- |
-| `Ctrl` `J`         | Downloads              |
-| `Ctrl` `Shift` `A` | Add-ons                |
-| `Ctrl` `Alt` `I`   | Toggle Developer Tools |
-| `Ctrl` `Alt` `K`   | Web Console            |
-| `Ctrl` `Alt` `C`   | Inspector              |
-| `Ctrl` `Alt` `S`   | Debugger               |
-| `Shift` `F7`       | Style Editor           |
-| `Shift` `F5`       | Profiler               |
-| `Ctrl` `Alt` `E`   | Network                |
-| `Shift` `F2`       | Developer Toolbar      |
-| `Ctrl` `Alt` `M`   | Responsive Design View |
-| `Shift` `F4`       | Scratchpad             |
-| `Ctrl` `U`         | Page Source            |
-| `Ctrl` `Shift` `J` | Browser Console        |
-| `Ctrl` `I`         | Page Info              |
+| `Ctrl` `J`         | 下载                   |
+| `Ctrl` `Shift` `A` | 附加组件               |
+| `Ctrl` `Alt` `I`   | 切换开发者工具         |
+| `Ctrl` `Alt` `K`   | Web 控制台             |
+| `Ctrl` `Alt` `C`   | 检查器                 |
+| `Ctrl` `Alt` `S`   | 调试器                 |
+| `Shift` `F7`       | 样式编辑器             |
+| `Shift` `F5`       | 分析器                 |
+| `Ctrl` `Alt` `E`   | 网络监视器             |
+| `Shift` `F2`       | 开发者工具栏           |
+| `Ctrl` `Alt` `M`   | 响应式设计视图         |
+| `Shift` `F4`       | 代码片段编辑器         |
+| `Ctrl` `U`         | 页面源代码             |
+| `Ctrl` `Shift` `J` | 浏览器控制台           |
+| `Ctrl` `I`         | 页面信息               |
 
 {.shortcuts}
 
-### PDF Viewer
+### PDF 查看器
 
-| Shortcut         | Action                          |
+| 快捷键           | 操作                            |
 | ---------------- | ------------------------------- |
-| `N/J/Right`      | Next page                       |
-| `P/K/Left`       | Previous page                   |
-| `Ctrl` `+`       | Zoom in                         |
-| `Ctrl` `-`       | Zoom out                        |
-| `Ctrl` `0`       | Automatic Zoom                  |
-| `R`              | Rotate the document clockwise   |
-| `Ctrl` `R`       | Rotate counterclockwise         |
-| `Ctrl` `Alt` `P` | Switch to Presentation Mode     |
-| `S`              | Choose Text Selection Tool      |
-| `H`              | Choose Hand Tool                |
-| `Ctrl` `Alt` `G` | Focus the Page Number input box |
+| `N/J/Right`      | 下一页                          |
+| `P/K/Left`       | 上一页                          |
+| `Ctrl` `+`       | 放大                            |
+| `Ctrl` `-`       | 缩小                            |
+| `Ctrl` `0`       | 自动缩放                        |
+| `R`              | 顺时针旋转文档                  |
+| `Ctrl` `R`       | 逆时针旋转文档                  |
+| `Ctrl` `Alt` `P` | 切换到演示模式                  |
+| `S`              | 选择文本选择工具                |
+| `H`              | 选择手形工具                    |
+| `Ctrl` `Alt` `G` | 聚焦页码输入框                  |
 
 {.shortcuts}
 
-### Miscellaneous
+### 其他
 
-| Shortcut               | Action                             |
+| 快捷键                 | 操作                               |
 | ---------------------- | ---------------------------------- |
-| `Ctrl` `Enter`         | Complete .com address              |
-| `Shift` `Enter`        | Complete .net address              |
-| `Ctrl` `Shift` `Enter` | Complete .org address              |
-| `Shift` `Delete`       | Delete Selected Autocomplete Entry |
-| `Ctrl` `Shift` `F`     | Toggle Full Screen                 |
-| `Ctrl` `Alt` `R`       | Toggle Reader Mode                 |
-| `F7`                   | Caret Browsing                     |
-| `Ctrl` `L`             | Select Location Bar                |
+| `Ctrl` `Enter`         | 补全 .com 地址                     |
+| `Shift` `Enter`        | 补全 .net 地址                     |
+| `Ctrl` `Shift` `Enter` | 补全 .org 地址                     |
+| `Shift` `Delete`       | 删除选定的自动完成条目             |
+| `Ctrl` `Shift` `F`     | 切换全屏模式                       |
+| `Ctrl` `Alt` `R`       | 切换阅读模式                       |
+| `F7`                   | 插入光标浏览                       |
+| `Ctrl` `L`             | 选择地址栏                         |
 
 {.shortcuts}
 
-### Media Shortcuts
+### 媒体快捷键
 
-| Shortcut       | Action                  |
+| 快捷键         | 操作                    |
 | -------------- | ----------------------- |
-| `Space`        | Toggle Play/Pause       |
-| `Down`         | Decrease volume         |
-| `Up`           | Increase volume         |
-| `Ctrl` `Down`  | Mute audio              |
-| `Ctrl` `Up`    | Unmute audio            |
-| `Left`         | Seek back 15 seconds    |
-| `Ctrl` `Left`  | Seek back 10%           |
-| `Right`        | Seek forward 15 seconds |
-| `Ctrl` `Right` | Seek forward 10%        |
-| `Home`         | Seek to the beginning   |
-| `End`          | Seek to the end         |
+| `Space`        | 播放/暂停               |
+| `Down`         | 减小音量                |
+| `Up`           | 增大音量                |
+| `Ctrl` `Down`  | 静音                    |
+| `Ctrl` `Up`    | 取消静音                |
+| `Left`         | 后退 15 秒              |
+| `Ctrl` `Left`  | 后退 10%                |
+| `Right`        | 前进 15 秒              |
+| `Ctrl` `Right` | 前进 10%                |
+| `Home`         | 跳至开头                |
+| `End`          | 跳至末尾                |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Firefox](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly)
+- [Firefox 火狐浏览器键盘快捷键](https://support.mozilla.org/zh-CN/kb/%E7%94%A8%E9%94%AE%E7%9B%98%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%AE%8C%E6%88%90firefox%E4%BB%BB%E5%8A%A1)
   _(support.mozilla.org)_

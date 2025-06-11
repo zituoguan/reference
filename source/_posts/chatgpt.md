@@ -3,805 +3,805 @@ title: ChatGPT
 date: 2023-02-09 10:28:43
 background: bg-[#4aa181]
 tags:
-  - AI
+  - 人工智能
   - OpenAI
-  - Prompts
-  - Tips
+  - 提示
+  - 技巧
 categories:
-  - Toolkit
-intro: This cheat sheet lists out prompts and tips from all over the world on how to use ChatGPT effectively
+  - 工具箱
+intro: 这份速查表列出了世界各地关于如何有效使用 ChatGPT 的提示和技巧
 plugins:
   - copyCode
 ---
 
-## Overview
-### Glossary
-- Prompt: input text that guides an AI model’s response.
-- Tokens: the smallest units of text processed by an AI model.
-- Token Limit: the max number of tokens an AI model can process in one request.
-- Artificial intelligence (AI): machines that imitate human intelligence.
-- AI Model: a program trained on datasets to recognize patterns and make decisions without human intervention.
-- Large language model (LLM): a transformer-based AI model trained on large text datasets to understand and generate human-like language.
-- Hallucination: when an AI model generates responses that are false or misleading but presented as fact.
-- Jailbreak: exploiting AI model vulnerabilities to bypass ethical guidelines and perform restricted actions.
+## 概述
+### 术语表
+- 提示 (Prompt): 引导人工智能模型响应的输入文本。
+- 令牌 (Tokens): 人工智能模型处理的最小文本单位。
+- 令牌限制 (Token Limit): 人工智能模型在一次请求中可以处理的最大令牌数。
+- 人工智能 (AI): 模仿人类智能的机器。
+- AI 模型 (AI Model): 在数据集上训练的程序，用于识别模式并在没有人为干预的情况下做出决策。
+- 大型语言模型 (LLM): 一种基于 Transformer 的 AI 模型，在大型文本数据集上进行训练，以理解和生成类似人类的语言。
+- 幻觉 (Hallucination): 指 AI 模型生成虚假或误导性但却以事实形式呈现的响应。
+- 越狱 (Jailbreak): 利用 AI 模型的漏洞绕过道德准则并执行受限操作。
 
-### Prompt Tips
-#### Efficiency
-- Focus on achieving the desired output efficiently with minimal words in the prompt.
-- Specify general instructions at the start of a conversation or when changing direction to avoid constantly restating them in each new prompt.
+### 提示技巧
+#### 效率
+- 专注于以最少的提示词高效地实现期望的输出。
+- 在对话开始或改变方向时指定通用指令，以避免在每个新提示中不断重申它们。
 ```{.wrap}
-Example: specify the role once at the start of a conversation.
+示例：在对话开始时指定一次角色。
 ```
-- Restructure text to eliminate filler words that don’t add meaning:
+- 重构文本以消除不增加意义的填充词：
 ```{.wrap}
-Example: “provide a breakdown" -> "provide sales breakdown”.
+示例：“提供一个分解” -> “提供销售分解”。
 ```
-- Do not explicitly refer to the item being processed unless addressing a specific part of it as what you provide will typically speak for itself:
+- 不要明确提及正在处理的项目，除非是针对其特定部分，因为你提供的内容通常会不言自明：
 ```{.wrap}
-Example: “Filter this piece of text" -> "Filter text”
+示例：“过滤这段文本” -> “过滤文本”
 ```
-- Do not explicitly ask the AI for help:
+- 不要明确向 AI 请求帮助：
 ```{.wrap}
-Example: “can you help me x”.
+示例：“你能帮我 x 吗”。
 ```
-- Do not explicitly reference yourself unless clarifying multiple entities:
+- 除非为了澄清多个实体，否则不要明确提及自己：
 ```{.wrap}
-Example: "do X for me".
-Example: ”I want to x”.
+示例：“为我做 X”。
+示例：“我想要 x”。
 ```
-- Do not be polite to the AI:
+- 不要对 AI 过于礼貌：
 ```{.wrap}
-Example: "please do X".
-Example: “thanks”.
-```
-
-#### Clarity
-- Consider breaking up complex ideas into granular bullet points to improve clarity, avoid searching for text, and eliminate comma lists and conjunctions (e.g., and).
-- Avoid vague or close ended questions.
-```{.wrap}
-Example: “Do you think our site is good" -> "Explain flaws in the designs of each webpage”
-```
-- Ensure prompts are specific
-```{.wrap}
-Example: “explain our sales" -> "explain a breakdown of our sales performance for the last quarter”.
+示例：“请做 X”。
+示例：“谢谢”。
 ```
 
-#### Response Refinement
-- If the AI model misunderstands your request then specify the intended action.
-- Provide sufficient context so the AI model can understand the scenario.
+#### 清晰度
+- 考虑将复杂的想法分解为细化的要点，以提高清晰度，避免搜索文本，并消除逗号列表和连词（例如，“和”）。
+- 避免模糊或封闭式问题。
+```{.wrap}
+示例：“你认为我们的网站好吗” -> “解释每个网页设计中的缺陷”
+```
+- 确保提示具体
+```{.wrap}
+示例：“解释我们的销售情况” -> “解释我们上一季度的销售业绩细分”。
+```
 
-#### Security And Privacy
-- Never share sensitive information with AI models as you can't be certain how it's stored, whether it will be shared, of if a data breach may occur.
+#### 响应优化
+- 如果 AI 模型误解了你的请求，请明确说明预期的操作。
+- 提供足够的上下文，以便 AI 模型能够理解场景。
 
-## Prompt Engineering
-### Prompt Frameworks
-- Only use prompt components relevant to your needs
+#### 安全与隐私
+- 切勿与 AI 模型共享敏感信息，因为你无法确定信息是如何存储的、是否会被共享，或者是否可能发生数据泄露。
 
-#### General Purpose
+## 提示工程
+### 提示框架
+- 仅使用与你的需求相关的提示组件
+
+#### 通用目的
 ~~~
-[role] [task] [style] [output format] [constraint]
+[角色] [任务] [风格] [输出格式] [约束]
 ~~~
 
-### Role
-Standard
-- Act as [occupation]
-- [List of roles](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
+### 角色
+标准
+- 扮演 [职业]
+- [角色列表](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_
 
-Roleplay
-- Act as [figure] with [appearance] [personality] [behaviour examples] [lore] in [scenario]
+角色扮演
+- 扮演 [人物]，具有 [外貌] [个性] [行为示例] [背景知识]，在 [场景] 中
 
-### Task
-[verb] [task] [specifics]
+### 任务
+[动词] [任务] [具体细节]
 
-#### 5W1H Questions
-Who
-- Who is X?
-- Who is [involved | affected | responsible] for X?
-- Who should I contact for help with X?
+#### 5W1H 问题
+谁
+- X 是谁？
+- 谁 [参与 | 受影响 | 负责] X？
+- 我应该联系谁寻求关于 X 的帮助？
 
-What
-- [What is | define | explain | describe] X?
-- What does X do?
-- What did [entity | text] mean by [quote]?
-- What events led up to [event]?
-- What [assumptions | risks | constraints] exist for X?
-- What are the critical features of X?
-- [What is done well? what can be improved?]
-- What is the best way to do X?
-- What are the top 5 X?
+什么
+- [什么是 | 定义 | 解释 | 描述] X？
+- X 做什么？
+- [实体 | 文本] 所说的 [引言] 是什么意思？
+- 什么事件导致了 [事件]？
+- X 存在哪些 [假设 | 风险 | 约束]？
+- X 的关键特征是什么？
+- [哪些做得好？哪些可以改进？]
+- 做 X 的最佳方法是什么？
+- 排名前 5 的 X 是什么？
 
-When
-- When [did | will] [entity | event] occur?
-- When is X due?
-- When is the best time to initiate X?
+何时
+- [实体 | 事件] [何时发生 | 将何时发生]？
+- X 何时到期？
+- 启动 X 的最佳时间是什么时候？
 
-Where
-- Where did [entity | event] happen?
-- [Where to find X? | where to find resources about X? | suggest websites about X]
+何地
+- [实体 | 事件] 在哪里发生的？
+- [在哪里找到 X？ | 在哪里找到关于 X 的资源？ | 推荐关于 X 的网站]
 
-Why
-- Why did [entity] choose [approach]?
-- Why [did | will] [event] occur?
-- Why is [approach] being implemented?
-- Why might X succeed or fail?
-- Why is [solution] preferable to [alternative]?
-- Why is it important?
+为何
+- [实体] 为何选择 [方法]？
+- [事件] 为何 [发生 | 将会发生]？
+- 为何要实施 [方法]？
+- X 为何可能成功或失败？
+- 为何 [解决方案] 优于 [替代方案]？
+- 为何它很重要？
 
-How
-- How to do X?
-- How does X work?
-- How does X do Y?
-- How to measure [metric] accurately?
+如何
+- 如何做 X？
+- X 如何工作？
+- X 如何做 Y？
+- 如何准确测量 [指标]？
 
-#### Utility
-Generate And Expand Content
-- Write [content type] to [entity] about [topic] should cover [aspects] ***(Content type examples: article, description, documentation, dummy data, email, resume, essay, guide, outline, program, recipe, SEO keywords, story, social media post, study plan, title, video script)***
-- Generate random [names | numbers | words | ideas | X] matching [criteria]
-- [Continue | expand]
-- Create image of X
+#### 实用功能
+生成和扩展内容
+- 撰写关于 [主题] 的 [内容类型] 给 [实体]，应涵盖 [方面] ***(内容类型示例：文章、描述、文档、虚拟数据、电子邮件、简历、论文、指南、大纲、程序、食谱、SEO 关键词、故事、社交媒体帖子、学习计划、标题、视频脚本)***
+- 生成符合 [标准] 的随机 [名称 | 数字 | 单词 | 想法 | X]
+- [继续 | 扩展]
+- 创建 X 的图像
 
-Summarize And Outline
-- [Summarise | write key takeaways | write main points | write main lesson | highlight important info]
-- [Shorten | write concise]
-- Create outline
+总结和概述
+- [总结 | 写出关键要点 | 写出主要观点 | 写出主要教训 | 突出重要信息]
+- [缩短 | 写得简洁]
+- 创建大纲
 
-Modify And Refine Text
-- [Write better | improve]
-- Paraphrase
-- Correct spelling, grammar, punctuation errors
-- Change [narrative voice A] to [narrative voice B]
+修改和润色文本
+- [写得更好 | 改进]
+- 转述
+- 纠正拼写、语法、标点错误
+- 将 [叙述语气 A] 改为 [叙述语气 B]
 
-Explain And Teach
-- [Explain | elaborate]
-- Explain [how to do | each step of] X
-- Explain what X does
-- Explain X [in simple terms | like I’m 5]; Simplify X
-- Teach me about [topic | subject]
-- Provide [example | analogy]
+解释和教学
+- [解释 | 详细说明]
+- 解释 [如何做 | X 的每个步骤]
+- 解释 X 的作用
+- [用简单的术语 | 像对 5 岁小孩一样] 解释 X；简化 X
+- 教我关于 [主题 | 学科]
+- 提供 [示例 | 类比]
 
-Organize And Structure
-- Sort X by [key] in [order] ***(Sort order examples: alphabetical, chronological, ascending, descending, lexicographical, custom)***
-- Categorize
+组织和构建
+- 按 [键] 以 [顺序] 排序 X ***(排序顺序示例：字母顺序、时间顺序、升序、降序、字典顺序、自定义)***
+- 分类
 
-Plan And Strategize
-- Plan [strategy for | goals and steps to achieve | milestones for | roadmap for] X
-- Create [schedule | timeline] for X
+计划和制定策略
+- 规划 X 的 [策略 | 实现目标和步骤 | 里程碑 | 路线图]
+- 为 X 创建 [时间表 | 时间线]
 
-Recommend And Advise
-- Recommend [media type] [on | similar to] [topic]
-- Recommend [gift ideas | thing] for [entity | occasion]
-- Recommend improvements
-- Provide advice for [situation]
-- Give feedback on idea for X
+推荐和建议
+- 推荐关于 [主题] 的 [媒体类型] [或与...类似]
+- 为 [实体 | 场合] 推荐 [礼物创意 | 物品]
+- 推荐改进建议
+- 为 [情况] 提供建议
+- 对 X 的想法提供反馈
 
-Analyze And Compare
-- Extract [themes | keywords | info] about X
-- Identify [similarities | differences] between X and Y
-- Analyse the [sentiment | tone] of X
-- Identify gaps in X
-- Evaluate [strengths and weaknesses | pros and cons] of X
-- Is X [comparison operator] Y? ***(Can be abstractly expressed as a sentence like "is an apple bigger than a walnut"?)***
-- Reverse engineer X
+分析和比较
+- 提取关于 X 的 [主题 | 关键词 | 信息]
+- 识别 X 和 Y 之间的 [相似之处 | 不同之处]
+- 分析 X 的 [情感 | 语气]
+- 识别 X 中的差距
+- 评估 X 的 [优点和缺点 | 利弊]
+- X [比较运算符] Y 吗？***(可以抽象地表达为一个句子，例如“苹果比核桃大吗”？)***
+- 逆向工程 X
 
-Translate And Convert
-- Translate [human language A] into [human language B]
-- Translate [programming language A] into [programming language B]
-- Translate into emojis
-- Convert [unit A] to [unit B]
-- Reformat as [output format]
+翻译和转换
+- 将 [人类语言 A] 翻译成 [人类语言 B]
+- 将 [编程语言 A] 翻译成 [编程语言 B]
+- 翻译成表情符号
+- 将 [单位 A] 转换为 [单位 B]
+- 重新格式化为 [输出格式]
 
-Filter And Choose
-- Filter X where [condition]
-- Exclude X where [condition]
-- Choose best from [options]
-- Choose [top | lowest | first | last | random] [quantity] from [options]
+筛选和选择
+- 筛选 X，条件为 [条件]
+- 排除 X，条件为 [条件]
+- 从 [选项] 中选择最佳
+- 从 [选项] 中选择 [顶部 | 底部 | 第一个 | 最后一个 | 随机] [数量]
 
-Real-Time Lookup And Verify
-- Get up-to-date [facts | news | data] on X
-- Is this true?
-- Find [sources | references | citations] for X
+实时查找和验证
+- 获取关于 X 的最新 [事实 | 新闻 | 数据]
+- 这是真的吗？
+- 查找 X 的 [来源 |参考文献 | 引文]
 
-Engagement And Trivia
-- Give questions about X
+互动和问答
+- 提出关于 X 的问题
 
-Chat Memory
-- What did you mean by X?
-- What was said earlier about X?
-- Use earlier context to do X
+聊天记忆
+- 你说的 X 是什么意思？
+- 之前关于 X 说了什么？
+- 使用之前的上下文来做 X
 
-#### Conditional Clauses
-- [Verb] [item number]
-- [Verb] the [first | last | random] [quantity] of X
-- [Verb] the [first | last | random] [quantity] of X where [condition]
-- [Verb] X where [condition]
-- [Verb] X where not [condition]
+#### 条件从句
+- [动词] [项目编号]
+- [动词] X 的 [第一个 | 最后一个 | 随机] [数量]
+- [动词] X 中符合 [条件] 的 [第一个 | 最后一个 | 随机] [数量]
+- [动词] X，条件为 [条件]
+- [动词] X，条件不为 [条件]
 
-#### Database CRUD Operations
-Create
-- Generate [quantity] dummy entries following [fields]
-- Create new entry with [data]
+#### 数据库 CRUD 操作
+创建
+- 生成 [数量] 条遵循 [字段] 的虚拟条目
+- 用 [数据] 创建新条目
 
-Read
-- Select records where [condition]
-- Select the [top | last | random] [quantity] entries
+读取
+- 选择符合 [条件] 的记录
+- 选择 [顶部 | 底部 | 随机] [数量] 条记录
 
-Update
-- Update entries where [condition] with [data]
-- Replace X with Y
+更新
+- 更新符合 [条件] 的条目为 [数据]
+- 将 X 替换为 Y
 
-Delete
-- Delete entries where [condition]
-- Delete duplicate items
-- Delete items with missing or null values
+删除
+- 删除符合 [条件] 的条目
+- 删除重复项
+- 删除缺少值或空值的项
 
-### Style
-Using [style]
+### 风格
+使用 [风格]
 
-#### Imitate
-- Using style of [person | brand | genre | character]
+#### 模仿
+- 使用 [人物 | 品牌 | 类型 | 角色] 的风格
 
-#### Formality
-- Formal
-- Informal
+#### 正式程度
+- 正式
+- 非正式
 
-#### Directness
-- Direct
-- Indirect
+#### 直接性
+- 直接
+- 间接
 
-#### Tones
-- This is not an exhaustive list of tones
+#### 语气
+- 这并非详尽的语气列表
 
-Positive
-- Optimistic
-- Appreciative
-- Assertive
-- Calm
-- Confident
-- Encouraging
-- Friendly
-- Humorous
-- Inspirational
+积极
+- 乐观的
+- 感激的
+- 自信的
+- 平静的
+- 自信的
+- 鼓励的
+- 友好的
+- 幽默的
+- 鼓舞人心的
 
-Negative
-- Pessimistic
-- Accusatory
-- Concerned
-- Critical
-- Regretful
-- Sarcastic
-- Urgent
+消极
+- 悲观的
+- 指责的
+- 担忧的
+- 批判的
+- 懊悔的
+- 讽刺的
+- 紧急的
 
-### Output Format
-In [output format]
+### 输出格式
+以 [输出格式]
 
-#### Text
+#### 文本
 
-List
-- Bullet point list
-- Numbered list
-- Check list
+列表
+- 项目符号列表
+- 编号列表
+- 清单
 
-Code
-- Code
+代码
+- 代码
 
-Process
-- Step-by-step instructions
+流程
+- 分步说明
 
-Response
-- Question and answer
-- Dialogue
+回复
+- 问答
+- 对话
 
-Creative
-- Script
-- Comic strip dialogue
-- Poetry
-- Music lyrics
-- Riddle
+创意
+- 脚本
+- 漫画对话
+- 诗歌
+- 歌词
+- 谜语
 
-Game
-- Quiz
-- RPG
-- Choose-Your-Own-Adventure
+游戏
+- 测验
+- 角色扮演游戏
+- 选择你的冒险
 
-#### Visual
+#### 视觉
 
-Data Visualization
-- Table
-- [Chart] chart ***(Chart type examples: gantt, bubble, error, contour, area, scatter, KDE, box, histogram, bar, line, 3D, joint, surface, polar, pie, cat, pair, strip, swarm, heatmap, hexbin)***
+数据可视化
+- 表格
+- [图表类型] 图表 ***(图表类型示例：甘特图、气泡图、误差图、等高线图、面积图、散点图、KDE 图、箱形图、直方图、条形图、折线图、3D 图、联合图、曲面图、极坐标图、饼图、分类图、配对图、带状图、蜂群图、热力图、六边形分箱图)***
 
-Creative
-- Emojis
-- Word cloud
+创意
+- 表情符号
+- 词云
 
-#### File Format
-- Plain text
+#### 文件格式
+- 纯文本
 - Markdown
 - CSV
 - XML
 - JSON
 - PDF
 
-### Constraint
-But [constraint]
+### 约束
+但是 [约束]
 
-Length
-- Be [extremely detailed | concise]
-- In [quantity] [words | sentences]
+长度
+- 要求 [极其详细 | 简洁]
+- 在 [数量] [单词 | 句子] 内
 
-Language
--	No jargon or technical terms
+语言
+-	不要使用行话或技术术语
 
-Structure
--	Show [quantity] [examples | options]
--	No headers
--	No pretext titles
+结构
+-	显示 [数量] 个 [示例 | 选项]
+-	不要标题
+-	不要前文标题
 
-Content
-- Use [first-person | second-person | third-person] narrative voice
-- Don't change the wording
-- Permit [minor | major] edits
-- Use pop culture references
-- Ensure goals align with SMART criteria
-- Only show [changed | unchanged] content
+内容
+- 使用 [第一人称 | 第二人称 | 第三人称] 叙述语气
+- 不要改变措辞
+- 允许 [少量 | 大量] 编辑
+- 使用流行文化参考
+- 确保目标符合 SMART 标准
+- 仅显示 [已更改 | 未更改] 的内容
 
-## Examples
-### Job
-Name Business
+## 示例
+### 工作
+命名企业
 ```{.wrap}
-Suggest creative name for tech startup
+为科技初创公司建议创意名称
 ```
 ```{.wrap}
-Suggest catchy names for bakery business
-```
-
-Interview Questions
-```{.wrap}
-Suggest common software engineer interview questions
+为面包店业务建议吸引人的名称
 ```
 
-Create Course Outline
+面试问题
 ```{.wrap}
-Create course outline on web development for beginners
-```
-```{.wrap}
-Create training program outline for customer service workshop
+建议常见的软件工程师面试问题
 ```
 
-### Relationship
-Gift Ideas
+创建课程大纲
 ```{.wrap}
-Suggest gift ideas for clients
+为初学者创建网页开发课程大纲
 ```
 ```{.wrap}
-Suggest gift ideas for clients who work as flourists
-```
-```{.wrap}
-Suggest gift ideas for my wife who loves steampunk art and crafts, mystery sci-fi, journalling
-```
-```{.wrap}
-Suggest creative ideas for 10 year old’s birthday
+为客户服务研讨会创建培训计划大纲
 ```
 
-### Competition
-Select Contest Winners
+### 关系
+礼物创意
 ```{.wrap}
-Randomly select 1 name from this list
+为客户建议礼物创意
 ```
 ```{.wrap}
-Randomly select 5 email addresses from this list
+为从事花艺工作的客户建议礼物创意
 ```
 ```{.wrap}
-Select top 3 records with the shortest lap times from this list
+为我喜欢蒸汽朋克艺术和手工艺、神秘科幻、写日记的妻子建议礼物创意
 ```
-
-### Programming
-Create Code
 ```{.wrap}
-Create program to calculate the factorial of given number in python
+为 10 岁孩子的生日建议创意点子
 ```
 
-Create Regular Expressions
+### 竞赛
+选择竞赛获胜者
 ```{.wrap}
-Create regex to match all email addresses in list
+从此列表中随机选择 1 个名字
 ```
 ```{.wrap}
-Create regex to match all words that start with "ban"
+从此列表中随机选择 5 个电子邮件地址
 ```
 ```{.wrap}
-Create regex to match 8-digit password
-```
-
-Explain Code
-```{.wrap}
-Explain why code not working
-```
-```{.wrap}
-Explain what code does
-```
-```{.wrap}
-Explain how to make a HTTP request in javascript
+从此列表中选择单圈用时最短的前 3 条记录
 ```
 
-Update Code
+### 编程
+创建代码
 ```{.wrap}
-Add code comments
-```
-```{.wrap}
-Add class "header" to header tag
-```
-```{.wrap}
-Update CSS to change font color to blue
+用 Python 创建程序计算给定数字的阶乘
 ```
 
-Translate
-- Specifically called transpile when addressing programming languages.
+创建正则表达式
 ```{.wrap}
-Translate code to Python
+创建正则表达式以匹配列表中的所有电子邮件地址
+```
+```{.wrap}
+创建正则表达式以匹配所有以 "ban" 开头的单词
+```
+```{.wrap}
+创建正则表达式以匹配 8 位密码
 ```
 
-### Email
-Create Emails
+解释代码
 ```{.wrap}
-Write email inviting Jack to dinner on the weekend
+解释代码为何不工作
 ```
 ```{.wrap}
-Write email sequence for our new customer onboarding process
+解释代码的作用
 ```
 ```{.wrap}
-Write email to inform staff of elevator maintenance on 23 June 2025, elevators unavailable for 24 hours, apologise for inconvenience
-```
-```{.wrap}
-Suggest response to message asking about project status
+解释如何在 JavaScript 中发出 HTTP 请求
 ```
 
-Format Email
+更新代码
 ```{.wrap}
-Proofread and format email
+添加代码注释
+```
+```{.wrap}
+向 header 标签添加 class "header"
+```
+```{.wrap}
+更新 CSS 将字体颜色更改为蓝色
 ```
 
-Email Marketing
+翻译
+- 在涉及编程语言时，特指“转译”。
 ```{.wrap}
-Suggest tips to increase open and click-through rates for my email campaigns
-```
-```{.wrap}
-Suggest ways to make my email content more engaging and relevant to my subscribers
+将代码翻译成 Python
 ```
 
-Extract Data
+### 电子邮件
+创建电子邮件
 ```{.wrap}
-Extract all email addresses in text
+写一封邮件邀请杰克周末共进晚餐
+```
+```{.wrap}
+为我们的新客户引导流程撰写邮件序列
+```
+```{.wrap}
+写邮件通知员工电梯将于 2025 年 6 月 23 日进行维护，电梯将停用 24 小时，并对造成的不便表示歉意
+```
+```{.wrap}
+建议对询问项目状态的消息进行回复
 ```
 
-### Spreadsheet
-Create Something
+格式化邮件
 ```{.wrap}
-Create excel formula to calculate sum of cells A1 to A10
-```
-```{.wrap}
-Generate spreadsheet dummy data as a placeholder
-```
-```{.wrap}
-Create macro to calculate average of cells B1 to B10 and insert result in cell C1
+校对并格式化邮件
 ```
 
-Explain Something
+邮件营销
 ```{.wrap}
-Explain formula =SUM(A1:A10) in simple terms
+为我的邮件营销活动建议提高打开率和点击率的技巧
 ```
 ```{.wrap}
-Suggest tips to improve spreadsheet efficiency
-```
-
-### Social Media
-Create Content
-```{.wrap}
-Suggest meme ideas for dogs
-```
-```{.wrap}
-Suggest climate change post ideas to engage my followers
-```
-```{.wrap}
-Generate hashtags and caption for a picture of scenic sunset
+建议使我的邮件内容对订阅者更具吸引力和相关性的方法
 ```
 
-### Reading
-Text Analysis
+提取数据
 ```{.wrap}
-Summarize article
-```
-```{.wrap}
-Write concise main points
+提取文本中的所有电子邮件地址
 ```
 
-Translate
+### 电子表格
+创建内容
 ```{.wrap}
-Translate to spanish
+创建 Excel 公式计算单元格 A1 到 A10 的总和
+```
+```{.wrap}
+生成电子表格虚拟数据作为占位符
+```
+```{.wrap}
+创建宏计算单元格 B1 到 B10 的平均值并将结果插入单元格 C1
 ```
 
-Recommendations
+解释内容
 ```{.wrap}
-Recommend books similar to Hunger Games
+用简单的术语解释公式 =SUM(A1:A10)
+```
+```{.wrap}
+建议提高电子表格效率的技巧
 ```
 
-### Design
-Design Prompts
+### 社交媒体
+创建内容
 ```{.wrap}
-Create design prompt of logo for new sports brand
+为狗建议表情包创意
 ```
 ```{.wrap}
-Suggest eye-catching thumbnail designs for youtube video on healthy eating
-```
-
-Aesthetic Pairings
-```{.wrap}
-Suggest font pairing for travel blog header design
+建议气候变化帖子创意以吸引我的关注者
 ```
 ```{.wrap}
-Suggest color palette for wedding photography website
+为风景优美的日落图片生成标签和标题
 ```
 
-### Data Analysis
-Data Extraction
+### 阅读
+文本分析
 ```{.wrap}
-Extract all numbers from text
+总结文章
+```
+```{.wrap}
+写出简洁的要点
 ```
 
-Data Filtering
+翻译
 ```{.wrap}
-Filter list based on [condition]
+翻译成西班牙语
 ```
 
-Data Presentation
+推荐
 ```{.wrap}
-Create table from data
+推荐类似《饥饿游戏》的书籍
 ```
 
-### Paid Ads
-Create Ad
+### 设计
+设计提示
 ```{.wrap}
-Suggest creative ideas for new product launch
+为新运动品牌创建标志设计提示
 ```
 ```{.wrap}
-Suggest ad copy for travel company
-```
-```{.wrap}
-Create headlines, body text, and calls to action for new fitness program ad
+为关于健康饮食的 YouTube 视频建议引人注目的缩略图设计
 ```
 
-Ad Targeting
+美学搭配
 ```{.wrap}
-Recommend target Facebook audience for clothing line ad campaign
+为旅游博客标题设计建议字体搭配
+```
+```{.wrap}
+为婚礼摄影网站建议调色板
 ```
 
-Ad Technical Support
+### 数据分析
+数据提取
 ```{.wrap}
-Review tag manager code for errors
+从文本中提取所有数字
 ```
 
-### Amazon FBA
-Product Content
+数据筛选
 ```{.wrap}
-Write compelling product description for latest item
+根据 [条件] 筛选列表
 ```
 
-Communication
+数据呈现
 ```{.wrap}
-Rewrite appeal letter to make it more persuasive
-```
-```{.wrap}
-Write effective email to reach out to potential suppliers
+从数据创建表格
 ```
 
-Product Strategy
+### 付费广告
+创建广告
 ```{.wrap}
-Suggest items that would make a good bundle for our customers
+为新产品发布建议创意点子
 ```
 ```{.wrap}
-Organize product and pricing information into a neat and manageable spreadsheet
-```
-
-### Writing
-Name Something
-```{.wrap}
-Suggest titles for short story
+为旅游公司建议广告文案
 ```
 ```{.wrap}
-Suggest titles for article 10 options
-```
-```{.wrap}
-Suggest domain name for gardening blog
+为新的健身计划广告创建标题、正文和行动号召
 ```
 
-Content Creation
+广告定位
 ```{.wrap}
-Create outline for essay on exercise
-```
-```{.wrap}
-Suggest ideas for blog on sustainable fashion
-```
-```{.wrap}
-Create blog post on financial planning
-```
-```{.wrap}
-Expand jazz music sentence
+为服装系列广告活动推荐目标 Facebook 受众
 ```
 
-Editing And Formatting
+广告技术支持
 ```{.wrap}
-Change report tone to conversational
-```
-```{.wrap}
-Proofread article
-```
-```{.wrap}
-Format headings for blog post
+检查标签管理器代码是否有错误
 ```
 
-Evaluation
+### 亚马逊 FBA
+产品内容
 ```{.wrap}
-Check for bias
-```
-```{.wrap}
-Check for plagiarism
+为最新商品撰写引人注目的产品描述
 ```
 
-### Teacher
-Teaching Support
+沟通
 ```{.wrap}
-Convert work history fact list into multiple-choice quiz
+重写申诉信使其更具说服力
 ```
 ```{.wrap}
-Suggest ideas for history assignment on American Revolution
+撰写有效的电子邮件以联系潜在供应商
+```
+
+产品策略
+```{.wrap}
+建议哪些商品可以为我们的客户组成一个好的捆绑包
 ```
 ```{.wrap}
-Divide list of 30 students into groups of 6
+将产品和定价信息整理到一个整洁且易于管理的电子表格中
+```
+
+### 写作
+命名
+```{.wrap}
+为短篇故事建议标题
 ```
 ```{.wrap}
-Create grading curve for class based on their test scores
+为文章建议 10 个标题选项
 ```
 ```{.wrap}
-Grade history essay and provide feedback on any areas for improvement
+为园艺博客建议域名
+```
+
+内容创作
+```{.wrap}
+为关于锻炼的论文创建大纲
+```
+```{.wrap}
+为关于可持续时尚的博客建议创意
+```
+```{.wrap}
+创建关于财务规划的博客文章
+```
+```{.wrap}
+扩展爵士音乐句子
+```
+
+编辑和格式化
+```{.wrap}
+将报告语气更改为对话式
+```
+```{.wrap}
+校对文章
+```
+```{.wrap}
+为博客文章格式化标题
+```
+
+评估
+```{.wrap}
+检查偏见
+```
+```{.wrap}
+检查抄袭
+```
+
+### 教师
+教学支持
+```{.wrap}
+将工作经历事实列表转换为多项选择测验
+```
+```{.wrap}
+为关于美国独立战争的历史作业建议创意
+```
+```{.wrap}
+将 30 名学生分成 6 人一组
+```
+```{.wrap}
+根据班级测试成绩创建评分曲线
+```
+```{.wrap}
+批改历史论文并就任何需要改进的方面提供反馈
 ```
 
 ### YouTube
-Content Creation
+内容创作
 ```{.wrap}
-Create timestamps for podcast episode transcript
+为播客剧集文字稿创建时间戳
 ```
 ```{.wrap}
-Convert youtube cooking video into blog post with headings and bullet points
+将 YouTube 烹饪视频转换为带有标题和要点的博客文章
 ```
 ```{.wrap}
-Create outline for a video about the benefits of meditation
+为关于冥想益处的视频创建大纲
 ```
 ```{.wrap}
-Suggest thumbnail ideas for video on "DIY home decor"
+为关于“DIY 家居装饰”的视频建议缩略图创意
 ```
 ```{.wrap}
-Suggest fashion video ideas for individual episodes
-```
-
-Analyse
-```{.wrap}
-What is the script tone for environmental issues video
+为单集时尚视频建议创意
 ```
 
-Communication
+分析
 ```{.wrap}
-Create thoughtful and polite response to negative comment on youtube video
+环境问题视频的脚本语气是什么
 ```
 
-### Research
-History Research
+沟通
 ```{.wrap}
-Explain events leading up to American Civil War
-```
-```{.wrap}
-Provide key details about printing press invention
-```
-```{.wrap}
-Research olympic games history
-```
-```{.wrap}
-Provide key details about French Revolution
-```
-```{.wrap}
-Explain history of Byzantine Empire
+对 YouTube 视频上的负面评论创建深思熟虑且礼貌的回复
 ```
 
-Science Reseearch
+### 研究
+历史研究
 ```{.wrap}
-Explain quantum computing in simple terms
+解释导致美国内战的事件
 ```
 ```{.wrap}
-Explain rocket science like i'm five
+提供关于印刷术发明的关键细节
+```
+```{.wrap}
+研究奥运会历史
+```
+```{.wrap}
+提供关于法国大革命的关键细节
+```
+```{.wrap}
+解释拜占庭帝国的历史
+```
+
+科学研究
+```{.wrap}
+用简单的术语解释量子计算
+```
+```{.wrap}
+像对五岁小孩一样解释火箭科学
 ```
 
 ### SEO
-Keywords
+关键词
 ```{.wrap}
-Find best keywords for [topic] with low competition
+查找竞争程度低的 [主题] 最佳关键词
 ```
 ```{.wrap}
-Generate list of keywords targeting multiple geographic locations
+生成针对多个地理位置的关键词列表
 ```
 ```{.wrap}
-Generate list of keyword synonyms for [topic]
-```
-
-Content Optimization
-```{.wrap}
-Find opportunities for internal linking related to [topic]
-```
-```{.wrap}
-Research industry-specific terminology for use in [topic] content
-```
-```{.wrap}
-Find best time to publish content related to [topic]
-```
-Link Building
-```{.wrap}
-Find authoritative websites to acquire backlinks for [topic] content
-```
-```{.wrap}
-Research best external linking strategies for [topic]
+生成 [主题] 的关键词同义词列表
 ```
 
-Tools
+内容优化
 ```{.wrap}
-Find most popular tools used for [topic] seo
-```
-
-Tactics
-```{.wrap}
-Research best tactics for [topic] mobile optimization
+查找与 [主题] 相关的内部链接机会
 ```
 ```{.wrap}
-What are the best tactics for [topic] international seo?
-```
-
-Competitors
-```{.wrap}
-Research competitor strategies related to [topic]
+研究用于 [主题] 内容的行业特定术语
 ```
 ```{.wrap}
-What are the best affiliate marketing websites for [topic]?
+查找发布与 [主题] 相关内容的最佳时间
 ```
-
-### Roleplay
-Simulate Character
+链接建设
 ```{.wrap}
-Act as William Shakespeare
-
-Appearance:
-- Period attire
-- Ruffled collar
-- Quill in hand
-
-Personality:
-- Poetic
-- Introspective
-- Eloquent
-
-Behaviour Examples:
-- Frequently quotes iambic pentameter
-- Engages in deep discussions about the nature of the human condition
-- Enjoys referencing classical mythology
-
-Lore:
-- Grew up in Stratford-upon-Avon and later moved to London
-- Famous for his tragedies, comedies, and historical plays
-
-Scenario:
--	Night of a grand performance at the Globe Theatre.
--	Lead actor is missing and staff are concerned about how to achieve the performance.
+查找权威网站以获取 [主题] 内容的反向链接
+```
+```{.wrap}
+研究 [主题] 的最佳外部链接策略
 ```
 
-## References (Used For Ideas)
-- [General Purpose Framework](https://www.linkedin.com/posts/denis-panjuta_the-ultimate-chatgpt-40-guide-roles-activity-7231208824680976384-bdlY/)
-- [General Info](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2b88d101-e659-4adc-a63a-560b2b70179a/_FINAL__The_ChatGPT_Cheat_Sheet__1_.png)
-- [Data Visualization](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0a928290-8e99-414e-b847-5b2dff35ec55/ChatGPT_-_Code_Interpreter_In_a_Nutshell___1_.png)
-- [Comprehensive Cheatsheet](https://github.com/bg-write/chatGPT-cheatsheet)
+工具
+```{.wrap}
+查找用于 [主题] SEO 的最流行工具
+```
+
+策略
+```{.wrap}
+研究 [主题] 移动优化的最佳策略
+```
+```{.wrap}
+[主题] 国际 SEO 的最佳策略是什么？
+```
+
+竞争对手
+```{.wrap}
+研究与 [主题] 相关的竞争对手策略
+```
+```{.wrap}
+[主题] 的最佳联盟营销网站是什么？
+```
+
+### 角色扮演
+模拟角色
+```{.wrap}
+扮演威廉·莎士比亚
+
+外貌：
+- 古典服饰
+- 褶边领
+- 手持羽毛笔
+
+个性：
+- 富有诗意
+- 内省的
+- 口才流利
+
+行为示例：
+- 经常引用抑扬格五音步诗
+- 参与关于人性的深刻讨论
+- 喜欢引用古典神话
+
+背景：
+- 在埃文河畔斯特拉特福长大，后移居伦敦
+- 以其悲剧、喜剧和历史剧闻名
+
+场景：
+-	环球剧院盛大演出的夜晚。
+-	主角失踪，工作人员担心如何完成演出。
+```
+
+## 参考资料 (用于构思)
+- [通用框架](https://www.linkedin.com/posts/denis-panjuta_the-ultimate-chatgpt-40-guide-roles-activity-7231208824680976384-bdlY/)
+- [通用信息](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/2b88d101-e659-4adc-a63a-560b2b70179a/_FINAL__The_ChatGPT_Cheat_Sheet__1_.png)
+- [数据可视化](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0a928290-8e99-414e-b847-5b2dff35ec55/ChatGPT_-_Code_Interpreter_In_a_Nutshell___1_.png)
+- [综合速查表](https://github.com/bg-write/chatGPT-cheatsheet)
 
 <style>
 em { font-size: 0.785em; }

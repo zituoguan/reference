@@ -6,26 +6,26 @@ tags:
   - ts
   - web
 categories:
-  - Programming
+  - 编程
 intro: |
-  A TypeScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
+  一份 TypeScript 速查表，包含最重要的概念、函数、方法等。为初学者准备的完整快速参考。
 plugins:
   - copyCode
   - runCode
 ---
 
-## Getting Started
+## 入门指南
 
-### Installing the Compiler
+### 安装编译器
 
 ```shell
 npm install typescript --save-dev
 npm tsc
 ```
 
-## Basic DataTypes
+## 基本数据类型
 
-### basic types
+### 基本类型
 
 ```ts
 let isDone: boolean = false;
@@ -34,10 +34,10 @@ let userName: string = "John";
 let list: number[] = [1, 2, 3];
 let tuple: [string, number] = ["hello", 10];
 let notSure: any = 4;
-notSure = "maybe a string instead";
+notSure = "maybe a string instead"; // 也许是一个字符串
 ```
 
-### enums
+### 枚举 (enums)
 
 ```ts
 enum Color {
@@ -48,13 +48,13 @@ enum Color {
 let c: Color = Color.Green;
 ```
 
-### interface
+### 接口 (interface)
 
 ```ts
 interface Person {
   firstName: string;
   lastName: string;
-  age?: number; // Optional property
+  age?: number; // 可选属性
 }
 
 function greet(person: Person) {
@@ -62,7 +62,7 @@ function greet(person: Person) {
 }
 ```
 
-### Functions
+### 函数 (Functions)
 
 ```ts
 function add(x: number, y: number): number {
@@ -84,7 +84,7 @@ function buildFullName(firstName: string, ...restOfName: string[]) {
 }
 ```
 
-### Classes
+### 类 (Classes)
 
 ```ts
 class Greeter {
@@ -100,7 +100,7 @@ class Greeter {
 let greeter = new Greeter("world");
 ```
 
-### Inheritance
+### 继承 (Inheritance)
 
 ```ts
 class Animal {
@@ -121,7 +121,7 @@ dog.move(10);
 dog.bark();
 ```
 
-### Generics
+### 泛型 (Generics)
 
 ```ts
 function identity<T>(arg: T): T {
@@ -132,18 +132,18 @@ let output1 = identity<string>("myString");
 let output2 = identity<number>(42);
 ```
 
-### Type Assertions
+### 类型断言 (Type Assertions)
 
 ```ts
 let someValue: any = "this is a string";
 let strLength: number = (<string>someValue).length;
-// or
+// 或者
 let strLength2: number = (someValue as string).length;
 ```
 
-## Modules
+## 模块 (Modules)
 
-### Export
+### 导出 (Export)
 
 ```ts
 export interface StringValidator {
@@ -157,7 +157,7 @@ export class ZipCodeValidator implements StringValidator {
 }
 ```
 
-### Import
+### 导入 (Import)
 
 ```ts
 import { ZipCodeValidator } from "./ZipCodeValidator";
@@ -165,7 +165,7 @@ import { ZipCodeValidator } from "./ZipCodeValidator";
 let myValidator = new ZipCodeValidator();
 ```
 
-### Namespaces
+### 命名空间 (Namespaces)
 
 ```ts
 namespace Validation {
@@ -183,9 +183,9 @@ namespace Validation {
 let validator = new Validation.LettersOnlyValidator();
 ```
 
-## Union and Intersection Types
+## 联合类型和交叉类型 (Union and Intersection Types)
 
-### Union Types
+### 联合类型 (Union Types)
 
 ```ts
 function padLeft(value: string, padding: string | number) {
@@ -199,7 +199,7 @@ function padLeft(value: string, padding: string | number) {
 }
 ```
 
-### Intersection Types
+### 交叉类型 (Intersection Types)
 
 ```ts
 interface ErrorHandling {
@@ -219,7 +219,7 @@ const response: ArtworksResponse = {
 };
 ```
 
-## Utility Types
+## 工具类型 (Utility Types)
 
 ### Partial
 
@@ -244,7 +244,7 @@ let readonlyUser: Readonly<User> = {
   age: 25,
 };
 
-// readonlyUser.age = 26; // Error: cannot reassign a readonly property
+// readonlyUser.age = 26; // 错误：无法重新分配只读属性
 ```
 
 ### Pick
@@ -268,9 +268,9 @@ let userWithoutAge: UserWithoutAge = {
 };
 ```
 
-## Decorators
+## 装饰器 (Decorators)
 
-### Class Decorator
+### 类装饰器 (Class Decorator)
 
 ```ts
 function sealed(constructor: Function) {
@@ -290,7 +290,7 @@ class Greeter {
 }
 ```
 
-### Method Decorator
+### 方法装饰器 (Method Decorator)
 
 ```ts
 function enumerable(value: boolean) {
@@ -312,7 +312,7 @@ class Greeter {
 }
 ```
 
-### Async/Await
+### 异步/等待 (Async/Await)
 
 ```ts
 async function fetchData(url: string) {
@@ -322,6 +322,6 @@ async function fetchData(url: string) {
 }
 ```
 
-## Also read
+## 另请阅读
 
 - [TypeScript](https://www.typescriptlang.org/docs/)

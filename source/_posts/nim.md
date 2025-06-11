@@ -4,60 +4,60 @@ date: 2024-05-15 8:03:44
 background: bg-[#eed547]
 tags:
 categories:
-  - Programming
+  - 编程
 intro: |
-  The Nim quick reference cheat sheet that aims at providing help on writing basic syntax and methods.
+  Nim 快速参考备忘单，旨在帮助编写基本语法和方法。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门
 
 ### Helloworld.nim
 
 ```nim
 echo "Hello World!"
 #---------------------------#
-# This is a comment
+# 这是一个注释
 echo "What's your name? "
 var name: string = readLine(stdin)
 echo "Hi, ", name, "!"
 ```
 
-#### Compiling and Running
+#### 编译和运行
 
 ```shell
 $ nim c helloworld.nim
-# if os is windows then
+# 如果操作系统是 windows
 $ helloworld.exe
-# if os is linux then
+# 如果操作系统是 linux
 $ ./Hello_World
-# output
+# 输出
 Hello, World!
 
-# There is also a possibility
-# to both compile and run the
-# program with just one command.
-# We need to type:
+# 也可以使用一个命令
+# 同时编译和运行
+# 程序。
+# 我们需要输入：
 $ nim c -r helloworld.nim
 
 ```
 
-### comment
+### 注释
 
 ```nim
-# This is a comment
+# 这是一个注释
 
 
 #[
-  This is a multiline comment.
-  In Nim, multiline comments can be nested, beginning with #[
-  ... and ending with ]#
+  这是一个多行注释。
+  在 Nim 中，多行注释可以嵌套，以 #[ 开头
+  ... 并以 ]# 结尾
 ]#
 
 ```
 
-### Variable declaration
+### 变量声明
 
 ```nim
 
@@ -76,31 +76,31 @@ var
 ### Let
 
 ```nim
-# Use let to declare and bind variables
+# 使用 let 声明和绑定变量
 let
   legs = 400
- #legs is immutable.
+ #legs 是不可变的。
   arms = 2_000
-  # are ignored and are useful for long numbers.
+  # _ 会被忽略，对于长数字很有用。
   aboutPi = 3.15
-  let input = readLine(stdin)  # works
+  let input = readLine(stdin)  # 可行
 ```
 
 ### Const
 
 ```nim
-# Constants are computed at compile
+# 常量在编译时计算
 const
   debug = true
-   # performance and is useful in compile time expressions.
+   # 性能，并且在编译时表达式中很有用。
   compileBadCode = false
 ```
 
-Basic data types
+基本数据类型
 
 ---
 
-### Integers
+### 整数
 
 ```nim
 let
@@ -113,7 +113,7 @@ echo "a * b = ", a * b
 echo "a / b = ", a / b
 echo "a div b = ", a div b
 echo "a mod b = ", a mod b
-#output
+#输出
 #a + b = 15
 #a - b = 7
 #a * b = 44
@@ -122,7 +122,7 @@ echo "a mod b = ", a mod b
 #a mod b = 3
 ```
 
-### Floats
+### 浮点数
 
 ```nim
 let
@@ -133,19 +133,19 @@ echo "c + d = ", c + d
 echo "c - d = ", c - d
 echo "c * d = ", c * d
 echo "c / d = ", c / d
-#output
+#输出
 #c + d = 9.0
 #c - d = 4.5
 #c * d = 15.1875
 #c / d = 3.0
 ```
 
-### Strings
+### 字符串
 
 ```nim
-#Strings can be described
-#as a series of characters.
-#Their content is written between two double quotes (").
+#字符串可以描述
+#为一系列字符。
+#其内容写在两个双引号 (") 之间。
 let
   m = "word"
   n = "A sentence with interpunction."
@@ -154,67 +154,67 @@ let
   q = "!"
 ```
 
-### Characters
+### 字符
 
 ```nim
-#Characters are single
-#characters. They are
-#written between two single quotes (').
+#字符是单个
+#字符。它们
+#写在两个单引号 (') 之间。
 let
   h = 'z'
   i = '+'
   j = '2'
-  k = '35' # error
-  l = 'xy' # error
+  k = '35' # 错误
+  l = 'xy' # 错误
 ```
 
-### Special characters
+### 特殊字符
 
 ```nim
-#\n is a newline character
-#\t is a tab character
-#\\ is a backslash (since one \ is used as the escape character)
+#\n 是换行符
+#\t 是制表符
+#\\ 是反斜杠 (因为一个 \ 用作转义字符)
 
 echo "some\nim\tips"
 echo "some\\nim\\tips"
 echo r"some\nim\tips"
-#output
+#输出
 #some
 #im	ips
 #some\nim\tips
 #some\nim\tips
 ```
 
-### Boolean
+### 布尔值
 
 ```nim
-#A boolean (or just bool)
-# data type can only have
-#two values: true or false.
+#布尔 (或简称 bool)
+# 数据类型只能有
+#两个值：true 或 false。
 let isEmpty = true
 let isFull = false
 ```
 
-### Converting floats and integers
+### 转换浮点数和整数
 
 ```nim
 let
   e = 5
   f = 23.987
-echo e + f   # error
+echo e + f   # 错误
 echo float(e)
 echo int(f)
 
 echo float(e) + f
 echo e + int(f)
-#output
+#输出
 #5.0
 #23
 #28.987
 #28
 ```
 
-### String concatenation
+### 字符串连接
 
 ```nim
 var
@@ -232,7 +232,7 @@ echo "concat: ", p & q
 
 echo "p is still: ", p
 echo "q is still: ", q
-#output
+#输出
 #p is now: abcdef
 #q is now: xyz
 #concat: abcdefxyz
@@ -240,9 +240,9 @@ echo "q is still: ", q
 #q is still: xyz
 ```
 
-## Opatators
+## 运算符
 
-### Relational operators
+### 关系运算符
 
 ```nim
 let
@@ -255,7 +255,7 @@ echo "g is equal to h: ", g == h
 echo "g is not equal to h: ", g != h
 echo "g is greater or equal to h: ", g >= h
 echo "g is smaller or equal to h: ", g <= h
-#output
+#输出
 g is greater than h: false
 g is smaller than h: true
 g is equal to h: false
@@ -263,7 +263,7 @@ g is not equal to h: true
 g is greater or equal to h: false
 g is smaller or equal to h: true
 
-#example
+#示例
 let
   i = 'a'
   j = 'd'
@@ -281,7 +281,7 @@ let
 echo m < n
 echo n < o
 echo o < p
-#output
+#输出
 #false
 #true
 #true
@@ -289,7 +289,7 @@ echo o < p
 #true
 ```
 
-### Logical operators
+### 逻辑运算符
 
 ```nim
 echo "T and T: ", true and true
@@ -306,7 +306,7 @@ echo "F xor F: ", false xor false
 echo "---"
 echo "not T: ", not true
 echo "not F: ", not false
-#output
+#输出
 #T and T: true
 #T and F: false
 #F and F: false
@@ -323,9 +323,9 @@ echo "not F: ", not false
 #not F: true
 ```
 
-## Control flow
+## 控制流
 
-### If statement
+### If 语句
 
 ```nim
 let
@@ -348,13 +348,13 @@ if a+b > c:
   if 1 < 100 and 321 > 123:
     echo "did you know that 1 is smaller than 100?"
     echo "and 321 is larger than 123! wow!"
-#output
+#输出
 #a is smaller than b
 #b is smaller than c
 #not only that, b is *much* smaller than c
 ```
 
-### Case statement
+### Case 语句
 
 ```nim
 let name = readLine(stdin)
@@ -370,59 +370,59 @@ else:
 
 ```
 
-### While statement
+### While 语句
 
 ```nim
 echo "What's your name? "
 var name = readLine(stdin)
 while name == "":
   echo "Please tell me your name: "
-  name = readLine(stdin) # no `var`, because we do not declare a new variable here
+  name = readLine(stdin) # 没有 `var`，因为我们这里没有声明新变量
 ```
 
-### For statement
+### For 语句
 
 ```nim
 echo "Counting to ten: "
 for i in countup(1, 10):
   echo i
-# --> Outputs 1 2 3 4 5 6 7 8 9 10 on different lines
+# --> 在不同行上输出 1 2 3 4 5 6 7 8 9 10
 ```
 
-### Scopes and the block statement
+### 作用域和块语句
 
 ```nim
 while false:
   var x = "hi"
-echo x # does not work
+echo x # 不起作用
 #-----------------------#
 block myblock:
   var x = "hi"
-echo x # does not work either
+echo x # 同样不起作用
 ```
 
-### Break statement
+### Break 语句
 
 ```nim
 block myblock:
   echo "entering block"
   while true:
     echo "looping"
-    break # leaves the loop, but not the block
+    break # 离开循环，但不离开块
   echo "still in block"
 echo "outside the block"
 
 ```
 
-### Continue statement
+### Continue 语句
 
 ```nim
 for i in 1 .. 5:
   if i <= 3: continue
-  echo i # will only print 4 and 5
+  echo i # 只会打印 4 和 5
 ```
 
-### When statement
+### When 语句
 
 ```nim
   when system.hostOS == "windows":
@@ -435,26 +435,26 @@ else:
   echo "unknown operating system"
 ```
 
-### Statements and indentation
+### 语句和缩进
 
 ```nim
-# no indentation needed for single-assignment statement:
+# 单一赋值语句不需要缩进：
 if x: x = false
 
-# indentation needed for nested if statement:
+# 嵌套 if 语句需要缩进：
 if x:
   if y:
     y = false
   else:
     y = true
 
-# indentation needed, because two statements follow the condition:
+# 需要缩进，因为条件后有两个语句：
 if x:
   x = false
   y = false
 ```
 
-### Procedures
+### 过程
 
 ```nim
 proc yes(question: string): bool =
@@ -471,7 +471,7 @@ else:
   echo "I think you know what the problem is just as well as I do."
 ```
 
-### Result variable
+### Result 变量
 
 ```nim
 proc sumTillNegative(x: varargs[int]): int =
@@ -485,7 +485,7 @@ echo sumTillNegative(3, 4, 5) # echoes 12
 echo sumTillNegative(3, 4 , -1 , 6) # echoes 7
 ```
 
-### Parameters
+### 参数
 
 ```nim
 proc printSeq(s: seq, nprinted: int = -1) =
@@ -494,17 +494,17 @@ proc printSeq(s: seq, nprinted: int = -1) =
     echo s[i]
 #------------------- #
 proc divmod(a, b: int; res, remainder: var int) =
-  res = a div b        # integer division
-  remainder = a mod b  # integer modulo operation
+  res = a div b        # 整数除法
+  remainder = a mod b  # 整数取模运算
 
 var
   x, y: int
-divmod(8, 5, x, y) # modifies x and y
+divmod(8, 5, x, y) # 修改 x 和 y
 echo x
 echo y
 ```
 
-### Discard statement
+### Discard 语句
 
 ```nim
 discard yes("May I ask a pointless question?")
@@ -512,10 +512,10 @@ discard yes("May I ask a pointless question?")
 proc p(x, y: int): int {.discardable.} =
   return x + y
 
-p(3, 4) # now valid
+p(3, 4) # 现在有效
 ```
 
-### Named arguments
+### 命名参数
 
 ```nim
 proc createWindow(x, y, width, height: int; title: string;  show: bool): Window = ...
@@ -526,7 +526,7 @@ var w = createWindow(0, 0, title = "My Application",
                      height = 600, width = 800, true)
 ```
 
-### Default values
+### 默认值
 
 ```nim
 proc createWindow(x = 0, y = 0, width = 500, height = 700,
@@ -537,7 +537,7 @@ proc createWindow(x = 0, y = 0, width = 500, height = 700,
 var w = createWindow(title = "My Application", height = 600, width = 800)
 ```
 
-### Overloaded procedures
+### 重载过程
 
 ```nim
 proc toString(x: int): string =
@@ -552,28 +552,28 @@ proc toString(x: bool): string =
     else: "nope"
 
 assert toString(13) == "positive"
- # calls the toString(x: int) proc
+ # 调用 toString(x: int) 过程
 assert toString(true) == "yep"
- # calls the toString(x: bool) proc
+ # 调用 toString(x: bool) 过程
 ```
 
-### Forward declarations
+### 前向声明
 
 ```nim
 proc odd(n: int): bool =
-  assert(n >= 0) # makes sure we don't run into negative recursion
+  assert(n >= 0) # 确保我们不会陷入负递归
   if n == 0: false
   else:
     n == 1 or even(n-1)
 
 proc even(n: int): bool =
-  assert(n >= 0) # makes sure we don't run into negative recursion
+  assert(n >= 0) # 确保我们不会陷入负递归
   if n == 1: false
   else:
     n == 0 or odd(n-1)
 ```
 
-### Iterators
+### 迭代器
 
 ```nim
 echo "Counting to ten: "
@@ -593,17 +593,17 @@ iterator countup(a, b: int): int =
     inc(res)
 ```
 
-### Type Conversion
+### 类型转换
 
 ```nim
 var
-  x: int32 = 1.int32   # same as calling int32(1)
+  x: int32 = 1.int32   # 等同于调用 int32(1)
   y: int8  = int8('a') # 'a' == 97'i8
-  z: float = 2.5       # int(2.5) rounds down to 2
+  z: float = 2.5       # int(2.5) 向下取整为 2
   sum: int = int(x) + int(y) + int(z) # sum == 100
 ```
 
-### Internal type representation
+### 内部类型表示
 
 ```nim
 var
@@ -624,7 +624,7 @@ echo myFloat, ":", repr(myFloat)
 # --> 3.14:3.14
 ```
 
-### Enumerations
+### 枚举
 
 ```nim
 type
@@ -632,49 +632,46 @@ type
     north, east, south, west
 
 var x = south
-# `x` is of type `Direction`; its value is `south`
-#prints "south"
+# `x` 的类型是 `Direction`；其值为 `south`
+#打印 "south"
 echo x
 ```
 
-### Ordinal types
+### 序数类型
 
-| Operation  |                            Comment                            |
+| 操作       |                            注释                            |
 | :--------- | :-----------------------------------------------------------: |
-| ord(x)     | returns the integer value that is used to represent x's value |
-| inc(x)     |                      increments x by one                      |
-| inc(x, n)  |              increments x by n; n is an integer               |
-| dec(x)     |                      decrements x by one                      |
-| dec(x, n)  |              decrements x by n; n is an integer               |
-| succ(x)    |                  returns the successor of x                   |
-| succ(x, n) |                returns the n'th successor of x                |
-| pred(x)    |                 returns the predecessor of x                  |
-| pred(x, n) |               returns the n'th predecessor of x               |
+| ord(x)     | 返回用于表示 x 值的整数值                                     |
+| inc(x)     |                      将 x 增加 1                      |
+| inc(x, n)  |              将 x 增加 n；n 是一个整数               |
+| dec(x)     |                      将 x 减少 1                      |
+| dec(x, n)  |              将 x 减少 n；n 是一个整数               |
+| succ(x)    |                  返回 x 的后继者                   |
+| succ(x, n) |                返回 x 的第 n 个后继者                |
+| pred(x)    |                 返回 x 的前驱者                  |
+| pred(x, n) |               返回 x 的第 n 个前驱者               |
 
-### Subranges
+### 子范围
 
 ```nim
 type
   MySubrange = range[0..5]
 ```
 
-### Sets
+### 集合
 
 ```nim
   var s: set[int64]
-  # Error: set is too large; use `std/sets` for ordinal types
-  # with more than 2^16 elements
+  # 错误：集合太大；对于超过 2^16 个元素的序数类型，请使用 `std/sets`
  type
   CharSet = set[char]
 var
   x: CharSet
 x = {'a'..'z', '0'..'9'}
- # This constructs a set that contains the
- # letters from 'a' to 'z' and the digits
- # from '0' to '9'
+ # 这会构造一个包含从 'a' 到 'z' 的字母和从 '0' 到 '9' 的数字的集合
 ```
 
-### Bit fields
+### 位域
 
 ```nim
 type
@@ -696,11 +693,11 @@ assert toFlags(0) == {}
 assert toFlags(7) == {A, B, C}
 ```
 
-### Arrays
+### 数组
 
 ```nim
 type
-  IntArray = array[0..5, int] # an array that is indexed with 0..5
+  IntArray = array[0..5, int] # 一个用 0..5 索引的数组
 var
   x: IntArray
 x = [1, 2, 3, 4, 5, 6]
@@ -708,12 +705,12 @@ for i in low(x) .. high(x):
   echo x[i]
 ```
 
-### Sequences
+### 序列
 
 ```nim
   var
-  x: seq[int] # a reference to a sequence of integers
-x = @[1, 2, 3, 4, 5, 6] # the @ turns the array into a sequence allocated on the heap
+  x: seq[int] # 对整数序列的引用
+x = @[1, 2, 3, 4, 5, 6] # @ 将数组转换为在堆上分配的序列
 for value in @[3, 4, 5]:
   echo value
 # --> 3
@@ -727,32 +724,32 @@ for i, value in @[3, 4, 5]:
 # --> index: 2, value:5
 ```
 
-### Open arrays
+### 开放数组
 
 ```nim
 var
   fruits:   seq[string]
- # reference to a sequence of strings that is initialized with '@[]'
+ # 对使用 '@[]' 初始化的字符串序列的引用
   capitals: array[3, string]
 
- # array of strings with a fixed size
+ # 固定大小的字符串数组
 
 capitals = ["New York", "London", "Berlin"]
- # array 'capitals' allows assignment of only three elements
+ # 数组 'capitals' 只允许分配三个元素
 fruits.add("Banana")
- # sequence 'fruits' is dynamically expandable during runtime
+ # 序列 'fruits' 在运行时可动态扩展
 fruits.add("Mango")
 
 proc openArraySize(oa: openArray[string]): int =
   oa.len
 
 assert openArraySize(fruits) == 2
-  # procedure accepts a sequence as parameter
+  # 过程接受序列作为参数
 assert openArraySize(capitals) == 3
-  # but also an array type
+  # 也接受数组类型
 ```
 
-### Varargs
+### 可变参数
 
 ```nim
 proc myWriteln(f: File, a: varargs[string]) =
@@ -761,11 +758,11 @@ proc myWriteln(f: File, a: varargs[string]) =
   write(f, "\n")
 
 myWriteln(stdout, "abc", "def", "xyz")
-# is transformed by the compiler to:
+# 被编译器转换为：
 myWriteln(stdout, ["abc", "def", "xyz"])
 ```
 
-### Slices
+### 切片
 
 ```nim
 var
@@ -777,7 +774,7 @@ b[11 .. ^2] = "useful"
 echo b # --> 'Slices are useful.'
 ```
 
-### Objects
+### 对象
 
 ```nim
 type
@@ -790,7 +787,7 @@ var person1 = Person(name: "Peter", age: 30)
 echo person1.name # "Peter"
 echo person1.age  # 30
 
-var person2 = person1 # copy of person 1
+var person2 = person1 # person 1 的副本
 
 person2.age += 14
 
@@ -798,17 +795,16 @@ echo person1.age # 30
 echo person2.age # 44
 
 
-# the order may be changed
+# 顺序可以更改
 let person3 = Person(age: 12, name: "Quentin")
 
-# not every member needs to be specified
+# 不需要指定每个成员
 let person4 = Person(age: 3)
-# unspecified members will be initialized with their default
-# values. In this case it is the empty string.
+# 未指定的成员将使用其默认值进行初始化。在这种情况下，它是空字符串。
 doAssert person4.name == ""
 ```
 
-### Tuples
+### 元组
 
 ```nim
 type
@@ -826,10 +822,10 @@ var
   personY: PersonY
 
 person = (name: "Peter", age: 30)
-# Person and PersonX are equivalent
+# Person 和 PersonX 等效
 personX = person
 
-# Create a tuple with anonymous fields:
+# 创建具有匿名宇段的元组：
 personY = ("Peter", 30)
 
 person = personY
@@ -849,7 +845,7 @@ echo building.street
 
 ```
 
-### Reference and pointer types
+### 引用和指针类型
 
 ```nim
 type
@@ -859,10 +855,10 @@ type
 
 var n = Node(data: 9)
 echo n.data
-# no need to write n[].data; in fact n[].data is highly discouraged!
+# 不需要写 n[].data；实际上，强烈不建议使用 n[].data！
 ```
 
-### Procedural type
+### 过程类型
 
 ```nim
 proc greet(name: string): string =
@@ -878,98 +874,98 @@ communicate(greet, "John")
 communicate(bye, "Mary")
 ```
 
-### Modules
+### 模块
 
 ```nim
-# Module A
+# 模块 A
 var
   x*, y: int
 
 proc `*` *(a, b: seq[int]): seq[int] =
-  # allocate a new sequence:
+  # 分配一个新序列：
   newSeq(result, len(a))
-  # multiply two int sequences:
+  # 乘以两个整数序列：
   for i in 0 ..< len(a): result[i] = a[i] * b[i]
 
 when isMainModule:
-  # test the new `*` operator for sequences:
+  # 测试序列的新 `*` 运算符：
   assert(@[1, 2, 3] * @[1, 2, 3] == @[1, 4, 9])
 
 
 ```
 
-### Excluding symbols
+### 排除符号
 
 ```nim
 import mymodule except y
 
-# From statement
+# From 语句
 from mymodule import x, y, z
 from mymodule import x, y, z
 
 x()
-  # use x without any qualification
+  # 不带任何限定地使用 x
 
-#Include statement
+#Include 语句
 include fileA, fileB, fileC
 
 ```
 
-### Inheritance
+### 继承
 
 ```nim
 type
   Person = ref object of RootObj
-    name*: string  # the * means that `name` is accessible from other modules
-    age: int       # no * means that the field is hidden from other modules
+    name*: string  # * 表示 `name` 可从其他模块访问
+    age: int       # 没有 * 表示该字段对其他模块隐藏
 
-  Student = ref object of Person # Student inherits from Person
-    id: int                      # with an id field
+  Student = ref object of Person # Student 继承自 Person
+    id: int                      # 带有一个 id 字段
 
 var
   student: Student
   person: Person
-assert(student of Student) # is true
-# object construction:
+assert(student of Student) # 为真
+# 对象构造：
 student = Student(name: "Anton", age: 5, id: 2)
 echo student[]
 ```
 
-### Mutually recursive types
+### 相互递归类型
 
 ```nim
 type
   Node = ref object
- # a reference to an object with the following field:
+ # 对具有以下字段的对象的引用：
     le, ri: Node
-   # left and right subtrees
+   # 左右子树
     sym: ref Sym
-  # leaves contain a reference to a Sym
+  # 叶子节点包含对 Sym 的引用
 
   Sym = object
-    # a symbol
+    # 一个符号
     name: string
-     # the symbol's name
+     # 符号的名称
     line: int
-   # the line the symbol was declared in
+   # 符号声明所在的行
     code: Node
-    # the symbol's abstract syntax tree
+    # 符号的抽象语法树
 ```
 
-### Object variants
+### 对象变体
 
 ```nim
-# This is an example how an abstract syntax tree could be modelled in Nim
+# 这是一个如何在 Nim 中建模抽象语法树的示例
 type
-  NodeKind = enum  # the different node types
-    nkInt,          # a leaf with an integer value
-    nkFloat,        # a leaf with a float value
-    nkString,       # a leaf with a string value
-    nkAdd,          # an addition
-    nkSub,          # a subtraction
-    nkIf            # an if statement
+  NodeKind = enum  # 不同的节点类型
+    nkInt,          # 带有整数值的叶节点
+    nkFloat,        # 带有浮点值的叶节点
+    nkString,       # 带有字符串值的叶节点
+    nkAdd,          # 加法
+    nkSub,          # 减法
+    nkIf            # if 语句
   Node = ref object
-    case kind: NodeKind  # the `kind` field is the discriminator
+    case kind: NodeKind  # `kind` 字段是鉴别器
     of nkInt: intVal: int
     of nkFloat: floatVal: float
     of nkString: strVal: string
@@ -979,20 +975,20 @@ type
       condition, thenPart, elsePart: Node
 
 var n = Node(kind: nkFloat, floatVal: 1.0)
-# the following statement raises an `FieldDefect` exception, because
-# n.kind's value does not fit:
+# 以下语句会引发 `FieldDefect` 异常，因为
+# n.kind 的值不匹配：
 n.strVal = ""
 ```
 
-### Method call syntax
+### 方法调用语法
 
 ```nim
 import std/strutils
 
-echo "abc".len # is the same as echo len("abc")
+echo "abc".len # 与 echo len("abc") 相同
 echo "abc".toUpperAscii()
 echo({'a', 'b', 'c'}.card)
-stdout.writeLine("Hallo") # the same as writeLine(stdout, "Hallo")
+stdout.writeLine("Hallo") # 与 writeLine(stdout, "Hallo") 相同
 ##############################
 import std/[strutils, sequtils]
 
@@ -1001,31 +997,31 @@ stdout.write(stdin.readLine.splitWhitespace.map(parseInt).max.`$`)
 stdout.writeLine(" is the maximum!")
 ```
 
-### Properties
+### 属性
 
 ```nim
 type
   Socket* = ref object of RootObj
-    h: int # cannot be accessed from the outside of the module due to missing star
+    h: int # 由于缺少星号，无法从模块外部访问
 
 proc `host=`*(s: var Socket, value: int) {.inline.} =
-  ## setter of host address
+  ## 主机地址的设置器
   s.h = value
 
 proc host*(s: Socket): int {.inline.} =
-  ## getter of host address
+  ## 主机地址的获取器
   s.h
 
 var s: Socket
 new s
-s.host = 34  # same as `host=`(s, 34)
+s.host = 34  # 与 `host=`(s, 34) 相同
 
 type
   Vector* = object
     x, y, z: float
 
 proc `[]=`* (v: var Vector, i: int, value: float) =
-  # setter
+  # 设置器
   case i
   of 0: v.x = value
   of 1: v.y = value
@@ -1033,7 +1029,7 @@ proc `[]=`* (v: var Vector, i: int, value: float) =
   else: assert(false)
 
 proc `[]`* (v: Vector, i: int): float =
-  # getter
+  # 获取器
   case i
   of 0: result = v.x
   of 1: result = v.y
@@ -1041,20 +1037,20 @@ proc `[]`* (v: Vector, i: int): float =
   else: assert(false)
 ```
 
-### Dynamic dispatch
+### 动态调度
 
 ```nim
 type
-  Expression = ref object of RootObj ## abstract base class for an expression
+  Expression = ref object of RootObj ## 表达式的抽象基类
   Literal = ref object of Expression
     x: int
   PlusExpr = ref object of Expression
     a, b: Expression
 
-# watch out: 'eval' relies on dynamic binding
+# 注意：'eval' 依赖于动态绑定
 method eval(e: Expression): int {.base.} =
-  # override this base method
-  quit "to override!"
+  # 重写此基方法
+  quit "需要重写！"
 
 method eval(e: Literal): int = e.x
 method eval(e: PlusExpr): int = eval(e.a) + eval(e.b)
@@ -1065,7 +1061,7 @@ proc newPlus(a, b: Expression): PlusExpr = PlusExpr(a: a, b: b)
 echo eval(newPlus(newPlus(newLit(1), newLit(2)), newLit(4)))
 ```
 
-### Raise statement
+### Raise 语句
 
 ```nim
 var
@@ -1077,13 +1073,13 @@ raise e
 raise newException(OSError, "the request to the OS failed")
 ```
 
-### Try statement
+### Try 语句
 
 ```nim
 from std/strutils import parseInt
 
-# read the first two lines of a text file that should contain numbers
-# and tries to add them
+# 读取文本文件的前两行，这两行应包含数字
+# 并尝试将它们相加
 var
   f: File
 if open(f, "numbers.txt"):
@@ -1099,13 +1095,13 @@ if open(f, "numbers.txt"):
     echo "IO error!"
   except CatchableError:
     echo "Unknown exception!"
-    # reraise the unknown exception:
+    # 重新引发未知异常：
     raise
   finally:
     close(f)
 ```
 
-### Annotating procs with raised exceptions
+### 使用引发的异常注释过程
 
 ```nim
 proc complexProc() {.raises: [IOError, ArithmeticDefect].} =
@@ -1115,29 +1111,29 @@ proc simpleProc() {.raises: [].} =
   ...
 ```
 
-### Generics
+### 泛型
 
 ```nim
  type
-  BinaryTree*[T] = ref object # BinaryTree is a generic type with
-                              # generic param `T`
-    le, ri: BinaryTree[T]     # left and right subtrees; may be nil
-    data: T                   # the data stored in a node
+  BinaryTree*[T] = ref object # BinaryTree 是一个泛型类型，带有
+                              # 泛型参数 `T`
+    le, ri: BinaryTree[T]     # 左右子树；可以为 nil
+    data: T                   # 存储在节点中的数据
 
 proc newNode*[T](data: T): BinaryTree[T] =
-  # constructor for a node
+  # 节点的构造函数
   new(result)
   result.data = data
 
 proc add*[T](root: var BinaryTree[T], n: BinaryTree[T]) =
-  # insert a node into the tree
+  # 将节点插入树中
   if root == nil:
     root = n
   else:
     var it = root
     while it != nil:
-      # compare the data items; uses the generic `cmp` proc
-      # that works for any type that has a `==` and `<` operator
+      # 比较数据项；使用适用于任何具有 `==` 和 `<` 运算符
+      # 的类型的泛型 `cmp` 过程
       var c = cmp(it.data, n.data)
       if c < 0:
         if it.le == nil:
@@ -1151,37 +1147,36 @@ proc add*[T](root: var BinaryTree[T], n: BinaryTree[T]) =
         it = it.ri
 
 proc add*[T](root: var BinaryTree[T], data: T) =
-  # convenience proc:
+  # 便捷过程：
   add(root, newNode(data))
 
 iterator preorder*[T](root: BinaryTree[T]): T =
-  # Preorder traversal of a binary tree.
-  # This uses an explicit stack (which is more efficient than
-  # a recursive iterator factory).
+  # 二叉树的前序遍历。
+  # 这使用显式堆栈 (比递归迭代器工厂更有效)。
   var stack: seq[BinaryTree[T]] = @[root]
   while stack.len > 0:
     var n = stack.pop()
     while n != nil:
       yield n.data
-      add(stack, n.ri)  # push right subtree onto the stack
-      n = n.le          # and follow the left pointer
+      add(stack, n.ri)  # 将右子树推入堆栈
+      n = n.le          # 并跟随左指针
 
 var
-  root: BinaryTree[string] # instantiate a BinaryTree with `string`
-add(root, newNode("hello")) # instantiates `newNode` and `add`
-add(root, "world")          # instantiates the second `add` proc
+  root: BinaryTree[string] # 使用 `string` 实例化 BinaryTree
+add(root, newNode("hello")) # 实例化 `newNode` 和 `add`
+add(root, "world")          # 实例化第二个 `add` 过程
 for str in preorder(root):
   stdout.writeLine(str)
 ```
 
-### Templates
+### 模板
 
 ```nim
 template `!=` (a, b: untyped): untyped =
-  # this definition exists in the System module
+  # 此定义存在于 System 模块中
   not (a == b)
 
-assert(5 != 6) # the compiler rewrites that to: assert(not (5 == 6))
+assert(5 != 6) # 编译器将其重写为：assert(not (5 == 6))
 #############################################
 const
   debug = true
@@ -1211,18 +1206,18 @@ withFile(txt, "ttempl3.txt", fmWrite):
 
 ```
 
-### Static Arguments
+### 静态参数
 
 ```nim
 import std/macros
 
 macro myMacro(arg: static[int]): untyped =
-  echo arg # just an int (7), not `NimNode`
+  echo arg # 只是一个整数 (7)，而不是 `NimNode`
 
 myMacro(1 + 2 * 3)
 ```
 
-### Code Blocks as Arguments
+### 作为参数的代码块
 
 ```nim
 echo "Hello ":
@@ -1231,13 +1226,13 @@ echo "Hello ":
   a & b
 ```
 
-### The Syntax Tree
+### 语法树
 
 ```nim
 dumpTree:
   var mt: MyType = MyType(a:123.456, b:"abcdef")
 
-# output:
+# 输出：
 #   StmtList
 #     VarSection
 #       IdentDefs
@@ -1253,14 +1248,14 @@ dumpTree:
 #             StrLit "abcdef"
 ```
 
-### Custom Semantic Checking
+### 自定义语义检查
 
 ```nim
 macro myAssert(arg: untyped): untyped =
   arg.expectKind nnkInfix
 ```
 
-### Generating Code
+### 生成代码
 
 ```nim
 import std/macros
@@ -1284,16 +1279,16 @@ result = quote do:
 myMacro("Hallo")
 ```
 
-### Building Your First Macro
+### 构建你的第一个宏
 
 ```nim
 import std/macros
 
 macro myAssert(arg: untyped): untyped =
-  # all node kind identifiers are prefixed with "nnk"
+  # 所有节点类型标识符都以 "nnk" 为前缀
   arg.expectKind nnkInfix
   arg.expectLen 3
-  # operator as string literal
+  # 运算符作为字符串字面量
   let op  = newLit(" " & arg[0].repr & " ")
   let lhs = arg[1]
   let rhs = arg[2]
@@ -1310,6 +1305,6 @@ myAssert(a == b)
 
 ```
 
-## Also see
+## 另请参阅
 
-- [Nim Cheat sheet](https://narimiran.github.io/nim-basics/) _(https://narimiran.github.io)_
+- [Nim 备忘单](https://narimiran.github.io/nim-basics/) _(https://narimiran.github.io)_

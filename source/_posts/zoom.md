@@ -6,128 +6,129 @@ tags:
   -
   - mac
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 32 keyboard shortcuts found in Zoom. These shortcuts are for MacOS, for Windows visit /zoom-windows.
+  Zoom中的32个键盘快捷键的速查表。这些快捷键适用于MacOS，Windows用户请访问 /zoom-windows。
 ---
 
-## Mac Keyboard Shortcuts {.cols-2}
+## Mac 键盘快捷键 {.cols-2}
 
-### Meetings I
+### 会议 一
 
-| Shortcut          | Action                                                              |
+| 快捷键            | 操作                                                                |
 | ----------------- | ------------------------------------------------------------------- |
-| `Cmd` `J`         | Join meeting                                                        |
-| `Cmd` `Ctrl` `V`  | Start meeting                                                       |
-| `Cmd` `J`         | Schedule meeting                                                    |
-| `Cmd` `Ctrl` `S`  | Screen share via direct share                                       |
-| `Cmd` `Shift` `A` | Mute or unmute audio                                                |
-| `Cmd` `Ctrl` `U`  | Mute audio for everyone except the host, only available to the host |
-| `Space`           | Push to talk                                                        |
-| `Cmd` `Shift` `V` | Start or stop video                                                 |
-| `Cmd` `Shift` `N` | Switch camera                                                       |
-| `Cmd` `Shift` `S` | Start or stop screen share                                          |
-| `Cmd` `Shift` `T` | Pause or resume screen share                                        |
-| `Cmd` `Shift` `R` | Start local recording                                               |
-| `Cmd` `Shift` `C` | Start cloud recording                                               |
+| `Cmd` `J`         | 加入会议                                                            |
+| `Cmd` `Ctrl` `V`  | 开始会议                                                            |
+| `Cmd` `J`         | 安排会议                                                            |
+| `Cmd` `Ctrl` `S`  | 通过直接共享进行屏幕共享                                                |
+| `Cmd` `Shift` `A` | 静音或取消静音                                                        |
+| `Cmd` `Ctrl` `U`  | 除主持人外全体静音（仅主持人可用）                                        |
+| `Space`           | 按住说话                                                            |
+| `Cmd` `Shift` `V` | 开始或停止视频                                                        |
+| `Cmd` `Shift` `N` | 切换摄像头                                                          |
+| `Cmd` `Shift` `S` | 开始或停止屏幕共享                                                    |
+| `Cmd` `Shift` `T` | 暂停或恢复屏幕共享                                                    |
+| `Cmd` `Shift` `R` | 开始本地录制                                                        |
+| `Cmd` `Shift` `C` | 开始云录制                                                          |
 
 {.shortcuts}
 
-### Meetings II
+### 会议 二
 
-| Shortcut               | Action                                                                   |
+| 快捷键                 | 操作                                                                     |
 | ---------------------- | ------------------------------------------------------------------------ |
-| `Cmd` `Shift` `P`      | Pause or resume recording                                                |
-| `Cmd` `Shift` `W`      | Switch to active speaker view or gallery view, depending on current view |
-| `Ctrl` `P`             | View previous 25 participants in gallery view                            |
-| `Ctrl` `N`             | View next 25 participants in gallery view                                |
-| `Cmd` `U`              | Display or hide participants panel                                       |
-| `Cmd` `Shift` `H`      | Show or hide in-meeting chat panel                                       |
-| `Cmd` `I`              | Open invite window                                                       |
-| `Opt` `Y`              | Raise hand or lower hand                                                 |
-| `Ctrl` `Shift` `R`     | Gain remote control                                                      |
-| `Ctrl` `Shift` `G`     | Stop remote control                                                      |
-| `Cmd` `Shift` `F`      | Enter or exit full screen                                                |
-| `Cmd` `Shift` `M`      | Switch to minimal window                                                 |
-| `Ctrl` `Opt` `Cmd` `H` | Show or hide meeting controls                                            |
-| `Cmd` `W`              | Prompt to end or leave meeting                                           |
+| `Cmd` `Shift` `P`      | 暂停或恢复录制                                                           |
+| `Cmd` `Shift` `W`      | 切换到演讲者视图或画廊视图（取决于当前视图）                                   |
+| `Ctrl` `P`             | 在画廊视图中查看前25位参会者                                               |
+| `Ctrl` `N`             | 在画廊视图中查看后25位参会者                                               |
+| `Cmd` `U`              | 显示或隐藏参会者面板                                                     |
+| `Cmd` `Shift` `H`      | 显示或隐藏会议中聊天面板                                                   |
+| `Cmd` `I`              | 打开邀请窗口                                                             |
+| `Opt` `Y`              | 举手或放下手                                                             |
+| `Ctrl` `Shift` `R`     | 获取远程控制权                                                           |
+| `Ctrl` `Shift` `G`     | 停止远程控制                                                             |
+| `Cmd` `Shift` `F`      | 进入或退出全屏                                                           |
+| `Cmd` `Shift` `M`      | 切换到最小化窗口                                                         |
+| `Ctrl` `Opt` `Cmd` `H` | 显示或隐藏会议控件                                                       |
+| `Cmd` `W`              | 提示结束或离开会议                                                       |
 
 {.shortcuts}
 
-### Chat Shortcuts
+### 聊天快捷键
 
-| Shortcut  | Action                    |
+| 快捷键    | 操作                      |
 | --------- | ------------------------- |
-| `Cmd` `K` | Jump to chat with someone |
-| `Cmd` `T` | Screenshot                |
+| `Cmd` `K` | 跳转到与某人聊天            |
+| `Cmd` `T` | 截图                      |
 
 {.shortcuts}
 
-### General Shortcuts
+### 常规快捷键
 
-| Shortcut   | Action                                                          |
+| 快捷键     | 操作                                                            |
 | ---------- | --------------------------------------------------------------- |
-| `Cmd` `W`  | Close the current window                                        |
-| `Cmd` `L`  | Switch to portrait or landscape view, depending on current view |
-| `Ctrl` `T` | Switch from one tab to the next                                 |
+| `Cmd` `W`  | 关闭当前窗口                                                      |
+| `Cmd` `L`  | 切换到纵向或横向视图（取决于当前视图）                                |
+| `Ctrl` `T` | 切换到下一个标签页                                                  |
 
 {.shortcuts}
 
-## Windows Keyboard Shortcuts {.cols-2}
+## Windows 键盘快捷键 {.cols-2}
 
-### All Shortcuts II
+### 所有快捷键 二
 
-| Shortcut             | Action                                                                            |
+| 快捷键               | 操作                                                                              |
 | -------------------- | --------------------------------------------------------------------------------- |
-| `F6`                 | Navigate among Zoom popup windows                                                 |
-| `Ctrl` `Alt` `Shift` | Move focus to Zoom's meeting controls                                             |
-| `PgUp`               | View previous 25 video stream in gallery view                                     |
-| `PgDn`               | View next 25 video stream in gallery view                                         |
-| `Alt` `F1`           | Switch to active speaker view in video meeting                                    |
-| `Alt` `F2`           | Switch to gallery video view in video meeting                                     |
-| `Alt` `F4`           | Close the current window                                                          |
-| `Alt` `V`            | Start or stop video                                                               |
-| `Alt` `A`            | Mute or unmute audio                                                              |
-| `Alt` `M`            | Mute or unmute audio for everyone except host, available to the meeting host only |
-| `Alt` `S`            | Launch share screen window and stop screen share                                  |
-| `Alt` `Shift` `S`    | Start or stop new screen share                                                    |
-| `Alt` `T`            | Pause or resume screen share                                                      |
-| `Alt` `R`            | Start or stop local recording                                                     |
-| `Alt` `C`            | Start or stop cloud recording                                                     |
-| `Alt` `P`            | Pause or resume recording                                                         |
-| `Alt` `N`            | Switch camera                                                                     |
-| `Alt` `F`            | Enter or exit full screen                                                         |
+| `F6`                 | 在 Zoom 弹出窗口之间导航                                                            |
+| `Ctrl` `Alt` `Shift` | 将焦点移至 Zoom 的会议控件                                                          |
+| `PgUp`               | 在画廊视图中查看前25个视频流                                                        |
+| `PgDn`               | 在画廊视图中查看后25个视频流                                                        |
+| `Alt` `F1`           | 在视频会议中切换到当前发言人视图                                                      |
+| `Alt` `F2`           | 在视频会议中切换到画廊视图                                                          |
+| `Alt` `F4`           | 关闭当前窗口                                                                      |
+| `Alt` `V`            | 开始或停止视频                                                                    |
+| `Alt` `A`            | 静音或取消静音                                                                    |
+| `Alt` `M`            | 除主持人外全体静音（仅会议主持人可用）                                                |
+| `Alt` `S`            | 启动共享屏幕窗口并停止屏幕共享                                                      |
+| `Alt` `Shift` `S`    | 开始或停止新的屏幕共享                                                              |
+| `Alt` `T`            | 暂停或恢复屏幕共享                                                                |
+| `Alt` `R`            | 开始或停止本地录制                                                                |
+| `Alt` `C`            | 开始或停止云录制                                                                  |
+| `Alt` `P`            | 暂停或恢复录制                                                                  |
+| `Alt` `N`            | 切换摄像头                                                                      |
+| `Alt` `F`            | 进入或退出全屏                                                                    |
 
 {.shortcuts}
 
-### All Shortcuts II
+### 所有快捷键 二
 
-| Shortcut                 | Action                                 |
+| 快捷键                   | 操作                                   |
 | ------------------------ | -------------------------------------- |
-| `Alt` `F`                | Enter or exit full screen              |
-| `Alt` `H`                | Display or hide in-meeting chat panel  |
-| `Alt` `U`                | Display or hide participants panel     |
-| `Alt` `I`                | Open invite window                     |
-| `Alt` `Y`                | Raise or lower hand                    |
-| `Alt` `Shift` `R`        | Gain remote control                    |
-| `Alt` `Shift` `G`        | Stop remote control                    |
-| `Ctrl` `2`               | Read active speaker name               |
-| `Ctrl` `Alt` `Shift` `H` | Show or hide floating meeting controls |
-| `Alt` `Shift` `T`        | Screenshot                             |
-| `Alt` `L`                | Switch to portrait or landscape view   |
-| `Ctrl` `W`               | Close current chat session             |
-| `Ctrl` `Up`              | Go to previous chat                    |
-| `Ctrl` `Down`            | Go to next chat                        |
-| `Ctrl` `T`               | Jump to chat with someone              |
-| `Ctrl` `F`               | Search                                 |
-| `Ctrl` `Tab`             | Move to the next tab                   |
-| `Ctrl` `Shift` `Tab`     | Move to the previous tab               |
+| `Alt` `F`                | 进入或退出全屏                           |
+| `Alt` `H`                | 显示或隐藏会议中聊天面板                   |
+| `Alt` `U`                | 显示或隐藏参会者面板                     |
+| `Alt` `I`                | 打开邀请窗口                             |
+| `Alt` `Y`                | 举手或放下手                             |
+| `Alt` `Shift` `R`        | 获取远程控制权                           |
+| `Alt` `Shift` `G`        | 停止远程控制                             |
+| `Ctrl` `2`               | 朗读当前发言人姓名                       |
+| `Ctrl` `Alt` `Shift` `H` | 显示或隐藏浮动会议控件                   |
+| `Alt` `Shift` `T`        | 截图                                   |
+| `Alt` `L`                | 切换到纵向或横向视图                     |
+| `Ctrl` `W`               | 关闭当前聊天会话                         |
+| `Ctrl` `Up`              | 转到上一个聊天                           |
+| `Ctrl` `Down`            | 转到下一个聊天                           |
+| `Ctrl` `T`               | 跳转到与某人聊天                         |
+| `Ctrl` `F`               | 搜索                                   |
+| `Ctrl` `Tab`             | 移动到下一个标签页                       |
+| `Ctrl` `Shift` `Tab`     | 移动到上一个标签页                       |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Zoom on MacOS](https://support.zoom.us/hc/en-us/articles/205683899-Hot-Keys-and-Keyboard-Shortcuts-for-Zoom)
+- [适用于 MacOS 的 Zoom 键盘快捷键](https://support.zoom.us/hc/en-us/articles/205683899-Hot-Keys-and-Keyboard-Shortcuts-for-Zoom)
   _(support.zoom.us)_
-- [Keyboard shortcuts for Zoom on Windows](https://support.zoom.us/hc/en-us/articles/205683899-Hot-Keys-and-Keyboard-Shortcuts-for-Zoom)
+- [适用于 Windows 的 Zoom 键盘快捷键](https://support.zoom.us/hc/en-us/articles/205683899-Hot-Keys-and-Keyboard-Shortcuts-for-Zoom)
   _(support.zoom.us)_
+

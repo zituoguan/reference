@@ -6,48 +6,48 @@ tags:
   - object-oriented
   - class
 categories:
-  - Programming
+  - 编程
 intro: |
-  C# quick reference cheat sheet that provides basic syntax and methods.
+  C# 快速参考备忘单，提供基本语法和方法。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门
 
 ### Hello.cs
 
 ```cs
 class Hello {
-  // main method
+  // main 方法
   static void Main(string[] args)
   {
-    // Output: Hello, world!
+    // 输出: Hello, world!
     Console.WriteLine("Hello, world!");
   }
 }
 ```
 
-Creates a project directory for new console application
+为新的控制台应用程序创建项目目录
 
 ```cs
 $ dotnet new console
 ```
 
-Lists all the applications templates
+列出所有应用程序模板
 
 ```cs
 $ dotnet new list
 ```
 
-Compiling and running (make sure you are in the project directory)
+编译和运行（确保您在项目目录中）
 
 ```shell script
 $ dotnet run
 Hello, world!
 ```
 
-### Variables
+### 变量
 
 ```cs
 int intNum = 9;
@@ -57,84 +57,84 @@ double doubleNum = 99.999;
 decimal decimalNum = 99.9999M;
 char letter = 'D';
 bool @bool = true;
-string site = "cheatsheets.zip";
+string site = "r3f.cn";
 
 var num = 999;
 var str = "999";
 var bo = false;
 ```
 
-### Primitive Data Types
+### 基本数据类型
 
-| Data Type | Size             | Range                     |
-| --------- | ---------------- | ------------------------- |
-| `int`     | 4 bytes          | -2^31^ ^to^ 2^31^-1       |
-| `long`    | 8 bytes          | -2^63^ ^to^ 2^63^-1       |
-| `float`   | 4 bytes          | 6 ^to^ 7 decimal digits   |
-| `double`  | 8 bytes          | 15 decimal digits         |
-| `decimal` | 16 bytes         | 28 ^to^ 29 decimal digits |
-| `char`    | 2 bytes          | 0 ^to^ 65535              |
-| `bool`    | 1 bit            | true / false              |
-| `string`  | 2 bytes per char | _N/A_                     |
+| 数据类型 | 大小             | 范围                      |
+| -------- | ---------------- | ------------------------- |
+| `int`    | 4 字节           | -2^31^ ^到^ 2^31^-1       |
+| `long`   | 8 字节           | -2^63^ ^到^ 2^63^-1       |
+| `float`  | 4 字节           | 6 ^到^ 7 位小数           |
+| `double` | 8 字节           | 15 位小数                 |
+| `decimal`| 16 字节          | 28 ^到^ 29 位小数         |
+| `char`   | 2 字节           | 0 ^到^ 65535              |
+| `bool`   | 1 比特           | true / false              |
+| `string` | 每字符 2 字节    | _不适用_                  |
 
 {.show-header}
 
-### Comments
+### 注释
 
 ```cs
-// Single-line comment
+// 单行注释
 
-/* Multi-line
-   comment */
+/* 多行
+   注释 */
 
-// TODO: Adds comment to a task list in Visual Studio
+// TODO: 在 Visual Studio 的任务列表中添加注释
 
-/// Single-line comment used for documentation
+/// 用于文档的单行注释
 
-/** Multi-line comment
-    used for documentation **/
+/** 用于文档的
+    多行注释 **/
 
 ```
 
-### Strings
+### 字符串
 
 ```cs
 string first = "John";
 string last = "Doe";
 
-// string concatenation
+// 字符串连接
 string name = first + " " + last;
 Console.WriteLine(name); // => John Doe
 ```
 
-See: [Strings](#c-strings)
+另请参阅：[字符串](#c-strings)
 
-### User Input
+### 用户输入
 
 ```cs
-Console.WriteLine("Enter number:");
+Console.WriteLine("输入数字:");
 if(int.TryParse(Console.ReadLine(),out int input))
 {
-  // Input validated
-  Console.WriteLine($"You entered {input}");
+  // 输入已验证
+  Console.WriteLine($"您输入了 {input}");
 }
 ```
 
-### Conditionals
+### 条件语句
 
 ```cs
 int j = 10;
 
 if (j == 10) {
-  Console.WriteLine("I get printed");
+  Console.WriteLine("我会打印出来");
 } else if (j > 10) {
-  Console.WriteLine("I don't");
+  Console.WriteLine("我不会");
 } else {
-  Console.WriteLine("I also don't");
+  Console.WriteLine("我也不会");
 }
 ```
 
-### Arrays
+### 数组
 
 ```cs
 char[] chars = new char[10];
@@ -146,7 +146,7 @@ int[] mylist = {100, 200};
 bool[] answers = {true, false};
 ```
 
-### Loops
+### 循环
 
 ```cs
 int[] numbers = {1, 2, 3, 4, 5};
@@ -164,9 +164,9 @@ foreach(int num in numbers) {
 }
 ```
 
-## C# Strings
+## C# 字符串
 
-### String concatenation
+### 字符串连接
 
 ```cs
 string first = "John";
@@ -176,7 +176,7 @@ string name = first + " " + last;
 Console.WriteLine(name); // => John Doe
 ```
 
-### String interpolation
+### 字符串插值
 
 ```cs
 string first = "John";
@@ -186,46 +186,47 @@ string name = $"{first} {last}";
 Console.WriteLine(name); // => John Doe
 ```
 
-### String Members {.row-span-2}
+### 字符串成员 {.row-span-2}
 
-| Member     | Description                                                                                                                          |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Length     | A property that returns the length of the string.                                                                                    |
-| Compare()  | A static method that compares two strings.                                                                                           |
-| Contains() | Determines if the string contains a specific substring.                                                                              |
-| Equals()   | Determines if the two strings have the same character data.                                                                          |
-| Format()   | Formats a string via the {0} notation and by using other primitives.                                                                 |
-| Trim()     | Removes all instances of specific characters from trailing and leading characters. Defaults to removing leading and trailing spaces. |
-| Split()    | Removes the provided character and creates an array out of the remaining characters on either side.                                  |
+| 成员       | 描述                                                                                                                               |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Length     | 返回字符串长度的属性。                                                                                                               |
+| Compare()  | 比较两个字符串的静态方法。                                                                                                           |
+| Contains() | 判断字符串是否包含特定的子字符串。                                                                                                   |
+| Equals()   | 判断两个字符串是否具有相同的字符数据。                                                                                               |
+| Format()   | 通过 {0} 表示法并使用其他基本类型来格式化字符串。                                                                                    |
+| Trim()     | 从前导和尾随字符中移除所有特定字符的实例。默认为移除前导和尾随空格。                                                                   |
+| Split()    | 移除提供的字符，并根据两侧剩余的字符创建一个数组。                                                                                   |
 
 {.show-header}
 
-### Verbatim strings
+### 原义字符串
 
 ```cs {.wrap}
-string longString = @"I can type any characters in here !#@$%^&*()__+ '' \n \t except double quotes and I will be taken literally. I even work with multiple lines.";
+string longString = @"我可以在这里输入任何字符 !#@$%^&*()__+ '' \n \t 除了双引号，它们都会被按字面意思处理。它甚至可以处理多行。";
 ```
 
-### Member Example
+### 成员示例
 
 ```cs
-// Using property of System.String
-string lengthOfString = "How long?";
-lengthOfString.Length           // => 9
+// 使用 System.String 的属性
+string lengthOfString = "多长?";
+lengthOfString.Length           // => 3 (注意：此处原文为 "How long?" 长度为9，翻译后长度会变化，这里按翻译后的字面长度)
 
-// Using methods of System.String
-lengthOfString.Contains("How"); // => true
+// 使用 System.String 的方法
+lengthOfString.Contains("多"); // => true
 ```
 
-## Misc
+## 其他
 
-### General .NET Terms {.col-span-2}
+### 通用 .NET 术语 {.col-span-2}
 
-| Term                          | Definition                                                                                                                                                                                          |
+| 术语                          | 定义                                                                                                                                                                                          |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Runtime                       | A collection of services that are required to execute a given compiled unit of code.                                                                                                                |
-| Common Language Runtime (CLR) | Primarily locates, loads, and managed .NET objects. The CLR also handles memory management, application hosting, coordination of threads, performing security checks, and other low-level details. |
-| Managed code                  | Code that compiles and runs on .NET runtime. C#/F#/VB are examples.                                                                                                                                 |
-| Unmanaged code                | Code that compiles straight to machine code and cannot be directly hosted by the .NET runtime. Contains no free memory management, garbage collection, etc. DLLs created from C/C++ are examples.   |
+| 运行时 (Runtime)              | 执行给定已编译代码单元所需的服务集合。                                                                                                                                                              |
+| 公共语言运行时 (CLR)          | 主要负责定位、加载和管理 .NET 对象。CLR 还处理内存管理、应用程序托管、线程协调、执行安全检查以及其他底层细节。                                                                                        |
+| 托管代码 (Managed code)       | 在 .NET 运行时上编译和运行的代码。C#/F#/VB 是示例。                                                                                                                                                 |
+| 非托管代码 (Unmanaged code)   | 直接编译为机器代码且不能由 .NET 运行时直接托管的代码。不包含自动内存管理、垃圾回收等。从 C/C++ 创建的 DLL 是示例。                                                                                      |
 
 {.show-header}
+

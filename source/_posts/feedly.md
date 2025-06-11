@@ -7,66 +7,66 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 25 keyboard shortcuts found on the Feedly app
+  Feedly 应用程序中 25 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Navigation {.row-span-2}
+### 导航 {.row-span-2}
 
-| Shortcut    | Action                        |
+| 快捷键      | 操作                          |
 | ----------- | ----------------------------- |
-| `G` `T`     | Show Today                    |
-| `G` `A`     | Show All                      |
-| `G` `F`     | Show Favorites                |
-| `G` `G`     | Jump to...                    |
-| `G` `L`     | Read later                    |
-| `G` `I`     | Index                         |
-| `G` `O`     | Organize sources              |
-| `Shift` `J` | Next source or collection     |
-| `Shift` `K` | Previous source or collection |
-| `R`         | Refresh                       |
+| `G` `T`     | 显示今天的内容                |
+| `G` `A`     | 显示所有内容                  |
+| `G` `F`     | 显示收藏夹                    |
+| `G` `G`     | 跳转至...                     |
+| `G` `L`     | 稍后阅读                      |
+| `G` `I`     | 索引                          |
+| `G` `O`     | 整理订阅源                    |
+| `Shift` `J` | 下一个订阅源或收藏夹          |
+| `Shift` `K` | 上一个订阅源或收藏夹          |
+| `R`         | 刷新                          |
 
 {.shortcuts}
 
-### Lists
+### 列表
 
-| Shortcut    | Action                      |
+| 快捷键      | 操作                        |
 | ----------- | --------------------------- |
-| `J`         | Inline next article         |
-| `K`         | Inline previous article     |
-| `N`         | Select the next article     |
-| `P`         | Select the previous article |
-| `Shift` `A` | Mark all as read            |
+| `J`         | 内联下一篇文章              |
+| `K`         | 内联上一篇文章              |
+| `N`         | 选择下一篇文章              |
+| `P`         | 选择上一篇文章              |
+| `Shift` `A` | 全部标记为已读              |
 
 {.shortcuts}
 
-### Selected Article {.row-span-2}
+### 选定文章 {.row-span-2}
 
-| Shortcut    | Action                                         |
+| 快捷键      | 操作                                           |
 | ----------- | ---------------------------------------------- |
-| `O`         | Inline or close the currently selected article |
-| `V`         | View the original in a new tab                 |
-| `M`         | Toggle mark as read                            |
-| `X`         | Mark as read and hide                          |
-| `S`         | Read later                                     |
-| `T`         | Save to Board                                  |
-| `B`         | Save to Buffer                                 |
-| `C`         | Clip to Evernote                               |
-| `Shift` `V` | Preview                                        |
+| `O`         | 内联或关闭当前选定的文章                       |
+| `V`         | 在新标签页中查看原文                           |
+| `M`         | 切换标记为已读/未读                            |
+| `X`         | 标记为已读并隐藏                               |
+| `S`         | 稍后阅读                                       |
+| `T`         | 保存到看板 (Board)                             |
+| `B`         | 保存到 Buffer                                  |
+| `C`         | 剪藏到 Evernote                                |
+| `Shift` `V` | 预览                                           |
 
 {.shortcuts}
 
-### Help
+### 帮助
 
-| Shortcut | Action                  |
+| 快捷键 | 操作                    |
 | -------- | ----------------------- |
-| `?`      | Show keyboard shortcuts |
+| `?`      | 显示键盘快捷键          |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Feedly](https://blog.feedly.com/keyboard-shortcuts/) _(blog.feedly.com)_
+- [Feedly 键盘快捷键](https://blog.feedly.com/keyboard-shortcuts/) _(blog.feedly.com)_

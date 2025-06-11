@@ -8,19 +8,19 @@ tags:
   - CICD
   - CLI
 categories:
-  - Toolkit
-intro: A quick reference to Github CLI, an open-source command line tool that enables GitHub on your terminal.
+  - 工具箱
+intro: Github CLI 快速参考，一个开源命令行工具，让您可以在终端上使用 GitHub。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门指南
 
-### Installation
+### 安装
 
 **Windows**
 
-| Tool   | Install                          | Upgrade                          |
+| 工具   | 安装                             | 升级                             |
 | :----- | :------------------------------- | :------------------------------- |
 | WinGet | `winget install --id Github.cli` | `winget upgrade --id GitHub.cli` |
 | Scoop  | `scoop install gh`               | `scoop update gh`                |
@@ -30,7 +30,7 @@ plugins:
 
 **Mac OS**
 
-| Tool     | Install                | Upgrade                                        |
+| 工具     | 安装                | 升级                                        |
 | :------- | :--------------------- | :--------------------------------------------- |
 | Brew     | `brew install gh`      | `brew upgrade gh`                              |
 | MacPorts | `sudo port install gh` | `sudo port selfupdate && sudo port upgrade gh` |
@@ -39,10 +39,9 @@ plugins:
 
 **Linux**
 
-See the [install instructions](https://github.com/cli/cli/blob/trunk/docs/install_linux.md) for other Linux
-distributions.
+有关其他 Linux 发行版的安装说明，请参阅[安装说明](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)。
 
-Installation Script:
+安装脚本：
 
 ```bash
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
@@ -55,104 +54,104 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 
 ---
 
-### Basic Usage
+### 基本用法
 
-**Help and Documentation**
+**帮助和文档**
 
-Display command options:
+显示命令选项：
 
-| Command             | Description                                                                                                    |
+| 命令             | 描述                                                                 |
 | :------------------ | :------------------------------------------------------------------------------------------------------------- |
-| `gh help [command]` | Help provides help for any command in the application. Simply type gh help [path to command] for full details. |
+| `gh help [command]` | Help 为应用程序中的任何命令提供帮助。只需键入 `gh help [命令路径]` 即可获取完整详细信息。 |
 
-**Authentication**
+**认证**
 
-| Command             | Description                                                       |
+| 命令             | 描述                                                       |
 | :------------------ | :---------------------------------------------------------------- |
-| `gh auth login`     | Default authentication with web-based browser                     |
-| `gh auth logout`    | Removes the authentication configuration for a host               |
-| `gh auth refresh`   | Expand or fix the permission scopes for stored credentials        |
-| `gh auth setup-git` | Configures git to use GitHub CLI as a credential helper           |
-| `gh auth status`    | Verifies and displays information about your authentication state |
-| `gh auth token`     | Print the auth token gh is configured to use                      |
+| `gh auth login`     | 使用基于 Web 浏览器的默认身份验证                     |
+| `gh auth logout`    | 删除主机的身份验证配置               |
+| `gh auth refresh`   | 扩展或修复存储凭据的权限范围        |
+| `gh auth setup-git` | 配置 git 以使用 GitHub CLI 作为凭据帮助程序           |
+| `gh auth status`    | 验证并显示有关您的身份验证状态的信息 |
+| `gh auth token`     | 打印 gh 配置为使用的身份验证令牌                      |
 
-With Github token:
+使用 Github 令牌：
 
 ```shell
 $ gh auth --with-token < token.txt
 ```
 
-### Repository Management
+### 仓库管理
 
-**General**
+**通用**
 
-| Command                 | Description                                       |
+| 命令                 | 描述                                       |
 | :---------------------- | :------------------------------------------------ |
-| `gh repo create`        | Create a new GitHub repository                    |
-| `gh repo list [target]` | List repositories owned by a user or organization |
+| `gh repo create`        | 创建一个新的 GitHub 仓库                    |
+| `gh repo list [target]` | 列出用户或组织拥有的仓库 |
 
-**Targets**
+**目标**
 
-| Command                      | Description                                                    |
+| 命令                      | 描述                                                    |
 | :--------------------------- | :------------------------------------------------------------- |
-| `gh repo archive [repo]`     | Archive a GitHub repository                                    |
-| `gh repo clone [dir]`        | Clone a GitHub repository locally                              |
-| `gh repo delete [repo]`      | Delete a GitHub repository                                     |
-| `gh repo deploy-key`         | Manage deploy keys in a repository                             |
-| `gh repo edit [repo]`        | Edit repository settings                                       |
-| `gh repo fork [repo]`        | Create a fork of a repository                                  |
-| `gh repo rename [name]`      | Rename a GitHub repository                                     |
-| `gh repo set-default [repo]` | This command sets the default remote repository                |
-| `gh repo sync [dest-repo]`   | Sync destination repository from source repository             |
-| `gh repo view [repo]`        | Display the description and the README of a GitHub repository. |
+| `gh repo archive [repo]`     | 归档一个 GitHub 仓库                                    |
+| `gh repo clone [dir]`        | 在本地克隆一个 GitHub 仓库                              |
+| `gh repo delete [repo]`      | 删除一个 GitHub 仓库                                     |
+| `gh repo deploy-key`         | 管理仓库中的部署密钥                             |
+| `gh repo edit [repo]`        | 编辑仓库设置                                       |
+| `gh repo fork [repo]`        | 创建一个仓库的分支                                  |
+| `gh repo rename [name]`      | 重命名一个 GitHub 仓库                                     |
+| `gh repo set-default [repo]` | 此命令设置默认远程仓库                |
+| `gh repo sync [dest-repo]`   | 从源仓库同步目标仓库             |
+| `gh repo view [repo]`        | 显示 GitHub 仓库的描述和 README。 |
 
 ### Issues
 
-**Search Issues**
+**搜索 Issues**
 
-| Command                    | Description                 |
+| 命令                    | 描述                 |
 | :------------------------- | :-------------------------- |
-| `gh search issues [query]` | Search for issues on GitHub |
+| `gh search issues [query]` | 在 GitHub 上搜索 Issues |
 
-**Examples**
+**示例**
 
 ```bash
-# search issues matching set of keywords "readme" and "typo"
+# 搜索匹配关键词 "readme" 和 "typo" 的 issues
 $ gh search issues readme typo
 
-# search issues matching phrase "broken feature"
+# 搜索匹配短语 "broken feature" 的 issues
 $ gh search issues "broken feature"
 
-# search issues and pull requests in cli organization
+# 在 cli 组织中搜索 issues 和 pull requests
 $ gh search issues --include-prs --owner=cli
 
-# search open issues assigned to yourself
+# 搜索分配给您自己的打开的 issues
 $ gh search issues --assignee=@me --state=open
 
-# search issues with numerous comments
+# 搜索评论数量众多的 issues
 $ gh search issues --comments=">100"
 
-# search issues without label "bug"
+# 搜索没有标签 "bug" 的 issues
 $ gh search issues -- -label:bug
 ```
 
 ### Pull Requests
 
-**Pull Request Actions**
+**Pull Request 操作**
 
-| Command        | Description                               |
+| 命令        | 描述                               |
 | :------------- | :---------------------------------------- |
-| `gh pr create` | Create a pull request on GitHub           |
-| `gh pr list`   | List pull requests in a GitHub repository |
-| `gh pr status` | Show status of relevant pull requests     |
+| `gh pr create` | 在 GitHub 上创建一个 Pull Request           |
+| `gh pr list`   | 列出 GitHub 仓库中的 Pull Request |
+| `gh pr status` | 显示相关 Pull Request 的状态     |
 
-**Example**
+**示例**
 
 ```shell
 $ gh pr status
 ```
 
-Sample Output:
+示例输出：
 
 ```
 Current branch
@@ -171,66 +170,67 @@ Requesting a code review from you
 
 ### Github Actions
 
-**General Actions**
+**通用操作**
 
-| Command               | Description                                                                         |
+| 命令               | 描述                                                                         |
 | :-------------------- | :---------------------------------------------------------------------------------- |
-| `gh workflow disable` | Disable a workflow, preventing it from running or showing up when listing workflows |
-| `gh workflow enable`  | Enable a workflow, allowing it to be run and show up when listing workflows         |
-| `gh workflow list`    | List workflow files, hiding disabled workflows by default                           |
-| `gh workflow run`     | Create a workflow_dispatch event for a given workflow                               |
-| `gh workflow view`    | View the summary of a workflow                                                      |
+| `gh workflow disable` | 禁用工作流，阻止其运行或在列出工作流时显示 |
+| `gh workflow enable`  | 启用工作流，允许其运行并在列出工作流时显示         |
+| `gh workflow list`    | 列出工作流文件，默认隐藏禁用的工作流                           |
+| `gh workflow run`     | 为给定的工作流创建 workflow_dispatch 事件                               |
+| `gh workflow view`    | 查看工作流的摘要                                                      |
 
-**Running Actions**
+**运行操作**
 
-| Command           | Description                                                         |
+| 命令           | 描述                                                         |
 | :---------------- | :------------------------------------------------------------------ |
-| `gh run cancel`   | Cancel a workflow run                                               |
-| `gh run delete`   | Delete a workflow run                                               |
-| `gh run download` | Download artifacts generated by a GitHub Actions workflow run       |
-| `gh run list`     | List recent workflow runs                                           |
-| `gh run rerun`    | Rerun an entire run, only failed jobs, or a specific job from a run |
-| `gh run view`     | View a summary of a workflow run                                    |
-| `gh run watch`    | Watch a run until it completes, showing its progress                |
+| `gh run cancel`   | 取消工作流运行                                               |
+| `gh run delete`   | 删除工作流运行                                               |
+| `gh run download` | 下载由 GitHub Actions 工作流运行生成的构件       |
+| `gh run list`     | 列出最近的工作流运行                                           |
+| `gh run rerun`    | 重新运行整个运行、仅失败的作业或运行中的特定作业 |
+| `gh run view`     | 查看工作流运行的摘要                                    |
+| `gh run watch`    | 观察运行直到完成，显示其进度                |
 
-### Aliases
+### 别名
 
-**General Alias Settings**
+**通用别名设置**
 
-| Command           | Description                                                      |
+| 命令           | 描述                                                      |
 | :---------------- | :--------------------------------------------------------------- |
-| `gh alias delete` | Delete set aliases                                               |
-| `gh alias import` | Import aliases from the contents of a YAML file                  |
-| `gh alias list`   | Prints out all of the aliases gh is configured to use            |
-| `gh alias set`    | Define a word that will expand to a full gh command when invoked |
+| `gh alias delete` | 删除已设置的别名                                               |
+| `gh alias import` | 从 YAML 文件的内容导入别名                  |
+| `gh alias list`   | 打印出 gh 配置使用的所有别名            |
+| `gh alias set`    | 定义一个在调用时将扩展为完整 gh 命令的词 |
 
 ### Releases
 
-**General Actions**
+**通用操作**
 
-| Command             | Description                                  |
+| 命令             | 描述                                  |
 | :------------------ | :------------------------------------------- |
-| `gh release create` | Create a new GitHub Release for a repository |
-| `gh release list`   | List releases in a repository                |
+| `gh release create` | 为仓库创建一个新的 GitHub Release |
+| `gh release list`   | 列出仓库中的 Release                |
 
-**Target Commands**
+**目标命令**
 
-| Command                   | Description                             |
+| 命令                   | 描述                             |
 | :------------------------ | :-------------------------------------- |
-| `gh release delete`       | Delete a release                        |
-| `gh release delete-asset` | Delete an asset from a release          |
-| `gh release download`     | Download assets from a GitHub release   |
-| `gh release edit`         | Edit a release                          |
-| `gh release upload`       | Upload asset files to a GitHub Release  |
-| `gh release view`         | View information about a GitHub Release |
+| `gh release delete`       | 删除一个 Release                        |
+| `gh release delete-asset` | 从 Release 中删除一个资产          |
+| `gh release download`     | 从 GitHub Release 下载资产   |
+| `gh release edit`         | 编辑一个 Release                          |
+| `gh release upload`       | 将资产文件上传到 GitHub Release  |
+| `gh release view`         | 查看有关 GitHub Release 的信息 |
 
-### Configuration
+### 配置
 
-**Targeted Settings**
+**目标设置**
 
-| Command                 | Description                                         |
+| 命令                 | 描述                                         |
 | :---------------------- | :-------------------------------------------------- |
-| `gh config clear-cache` | Clear the cli cache                                 |
-| `gh config get`         | Print the value of a given configuration key        |
-| `gh config list`        | Print a list of configuration keys and values       |
-| `gh config set`         | Update configuration with a value for the given key |
+| `gh config clear-cache` | 清除 cli 缓存                                 |
+| `gh config get`         | 打印给定配置键的值        |
+| `gh config list`        | 打印配置键和值的列表       |
+| `gh config set`         | 使用给定键的值更新配置 |
+

@@ -6,18 +6,18 @@ tags:
   - container
   - virtual
 categories:
-  - Programming
+  - 编程
 intro: |
-  This is a quick reference cheat sheet for [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.
+  这是一个 [Docker](https://docs.docker.com/get-started/) 快速参考备忘单。你可以在这里找到最常用的 Docker 命令。
 plugins:
   - copyCode
 ---
 
-## Getting Started {.cols-2}
+## 入门指南 {.cols-2}
 
-### Getting started
+### 入门
 
-Create and run a container in background
+在后台创建并运行一个容器
 
 ```shell script
 $ docker run -d -p 80:80 docker/getting-started
@@ -25,13 +25,13 @@ $ docker run -d -p 80:80 docker/getting-started
 
 ---
 
-- `-d` - Run the container in detached mode
-- `-p 80:80` - Map port 80 to port 80 in the container
-- `docker/getting-started` - The image to use
+- `-d` - 以分离模式运行容器
+- `-p 80:80` - 将主机端口 80 映射到容器端口 80
+- `docker/getting-started` - 要使用的镜像
 
 {.marker-none}
 
-Create and run a container in foreground
+在前台创建并运行一个容器
 
 ```shell script
 $ docker run -it -p 8001:8080 --name my-nginx nginx
@@ -39,67 +39,67 @@ $ docker run -it -p 8001:8080 --name my-nginx nginx
 
 ---
 
-- `-it` - Interactive bash mode
-- `-p 8001:8080` - Map port 8001 to port 8080 in the container
-- `--name my-nginx` - Specify a name
-- `nginx` - The image to use
+- `-it` - 交互式 bash 模式
+- `-p 8001:8080` - 将主机端口 8001 映射到容器端口 8080
+- `--name my-nginx` - 指定一个名称
+- `nginx` - 要使用的镜像
 
 {.marker-none}
 
-### General commands
+### 常用命令
 
-| Example                             | Description                                      |
+| 示例                                | 描述                                     |
 | ----------------------------------- | ------------------------------------------------ |
-| `docker ps`                         | List running containers                          |
-| `docker ps -a`                      | List all containers                              |
-| `docker ps -s`                      | List running containers<br>_(with CPU / memory)_ |
-| `docker images`                     | List all images                                  |
-| `docker exec -it <container>  bash` | Connecting to container                          |
-| `docker logs <container>`           | Shows container's console log                    |
-| `docker stop <container>`           | Stop a container                                 |
-| `docker restart <container>`        | Restart a container                              |
-| `docker rm <container>`             | Remove a container                               |
-| `docker port <container>`           | Shows container's port mapping                   |
-| `docker top <container>`            | List processes                                   |
-| `docker kill <container>`           | Kill a container                                 |
+| `docker ps`                         | 列出正在运行的容器                          |
+| `docker ps -a`                      | 列出所有容器                              |
+| `docker ps -s`                      | 列出正在运行的容器<br>_(包括 CPU / 内存)_ |
+| `docker images`                     | 列出所有镜像                                  |
+| `docker exec -it <container>  bash` | 连接到容器                          |
+| `docker logs <container>`           | 显示容器的控制台日志                    |
+| `docker stop <container>`           | 停止一个容器                                 |
+| `docker restart <container>`        | 重启一个容器                              |
+| `docker rm <container>`             | 删除一个容器                               |
+| `docker port <container>`           | 显示容器的端口映射                   |
+| `docker top <container>`            | 列出进程                                   |
+| `docker kill <container>`           | 杀死一个容器                                 |
 
-Parameter `<container>` can be container id or name
+参数 `<container>` 可以是容器 ID 或名称
 
-## Docker Containers {.cols-2}
+## Docker 容器 {.cols-2}
 
-### Starting & Stopping
+### 启动与停止
 
-| Description               | Example                             |
+| 描述               | 示例                             |
 | ------------------------- | ----------------------------------- |
-| `docker start my-nginx`   | Starting                            |
-| `docker stop my-nginx`    | Stopping                            |
-| `docker restart my-nginx` | Restarting                          |
-| `docker pause my-nginx`   | Pausing                             |
-| `docker unpause my-nginx` | Unpausing                           |
-| `docker wait my-nginx`    | Blocking a Container                |
-| `docker kill my-nginx`    | Sending a SIGKILL                   |
-| `docker attach my-nginx`  | Connecting to an Existing Container |
+| `docker start my-nginx`   | 启动                            |
+| `docker stop my-nginx`    | 停止                            |
+| `docker restart my-nginx` | 重启                            |
+| `docker pause my-nginx`   | 暂停                            |
+| `docker unpause my-nginx` | 取消暂停                          |
+| `docker wait my-nginx`    | 阻塞容器                |
+| `docker kill my-nginx`    | 发送 SIGKILL 信号                   |
+| `docker attach my-nginx`  | 连接到现有容器 |
 
-### Information
+### 信息
 
-| Example                   | Description                            |
+| 示例                   | 描述                            |
 | ------------------------- | -------------------------------------- |
-| `docker ps`               | List running containers                |
-| `docker ps -a`            | List all containers                    |
-| `docker logs my-nginx`    | Container Logs                         |
-| `docker inspect my-nginx` | Inspecting Containers                  |
-| `docker events my-nginx`  | Containers Events                      |
-| `docker port my-nginx`    | Public Ports                           |
-| `docker top my-nginx`     | Running Processes                      |
-| `docker stats my-nginx`   | Container Resource Usage               |
-| `docker diff my-nginx`    | Lists the changes made to a container. |
+| `docker ps`               | 列出正在运行的容器                |
+| `docker ps -a`            | 列出所有容器                    |
+| `docker logs my-nginx`    | 容器日志                         |
+| `docker inspect my-nginx` | 检查容器                  |
+| `docker events my-nginx`  | 容器事件                      |
+| `docker port my-nginx`    | 公共端口                           |
+| `docker top my-nginx`     | 运行中的进程                      |
+| `docker stats my-nginx`   | 容器资源使用情况                  |
+| `docker diff my-nginx`    | 列出对容器所做的更改。 |
 
-### Creating
+### 创建
 
 ```yaml
-docker create [options] IMAGE
-  -a, --attach               # attach stdout/err
-  -i, --interactive          # attach stdin (interactive)
+docker create [选项] 镜像
+  -a, --attach               # 附加 stdout/err
+  -i, --interactive          # 附
   -t, --tty                  # pseudo-tty
       --name NAME            # name your image
   -p, --publish 5000:5000    # port map (host:container)

@@ -7,208 +7,208 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 97 keyboard shortcuts found in Adobe XD
+  Adobe XD 中 97 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Keys for Edit menu
+### 编辑菜单键
 
-| Shortcut           | Action                                                               |
+| 快捷键             | 操作                                                                 |
 | ------------------ | -------------------------------------------------------------------- |
-| `Ctrl` `Z`         | Undo                                                                 |
-| `Ctrl` `Shift` `Z` | Redo                                                                 |
-| `Ctrl` `X`         | Cut                                                                  |
-| `Ctrl` `C`         | Copy                                                                 |
-| `Ctrl` `V`         | Paste                                                                |
-| `Ctrl` `Alt` `V`   | Paste Appearance (Design mode) or Paste Interaction (Prototype mode) |
-| `Ctrl` `D`         | Duplicate                                                            |
-| `Del`              | Delete                                                               |
-| `Ctrl` `A`         | Select All                                                           |
-| `Ctrl` `Shift` `A` | Deselect All                                                         |
+| `Ctrl` `Z`         | 撤销                                                                 |
+| `Ctrl` `Shift` `Z` | 重做                                                                 |
+| `Ctrl` `X`         | 剪切                                                                 |
+| `Ctrl` `C`         | 复制                                                                 |
+| `Ctrl` `V`         | 粘贴                                                                 |
+| `Ctrl` `Alt` `V`   | 粘贴外观（设计模式）或粘贴交互（原型模式）                             |
+| `Ctrl` `D`         | 复制副本                                                             |
+| `Del`              | 删除                                                                 |
+| `Ctrl` `A`         | 全选                                                                 |
+| `Ctrl` `Shift` `A` | 取消全选                                                             |
 
 {.shortcuts}
 
-### Keys for File menu
+### 文件菜单键
 
-| Shortcut           | Action          |
+| 快捷键             | 操作            |
 | ------------------ | --------------- |
-| `Ctrl` `N`         | New             |
-| `Ctrl` `Shift` `O` | Open...         |
-| `Alt` `F4`         | Close           |
-| `Ctrl` `S`         | Save...         |
-| `Ctrl` `Shift` `S` | Save As...      |
-| `Ctrl` `Shift` `E` | Export Batch    |
-| `Ctrl` `E`         | Export Selected |
-| `Ctrl` `Shift` `I` | Import          |
+| `Ctrl` `N`         | 新建            |
+| `Ctrl` `Shift` `O` | 打开...         |
+| `Alt` `F4`         | 关闭            |
+| `Ctrl` `S`         | 保存...         |
+| `Ctrl` `Shift` `S` | 另存为...       |
+| `Ctrl` `Shift` `E` | 批量导出        |
+| `Ctrl` `E`         | 导出所选        |
+| `Ctrl` `Shift` `I` | 导入            |
 
 {.shortcuts}
 
-### Keys for Pen/Path
+### 钢笔/路径键
 
-| Shortcut         | Action                   |
+| 快捷键           | 操作                     |
 | ---------------- | ------------------------ |
-| `P`              | Switch to Pen tool       |
-| `Alt`            | Asymmetric control point |
-| `Shift`          | Snap control point angle |
-| `Shift`          | Snap anchor point angle  |
-| `Ctrl` `Alt` `U` | Add                      |
-| `Ctrl` `Alt` `S` | Subtract                 |
-| `Ctrl` `Alt` `I` | Intersect                |
-| `Ctrl` `Alt` `X` | Exclude overlap          |
-| `Ctrl` `8`       | Convert to path          |
+| `P`              | 切换到钢笔工具           |
+| `Alt`            | 不对称控制点             |
+| `Shift`          | 吸附控制点角度           |
+| `Shift`          | 吸附锚点角度             |
+| `Ctrl` `Alt` `U` | 添加（联合）             |
+| `Ctrl` `Alt` `S` | 减去（差集）             |
+| `Ctrl` `Alt` `I` | 相交                     |
+| `Ctrl` `Alt` `X` | 排除重叠                 |
+| `Ctrl` `8`       | 转换为路径               |
 
 {.shortcuts}
 
-### Keys for Layers (Objects), Groups, and Artboards {.row-span-2}
+### 图层（对象）、组和画板键 {.row-span-2}
 
-| Shortcut           | Action                    |
+| 快捷键             | 操作                      |
 | ------------------ | ------------------------- |
-| `Ctrl` `G`         | Group layers              |
-| `Ctrl` `Shift` `G` | Ungroup layers            |
-| `Ctrl` `K`         | Make component            |
-| `Ctrl` `L`         | Lock/Unlock layer         |
-| `Ctrl` `,`         | Hide/Show layer           |
-| `Ctrl` `Shift` `M` | Mask with shape           |
-| `Ctrl` `R`         | Make repeat grid          |
-| `1-9`              | Change layer opacity      |
-| `Ctrl` `;`         | Show/Hide artboard guides |
-| `Ctrl` `Shift` `;` | Lock artboard guides      |
+| `Ctrl` `G`         | 编组图层                  |
+| `Ctrl` `Shift` `G` | 取消编组图层              |
+| `Ctrl` `K`         | 创建组件                  |
+| `Ctrl` `L`         | 锁定/解锁图层             |
+| `Ctrl` `,`         | 隐藏/显示图层             |
+| `Ctrl` `Shift` `M` | 用形状遮罩                |
+| `Ctrl` `R`         | 创建重复网格              |
+| `1-9`              | 更改图层不透明度          |
+| `Ctrl` `;`         | 显示/隐藏画板参考线       |
+| `Ctrl` `Shift` `;` | 锁定画板参考线            |
 
 {.shortcuts}
 
-### Keys for Align
+### 对齐键
 
-| Shortcut               | Action                |
+| 快捷键                 | 操作                  |
 | ---------------------- | --------------------- |
-| `Ctrl` `Shift` `Left`  | Left                  |
-| `Shift` `C`            | Center (horizontally) |
-| `Ctrl` `Shift` `Right` | Right                 |
-| `Ctrl` `Shift` `Up`    | Top                   |
-| `Shift` `M`            | Middle (vertically)   |
-| `Ctrl` `Shift` `Down`  | Bottom                |
+| `Ctrl` `Shift` `Left`  | 左对齐                |
+| `Shift` `C`            | 水平居中              |
+| `Ctrl` `Shift` `Right` | 右对齐                |
+| `Ctrl` `Shift` `Up`    | 顶对齐                |
+| `Shift` `M`            | 垂直居中              |
+| `Ctrl` `Shift` `Down`  | 底对齐                |
 
 {.shortcuts}
 
-### Keys for Arrange
+### 排列键
 
-| Shortcut           | Action         |
+| 快捷键             | 操作           |
 | ------------------ | -------------- |
-| `Ctrl` `Shift` `]` | Bring to front |
-| `Ctrl` `]`         | Bring forward  |
-| `Ctrl` `[`         | Send backward  |
-| `Ctrl` `Shift` `[` | Send to back   |
+| `Ctrl` `Shift` `]` | 置于顶层       |
+| `Ctrl` `]`         | 上移一层       |
+| `Ctrl` `[`         | 下移一层       |
+| `Ctrl` `Shift` `[` | 置于底层       |
 
 {.shortcuts}
 
-### Keys for Distribute
+### 分布键
 
-| Shortcut           | Action     |
+| 快捷键             | 操作       |
 | ------------------ | ---------- |
-| `Ctrl` `Shift` `H` | Horizontal |
-| `Ctrl` `Shift` `V` | Vertical   |
+| `Ctrl` `Shift` `H` | 水平分布   |
+| `Ctrl` `Shift` `V` | 垂直分布   |
 
 {.shortcuts}
 
-### Keys for Text
+### 文本键
 
-| Shortcut           | Action             |
+| 快捷键             | 操作               |
 | ------------------ | ------------------ |
-| `Ctrl` `B`         | Bold               |
-| `Ctrl` `I`         | Italic             |
-| `Ctrl` `Shift` `.` | Increase font size |
-| `Ctrl` `Shift` `,` | Decrease font size |
+| `Ctrl` `B`         | 粗体               |
+| `Ctrl` `I`         | 斜体               |
+| `Ctrl` `Shift` `.` | 增大字号           |
+| `Ctrl` `Shift` `,` | 减小字号           |
 
 {.shortcuts}
 
-### Keys for Operations menu
+### 操作菜单键
 
-| Shortcut      | Action                                   |
+| 快捷键        | 操作                                     |
 | ------------- | ---------------------------------------- |
-| `Alt`         | From center                              |
-| `Shift`       | Constrain                                |
-| `Enter`       | Edit text                                |
-| `Shift`       | Constrain rotate (15 deg)                |
-| `Shift`       | Line constrain rotate (45 deg)           |
-| `Shift` `Alt` | Constrain from center                    |
-| `Ctrl`        | Direct select                            |
-| `Ctrl` `Tab`  | Switch between Design and Prototype mode |
+| `Alt`         | 从中心                                   |
+| `Shift`       | 约束                                     |
+| `Enter`       | 编辑文本                                 |
+| `Shift`       | 约束旋转 (15 度)                         |
+| `Shift`       | 线条约束旋转 (45 度)                     |
+| `Shift` `Alt` | 从中心约束                               |
+| `Ctrl`        | 直接选择                                 |
+| `Ctrl` `Tab`  | 在设计和原型模式之间切换                 |
 
 {.shortcuts}
 
-### Keys for Tools menu
+### 工具菜单键
 
-| Shortcut   | Action            |
+| 快捷键     | 操作              |
 | ---------- | ----------------- |
-| `V`        | Select            |
-| `R`        | Rectangle         |
-| `E`        | Ellipse           |
-| `Y`        | Polygon           |
-| `L`        | Line              |
-| `P`        | Pen               |
-| `T`        | Text              |
-| `A`        | Artboard          |
-| `Z`        | Zoom              |
-| `Ctrl` `3` | Zoom to selection |
-| `I`        | Eyedropper        |
+| `V`        | 选择              |
+| `R`        | 矩形              |
+| `E`        | 椭圆              |
+| `Y`        | 多边形            |
+| `L`        | 直线              |
+| `P`        | 钢笔              |
+| `T`        | 文本              |
+| `A`        | 画板              |
+| `Z`        | 缩放              |
+| `Ctrl` `3` | 缩放至选区        |
+| `I`        | 吸管              |
 
 {.shortcuts}
 
-### Keys for Interface and Viewing Options
+### 界面和查看选项键
 
-| Shortcut           | Action                                        |
+| 快捷键             | 操作                                          |
 | ------------------ | --------------------------------------------- |
-| `Ctrl` `+`         | Zoom in                                       |
-| `Ctrl` `-`         | Zoom out                                      |
-| `Ctrl` `0`         | Zoom to fit                                   |
-| `Ctrl` `1`         | Zoom to 100%                                  |
-| `Ctrl` `2`         | Zoom to 200%                                  |
-| `Space`            | Pan                                           |
-| `Ctrl` `Shift` `Y` | Assets                                        |
-| `Ctrl` `Y`         | Layers                                        |
-| `Ctrl` `Shift` `'` | Show layout grid                              |
-| `Ctrl` `'`         | Show square grid                              |
-| `Ctrl` `Tab`       | Switch between Design and Prototype mode      |
-| `Up/Down`          | Increase or decrease a value in a field by 1  |
-| `Shift` `Up/Down`  | Increase or decrease a value in a field by 10 |
+| `Ctrl` `+`         | 放大                                          |
+| `Ctrl` `-`         | 缩小                                          |
+| `Ctrl` `0`         | 缩放以适应屏幕                                |
+| `Ctrl` `1`         | 缩放至 100%                                   |
+| `Ctrl` `2`         | 缩放至 200%                                   |
+| `Space`            | 平移                                          |
+| `Ctrl` `Shift` `Y` | 资源                                          |
+| `Ctrl` `Y`         | 图层                                          |
+| `Ctrl` `Shift` `'` | 显示布局网格                                  |
+| `Ctrl` `'`         | 显示方形网格                                  |
+| `Ctrl` `Tab`       | 在设计和原型模式之间切换                      |
+| `Up/Down`          | 将字段中的值增加或减少 1                      |
+| `Shift` `Up/Down`  | 将字段中的值增加或减少 10                     |
 
 {.shortcuts}
 
-### Keys for Design Specs
+### 设计规范键
 
-| Shortcut           | Action                                     |
+| 快捷键             | 操作                                       |
 | ------------------ | ------------------------------------------ |
-| `Ctrl` `+/-`       | Zoom                                       |
-| `Ctrl` `0`         | Reset zoom                                 |
-| `(arrows)`         | Pan                                        |
-| `Shift` `(arrows)` | Faster pan                                 |
-| `Esc`              | Go from Spec view to UX flow view          |
-| `Esc`              | Remove focus from artboard in UX flow view |
+| `Ctrl` `+/-`       | 缩放                                       |
+| `Ctrl` `0`         | 重置缩放                                   |
+| `(arrows)`         | 平移                                       |
+| `Shift` `(arrows)` | 快速平移                                   |
+| `Esc`              | 从规范视图转到用户体验流程视图             |
+| `Esc`              | 在用户体验流程视图中移除画板焦点           |
 
 {.shortcuts}
 
-### Keys for Vector Editing
+### 矢量编辑键
 
-| Shortcut | Action                               |
+| 快捷键  | 操作                                 |
 | -------- | ------------------------------------ |
-| `Enter`  | Start editing selected vector object |
-| `Esc`    | Stop editing selected vector object  |
+| `Enter`  | 开始编辑所选矢量对象                 |
+| `Esc`    | 停止编辑所选矢量对象                 |
 
 {.shortcuts}
 
-### Keys for Prototyping
+### 原型制作键
 
-| Shortcut           | Action                                            |
+| 快捷键             | 操作                                              |
 | ------------------ | ------------------------------------------------- |
-| `Ctrl` `A`         | See all connections in prototype mode             |
-| `Ctrl` `Enter`     | Preview                                           |
-| `Ctrl` `Shift` `E` | Share prototype online                            |
-| `Left/Right`       | Navigate artboards in preview or shared prototype |
+| `Ctrl` `A`         | 在原型模式下查看所有连接                          |
+| `Ctrl` `Enter`     | 预览                                              |
+| `Ctrl` `Shift` `E` | 在线共享原型                                      |
+| `Left/Right`       | 在预览或共享原型中导航画板                        |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Adobe XD](https://helpx.adobe.com/xd/help/keyboard-shortcuts.html) _(helpx.adobe.com)_
+- [Adobe XD 键盘快捷键](https://helpx.adobe.com/xd/help/keyboard-shortcuts.html) _(helpx.adobe.com)_

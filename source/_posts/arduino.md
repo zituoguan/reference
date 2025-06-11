@@ -7,33 +7,34 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 12 keyboard shortcuts found in the Arduino IDE
+  Arduino IDE 中 12 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### General
+### 常规
 
-| Shortcut           | Action                           |
+| 快捷键             | 操作                             |
 | ------------------ | -------------------------------- |
-| `Ctrl` `S`         | Save                             |
-| `Ctrl` `Shift` `S` | Save as                          |
-| `Ctrl` `N`         | Open a new sketch                |
-| `Ctrl` `O`         | Open an existing sketch          |
-| `Ctrl` `Q`         | Close the Arduino IDE            |
-| `Ctrl` `R`         | Verify                           |
-| `Ctrl` `U`         | Upload                           |
-| `Ctrl` `F`         | Find                             |
-| `Ctrl` `T`         | Adjust the alignment and spacing |
-| `Ctrl` `/`         | Comment                          |
-| `Ctrl` `Shift` `M` | Open the serial monitor          |
-| `Ctrl` `K`         | Open the sketch folder           |
+| `Ctrl` `S`         | 保存                             |
+| `Ctrl` `Shift` `S` | 另存为                           |
+| `Ctrl` `N`         | 打开新草图                       |
+| `Ctrl` `O`         | 打开现有草图                     |
+| `Ctrl` `Q`         | 关闭 Arduino IDE                 |
+| `Ctrl` `R`         | 验证                             |
+| `Ctrl` `U`         | 上传                             |
+| `Ctrl` `F`         | 查找                             |
+| `Ctrl` `T`         | 调整对齐和间距                   |
+| `Ctrl` `/`         | 注释                             |
+| `Ctrl` `Shift` `M` | 打开串口监视器                   |
+| `Ctrl` `K`         | 打开草图文件夹                   |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for the Arduino IDE](https://progtpoint.blogspot.com/2017/02/arduino-keyboard-shortcuts.html)
+- [Arduino IDE 键盘快捷键](https://progtpoint.blogspot.com/2017/02/arduino-keyboard-shortcuts.html)
   _(progtpoint.blogspot.com)_
+

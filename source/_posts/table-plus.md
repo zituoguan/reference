@@ -7,68 +7,68 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 34 keyboard shortcuts found in TablePlus
+  TablePlus 中 34 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Global
+### 全局
 
-| Shortcut           | Action                |
+| 快捷键           | 操作                |
 | ------------------ | --------------------- |
-| `Ctrl` `N`         | Open a new connection |
-| `Ctrl` `Q`         | Quit app              |
-| `Ctrl` `Shift` `O` | Open SQL file         |
-| `Ctrl` `,`         | Open Preferences      |
+| `Ctrl` `N`         | 打开新连接 |
+| `Ctrl` `Q`         | 退出应用              |
+| `Ctrl` `Shift` `O` | 打开 SQL 文件         |
+| `Ctrl` `,`         | 打开偏好设置      |
 
 {.shortcuts}
 
-### Workspace
+### 工作区
 
-| Shortcut               | Action                         |
+| 快捷键               | 操作                         |
 | ---------------------- | ------------------------------ |
-| `Ctrl` `W`             | Close a tab/window             |
-| `Ctrl` `S`             | Commit the changes             |
-| `Ctrl` `T`             | Open a new tab                 |
-| `Ctrl` `L`             | Open plugin manager            |
-| `Ctrl` `.`             | Run custom script              |
-| `Ctrl` `R`             | Reload workspace               |
-| `Ctrl` `[`             | Navigate to left tab           |
-| `Ctrl` `]`             | Navigate to right tab          |
-| `Ctrl` `Shift` `[`     | Navigate to left Pane          |
-| `Ctrl` `Shift` `]`     | Navigate to right Pane         |
-| `Ctrl` `D`             | Split Pane horizontally        |
-| `Ctrl` `1-9`           | Navigate to number tab         |
-| `Ctrl` `K`             | Switch database                |
-| `Ctrl` `Shift` `K`     | Switch connection              |
-| `Ctrl` `I`             | Indent selected SQL Code       |
-| `Ctrl` `E`             | Execute SQL Code               |
-| `Ctrl` `O`             | Open file SQL                  |
-| `Ctrl` `Shift` `Enter` | Uglify selected SQL statements |
-| `Ctrl` `\`             | Comment/Uncomment lines of SQL |
-| `Ctrl` `Z`             | Undo                           |
-| `Ctrl` `Shift` `Z`     | Redo                           |
-| `Ctrl` `P`             | Open anything                  |
-| `Ctrl` `E`             | Open SQL Query                 |
-| `Ctrl` `(click)`       | Open item in new tab           |
-| `Tab`                  | Move focus while editing       |
+| `Ctrl` `W`             | 关闭标签页/窗口             |
+| `Ctrl` `S`             | 提交更改             |
+| `Ctrl` `T`             | 打开新标签页                 |
+| `Ctrl` `L`             | 打开插件管理器            |
+| `Ctrl` `.`             | 运行自定义脚本              |
+| `Ctrl` `R`             | 重新加载工作区               |
+| `Ctrl` `[`             | 导航到左侧标签页           |
+| `Ctrl` `]`             | 导航到右侧标签页          |
+| `Ctrl` `Shift` `[`     | 导航到左侧窗格          |
+| `Ctrl` `Shift` `]`     | 导航到右侧窗格         |
+| `Ctrl` `D`             | 水平拆分窗格        |
+| `Ctrl` `1-9`           | 导航到数字标签页         |
+| `Ctrl` `K`             | 切换数据库                |
+| `Ctrl` `Shift` `K`     | 切换连接              |
+| `Ctrl` `I`             | 缩进选定的 SQL 代码       |
+| `Ctrl` `E`             | 执行 SQL 代码               |
+| `Ctrl` `O`             | 打开 SQL 文件                  |
+| `Ctrl` `Shift` `Enter` | 压缩/混淆选定的 SQL 语句 |
+| `Ctrl` `\`             | 注释/取消注释 SQL 行 |
+| `Ctrl` `Z`             | 撤销                           |
+| `Ctrl` `Shift` `Z`     | 重做                           |
+| `Ctrl` `P`             | 打开任何内容                  |
+| `Ctrl` `E`             | 打开 SQL 查询                 |
+| `Ctrl` `(点击)`       | 在新标签页中打开项目           |
+| `Tab`                  | 编辑时移动焦点       |
 
 {.shortcuts}
 
-### Table Data
+### 表格数据
 
-| Shortcut         | Action                              |
+| 快捷键         | 操作                              |
 | ---------------- | ----------------------------------- |
-| `Space`          | Toggle row detail when row selected |
-| `Ctrl` `C`       | Copy rows                           |
-| `Ctrl` `V`       | Paste rows                          |
-| `Ctrl` `Alt` `I` | Insert a new row                    |
-| `Tab`            | Move focus while editing            |
+| `空格键`          | 选中行时切换行详细信息 |
+| `Ctrl` `C`       | 复制行                           |
+| `Ctrl` `V`       | 粘贴行                          |
+| `Ctrl` `Alt` `I` | 插入新行                    |
+| `Tab`            | 编辑时移动焦点            |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for TablePlus app](https://tableplus.com/blog/2018/02/shortcut-keys.html) _(tableplus.com)_
+- [TablePlus 应用的键盘快捷键](https://tableplus.com/blog/2018/02/shortcut-keys.html) _(tableplus.com)_

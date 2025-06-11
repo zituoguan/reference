@@ -2,33 +2,33 @@
 title: Redis
 background: bg-[#c13b2c]
 tags:
-  - cache
+  - 缓存
 categories:
-  - Database
+  - 数据库
 date: 2020-12-26 19:33:15
 intro: |
-  This is a [redis](https://redis.io/) quick reference cheat sheet that lists examples of redis commands
+  这是一个 [redis](https://redis.io/) 快速参考备忘单，列出了 redis 命令的示例
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门
 
-### Getting started
+### 入门
 
-Start Redis
+启动 Redis
 
 ```shell script
 $ redis-server
 ```
 
-Connect to redis (Redis CLI client)
+连接到 Redis (Redis CLI 客户端)
 
 ```shell script
 $ redis-cli
 ```
 
-Connect to redis (telnet)
+连接到 Redis (telnet)
 
 ```shell script
 $ telnet 127.0.0.1 6379
@@ -52,17 +52,17 @@ redis> GET mykey
 "Hello world"
 ```
 
-### Basic Data types
+### 基本数据类型
 
-- [Strings](#redis-string-command)
-- [Lists](#redis-list-command)
-- [Hashes](#redis-hash-command)
-- [Sets](#redis-set-command)
-- [Sorted Sets](#redis-sorted-set-command)
+- [字符串](#redis-string-command)
+- [列表](#redis-list-command)
+- [哈希](#redis-hash-command)
+- [集合](#redis-set-command)
+- [有序集合](#redis-sorted-set-command)
 
-Redis supports 5 basic data types
+Redis 支持 5 种基本数据类型
 
-## Redis String command{.cols-3}
+## Redis 字符串命令{.cols-3}
 
 ### APPEND
 
@@ -70,7 +70,7 @@ Redis supports 5 basic data types
 APPEND key value
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> EXISTS mykey
@@ -83,7 +83,7 @@ redis> GET mykey
 "Hello World"
 ```
 
-Append a value to a key
+将一个值追加到键
 
 ### BITCOUNT
 
@@ -91,7 +91,7 @@ Append a value to a key
 BITCOUNT key [start end]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "foobar"
@@ -104,7 +104,7 @@ redis> BITCOUNT mykey 1 1
 (integer) 6
 ```
 
-Count set bits in a string
+计算字符串中已设置的位数
 
 ### BITFIELD
 
@@ -112,7 +112,7 @@ Count set bits in a string
 BITFIELD key [GET type offset] [SET type offset value] [INCRBY type offset increment] [OVERFLOW WRAP|SAT|FAIL]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> BITFIELD mykey INCRBY i5 100 1 GET u4 0
@@ -120,7 +120,7 @@ redis> BITFIELD mykey INCRBY i5 100 1 GET u4 0
 2) (integer) 0
 ```
 
-Perform arbitrary bitfield integer operations on strings
+对字符串执行任意位域整数操作
 
 ### BITOP
 
@@ -128,7 +128,7 @@ Perform arbitrary bitfield integer operations on strings
 BITOP operation destkey key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET key1 "foobar"
@@ -141,7 +141,7 @@ redis> GET dest
 "`bc`ab"
 ```
 
-Perform bitwise operations between strings
+在字符串之间执行位运算
 
 ### BITPOS
 
@@ -149,7 +149,7 @@ Perform bitwise operations between strings
 BITPOS key bit [start] [end]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "\xff\xf0\x00"
@@ -168,7 +168,7 @@ redis> BITPOS mykey 1
 (integer) -1
 ```
 
-Find first bit set or clear in a string
+查找字符串中第一个已设置或清除的位
 
 ### DECR
 
@@ -176,7 +176,7 @@ Find first bit set or clear in a string
 DECR key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "10"
@@ -189,7 +189,7 @@ redis> DECR mykey
 ERR ERR value is not an integer or out of range
 ```
 
-Decrement the integer value of a key by one
+将键的整数值减一
 
 ### DECRBY
 
@@ -197,7 +197,7 @@ Decrement the integer value of a key by one
 DECRBY key decrement
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "10"
@@ -206,7 +206,7 @@ redis> DECRBY mykey 3
 (integer) 7
 ```
 
-Decrement the integer value of a key by the given number
+将键的整数值减去给定数量
 
 ### GET
 
@@ -214,7 +214,7 @@ Decrement the integer value of a key by the given number
 GET key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> GET nonexisting
@@ -225,7 +225,7 @@ redis> GET mykey
 "Hello"
 ```
 
-Get the value of a key
+获取键的值
 
 ### GETBIT
 
@@ -233,7 +233,7 @@ Get the value of a key
 GETBIT key offset
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SETBIT mykey 7 1
@@ -246,7 +246,7 @@ redis> GETBIT mykey 100
 (integer) 0
 ```
 
-Returns the bit value at offset in the string value stored at key
+返回存储在键中的字符串值在偏移量处的位值
 
 ### GETRANGE
 
@@ -254,7 +254,7 @@ Returns the bit value at offset in the string value stored at key
 GETRANGE key start end
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "This is a string"
@@ -269,7 +269,7 @@ redis> GETRANGE mykey 10 100
 "string"
 ```
 
-Get a substring of the string stored at a key
+获取存储在键中的字符串的子串
 
 ### GETSET
 
@@ -277,7 +277,7 @@ Get a substring of the string stored at a key
 GETSET key value
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> INCR mycounter
@@ -288,7 +288,7 @@ redis> GET mycounter
 "0"
 ```
 
-Set the string value of a key and return its old value
+设置键的字符串值并返回其旧值
 
 ### INCR
 
@@ -296,7 +296,7 @@ Set the string value of a key and return its old value
 INCR key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "10"
@@ -307,7 +307,7 @@ redis> GET mykey
 "11"
 ```
 
-Increment the integer value of a key by one
+将键的整数值加一
 
 ### MSETNX
 
@@ -315,7 +315,7 @@ Increment the integer value of a key by one
 MSETNX key value [key value ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> MSETNX key1 "Hello" key2 "there"
@@ -328,7 +328,7 @@ redis> MGET key1 key2 key3
 3) (nil)
 ```
 
-Set multiple keys to multiple values, only if none of the keys exist
+将多个键设置为多个值，仅当所有键都不存在时
 
 ### INCRBYFLOAT
 
@@ -336,7 +336,7 @@ Set multiple keys to multiple values, only if none of the keys exist
 INCRBYFLOAT key increment
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey 10.50
@@ -351,7 +351,7 @@ redis> INCRBYFLOAT mykey 2.0e2
 "5200"
 ```
 
-Increment the float value of a key by the given amount
+将键的浮点值增加给定数量
 
 ### MGET
 
@@ -359,7 +359,7 @@ Increment the float value of a key by the given amount
 MGET key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET key1 "Hello"
@@ -372,7 +372,7 @@ redis> MGET key1 key2 nonexisting
 3) (nil)
 ```
 
-Get the values of all the given keys
+获取所有给定键的值
 
 ### MSET
 
@@ -380,7 +380,7 @@ Get the values of all the given keys
 MSET key value [key value ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> MSET key1 "Hello" key2 "World"
@@ -391,7 +391,7 @@ redis> GET key2
 "World"
 ```
 
-Set multiple keys to multiple values
+将多个键设置为多个值
 
 ### INCRBY
 
@@ -399,7 +399,7 @@ Set multiple keys to multiple values
 INCRBY key increment
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "10"
@@ -408,7 +408,7 @@ redis> INCRBY mykey 5
 (integer) 15
 ```
 
-Increment the integer value of a key by the given amount
+将键的整数值增加给定数量
 
 ### PSETEX
 
@@ -416,7 +416,7 @@ Increment the integer value of a key by the given amount
 PSETEX key milliseconds value
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> PSETEX mykey 1000 "Hello"
@@ -427,7 +427,7 @@ redis> GET mykey
 "Hello"
 ```
 
-Set the value and expiration in milliseconds of a key
+设置键的值和以毫秒为单位的过期时间
 
 ### SET
 
@@ -435,7 +435,7 @@ Set the value and expiration in milliseconds of a key
 SET key value [EX seconds|PX milliseconds|KEEPTTL] [NX|XX] [GET]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "Hello"
@@ -446,7 +446,7 @@ redis> SET anotherkey "will expire in a minute" EX 60
 "OK"
 ```
 
-Set the string value of a key
+设置键的字符串值
 
 ### SETBIT
 
@@ -454,7 +454,7 @@ Set the string value of a key
 SETBIT key offset value
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SETBIT mykey 7 1
@@ -465,7 +465,7 @@ redis> GET mykey
 "\u0000"
 ```
 
-Sets or clears the bit at offset in the string value stored at key
+设置或清除存储在键中的字符串值在偏移量处的位
 
 ### SETEX
 
@@ -473,7 +473,7 @@ Sets or clears the bit at offset in the string value stored at key
 SETEX key seconds value
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SETEX mykey 10 "Hello"
@@ -484,7 +484,7 @@ redis> GET mykey
 "Hello"
 ```
 
-Set the value and expiration of a key
+设置键的值和过期时间
 
 ### SETNX
 
@@ -492,7 +492,7 @@ Set the value and expiration of a key
 SETNX key value
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SETNX mykey "Hello"
@@ -503,7 +503,7 @@ redis> GET mykey
 "Hello"
 ```
 
-Set the value of a key, only if the key does not exist
+设置键的值，仅当键不存在时
 
 ### SETRANGE
 
@@ -511,7 +511,7 @@ Set the value of a key, only if the key does not exist
 SETRANGE key offset value
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET key1 "Hello World"
@@ -522,7 +522,7 @@ redis> GET key1
 "Hello Redis"
 ```
 
-Overwrite part of a string at key starting at the specified offset
+从指定偏移量开始覆盖键中字符串的一部分
 
 ### STRLEN
 
@@ -530,7 +530,7 @@ Overwrite part of a string at key starting at the specified offset
 STRLEN key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "Hello world"
@@ -541,7 +541,7 @@ redis> STRLEN nonexisting
 (integer) 0
 ```
 
-Get the length of the value stored in a key
+获取存储在键中的值的长度
 
 ### STRALGO
 
@@ -549,7 +549,7 @@ Get the length of the value stored in a key
 STRALGO LCS algo-specific-argument [algo-specific-argument ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> STRALGO LCS KEYS key1 key2 IDX
@@ -566,9 +566,9 @@ redis> STRALGO LCS KEYS key1 key2 IDX
 4) (integer) 6
 ```
 
-Run algorithms (currently LCS) against strings
+对字符串运行算法（当前为 LCS）
 
-## Redis Set command
+## Redis 集合命令
 
 ### SADD
 
@@ -576,7 +576,7 @@ Run algorithms (currently LCS) against strings
 SADD key member [member ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD myset "Hello"
@@ -590,7 +590,7 @@ redis> SMEMBERS myset
 2) "World"
 ```
 
-Add one or more members to a set
+向集合添加一个或多个成员
 
 ### SCARD
 
@@ -598,7 +598,7 @@ Add one or more members to a set
 SCARD key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD myset "Hello"
@@ -609,7 +609,7 @@ redis> SCARD myset
 (integer) 2
 ```
 
-Get the number of members in a set
+获取集合中的成员数量
 
 ### SDIFF
 
@@ -617,7 +617,7 @@ Get the number of members in a set
 SDIFF key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD key1 "a"
@@ -637,7 +637,7 @@ redis> SDIFF key1 key2
 2) "b"
 ```
 
-Subtract multiple sets
+计算多个集合的差集
 
 ### SDIFFSTORE
 
@@ -645,7 +645,7 @@ Subtract multiple sets
 SDIFFSTORE destination key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD key1 "a"
@@ -667,7 +667,7 @@ redis> SMEMBERS key
 2) "b"
 ```
 
-Subtract multiple sets and store the resulting set in a key
+计算多个集合的差集并将结果集存储在一个键中
 
 ### SINTER
 
@@ -675,7 +675,7 @@ Subtract multiple sets and store the resulting set in a key
 SINTER key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD key1 "a"
@@ -694,7 +694,7 @@ redis> SINTER key1 key2
 1) "c"
 ```
 
-Intersect multiple sets
+计算多个集合的交集
 
 ### SINTERSTORE
 
@@ -702,7 +702,7 @@ Intersect multiple sets
 SINTERSTORE destination key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD key1 "a"
@@ -723,7 +723,7 @@ redis> SMEMBERS key
 1) "c"
 ```
 
-Intersect multiple sets and store the resulting set in a key
+计算多个集合的交集并将结果集存储在一个键中
 
 ### SISMEMBER
 
@@ -731,7 +731,7 @@ Intersect multiple sets and store the resulting set in a key
 SISMEMBER key member
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD myset "one"
@@ -742,7 +742,7 @@ redis> SISMEMBER myset "two"
 (integer) 0
 ```
 
-Determine if a given value is a member of a set
+判断给定值是否是集合的成员
 
 ### SMISMEMBER
 
@@ -750,7 +750,7 @@ Determine if a given value is a member of a set
 SMISMEMBER key member [member ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD myset "one"
@@ -762,7 +762,7 @@ redis> SMISMEMBER myset "one" "notamember"
 2) (integer) 0
 ```
 
-Returns the membership associated with the given elements for a set
+返回给定元素对于一个集合的成员关系
 
 ### SMEMBERS
 
@@ -770,7 +770,7 @@ Returns the membership associated with the given elements for a set
 SMEMBERS key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD myset "Hello"
@@ -782,7 +782,7 @@ redis> SMEMBERS myset
 2) "World"
 ```
 
-Get all the members in a set
+获取集合中的所有成员
 
 ### SMOVE
 
@@ -790,7 +790,7 @@ Get all the members in a set
 SMOVE source destination member
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD myset "one"
@@ -808,7 +808,7 @@ redis> SMEMBERS myotherset
 2) "three"
 ```
 
-Move a member from one set to another
+将一个成员从一个集合移动到另一个集合
 
 ### SPOP
 
@@ -816,7 +816,7 @@ Move a member from one set to another
 SPOP key [count]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD myset "one"
@@ -842,7 +842,7 @@ redis> SMEMBERS myset
 1) "one"
 ```
 
-Remove and return one or multiple random members from a set
+从集合中移除并返回一个或多个随机成员
 
 ### SRANDMEMBER
 
@@ -850,7 +850,7 @@ Remove and return one or multiple random members from a set
 SRANDMEMBER key [count]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD myset one two three
@@ -868,7 +868,7 @@ redis> SRANDMEMBER myset -5
 5) "one"
 ```
 
-Get one or multiple random members from a set
+从集合中获取一个或多个随机成员
 
 ### SREM
 
@@ -876,7 +876,7 @@ Get one or multiple random members from a set
 SREM key member [member ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD myset "one"
@@ -894,7 +894,7 @@ redis> SMEMBERS myset
 2) "three"
 ```
 
-Remove one or more members from a set
+从集合中移除一个或多个成员
 
 ### SUNION
 
@@ -902,7 +902,7 @@ Remove one or more members from a set
 SUNION key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD key1 "a"
@@ -925,7 +925,7 @@ redis> SUNION key1 key2
 5) "d"
 ```
 
-Add multiple sets
+计算多个集合的并集
 
 ### SUNIONSTORE
 
@@ -933,7 +933,7 @@ Add multiple sets
 SUNIONSTORE destination key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SADD key1 "a"
@@ -958,16 +958,16 @@ redis> SMEMBERS key
 5) "d"
 ```
 
-Add multiple sets and store the resulting set in a key
+计算多个集合的并集并将结果集存储在一个键中
 
-## Redis List command
+## Redis 列表命令
 
 ### Misc
 
 | -                                                   | -                                                                                                  |
 | --------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [BRPOPLPUSH ](https://redis.io/commands/brpoplpush) | Pop an element from a list, push it to another list and return it; or block until one is available |
-| [BLMOVE ](https://redis.io/commands/blmove)         | Pop an element from a list, push it to another list and return it; or block until one is available |
+| [BRPOPLPUSH ](https://redis.io/commands/brpoplpush) | 从列表中弹出一个元素，将其推送到另一个列表并返回它；或阻塞直到有可用元素                               |
+| [BLMOVE ](https://redis.io/commands/blmove)         | 从列表中弹出一个元素，将其推送到另一个列表并返回它；或阻塞直到有可用元素                               |
 
 ### BLPOP
 
@@ -975,7 +975,7 @@ Add multiple sets and store the resulting set in a key
 BLPOP key [key ...] timeout
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> DEL list1 list2
@@ -987,7 +987,7 @@ redis> BLPOP list1 list2 0
 2) "a"
 ```
 
-Remove and get the first element in a list, or block until one is available |
+移除并获取列表中的第一个元素，或阻塞直到有可用元素 |
 
 ### BRPOP
 
@@ -995,7 +995,7 @@ Remove and get the first element in a list, or block until one is available |
 BRPOP key [key ...] timeout
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> DEL list1 list2
@@ -1007,7 +1007,7 @@ redis> BRPOP list1 list2 0
 2) "c"
 ```
 
-Remove and get the last element in a list, or block until one is available |
+移除并获取列表中的最后一个元素，或阻塞直到有可用元素 |
 
 ### LINDEX
 
@@ -1015,7 +1015,7 @@ Remove and get the last element in a list, or block until one is available |
 LINDEX key index
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> LPUSH mylist "World"
@@ -1030,7 +1030,7 @@ redis> LINDEX mylist 3
 (nil)
 ```
 
-Get an element from a list by its index
+通过索引从列表中获取一个元素
 
 ### LINSERT
 
@@ -1038,7 +1038,7 @@ Get an element from a list by its index
 LINSERT key BEFORE|AFTER pivot element
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> RPUSH mylist "Hello"
@@ -1053,7 +1053,7 @@ redis> LRANGE mylist 0 -1
 3) "World"
 ```
 
-Insert an element before or after another element in a list
+在列表中的另一个元素之前或之后插入一个元素
 
 ### LLEN
 
@@ -1061,7 +1061,7 @@ Insert an element before or after another element in a list
 LLEN key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> LPUSH mylist "World"
@@ -1072,7 +1072,7 @@ redis> LLEN mylist
 (integer) 2
 ```
 
-Get the length of a list
+获取列表的长度
 
 ### LPOP
 
@@ -1080,7 +1080,7 @@ Get the length of a list
 LPOP key [count]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> RPUSH mylist "one"
@@ -1096,7 +1096,7 @@ redis> LRANGE mylist 0 -1
 2) "three"
 ```
 
-Remove and get the first elements in a list
+移除并获取列表中的第一个元素
 
 ### LPOS
 
@@ -1104,7 +1104,7 @@ Remove and get the first elements in a list
 LPOS key element [RANK rank] [COUNT num-matches] [MAXLEN len]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> RPUSH mylist a b c d 1 2 3 4 3 3 3
@@ -1117,7 +1117,7 @@ redis> LPOS mylist 3 COUNT 0 RANK 2
 3) (integer) 10
 ```
 
-Return the index of matching elements on a list
+返回列表中匹配元素的索引
 
 ### LPUSH
 
@@ -1125,7 +1125,7 @@ Return the index of matching elements on a list
 LPUSH key element [element ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> LPUSH mylist "world"
@@ -1137,7 +1137,7 @@ redis> LRANGE mylist 0 -1
 2) "world"
 ```
 
-Prepend one or multiple elements to a list
+将一个或多个元素前置到列表
 
 ### LPUSHX
 
@@ -1145,7 +1145,7 @@ Prepend one or multiple elements to a list
 LPUSHX key element [element ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> LPUSH mylist "World"
@@ -1161,7 +1161,7 @@ redis> LRANGE myotherlist 0 -1
 (empty list or set)
 ```
 
-Prepend an element to a list, only if the list exists
+将一个元素前置到列表，仅当列表存在时
 
 ### LRANGE
 
@@ -1169,7 +1169,7 @@ Prepend an element to a list, only if the list exists
 LRANGE key start stop
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> RPUSH mylist "one"
@@ -1192,7 +1192,7 @@ redis> LRANGE mylist 5 10
 (empty list or set)
 ```
 
-Get a range of elements from a list
+从列表中获取一个范围的元素
 
 ### LREM
 
@@ -1200,7 +1200,7 @@ Get a range of elements from a list
 LREM key count element
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> RPUSH mylist "hello"
@@ -1218,7 +1218,7 @@ redis> LRANGE mylist 0 -1
 2) "foo"
 ```
 
-Remove elements from a list
+从列表中移除元素
 
 ### LSET
 
@@ -1226,7 +1226,7 @@ Remove elements from a list
 LSET key index element
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> RPUSH mylist "one"
@@ -1245,7 +1245,7 @@ redis> LRANGE mylist 0 -1
 3) "three"
 ```
 
-Set the value of an element in a list by its index
+通过索引设置列表中元素的值
 
 ### LTRIM
 
@@ -1253,7 +1253,7 @@ Set the value of an element in a list by its index
 LTRIM key start stop
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> RPUSH mylist "one"
@@ -1269,7 +1269,7 @@ redis> LRANGE mylist 0 -1
 2) "three"
 ```
 
-Trim a list to the specified range
+将列表修剪到指定范围
 
 ### RPOP
 
@@ -1277,7 +1277,7 @@ Trim a list to the specified range
 RPOP key [count]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> RPUSH mylist "one"
@@ -1293,7 +1293,7 @@ redis> LRANGE mylist 0 -1
 2) "two"
 ```
 
-Remove and get the last elements in a list
+移除并获取列表中的最后一个元素
 
 ### RPOPLPUSH
 
@@ -1301,7 +1301,7 @@ Remove and get the last elements in a list
 RPOPLPUSH source destination
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> RPUSH mylist "one"
@@ -1319,7 +1319,7 @@ redis> LRANGE myotherlist 0 -1
 1) "three"
 ```
 
-Remove the last element in a list, prepend it to another list and return it
+移除列表中的最后一个元素，将其前置到另一个列表并返回它
 
 ### LMOVE
 
@@ -1327,7 +1327,7 @@ Remove the last element in a list, prepend it to another list and return it
 LMOVE source destination LEFT|RIGHT LEFT|RIGHT
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> RPUSH mylist "one"
@@ -1347,7 +1347,7 @@ redis> LRANGE myotherlist 0 -1
 2) "one"
 ```
 
-Pop an element from a list, push it to another list and return it
+从列表中弹出一个元素，将其推送到另一个列表并返回它
 
 ### RPUSH
 
@@ -1355,7 +1355,7 @@ Pop an element from a list, push it to another list and return it
 RPUSH key element [element ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> RPUSH mylist "hello"
@@ -1367,7 +1367,7 @@ redis> LRANGE mylist 0 -1
 2) "world"
 ```
 
-Append one or multiple elements to a list
+将一个或多个元素追加到列表
 
 ### RPUSHX
 
@@ -1375,7 +1375,7 @@ Append one or multiple elements to a list
 RPUSHX key element [element ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> RPUSH mylist "Hello"
@@ -1391,9 +1391,9 @@ redis> LRANGE myotherlist 0 -1
 (empty list or set)
 ```
 
-Append an element to a list, only if the list exists
+将一个元素追加到列表，仅当列表存在时
 
-## Redis Hash command
+## Redis 哈希命令
 
 ### HDEL
 
@@ -1401,7 +1401,7 @@ Append an element to a list, only if the list exists
 HDEL key field [field ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HSET myhash field1 "foo"
@@ -1412,7 +1412,7 @@ redis> HDEL myhash field2
 (integer) 0
 ```
 
-Delete one or more hash fields
+删除一个或多个哈希字段
 
 ### HEXISTS
 
@@ -1420,7 +1420,7 @@ Delete one or more hash fields
 HEXISTS key field
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HSET myhash field1 "foo"
@@ -1431,7 +1431,7 @@ redis> HEXISTS myhash field2
 (integer) 0
 ```
 
-Determine if a hash field exists
+判断哈希字段是否存在
 
 ### HGET
 
@@ -1439,7 +1439,7 @@ Determine if a hash field exists
 HGET key field
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HSET myhash field1 "foo"
@@ -1450,7 +1450,7 @@ redis> HGET myhash field2
 (nil)
 ```
 
-Get the value of a hash field
+获取哈希字段的值
 
 ### HGETALL
 
@@ -1458,7 +1458,7 @@ Get the value of a hash field
 HGETALL key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HSET myhash field1 "Hello"
@@ -1472,7 +1472,7 @@ redis> HGETALL myhash
 4) "World"
 ```
 
-Get all the fields and values in a hash
+获取哈希中的所有字段和值
 
 ### HINCRBY
 
@@ -1480,7 +1480,7 @@ Get all the fields and values in a hash
 HINCRBY key field increment
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HSET myhash field 5
@@ -1493,7 +1493,7 @@ redis> HINCRBY myhash field -10
 (integer) -5
 ```
 
-Increment the integer value of a hash field by the given number
+将哈希字段的整数值增加给定数量
 
 ### HINCRBYFLOAT
 
@@ -1501,7 +1501,7 @@ Increment the integer value of a hash field by the given number
 HINCRBYFLOAT key field increment
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HSET mykey field 10.50
@@ -1516,7 +1516,7 @@ redis> HINCRBYFLOAT mykey field 2.0e2
 "5200"
 ```
 
-Increment the float value of a hash field by the given amount
+将哈希字段的浮点值增加给定数量
 
 ### HKEYS
 
@@ -1524,7 +1524,7 @@ Increment the float value of a hash field by the given amount
 HKEYS key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HSET myhash field1 "Hello"
@@ -1536,7 +1536,7 @@ redis> HKEYS myhash
 2) "field2"
 ```
 
-Get all the fields in a hash
+获取哈希中的所有字段
 
 ### HLEN
 
@@ -1544,7 +1544,7 @@ Get all the fields in a hash
 HLEN key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HSET myhash field1 "Hello"
@@ -1555,7 +1555,7 @@ redis> HLEN myhash
 (integer) 2
 ```
 
-Get the number of fields in a hash
+获取哈希中的字段数量
 
 ### HMGET
 
@@ -1563,7 +1563,7 @@ Get the number of fields in a hash
 HMGET key field [field ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HSET myhash field1 "Hello"
@@ -1576,7 +1576,7 @@ redis> HMGET myhash field1 field2 nofield
 3) (nil)
 ```
 
-Get the values of all the given hash fields
+获取所有给定哈希字段的值
 
 ### HMSET
 
@@ -1584,7 +1584,7 @@ Get the values of all the given hash fields
 HMSET key field value [field value ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HMSET myhash field1 "Hello" field2 "World"
@@ -1595,7 +1595,7 @@ redis> HGET myhash field2
 "World"
 ```
 
-Set multiple hash fields to multiple values
+将多个哈希字段设置为多个值
 
 ### HSET
 
@@ -1603,7 +1603,7 @@ Set multiple hash fields to multiple values
 HSET key field value [field value ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HSET myhash field1 "Hello"
@@ -1612,7 +1612,7 @@ redis> HGET myhash field1
 "Hello"
 ```
 
-Set the string value of a hash field
+设置哈希字段的字符串值
 
 ### HSETNX
 
@@ -1620,7 +1620,7 @@ Set the string value of a hash field
 HSETNX key field value
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HSETNX myhash field "Hello"
@@ -1631,7 +1631,7 @@ redis> HGET myhash field
 "Hello"
 ```
 
-Set the value of a hash field, only if the field does not exist
+设置哈希字段的值，仅当字段不存在时
 
 ### HSTRLEN
 
@@ -1639,7 +1639,7 @@ Set the value of a hash field, only if the field does not exist
 HSTRLEN key field
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HMSET myhash f1 HelloWorld f2 99 f3 -256
@@ -1652,7 +1652,7 @@ redis> HSTRLEN myhash f3
 (integer) 4
 ```
 
-Get the length of the value of a hash field
+获取哈希字段值的长度
 
 ### HVALS
 
@@ -1660,7 +1660,7 @@ Get the length of the value of a hash field
 HVALS key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> HSET myhash field1 "Hello"
@@ -1672,9 +1672,9 @@ redis> HVALS myhash
 2) "World"
 ```
 
-Get all the values in a hash
+获取哈希中的所有值
 
-## Redis Sorted set command
+## Redis 有序集合命令
 
 ### BZPOPMIN
 
@@ -1682,7 +1682,7 @@ Get all the values in a hash
 BZPOPMIN key [key ...] timeout
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> DEL zset1 zset2
@@ -1695,7 +1695,7 @@ redis> BZPOPMIN zset1 zset2 0
 3) "0"
 ```
 
-Remove and return the member with the lowest score from one or more sorted sets, or block until one is available
+从一个或多个有序集合中移除并返回得分最低的成员，或阻塞直到有可用成员
 
 ### BZPOPMAX
 
@@ -1703,7 +1703,7 @@ Remove and return the member with the lowest score from one or more sorted sets,
 BZPOPMAX key [key ...] timeout
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> DEL zset1 zset2
@@ -1716,7 +1716,7 @@ redis> BZPOPMAX zset1 zset2 0
 3) "2"
 ```
 
-Remove and return the member with the highest score from one or more sorted sets, or block until one is available
+从一个或多个有序集合中移除并返回得分最高的成员，或阻塞直到有可用成员
 
 ### ZADD {.row-span-2}
 
@@ -1724,7 +1724,7 @@ Remove and return the member with the highest score from one or more sorted sets
 ZADD key [NX|XX] [GT|LT] [CH] [INCR] score member [score member ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -1744,7 +1744,7 @@ redis> ZRANGE myzset 0 -1 WITHSCORES
 8) "3"
 ```
 
-Add one or more members to a sorted set, or update its score if it already exists
+向有序集合添加一个或多个成员，如果成员已存在则更新其得分
 
 ### ZCARD
 
@@ -1752,7 +1752,7 @@ Add one or more members to a sorted set, or update its score if it already exist
 ZCARD key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -1763,7 +1763,7 @@ redis> ZCARD myzset
 (integer) 2
 ```
 
-Get the number of members in a sorted set
+获取有序集合中的成员数量
 
 ### ZSCORE
 
@@ -1771,7 +1771,7 @@ Get the number of members in a sorted set
 ZSCORE key member
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -1780,7 +1780,7 @@ redis> ZSCORE myzset "one"
 "1"
 ```
 
-Get the score associated with the given member in a sorted set
+获取有序集合中给定成员的得分
 
 ### ZCOUNT
 
@@ -1788,7 +1788,7 @@ Get the score associated with the given member in a sorted set
 ZCOUNT key min max
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -1803,7 +1803,7 @@ redis> ZCOUNT myzset (1 3
 (integer) 2
 ```
 
-Count the members in a sorted set with scores within the given values
+计算有序集合中得分在给定范围内的成员数量
 
 ### ZDIFF
 
@@ -1811,7 +1811,7 @@ Count the members in a sorted set with scores within the given values
 ZDIFF numkeys key [key ...] [WITHSCORES]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD zset1 1 "one"
@@ -1831,7 +1831,7 @@ redis> ZDIFF 2 zset1 zset2 WITHSCORES
 2) "3"
 ```
 
-Subtract multiple sorted sets
+计算多个有序集合的差集
 
 ### ZDIFFSTORE
 
@@ -1839,7 +1839,7 @@ Subtract multiple sorted sets
 ZDIFFSTORE destination numkeys key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD zset1 1 "one"
@@ -1859,7 +1859,7 @@ redis> ZRANGE out 0 -1 WITHSCORES
 2) "3"
 ```
 
-Subtract multiple sorted sets and store the resulting sorted set in a new key
+计算多个有序集合的差集并将结果有序集合存储在新键中
 
 ### ZINCRBY
 
@@ -1867,7 +1867,7 @@ Subtract multiple sorted sets and store the resulting sorted set in a new key
 ZINCRBY key increment member
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -1883,7 +1883,7 @@ redis> ZRANGE myzset 0 -1 WITHSCORES
 4) "3"
 ```
 
-Increment the score of a member in a sorted set
+增加有序集合中成员的得分
 
 ### ZINTER
 
@@ -1891,7 +1891,7 @@ Increment the score of a member in a sorted set
 ZINTER numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX] [WITHSCORES]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD zset1 1 "one"
@@ -1914,7 +1914,7 @@ redis> ZINTER 2 zset1 zset2 WITHSCORES
 4) "4"
 ```
 
-Intersect multiple sorted sets
+计算多个有序集合的交集
 
 ### ZINTERSTORE
 
@@ -1922,7 +1922,7 @@ Intersect multiple sorted sets
 ZINTERSTORE destination numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD zset1 1 "one"
@@ -1944,7 +1944,7 @@ redis> ZRANGE out 0 -1 WITHSCORES
 4) "10"
 ```
 
-Intersect multiple sorted sets and store the resulting sorted set in a new key
+计算多个有序集合的交集并将结果有序集合存储在新键中
 
 ### ZLEXCOUNT
 
@@ -1952,7 +1952,7 @@ Intersect multiple sorted sets and store the resulting sorted set in a new key
 ZLEXCOUNT key min max
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 0 a 0 b 0 c 0 d 0 e
@@ -1965,7 +1965,7 @@ redis> ZLEXCOUNT myzset [b [f
 (integer) 5
 ```
 
-Count the number of members in a sorted set between a given lexicographical range
+计算有序集合中在给定字典序范围内的成员数量
 
 ### ZPOPMAX
 
@@ -1973,7 +1973,7 @@ Count the number of members in a sorted set between a given lexicographical rang
 ZPOPMAX key [count]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -1987,7 +1987,7 @@ redis> ZPOPMAX myzset
 2) "3"
 ```
 
-Remove and return members with the highest scores in a sorted set
+移除并返回有序集合中得分最高的成员
 
 ### ZPOPMIN
 
@@ -1995,7 +1995,7 @@ Remove and return members with the highest scores in a sorted set
 ZPOPMIN key [count]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -2009,7 +2009,7 @@ redis> ZPOPMIN myzset
 2) "1"
 ```
 
-Remove and return members with the lowest scores in a sorted set
+移除并返回有序集合中得分最低的成员
 
 ### ZRANGE
 
@@ -2017,7 +2017,7 @@ Remove and return members with the lowest scores in a sorted set
 ZRANGE key start stop [WITHSCORES]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -2037,7 +2037,7 @@ redis> ZRANGE myzset -2 -1
 2) "three"
 ```
 
-Return a range of members in a sorted set, by index
+按索引返回有序集合中的成员范围
 
 ### ZRANGEBYLEX
 
@@ -2045,7 +2045,7 @@ Return a range of members in a sorted set, by index
 ZRANGEBYLEX key min max [LIMIT offset count]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 0 a 0 b 0 c 0 d 0 e 0 f 0 g
@@ -2065,7 +2065,7 @@ redis> ZRANGEBYLEX myzset [aaa (g
 5) "f"
 ```
 
-Return a range of members in a sorted set, by lexicographical range
+按字典序范围返回有序集合中的成员范围
 
 ### ZREVRANGEBYLEX
 
@@ -2073,7 +2073,7 @@ Return a range of members in a sorted set, by lexicographical range
 ZREVRANGEBYLEX key max min [LIMIT offset count]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 0 a 0 b 0 c 0 d 0 e 0 f 0 g
@@ -2093,7 +2093,7 @@ redis> ZREVRANGEBYLEX myzset (g [aaa
 5) "b"
 ```
 
-Return a range of members in a sorted set, by lexicographical range, ordered from higher to lower strings.
+按字典序范围返回有序集合中的成员范围，按从高到低的字符串顺序排列。
 
 ### ZRANGEBYSCORE
 
@@ -2101,7 +2101,7 @@ Return a range of members in a sorted set, by lexicographical range, ordered fro
 ZRANGEBYSCORE key min max [WITHSCORES] [LIMIT offset count]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -2123,7 +2123,7 @@ redis> ZRANGEBYSCORE myzset (1 (2
 (empty list or set)
 ```
 
-Return a range of members in a sorted set, by score
+按得分返回有序集合中的成员范围
 
 ### ZRANK
 
@@ -2131,7 +2131,7 @@ Return a range of members in a sorted set, by score
 ZRANK key member
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -2146,7 +2146,7 @@ redis> ZRANK myzset "four"
 (nil)
 ```
 
-Determine the index of a member in a sorted set
+确定成员在有序集合中的索引
 
 ### ZREM
 
@@ -2154,7 +2154,7 @@ Determine the index of a member in a sorted set
 ZREM key member [member ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -2172,7 +2172,7 @@ redis> ZRANGE myzset 0 -1 WITHSCORES
 4) "3"
 ```
 
-Remove one or more members from a sorted set
+从有序集合中移除一个或多个成员
 
 ### ZREMRANGEBYLEX
 
@@ -2180,7 +2180,7 @@ Remove one or more members from a sorted set
 ZREMRANGEBYLEX key min max
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 0 aaaa 0 b 0 c 0 d 0 e
@@ -2207,7 +2207,7 @@ redis> ZRANGE myzset 0 -1
 4) "zip"
 ```
 
-Remove all members in a sorted set between the given lexicographical range
+移除有序集合中给定字典序范围内的所有成员
 
 ### ZREMRANGEBYRANK
 
@@ -2215,7 +2215,7 @@ Remove all members in a sorted set between the given lexicographical range
 ZREMRANGEBYRANK key start stop
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -2231,7 +2231,7 @@ redis> ZRANGE myzset 0 -1 WITHSCORES
 2) "3"
 ```
 
-Remove all members in a sorted set within the given indexes
+移除有序集合中给定索引范围内的所有成员
 
 ### ZREMRANGEBYSCORE
 
@@ -2239,7 +2239,7 @@ Remove all members in a sorted set within the given indexes
 ZREMRANGEBYSCORE key min max
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -2257,7 +2257,7 @@ redis> ZRANGE myzset 0 -1 WITHSCORES
 4) "3"
 ```
 
-Remove all members in a sorted set within the given scores
+移除有序集合中给定得分范围内的所有成员
 
 ### ZREVRANGE
 
@@ -2265,7 +2265,7 @@ Remove all members in a sorted set within the given scores
 ZREVRANGE key start stop [WITHSCORES]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -2285,7 +2285,7 @@ redis> ZREVRANGE myzset -2 -1
 2) "one"
 ```
 
-Return a range of members in a sorted set, by index, with scores ordered from high to low
+按索引返回有序集合中的成员范围，得分从高到低排序
 
 ### ZREVRANGEBYSCORE
 
@@ -2293,7 +2293,7 @@ Return a range of members in a sorted set, by index, with scores ordered from hi
 ZREVRANGEBYSCORE key max min [WITHSCORES] [LIMIT offset count]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -2315,7 +2315,7 @@ redis> ZREVRANGEBYSCORE myzset (2 (1
 (empty list or set)
 ```
 
-Return a range of members in a sorted set, by score, with scores ordered from high to low
+按得分返回有序集合中的成员范围，得分从高到低排序
 
 ### ZREVRANK
 
@@ -2323,7 +2323,7 @@ Return a range of members in a sorted set, by score, with scores ordered from hi
 ZREVRANK key member
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -2338,7 +2338,7 @@ redis> ZREVRANK myzset "four"
 (nil)
 ```
 
-Determine the index of a member in a sorted set, with scores ordered from high to low
+确定成员在有序集合中的索引，得分从高到低排序
 
 ### ZUNION
 
@@ -2346,7 +2346,7 @@ Determine the index of a member in a sorted set, with scores ordered from high t
 ZUNION numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX] [WITHSCORES]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD zset1 1 "one"
@@ -2372,7 +2372,7 @@ redis> ZUNION 2 zset1 zset2 WITHSCORES
 6) "4"
 ```
 
-Add multiple sorted sets
+计算多个有序集合的并集
 
 ### ZMSCORE
 
@@ -2380,7 +2380,7 @@ Add multiple sorted sets
 ZMSCORE key member [member ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD myzset 1 "one"
@@ -2393,7 +2393,7 @@ redis> ZMSCORE myzset "one" "two" "nofield"
 3) (nil)
 ```
 
-Get the score associated with the given members in a sorted set
+获取有序集合中给定成员的得分
 
 ### ZUNIONSTORE
 
@@ -2401,7 +2401,7 @@ Get the score associated with the given members in a sorted set
 ZUNIONSTORE destination numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ZADD zset1 1 "one"
@@ -2425,9 +2425,9 @@ redis> ZRANGE out 0 -1 WITHSCORES
 6) "10"
 ```
 
-Add multiple sorted sets and store the resulting sorted set in a new key
+计算多个有序集合的并集并将结果有序集合存储在新键中
 
-## Redis Geo command{.cols-2}
+## Redis 地理空间命令{.cols-2}
 
 ### GEOADD
 
@@ -2435,7 +2435,7 @@ Add multiple sorted sets and store the resulting sorted set in a new key
 GEOADD key longitude latitude member [longitude latitude member ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> GEOADD Sicily 13.361389 38.115556 "Palermo" 15.087269 37.502669 "Catania"
@@ -2449,7 +2449,7 @@ redis> GEORADIUS Sicily 15 37 200 km
 2) "Catania"
 ```
 
-Add one or more geospatial items in the geospatial index represented using a sorted set
+将一个或多个地理空间项添加到使用有序集合表示的地理空间索引中
 
 ### GEOHASH
 
@@ -2457,7 +2457,7 @@ Add one or more geospatial items in the geospatial index represented using a sor
 GEOHASH key member [member ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> GEOADD Sicily 13.361389 38.115556 "Palermo" 15.087269 37.502669 "Catania"
@@ -2467,7 +2467,7 @@ redis> GEOHASH Sicily Palermo Catania
 2) "sqdtr74hyu0"
 ```
 
-Returns members of a geospatial index as standard geohash strings
+以标准 geohash 字符串形式返回地理空间索引的成员
 
 ### GEOPOS
 
@@ -2475,7 +2475,7 @@ Returns members of a geospatial index as standard geohash strings
 GEOPOS key member [member ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> GEOADD Sicily 13.361389 38.115556 "Palermo" 15.087269 37.502669 "Catania"
@@ -2488,7 +2488,7 @@ redis> GEOPOS Sicily Palermo Catania NonExisting
 3) (nil)
 ```
 
-Returns longitude and latitude of members of a geospatial index
+返回地理空间索引成员的经度和纬度
 
 ### GEODIST
 
@@ -2496,7 +2496,7 @@ Returns longitude and latitude of members of a geospatial index
 GEODIST key member1 member2 [m|km|ft|mi]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> GEOADD Sicily 13.361389 38.115556 "Palermo" 15.087269 37.502669 "Catania"
@@ -2511,7 +2511,7 @@ redis> GEODIST Sicily Foo Bar
 (nil)
 ```
 
-Returns the distance between two members of a geospatial index
+返回地理空间索引中两个成员之间的距离
 
 ### GEORADIUS
 
@@ -2519,7 +2519,7 @@ Returns the distance between two members of a geospatial index
 GEORADIUS key longitude latitude radius m|km|ft|mi [WITHCOORD] [WITHDIST] [WITHHASH] [COUNT count] [ASC|DESC] [STORE key] [STOREDIST key]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> GEOADD Sicily 13.361389 38.115556 "Palermo" 15.087269 37.502669 "Catania"
@@ -2547,7 +2547,7 @@ redis> GEORADIUS Sicily 15 37 200 km WITHDIST WITHCOORD
       2) "37.50266842333162032"
 ```
 
-Query a sorted set representing a geospatial index to fetch members matching a given maximum distance from a point
+查询表示地理空间索引的有序集合，以获取与给定点最大距离匹配的成员
 
 ### GEORADIUSBYMEMBER
 
@@ -2555,7 +2555,7 @@ Query a sorted set representing a geospatial index to fetch members matching a g
 GEORADIUSBYMEMBER key member radius m|km|ft|mi [WITHCOORD] [WITHDIST] [WITHHASH] [COUNT count] [ASC|DESC] [STORE key] [STOREDIST key]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> GEOADD Sicily 13.583333 37.316667 "Agrigento"
@@ -2567,7 +2567,7 @@ redis> GEORADIUSBYMEMBER Sicily Agrigento 100 km
 2) "Palermo"
 ```
 
-Query a sorted set representing a geospatial index to fetch members matching a given maximum distance from a member
+查询表示地理空间索引的有序集合，以获取与给定成员最大距离匹配的成员
 
 ### GEOSEARCH
 
@@ -2575,7 +2575,7 @@ Query a sorted set representing a geospatial index to fetch members matching a g
 GEOSEARCH key [FROMMEMBER member] [FROMLONLAT longitude latitude] [BYRADIUS radius m|km|ft|mi] [BYBOX width height m|km|ft|mi] [ASC|DESC] [COUNT count] [WITHCOORD] [WITHDIST] [WITHHASH]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> GEOADD Sicily 13.361389 38.115556 "Palermo" 15.087269 37.502669 "Catania"
@@ -2592,15 +2592,15 @@ redis> GEOSEARCH Sicily FROMLONLAT 15 37 BYBOX 400 400 km ASC
 4) "edge1"
 ```
 
-Query a sorted set representing a geospatial index to fetch members inside an area of a box or a circle.
+查询表示地理空间索引的有序集合，以获取在矩形或圆形区域内的成员。
 
 ### Misc
 
 | -                                                           | -                                                                                                                                             |
 | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| [GEOSEARCHSTORE ](https://redis.io/commands/geosearchstore) | Query a sorted set representing a geospatial index to fetch members inside an area of a box or a circle, and store the result in another key. |
+| [GEOSEARCHSTORE ](https://redis.io/commands/geosearchstore) | 查询表示地理空间索引的有序集合，以获取在矩形或圆形区域内的成员，并将结果存储在另一个键中。                                                              |
 
-## Redis Hyperloglog command{.cols-3}
+## Redis HyperLogLog 命令{.cols-3}
 
 ### PFADD
 
@@ -2608,7 +2608,7 @@ Query a sorted set representing a geospatial index to fetch members inside an ar
 PFADD key element [element ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> PFADD hll a b c d e f g
@@ -2617,7 +2617,7 @@ redis> PFCOUNT hll
 (integer) 7
 ```
 
-Adds the specified elements to the specified HyperLogLog.
+将指定元素添加到指定的 HyperLogLog。
 
 ### PFCOUNT
 
@@ -2625,7 +2625,7 @@ Adds the specified elements to the specified HyperLogLog.
 PFCOUNT key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> PFADD hll foo bar zap
@@ -2642,7 +2642,7 @@ redis> PFCOUNT hll some-other-hll
 (integer) 6
 ```
 
-Return the approximated cardinality of the set(s) observed by the HyperLogLog at key(s).
+返回 HyperLogLog 在键处观察到的集合的近似基数。
 
 ### PFMERGE
 
@@ -2650,7 +2650,7 @@ Return the approximated cardinality of the set(s) observed by the HyperLogLog at
 PFMERGE destkey sourcekey [sourcekey ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> PFADD hll1 foo bar zap a
@@ -2663,9 +2663,9 @@ redis> PFCOUNT hll3
 (integer) 6
 ```
 
-Merge N different HyperLogLogs into a single one.
+将 N 个不同的 HyperLogLog 合并为一个。
 
-## Redis Server command{.cols-3}
+## Redis 服务器命令{.cols-3}
 
 ### COMMAND
 
@@ -2673,7 +2673,7 @@ Merge N different HyperLogLogs into a single one.
 COMMAND
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> COMMAND
@@ -2694,61 +2694,61 @@ redis> COMMAND
   ........
 ```
 
-Get array of Redis command details
+获取 Redis 命令详细信息的数组
 
 ### Misc {.col-span-2 .row-span-4}
 
 | -                                                                    | -                                                                                                                                |
 | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [ACL LOAD](https://redis.io/commands/acl-load)                       | Reload the ACLs from the configured ACL file                                                                                     |
-| [ACL SAVE](https://redis.io/commands/acl-save)                       | Save the current ACL rules in the configured ACL file                                                                            |
-| [ACL LIST](https://redis.io/commands/acl-list)                       | List the current ACL rules in ACL config file format                                                                             |
-| [ACL USERS](https://redis.io/commands/acl-users)                     | List the username of all the configured ACL rules                                                                                |
-| [ACL GETUSER ](https://redis.io/commands/acl-getuser)                | Get the rules for a specific ACL user                                                                                            |
-| [ACL SETUSER ](https://redis.io/commands/acl-setuser)                | Modify or create the rules for a specific ACL user                                                                               |
-| [ACL DELUSER ](https://redis.io/commands/acl-deluser)                | Remove the specified ACL users and the associated rules                                                                          |
-| [ACL CAT ](https://redis.io/commands/acl-cat)                        | List the ACL categories or the commands inside a category                                                                        |
-| [ACL GENPASS ](https://redis.io/commands/acl-genpass)                | Generate a pseudorandom secure password to use for ACL users                                                                     |
-| [ACL WHOAMI](https://redis.io/commands/acl-whoami)                   | Return the name of the user associated to the current connection                                                                 |
-| [ACL LOG ](https://redis.io/commands/acl-log)                        | List latest events denied because of ACLs in place                                                                               |
-| [ACL HELP](https://redis.io/commands/acl-help)                       | Show helpful text about the different subcommands                                                                                |
-| [BGREWRITEAOF](https://redis.io/commands/bgrewriteaof)               | Asynchronously rewrite the append-only file                                                                                      |
-| [BGSAVE ](https://redis.io/commands/bgsave)                          | Asynchronously save the dataset to disk                                                                                          |
-| [CONFIG GET ](https://redis.io/commands/config-get)                  | Get the value of a configuration parameter                                                                                       |
-| [CONFIG REWRITE](https://redis.io/commands/config-rewrite)           | Rewrite the configuration file with the in memory configuration                                                                  |
-| [CONFIG SET ](https://redis.io/commands/config-set)                  | Set a configuration parameter to the given value                                                                                 |
-| [CONFIG RESETSTAT](https://redis.io/commands/config-resetstat)       | Reset the stats returned by INFO                                                                                                 |
-| [DBSIZE](https://redis.io/commands/dbsize)                           | Return the number of keys in the selected database                                                                               |
-| [DEBUG OBJECT ](https://redis.io/commands/debug-object)              | Get debugging information about a key                                                                                            |
-| [DEBUG SEGFAULT](https://redis.io/commands/debug-segfault)           | Make the server crash                                                                                                            |
-| [FLUSHALL ](https://redis.io/commands/flushall)                      | Remove all keys from all databases                                                                                               |
-| [FLUSHDB ](https://redis.io/commands/flushdb)                        | Remove all keys from the current database                                                                                        |
-| [LOLWUT ](https://redis.io/commands/lolwut)                          | Display some computer art and the Redis version                                                                                  |
-| [LASTSAVE](https://redis.io/commands/lastsave)                       | Get the UNIX time stamp of the last successful save to disk                                                                      |
-| [MEMORY DOCTOR](https://redis.io/commands/memory-doctor)             | Outputs memory problems report                                                                                                   |
-| [MEMORY HELP](https://redis.io/commands/memory-help)                 | Show helpful text about the different subcommands                                                                                |
-| [MEMORY MALLOC-STATS](https://redis.io/commands/memory-malloc-stats) | Show allocator internal stats                                                                                                    |
-| [MEMORY PURGE](https://redis.io/commands/memory-purge)               | Ask the allocator to release memory                                                                                              |
-| [MEMORY STATS](https://redis.io/commands/memory-stats)               | Show memory usage details                                                                                                        |
-| [MEMORY USAGE ](https://redis.io/commands/memory-usage)              | Estimate the memory usage of a key                                                                                               |
-| [MODULE LIST](https://redis.io/commands/module-list)                 | List all modules loaded by the server                                                                                            |
-| [MODULE LOAD ](https://redis.io/commands/module-load)                | Load a module                                                                                                                    |
-| [MODULE UNLOAD ](https://redis.io/commands/module-unload)            | Unload a module                                                                                                                  |
-| [MONITOR](https://redis.io/commands/monitor)                         | Listen for all requests received by the server in real time                                                                      |
-| [SAVE](https://redis.io/commands/save)                               | Synchronously save the dataset to disk                                                                                           |
-| [SHUTDOWN ](https://redis.io/commands/shutdown)                      | Synchronously save the dataset to disk and then shut down the server                                                             |
-| [SLAVEOF ](https://redis.io/commands/slaveof)                        | Make the server a replica of another instance, or promote it as master. Deprecated starting with Redis 5. Use REPLICAOF instead. |
-| [REPLICAOF ](https://redis.io/commands/replicaof)                    | Make the server a replica of another instance, or promote it as master.                                                          |
-| [SLOWLOG ](https://redis.io/commands/slowlog)                        | Manages the Redis slow queries log                                                                                               |
-| [SWAPDB ](https://redis.io/commands/swapdb)                          | Swaps two Redis databases                                                                                                        |
-| [SYNC](https://redis.io/commands/sync)                               | Internal command used for replication                                                                                            |
-| [PSYNC ](https://redis.io/commands/psync)                            | Internal command used for replication                                                                                            |
-| [LATENCY DOCTOR](https://redis.io/commands/latency-doctor)           | Return a human readable latency analysis report.                                                                                 |
-| [LATENCY GRAPH ](https://redis.io/commands/latency-graph)            | Return a latency graph for the event.                                                                                            |
-| [LATENCY HISTORY ](https://redis.io/commands/latency-history)        | Return timestamp-latency samples for the event.                                                                                  |
-| [LATENCY LATEST](https://redis.io/commands/latency-latest)           | Return the latest latency samples for all events.                                                                                |
-| [LATENCY RESET ](https://redis.io/commands/latency-reset)            | Reset latency data for one or more events.                                                                                       |
-| [LATENCY HELP](https://redis.io/commands/latency-help)               | Show helpful text about the different subcommands.                                                                               |
+| [ACL LOAD](https://redis.io/commands/acl-load)                       | 从配置的 ACL 文件重新加载 ACL                                                                                                      |
+| [ACL SAVE](https://redis.io/commands/acl-save)                       | 将当前 ACL 规则保存在配置的 ACL 文件中                                                                                               |
+| [ACL LIST](https://redis.io/commands/acl-list)                       | 以 ACL 配置文件格式列出当前 ACL 规则                                                                                               |
+| [ACL USERS](https://redis.io/commands/acl-users)                     | 列出所有已配置 ACL 规则的用户名                                                                                                    |
+| [ACL GETUSER ](https://redis.io/commands/acl-getuser)                | 获取特定 ACL 用户的规则                                                                                                          |
+| [ACL SETUSER ](https://redis.io/commands/acl-setuser)                | 修改或创建特定 ACL 用户的规则                                                                                                      |
+| [ACL DELUSER ](https://redis.io/commands/acl-deluser)                | 删除指定的 ACL 用户和关联规则                                                                                                      |
+| [ACL CAT ](https://redis.io/commands/acl-cat)                        | 列出 ACL 类别或类别中的命令                                                                                                        |
+| [ACL GENPASS ](https://redis.io/commands/acl-genpass)                | 生成一个伪随机安全密码供 ACL 用户使用                                                                                                |
+| [ACL WHOAMI](https://redis.io/commands/acl-whoami)                   | 返回与当前连接关联的用户名                                                                                                         |
+| [ACL LOG ](https://redis.io/commands/acl-log)                        | 列出由于 ACL 规则而被拒绝的最新事件                                                                                                  |
+| [ACL HELP](https://redis.io/commands/acl-help)                       | 显示有关不同子命令的帮助文本                                                                                                       |
+| [BGREWRITEAOF](https://redis.io/commands/bgrewriteaof)               | 异步重写仅追加文件                                                                                                               |
+| [BGSAVE ](https://redis.io/commands/bgsave)                          | 异步将数据集保存到磁盘                                                                                                             |
+| [CONFIG GET ](https://redis.io/commands/config-get)                  | 获取配置参数的值                                                                                                                 |
+| [CONFIG REWRITE](https://redis.io/commands/config-rewrite)           | 使用内存中的配置重写配置文件                                                                                                       |
+| [CONFIG SET ](https://redis.io/commands/config-set)                  | 将配置参数设置为给定值                                                                                                             |
+| [CONFIG RESETSTAT](https://redis.io/commands/config-resetstat)       | 重置 INFO 返回的统计信息                                                                                                           |
+| [DBSIZE](https://redis.io/commands/dbsize)                           | 返回所选数据库中的键数                                                                                                             |
+| [DEBUG OBJECT ](https://redis.io/commands/debug-object)              | 获取有关键的调试信息                                                                                                               |
+| [DEBUG SEGFAULT](https://redis.io/commands/debug-segfault)           | 使服务器崩溃                                                                                                                     |
+| [FLUSHALL ](https://redis.io/commands/flushall)                      | 从所有数据库中删除所有键                                                                                                           |
+| [FLUSHDB ](https://redis.io/commands/flushdb)                        | 从当前数据库中删除所有键                                                                                                           |
+| [LOLWUT ](https://redis.io/commands/lolwut)                          | 显示一些计算机艺术和 Redis 版本                                                                                                    |
+| [LASTSAVE](https://redis.io/commands/lastsave)                       | 获取上次成功保存到磁盘的 UNIX 时间戳                                                                                                 |
+| [MEMORY DOCTOR](https://redis.io/commands/memory-doctor)             | 输出内存问题报告                                                                                                                 |
+| [MEMORY HELP](https://redis.io/commands/memory-help)                 | 显示有关不同子命令的帮助文本                                                                                                       |
+| [MEMORY MALLOC-STATS](https://redis.io/commands/memory-malloc-stats) | 显示分配器内部统计信息                                                                                                             |
+| [MEMORY PURGE](https://redis.io/commands/memory-purge)               | 要求分配器释放内存                                                                                                               |
+| [MEMORY STATS](https://redis.io/commands/memory-stats)               | 显示内存使用情况详细信息                                                                                                           |
+| [MEMORY USAGE ](https://redis.io/commands/memory-usage)              | 估计键的内存使用情况                                                                                                               |
+| [MODULE LIST](https://redis.io/commands/module-list)                 | 列出服务器加载的所有模块                                                                                                           |
+| [MODULE LOAD ](https://redis.io/commands/module-load)                | 加载模块                                                                                                                         |
+| [MODULE UNLOAD ](https://redis.io/commands/module-unload)            | 卸载模块                                                                                                                         |
+| [MONITOR](https://redis.io/commands/monitor)                         | 实时侦听服务器收到的所有请求                                                                                                       |
+| [SAVE](https://redis.io/commands/save)                               | 同步将数据集保存到磁盘                                                                                                             |
+| [SHUTDOWN ](https://redis.io/commands/shutdown)                      | 同步将数据集保存到磁盘，然后关闭服务器                                                                                               |
+| [SLAVEOF ](https://redis.io/commands/slaveof)                        | 使服务器成为另一个实例的副本，或将其提升为主服务器。从 Redis 5 开始弃用。请改用 REPLICAOF。                                                  |
+| [REPLICAOF ](https://redis.io/commands/replicaof)                    | 使服务器成为另一个实例的副本，或将其提升为主服务器。                                                                                     |
+| [SLOWLOG ](https://redis.io/commands/slowlog)                        | 管理 Redis 慢查询日志                                                                                                              |
+| [SWAPDB ](https://redis.io/commands/swapdb)                          | 交换两个 Redis 数据库                                                                                                              |
+| [SYNC](https://redis.io/commands/sync)                               | 用于复制的内部命令                                                                                                               |
+| [PSYNC ](https://redis.io/commands/psync)                            | 用于复制的内部命令                                                                                                               |
+| [LATENCY DOCTOR](https://redis.io/commands/latency-doctor)           | 返回人类可读的延迟分析报告。                                                                                                       |
+| [LATENCY GRAPH ](https://redis.io/commands/latency-graph)            | 返回事件的延迟图。                                                                                                               |
+| [LATENCY HISTORY ](https://redis.io/commands/latency-history)        | 返回事件的时间戳延迟样本。                                                                                                         |
+| [LATENCY LATEST](https://redis.io/commands/latency-latest)           | 返回所有事件的最新延迟样本。                                                                                                       |
+| [LATENCY RESET ](https://redis.io/commands/latency-reset)            | 重置一个或多个事件的延迟数据。                                                                                                     |
+| [LATENCY HELP](https://redis.io/commands/latency-help)               | 显示有关不同子命令的帮助文本。                                                                                                     |
 
 ### COMMAND COUNT
 
@@ -2756,14 +2756,14 @@ Get array of Redis command details
 COMMAND COUNT
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> COMMAND COUNT
 (integer) 217
 ```
 
-Get total number of Redis commands
+获取 Redis 命令总数
 
 ### COMMAND GETKEYS
 
@@ -2771,7 +2771,7 @@ Get total number of Redis commands
 COMMAND GETKEYS
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> COMMAND GETKEYS MSET a b c d e f
@@ -2787,7 +2787,7 @@ redis> COMMAND GETKEYS SORT mylist ALPHA STORE outlist
 2) "outlist"
 ```
 
-Extract keys given a full Redis command
+给定完整的 Redis 命令，提取键
 
 ### COMMAND INFO
 
@@ -2795,7 +2795,7 @@ Extract keys given a full Redis command
 COMMAND INFO command-name [command-name ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> COMMAND INFO get set eval
@@ -2830,7 +2830,7 @@ redis> COMMAND INFO get set eval
       2) "@scripting"
 ```
 
-Get array of specific Redis command details
+获取特定 Redis 命令详细信息的数组
 
 ### INFO
 
@@ -2838,7 +2838,7 @@ Get array of specific Redis command details
 INFO [section]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> INFO
@@ -2852,7 +2852,7 @@ os:Linux 5.4.0-1017-aws x86_64
 ......
 ```
 
-Get information and statistics about the server
+获取有关服务器的信息和统计信息
 
 ### ROLE
 
@@ -2860,7 +2860,7 @@ Get information and statistics about the server
 ROLE
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ROLE
@@ -2869,7 +2869,7 @@ redis> ROLE
 3) (empty list or set)
 ```
 
-Return the role of the instance in the context of replication
+返回实例在复制上下文中的角色
 
 ### TIME
 
@@ -2877,7 +2877,7 @@ Return the role of the instance in the context of replication
 TIME
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> TIME
@@ -2888,22 +2888,22 @@ redis> TIME
 2) "559206"
 ```
 
-Return the current server time
+返回当前服务器时间
 
-## Redis Generic command{.cols-3}
+## Redis 通用命令{.cols-3}
 
 ### Misc
 
 | -                                             | -                                                                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| [COPY ](https://redis.io/commands/copy)       | Copy a key                                                                                                   |
-| [MIGRATE ](https://redis.io/commands/migrate) | Atomically transfer a key from a Redis instance to another one.                                              |
-| [MOVE ](https://redis.io/commands/move)       | Move a key to another database                                                                               |
-| [OBJECT ](https://redis.io/commands/object)   | Inspect the internals of Redis objects                                                                       |
-| [RESTORE ](https://redis.io/commands/restore) | Create a key using the provided serialized value, previously obtained using DUMP.                            |
-| [SORT ](https://redis.io/commands/sort)       | Sort the elements in a list, set or sorted set                                                               |
-| [WAIT ](https://redis.io/commands/wait)       | Wait for the synchronous replication of all the write commands sent in the context of the current connection |
-| [SCAN ](https://redis.io/commands/scan)       | Incrementally iterate the keys space                                                                         |
+| [COPY ](https://redis.io/commands/copy)       | 复制一个键                                                                                                   |
+| [MIGRATE ](https://redis.io/commands/migrate) | 原子地将一个键从一个 Redis 实例传输到另一个实例。                                                                |
+| [MOVE ](https://redis.io/commands/move)       | 将一个键移动到另一个数据库                                                                                       |
+| [OBJECT ](https://redis.io/commands/object)   | 检查 Redis 对象的内部结构                                                                                      |
+| [RESTORE ](https://redis.io/commands/restore) | 使用提供的序列化值创建一个键，该值先前使用 DUMP 获取。                                                               |
+| [SORT ](https://redis.io/commands/sort)       | 对列表、集合或有序集合中的元素进行排序                                                                               |
+| [WAIT ](https://redis.io/commands/wait)       | 等待当前连接上下文中发送的所有写命令的同步复制                                                                       |
+| [SCAN ](https://redis.io/commands/scan)       | 增量迭代键空间                                                                                                 |
 
 ### DEL
 
@@ -2911,7 +2911,7 @@ Return the current server time
 DEL key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET key1 "Hello"
@@ -2922,7 +2922,7 @@ redis> DEL key1 key2 key3
 (integer) 2
 ```
 
-Delete a key
+删除一个键
 
 ### DUMP
 
@@ -2930,7 +2930,7 @@ Delete a key
 DUMP key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey 10
@@ -2939,7 +2939,7 @@ redis> DUMP mykey
 "\u0000\xC0\n\t\u0000\xBEm\u0006\x89Z(\u0000\n"
 ```
 
-Return a serialized version of the value stored at the specified key.
+返回存储在指定键处的值的序列化版本。
 
 ### EXISTS
 
@@ -2947,7 +2947,7 @@ Return a serialized version of the value stored at the specified key.
 EXISTS key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET key1 "Hello"
@@ -2962,7 +2962,7 @@ redis> EXISTS key1 key2 nosuchkey
 (integer) 2
 ```
 
-Determine if a key exists
+判断一个键是否存在
 
 ### EXPIRE
 
@@ -2970,7 +2970,7 @@ Determine if a key exists
 EXPIRE key seconds
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "Hello"
@@ -2985,7 +2985,7 @@ redis> TTL mykey
 (integer) -1
 ```
 
-Set a key's time to live in seconds
+以秒为单位设置键的生存时间
 
 ### EXPIREAT
 
@@ -2993,7 +2993,7 @@ Set a key's time to live in seconds
 EXPIREAT key timestamp
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "Hello"
@@ -3006,7 +3006,7 @@ redis> EXISTS mykey
 (integer) 0
 ```
 
-Set the expiration for a key as a UNIX timestamp
+以 UNIX 时间戳设置键的过期时间
 
 ### KEYS
 
@@ -3014,7 +3014,7 @@ Set the expiration for a key as a UNIX timestamp
 KEYS pattern
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> MSET firstname Jack lastname Stuntman age 35
@@ -3030,7 +3030,7 @@ redis> KEYS *
 3) "lastname"
 ```
 
-Find all keys matching the given pattern
+查找所有匹配给定模式的键
 
 ### PERSIST
 
@@ -3038,7 +3038,7 @@ Find all keys matching the given pattern
 PERSIST key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "Hello"
@@ -3053,7 +3053,7 @@ redis> TTL mykey
 (integer) -1
 ```
 
-Remove the expiration from a key
+移除键的过期时间
 
 ### PEXPIRE
 
@@ -3061,7 +3061,7 @@ Remove the expiration from a key
 PEXPIRE key milliseconds
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "Hello"
@@ -3074,7 +3074,7 @@ redis> PTTL mykey
 (integer) 1499
 ```
 
-Set a key's time to live in milliseconds
+以毫秒为单位设置键的生存时间
 
 ### PEXPIREAT
 
@@ -3082,7 +3082,7 @@ Set a key's time to live in milliseconds
 PEXPIREAT key milliseconds-timestamp
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "Hello"
@@ -3095,7 +3095,7 @@ redis> PTTL mykey
 (integer) -2
 ```
 
-Set the expiration for a key as a UNIX timestamp specified in milliseconds
+以毫秒为单位的 UNIX 时间戳设置键的过期时间
 
 ### PTTL
 
@@ -3103,7 +3103,7 @@ Set the expiration for a key as a UNIX timestamp specified in milliseconds
 PTTL key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "Hello"
@@ -3114,7 +3114,7 @@ redis> PTTL mykey
 (integer) 1000
 ```
 
-Get the time to live for a key in milliseconds
+以毫秒为单位获取键的生存时间
 
 ### RENAME
 
@@ -3122,7 +3122,7 @@ Get the time to live for a key in milliseconds
 RENAME key newkey
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "Hello"
@@ -3133,7 +3133,7 @@ redis> GET myotherkey
 "Hello"
 ```
 
-Rename a key
+重命名一个键
 
 ### RENAMENX
 
@@ -3141,7 +3141,7 @@ Rename a key
 RENAMENX key newkey
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "Hello"
@@ -3154,7 +3154,7 @@ redis> GET myotherkey
 "World"
 ```
 
-Rename a key, only if the new key does not exist
+重命名一个键，仅当新键不存在时
 
 ### TOUCH
 
@@ -3162,7 +3162,7 @@ Rename a key, only if the new key does not exist
 TOUCH key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET key1 "Hello"
@@ -3173,7 +3173,7 @@ redis> TOUCH key1 key2
 (integer) 2
 ```
 
-Alters the last access time of a key(s). Returns the number of existing keys specified.
+更改一个或多个键的最后访问时间。返回指定的现有键的数量。
 
 ### TTL
 
@@ -3181,7 +3181,7 @@ Alters the last access time of a key(s). Returns the number of existing keys spe
 TTL key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET mykey "Hello"
@@ -3192,7 +3192,7 @@ redis> TTL mykey
 (integer) 10
 ```
 
-Get the time to live for a key
+获取键的生存时间
 
 ### TYPE
 
@@ -3200,7 +3200,7 @@ Get the time to live for a key
 TYPE key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET key1 "value"
@@ -3217,7 +3217,7 @@ redis> TYPE key3
 "set"
 ```
 
-Determine the type stored at key
+确定存储在键处的类型
 
 ### UNLINK
 
@@ -3225,7 +3225,7 @@ Determine the type stored at key
 UNLINK key [key ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> SET key1 "Hello"
@@ -3236,29 +3236,29 @@ redis> UNLINK key1 key2 key3
 (integer) 2
 ```
 
-Delete a key asynchronously in another thread. Otherwise it is just as DEL, but non blocking.
+在另一个线程中异步删除一个键。否则它与 DEL 一样，但是非阻塞的。
 
-## Redis Connection command{.cols-3}
+## Redis 连接命令{.cols-3}
 
 ### Misc
 
 | -                                                             | -                                                                          |
 | ------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [AUTH ](https://redis.io/commands/auth)                       | Authenticate to the server                                                 |
-| [CLIENT CACHING ](https://redis.io/commands/client-caching)   | Instruct the server about tracking or not keys in the next request         |
-| [CLIENT KILL ](https://redis.io/commands/client-kill)         | Kill the connection of a client                                            |
-| [CLIENT LIST ](https://redis.io/commands/client-list)         | Get the list of client connections                                         |
-| [CLIENT GETNAME](https://redis.io/commands/client-getname)    | Get the current connection name                                            |
-| [CLIENT GETREDIR](https://redis.io/commands/client-getredir)  | Get tracking notifications redirection client ID if any                    |
-| [CLIENT PAUSE ](https://redis.io/commands/client-pause)       | Stop processing commands from clients for some time                        |
-| [CLIENT REPLY ](https://redis.io/commands/client-reply)       | Instruct the server whether to reply to commands                           |
-| [CLIENT SETNAME ](https://redis.io/commands/client-setname)   | Set the current connection name                                            |
-| [CLIENT TRACKING ](https://redis.io/commands/client-tracking) | Enable or disable server assisted client side caching support              |
-| [CLIENT UNBLOCK ](https://redis.io/commands/client-unblock)   | Unblock a client blocked in a blocking command from a different connection |
-| [HELLO ](https://redis.io/commands/hello)                     | switch Redis protocol                                                      |
-| [QUIT](https://redis.io/commands/quit)                        | Close the connection                                                       |
-| [RESET](https://redis.io/commands/reset)                      | Reset the connection                                                       |
-| [SELECT ](https://redis.io/commands/select)                   | Change the selected database for the current connection                    |
+| [AUTH ](https://redis.io/commands/auth)                       | 对服务器进行身份验证                                                               |
+| [CLIENT CACHING ](https://redis.io/commands/client-caching)   | 指示服务器在下一个请求中是否跟踪键                                                       |
+| [CLIENT KILL ](https://redis.io/commands/client-kill)         | 终止客户端的连接                                                                 |
+| [CLIENT LIST ](https://redis.io/commands/client-list)         | 获取客户端连接列表                                                               |
+| [CLIENT GETNAME](https://redis.io/commands/client-getname)    | 获取当前连接名称                                                                 |
+| [CLIENT GETREDIR](https://redis.io/commands/client-getredir)  | 获取跟踪通知重定向客户端 ID（如果有）                                                    |
+| [CLIENT PAUSE ](https://redis.io/commands/client-pause)       | 在一段时间内停止处理来自客户端的命令                                                       |
+| [CLIENT REPLY ](https://redis.io/commands/client-reply)       | 指示服务器是否回复命令                                                               |
+| [CLIENT SETNAME ](https://redis.io/commands/client-setname)   | 设置当前连接名称                                                                 |
+| [CLIENT TRACKING ](https://redis.io/commands/client-tracking) | 启用或禁用服务器辅助的客户端缓存支持                                                       |
+| [CLIENT UNBLOCK ](https://redis.io/commands/client-unblock)   | 从不同连接解除在阻塞命令中被阻塞的客户端                                                     |
+| [HELLO ](https://redis.io/commands/hello)                     | 切换 Redis 协议                                                              |
+| [QUIT](https://redis.io/commands/quit)                        | 关闭连接                                                                   |
+| [RESET](https://redis.io/commands/reset)                      | 重置连接                                                                   |
+| [SELECT ](https://redis.io/commands/select)                   | 更改当前连接的所选数据库                                                               |
 
 ### CLIENT ID
 
@@ -3266,14 +3266,14 @@ Delete a key asynchronously in another thread. Otherwise it is just as DEL, but 
 CLIENT ID
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> CLIENT ID
 ERR Unknown or disabled command 'CLIENT'
 ```
 
-Returns the client ID for the current connection
+返回当前连接的客户端 ID
 
 ### CLIENT INFO
 
@@ -3281,14 +3281,14 @@ Returns the client ID for the current connection
 CLIENT INFO
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> CLIENT INFO
 "id=55542 addr=127.0.0.1:58710 laddr=127.0.0.1:6379 fd=8 name= age=114920 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=40928 argv-mem=10 obl=0 oll=0 omem=0 tot-mem=61466 events=r cmd=client user=default redir=-1\n"
 ```
 
-Returns information about the current client connection.
+返回有关当前客户端连接的信息。
 
 ### ECHO
 
@@ -3296,14 +3296,14 @@ Returns information about the current client connection.
 ECHO message
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> ECHO "Hello World!"
 "Hello World!"
 ```
 
-Echo the given string
+回显给定的字符串
 
 ### PING
 
@@ -3311,7 +3311,7 @@ Echo the given string
 PING [message]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> PING
@@ -3320,21 +3320,21 @@ redis> PING "hello world"
 "hello world"
 ```
 
-Ping the server
+Ping 服务器
 
-## Redis Stream command{.cols-2}
+## Redis 流命令{.cols-2}
 
 ### Misc
 
 | -                                                   | -                                                                                                                                                                                  |
 | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [XINFO ](https://redis.io/commands/xinfo)           | Get information on streams and consumer groups                                                                                                                                     |
-| [XDEL ](https://redis.io/commands/xdel)             | Removes the specified entries from the stream. Returns the number of items actually deleted, that may be different from the number of IDs passed in case certain IDs do not exist. |
-| [XREAD ](https://redis.io/commands/xread)           | Return never seen elements in multiple streams, with IDs greater than the ones reported by the caller for each stream. Can block.                                                  |
-| [XGROUP ](https://redis.io/commands/xgroup)         | Create, destroy, and manage consumer groups.                                                                                                                                       |
-| [XREADGROUP ](https://redis.io/commands/xreadgroup) | Return new entries from a stream using a consumer group, or access the history of the pending entries for a given consumer. Can block.                                             |
-| [XCLAIM ](https://redis.io/commands/xclaim)         | Changes (or acquires) ownership of a message in a consumer group, as if the message was delivered to the specified consumer.                                                       |
-| [XPENDING ](https://redis.io/commands/xpending)     | Return information and entries from a stream consumer group pending entries list, that are messages fetched but never acknowledged.                                                |
+| [XINFO ](https://redis.io/commands/xinfo)           | 获取有关流和消费者组的信息                                                                                                                                                           |
+| [XDEL ](https://redis.io/commands/xdel)             | 从流中删除指定的条目。返回实际删除的项目数，如果某些 ID 不存在，则可能与传递的 ID 数不同。                                                                                                   |
+| [XREAD ](https://redis.io/commands/xread)           | 在多个流中返回从未见过的元素，其 ID 大于调用者为每个流报告的 ID。可以阻塞。                                                                                                                |
+| [XGROUP ](https://redis.io/commands/xgroup)         | 创建、销毁和管理消费者组。                                                                                                                                                           |
+| [XREADGROUP ](https://redis.io/commands/xreadgroup) | 使用消费者组从流中返回新条目，或访问给定消费者的待处理条目历史记录。可以阻塞。                                                                                                             |
+| [XCLAIM ](https://redis.io/commands/xclaim)         | 更改（或获取）消费者组中消息的所有权，就像消息已传递给指定的消费者一样。                                                                                                                   |
+| [XPENDING ](https://redis.io/commands/xpending)     | 从流消费者组待处理条目列表中返回信息和条目，这些条目是已获取但从未确认的消息。                                                                                                             |
 
 ### XADD
 
@@ -3342,7 +3342,7 @@ Ping the server
 XADD key [MAXLEN [=|~] length] [NOMKSTREAM] *|ID field value [field value ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> XADD mystream * name Sara surname OConnor
@@ -3366,7 +3366,7 @@ redis> XRANGE mystream - +
       6) "value3"
 ```
 
-Appends a new entry to a stream
+向流中追加一个新条目
 
 ### XTRIM
 
@@ -3374,7 +3374,7 @@ Appends a new entry to a stream
 XTRIM key MAXLEN [=|~] length
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> XADD mystream * field1 A field2 B field3 C field4 D
@@ -3393,7 +3393,7 @@ redis> XRANGE mystream - +
       8) "D"
 ```
 
-Trims the stream to (approximately if '~' is passed) a certain size
+将流修剪到（如果传递了“~”，则近似）一定大小
 
 ### XRANGE
 
@@ -3401,7 +3401,7 @@ Trims the stream to (approximately if '~' is passed) a certain size
 XRANGE key start end [COUNT count]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> XADD writers * name Virginia surname Woolf
@@ -3429,7 +3429,7 @@ redis> XRANGE writers - + COUNT 2
       4) "Austen"
 ```
 
-Return a range of elements in a stream, with IDs matching the specified IDs interval
+返回流中元素的范围，其 ID 与指定的 ID 间隔匹配
 
 ### XREVRANGE
 
@@ -3437,7 +3437,7 @@ Return a range of elements in a stream, with IDs matching the specified IDs inte
 XREVRANGE key end start [COUNT count]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> XADD writers * name Virginia surname Woolf
@@ -3460,8 +3460,7 @@ redis> XREVRANGE writers + - COUNT 1
       4) "Adichie"
 ```
 
-Return a range of elements in a stream, with IDs matching the specified IDs interval, in reverse order (from greater to
-smaller IDs) compared to XRANGE
+返回流中元素的范围，其 ID 与指定的 ID 间隔匹配，与 XRANGE 相比顺序相反（从较大到较小的 ID）
 
 ### XLEN
 
@@ -3469,7 +3468,7 @@ smaller IDs) compared to XRANGE
 XLEN key
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> XADD mystream * item 1
@@ -3482,7 +3481,7 @@ redis> XLEN mystream
 (integer) 3
 ```
 
-Return the number of entries in a stream
+返回流中的条目数
 
 ### XACK
 
@@ -3490,77 +3489,76 @@ Return the number of entries in a stream
 XACK key group ID [ID ...]
 ```
 
-#### Example
+#### 示例
 
 ```shell script
 redis> XACK mystream mygroup 1526569495631-0
 ERR Unknown or disabled command 'XACK'
 ```
 
-Marks a pending message as correctly processed, effectively removing it from the pending entries list of the consumer
-group. Return value of the command is the number of messages successfully acknowledged, that is, the IDs we were
-actually able to resolve in the PEL.
+将待处理消息标记为已正确处理，有效地将其从消费者组的待处理条目列表中删除。命令的返回值是成功确认的消息数，即我们实际能够在 PEL 中解析的 ID 数。
 
-## Miscellaneous {.cols-2}
+## 其他 {.cols-2}
 
-### Cluster
+### 集群
 
 | -                                                                                         | -                                                                |
 | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| [CLUSTER ADDSLOTS ](https://redis.io/commands/cluster-addslots)                           | Assign new hash slots to receiving node                          |
-| [CLUSTER BUMPEPOCH](https://redis.io/commands/cluster-bumpepoch)                          | Advance the cluster config epoch                                 |
-| [CLUSTER COUNT-FAILURE-REPORTS ](https://redis.io/commands/cluster-count-failure-reports) | Return the number of failure reports active for a given node     |
-| [CLUSTER COUNTKEYSINSLOT ](https://redis.io/commands/cluster-countkeysinslot)             | Return the number of local keys in the specified hash slot       |
-| [CLUSTER DELSLOTS ](https://redis.io/commands/cluster-delslots)                           | Set hash slots as unbound in receiving node                      |
-| [CLUSTER FAILOVER ](https://redis.io/commands/cluster-failover)                           | Forces a replica to perform a manual failover of its master.     |
-| [CLUSTER FLUSHSLOTS](https://redis.io/commands/cluster-flushslots)                        | Delete a node's own slots information                            |
-| [CLUSTER FORGET ](https://redis.io/commands/cluster-forget)                               | Remove a node from the nodes table                               |
-| [CLUSTER GETKEYSINSLOT ](https://redis.io/commands/cluster-getkeysinslot)                 | Return local key names in the specified hash slot                |
-| [CLUSTER INFO](https://redis.io/commands/cluster-info)                                    | Provides info about Redis Cluster node state                     |
-| [CLUSTER KEYSLOT ](https://redis.io/commands/cluster-keyslot)                             | Returns the hash slot of the specified key                       |
-| [CLUSTER MEET ](https://redis.io/commands/cluster-meet)                                   | Force a node cluster to handshake with another node              |
-| [CLUSTER MYID](https://redis.io/commands/cluster-myid)                                    | Return the node id                                               |
-| [CLUSTER NODES](https://redis.io/commands/cluster-nodes)                                  | Get Cluster config for the node                                  |
-| [CLUSTER REPLICATE ](https://redis.io/commands/cluster-replicate)                         | Reconfigure a node as a replica of the specified master node     |
-| [CLUSTER RESET ](https://redis.io/commands/cluster-reset)                                 | Reset a Redis Cluster node                                       |
-| [CLUSTER SAVECONFIG](https://redis.io/commands/cluster-saveconfig)                        | Forces the node to save cluster state on disk                    |
-| [CLUSTER SET-CONFIG-EPOCH ](https://redis.io/commands/cluster-set-config-epoch)           | Set the configuration epoch in a new node                        |
-| [CLUSTER SETSLOT ](https://redis.io/commands/cluster-setslot)                             | Bind a hash slot to a specific node                              |
-| [CLUSTER SLAVES ](https://redis.io/commands/cluster-slaves)                               | List replica nodes of the specified master node                  |
-| [CLUSTER REPLICAS ](https://redis.io/commands/cluster-replicas)                           | List replica nodes of the specified master node                  |
-| [CLUSTER SLOTS](https://redis.io/commands/cluster-slots)                                  | Get array of Cluster slot to node mappings                       |
-| [READONLY](https://redis.io/commands/readonly)                                            | Enables read queries for a connection to a cluster replica node  |
-| [READWRITE](https://redis.io/commands/readwrite)                                          | Disables read queries for a connection to a cluster replica node |
+| [CLUSTER ADDSLOTS ](https://redis.io/commands/cluster-addslots)                           | 将新的哈希槽分配给接收节点                                                 |
+| [CLUSTER BUMPEPOCH](https://redis.io/commands/cluster-bumpepoch)                          | 推进集群配置纪元                                                   |
+| [CLUSTER COUNT-FAILURE-REPORTS ](https://redis.io/commands/cluster-count-failure-reports) | 返回给定节点的活动故障报告数                                             |
+| [CLUSTER COUNTKEYSINSLOT ](https://redis.io/commands/cluster-countkeysinslot)             | 返回指定哈希槽中的本地键数                                               |
+| [CLUSTER DELSLOTS ](https://redis.io/commands/cluster-delslots)                           | 在接收节点中将哈希槽设置为未绑定                                           |
+| [CLUSTER FAILOVER ](https://redis.io/commands/cluster-failover)                           | 强制副本执行其主节点的手动故障转移。                                       |
+| [CLUSTER FLUSHSLOTS](https://redis.io/commands/cluster-flushslots)                        | 删除节点自己的槽信息                                                 |
+| [CLUSTER FORGET ](https://redis.io/commands/cluster-forget)                               | 从节点表中删除一个节点                                                 |
+| [CLUSTER GETKEYSINSLOT ](https://redis.io/commands/cluster-getkeysinslot)                 | 返回指定哈希槽中的本地键名                                               |
+| [CLUSTER INFO](https://redis.io/commands/cluster-info)                                    | 提供有关 Redis 集群节点状态的信息                                        |
+| [CLUSTER KEYSLOT ](https://redis.io/commands/cluster-keyslot)                             | 返回指定键的哈希槽                                                   |
+| [CLUSTER MEET ](https://redis.io/commands/cluster-meet)                                   | 强制节点集群与另一个节点握手                                             |
+| [CLUSTER MYID](https://redis.io/commands/cluster-myid)                                    | 返回节点 ID                                                        |
+| [CLUSTER NODES](https://redis.io/commands/cluster-nodes)                                  | 获取节点的集群配置                                                   |
+| [CLUSTER REPLICATE ](https://redis.io/commands/cluster-replicate)                         | 将节点重新配置为指定主节点的副本                                           |
+| [CLUSTER RESET ](https://redis.io/commands/cluster-reset)                                 | 重置 Redis 集群节点                                                |
+| [CLUSTER SAVECONFIG](https://redis.io/commands/cluster-saveconfig)                        | 强制节点将集群状态保存到磁盘                                             |
+| [CLUSTER SET-CONFIG-EPOCH ](https://redis.io/commands/cluster-set-config-epoch)           | 在新节点中设置配置纪元                                                 |
+| [CLUSTER SETSLOT ](https://redis.io/commands/cluster-setslot)                             | 将哈希槽绑定到特定节点                                                 |
+| [CLUSTER SLAVES ](https://redis.io/commands/cluster-slaves)                               | 列出指定主节点的副本节点                                               |
+| [CLUSTER REPLICAS ](https://redis.io/commands/cluster-replicas)                           | 列出指定主节点的副本节点                                               |
+| [CLUSTER SLOTS](https://redis.io/commands/cluster-slots)                                  | 获取集群槽到节点映射的数组                                               |
+| [READONLY](https://redis.io/commands/readonly)                                            | 为到集群副本节点的连接启用读取查询                                         |
+| [READWRITE](https://redis.io/commands/readwrite)                                          | 为到集群副本节点的连接禁用读取查询                                         |
 
-### Transactions
+### 事务
 
 | -                                            | -                                                                   |
 | -------------------------------------------- | ------------------------------------------------------------------- |
-| [DISCARD](https://redis.io/commands/discard) | Discard all commands issued after MULTI                             |
-| [EXEC](https://redis.io/commands/exec)       | Execute all commands issued after MULTI                             |
-| [MULTI](https://redis.io/commands/multi)     | Mark the start of a transaction block                               |
-| [UNWATCH](https://redis.io/commands/unwatch) | Forget about all watched keys                                       |
-| [WATCH ](https://redis.io/commands/watch)    | Watch the given keys to determine execution of the MULTI/EXEC block |
+| [DISCARD](https://redis.io/commands/discard) | 放弃 MULTI 之后发出的所有命令                                           |
+| [EXEC](https://redis.io/commands/exec)       | 执行 MULTI 之后发出的所有命令                                           |
+| [MULTI](https://redis.io/commands/multi)     | 标记事务块的开始                                                      |
+| [UNWATCH](https://redis.io/commands/unwatch) | 忘记所有被监视的键                                                      |
+| [WATCH ](https://redis.io/commands/watch)    | 监视给定的键以确定 MULTI/EXEC 块的执行                                  |
 
-### Scripting
+### 脚本
 
 | -                                                         | -                                                    |
 | --------------------------------------------------------- | ---------------------------------------------------- |
-| [EVAL ](https://redis.io/commands/eval)                   | Execute a Lua script server side                     |
-| [EVALSHA ](https://redis.io/commands/evalsha)             | Execute a Lua script server side                     |
-| [SCRIPT DEBUG ](https://redis.io/commands/script-debug)   | Set the debug mode for executed scripts.             |
-| [SCRIPT EXISTS ](https://redis.io/commands/script-exists) | Check existence of scripts in the script cache.      |
-| [SCRIPT FLUSH](https://redis.io/commands/script-flush)    | Remove all the scripts from the script cache.        |
-| [SCRIPT KILL](https://redis.io/commands/script-kill)      | Kill the script currently in execution.              |
-| [SCRIPT LOAD ](https://redis.io/commands/script-load)     | Load the specified Lua script into the script cache. |
+| [EVAL ](https://redis.io/commands/eval)                   | 在服务器端执行 Lua 脚本                                  |
+| [EVALSHA ](https://redis.io/commands/evalsha)             | 在服务器端执行 Lua 脚本                                  |
+| [SCRIPT DEBUG ](https://redis.io/commands/script-debug)   | 设置已执行脚本的调试模式。                                   |
+| [SCRIPT EXISTS ](https://redis.io/commands/script-exists) | 检查脚本缓存中是否存在脚本。                                 |
+| [SCRIPT FLUSH](https://redis.io/commands/script-flush)    | 从脚本缓存中删除所有脚本。                                   |
+| [SCRIPT KILL](https://redis.io/commands/script-kill)      | 终止当前正在执行的脚本。                                   |
+| [SCRIPT LOAD ](https://redis.io/commands/script-load)     | 将指定的 Lua 脚本加载到脚本缓存中。                            |
 
-### Pubsub
+### 发布/订阅
 
 | -                                                       | -                                                                          |
 | ------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [PSUBSCRIBE ](https://redis.io/commands/psubscribe)     | Listen for messages published to channels matching the given patterns      |
-| [PUBSUB ](https://redis.io/commands/pubsub)             | Inspect the state of the Pub/Sub subsystem                                 |
-| [PUBLISH ](https://redis.io/commands/publish)           | Post a message to a channel                                                |
-| [PUNSUBSCRIBE ](https://redis.io/commands/punsubscribe) | Stop listening for messages posted to channels matching the given patterns |
-| [SUBSCRIBE ](https://redis.io/commands/subscribe)       | Listen for messages published to the given channels                        |
-| [UNSUBSCRIBE ](https://redis.io/commands/unsubscribe)   | Stop listening for messages posted to the given channels                   |
+| [PSUBSCRIBE ](https://redis.io/commands/psubscribe)     | 侦听发布到与给定模式匹配的频道的消息                                             |
+| [PUBSUB ](https://redis.io/commands/pubsub)             | 检查发布/订阅子系统的状态                                                      |
+| [PUBLISH ](https://redis.io/commands/publish)           | 向频道发布消息                                                               |
+| [PUNSUBSCRIBE ](https://redis.io/commands/punsubscribe) | 停止侦听发布到与给定模式匹配的频道的消息                                         |
+| [SUBSCRIBE ](https://redis.io/commands/subscribe)       | 侦听发布到给定频道的消息                                                       |
+| [UNSUBSCRIBE ](https://redis.io/commands/unsubscribe)   | 停止侦听发布到给定频道的消息                                                     |
+

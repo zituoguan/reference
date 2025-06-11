@@ -3,23 +3,23 @@ title: Emacs
 date: 2020-12-17 16:21:49
 background: bg-[#7752a9]
 tags:
-  - editor
-  - text
-  - shortcut
+  - 编辑器
+  - 文本
+  - 快捷键
 categories:
-  - Toolkit
+  - 工具箱
 intro: |
-  [Emacs](https://www.gnu.org/software/emacs) is the extensible, customizable, self-documenting real time display text editor.
-  This reference was made for Emacs 27.
+  [Emacs](https://www.gnu.org/software/emacs) 是可扩展、可定制、自文档化的实时显示文本编辑器。
+  此参考文档针对 Emacs 27 制作。
 plugins:
   - copyCode
 ---
 
-## Getting started
+## 入门
 
-### Starting Emacs
+### 启动 Emacs
 
-To enter Emacs, just type its name:
+要进入 Emacs，只需键入其名称：
 
 ```shell
 $ emacs
@@ -29,208 +29,207 @@ $ emacs
 
 | -           | -                      |
 | ----------- | :--------------------- |
-| `C-z`       | Suspend Emacs          |
-| `C-x` `C-c` | Exit Emacs permanently |
+| `C-z`       | 挂起 Emacs             |
+| `C-x` `C-c` | 永久退出 Emacs         |
 
 {.shortcuts}
 
-### Global Description {.secondary}
+### 全局说明 {.secondary}
 
 | -         | -                                           |
 | --------- | :------------------------------------------ |
-| `C-<key>` | Means hold the control, and press `<key>`   |
-| `M-<key>` | Means press the Esc once, and press `<key>` |
+| `C-<key>` | 表示按住 Control 键，然后按 `<key>`         |
+| `M-<key>` | 表示按一次 Esc 键，然后按 `<key>`           |
 
 {.shortcuts}
 
-NOTICE: This cheatsheet follows the above rules.
+注意：本速查表遵循以上规则。
 
-### Motion {.row-span-2}
+### 移动 {.row-span-2}
 
-| Backward  | Forward   | Entity to move over            |
+| 后退      | 前进      | 移动单位                       |
 | --------- | --------- | :----------------------------- |
-| `C-b`     | `C-f`     | Haracter                       |
-| `M-b`     | `M-f`     | Word                           |
-| `C-p`     | `C-n`     | Line                           |
-| `C-a`     | `C-e`     | Line beginning<br/>_(or end)_  |
-| `M-a`     | `M-e`     | Sentence                       |
-| `M-{`     | `M-}`     | Paragraph                      |
-| `C-x` `[` | `C-x` `]` | Page                           |
-| `C-M-b`   | `C-M-f`   | Sexp                           |
-| `C-M-a`   | `C-M-e`   | Function                       |
-| `M-<`     | `M->`     | Buffer beginning<br>_(or end)_ |
+| `C-b`     | `C-f`     | 字符                           |
+| `M-b`     | `M-f`     | 单词                           |
+| `C-p`     | `C-n`     | 行                             |
+| `C-a`     | `C-e`     | 行首<br/>_(或行尾)_            |
+| `M-a`     | `M-e`     | 句子                           |
+| `M-{`     | `M-}`     | 段落                           |
+| `C-x` `[` | `C-x` `]` | 页面                           |
+| `C-M-b`   | `C-M-f`   | S-表达式 (Sexp)                |
+| `C-M-a`   | `C-M-e`   | 函数                           |
+| `M-<`     | `M->`     | 缓冲区开始<br>_(或结束)_       |
 
 {.shortcuts .show-header}
 
-### Case Change
+### 大小写转换
 
 | -           | -                |
 | ----------- | :--------------- |
-| `M-u`       | Uppercase word   |
-| `M-l`       | Lowercase word   |
-| `M-c`       | Capitalize word  |
-| `C-x` `C-u` | Uppercase region |
-| `C-x` `C-l` | Lowercase region |
+| `M-u`       | 单词转大写       |
+| `M-l`       | 单词转小写       |
+| `M-c`       | 单词首字母大写   |
+| `C-x` `C-u` | 区域转大写       |
+| `C-x` `C-l` | 区域转小写       |
 
 {.shortcuts}
 
-### Files
+### 文件
 
 | -           | -                                                |
 | ----------- | :----------------------------------------------- |
-| `C-x` `C-f` | Read a file into Emacs                           |
-| `C-x` `C-s` | Save a file back to disk                         |
-| `C-x` `s`   | Save all files                                   |
-| `C-x` `i`   | Insert contents of another file into this buffer |
-| `C-x` `C-v` | Replace this file with your file                 |
-| `C-x` `C-w` | Write buffer to a specified file                 |
-| `C-x` `C-q` | Toggle read-only status of buffer                |
+| `C-x` `C-f` | 将文件读入 Emacs                                 |
+| `C-x` `C-s` | 将文件保存回磁盘                                 |
+| `C-x` `s`   | 保存所有文件                                     |
+| `C-x` `i`   | 将另一个文件的内容插入到此缓冲区                 |
+| `C-x` `C-v` | 用你的文件替换此文件                             |
+| `C-x` `C-w` | 将缓冲区写入指定文件                             |
+| `C-x` `C-q` | 切换缓冲区的只读状态                             |
 
 {.shortcuts}
 
-### Error Recovery
+### 错误恢复
 
 | -                           | -                                          |
 | --------------------------- | :----------------------------------------- |
-| `C-g`                       | Abort partially typed or executing command |
-| `M-x` recover-session       | Recover files lost by a system crash       |
-| `C-x` `u`<br>`C-_`<br>`C-/` | Undo an unwanted change                    |
-| `M-x` revert-buffer         | Restore a buffer to its original contents  |
-| `C-l`                       | Redraw garbaged screen                     |
+| `C-g`                       | 中止部分输入或正在执行的命令               |
+| `M-x` recover-session       | 恢复因系统崩溃而丢失的文件                 |
+| `C-x` `u`<br>`C-_`<br>`C-/` | 撤销不需要的更改                           |
+| `M-x` revert-buffer         | 将缓冲区恢复到其原始内容                   |
+| `C-l`                       | 重绘混乱的屏幕                             |
 
 {.shortcuts}
 
-### Transposing {.row-span-2}
+### 调换 {.row-span-2}
 
 | -           | -                    |
 | ----------- | :------------------- |
-| `C-t`       | Transpose characters |
-| `M-t`       | Transpose words      |
-| `C-x` `C-t` | Transpose lines      |
-| `C-M-t`     | Transpose sexps      |
+| `C-t`       | 调换字符             |
+| `M-t`       | 调换单词             |
+| `C-x` `C-t` | 调换行               |
+| `C-M-t`     | 调换 S-表达式        |
 
 {.shortcuts .table-fixed}
 
-#### Scroll
+#### 滚动
 
 | -         | -                                              |
 | --------- | :--------------------------------------------- |
-| `C-v`     | Scroll to next screen                          |
-| `M-v`     | Scroll to previous screen                      |
-| `C-x` `<` | Scroll left                                    |
-| `C-x` `>` | Scroll right                                   |
-| `C-l`     | Scroll current line to <br>center, top, bottom |
+| `C-v`     | 滚动到下一屏                                   |
+| `M-v`     | 滚动到上一屏                                   |
+| `C-x` `<` |向左滚动                                        |
+| `C-x` `>` | 向右滚动                                       |
+| `C-l`     | 将当前行滚动到 <br>屏幕中央、顶部、底部         |
 
 {.shortcuts .table-fixed}
 
-#### Goto
+#### 跳转
 
 | -         | -                   |
 | --------- | :------------------ |
-| `M-g` `g` | Goto line           |
-| `M-g` `c` | Goto char           |
-| `M-m`     | Back to indentation |
+| `M-g` `g` | 跳转到行            |
+| `M-g` `c` | 跳转到字符          |
+| `M-m`     | 返回到缩进处        |
 
 {.shortcuts .table-fixed}
 
-### Marking
+### 标记
 
 | -                 | -                       |
 | ----------------- | :---------------------- |
-| `C-@`<br/>`C-SPC` | Uet mark here           |
-| `C-x` `C-x`       | Exchange point and mark |
-| `M-@`             | Set mark arg words away |
-| `M-h`             | Mark paragraph          |
-| `C-x` `C-p`       | Mark page               |
-| `C-M-@`           | Mark sexp               |
-| `C-M-h`           | Mark function           |
-| `C-x` `h`         | Mark entire buffer      |
+| `C-@`<br/>`C-SPC` | 在此处设置标记          |
+| `C-x` `C-x`       | 交换点和标记            |
+| `M-@`             | 在 arg 个词后设置标记   |
+| `M-h`             | 标记段落                |
+| `C-x` `C-p`       | 标记页面                |
+| `C-M-@`           | 标记 S-表达式           |
+| `C-M-h`           | 标记函数                |
+| `C-x` `h`         | 标记整个缓冲区          |
 
 {.shortcuts}
 
-### Killing and Deleting {.row-span-2}
+### 剪切和删除 {.row-span-2}
 
-| Backward      | Forward | Entity to kill           |
+| 后退          | 前进    | 剪切单位                 |
 | ------------- | ------- | :----------------------- |
-| `DEL`         | `C-d`   | Character <br>_(delete)_ |
-| `M-DEL`       | `M-d`   | Word                     |
-| `M-0` `C-k`   | `C-k`   | Line <br/> _(to end of)_ |
-| `C-x` `DEL`   | `M-k`   | Sentence                 |
-| `M--` `C-M-k` | `C-M-k` | Sexp                     |
+| `DEL`         | `C-d`   | 字符 <br>_(删除)_       |
+| `M-DEL`       | `M-d`   | 单词                     |
+| `M-0` `C-k`   | `C-k`   | 行 <br/> _(到行尾)_      |
+| `C-x` `DEL`   | `M-k`   | 句子                     |
+| `M--` `C-M-k` | `C-M-k` | S-表达式                 |
 
 {.shortcuts .show-header}
 
-#### Killing
+#### 剪切
 
 | -          | -                                    |
 | ---------- | :----------------------------------- |
-| `C-W`      | Kill region C-w                      |
-| `M-w`      | Copy region to kill ring             |
-| `M-z` char | Kill through next occurrence of char |
-| `C-y`      | Yank back last thing killed          |
-| `M-y`      | Replace last yank with previous kill |
+| `C-W`      | 剪切区域 C-w                         |
+| `M-w`      | 将区域复制到剪切环                   |
+| `M-z` char | 剪切到下一个 char 出现的位置         |
+| `C-y`      | 粘贴上次剪切的内容                   |
+| `M-y`      | 用上上次剪切的内容替换上次粘贴的内容 |
 
 {.shortcuts}
 
-### Getting Help
+### 获取帮助
 
 | -         | -                                        |
 | --------- | :--------------------------------------- |
-| `C-x` `1` | Remove help window                       |
-| `C-M-v`   | Scroll help window                       |
-| `C-h` `a` | Apropos: show commands matching a string |
-| `C-h` `k` | Describe the function a key runs         |
-| `C-h` `f` | Describe a function                      |
-| `C-h` `m` | Get mode-specific information            |
+| `C-x` `1` | 移除帮助窗口                             |
+| `C-M-v`   | 滚动帮助窗口                             |
+| `C-h` `a` | Apropos：显示匹配字符串的命令            |
+| `C-h` `k` | 描述按键运行的函数                       |
+| `C-h` `f` | 描述一个函数                             |
+| `C-h` `m` | 获取模式特定信息                         |
 
 {.shortcuts}
 
-The help system is simple. Type `C-h` (or `F1`) and follow the directions. If you are a first-time user, type `C-h` `t`
-for a tutorial.
+帮助系统很简单。键入 `C-h` (或 `F1`) 并按照指示操作。如果您是初次使用的用户，请键入 `C-h` `t` 以获取教程。
 
-### Multiple Windows {.col-span-2}
+### 多窗口 {.col-span-2}
 
-When two commands are shown, the second is a similar command for a frame instead of a window.
+当显示两个命令时，第二个命令是针对框架而非窗口的类似命令。
 
 | -               | -               | -                                   |
 | --------------- | --------------- | :---------------------------------- |
-| `C-x` `5` `1`   | `C-x` `1`       | Delete all other windows            |
-| `C-x` `5` `2`   | `C-x` `2`       | Split window, above and below       |
-| `C-x` `5` `0`   | `C-x` `0`       | Delete this window                  |
-| `C-x` `3`       |                 | Split window, side by side          |
-| `C-M-v`         |                 | Scroll other window                 |
-| `C-x` `5` `o`   | `C-x` `o`       | Switch cursor to another window     |
-| `C-x` `5` `b`   | `C-x` `4` `b`   | Select buffer in other window       |
-| `C-x` `5` `C-o` | `C-x` `4` `C-o` | Display buffer in other window      |
-| `C-x` `5` `f`   | `C-x` `4` `f`   | Find file in other window           |
-| `C-x` `5` `r`   | `C-x` `4` `r`   | Find file read-only in other window |
-| `C-x` `5` `d`   | `C-x` `4` `d`   | Run Dired in other window           |
-| `C-x` `5` `.`   | `C-x` `4` `.`   | Find tag in other window            |
-| `C-x` `^`       |                 | Grow window taller                  |
-| `C-x` `{`       |                 | Shrink window narrower              |
-| `C-x` `}`       |                 | Grow window wider                   |
+| `C-x` `5` `1`   | `C-x` `1`       | 删除所有其他窗口                    |
+| `C-x` `5` `2`   | `C-x` `2`       | 上下分割窗口                        |
+| `C-x` `5` `0`   | `C-x` `0`       | 删除此窗口                          |
+| `C-x` `3`       |                 | 左右分割窗口                        |
+| `C-M-v`         |                 | 滚动其他窗口                        |
+| `C-x` `5` `o`   | `C-x` `o`       | 将光标切换到其他窗口                |
+| `C-x` `5` `b`   | `C-x` `4` `b`   | 在其他窗口中选择缓冲区              |
+| `C-x` `5` `C-o` | `C-x` `4` `C-o` | 在其他窗口中显示缓冲区              |
+| `C-x` `5` `f`   | `C-x` `4` `f`   | 在其他窗口中查找文件                |
+| `C-x` `5` `r`   | `C-x` `4` `r`   | 在其他窗口中以只读方式查找文件      |
+| `C-x` `5` `d`   | `C-x` `4` `d`   | 在其他窗口中运行 Dired              |
+| `C-x` `5` `.`   | `C-x` `4` `.`   | 在其他窗口中查找标签                |
+| `C-x` `^`       |                 | 增高窗口                            |
+| `C-x` `{`       |                 | 缩窄窗口                            |
+| `C-x` `}`       |                 | 加宽窗口                            |
 
 {.shortcuts}
 
-### Formatting
+### 格式化
 
 | -           | -                                        |
 | ----------- | :--------------------------------------- |
-| `TAB`       | Indent current line (mode-dependent)     |
-| `C-M-\`     | Indent region (mode-dependent)           |
-| `C-M-q`     | Indent sexp (mode-dependent)             |
-| `C-x` `TAB` | Indent region rigidly arg columns        |
-| `M-;`       | Indent for comment                       |
-| `C-o`       | Insert newline after point               |
-| `C-M-o`     | Move rest of line vertically down        |
-| `C-x` `C-o` | Delete blank lines around point          |
-| `M-^`       | Join line with previous (with arg, next) |
-| `M-\`       | Delete all white space around point      |
-| `M-SPC`     | Put exactly one space at point           |
-| `M-q`       | Fill paragraph                           |
-| `C-x` `f`   | Set fill column to arg                   |
-| `C-x` `.`   | Set prefix each line starts with         |
-| `M-o`       | Set face                                 |
+| `TAB`       | 缩进当前行 (模式相关)                    |
+| `C-M-\`     | 缩进区域 (模式相关)                      |
+| `C-M-q`     | 缩进 S-表达式 (模式相关)                 |
+| `C-x` `TAB` | 将区域严格缩进 arg 列                    |
+| `M-;`       | 为注释缩进                               |
+| `C-o`       | 在光标后插入新行                         |
+| `C-M-o`     | 将行的其余部分垂直向下移动               |
+| `C-x` `C-o` | 删除光标周围的空行                       |
+| `M-^`       | 将行与上一行合并 (带参数则与下一行合并)  |
+| `M-\`       | 删除光标周围的所有空白                   |
+| `M-SPC`     | 在光标处精确放置一个空格                 |
+| `M-q`       | 填充段落                                 |
+| `C-x` `f`   | 将填充列设置为 arg                       |
+| `C-x` `.`   | 设置每行开头的固定前缀                   |
+| `M-o`       | 设置字体                                 |
 
 {.shortcuts}
 
@@ -238,296 +237,294 @@ When two commands are shown, the second is a similar command for a frame instead
 
 | -         | -                                           |
 | --------- | :------------------------------------------ |
-| `C-h` `i` | Enter the Info documentation reader         |
-| `C-h` `S` | Find specified function or variable in Info |
+| `C-h` `i` | 进入 Info 文档阅读器                        |
+| `C-h` `S` | 在 Info 中查找指定的函数或变量              |
 
 {.shortcuts .table-fixed}
 
-#### Moving within a node
+#### 在节点内移动
 
 | -     | -                 |
 | ----- | :---------------- |
-| `SPC` | Scroll forward    |
-| `DEL` | Scroll reverse    |
-| `b`   | Beginning of node |
+| `SPC` | 向前滚动          |
+| `DEL` |向后滚动           |
+| `b`   | 节点开始          |
 
 {.shortcuts .table-fixed}
 
-#### Moving between nodes
+#### 在节点间移动
 
 | -   | -                                      |
 | --- | :------------------------------------- |
-| `n` | Next node                              |
-| `p` | Previous node                          |
-| `u` | Move up                                |
-| `m` | Select menu item by name               |
-| `n` | Select nth menu item by number (1–9)   |
-| `f` | Follow cross reference (return with l) |
-| `l` | Return to last node you saw            |
-| `d` | Return to directory node               |
-| `t` | Go to top node of Info file            |
-| `g` | Go to any node by name                 |
+| `n` | 下一个节点                             |
+| `p` | 上一个节点                             |
+| `u` | 向上移动                               |
+| `m` | 按名称选择菜单项                       |
+| `n` | 按编号选择第 n 个菜单项 (1–9)          |
+| `f` | 跟随交叉引用 (用 l 返回)               |
+| `l` | 返回到你看到的最后一个节点             |
+| `d` | 返回到目录节点                         |
+| `t` | 转到 Info 文件的顶部节点               |
+| `g` | 按名称转到任何节点                     |
 
 {.shortcuts .table-fixed}
 
-#### Other
+#### 其他
 
 | -   | -                                |
 | --- | :------------------------------- |
-| `h` | Run Info tutorial                |
-| `i` | Look up a subject in the indices |
-| `s` | Search nodes for regexp          |
-| `q` | Quit Info                        |
+| `h` | 运行 Info 教程                   |
+| `i` | 在索引中查找主题                 |
+| `s` | 在节点中搜索正则表达式           |
+| `q` | 退出 Info                        |
 
 {.shortcuts .table-fixed}
 
-### Minibuffer
+### Minibuffer (微缓冲区)
 
-The following keys are defined in the minibuffer.
+以下按键在微缓冲区中定义。
 
 | -     | -                                       |
 | ----- | :-------------------------------------- |
-| `TAB` | Complete as much as possible            |
-| `SPC` | Complete up to one word                 |
-| `RET` | Complete and execute                    |
-| `?`   | Show possible completions               |
-| `M-p` | Fetch previous minibuffer input         |
-| `M-n` | Fetch later minibuffer input or default |
-| `M-r` | Regexp search backward through history  |
-| `M-s` | Regexp search forward through history   |
-| `C-g` | Abort command                           |
+| `TAB` | 尽可能多地补全                          |
+| `SPC` | 补全一个词                              |
+| `RET` | 补全并执行                              |
+| `?`   | 显示可能的补全                          |
+| `M-p` | 获取上一个微缓冲区输入                  |
+| `M-n` | 获取下一个微缓冲区输入或默认值          |
+| `M-r` | 在历史记录中向后搜索正则表达式          |
+| `M-s` | 在历史记录中向前搜索正则表达式          |
+| `C-g` | 中止命令                                |
 
 {.shortcuts}
 
-Type `C-x` `ESC` `ESC` to edit and repeat the last command that used the minibuffer. Type `F10` to activate menu bar
-items on text terminals.
+键入 `C-x` `ESC` `ESC` 来编辑并重复上一个使用微缓冲区的命令。在文本终端上键入 `F10` 来激活菜单栏项目。
 
-### Tags
+### 标签
 
 | -                        | -                                          |
 | ------------------------ | :----------------------------------------- |
-| `M-.`                    | Find a tag (a definition)                  |
-| `C-u` `M-.`              | Find next occurrence of tag                |
-| `M-x` visit-tags-table   | Specify a new tags file                    |
-| `M-x` tags-search        | Regexp search on all files in tags table   |
-| `M-x` tags-query-replace | Run query-replace on all the files         |
-| `M-,`                    | Continue last tags search or query-replace |
+| `M-.`                    | 查找标签 (定义)                            |
+| `C-u` `M-.`              | 查找下一个出现的标签                       |
+| `M-x` visit-tags-table   | 指定一个新的标签文件                       |
+| `M-x` tags-search        | 在标签表中的所有文件上搜索正则表达式       |
+| `M-x` tags-query-replace | 在所有文件上运行查询替换                   |
+| `M-,`                    | 继续上一次的标签搜索或查询替换             |
 
 {.shortcuts}
 
-### Rectangles
+### 矩形
 
 | -             | -                                   |
 | ------------- | :---------------------------------- |
-| `C-x` `r` `r` | Copy rectangle to register          |
-| `C-x` `r` `k` | Kill rectangle                      |
-| `C-x` `r` `y` | Yank rectangle                      |
-| `C-x` `r` `o` | Open rectangle, shifting text right |
-| `C-x` `r` `c` | Blank out rectangle                 |
-| `C-x` `r` `t` | Prefix each line with a string      |
+| `C-x` `r` `r` | 将矩形复制到寄存器                  |
+| `C-x` `r` `k` | 剪切矩形                            |
+| `C-x` `r` `y` | 粘贴矩形                            |
+| `C-x` `r` `o` | 打开矩形，将文本向右移动            |
+| `C-x` `r` `c` | 清空矩形                            |
+| `C-x` `r` `t` | 为每行添加字符串前缀                |
 
 {.shortcuts}
 
-### Keyboard Macros
+### 键盘宏
 
 | -                         | -                                   |
 | ------------------------- | :---------------------------------- |
-| `C-x` `(`                 | Start defining a keyboard macro     |
-| `C-x` `)`                 | End keyboard macro definition       |
-| `C-x` `e`                 | Execute last-defined keyboard macro |
-| `C-u` `C-x` `(`           | Append to last keyboard macro       |
-| `M-x` name-last-kbd-macro | Name last keyboard macro            |
-| `M-x` insert-kbd-macro    | Insert Lisp definition in buffer    |
+| `C-x` `(`                 | 开始定义键盘宏                      |
+| `C-x` `)`                 | 结束键盘宏定义                      |
+| `C-x` `e`                 | 执行最后定义的键盘宏                |
+| `C-u` `C-x` `(`           | 追加到上一个键盘宏                  |
+| `M-x` name-last-kbd-macro | 命名上一个键盘宏                    |
+| `M-x` insert-kbd-macro    | 在缓冲区中插入 Lisp 定义            |
 
 {.shortcuts}
 
-### Buffers
+### 缓冲区
 
 | -           | -                     |
 | ----------- | :-------------------- |
-| `C-x` `b`   | Select another buffer |
-| `C-x` `C-b` | List all buffers      |
-| `C-x` `k`   | Kill a buffer         |
+| `C-x` `b`   | 选择另一个缓冲区      |
+| `C-x` `C-b` | 列出所有缓冲区        |
+| `C-x` `k`   | 关闭一个缓冲区        |
 
 {.shortcuts}
 
-## Emacs Search
+## Emacs 搜索
 
-### Regex (common) {.row-span-2}
+### 正则表达式 (常用) {.row-span-2}
 
 | -             | -                                            |
 | ------------- | :------------------------------------------- |
-| `.` `(dot)`   | Any single character except a newline        |
-| `*`           | Zero or more repeats                         |
-| `+`           | One or more repeats                          |
-| `?`           | Zero or one repeat                           |
-| `\`           | Quote special characters                     |
-| `\c`          | Quote regular expression special character c |
-| `\|`          | Alternative (“or”)                           |
-| `\(...\)`     | Grouping                                     |
-| `\(:?...\)`   | Shy grouping                                 |
-| `\(:NUM...\)` | Explicit numbered grouping                   |
-| `\n`          | Same text as nth group                       |
-| `\b`          | At word break                                |
-| `\B`          | Not at word break                            |
+| `.` `(点)`    | 除换行符外的任何单个字符                     |
+| `*`           | 零次或多次重复                               |
+| `+`           | 一次或多次重复                               |
+| `?`           | 零次或一次重复                               |
+| `\`           | 转义特殊字符                                 |
+| `\c`          | 转义正则表达式特殊字符 c                     |
+| `\|`          | 或者 (“or”)                                  |
+| `\(...\)`     | 分组                                         |
+| `\(:?...\)`   | 非捕获分组                                   |
+| `\(:NUM...\)` | 显式编号分组                                 |
+| `\n`          | 与第 n 个组相同的文本                        |
+| `\b`          | 在单词边界                                   |
+| `\B`          | 不在单词边界                                 |
 
-### Regex (entry)
+### 正则表达式 (入口)
 
-| Start | End   | Entity |
+| 开始  | 结束  | 实体   |
 | ----- | ----- | :----- |
-| `^`   | `$`   | Line   |
-| `\<`  | `\>`  | Word   |
-| `\_<` | `\_>` | Symbol |
-| `\‘`  | `\’`  | Buffer |
+| `^`   | `$`   | 行     |
+| `\<`  | `\>`  | 单词   |
+| `\_<` | `\_>` | 符号   |
+| `\‘`  | `\’`  | 缓冲区 |
 
 {.show-header}
 
-### Regex (conflict)
+### 正则表达式 (冲突)
 
-| These   | Others   | class                     |
+| 这些    | 其他     | 类别                      |
 | ------- | -------- | :------------------------ |
-| `[...]` | `[^...]` | Explicit set              |
-| `\w`    | `\W`     | Word-syntax character     |
-| `\sc`   | `\Sc`    | Character with syntax c   |
-| `\cc`   | `\Cc`    | Character with category c |
+| `[...]` | `[^...]` | 显式集合                  |
+| `\w`    | `\W`     | 单词语法字符              |
+| `\sc`   | `\Sc`    | 具有语法 c 的字符         |
+| `\cc`   | `\Cc`    | 具有类别 c 的字符         |
 
 {.show-header}
 
-### Incremental Search
+### 增量搜索
 
 | -       | -                                 |
 | ------- | :-------------------------------- |
-| `C-s`   | Search forward                    |
-| `C-r`   | Search backward                   |
-| `C-M-s` | Regular expression search         |
-| `C-M-r` | Reverse regular expression search |
-| `M-p`   | Select previous search string     |
-| `M-n`   | Select next later search string   |
-| `RET`   | Exit incremental search           |
-| `DEL`   | Undo effect of last character     |
-| `C-g`   | Abort current search              |
+| `C-s`   | 向前搜索                          |
+| `C-r`   | 向后搜索                          |
+| `C-M-s` | 正则表达式搜索                    |
+| `C-M-r` | 反向正则表达式搜索                |
+| `M-p`   | 选择上一个搜索字符串              |
+| `M-n`   | 选择下一个搜索字符串              |
+| `RET`   | 退出增量搜索                      |
+| `DEL`   | 撤销上一个字符的效果              |
+| `C-g`   | 中止当前搜索                      |
 
 {.shortcuts}
 
-Use `C-s` or `C-r` again to repeat the search in either direction. If Emacs is still searching, `C-g` cancels only the
-part not matched.
+再次使用 `C-s` 或 `C-r` 在任一方向重复搜索。如果 Emacs 仍在搜索，`C-g` 仅取消未匹配的部分。
 
-### Query Replace
+### 查询替换
 
 | -            | -                                    |
 | ------------ | :----------------------------------- |
-| `M-%`        | Interactively replace a text string  |
-| `M-x` regexp | Using regular expressions            |
-| `SPC` / `y`  | Replace this one, go on to next      |
-| `,`          | Replace this one, don’t move         |
-| `DEL` / `n`  | Skip to next without replacing       |
-| `!`          | Replace all remaining matches        |
-| `^`          | Back up to the previous match        |
-| `RET`        | Exit query-replace                   |
-| `C-r`        | Enter recursive edit (C-M-c to exit) |
+| `M-%`        | 交互式替换文本字符串                 |
+| `M-x` regexp | 使用正则表达式                       |
+| `SPC` / `y`  | 替换当前匹配，并继续下一个           |
+| `,`          | 替换当前匹配，但不移动               |
+| `DEL` / `n`  | 跳过当前匹配，不替换                 |
+| `!`          | 替换所有剩余的匹配                   |
+| `^`          | 返回到上一个匹配                     |
+| `RET`        | 退出查询替换                         |
+| `C-r`        | 进入递归编辑 (C-M-c 退出)            |
 
 {.shortcuts}
 
-## Misc
+## 其他
 
-### Shells
+### Shell
 
 | -           | -                                      |
 | ----------- | :------------------------------------- |
-| `M-!`       | Execute a shell command                |
-| `M-&`       | Execute a shell command asynchronously |
-| `M-`        | Run a shell command on the region      |
-| `C-u` `M-`  | Filter region through a shell command  |
-| `M-x` shell | Start a shell in window shell          |
+| `M-!`       | 执行一个 shell 命令                    |
+| `M-&`       | 异步执行一个 shell 命令                |
+| `M-`        | 在区域上运行一个 shell 命令            |
+| `C-u` `M-`  | 通过 shell 命令过滤区域                |
+| `M-x` shell | 在窗口 shell 中启动一个 shell          |
 
 {.shortcuts}
 
-### International Character Sets {.col-span-2}
+### 国际字符集 {.col-span-2}
 
 | -                          | -                                  |
 | -------------------------- | :--------------------------------- |
-| `C-x` `RET` `l`            | specify principal language         |
-| `M-x` list-input-methods   | show all input methods             |
-| `C-\`                      | enable or disable input method     |
-| `C-x` `RET` `c`            | set coding system for next command |
-| `M-x` list-coding-systems  | show all coding systems            |
-| `M-x` prefer-coding-system | choose preferred coding system     |
+| `C-x` `RET` `l`            | 指定主要语言                       |
+| `M-x` list-input-methods   | 显示所有输入法                     |
+| `C-\`                      | 启用或禁用输入法                   |
+| `C-x` `RET` `c`            | 为下一个命令设置编码系统           |
+| `M-x` list-coding-systems  | 显示所有编码系统                   |
+| `M-x` prefer-coding-system | 选择首选编码系统                   |
 
 {.shortcuts}
 
-### Registers
+### 寄存器
 
 | -               | -                                    |
 | --------------- | :----------------------------------- |
-| `C-x` `r` `s`   | Save region in register              |
-| `C-x` `r` `i`   | Insert register contents into buffer |
-| `C-x` `r` `SPC` | Save value of point in register      |
-| `C-x` `r` `j`   | Jump to point saved in register      |
+| `C-x` `r` `s`   | 将区域保存到寄存器                   |
+| `C-x` `r` `i`   | 将寄存器内容插入到缓冲区             |
+| `C-x` `r` `SPC` | 将光标位置的值保存到寄存器           |
+| `C-x` `r` `j`   | 跳转到保存在寄存器中的光标位置       |
 
 {.shortcuts}
 
-### Miscellaneous
+### 杂项
 
 | -          | -                 |
 | ---------- | :---------------- |
-| `C-u` num  | Numeric argument  |
-| `M--`      | Negative argument |
-| `C-q` char | Quoted insert     |
+| `C-u` num  | 数字参数          |
+| `M--`      | 负数参数          |
+| `C-q` char | 引用插入          |
 
 {.shortcuts}
 
-### Commands Dealing with Emacs Lisp
+### 处理 Emacs Lisp 的命令
 
 | -                  | -                                  |
 | ------------------ | :--------------------------------- |
-| `C-x` `C-e`        | Eval sexp before point             |
-| `C-M-x`            | Eval current defun                 |
-| `M-x` eval-region  | Eval region                        |
-| `M-:`              | Read and eval minibuffer           |
-| `M-x` load-library | Load a Lisp library from load-path |
+| `C-x` `C-e`        | 求值光标前的 S-表达式              |
+| `C-M-x`            | 求值当前 defun                     |
+| `M-x` eval-region  | 求值区域                           |
+| `M-:`              | 读取并求值微缓冲区                 |
+| `M-x` load-library | 从 load-path 加载 Lisp 库          |
 
 {.shortcuts}
 
-### Simple Customization
+### 简单定制
 
 | -                 | -                             |
 | ----------------- | :---------------------------- |
-| `M-x` `customize` | customize variables and faces |
+| `M-x` `customize` | 定制变量和外观                |
 
-Making global key bindings in Emacs Lisp:
+在 Emacs Lisp 中进行全局按键绑定：
 
 ```{.wrap}
 (global-set-key (kbd "C-c g") ’search-forward)
 (global-set-key (kbd "M-#") ’query-replace-regexp)
 ```
 
-### Abbrevs
+### 缩写 (Abbrevs)
 
 | -                 | -                                        |
 | ----------------- | :--------------------------------------- |
-| `C-x` `a` `g`     | Add global abbrev                        |
-| `C-x` `a` `l`     | Add mode-local abbrev                    |
-| `C-x` `a` `i` `g` | Add global expansion for this abbrev     |
-| `C-x` `a` `i` `l` | Add mode-local expansion for this abbrev |
-| `C-x` `a` `e`     | Explicitly expand abbrev                 |
-| `M-/`             | Expand previous word dynamically         |
+| `C-x` `a` `g`     | 添加全局缩写                             |
+| `C-x` `a` `l`     | 添加模式局部缩写                         |
+| `C-x` `a` `i` `g` | 为此缩写添加全局展开                     |
+| `C-x` `a` `i` `l` | 为此缩写添加模式局部展开                 |
+| `C-x` `a` `e`     | 显式展开缩写                             |
+| `M-/`             | 动态展开上一个词                         |
 
 {.shortcuts}
 
-### Spelling Check
+### 拼写检查
 
 | -                   | -                                     |
 | ------------------- | :------------------------------------ |
-| `M-$`               | Check spelling of current word        |
-| `M-x` ispell-region | Check spelling of all words in region |
-| `M-x` ispell-buffer | Check spelling of entire buffer       |
-| `M-x` flyspell-mode | Toggle on-the-fly spell checking      |
+| `M-$`               | 检查当前单词的拼写                    |
+| `M-x` ispell-region | 检查区域中所有单词的拼写              |
+| `M-x` ispell-buffer | 检查整个缓冲区的拼写                  |
+| `M-x` flyspell-mode | 切换实时拼写检查                      |
 
 {.shortcuts}
 
-### Writing Commands {.col-span-2}
+### 编写命令 {.col-span-2}
 
-#### Syntax
+#### 语法
 
 ```lisp
 (defun command-name (args)
@@ -535,7 +532,7 @@ Making global key bindings in Emacs Lisp:
 body)
 ```
 
-#### Example
+#### 示例
 
 ```lisp
 (defun this-line-to-top-of-window (line)
@@ -547,4 +544,5 @@ With prefix argument LINE, put point on LINE."
               (prefix-numeric-value line))))
 ```
 
-The interactive spec says how to read arguments interactively. Type `C-h` `f` interactive `RET` for more details.
+interactive 规范说明了如何以交互方式读取参数。键入 `C-h` `f` interactive `RET` 以获取更多详细信息。
+

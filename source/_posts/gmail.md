@@ -7,159 +7,159 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 90 keyboard shortcuts found on Gmail
+  Gmail 中 90 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Compose and Chat
+### 撰写与聊天
 
-| Shortcut           | Action                                   |
+| 快捷键             | 操作                                     |
 | ------------------ | ---------------------------------------- |
-| `P`                | Previous message in an open conversation |
-| `N`                | Next message in an open conversation     |
-| `Shift` `Esc`      | Focus main window                        |
-| `Esc`              | Focus latest chat or compose             |
-| `Ctrl` `.`         | Advance to the next chat or compose      |
-| `Ctrl` `,`         | Advance to the previous chat or compose  |
-| `Ctrl` `Enter`     | Send                                     |
-| `Ctrl` `Shift` `C` | Add cc recipients                        |
-| `Ctrl` `Shift` `B` | Add bcc recipients                       |
-| `Ctrl` `Shift` `F` | Access custom from                       |
-| `Ctrl` `K`         | Insert a link                            |
-| `Cmd` `;`          | Go to next misspelled word (Mac only)    |
-| `Ctrl` `M`         | Open spelling suggestions                |
+| `P`                | 打开的会话中的上一封邮件                 |
+| `N`                | 打开的会话中的下一封邮件                 |
+| `Shift` `Esc`      | 聚焦主窗口                               |
+| `Esc`              | 聚焦最新的聊天或撰写窗口                 |
+| `Ctrl` `.`         | 前进到下一个聊天或撰写窗口               |
+| `Ctrl` `,`         | 前进到上一个聊天或撰写窗口               |
+| `Ctrl` `Enter`     | 发送                                     |
+| `Ctrl` `Shift` `C` | 添加抄送收件人                           |
+| `Ctrl` `Shift` `B` | 添加密送收件人                           |
+| `Ctrl` `Shift` `F` | 访问自定义发件人                         |
+| `Ctrl` `K`         | 插入链接                                 |
+| `Cmd` `;`          | 转到下一个拼写错误的单词（仅限 Mac）     |
+| `Ctrl` `M`         | 打开拼写建议                             |
 
 {.shortcuts}
 
-### Formatting Text
+### 格式化文本
 
-| Shortcut           | Action             |
+| 快捷键             | 操作               |
 | ------------------ | ------------------ |
-| `Ctrl` `Shift` `5` | Previous font      |
-| `Ctrl` `Shift` `6` | Next font          |
-| `Ctrl` `Shift` `-` | Decrease font size |
-| `Ctrl` `Shift` `+` | Increase font size |
-| `Ctrl` `B`         | Bold               |
-| `Ctrl` `I`         | Italics            |
-| `Ctrl` `U`         | Underline          |
-| `Ctrl` `Shift` `7` | Numbered list      |
-| `Ctrl` `Shift` `8` | Bulleted list      |
-| `Ctrl` `Shift` `9` | Quote              |
-| `Ctrl` `[`         | Indent less        |
-| `Ctrl` `]`         | Indent more        |
-| `Ctrl` `Shift` `L` | Align left         |
-| `Ctrl` `Shift` `E` | Align center       |
-| `Ctrl` `Shift` `R` | Align right        |
-| `Ctrl` `\`         | Remove formatting  |
+| `Ctrl` `Shift` `5` | 上一个字体         |
+| `Ctrl` `Shift` `6` | 下一个字体         |
+| `Ctrl` `Shift` `-` | 减小字号           |
+| `Ctrl` `Shift` `+` | 增大字号           |
+| `Ctrl` `B`         | 粗体               |
+| `Ctrl` `I`         | 斜体               |
+| `Ctrl` `U`         | 下划线             |
+| `Ctrl` `Shift` `7` | 数字列表           |
+| `Ctrl` `Shift` `8` | 项目符号列表       |
+| `Ctrl` `Shift` `9` | 引用               |
+| `Ctrl` `[`         | 减少缩进           |
+| `Ctrl` `]`         | 增加缩进           |
+| `Ctrl` `Shift` `L` | 左对齐             |
+| `Ctrl` `Shift` `E` | 居中对齐           |
+| `Ctrl` `Shift` `R` | 右对齐             |
+| `Ctrl` `\`         | 清除格式           |
 
 {.shortcuts}
 
-### Actions {.row-span-2}
+### 操作 {.row-span-2}
 
-| Shortcut    | Action                                          |
+| 快捷键      | 操作                                            |
 | ----------- | ----------------------------------------------- |
-| `,`         | Move focus to toolbar                           |
-| `X`         | Select conversation                             |
-| `S`         | Toggle star or rotate among superstars          |
-| `E`         | Archive                                         |
-| `M`         | Mute conversation                               |
-| `Shift` `1` | Report as spam                                  |
-| `Shift` `3` | Delete                                          |
-| `R`         | Reply                                           |
-| `Shift` `R` | Reply in a new window                           |
-| `A`         | Reply all                                       |
-| `Shift` `A` | Reply all in a new window                       |
-| `F`         | Forward                                         |
-| `Shift` `F` | Forward in a new window                         |
-| `Shift` `N` | Update conversation                             |
-| `]/[`       | Archive conversation and go to previous or next |
-| `Z`         | Undo last action                                |
-| `Shift` `I` | Mark as read                                    |
-| `Shift` `U` | Mark as unread                                  |
-| `Shift` `-` | Mark unread from the selected message           |
-| `=`         | Mark as important                               |
-| `-`         | Mark as not important                           |
-| `B`         | Snooze                                          |
-| `;`         | Expand entire conversation                      |
-| `Shift` `;` | Collapse entire conversation                    |
-| `Shift` `T` | Add conversation to tasks                       |
+| `,`         | 将焦点移至工具栏                                |
+| `X`         | 选择会话                                        |
+| `S`         | 切换星标或在超级星标之间轮换                    |
+| `E`         | 归档                                            |
+| `M`         | 将会话静音                                      |
+| `Shift` `1` | 举报为垃圾邮件                                  |
+| `Shift` `3` | 删除                                            |
+| `R`         | 回复                                            |
+| `Shift` `R` | 在新窗口中回复                                  |
+| `A`         | 全部回复                                        |
+| `Shift` `A` | 在新窗口中全部回复                              |
+| `F`         | 转发                                            |
+| `Shift` `F` | 在新窗口中转发                                  |
+| `Shift` `N` | 更新会话                                        |
+| `]/[`       | 归档会话并转到上一个或下一个                    |
+| `Z`         | 撤消上一个操作                                  |
+| `Shift` `I` | 标记为已读                                      |
+| `Shift` `U` | 标记为未读                                      |
+| `Shift` `-` | 从所选邮件开始标记为未读                        |
+| `=`         | 标记为重要                                      |
+| `-`         | 标记为不重要                                    |
+| `B`         | 延后                                            |
+| `;`         | 展开整个会话                                    |
+| `Shift` `;` | 折叠整个会话                                    |
+| `Shift` `T` | 将会话添加到任务                                |
 
 {.shortcuts}
 
 ### Hangouts
 
-| Shortcut | Action                         |
+| 快捷键 | 操作                           |
 | -------- | ------------------------------ |
-| `H` `M`  | Show menu                      |
-| `H` `A`  | Show archived hangouts         |
-| `H` `I`  | Show hangout requests          |
-| `H` `C`  | Focus on the conversation list |
-| `H` `P`  | Open phone                     |
+| `H` `M`  | 显示菜单                       |
+| `H` `A`  | 显示已归档的 Hangouts          |
+| `H` `I`  | 显示 Hangouts 请求             |
+| `H` `C`  | 聚焦会话列表                   |
+| `H` `P`  | 打开电话                       |
 
 {.shortcuts}
 
-### Jumping
+### 跳转
 
-| Shortcut           | Action                                                              |
+| 快捷键             | 操作                                                                  |
 | ------------------ | ------------------------------------------------------------------- |
-| `G` `I`            | Go to inbox                                                         |
-| `G` `S`            | Go to starred conversations                                         |
-| `G` `B`            | Go to snoozed conversations                                         |
-| `G` `T`            | Go to sent messages                                                 |
-| `S` `D`            | Go to drafts                                                        |
-| `G` `A`            | Go to all mail                                                      |
-| `Ctrl` `Alt` `,/.` | Switch between the calendar, keep, and tasks sidebar and your inbox |
-| `G` `K`            | Go to tasks                                                         |
-| `G` `L`            | Go to label                                                         |
+| `G` `I`            | 转到收件箱                                                            |
+| `G` `S`            | 转到已加星标的会话                                                    |
+| `G` `B`            | 转到已延后的会话                                                      |
+| `G` `T`            | 转到已发邮件                                                          |
+| `S` `D`            | 转到草稿                                                              |
+| `G` `A`            | 转到所有邮件                                                          |
+| `Ctrl` `Alt` `,/.` | 在日历、Keep 和 Tasks 边栏与收件箱之间切换                            |
+| `G` `K`            | 转到 Tasks                                                            |
+| `G` `L`            | 转到标签                                                              |
 
 {.shortcuts}
 
-### Threadlist Selection
+### 会话列表选择
 
-| Shortcut        | Action                         |
+| 快捷键          | 操作                           |
 | --------------- | ------------------------------ |
-| `Shift` `8` `A` | Select all conversations       |
-| `Shift` `8` `N` | Deselect all conversations     |
-| `Shift` `8` `R` | Select read conversations      |
-| `Shift` `8` `U` | Select unread conversations    |
-| `Shift` `8` `S` | Select starred conversations   |
-| `Shift` `8` `T` | Select unstarred conversations |
+| `Shift` `8` `A` | 选择所有会话                   |
+| `Shift` `8` `N` | 取消选择所有会话               |
+| `Shift` `8` `R` | 选择已读会话                   |
+| `Shift` `8` `U` | 选择未读会话                   |
+| `Shift` `8` `S` | 选择已加星标的会话             |
+| `Shift` `8` `T` | 选择未加星标的会话             |
 
 {.shortcuts}
 
-### Navigation
+### 导航
 
-| Shortcut                | Action                       |
+| 快捷键                  | 操作                         |
 | ----------------------- | ---------------------------- |
-| `G` `N`                 | Go to next page              |
-| `G` `P`                 | Go to previous page          |
-| `U`                     | Back to threadlist           |
-| `K`                     | Newer conversation           |
-| `J`                     | Older conversation           |
-| `Enter`                 | Open conversation            |
-| <code>\`</code>         | Go to next inbox section     |
-| `Shift` <code>\`</code> | Go to previous inbox section |
+| `G` `N`                 | 转到下一页                   |
+| `G` `P`                 | 转到上一页                   |
+| `U`                     | 返回会话列表                 |
+| `K`                     | 较新的会话                   |
+| `J`                     | 较早的会话                   |
+| `Enter`                 | 打开会话                     |
+| <code>\`</code>         | 转到下一个收件箱部分         |
+| `Shift` <code>\`</code> | 转到上一个收件箱部分         |
 
 {.shortcuts}
 
-### Application
+### 应用
 
-| Shortcut | Action                      |
+| 快捷键 | 操作                        |
 | -------- | --------------------------- |
-| `C`      | Compose                     |
-| `D`      | Compose in a new tab        |
-| `/`      | Search mail                 |
-| `G`      | Search chat contacts        |
-| `.`      | Open more actions menu      |
-| `V`      | Open move to menu           |
-| `L`      | Open label as menu          |
-| `?`      | Open keyboard shortcut help |
+| `C`      | 撰写                        |
+| `D`      | 在新标签页中撰写            |
+| `/`      | 搜索邮件                    |
+| `G`      | 搜索聊天联系人              |
+| `.`      | 打开更多操作菜单            |
+| `V`      | 打开“移至”菜单              |
+| `L`      | 打开“标签为”菜单            |
+| `?`      | 打开键盘快捷键帮助          |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Gmail](https://support.google.com/mail/answer/6594?hl=en) _(support.google.com)_
+- [Gmail 键盘快捷键](https://support.google.com/mail/answer/6594?hl=zh-Hans) _(support.google.com)_

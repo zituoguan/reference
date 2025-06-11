@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cheatsheets.zip/sitemap.xml
+Sitemap: https://r3f.cn/sitemap.xml

@@ -7,125 +7,125 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 41 keyboard shortcuts found in Webflow
+  Webflow 中 41 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### General
+### 常规
 
-| Shortcut           | Action                   |
+| 快捷键             | 操作                     |
 | ------------------ | ------------------------ |
-| `Shift` `/`        | Show shortcut cheatsheet |
-| `Ctrl` `Shift` `S` | Save as a snapshot       |
-| `Esc`              | Deselect or abort        |
-| `Del`              | Delete element           |
-| `Shift` `P`        | Show publish dialog      |
-| `Shift` `E`        | Show export code dialog  |
-| `Enter`            | Edit element             |
+| `Shift` `/`        | 显示快捷键速查表         |
+| `Ctrl` `Shift` `S` | 保存为快照               |
+| `Esc`              | 取消选择或中止           |
+| `Del`              | 删除元素                 |
+| `Shift` `P`        | 显示发布对话框           |
+| `Shift` `E`        | 显示导出代码对话框       |
+| `Enter`            | 编辑元素                 |
 
 {.shortcuts}
 
-### View
+### 视图
 
-| Shortcut           | Action             |
+| 快捷键             | 操作             |
 | ------------------ | ------------------ |
-| `Ctrl` `Shift` `P` | Preview mode       |
-| `Ctrl` `Shift` `G` | Guide overlay      |
-| `Ctrl` `Shift` `E` | Show element edges |
-| `Ctrl` `Shift` `X` | X-ray mode         |
+| `Ctrl` `Shift` `P` | 预览模式         |
+| `Ctrl` `Shift` `G` | 参考线叠加       |
+| `Ctrl` `Shift` `E` | 显示元素边缘     |
+| `Ctrl` `Shift` `X` | X射线模式        |
 
 {.shortcuts}
 
-### Left-hand Toolbar
+### 左侧工具栏
 
-| Shortcut           | Action                         |
+| 快捷键             | 操作                         |
 | ------------------ | ------------------------------ |
-| `A`                | Show add panel                 |
-| `Z`                | Show navigator tab             |
-| `P`                | Show pages panel               |
-| `Shift` `A`        | Show symbols panel             |
-| `Ctrl` `Shift` `A` | Make selected element a symbol |
-| `J`                | Show asset manager             |
+| `A`                | 显示添加面板                 |
+| `Z`                | 显示导航器选项卡             |
+| `P`                | 显示页面面板                 |
+| `Shift` `A`        | 显示符号面板                 |
+| `Ctrl` `Shift` `A` | 将所选元素设为符号           |
+| `J`                | 显示资源管理器               |
 
 {.shortcuts}
 
-### Right-hand Tabs
+### 右侧选项卡
 
-| Shortcut | Action                 |
+| 快捷键 | 操作                 |
 | -------- | ---------------------- |
-| `S`      | Show style tab         |
-| `D`      | Show settings tab      |
-| `G`      | Show style manager tab |
-| `H`      | Show interactions tab  |
+| `S`      | 显示样式选项卡         |
+| `D`      | 显示设置选项卡         |
+| `G`      | 显示样式管理器选项卡   |
+| `H`      | 显示交互选项卡         |
 
 {.shortcuts}
 
-### Copy/Paste
+### 复制/粘贴
 
-| Shortcut       | Action    |
+| 快捷键         | 操作    |
 | -------------- | --------- |
-| `Ctrl` `C`     | Copy      |
-| `Ctrl` `X`     | Cut       |
-| `Ctrl` `V`     | Paste     |
-| `Alt` `(drag)` | Duplicate |
+| `Ctrl` `C`     | 复制      |
+| `Ctrl` `X`     | 剪切      |
+| `Ctrl` `V`     | 粘贴      |
+| `Alt` `(拖动)` | 复制副本  |
 
 {.shortcuts}
 
-### Undo/Redo
+### 撤销/重做
 
-| Shortcut           | Action |
+| 快捷键             | 操作 |
 | ------------------ | ------ |
-| `Ctrl` `Z`         | Undo   |
-| `Ctrl` `Shift` `Z` | Redo   |
+| `Ctrl` `Z`         | 撤销   |
+| `Ctrl` `Shift` `Z` | 重做   |
 
 {.shortcuts}
 
-### Device View
+### 设备视图
 
-| Shortcut | Action            |
+| 快捷键 | 操作            |
 | -------- | ----------------- |
-| `1`      | Desktop           |
-| `2`      | Tablet            |
-| `3`      | Phone (landscape) |
-| `4`      | Phone (portrait)  |
+| `1`      | 桌面            |
+| `2`      | 平板电脑        |
+| `3`      | 手机 (横向)     |
+| `4`      | 手机 (纵向)     |
 
 {.shortcuts}
 
-### Style Panel
+### 样式面板
 
-| Shortcut               | Action                                                |
+| 快捷键                 | 操作                                                  |
 | ---------------------- | ----------------------------------------------------- |
-| `Shift` `(drag)`       | Margin or padding (on all sides)                      |
-| `Alt` `(drag)`         | Margin or padding (top and bottom, or left and right) |
-| `Ctrl` `Enter`         | Add class to selected element                         |
-| `Ctrl` `Shift` `Enter` | Rename last class on selected element                 |
+| `Shift` `(拖动)`       | 外边距或内边距 (所有方向)                             |
+| `Alt` `(拖动)`         | 外边距或内边距 (顶部和底部，或左侧和右侧)             |
+| `Ctrl` `Enter`         | 将类添加到所选元素                                    |
+| `Ctrl` `Shift` `Enter` | 重命名所选元素上的最后一个类                          |
 
 {.shortcuts}
 
-### Find
+### 查找
 
-| Shortcut   | Action     |
+| 快捷键     | 操作     |
 | ---------- | ---------- |
-| `Ctrl` `K` | Quick find |
+| `Ctrl` `K` | 快速查找 |
 
 {.shortcuts}
 
-### Other
+### 其他
 
-| Shortcut           | Action                                   |
+| 快捷键             | 操作                                     |
 | ------------------ | ---------------------------------------- |
-| `Alt` `(click)`    | Expand or collapse panel sections        |
-| `Up/Down`          | Select parent or child element           |
-| `Left/Right`       | Select sibling element                   |
-| `Alt` `Left/Right` | Select next or previous element          |
-| `Ctrl` `Shift` `L` | Toggle collaborators on selected element |
+| `Alt` `(点击)`     | 展开或折叠面板部分                       |
+| `上/下箭头`        | 选择父元素或子元素                       |
+| `左/右箭头`        | 选择同级元素                             |
+| `Alt` `左/右箭头`  | 选择下一个或上一个元素                   |
+| `Ctrl` `Shift` `L` | 切换所选元素上的协作者                   |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Webflow](https://university.webflow.com/article/keyboard-shortcuts-in-the-webflow-designer)
+- [Webflow 键盘快捷键](https://university.webflow.com/article/keyboard-shortcuts-in-the-webflow-designer)
   _(university.webflow.com)_

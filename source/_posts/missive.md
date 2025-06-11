@@ -7,152 +7,152 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 83 keyboard shortcuts found in Missive
+  Missive 中 83 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Navigation
+### 导航
 
-| Shortcut      | Action         |
+| 快捷键        | 操作           |
 | ------------- | -------------- |
-| `Down`        | Next item      |
-| `Up`          | Previous item  |
-| `Alt` `Up`    | First item     |
-| `Alt` `Down`  | Last item      |
-| `Right`       | Open item      |
-| `Left`        | Collapse item  |
-| `Tab`         | Next scope     |
-| `Shift` `Tab` | Previous scope |
-| `PgUp`        | Scroll up      |
-| `PgDn`        | Scroll down    |
+| `Down`        | 下一项         |
+| `Up`          | 上一项         |
+| `Alt` `Up`    | 第一项         |
+| `Alt` `Down`  | 最后一项       |
+| `Right`       | 打开项         |
+| `Left`        | 折叠项         |
+| `Tab`         | 下一个范围     |
+| `Shift` `Tab` | 上一个范围     |
+| `PgUp`        | 向上滚动       |
+| `PgDn`        | 向下滚动       |
 
 {.shortcuts}
 
-### Selection
+### 选择
 
-| Shortcut             | Action                          |
+| 快捷键             | 操作                          |
 | -------------------- | ------------------------------- |
-| `Shift` `Up`         | Select next conversation        |
-| `Shift` `Down`       | Select previous conversation    |
-| `Alt` `Shift` `Up`   | Select until first conversation |
-| `Alt` `Shift` `Down` | Select until last conversation  |
-| `Ctrl` `A`           | Select all conversations        |
+| `Shift` `Up`         | 选择下一个会话        |
+| `Shift` `Down`       | 选择上一个会话    |
+| `Alt` `Shift` `Up`   | 选择到第一个会话 |
+| `Alt` `Shift` `Down` | 选择到最后一个会话  |
+| `Ctrl` `A`           | 全选会话        |
 
 {.shortcuts}
 
-### Application
+### 应用
 
-| Shortcut           | Action                            |
+| 快捷键           | 操作                            |
 | ------------------ | --------------------------------- |
-| `Ctrl` `N`         | Compose new email                 |
-| `Ctrl` `Shift` `N` | Create new conversation           |
-| `Ctrl` `F`         | Search                            |
-| `Ctrl` `Shift` `C` | Focus comment box                 |
-| `Ctrl` `Shift` `X` | Focus task box                    |
-| `Space`            | Preview item                      |
-| `Ctrl` `Up`        | Edit previous comment             |
-| `Ctrl` `Shift` `Y` | Set a status                      |
-| `Ctrl` `.`         | Open conversation contextual menu |
-| `Ctrl` `G`         | Open more menu                    |
-| `Ctrl` `L`         | Open location                     |
-| `Ctrl` `,`         | Open preferences                  |
-| `Ctrl` `Shift` `,` | Open contacts                     |
-| `Ctrl` `Alt` `S`   | Toggle right sidebar              |
-| `Ctrl` `Alt` `N`   | Main right sidebar action         |
-| `Ctrl` `Alt` `R`   | Reload                            |
+| `Ctrl` `N`         | 撰写新邮件                 |
+| `Ctrl` `Shift` `N` | 创建新会话           |
+| `Ctrl` `F`         | 搜索                            |
+| `Ctrl` `Shift` `C` | 聚焦评论框                 |
+| `Ctrl` `Shift` `X` | 聚焦任务框                    |
+| `Space`            | 预览项目                      |
+| `Ctrl` `Up`        | 编辑上一条评论             |
+| `Ctrl` `Shift` `Y` | 设置状态                      |
+| `Ctrl` `.`         | 打开会话上下文菜单 |
+| `Ctrl` `G`         | 打开更多菜单                    |
+| `Ctrl` `L`         | 打开位置                     |
+| `Ctrl` `,`         | 打开偏好设置                  |
+| `Ctrl` `Shift` `,` | 打开联系人                     |
+| `Ctrl` `Alt` `S`   | 切换右侧边栏              |
+| `Ctrl` `Alt` `N`   | 主要右侧边栏操作         |
+| `Ctrl` `Alt` `R`   | 重新加载                            |
 
 {.shortcuts}
 
-### Actions {.row-span-2}
+### 操作 {.row-span-2}
 
-| Shortcut               | Action                       |
+| 快捷键               | 操作                       |
 | ---------------------- | ---------------------------- |
-| `Back`                 | Archive or remove label      |
-| `Alt` `Back`           | Close                        |
-| `Cmd` `Back`           | Trash                        |
-| `Ctrl` `Shift` `L`     | Label as...                  |
-| `Ctrl` `Alt` `L`       | Move to...                   |
-| `Ctrl` `Shift` `K`     | Assign                       |
-| `Ctrl` `Shift` `J`     | Snooze                       |
-| `Ctrl` `Shift` `S`     | Toggle star                  |
-| `Ctrl` `Shift` `M`     | Toggle watch                 |
-| `Ctrl` `R`             | Reply all                    |
-| `Ctrl` `Shift` `R`     | Reply                        |
-| `Ctrl` `Shift` `F`     | Forward                      |
-| `Ctrl` `Shift` `D`     | Open or focus draft          |
-| `Ctrl` `P`             | Print                        |
-| `Ctrl` `O`             | Open in new window           |
-| `Ctrl` `Z`             | Undo last action             |
-| `Ctrl` `Shift` `Z`     | Redo last action             |
-| `Ctrl` `Shift` `I`     | Mark as read                 |
-| `Ctrl` `Shift` `U`     | Mark as unread               |
-| `Ctrl` `Shift` `=`     | Mark as important            |
-| `Ctrl` `-`             | Mark as not important        |
-| `Ctrl` `Shift` `Right` | Expand entire conversation   |
-| `Ctrl` `Shift` `Left`  | Collapse entire conversation |
-| `Ctrl` `Shift` `'`     | Toggle message quote         |
-| `Ctrl` `Shift` `P`     | Pin to sidebar               |
-| `Ctrl` `Shift` `G`     | Merge...                     |
+| `Back`                 | 归档或移除标签      |
+| `Alt` `Back`           | 关闭                        |
+| `Cmd` `Back`           | 移至回收站                        |
+| `Ctrl` `Shift` `L`     | 标记为...                  |
+| `Ctrl` `Alt` `L`       | 移动到...                   |
+| `Ctrl` `Shift` `K`     | 分配                       |
+| `Ctrl` `Shift` `J`     | 稍后提醒                       |
+| `Ctrl` `Shift` `S`     | 切换星标                  |
+| `Ctrl` `Shift` `M`     | 切换关注                 |
+| `Ctrl` `R`             | 全部回复                    |
+| `Ctrl` `Shift` `R`     | 回复                        |
+| `Ctrl` `Shift` `F`     | 转发                        |
+| `Ctrl` `Shift` `D`     | 打开或聚焦草稿          |
+| `Ctrl` `P`             | 打印                        |
+| `Ctrl` `O`             | 在新窗口中打开          |
+| `Ctrl` `Z`             | 撤销上一个操作             |
+| `Ctrl` `Shift` `Z`     | 重做上一个操作             |
+| `Ctrl` `Shift` `I`     | 标记为已读                 |
+| `Ctrl` `Shift` `U`     | 标记为未读                 |
+| `Ctrl` `Shift` `=`     | 标记为重要            |
+| `Ctrl` `-`             | 标记为不重要        |
+| `Ctrl` `Shift` `Right` | 展开整个会话   |
+| `Ctrl` `Shift` `Left`  | 折叠整个会话 |
+| `Ctrl` `Shift` `'`     | 切换消息引用         |
+| `Ctrl` `Shift` `P`     | 固定到侧边栏               |
+| `Ctrl` `Shift` `G`     | 合并...                     |
 
 {.shortcuts}
 
-### Composer
+### 编辑器
 
-| Shortcut               | Action             |
+| 快捷键               | 操作             |
 | ---------------------- | ------------------ |
-| `Ctrl` `Enter`         | Send               |
-| `Ctrl` `Shift` `Enter` | Send and archive   |
-| `Ctrl` `D`             | Discard draft      |
-| `Ctrl` `Shift` `C`     | Add CC recipients  |
-| `Ctrl` `Shift` `B`     | Add BCC recipients |
-| `Ctrl` `K`             | Insert a link      |
-| `Ctrl` `Shift` `O`     | Open responses     |
+| `Ctrl` `Enter`         | 发送               |
+| `Ctrl` `Shift` `Enter` | 发送并归档   |
+| `Ctrl` `D`             | 放弃草稿      |
+| `Ctrl` `Shift` `C`     | 添加抄送收件人  |
+| `Ctrl` `Shift` `B`     | 添加密送收件人 |
+| `Ctrl` `K`             | 插入链接      |
+| `Ctrl` `Shift` `O`     | 打开回复     |
 
 {.shortcuts}
 
-### Formatting
+### 格式化
 
-| Shortcut           | Action             |
+| 快捷键           | 操作             |
 | ------------------ | ------------------ |
-| `Ctrl` `Shift` `-` | Decrease text size |
-| `Ctrl` `Shift` `=` | Increase text size |
-| `Ctrl` `B`         | Bold               |
-| `Ctrl` `I`         | Italic             |
-| `Ctrl` `U`         | Underline          |
-| `Ctrl` `Shift` `7` | Numbered list      |
-| `Ctrl` `Shift` `8` | Bulleted list      |
-| `Ctrl` `[`         | Decrease indent    |
-| `Ctrl` `]`         | Increase indent    |
+| `Ctrl` `Shift` `-` | 减小字号 |
+| `Ctrl` `Shift` `=` | 增大字号 |
+| `Ctrl` `B`         | 加粗               |
+| `Ctrl` `I`         | 斜体               |
+| `Ctrl` `U`         | 下划线           |
+| `Ctrl` `Shift` `7` | 数字列表      |
+| `Ctrl` `Shift` `8` | 项目符号列表      |
+| `Ctrl` `[`         | 减少缩进    |
+| `Ctrl` `]`         | 增加缩进    |
 
 {.shortcuts}
 
-### Calendar
+### 日历
 
-| Shortcut   | Action       |
+| 快捷键   | 操作       |
 | ---------- | ------------ |
-| `Ctrl` `N` | Create event |
-| `Ctrl` `R` | Refresh      |
-| `Enter`    | View day     |
-| `T`        | Today        |
-| `Ctrl` `L` | Go to date   |
-| `D`        | Day view     |
-| `W`        | Week view    |
-| `M`        | Month view   |
-| `A`        | Agenda view  |
+| `Ctrl` `N` | 创建事件 |
+| `Ctrl` `R` | 刷新      |
+| `Enter`    | 查看日     |
+| `T`        | 今天        |
+| `Ctrl` `L` | 转到日期   |
+| `D`        | 日视图     |
+| `W`        | 周视图     |
+| `M`        | 月视图   |
+| `A`        | 日程视图  |
 
 {.shortcuts}
 
-### Jumping
+### 跳转
 
-| Shortcut     | Action            |
+| 快捷键     | 操作            |
 | ------------ | ----------------- |
-| `Ctrl` `1-9` | Go to Mailbox 1-9 |
+| `Ctrl` `1-9` | 转到邮箱 1-9 |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Missive Team Inbox](https://missiveapp.com/help/keyboard-shortcuts) _(missiveapp.com)_
+- [Missive 团队收件箱的键盘快捷键](https://missiveapp.com/help/keyboard-shortcuts) _(missiveapp.com)_

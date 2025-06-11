@@ -3,20 +3,20 @@ title: FastAPI
 date: 2025-06-07 18:40:00  
 background: bg-[#059669]  
 tags:
-  - web
-  - python
-  - backend
+    - web
+    - python
+    - backend
 categories:
-  - Programming
+    - 编程
 intro: |
-  A concise cheatsheet for FastAPI, a fast and modern web framework for building APIs with Python 3.7+.
+    一个 FastAPI 的简明速查表，FastAPI 是一个用于构建 API 的快速、现代的 Web 框架，使用 Python 3.7+。
 plugins:
-  - copyCode
+    - copyCode
 ---
 
-## Getting Started {.cols-3}
+## 快速入门 {.cols-3}
 
-### Install & Run
+### 安装与运行
 
 ```bash
 pip install fastapi uvicorn
@@ -31,10 +31,10 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"message": "Hello FastAPI"}
+        return {"message": "Hello FastAPI"}
 ```
 
-### CLI Run Hint
+### CLI 运行提示
 
 ```bash
 uvicorn main:app --reload
@@ -42,135 +42,135 @@ uvicorn main:app --reload
 
 
 
-## Routing & Parameters {.cols-3}
+## 路由与参数 {.cols-3}
 
-### Path Parameter
+### 路径参数
 
 ```python
 @app.get("/items/{id}")
 def read(id: int):
-    return {"id": id}
+        return {"id": id}
 ```
 
-### Query Parameter
+### 查询参数
 
 ```python
 @app.get("/search")
 def find(q: str = "default"):
-    return {"q": q}
+        return {"q": q}
 ```
 
-### Optional Query
+### 可选查询参数
 
 ```python
 @app.get("/filter")
 def filter_data(limit: int = 10, active: bool = True):
-    return {"limit": limit, "active": active}
+        return {"limit": limit, "active": active}
 ```
 
 
 
-## Request Body & Validation {.cols-3}
+## 请求体与验证 {.cols-3}
 
-### Using Pydantic
+### 使用 Pydantic
 
 ```python
 from pydantic import BaseModel
 
 class Item(BaseModel):
-    name: str
-    price: float
+        name: str
+        price: float
 ```
 
-### JSON Body
+### JSON 请求体
 
 ```python
 @app.post("/items/")
 def create(item: Item):
-    return item
+        return item
 ```
 
-### Response Model
+### 响应模型
 
 ```python
 @app.post("/items/", response_model=Item)
 def create(item: Item):
-    return item
+        return item
 ```
 
 
 
-## Forms, Files, Headers {.cols-3}
+## 表单、文件、请求头 {.cols-3}
 
-### Form Input
+### 表单输入
 
 ```python
 from fastapi import Form
 
 @app.post("/login")
 def login(user: str = Form(...)):
-    return {"user": user}
+        return {"user": user}
 ```
 
-### File Upload
+### 文件上传
 
 ```python
 from fastapi import UploadFile, File
 
 @app.post("/upload")
 def upload(f: UploadFile = File(...)):
-    return {"filename": f.filename}
+        return {"filename": f.filename}
 ```
 
-### Headers / Cookies
+### 请求头 / Cookies
 
 ```python
 from fastapi import Header, Cookie
 
 @app.get("/info")
 def info(ua: str = Header(None)):
-    return {"UA": ua}
+        return {"UA": ua}
 ```
 
 
 
-## Middleware & Dependency {.cols-2}
+## 中间件与依赖注入 {.cols-2}
 
-### Middleware
+### 中间件
 
 ```python
 @app.middleware("http")
 async def log_req(req, call_next):
-    res = await call_next(req)
-    return res
+        res = await call_next(req)
+        return res
 ```
 
-### Dependency
+### 依赖注入
 
 ```python
 from fastapi import Depends
 
 def auth(token: str = ""):
-    if token != "xyz": raise HTTPException(401)
-    return True
+        if token != "xyz": raise HTTPException(401)
+        return True
 
 @app.get("/secure")
 def secure(_: bool = Depends(auth)):
-    return {"secure": True}
+        return {"secure": True}
 ```
 
 
 
-## Errors & JSON API {.cols-2}
+## 错误处理与 JSON API {.cols-2}
 
-### HTTP Error
+### HTTP 错误
 
 ```python
 from fastapi import HTTPException
 
 @app.get("/err")
 def error():
-    raise HTTPException(404, "Not Found")
+        raise HTTPException(404, "Not Found")
 ```
 
 ### JSON API
@@ -180,21 +180,21 @@ from fastapi import FastAPI
 
 @app.get("/json")
 def get_data():
-    return {"status": "ok"}
+        return {"status": "ok"}
 ```
 
 
 
-## Templates & Static {.cols-2}
+## 模板与静态文件 {.cols-2}
 
-### Mount Static
+### 挂载静态文件
 
 ```python
 from fastapi.staticfiles import StaticFiles
 app.mount("/static", StaticFiles(directory="static"), name="static")
 ```
 
-### Jinja2 Support
+### Jinja2 支持
 
 ```python
 from fastapi.templating import Jinja2Templates
@@ -203,9 +203,9 @@ templates = Jinja2Templates("templates")
 
 
 
-## Routers & Structure {.cols-2}
+## 路由与项目结构 {.cols-2}
 
-### Routers (Blueprints)
+### 路由 (蓝图)
 
 ```python
 from fastapi import APIRouter
@@ -213,12 +213,12 @@ router = APIRouter()
 
 @router.get("/")
 def admin():
-    return {"admin": True}
+        return {"admin": True}
 
 app.include_router(router, prefix="/admin")
 ```
 
-### Folder Layout
+### 文件夹布局
 
 ```bash
 project/
@@ -232,20 +232,21 @@ project/
 
 
 
-## Docs & Status {.cols-2}
+## 文档与状态码 {.cols-2}
 
-### Built-in Docs
+### 内置文档
 
 * Swagger: `/docs`
 * ReDoc: `/redoc`
 
-### Custom Status Code
+### 自定义状态码
 
 ```python
 from fastapi import status
 
 @app.post("/create", status_code=status.HTTP_201_CREATED)
 def create():
-    return {"msg": "Created"}
+        return {"msg": "Created"}
 ```
+
 

@@ -1,130 +1,131 @@
 ---
-title: MIME types
+title: MIME 类型
 date: 2020-04-03 17:28:43
 tags:
-  - media type
+  - 媒体类型
 categories:
-  - Other
+  - 其他
 intro: |
-  This cheat sheet lists some common MIME types for the Web. You can look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains all registered MIME types.
+  本速查表列出了一些 Web 上常见的 MIME 类型。您可以查看 [IANA/MIME 媒体类型注册表](http://www.iana.org/assignments/media-types/index.html)，其中包含所有已注册的 MIME 类型。
 ---
 
-## Getting Started {.cols-2}
+## 入门 {.cols-2}
 
-### Introduction
+### 简介
 
-- The MIME type registry associates particular filename extensions and filename pattern
-- MIME (Multipurpose Internet Mail Extensions) type aka media type
-- MIME types are defined and standardized in IETF's RFC 6838
-- Indicates the nature and format of a document, file, or assortment of bytes.
-- For file formats or format contents on the Internet
+- MIME 类型注册表关联特定的文件名扩展名和文件名模式
+- MIME (多用途互联网邮件扩展) 类型，也称为媒体类型
+- MIME 类型在 IETF 的 RFC 6838 中定义和标准化
+- 指示文档、文件或字节集合的性质和格式。
+- 用于互联网上的文件格式或格式内容
 
   {.marker-round}
 
-### Multi-format of MIME types
+### MIME 类型的多格式
 
-- [Markdown Table](https://tableconvert.com/html-to-markdown?data=https://cheatsheets.zip/mime#TableGenerator)
-- [Template](https://tableconvert.com/html-to-template?data=https://cheatsheets.zip/mime#TableGenerator)
-- [LaTeX Table](https://tableconvert.com/html-to-latex?data=https://cheatsheets.zip/mime#TableGenerator)
-- [CSV](https://tableconvert.com/html-to-csv?data=https://cheatsheets.zip/mime#TableGenerator)
-- [Excel](https://tableconvert.com/html-to-excel?data=https://cheatsheets.zip/mime#TableGenerator)
-- [JSON Array](https://tableconvert.com/html-to-json?data=https://cheatsheets.zip/mime#TableGenerator)
-- [HTML Table](https://tableconvert.com/html-to-html?data=https://cheatsheets.zip/mime#TableGenerator)
-- [Insert SQL](https://tableconvert.com/html-to-sql?data=https://cheatsheets.zip/mime#TableGenerator)
-- [YAML Sequence](https://tableconvert.com/html-to-yaml?data=https://cheatsheets.zip/mime#TableGenerator)
-- [XML](https://tableconvert.com/html-to-xml?data=https://cheatsheets.zip/mime#TableGenerator)
-- [ASCII](https://tableconvert.com/html-to-ascii?data=https://cheatsheets.zip/mime#TableGenerator)
-- [MediaWiki Table](https://tableconvert.com/html-to-mediawiki?data=https://cheatsheets.zip/mime#TableGenerator)
-- [AsciiDoc Table](https://tableconvert.com/html-to-asciidoc?data=https://cheatsheets.zip/mime#TableGenerator)
-- [Jira Table](https://tableconvert.com/html-to-jira?data=https://cheatsheets.zip/mime#TableGenerator)
-- [Textile Table](https://tableconvert.com/html-to-textile?data=https://cheatsheets.zip/mime#TableGenerator)
-- [reStructuredText](https://tableconvert.com/html-to-restructuredtext?data=https://cheatsheets.zip/mime#TableGenerator)
-- [PHP Array](https://tableconvert.com/html-to-php?data=https://cheatsheets.zip/mime#TableGenerator)
-- [Ruby Array](https://tableconvert.com/html-to-ruby?data=https://cheatsheets.zip/mime#TableGenerator)
-- [ASP Array](https://tableconvert.com/html-to-asp?data=https://cheatsheets.zip/mime#TableGenerator)
-- [ActionScript](https://tableconvert.com/html-to-actionscript?data=https://cheatsheets.zip/mime#TableGenerator)
-- [BBCode](https://tableconvert.com/html-to-bbcode?data=https://cheatsheets.zip/mime#TableGenerator)
-- [PDF](https://tableconvert.com/html-to-pdf?data=https://cheatsheets.zip/mime#TableGenerator)
-- [JPEG](https://tableconvert.com/html-to-jpeg?data=https://cheatsheets.zip/mime#TableGenerator)
+- [Markdown 表格](https://tableconvert.com/html-to-markdown?data=https://r3f.cn/mime#TableGenerator)
+- [模板](https://tableconvert.com/html-to-template?data=https://r3f.cn/mime#TableGenerator)
+- [LaTeX 表格](https://tableconvert.com/html-to-latex?data=https://r3f.cn/mime#TableGenerator)
+- [CSV](https://tableconvert.com/html-to-csv?data=https://r3f.cn/mime#TableGenerator)
+- [Excel](https://tableconvert.com/html-to-excel?data=https://r3f.cn/mime#TableGenerator)
+- [JSON 数组](https://tableconvert.com/html-to-json?data=https://r3f.cn/mime#TableGenerator)
+- [HTML 表格](https://tableconvert.com/html-to-html?data=https://r3f.cn/mime#TableGenerator)
+- [插入 SQL](https://tableconvert.com/html-to-sql?data=https://r3f.cn/mime#TableGenerator)
+- [YAML 序列](https://tableconvert.com/html-to-yaml?data=https://r3f.cn/mime#TableGenerator)
+- [XML](https://tableconvert.com/html-to-xml?data=https://r3f.cn/mime#TableGenerator)
+- [ASCII](https://tableconvert.com/html-to-ascii?data=https://r3f.cn/mime#TableGenerator)
+- [MediaWiki 表格](https://tableconvert.com/html-to-mediawiki?data=https://r3f.cn/mime#TableGenerator)
+- [AsciiDoc 表格](https://tableconvert.com/html-to-asciidoc?data=https://r3f.cn/mime#TableGenerator)
+- [Jira 表格](https://tableconvert.com/html-to-jira?data=https://r3f.cn/mime#TableGenerator)
+- [Textile 表格](https://tableconvert.com/html-to-textile?data=https://r3f.cn/mime#TableGenerator)
+- [reStructuredText](https://tableconvert.com/html-to-restructuredtext?data=https://r3f.cn/mime#TableGenerator)
+- [PHP 数组](https://tableconvert.com/html-to-php?data=https://r3f.cn/mime#TableGenerator)
+- [Ruby 数组](https://tableconvert.com/html-to-ruby?data=https://r3f.cn/mime#TableGenerator)
+- [ASP 数组](https://tableconvert.com/html-to-asp?data=https://r3f.cn/mime#TableGenerator)
+- [ActionScript](https://tableconvert.com/html-to-actionscript?data=https://r3f.cn/mime#TableGenerator)
+- [BBCode](https://tableconvert.com/html-to-bbcode?data=https://r3f.cn/mime#TableGenerator)
+- [PDF](https://tableconvert.com/html-to-pdf?data=https://r3f.cn/mime#TableGenerator)
+- [JPEG](https://tableconvert.com/html-to-jpeg?data=https://r3f.cn/mime#TableGenerator)
 
 {.cols-4 .marker-none}
 
-## Lists of MIME types {.cols-1}
+## MIME 类型列表 {.cols-1}
 
-### Common MIME (Media) types
+### 常见 MIME (媒体) 类型
 
-| Extension       | Kind of document                                 | MIME Type \(Content Type\)                                                                                                               |
+| 扩展名          | 文档类型                                         | MIME 类型 (内容类型)                                                                                                                     |
 | --------------- | ------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------- |
-| \.aac           | AAC audio                                        | audio/aac                                                                                                                                |
-| \.abw           | AbiWord document                                 | application/x\-abiword                                                                                                                   |
-| \.arc           | Archive document \(multiple files embedded\)     | application/x\-freearc                                                                                                                   |
-| \.avi           | AVI: Audio Video Interleave                      | video/x\-msvideo                                                                                                                         |
-| \.azw           | Amazon Kindle eBook format                       | application/vnd\.amazon\.ebook                                                                                                           |
-| \.bin           | Any kind of binary data                          | application/octet\-stream                                                                                                                |
-| \.bmp           | Windows OS/2 Bitmap Graphics                     | image/bmp                                                                                                                                |
-| \.bz            | BZip archive                                     | application/x\-bzip                                                                                                                      |
-| \.bz2           | BZip2 archive                                    | application/x\-bzip2                                                                                                                     |
-| \.csh           | C\-Shell script                                  | application/x\-csh                                                                                                                       |
-| \.css           | Cascading Style Sheets \(CSS\)                   | text/css                                                                                                                                 |
-| \.csv           | Comma\-separated values \(CSV\)                  | text/csv                                                                                                                                 |
+| \.aac           | AAC 音频                                         | audio/aac                                                                                                                                |
+| \.abw           | AbiWord 文档                                     | application/x\-abiword                                                                                                                   |
+| \.arc           | 归档文档 (嵌入多个文件)                          | application/x\-freearc                                                                                                                   |
+| \.avi           | AVI: 音视频交错                                  | video/x\-msvideo                                                                                                                         |
+| \.azw           | 亚马逊 Kindle 电子书格式                         | application/vnd\.amazon\.ebook                                                                                                           |
+| \.bin           | 任何类型的二进制数据                             | application/octet\-stream                                                                                                                |
+| \.bmp           | Windows OS/2 位图图形                            | image/bmp                                                                                                                                |
+| \.bz            | BZip 归档                                        | application/x\-bzip                                                                                                                      |
+| \.bz2           | BZip2 归档                                       | application/x\-bzip2                                                                                                                     |
+| \.csh           | C-Shell 脚本                                     | application/x\-csh                                                                                                                       |
+| \.css           | 层叠样式表 (CSS)                                 | text/css                                                                                                                                 |
+| \.csv           | 逗号分隔值 (CSV)                                 | text/csv                                                                                                                                 |
 | \.doc           | Microsoft Word                                   | application/msword                                                                                                                       |
-| \.docx          | Microsoft Word \(OpenXML\)                       | application/vnd\.openxmlformats\-officedocument\.wordprocessingml\.document                                                              |
-| \.eot           | MS Embedded OpenType fonts                       | application/vnd\.ms\-fontobject                                                                                                          |
-| \.epub          | Electronic publication \(EPUB\)                  | application/epub\+zip                                                                                                                    |
-| \.gz            | GZip Compressed Archive                          | application/gzip                                                                                                                         |
-| \.gif           | Graphics Interchange Format \(GIF\)              | image/gif                                                                                                                                |
-| \.htm \.html    | HyperText Markup Language \(HTML\)               | text/html                                                                                                                                |
-| \.ico           | Icon format                                      | image/vnd\.microsoft\.icon                                                                                                               |
-| \.ics           | iCalendar format                                 | text/calendar                                                                                                                            |
-| \.jar           | Java Archive \(JAR\)                             | application/java\-archive                                                                                                                |
-| \.jpeg \.jpg    | JPEG images                                      | image/jpeg                                                                                                                               |
+| \.docx          | Microsoft Word (OpenXML)                         | application/vnd\.openxmlformats\-officedocument\.wordprocessingml\.document                                                              |
+| \.eot           | MS 嵌入式 OpenType 字体                          | application/vnd\.ms\-fontobject                                                                                                          |
+| \.epub          | 电子出版物 (EPUB)                                | application/epub\+zip                                                                                                                    |
+| \.gz            | GZip 压缩归档                                    | application/gzip                                                                                                                         |
+| \.gif           | 图形交换格式 (GIF)                               | image/gif                                                                                                                                |
+| \.htm \.html    | 超文本标记语言 (HTML)                            | text/html                                                                                                                                |
+| \.ico           | 图标格式                                         | image/vnd\.microsoft\.icon                                                                                                               |
+| \.ics           | iCalendar 格式                                   | text/calendar                                                                                                                            |
+| \.jar           | Java 归档 (JAR)                                  | application/java\-archive                                                                                                                |
+| \.jpeg \.jpg    | JPEG 图像                                        | image/jpeg                                                                                                                               |
 | \.js            | JavaScript                                       | text/javascript                                                                                                                          |
-| \.json          | JSON format                                      | application/json                                                                                                                         |
-| \.jsonld        | JSON\-LD format                                  | application/ld\+json                                                                                                                     |
-| \.mid \.midi    | Musical Instrument Digital Interface \(MIDI\)    | audio/midi audio/x\-midi                                                                                                                 |
-| \.mjs           | JavaScript module                                | text/javascript                                                                                                                          |
-| \.mp3           | MP3 audio                                        | audio/mpeg                                                                                                                               |
-| \.mpeg          | MPEG Video                                       | video/mpeg                                                                                                                               |
-| \.mpkg          | Apple Installer Package                          | application/vnd\.apple\.installer\+xml                                                                                                   |
-| \.odp           | OpenDocument presentation document               | application/vnd\.oasis\.opendocument\.presentation                                                                                       |
-| \.ods           | OpenDocument spreadsheet document                | application/vnd\.oasis\.opendocument\.spreadsheet                                                                                        |
-| \.odt           | OpenDocument text document                       | application/vnd\.oasis\.opendocument\.text                                                                                               |
-| \.oga           | OGG audio                                        | audio/ogg                                                                                                                                |
-| \.ogv           | OGG video                                        | video/ogg                                                                                                                                |
+| \.json          | JSON 格式                                        | application/json                                                                                                                         |
+| \.jsonld        | JSON-LD 格式                                     | application/ld\+json                                                                                                                     |
+| \.mid \.midi    | 乐器数字接口 (MIDI)                              | audio/midi audio/x\-midi                                                                                                                 |
+| \.mjs           | JavaScript 模块                                  | text/javascript                                                                                                                          |
+| \.mp3           | MP3 音频                                         | audio/mpeg                                                                                                                               |
+| \.mpeg          | MPEG 视频                                        | video/mpeg                                                                                                                               |
+| \.mpkg          | Apple 安装程序包                                 | application/vnd\.apple\.installer\+xml                                                                                                   |
+| \.odp           | OpenDocument 演示文稿                            | application/vnd\.oasis\.opendocument\.presentation                                                                                       |
+| \.ods           | OpenDocument 电子表格文档                        | application/vnd\.oasis\.opendocument\.spreadsheet                                                                                        |
+| \.odt           | OpenDocument 文本文档                            | application/vnd\.oasis\.opendocument\.text                                                                                               |
+| \.oga           | OGG 音频                                         | audio/ogg                                                                                                                                |
+| \.ogv           | OGG 视频                                         | video/ogg                                                                                                                                |
 | \.ogx           | OGG                                              | application/ogg                                                                                                                          |
-| \.opus          | Opus audio                                       | audio/opus                                                                                                                               |
-| \.otf           | OpenType font                                    | font/otf                                                                                                                                 |
-| \.png           | Portable Network Graphics                        | image/png                                                                                                                                |
-| \.pdf           | Adobe Portable Document Format \(PDF\)           | application/pdf                                                                                                                          |
-| \.php           | Hypertext Preprocessor \(Personal Home Page\)    | application/php                                                                                                                          |
+| \.opus          | Opus 音频                                        | audio/opus                                                                                                                               |
+| \.otf           | OpenType 字体                                    | font/otf                                                                                                                                 |
+| \.png           | 便携式网络图形 (PNG)                             | image/png                                                                                                                                |
+| \.pdf           | Adobe 可移植文档格式 (PDF)                       | application/pdf                                                                                                                          |
+| \.php           | 超文本预处理器 (个人主页)                        | application/php                                                                                                                          |
 | \.ppt           | Microsoft PowerPoint                             | application/vnd\.ms\-powerpoint                                                                                                          |
-| \.pptx          | Microsoft PowerPoint \(OpenXML\)                 | application/vnd\.openxmlformats\-officedocument\.presentationml\.presentation                                                            |
-| \.rar           | RAR archive                                      | application/vnd\.rar                                                                                                                     |
-| \.rtf           | Rich Text Format \(RTF\)                         | application/rtf                                                                                                                          |
-| \.sh            | Bourne shell script                              | application/x\-sh                                                                                                                        |
-| \.svg           | Scalable Vector Graphics \(SVG\)                 | image/svg\+xml                                                                                                                           |
-| \.swf           | Small web format \(SWF\) or Adobe Flash document | application/x\-shockwave\-flash                                                                                                          |
-| \.tar           | Tape Archive \(TAR\)                             | application/x\-tar                                                                                                                       |
-| \.tif \.tiff    | Tagged Image File Format \(TIFF\)                | image/tiff                                                                                                                               |
-| \.ts            | MPEG transport stream                            | video/mp2t                                                                                                                               |
-| \.ttf           | TrueType Font                                    | font/ttf                                                                                                                                 |
-| \.txt           | Text, \(generally ASCII or ISO 8859\-n\)         | text/plain                                                                                                                               |
+| \.pptx          | Microsoft PowerPoint (OpenXML)                   | application/vnd\.openxmlformats\-officedocument\.presentationml\.presentation                                                            |
+| \.rar           | RAR 归档                                         | application/vnd\.rar                                                                                                                     |
+| \.rtf           | 富文本格式 (RTF)                                 | application/rtf                                                                                                                          |
+| \.sh            | Bourne shell 脚本                                | application/x\-sh                                                                                                                        |
+| \.svg           | 可缩放矢量图形 (SVG)                             | image/svg\+xml                                                                                                                           |
+| \.swf           | 小型 Web 格式 (SWF) 或 Adobe Flash 文档          | application/x\-shockwave\-flash                                                                                                          |
+| \.tar           | 磁带归档 (TAR)                                   | application/x\-tar                                                                                                                       |
+| \.tif \.tiff    | 标签图像文件格式 (TIFF)                          | image/tiff                                                                                                                               |
+| \.ts            | MPEG 传输流                                      | video/mp2t                                                                                                                               |
+| \.ttf           | TrueType 字体                                    | font/ttf                                                                                                                                 |
+| \.txt           | 文本 (通常为 ASCII 或 ISO 8859-n)                | text/plain                                                                                                                               |
 | \.vsd           | Microsoft Visio                                  | application/vnd\.visio                                                                                                                   |
-| \.wav           | Waveform Audio Format                            | audio/wav                                                                                                                                |
-| \.weba          | WEBM audio                                       | audio/webm                                                                                                                               |
-| \.webm          | WEBM video                                       | video/webm                                                                                                                               |
-| \.webp          | WEBP image                                       | image/webp                                                                                                                               |
-| \.woff          | Web Open Font Format \(WOFF\)                    | font/woff                                                                                                                                |
-| \.woff2         | Web Open Font Format \(WOFF\)                    | font/woff2                                                                                                                               |
+| \.wav           | 波形音频格式                                     | audio/wav                                                                                                                                |
+| \.weba          | WEBM 音频                                        | audio/webm                                                                                                                               |
+| \.webm          | WEBM 视频                                        | video/webm                                                                                                                               |
+| \.webp          | WEBP 图像                                        | image/webp                                                                                                                               |
+| \.woff          | Web 开放字体格式 (WOFF)                          | font/woff                                                                                                                                |
+| \.woff2         | Web 开放字体格式 (WOFF)                          | font/woff2                                                                                                                               |
 | \.xhtml         | XHTML                                            | application/xhtml\+xml                                                                                                                   |
 | \.xls           | Microsoft Excel                                  | application/vnd\.ms\-excel                                                                                                               |
-| \.xlsx          | Microsoft Excel \(OpenXML\)                      | application/vnd\.openxmlformats\-officedocument\.spreadsheetml\.sheet                                                                    |
-| \.xml           | XML                                              | application/xml if not readable from casual users \(RFC 3023, section 3\) text/xml if readable from casual users \(RFC 3023, section 3\) |
+| \.xlsx          | Microsoft Excel (OpenXML)                        | application/vnd\.openxmlformats\-officedocument\.spreadsheetml\.sheet                                                                    |
+| \.xml           | XML                                              | application/xml 如果普通用户不可读 (RFC 3023, 第 3 节) text/xml 如果普通用户可读 (RFC 3023, 第 3 节) |
 | \.xul           | XUL                                              | application/vnd\.mozilla\.xul\+xml                                                                                                       |
-| \.zip           | ZIP archive                                      | application/zip                                                                                                                          |
-| \.3gp           | 3GPP audio/video container                       | video/3gpp audio/3gpp if it doesn't contain video                                                                                        |
-| \.3g2           | 3GPP2 audio/video container                      | video/3gpp2 audio/3gpp2 if it doesn't contain video                                                                                      |
-| \.7z            | 7\-zip archive                                   | application/x\-7z\-compressed                                                                                                            |
-| \.markdown \.md | Markdown File                                    | text/markdown                                                                                                                            |
+| \.zip           | ZIP 归档                                         | application/zip                                                                                                                          |
+| \.3gp           | 3GPP 音频/视频容器                               | video/3gpp audio/3gpp 如果不包含视频                                                                                        |
+| \.3g2           | 3GPP2 音频/视频容器                              | video/3gpp2 audio/3gpp2 如果不包含视频                                                                                      |
+| \.7z            | 7-zip 归档                                       | application/x\-7z\-compressed                                                                                                            |
+| \.markdown \.md | Markdown 文件                                    | text/markdown                                                                                                                            |
 
 {.show-header}
+

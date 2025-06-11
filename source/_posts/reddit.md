@@ -7,44 +7,44 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 17 keyboard shortcuts found on Reddit.com
+  Reddit.com 上 17 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Navigation
+### 导航
 
-| Shortcut    | Action                    |
+| 快捷键      | 功能                      |
 | ----------- | ------------------------- |
-| `Shift` `?` | Show shortcuts            |
-| `J`         | Next post or comment      |
-| `K`         | Previous post or comment  |
-| `N`         | Next post in lightbox     |
-| `P`         | Previous post in lightbox |
-| `Enter`     | Open post                 |
-| `X`         | Open or close expando     |
-| `L`         | Go to post link           |
+| `Shift` `?` | 显示快捷键                |
+| `J`         | 下一个帖子或评论          |
+| `K`         | 上一个帖子或评论          |
+| `N`         | 在灯箱中显示下一个帖子    |
+| `P`         | 在灯箱中显示上一个帖子    |
+| `Enter`     | 打开帖子                  |
+| `X`         | 打开或关闭展开内容        |
+| `L`         | 转到帖子链接              |
 
 {.shortcuts}
 
-### Action
+### 操作
 
-| Shortcut       | Action                     |
+| 快捷键         | 功能                     |
 | -------------- | -------------------------- |
-| `A`            | Upvote                     |
-| `Z`            | Downvote                   |
-| `C`            | New post                   |
-| `R`            | Reply to comments          |
-| `Ctrl` `Enter` | Submit comment or post     |
-| `S`            | Save                       |
-| `H`            | Hide                       |
-| `Q`            | Open navigation            |
-| `Enter`        | Collapse or expand comment |
+| `A`            | 赞成                       |
+| `Z`            | 反对                       |
+| `C`            | 新帖子                     |
+| `R`            | 回复评论                   |
+| `Ctrl` `Enter` | 提交评论或帖子             |
+| `S`            | 保存                       |
+| `H`            | 隐藏                       |
+| `Q`            | 打开导航                   |
+| `Enter`        | 折叠或展开评论             |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Reddit](https://i.imgur.com/7644kEy.png) _(i.imgur.com)_
+- [Reddit 键盘快捷键](https://i.imgur.com/7644kEy.png) _(i.imgur.com)_

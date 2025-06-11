@@ -7,150 +7,150 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 108 keyboard shortcuts found in Affinity Designer
+  Affinity Designer 中 108 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Designer Persona {.row-span-2}
+### 设计师角色 {.row-span-2}
 
-| Shortcut       | Action                     |
+| 快捷键         | 操作                       |
 | -------------- | -------------------------- |
-| `Esc`          | Cancel operation           |
-| `F1`           | Help                       |
-| `0-9`          | Change opacity             |
-| `Tab`          | Toggle UI                  |
-| `T`            | Cycle text tools           |
-| `Y`            | Transparency tool          |
-| `I`            | Color picker tool          |
-| `P`            | Pen tool                   |
-| `[`            | Decrease brush size        |
-| `]`            | Increase brush size        |
-| `A`            | Node tool                  |
-| `F`            | Point transform tool       |
-| `G`            | Fill tool                  |
-| `H`            | View tool                  |
-| `;`            | Toggle snapping            |
-| `\`            | Clip to canvas             |
-| `Z`            | Zoom tool                  |
-| `X`            | Toggle active selector     |
-| `C`            | Corner tool                |
-| `V`            | Move tool                  |
-| `B`            | Vector brush tool          |
-| `N`            | Pencil tool                |
-| `M`            | Cycle shape tool           |
-| `,`            | Cycle split view           |
-| `.`            | Reset selection box        |
-| `/`            | Set fill or stroke to none |
-| `Ctrl` `1`     | Zoom to 100%               |
-| `Ctrl` `2`     | Zoom to 200%               |
-| `Ctrl` `3`     | Zoom to 400%               |
-| `Ctrl` `4`     | Zoom to 800%               |
-| `Ctrl` `8`     | Zoom to actual size        |
-| `Ctrl` `9`     | Zoom to pixel size         |
-| `Ctrl` `0`     | Zoom to fit                |
-| `Ctrl` `-`     | Zoom out                   |
-| `Ctrl` `=`     | Zoom in                    |
-| `Ctrl` `Tab`   | Switch view                |
-| `Ctrl` `W`     | Close                      |
-| `Ctrl` `R`     | Rulers                     |
-| `Ctrl` `T`     | Character                  |
-| `Ctrl` `Y`     | Redo                       |
-| `Ctrl` `O`     | Open                       |
-| `Ctrl` `P`     | Print                      |
-| `Ctrl` `[`     | Back one                   |
-| `Ctrl` `]`     | Forward one                |
-| `Ctrl` `Enter` | Convert to curves          |
-| `Ctrl` `A`     | Select all                 |
-| `Ctrl` `S`     | Save                       |
-| `Ctrl` `G`     | Group                      |
-| `Ctrl` `J`     | Duplicate                  |
-| `Ctrl` `L`     | Lock                       |
-| `Ctrl` `;`     | Show guides                |
-| `Ctrl` `'`     | Show grid                  |
-| `Ctrl` `Z`     | Undo                       |
-| `Ctrl` `X`     | Cut                        |
-| `Ctrl` `C`     | Copy                       |
-| `Ctrl` `V`     | Paste                      |
-| `Ctrl` `N`     | New                        |
-| `Ctrl` `M`     | Curves                     |
-| `Ctrl` `,`     | Preferences                |
-| `Space`        | Hold for view tool         |
+| `Esc`          | 取消操作                   |
+| `F1`           | 帮助                       |
+| `0-9`          | 更改不透明度               |
+| `Tab`          | 切换用户界面               |
+| `T`            | 循环文本工具               |
+| `Y`            | 透明度工具                 |
+| `I`            | 颜色拾取器工具             |
+| `P`            | 钢笔工具                   |
+| `[`            | 减小画笔大小               |
+| `]`            | 增大画笔大小               |
+| `A`            | 节点工具                   |
+| `F`            | 点变换工具                 |
+| `G`            | 填充工具                   |
+| `H`            | 视图工具                   |
+| `;`            | 切换对齐                   |
+| `\`            | 裁剪到画布                 |
+| `Z`            | 缩放工具                   |
+| `X`            | 切换活动选择器             |
+| `C`            | 圆角工具                   |
+| `V`            | 移动工具                   |
+| `B`            | 矢量画笔工具               |
+| `N`            | 铅笔工具                   |
+| `M`            | 循环形状工具               |
+| `,`            | 循环分割视图               |
+| `.`            | 重置选择框                 |
+| `/`            | 将填充或描边设置为无       |
+| `Ctrl` `1`     | 缩放到 100%                |
+| `Ctrl` `2`     | 缩放到 200%                |
+| `Ctrl` `3`     | 缩放到 400%                |
+| `Ctrl` `4`     | 缩放到 800%                |
+| `Ctrl` `8`     | 缩放到实际大小             |
+| `Ctrl` `9`     | 缩放到像素大小             |
+| `Ctrl` `0`     | 缩放到适合                 |
+| `Ctrl` `-`     | 缩小                       |
+| `Ctrl` `=`     | 放大                       |
+| `Ctrl` `Tab`   | 切换视图                   |
+| `Ctrl` `W`     | 关闭                       |
+| `Ctrl` `R`     | 标尺                       |
+| `Ctrl` `T`     | 字符                       |
+| `Ctrl` `Y`     | 重做                       |
+| `Ctrl` `O`     | 打开                       |
+| `Ctrl` `P`     | 打印                       |
+| `Ctrl` `[`     | 后退一个                   |
+| `Ctrl` `]`     | 前进一个                   |
+| `Ctrl` `Enter` | 转换为曲线                 |
+| `Ctrl` `A`     | 全选                       |
+| `Ctrl` `S`     | 保存                       |
+| `Ctrl` `G`     |编组                       |
+| `Ctrl` `J`     | 复制                       |
+| `Ctrl` `L`     | 锁定                       |
+| `Ctrl` `;`     | 显示参考线                 |
+| `Ctrl` `'`     | 显示网格                   |
+| `Ctrl` `Z`     | 撤销                       |
+| `Ctrl` `X`     | 剪切                       |
+| `Ctrl` `C`     | 复制                       |
+| `Ctrl` `V`     | 粘贴                       |
+| `Ctrl` `N`     | 新建                       |
+| `Ctrl` `M`     | 曲线                       |
+| `Ctrl` `,`     | 首选项                     |
+| `Space`        | 按住以使用视图工具         |
 
 {.shortcuts}
 
-### Pixel Persona
+### 像素角色
 
-| Shortcut | Action                      |
+| 快捷键 | 操作                        |
 | -------- | --------------------------- |
-| `W`      | Selection brush             |
-| `E`      | Erase brush                 |
-| `I`      | Color picker tool           |
-| `O`      | Cycle dodge or burn brushes |
-| `[`      | Decrease brush size         |
-| `]`      | Increase brush size         |
-| `G`      | Flood fill tool             |
-| `L`      | Freehand selection tool     |
-| `X`      | Toggle active selector      |
-| `V`      | Move tool                   |
-| `B`      | Cycle brush or pixel tools  |
-| `M`      | Cycle marquees              |
-| `,`      | Cycle split view            |
-| `.`      | Reset selection box         |
+| `W`      | 选择画笔                    |
+| `E`      | 橡皮擦画笔                  |
+| `I`      | 颜色拾取器工具              |
+| `O`      | 循环减淡或加深画笔          |
+| `[`      | 减小画笔大小                |
+| `]`      | 增大画笔大小                |
+| `G`      | 泛光填充工具                |
+| `L`      | 自由选择工具                |
+| `X`      | 切换活动选择器              |
+| `V`      | 移动工具                    |
+| `B`      | 循环画笔或像素工具          |
+| `M`      | 循环选框工具                |
+| `,`      | 循环分割视图                |
+| `.`      | 重置选择框                  |
 
 {.shortcuts}
 
-### Modifiers and Layer Control {.row-span-2}
+### 修饰键和图层控制 {.row-span-2}
 
-| Shortcut | Action                                                                 |
+| 快捷键 | 操作                                                                   |
 | -------- | ---------------------------------------------------------------------- |
-| `Alt`    | Drawing and painting - temporarily switches to the color picker tool   |
-| `Shift`  | Freehand selection tools - connects clicked points with straight lines |
-| `Shift`  | Reverses aspect ratio constraint on scaling                            |
-| `Ctrl`   | Scales from the center of selection                                    |
-| `Alt`    | Ignores snapping during an operation                                   |
-| `Ctrl`   | Geometric shapes - moves red handles symmetrically                     |
-| `Shift`  | Path text - maintains distance between red handles                     |
-| `Ctrl`   | Path text - moves red handles symmetrically                            |
-| `Shift`  | Pixel brush painting - draws straight line connecting two strokes      |
-| `Shift`  | Pixel selections - constrains marquee to square or circle              |
-| `Ctrl`   | Pixel selection - moves underlying layer rather than selection         |
-| `Alt`    | Pixel selection - removes from selection                               |
-| `Ctrl`   | Pixel tool - erases from current layer or projects                     |
-| `Shift`  | Rotating - constrains rotations to 15 degree intervals                 |
-| `Shift`  | Selecting - scales multiple objects and layers                         |
-| `Alt`    | Selecting - selects object or layer behind current selection           |
-| `Ctrl`   | Shearing - mirrors shear around center of object                       |
-| `Shift`  | Vector drawing tools - constrains handle angles to 15 degrees          |
-| `Alt`    | Vector drawing tools - sets node to sharp for creating cusps           |
-| `Ctrl`   | Vector drawing tools - temporarily switches to node editing from pen   |
+| `Alt`    | 绘图和绘画 - 临时切换到颜色拾取器工具                                  |
+| `Shift`  | 自由选择工具 - 用直线连接点击的点                                      |
+| `Shift`  | 缩放时反转宽高比约束                                                   |
+| `Ctrl`   | 从选择中心缩放                                                         |
+| `Alt`    | 操作期间忽略对齐                                                       |
+| `Ctrl`   | 几何形状 - 对称移动红色手柄                                            |
+| `Shift`  | 路径文本 - 保持红色手柄之间的距离                                      |
+| `Ctrl`   | 路径文本 - 对称移动红色手柄                                            |
+| `Shift`  | 像素画笔绘画 - 绘制连接两次描边的直线                                  |
+| `Shift`  | 像素选择 - 将选框约束为正方形或圆形                                    |
+| `Ctrl`   | 像素选择 - 移动底层图层而不是选择                                      |
+| `Alt`    | 像素选择 - 从选择中移除                                                |
+| `Ctrl`   | 像素工具 - 从当前图层或项目中擦除                                      |
+| `Shift`  | 旋转 - 将旋转约束到 15 度间隔                                          |
+| `Shift`  | 选择 - 缩放多个对象和图层                                              |
+| `Alt`    | 选择 - 选择当前选择后面的对象或图层                                    |
+| `Ctrl`   | 倾斜 - 围绕对象中心镜像倾斜                                            |
+| `Shift`  | 矢量绘图工具 - 将手柄角度约束到 15 度                                  |
+| `Alt`    | 矢量绘图工具 - 将节点设置为尖锐以创建尖点                              |
+| `Ctrl`   | 矢量绘图工具 - 从钢笔临时切换到节点编辑                                |
 
 {.shortcuts}
 
-### Advanced Text
+### 高级文本
 
-| Shortcut                    | Action                   |
+| 快捷键                    | 操作                     |
 | --------------------------- | ------------------------ |
-| `Ctrl` `T`                  | Character panel          |
-| `Ctrl` `Shift` `T`          | Typography dialog        |
-| `Ctrl` `B`                  | Bold                     |
-| `Ctrl` `I`                  | Italic                   |
-| `Ctrl` `U`                  | Underline                |
-| `Ctrl` `Alt` `L`            | Align left               |
-| `Ctrl` `Alt` `C`            | Align center             |
-| `Ctrl` `Alt` `R`            | Align right              |
-| `Alt` `Shift` `Left`        | Tighten spacing more     |
-| `Alt` `Shift` `Right`       | Loosen spacing more      |
-| `Ctrl` `Alt` `Shift` `Up`   | Precise raise baseline   |
-| `Ctrl` `Alt` `Shift` `Down` | Precise lower baseline   |
-| `Ctrl` `Alt` `Down`         | Precise increase leading |
-| `Ctrl` `Alt` `Up`           | Precise decrease leading |
+| `Ctrl` `T`                  | 字符面板                 |
+| `Ctrl` `Shift` `T`          | 排版对话框               |
+| `Ctrl` `B`                  | 加粗                     |
+| `Ctrl` `I`                  | 斜体                     |
+| `Ctrl` `U`                  | 下划线                   |
+| `Ctrl` `Alt` `L`            | 左对齐                   |
+| `Ctrl` `Alt` `C`            | 居中对齐                 |
+| `Ctrl` `Alt` `R`            | 右对齐                   |
+| `Alt` `Shift` `Left`        | 进一步收紧间距           |
+| `Alt` `Shift` `Right`       | 进一步放宽间距           |
+| `Ctrl` `Alt` `Shift` `Up`   | 精确提升基线             |
+| `Ctrl` `Alt` `Shift` `Down` | 精确降低基线             |
+| `Ctrl` `Alt` `Down`         | 精确增加行距             |
+| `Ctrl` `Alt` `Up`           | 精确减小行距             |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Affinity Designer](https://affinityspotlight.com/article/downloadable-affinity-keyboard-shortcut-cheat-sheets/)
+- [Affinity Designer 键盘快捷键](https://affinityspotlight.com/article/downloadable-affinity-keyboard-shortcut-cheat-sheets/)
   _(affinityspotlight.com)_

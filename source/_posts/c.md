@@ -1,18 +1,18 @@
 ---
-title: C
+title: C 语言
 date: 2022-12-30 09:51:44
 background: bg-[#2a338a]
 tags:
 categories:
-  - Programming
+  - 编程
 intro: |
-  C quick reference cheat sheet that provides basic syntax and methods.
+  C 语言快速参考备忘单，提供基本语法和方法。
 plugins:
   - copyCode
   - runCode
 ---
 
-## Getting Started
+## 入门
 
 ### hello.c {.row-span-2}
 
@@ -26,97 +26,98 @@ int main(void) {
 }
 ```
 
-Compile `hello.c` file with `gcc`
+使用 `gcc` 编译 `hello.c` 文件
 
 ```bash
 $ gcc -Wall -g hello.c -o hello
 ```
 
-Run the compiled binary `hello`
+运行编译后的二进制文件 `hello`
 
 ```bash
 $ ./hello
 ```
 
-Output => Hello World!
+输出 => Hello World!
 
-### Variables {.row-span-2}
+### 变量 {.row-span-2}
 
 ```c
 int myNum = 15;
 
-int myNum2; // do not assign, then assign
+int myNum2; // 不赋值，然后赋值
 myNum2 = 15;
 
-int myNum3 = 15; // myNum3 is 15
-myNum3 = 10;     // myNum3 is now 10
+int myNum3 = 15; // myNum3 是 15
+myNum3 = 10;     // myNum3 现在是 10
 
-float myFloat = 5.99; // floating point number
-char myLetter = 'D';  // character
+float myFloat = 5.99; // 浮点数
+char myLetter = 'D';  // 字符
 
 int x = 5;
 int y = 6;
-int sum = x + y; // add variables to sum
+int sum = x + y; // 将变量相加得到 sum
 
-// declare multiple variables
+// 声明多个变量
 int a = 5, b = 6, c = 50;
 ```
 
-### Constants
+### 常量
 
 ```c
 const int minutesPerHour = 60;
 const float PI = 3.14;
 ```
 
-Best Practices
+最佳实践
 
 ```c
 const int BIRTHYEAR = 1980;
 ```
 
-### Comment
+### 注释
 
 ```c
-// this is a comment
-printf("Hello World!\n"); // Can comment anywhere in file
+// 这是单行注释
+printf("Hello World!\n"); // 可以在文件中的任何位置注释
 
-/*Multi-line comment, print Hello World!
-to the screen, it's awesome */
+/* 多行注释，
+   在屏幕上打印 Hello World!
+   这很棒 */
 ```
 
-### Print text
+### 打印文本
 
 ```c
-printf("I am learning C.\n");
+printf("我正在学习 C 语言。\n");
 int testInteger = 5;
-printf("Number = %d\n", testInteger);
+printf("数字 = %d\n", testInteger);
 
-float f = 5.99; // floating point number
-printf("Value = %f\n", f);
+float f = 5.99; // 浮点数
+printf("值 = %f\n", f);
 
-short a = 0b1010110; // binary number
-int b = 02713; // octal number
-long c = 0X1DAB83; // hexadecimal number
+short a = 0b1010110; // 二进制数
+int b = 02713; // 八进制数
+long c = 0X1DAB83; // 十六进制数
 
-// output in octal form
+// 以八进制形式输出
 printf("a=%ho, b=%o, c=%lo\n", a, b, c);
-// output => a=126, b=2713, c=7325603
+// 输出 => a=126, b=2713, c=7325603
 
-// Output in decimal form
+// 以十进制形式输出
 printf("a=%hd, b=%d, c=%ld\n", a, b, c);
-// output => a=86, b=1483, c=1944451
+// 输出 => a=86, b=1483, c=1944451
 
-// output in hexadecimal form (letter lowercase)
+// 以十六进制形式输出 (字母小写)
 printf("a=%hx, b=%x, c=%lx\n", a, b, c);
-// output => a=56, b=5cb, c=1dab83
+// 输出 => a=56, b=5cb, c=1dab83
 
-// Output in hexadecimal (capital letters)
+// 以十六进制形式输出 (字母大写)
 printf("a=%hX, b=%X, c=%lX\n", a, b, c);
-// output => a=56, b=5CB, c=1DAB83
+// 输出 => a=56, b=5CB, c=1DAB83
 ```
 
-### Control the number of spaces
+### 控制空格数量
 
 ```c
 int a1 = 20, a2 = 345, a3 = 700;
@@ -130,7 +131,7 @@ printf("%-9d %-9d %-9d\n", c1, c2, c3);
 printf("%-9d %-9d %-9d\n", d1, d2, d3);
 ```
 
-output result
+输出结果
 
 ```bash
 20        345       700
@@ -139,56 +140,54 @@ output result
 34        0         23
 ```
 
-In `%-9d`, `d` means to output in `10` base, `9` means to occupy at least `9` characters width, and the width is not
-enough to fill with spaces, `-` means left alignment
+在 `%-9d` 中，`d` 表示以 `10` 进制输出，`9` 表示至少占用 `9` 个字符宽度，宽度不足则用空格填充，`-` 表示左对齐。
 
-### Strings
+### 字符串
 
 ```c
 char greetings[] = "Hello World!";
 printf("%s", greetings);
 ```
 
-Access string
+访问字符串
 
 ```c
 char greetings[] = "Hello World!";
 printf("%c", greetings[0]);
 ```
 
-Modify string
+修改字符串
 
 ```c
 char greetings[] = "Hello World!";
 greetings[0] = 'J';
 
 printf("%s", greetings);
-// prints "Jello World!"
+// 打印 "Jello World!"
 ```
 
-Another way to create a string
+创建字符串的另一种方法
 
 ```c
 char greetings[] = {'H','e','l','l','\0'};
 
 printf("%s", greetings);
-// print "Hell!"
+// 打印 "Hell!"
 ```
 
-Creating String using character pointer (String Literals)
+使用字符指针创建字符串 (字符串字面量)
 
 ```c
 char *greetings = "Hello";
 printf("%s", greetings);
-// print "Hello!"
+// 打印 "Hello!"
 ```
 
-**NOTE**: String literals might be stored in read-only section of memory. Modifying a string literal invokes undefined
-behavior. You can't modify it!
+**注意**: 字符串字面量可能存储在内存的只读区域。修改字符串字面量会引发未定义行为。你不能修改它！
 
-`C` **does not** have a String type, use `char` type and create an `array` of characters
+`C` 语言**没有** String 类型，使用 `char` 类型并创建一个字符 `数组`。
 
-### Condition {.row-span-2}
+### 条件 {.row-span-2}
 
 ```c
 int time = 20;
@@ -197,7 +196,7 @@ if (time < 18) {
 } else {
   printf("Good evening!\n");
 }
-// Output -> "Good evening!"
+// 输出 -> "Good evening!"
 int time = 22;
 if (time < 10) {
   printf("Good morning!\n");
@@ -206,17 +205,17 @@ if (time < 10) {
 } else {
   printf("Good evening!\n");
 }
-// Output -> "Good evening!"
+// 输出 -> "Good evening!"
 ```
 
-### Ternary operator {.col-span-2}
+### 三元运算符 {.col-span-2}
 
 ```c
 int age = 20;
 (age > 19) ? printf("Adult\n") : printf("Teenager\n");
 ```
 
-### Switch
+### Switch 语句
 
 ```c
 int day = 4;
@@ -227,10 +226,10 @@ switch (day) {
   default:
     printf("Weekend!\n");
 }
-// output -> "Thursday" (day 4)
+// 输出 -> "Thursday" (day 4)
 ```
 
-### While Loop
+### While 循环
 
 ```c
 int i = 0;
@@ -241,10 +240,9 @@ while (i < 5) {
 }
 ```
 
-**NOTE**: Don't forget to increment the variable used in the condition, otherwise the loop will never end and become an
-"infinite loop"!
+**注意**: 不要忘记增加条件中使用的变量，否则循环将永远不会结束并变成“无限循环”！
 
-### Do/While Loop
+### Do/While 循环
 
 ```c
 int i = 0;
@@ -255,7 +253,7 @@ do {
 } while (i < 5);
 ```
 
-### For Loop
+### For 循环
 
 ```c
 for (int i = 0; i < 5; i++) {
@@ -263,7 +261,7 @@ for (int i = 0; i < 5; i++) {
 }
 ```
 
-### Break out of the loop Break/Continue {.row-span-2}
+### 跳出循环 Break/Continue {.row-span-2}
 
 ```c
 for (int i = 0; i < 10; i++) {
@@ -274,7 +272,7 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
-Break out of the loop when `i` is equal to `4`
+当 `i` 等于 `4` 时跳出循环。
 
 ```c
 for (int i = 0; i < 10; i++) {
@@ -285,9 +283,9 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
-Example to skip the value of `4`
+跳过值为 `4` 的示例。
 
-### While Break Example
+### While Break 示例
 
 ```c
 int i = 0;
@@ -302,7 +300,7 @@ while (i < 10) {
 }
 ```
 
-### While continue example
+### While continue 示例
 
 ```c
 int i = 0;
@@ -317,16 +315,16 @@ while (i < 10) {
 }
 ```
 
-### Arrays {.row-span-2}
+### 数组 {.row-span-2}
 
 ```c
 int myNumbers[] = {25, 50, 75, 100};
 
 printf("%d", myNumbers[0]);
-// output 25
+// 输出 25
 ```
 
-Change array elements
+更改数组元素
 
 ```c
 int myNumbers[] = {25, 50, 75, 100};
@@ -335,7 +333,7 @@ myNumbers[0] = 33;
 printf("%d", myNumbers[0]);
 ```
 
-Loop through the array
+遍历数组
 
 ```c
 int myNumbers[] = {25, 50, 75, 100};
@@ -346,42 +344,42 @@ for (i = 0; i < 4; i++) {
 }
 ```
 
-Set array size
+设置数组大小
 
 ```c
-// Declare an array of four integers:
+// 声明一个包含四个整数的数组：
 int myNumbers[4];
 
-// add element
+// 添加元素
 myNumbers[0] = 25;
 myNumbers[1] = 50;
 myNumbers[2] = 75;
 myNumbers[3] = 100;
 ```
 
-### Enumeration Enum {.col-span-2}
+### 枚举 Enum {.col-span-2}
 
 ```c
 enum week { Mon = 1, Tues, Wed, Thurs, Fri, Sat, Sun };
 ```
 
-Define enum variable
+定义枚举变量
 
 ```c
 enum week a, b, c;
 enum week { Mon = 1, Tues, Wed, Thurs, Fri, Sat, Sun } a, b, c;
 ```
 
-With an enumeration variable, you can assign the value in the list to it
+使用枚举变量，可以将列表中的值赋给它
 
 ```c
 enum week { Mon = 1, Tues, Wed, Thurs, Fri, Sat, Sun };
 enum week a = Mon, b = Wed, c = Sat;
-// or
+// 或者
 enum week{ Mon = 1, Tues, Wed, Thurs, Fri, Sat, Sun } a = Mon, b = Wed, c = Sat;
 ```
 
-### Enumerate sample applications
+### 枚举示例应用
 
 ```c
 enum week {Mon = 1, Tues, Wed, Thurs} day;
@@ -397,86 +395,86 @@ switch(day) {
 }
 ```
 
-### User input
+### 用户输入
 
 ```c
-// Create an integer variable to store the number we got from the user
+// 创建一个整型变量来存储从用户那里获取的数字
 int myNum;
 
-// Ask the user to enter a number
-printf("Enter a number: ");
+// 要求用户输入一个数字
+printf("输入一个数字: ");
 
-// Get and save the number entered by the user
+// 获取并保存用户输入的数字
 scanf("%d", &myNum);
 
-// Output the number entered by the user
-printf("The number you entered: %d\n", myNum);
+// 输出用户输入的数字
+printf("你输入的数字是: %d\n", myNum);
 ```
 
-### User input string
+### 用户输入字符串
 
 ```c
-// create a string
+// 创建一个字符串
 char firstName[30];
-// Ask the user to enter some text
-printf("Enter your name: ");
-// get and save the text
+// 要求用户输入一些文本
+printf("输入你的名字: ");
+// 获取并保存文本
 scanf("%s", &firstName);
-// output text
-printf("Hello %s.\n", firstName);
+// 输出文本
+printf("你好 %s。\n", firstName);
 ```
 
-### memory address
+### 内存地址
 
-When a variable is created, it is assigned a memory address
+创建变量时，会为其分配一个内存地址。
 
 ```c
 int myAge = 43;
 
 printf("%p", &myAge);
-// Output: 0x7ffe5367e044
+// 输出: 0x7ffe5367e044
 ```
 
-To access it, use the reference operator (`&`)
+要访问它，请使用引用运算符 (`&`)。
 
-### create pointer
+### 创建指针
 
 ```c
-int myAge = 43; // an int variable
-printf("%d\n", myAge); // output the value of myAge(43)
+int myAge = 43; // 一个 int 变量
+printf("%d\n", myAge); // 输出 myAge 的值 (43)
 
-// Output the memory address of myAge (0x7ffe5367e044)
+// 输出 myAge 的内存地址 (0x7ffe5367e044)
 printf("%p\n", &myAge);
 ```
 
-### pointer variable {.col-span-2}
+### 指针变量 {.col-span-2}
 
 ```c
-int myAge = 43; // an int variable
-int*ptr = &myAge; // pointer variable named ptr, used to store the address of myAge
+int myAge = 43; // 一个 int 变量
+int*ptr = &myAge; // 名为 ptr 的指针变量，用于存储 myAge 的地址
 
-printf("%d\n", myAge); // print the value of myAge (43)
+printf("%d\n", myAge); // 打印 myAge 的值 (43)
 
-printf("%p\n", &myAge); // output the memory address of myAge (0x7ffe5367e044)
-printf("%p\n", ptr); // use the pointer (0x7ffe5367e044) to output the memory address of myAge
+printf("%p\n", &myAge); // 输出 myAge 的内存地址 (0x7ffe5367e044)
+printf("%p\n", ptr); // 使用指针 (0x7ffe5367e044) 输出 myAge 的内存地址
 ```
 
-### Dereference
+### 解引用
 
 ```c
-int myAge = 43; // variable declaration
-int*ptr = &myAge; // pointer declaration
+int myAge = 43; // 变量声明
+int*ptr = &myAge; // 指针声明
 
-// Reference: output myAge with a pointer
-// memory address (0x7ffe5367e044)
+// 引用：使用指针输出 myAge 的
+// 内存地址 (0x7ffe5367e044)
 printf("%p\n", ptr);
-// dereference: output the value of myAge with a pointer (43)
+// 解引用：使用指针输出 myAge 的值 (43)
 printf("%d\n", *ptr);
 ```
 
-## Operators
+## 运算符
 
-### Arithmetic Operators
+### 算术运算符
 
 ```c
 int myNum = 100 + 50;
@@ -487,19 +485,19 @@ int sum3 = sum2 + sum2; // 800 (400 + 400)
 
 ---
 
-| Operator | Name      | Example |
-| -------- | --------- | ------- |
-| `+`      | Add       | `x + y` |
-| `-`      | Subtract  | `x - y` |
-| `*`      | Multiply  | `x * y` |
-| `/`      | Divide    | `x / y` |
-| `%`      | Modulo    | `x % y` |
-| `++`     | Increment | `++x`   |
-| `--`     | Decrement | `--x`   |
+| 运算符 | 名称     | 示例    |
+| ------ | -------- | ------- |
+| `+`    | 加       | `x + y` |
+| `-`    | 减       | `x - y` |
+| `*`    | 乘       | `x * y` |
+| `/`    | 除       | `x / y` |
+| `%`    | 取模     | `x % y` |
+| `++`   | 自增     | `++x`   |
+| `--`   | 自减     | `--x`   |
 
-### Assignment operator
+### 赋值运算符
 
-| Example              | As                        |
+| 示例                 | 等同于                    |
 | -------------------- | ------------------------- |
 | x `=` 5              | x `=` 5                   |
 | x `+=` 3             | x `=` x `+` 3             |
@@ -513,40 +511,40 @@ int sum3 = sum2 + sum2; // 800 (400 + 400)
 | x `>>=` 3            | x `=` x `>>` 3            |
 | x `<<=` 3            | x `=` x `<<` 3            |
 
-### Comparison Operators
+### 比较运算符
 
 ```c
 int x = 5;
 int y = 3;
 
 printf("%d", x > y);
-// returns 1 (true) because 5 is greater than 3
+// 返回 1 (true)，因为 5 大于 3
 ```
 
 ---
 
-| Symbol | Name                     | Example  |
-| ------ | ------------------------ | -------- |
-| `==`   | equals                   | x `==` y |
-| `!=`   | not equal to             | x `!=` y |
-| `>`    | greater than             | x `>` y  |
-| `<`    | less than                | x `<` y  |
-| `>=`   | greater than or equal to | x `>=` y |
-| `<=`   | less than or equal to    | x `<=` y |
+| 符号 | 名称             | 示例     |
+| ---- | ---------------- | -------- |
+| `==` | 等于             | x `==` y |
+| `!=` | 不等于           | x `!=` y |
+| `>`  | 大于             | x `>` y  |
+| `<`  | 小于             | x `<` y  |
+| `>=` | 大于或等于       | x `>=` y |
+| `<=` | 小于或等于       | x `<=` y |
 
-Comparison operators are used to compare two values
+比较运算符用于比较两个值。
 
-### Logical Operators {.col-span-2}
+### 逻辑运算符 {.col-span-2}
 
-| Symbol            | Name          | Description                                   | Example                       |
-| ----------------- | ------------- | --------------------------------------------- | ----------------------------- |
-| `&&`              | `and` logical | returns true if both statements are true      | `x < 5 && x < 10`             |
-| <code>\|\|</code> | `or` logical  | returns true if one of the statements is true | <code>x < 5 \|\| x < 4</code> |
-| `!`               | `not` logical | Invert result, return false if true           | `!(x < 5 && x < 10)`          |
+| 符号              | 名称     | 描述                                   | 示例                          |
+| ----------------- | -------- | -------------------------------------- | ----------------------------- |
+| `&&`              | 逻辑与   | 如果两个语句都为真，则返回真           | `x < 5 && x < 10`             |
+| <code>\|\|</code> | 逻辑或   | 如果其中一个语句为真，则返回真         | <code>x < 5 \|\| x < 4</code> |
+| `!`               | 逻辑非   | 反转结果，如果为真则返回假             | `!(x < 5 && x < 10)`          |
 
 {.show-header}
 
-### Operator Examples {.row-span-2}
+### 运算符示例 {.row-span-2}
 
 ```c
 unsigned int a = 60; /*60 = 0011 1100 */
@@ -554,67 +552,67 @@ unsigned int b = 13; /*13 = 0000 1101 */
 int c = 0;
 
 c = a & b; /*12 = 0000 1100 */
-printf("Line 1 -the value of c is %d\n", c);
+printf("第 1 行 - c 的值是 %d\n", c);
 
 c = a | b; /*61 = 0011 1101 */
-printf("Line 2 -the value of c is %d\n", c);
+printf("第 2 行 - c 的值是 %d\n", c);
 c = a ^ b; /*49 = 0011 0001 */
-printf("Line 3 -the value of c is %d\n", c);
+printf("第 3 行 - c 的值是 %d\n", c);
 c = ~a; /*-61 = 1100 0011 */
-printf("Line 4 -The value of c is %d\n", c);
+printf("第 4 行 - c 的值是 %d\n", c);
 c = a << 2; /*240 = 1111 0000 */
-printf("Line 5 -the value of c is %d\n", c);
+printf("第 5 行 - c 的值是 %d\n", c);
 c = a >> 2; /*15 = 0000 1111 */
-printf("Line 6 -The value of c is %d\n", c);
+printf("第 6 行 - c 的值是 %d\n", c);
 ```
 
-### Bitwise operators {.col-span-2}
+### 位运算符 {.col-span-2}
 
-| Operator        | Description                                                     | Instance                                              |
-| :-------------- | :-------------------------------------------------------------- | :---------------------------------------------------- |
-| `&`             | Bitwise AND operation, "AND" operation by binary digits         | `(A & B)` will get `12` which is 0000 1100            |
-| <code>\|</code> | Bitwise OR operator, "or" operation by binary digit             | <code>(A \| B)</code> will get`61` which is 0011 1101 |
-| `^`             | XOR operator, perform "XOR" operation by binary digits          | `(A ^ B)` will get `49` which is 0011 0001            |
-| `~`             | Inversion operator, perform "inversion" operation by binary bit | `(~A)` will get `-61` which is 1100 0011              |
-| `<<`            | binary left shift operator                                      | `A << 2` will get `240` which is 1111 0000            |
-| `>>`            | binary right shift operator                                     | `A >> 2` will get `15` which is 0000 1111             |
-
-{.show-header}
-
-## Data Types
-
-### Basic data types {.col-span-2}
-
-| Data Type            | Size             | Range                              | Description                         |
-| -------------------- | ---------------- | ---------------------------------- | :---------------------------------- |
-| `char`               | 1 byte           | `−128` ~ `127`                     | single character/alphanumeric/ASCII |
-| `signed char`        | 1 byte           | `−128` ~ `127`                     |                                     |
-| `unsigned char`      | 1 byte           | `0` ~ `255`                        |                                     |
-| `int`                | `2` to `4` bytes | `−32,768` ~ `32,767`               | store integers                      |
-| `signed int`         | 2 bytes          | `−32,768` ~ `32,767`               |                                     |
-| `unsigned int`       | 2 bytes          | `0` ~ `65,535`                     |                                     |
-| `short int`          | 2 bytes          | `−32,768` ~ `32,767`               |                                     |
-| `signed short int`   | 2 bytes          | `−32,768` ~ `32,767`               |                                     |
-| `unsigned short int` | 2 bytes          | `0` ~ `65,535`                     |                                     |
-| `long int`           | 4 bytes          | `-2,147,483,648` ~ `2,147,483,647` |                                     |
-| `signed long int`    | 4 bytes          | `-2,147,483,648` ~ `2,147,483,647` |                                     |
-| `unsigned long int`  | 4 bytes          | `0` ~ `4,294,967,295`              |                                     |
-| `float`              | 4 bytes          | `3.4E-38` ~ `3.4E+38`              |                                     |
-| `double`             | 8 bytes          | `1.7E-308` ~ `1.7E+308`            |                                     |
-| `long double`        | 10 bytes         | `3.4E-4932` ~ `1.1E+4932`          |                                     |
+| 运算符        | 描述                                                     | 实例                                              |
+| :-------------- | :------------------------------------------------------- | :---------------------------------------------------- |
+| `&`             | 按位与操作，按二进制位进行“与”操作                       | `(A & B)` 将得到 `12`，即 0000 1100            |
+| <code>\|</code> | 按位或运算符，按二进制位进行“或”操作                     | <code>(A \| B)</code> 将得到 `61`，即 0011 1101 |
+| `^`             | 异或运算符，按二进制位进行“异或”操作                     | `(A ^ B)` 将得到 `49`，即 0011 0001            |
+| `~`             | 取反运算符，按二进制位进行“取反”操作                     | `(~A)` 将得到 `-61`，即 1100 0011              |
+| `<<`            | 二进制左移运算符                                         | `A << 2` 将得到 `240`，即 1111 0000            |
+| `>>`            | 二进制右移运算符                                         | `A >> 2` 将得到 `15`，即 0000 1111             |
 
 {.show-header}
 
-### Data types
+## 数据类型
+
+### 基本数据类型 {.col-span-2}
+
+| 数据类型             | 大小             | 范围                               | 描述                         |
+| -------------------- | ---------------- | ---------------------------------- | :--------------------------- |
+| `char`               | 1 字节           | `−128` ~ `127`                     | 单个字符/字母数字/ASCII      |
+| `signed char`        | 1 字节           | `−128` ~ `127`                     |                              |
+| `unsigned char`      | 1 字节           | `0` ~ `255`                        |                              |
+| `int`                | `2` 到 `4` 字节  | `−32,768` ~ `32,767`               | 存储整数                     |
+| `signed int`         | 2 字节           | `−32,768` ~ `32,767`               |                              |
+| `unsigned int`       | 2 字节           | `0` ~ `65,535`                     |                              |
+| `short int`          | 2 字节           | `−32,768` ~ `32,767`               |                              |
+| `signed short int`   | 2 字节           | `−32,768` ~ `32,767`               |                              |
+| `unsigned short int` | 2 字节           | `0` ~ `65,535`                     |                              |
+| `long int`           | 4 字节           | `-2,147,483,648` ~ `2,147,483,647` |                              |
+| `signed long int`    | 4 字节           | `-2,147,483,648` ~ `2,147,483,647` |                              |
+| `unsigned long int`  | 4 字节           | `0` ~ `4,294,967,295`              |                              |
+| `float`              | 4 字节           | `3.4E-38` ~ `3.4E+38`              |                              |
+| `double`             | 8 字节           | `1.7E-308` ~ `1.7E+308`            |                              |
+| `long double`        | 10 字节          | `3.4E-4932` ~ `1.1E+4932`          |                              |
+
+{.show-header}
+
+### 数据类型
 
 ```c
-// create variables
-int myNum = 5; // integer
-float myFloatNum = 5.99; // floating point number
-char myLetter = 'D'; // string
-// High precision floating point data or numbers
+// 创建变量
+int myNum = 5; // 整数
+float myFloatNum = 5.99; // 浮点数
+char myLetter = 'D'; // 字符
+// 高精度浮点数据或数字
 double myDouble = 3.2325467;
-// print output variables
+// 打印输出变量
 printf("%d\n", myNum);
 printf("%f\n", myFloatNum);
 printf("%c\n", myLetter);
@@ -623,121 +621,121 @@ printf("%lf\n", myDouble);
 
 ---
 
-| Data Type | Description                          |
-| :-------- | :----------------------------------- |
-| `char`    | character type                       |
-| `short`   | short integer                        |
-| `int`     | integer type                         |
-| `long`    | long integer                         |
-| `float`   | single-precision floating-point type |
-| `double`  | double-precision floating-point type |
-| `void`    | no type                              |
+| 数据类型 | 描述                         |
+| :------- | :--------------------------- |
+| `char`   | 字符类型                     |
+| `short`  | 短整型                       |
+| `int`    | 整型                         |
+| `long`   | 长整型                       |
+| `float`  | 单精度浮点类型               |
+| `double` | 双精度浮点类型               |
+| `void`   | 无类型                       |
 
-### Basic format specifiers
+### 基本格式说明符
 
-| Format Specifier | Data Type                                             |
-| ---------------- | :---------------------------------------------------- |
-| `%d` or `%i`     | `int` integer                                         |
-| `%f`             | `float` single-precision decimal type                 |
-| `%lf`            | `double` high precision floating point data or number |
-| `%c`             | `char` character                                      |
-| `%s`             | for `strings` strings                                 |
-
-{.show-header}
-
-### Separate base format specifiers
-
-| Format      | Short         | Int         | Long          |
-| ----------- | ------------- | ----------- | :------------ |
-| Octal       | `%ho`         | `%o`        | `%lo`         |
-| Decimal     | `%hd`         | `%d`        | `%ld`         |
-| Hexadecimal | `%hx` / `%hX` | `%x` / `%X` | `%lx` / `%lX` |
+| 格式说明符 | 数据类型                                             |
+| ---------- | :--------------------------------------------------- |
+| `%d` 或 `%i` | `int` 整数                                         |
+| `%f`       | `float` 单精度十进制类型                             |
+| `%lf`      | `double` 高精度浮点数据或数字                        |
+| `%c`       | `char` 字符                                        |
+| `%s`       | 用于 `strings` 字符串                                |
 
 {.show-header}
 
-### Data format example
+### 单独的进制格式说明符
+
+| 格式      | 短整型        | 整型        | 长整型        |
+| --------- | ------------- | ----------- | :------------ |
+| 八进制    | `%ho`         | `%o`        | `%lo`         |
+| 十进制    | `%hd`         | `%d`        | `%ld`         |
+| 十六进制  | `%hx` / `%hX` | `%x` / `%X` | `%lx` / `%lX` |
+
+{.show-header}
+
+### 数据格式示例
 
 ```c
 int myNum = 5;
-float myFloatNum = 5.99; // floating point number
-char myLetter = 'D';     // string
-// print output variables
+float myFloatNum = 5.99; // 浮点数
+char myLetter = 'D';     // 字符
+// 打印输出变量
 printf("%d\n", myNum);
 printf("%f\n", myFloatNum);
 printf("%c\n", myLetter);
 ```
 
-## C Preprocessor
+## C 预处理器
 
-### Preprocessor Directives {.row-span-2}
+### 预处理指令 {.row-span-2}
 
-| Directive  | Description                                                          |
-| ---------- | :------------------------------------------------------------------- |
-| `#define`  | define a macro                                                       |
-| `#include` | include a source code file                                           |
-| `#undef`   | undefined macro                                                      |
-| `#ifdef`   | Returns true if the macro is defined                                 |
-| `#ifndef`  | Returns true if the macro is not defined                             |
-| `#if`      | Compile the following code if the given condition is true            |
-| `#else`    | Alternative to `#if`                                                 |
-| `#elif`    | If the `#if` condition is false, the current condition is `true`     |
-| `#endif`   | End a `#if...#else` conditional compilation block                    |
-| `#error`   | Print an error message when standard error is encountered            |
-| `#pragma`  | Issue special commands to the compiler using the standardized method |
+| 指令       | 描述                                                         |
+| ---------- | :----------------------------------------------------------- |
+| `#define`  | 定义一个宏                                                   |
+| `#include` | 包含一个源代码文件                                           |
+| `#undef`   | 取消定义宏                                                   |
+| `#ifdef`   | 如果宏已定义，则返回真                                       |
+| `#ifndef`  | 如果宏未定义，则返回真                                       |
+| `#if`      | 如果给定条件为真，则编译以下代码                             |
+| `#else`    | `#if` 的替代方案                                             |
+| `#elif`    | 如果 `#if` 条件为假，且当前条件为 `真`                       |
+| `#endif`   | 结束一个 `#if...#else` 条件编译块                            |
+| `#error`   | 当遇到标准错误时打印错误消息                                 |
+| `#pragma`  | 使用标准化方法向编译器发出特殊命令                           |
 
 {.show-header}
 
 ```c
-// replace all MAX_ARRAY_LENGTH with 20
+// 将所有 MAX_ARRAY_LENGTH 替换为 20
 #define MAX_ARRAY_LENGTH 20
-// Get stdio.h from the system library
+// 从系统库获取 stdio.h
 #include <stdio.h>
-// Get myheader.h in the local directory
+// 从本地目录获取 myheader.h
 #include "myheader.h"
 #undef FILE_SIZE
-#define FILE_SIZE 42 // undefine and define to 42
+#define FILE_SIZE 42 // 取消定义并定义为 42
 ```
 
-### Predefined macros {.row-span-2}
+### 预定义宏 {.row-span-2}
 
-| Macro      | Description                                                           |
-| ---------- | :-------------------------------------------------------------------- |
-| `__DATE__` | The current date, a character constant in the format "MMM DD YYYY"    |
-| `__TIME__` | The current time, a character constant in the format "HH:MM:SS"       |
-| `__FILE__` | This will contain the current filename, a string constant             |
-| `__LINE__` | This will contain the current line number, a decimal constant         |
-| `__STDC__` | Defined as `1` when the compiler compiles against the `ANSI` standard |
+| 宏         | 描述                                                           |
+| ---------- | :------------------------------------------------------------- |
+| `__DATE__` | 当前日期，格式为 "MMM DD YYYY" 的字符常量                      |
+| `__TIME__` | 当前时间，格式为 "HH:MM:SS" 的字符常量                         |
+| `__FILE__` | 这将包含当前文件名，一个字符串常量                             |
+| `__LINE__` | 这将包含当前行号，一个十进制常量                               |
+| `__STDC__` | 当编译器针对 `ANSI` 标准进行编译时定义为 `1`                   |
 
 {.show-header}
 
-`ANSI C` defines a number of macros that you can use, but you cannot directly modify these predefined macros
+`ANSI C` 定义了许多您可以使用的宏，但您不能直接修改这些预定义的宏。
 
-#### Predefined macro example
+#### 预定义宏示例
 
 ```c
 #include <stdio.h>
 
 int main(void) {
-  printf("File: %s\n", __FILE__);
-  printf("Date: %s\n", __DATE__);
-  printf("Time: %s\n", __TIME__);
-  printf("Line: %d\n", __LINE__);
+  printf("文件: %s\n", __FILE__);
+  printf("日期: %s\n", __DATE__);
+  printf("时间: %s\n", __TIME__);
+  printf("行号: %d\n", __LINE__);
   printf("ANSI: %d\n", __STDC__);
 }
 ```
 
-### Macro continuation operator (\\)
+### 宏续行运算符 (\\)
 
-A macro is usually written on a single line.
+宏通常写在一行上。
 
 ```c
 #define message_for(a, b) \
     printf(#a " and " #b ": We love you!\n")
 ```
 
-If the macro is too long to fit on a single line, use the macro continuation operator `\`
+如果宏太长而无法放在一行上，请使用宏续行运算符 `\`。
 
-### String Constantization Operator (#)
+### 字符串常量化运算符 (#)
 
 ```c
 #include <stdio.h>
@@ -752,15 +750,15 @@ int main(void) {
 }
 ```
 
-When the above code is compiled and executed, it produces the following result:
+当上述代码编译并执行时，会产生以下结果：
 
 ```
 Carole and Debra: We love you!
 ```
 
-When you need to convert a macro parameter to a string constant, use the string constant operator `#`
+当您需要将宏参数转换为字符串常量时，请使用字符串常量化运算符 `#`。
 
-### tag paste operator (##)
+### 标记粘贴运算符 (##)
 
 ```c
 #include <stdio.h>
@@ -775,7 +773,7 @@ int main(void) {
 }
 ```
 
-### defined() operator
+### defined() 运算符
 
 ```c
 #include <stdio.h>
@@ -791,7 +789,7 @@ int main(void) {
 }
 ```
 
-### Parameterized macros
+### 参数化宏
 
 ```c
 int square(int x) {
@@ -799,28 +797,28 @@ int square(int x) {
 }
 ```
 
-The macro rewrites the above code as follows:
+宏将上述代码重写如下：
 
 ```c
 #define square(x) ( (x) * (x) )
 ```
 
-No spaces are allowed between the macro name and the opening parenthesis
+宏名称和左括号之间不允许有空格。
 
 ```c
 #include <stdio.h>
 #define MAX(x,y) ( (x) > (y) ? (x) : (y) )
 
 int main(void) {
-  printf("Max between 20 and 10 is %d\n", MAX(10, 20));
+  printf("20 和 10 之间的最大值是 %d\n", MAX(10, 20));
 
   return 0;
 }
 ```
 
-## C Function
+## C 函数
 
-### Function declaration and definition {.row-span-2}
+### 函数声明和定义 {.row-span-2}
 
 ```c
 int main(void) {
@@ -830,59 +828,59 @@ int main(void) {
 }
 ```
 
-The function consists of two parts
+函数由两部分组成
 
 ```c
-void myFunction() { // declaration declaration
-  // function body (code to be executed) (definition)
+void myFunction() { // 声明
+  // 函数体 (要执行的代码) (定义)
 }
 ```
 
 ---
 
-- `Declaration` declares the function name, return type and parameters _(if any)_
-- `Definition` function body _(code to execute)_
+- `声明` 声明函数名称、返回类型和参数 _(如果有)_
+- `定义` 函数体 _(要执行的代码)_
 
 ---
 
 ```c
-// function declaration
+// 函数声明
 void myFunction();
-// main method
+// main 方法
 int main() {
-  myFunction(); // --> call the function
+  myFunction(); // --> 调用函数
 
   return 0;
 }
 
-void myFunction() {// Function definition
+void myFunction() {// 函数定义
   printf("Good evening!\n");
 }
 ```
 
-### Call function
+### 调用函数
 
 ```c
-// create function
+// 创建函数
 void myFunction() {
   printf("Good evening!\n");
 }
 
 int main() {
-  myFunction(); // call the function
-  myFunction(); // can be called multiple times
+  myFunction(); // 调用函数
+  myFunction(); // 可以多次调用
 
   return 0;
 }
-// Output -> "Good evening!"
-// Output -> "Good evening!"
+// 输出 -> "Good evening!"
+// 输出 -> "Good evening!"
 ```
 
-### Function parameters
+### 函数参数
 
 ```c
 void myFunction(char name[]) {
-  printf("Hello %s\n", name);
+  printf("你好 %s\n", name);
 }
 
 int main() {
@@ -891,15 +889,15 @@ int main() {
 
   return 0;
 }
-// Hello Liam
-// Hello Jenny
+// 你好 Liam
+// 你好 Jenny
 ```
 
-### Multiple parameters
+### 多个参数
 
 ```c
 void myFunction(char name[], int age) {
-  printf("Hi %s, you are %d years old.\n",name,age);
+  printf("你好 %s, 你 %d 岁了。\n",name,age);
 }
 int main() {
   myFunction("Liam", 3);
@@ -907,11 +905,11 @@ int main() {
 
   return 0;
 }
-// Hi Liam you are 3 years old.
-// Hi Jenny you are 14 years old.
+// 你好 Liam, 你 3 岁了。
+// 你好 Jenny, 你 14 岁了。
 ```
 
-### Return value {.row-span-2}
+### 返回值 {.row-span-2}
 
 ```c
 int myFunction(int x) {
@@ -919,13 +917,13 @@ int myFunction(int x) {
 }
 
 int main() {
-  printf("Result: %d\n", myFunction(3));
+  printf("结果: %d\n", myFunction(3));
   return 0;
 }
-// output 8 (5 + 3)
+// 输出 8 (5 + 3)
 ```
 
-Two parameters
+两个参数
 
 ```c
 int myFunction(int x, int y) {
@@ -933,18 +931,18 @@ int myFunction(int x, int y) {
 }
 
 int main() {
-  printf("Result: %d\n", myFunction(5, 3));
-  // store the result in a variable
+  printf("结果: %d\n", myFunction(5, 3));
+  // 将结果存储在变量中
   int result = myFunction(5, 3);
-  printf("Result = %d\n", result);
+  printf("结果 = %d\n", result);
 
   return 0;
 }
-// result: 8 (5 + 3)
-// result = 8 (5 + 3)
+// 结果: 8 (5 + 3)
+// 结果 = 8 (5 + 3)
 ```
 
-### Recursive example
+### 递归示例
 
 ```c
 int sum(int k);
@@ -965,43 +963,43 @@ int sum(int k) {
 }
 ```
 
-### Mathematical functions
+### 数学函数
 
 ```c
 #include <math.h>
 
 void main(void) {
-  printf("%f\n", sqrt(16)); // square root
-  printf("%f\n", ceil(1.4)); // round up (round)
-  printf("%f\n", floor(1.4)); // round down (round)
-  printf("%f\n", pow(4, 3)); // x(4) to the power of y(3)
+  printf("%f\n", sqrt(16)); // 平方根
+  printf("%f\n", ceil(1.4)); // 向上取整 (四舍五入)
+  printf("%f\n", floor(1.4)); // 向下取整 (四舍五入)
+  printf("%f\n", pow(4, 3)); // x(4) 的 y(3) 次方
 }
 ```
 
 ---
 
-- `abs(x)` absolute value
-- `acos(x)` arc cosine value
-- `asin(x)` arc sine
-- `atan(x)` arc tangent
-- `cbrt(x)` cube root
-- `cos(x)` cosine
-- the value of `exp(x)` Ex
-- `sin(x)` the sine of x
-- tangent of `tan(x)` angle
+- `abs(x)` 绝对值
+- `acos(x)` 反余弦值
+- `asin(x)` 反正弦
+- `atan(x)` 反正切
+- `cbrt(x)` 立方根
+- `cos(x)` 余弦
+- `exp(x)` 的值 Ex
+- `sin(x)` x 的正弦
+- `tan(x)` 角的正切
 
-## C Structures
+## C 结构体
 
-### Create structure
+### 创建结构体
 
 ```c
-struct MyStructure { // structure declaration
-  int myNum; // member (int variable)
-  char myLetter; // member (char variable)
-}; // end the structure with a semicolon
+struct MyStructure { // 结构体声明
+  int myNum; // 成员 (int 变量)
+  char myLetter; // 成员 (char 变量)
+}; // 以分号结束结构体
 ```
 
-Create a struct variable called `s1`
+创建一个名为 `s1` 的结构体变量
 
 ```c{7}
 struct myStructure {
@@ -1016,60 +1014,60 @@ int main() {
 }
 ```
 
-### Strings in the structure
+### 结构体中的字符串
 
 ```c{9}
 struct myStructure {
   int myNum;
   char myLetter;
-  char myString[30]; // String
+  char myString[30]; // 字符串
 };
 
 int main() {
   struct myStructure s1;
   strcpy(s1. myString, "Some text");
-  // print value
-  printf("My string: %s\n", s1.myString);
+  // 打印值
+  printf("我的字符串: %s\n", s1.myString);
 
   return 0;
 }
 ```
 
-Assigning values to strings using the `strcpy` function
+使用 `strcpy` 函数为字符串赋值。
 
-### Accessing structure members {.row-span-2}
+### 访问结构体成员 {.row-span-2}
 
 ```c{11,12,16}
-// create a structure called myStructure
+// 创建一个名为 myStructure 的结构体
 struct myStructure {
   int myNum;
   char myLetter;
 };
 
 int main() {
-  // Create a structure variable called myStructure called s1
+  // 创建一个名为 s1 的 myStructure 结构体变量
   struct myStructure s1;
-  // Assign values ​​to the members of s1
+  // 为 s1 的成员赋值
   s1.myNum = 13;
   s1.myLetter = 'B';
 
-  // Create a structure variable of myStructure called s2
-  // and assign it a value
+  // 创建一个名为 s2 的 myStructure 结构体变量
+  // 并为其赋值
   struct myStructure s2 = {13, 'B'};
-  // print value
-  printf("My number: %d\n", s1.myNum);
-  printf("My letter: %c\n", s1.myLetter);
+  // 打印值
+  printf("我的数字: %d\n", s1.myNum);
+  printf("我的字母: %c\n", s1.myLetter);
 
   return 0;
 }
 ```
 
-Create different structure variables
+创建不同的结构体变量
 
 ```c
 struct myStructure s1;
 struct myStructure s2;
-// Assign values ​​to different structure variables
+// 为不同的结构体变量赋值
 s1.myNum = 13;
 s1.myLetter = 'B';
 
@@ -1077,7 +1075,7 @@ s2.myNum = 20;
 s2.myLetter = 'C';
 ```
 
-### Copy structure
+### 复制结构体
 
 ```c{6}
 struct myStructure s1 = {
@@ -1088,66 +1086,66 @@ struct myStructure s2;
 s2 = s1;
 ```
 
-In the example, the value of `s1` is copied to `s2`
+在示例中，`s1` 的值被复制到 `s2`。
 
-### Modify value
+### 修改值
 
 ```c{6,7}
-// Create a struct variable and assign it a value
+// 创建一个结构体变量并为其赋值
 struct myStructure s1 = {
   13, 'B'
 };
-// modify the value
+// 修改值
 s1.myNum = 30;
 s1.myLetter = 'C';
-// print value
+// 打印值
 printf("%d %c",
     s1.myNum,
     s1.myLetter);
 ```
 
-## File Processing
+## 文件处理
 
-### File processing function
+### 文件处理函数
 
-| Function    | Description                                       |
-| ----------- | :------------------------------------------------ |
-| `fopen()`   | `open` a new or existing file                     |
-| `fprintf()` | write data to `file`                              |
-| `fscanf()`  | `read` data from a file                           |
-| `fputc()`   | write a character to `file`                       |
-| `fgetc()`   | `read` a character from a file                    |
-| `fclose()`  | `close` the file                                  |
-| `fseek()`   | set the file pointer to `the given position`      |
-| `fputw()`   | Write an integer `to` a file                      |
-| `fgetw()`   | `read` an integer from a file                     |
-| `ftell()`   | returns the current `position`                    |
-| `rewind()`  | set the file pointer to the beginning of the file |
-
-{.show-header}
-
-There are many functions in the C library to `open`/`read`/`write`/`search` and `close` files
-
-### Open mode parameter
-
-| Mode  | Description                                                                                                 |
-| ----- | :---------------------------------------------------------------------------------------------------------- |
-| `r`   | Open a text file in `read` mode, allowing the file to be read                                               |
-| `w`   | Open a text file in `write` mode, allowing writing to the file                                              |
-| `a`   | Open a text file in `append` mode<br /><small>If the file does not exist, a new one will be created</small> |
-| `r+`  | Open a text file in `read-write` mode, allowing reading and writing of the file                             |
-| `w+`  | Open a text file in `read-write` mode, allowing reading and writing of the file                             |
-| `a+`  | Open a text file in `read-write` mode, allowing reading and writing of the file                             |
-| `rb`  | Open a binary file in `read` mode                                                                           |
-| `wb`  | Open binary file in `write` mode                                                                            |
-| `ab`  | Open a binary file in `append` mode                                                                         |
-| `rb+` | open binary file in `read-write` mode                                                                       |
-| `wb+` | Open binary file in `read-write` mode                                                                       |
-| `ab+` | open binary file in `read-write` mode                                                                       |
+| 函数        | 描述                                       |
+| ----------- | :----------------------------------------- |
+| `fopen()`   | `打开` 一个新的或已存在的文件              |
+| `fprintf()` | 将数据写入 `文件`                          |
+| `fscanf()`  | 从文件中 `读取` 数据                       |
+| `fputc()`   | 将一个字符写入 `文件`                      |
+| `fgetc()`   | 从文件中 `读取` 一个字符                   |
+| `fclose()`  | `关闭` 文件                                |
+| `fseek()`   | 将文件指针设置到 `给定的位置`              |
+| `fputw()`   | 将一个整数 `写入` 文件                     |
+| `fgetw()`   | 从文件中 `读取` 一个整数                   |
+| `ftell()`   | 返回当前 `位置`                            |
+| `rewind()`  | 将文件指针设置到文件的开头                 |
 
 {.show-header}
 
-### Open the file: fopen()
+C 库中有许多函数用于 `打开`/`读取`/`写入`/`搜索` 和 `关闭` 文件。
+
+### 打开模式参数
+
+| 模式  | 描述                                                                                                 |
+| ----- | :--------------------------------------------------------------------------------------------------- |
+| `r`   | 以 `只读` 模式打开文本文件，允许读取文件                                                               |
+| `w`   | 以 `写入` 模式打开文本文件，允许写入文件                                                               |
+| `a`   | 以 `追加` 模式打开文本文件<br /><small>如果文件不存在，将创建一个新文件</small>                       |
+| `r+`  | 以 `读写` 模式打开文本文件，允许读取和写入文件                                                         |
+| `w+`  | 以 `读写` 模式打开文本文件，允许读取和写入文件                                                         |
+| `a+`  | 以 `读写` 模式打开文本文件，允许读取和写入文件                                                         |
+| `rb`  | 以 `只读` 模式打开二进制文件                                                                           |
+| `wb`  | 以 `写入` 模式打开二进制文件                                                                           |
+| `ab`  | 以 `追加` 模式打开二进制文件                                                                           |
+| `rb+` | 以 `读写` 模式打开二进制文件                                                                           |
+| `wb+` | 以 `读写` 模式打开二进制文件                                                                           |
+| `ab+` | 以 `读写` 模式打开二进制文件                                                                           |
+
+{.show-header}
+
+### 打开文件：fopen()
 
 ```c{6}
 #include <stdio.h>
@@ -1168,24 +1166,24 @@ void main() {
 }
 ```
 
-After performing all operations on the file, the file must be closed with `fclose()`
+在对文件执行所有操作后，必须使用 `fclose()` 关闭文件。
 
-### Write to file: fprintf()
+### 写入文件：fprintf()
 
 ```c{7}
 #include <stdio.h>
 
 void main() {
   FILE *fp;
-  fp = fopen("file.txt", "w"); // open the file
+  fp = fopen("file.txt", "w"); // 打开文件
 
-  // write data to file
+  // 将数据写入文件
   fprintf(fp, "Hello file for fprintf..\n");
-  fclose(fp); // close the file
+  fclose(fp); // 关闭文件
 }
 ```
 
-### Read the file: fscanf()
+### 读取文件：fscanf()
 
 ```c{6}
 #include <stdio.h>
@@ -1193,7 +1191,7 @@ void main() {
 void main() {
   FILE *fp;
 
-  char buff[255]; // Create a char array to store file data
+  char buff[255]; // 创建一个字符数组来存储文件数据
   fp = fopen("file.txt", "r");
 
   while(fscanf(fp, "%s", buff) != EOF) {
@@ -1203,20 +1201,20 @@ void main() {
 }
 ```
 
-### Write to file: fputc()
+### 写入文件：fputc()
 
 ```c{6}
 #include <stdio.h>
 
 void main() {
   FILE *fp;
-  fp = fopen("file1.txt", "w"); // open the file
-  fputc('a',fp); // write a single character to the file
-  fclose(fp); // close the file
+  fp = fopen("file1.txt", "w"); // 打开文件
+  fputc('a',fp); // 将单个字符写入文件
+  fclose(fp); // 关闭文件
 }
 ```
 
-### Read the file: fgetc()
+### 读取文件：fgetc()
 
 ```c{8}
 #include <stdio.h>
@@ -1239,7 +1237,7 @@ void main() {
 }
 ```
 
-### Write to file: fputs()
+### 写入文件：fputs()
 
 ```c {8}
 #include<stdio.h>
@@ -1258,7 +1256,7 @@ void main() {
 }
 ```
 
-### Read files: fgets()
+### 读取文件：fgets()
 
 ```c {10}
 #include<stdio.h>
@@ -1289,7 +1287,7 @@ void main(void) {
   fp = fopen("myfile.txt","w+");
   fputs("This is Book", fp);
 
-  // Set file pointer to the given position
+  // 将文件指针设置到给定位置
   fseek(fp, 7, SEEK_SET);
 
   fputs("Kenny Wong", fp);
@@ -1297,7 +1295,7 @@ void main(void) {
 }
 ```
 
-Set the file pointer to the given position
+将文件指针设置到给定位置。
 
 ### rewind()
 
@@ -1317,7 +1315,7 @@ void main() {
     printf("%c", c);
   }
 
-  rewind(fp); // move the file pointer to the beginning of the file
+  rewind(fp); // 将文件指针移动到文件的开头
 
   while( (c = fgetc(fp) ) != EOF) {
     printf("%c", c);
@@ -1326,7 +1324,7 @@ void main() {
 
   getch();
 }
-// output
+// 输出
 // Hello World! Hello World!
 ```
 
@@ -1345,13 +1343,13 @@ void main () {
    fp = fopen("file.txt", "r");
 
    fseek(fp, 0, SEEK_END);
-   length = ftell(fp); // return current position
+   length = ftell(fp); // 返回当前位置
    fclose(fp);
 
-   printf("File size: %d bytes", length);
+   printf("文件大小: %d 字节", length);
 
    getch();
 }
-// output
-// file size: 18 bytes
+// 输出
+// 文件大小: 18 字节
 ```

@@ -1,5 +1,5 @@
 ---
-title: VLC Player
+title: VLC 播放器
 date: 2022-11-23 16:23:31.696412
 background: bg-[#e7792e]
 label:
@@ -7,116 +7,116 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 82 keyboard shortcuts found in VLC Player
+  VLC 播放器中 82 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### General I
+### 常规 I
 
-| Shortcut             | Action                    |
+| 快捷键               | 操作                      |
 | -------------------- | ------------------------- |
-| `F`                  | Fullscreen                |
-| `Esc`                | Leave fullscreen          |
-| `Space`              | Play/Pause                |
-| `]`                  | Pause only                |
-| `[`                  | Play only                 |
-| `+`                  | Faster                    |
-| `-`                  | Slower                    |
-| `=`                  | Normal rate               |
-| `N`                  | Next                      |
-| `P`                  | Previous                  |
-| `S`                  | Stop                      |
-| `T`                  | Position                  |
-| `Shift` `Left`       | Very short backwards jump |
-| `Shift` `Right`      | Very short forwards jump  |
-| `Alt` `Left`         | Short backwards jump      |
-| `Alt` `Right`        | Short forwards jump       |
-| `Ctrl` `Left`        | Medium backwards jump     |
-| `Ctrl` `Right`       | Medium forwards jump      |
-| `Ctrl` `Alt` `Left`  | Long backwards jump       |
-| `Ctrl` `Alt` `Right` | Long forwards jump        |
-| `E`                  | Next frame                |
-| `Enter`              | Activate                  |
-| `Up`                 | Navigate up               |
-| `Down`               | Navigate down             |
-| `Left`               | Navigate left             |
-| `Right`              | Navigate right            |
-| `Shift` `M`          | Go to the DVD menu        |
-| `Shift` `O`          | Select previous DVD title |
+| `F`                  | 全屏                      |
+| `Esc`                | 退出全屏                  |
+| `Space`              | 播放/暂停                 |
+| `]`                  | 仅暂停                    |
+| `[`                  | 仅播放                    |
+| `+`                  | 加快                      |
+| `-`                  | 减慢                      |
+| `=`                  | 正常速率                  |
+| `N`                  | 下一个                    |
+| `P`                  | 上一个                    |
+| `S`                  | 停止                      |
+| `T`                  | 位置                      |
+| `Shift` `Left`       | 非常短的后退跳转          |
+| `Shift` `Right`      | 非常短的前进跳转          |
+| `Alt` `Left`         | 短暂的后退跳转            |
+| `Alt` `Right`        | 短暂的前进跳转            |
+| `Ctrl` `Left`        | 中等长度的后退跳转        |
+| `Ctrl` `Right`       | 中等长度的前进跳转        |
+| `Ctrl` `Alt` `Left`  | 长时间的后退跳转          |
+| `Ctrl` `Alt` `Right` | 长时间的前进跳转          |
+| `E`                  | 下一帧                    |
+| `Enter`              | 激活                      |
+| `Up`                 | 向上导航                  |
+| `Down`               | 向下导航                  |
+| `Left`               |向左导航                   |
+| `Right`              | 向右导航                  |
+| `Shift` `M`          | 转到 DVD 菜单             |
+| `Shift` `O`          | 选择上一个 DVD 标题       |
 
 {.shortcuts}
 
-### General II
+### 常规 II
 
-| Shortcut          | Action                         |
+| 快捷键          | 操作                         |
 | ----------------- | ------------------------------ |
-| `Shift` `B`       | Select next DVD title          |
-| `Shift` `P`       | Select previous DVD chapter    |
-| `Shift` `N`       | Select next DVD chapter        |
-| `Ctrl` `Q`        | Quit                           |
-| `Ctrl` `Up`       | Volume up                      |
-| `Ctrl` `Down`     | Volume down                    |
-| `M`               | Mute                           |
-| `H`               | Subtitle delay up              |
-| `G`               | Subtitle delay down            |
-| `K`               | Audio delay up                 |
-| `J`               | Audio delay down               |
-| `B`               | Cycle audio track              |
-| `Shift` `A`       | Cycle through audio devices    |
-| `V`               | Cycle subtitle track           |
-| `A`               | Cycle source aspect ratio      |
-| `C`               | Cycle video crop               |
-| `O`               | Toggle autoscaling             |
-| `Alt` `O`         | Increase scale factor          |
-| `Shift` `Alt` `O` | Decrease scale factor          |
-| `D`               | Cycle deinterlace modes        |
-| `I`               | Show interface                 |
-| `Shift` `I`       | Hide interface                 |
-| `Shift` `S`       | Take video snapshot            |
-| `Shift` `G`       | Go back in browsing history    |
-| `Shift` `H`       | Go forward in browsing history |
-| `Shift` `R`       | Record                         |
-| `Shift` `D`       | Dump                           |
-| `Z`               | Zoom                           |
+| `Shift` `B`       | 选择下一个 DVD 标题          |
+| `Shift` `P`       | 选择上一个 DVD 章节          |
+| `Shift` `N`       | 选择下一个 DVD 章节          |
+| `Ctrl` `Q`        | 退出                           |
+| `Ctrl` `Up`       | 音量增大                      |
+| `Ctrl` `Down`     | 音量减小                      |
+| `M`               | 静音                           |
+| `H`               | 字幕延迟增加                  |
+| `G`               | 字幕延迟减少                  |
+| `K`               | 音频延迟增加                  |
+| `J`               | 音频延迟减少                  |
+| `B`               | 循环音轨                      |
+| `Shift` `A`       | 循环切换音频设备              |
+| `V`               | 循环字幕轨道                  |
+| `A`               | 循环源宽高比                  |
+| `C`               | 循环视频裁剪                  |
+| `O`               | 切换自动缩放                  |
+| `Alt` `O`         | 增加缩放因子                  |
+| `Shift` `Alt` `O` | 减少缩放因子                  |
+| `D`               | 循环隔行扫描模式              |
+| `I`               | 显示界面                      |
+| `Shift` `I`       | 隐藏界面                      |
+| `Shift` `S`       | 截取视频快照                  |
+| `Shift` `G`       | 返回浏览历史记录              |
+| `Shift` `H`       | 前进浏览历史记录              |
+| `Shift` `R`       | 录制                           |
+| `Shift` `D`       | 转储                           |
+| `Z`               | 缩放                           |
 
 {.shortcuts}
 
-### General III
+### 常规 III
 
-| Shortcut              | Action                           |
+| 快捷键              | 操作                           |
 | --------------------- | -------------------------------- |
-| `Shift` `Z`           | Un-Zoom                          |
-| `W`                   | Toggle wallpaper mode            |
-| `Alt` `Shift` `M`     | Display OSD menu on top          |
-| `Alt` `Ctrl` `M`      | Do not display OSD menu          |
-| `Alt` `Shift` `Right` | Highlight widget on the right    |
-| `Alt` `Shift` `Left`  | Highlight widget on the left     |
-| `Alt` `Shift` `Up`    | Highlight widget on top          |
-| `Alt` `Shift` `Down`  | Highlight widget on bottom       |
-| `Alt` `Shift` `Enter` | Select current widget            |
-| `Alt` `R`             | Crop one pixel from the top      |
-| `Alt` `Shift` `R`     | Uncrop one pixel from the top    |
-| `Alt` `D`             | Crop one pixel from the left     |
-| `Alt` `Shift` `D`     | Uncrop one pixel from the left   |
-| `Alt` `C`             | Crop one pixel from the bottom   |
-| `Alt` `Shift` `C`     | Uncrop one pixel from the bottom |
-| `Alt` `F`             | Crop one pixel from the right    |
-| `Alt` `Shift` `F`     | Uncrop one pixel from the right  |
-| `R`                   | Random                           |
-| `L`                   | Normal/Repeat/Loop               |
-| `Ctrl` `1`            | 1:4 Quarter                      |
-| `Ctrl` `2`            | 1:2 Half                         |
-| `Ctrl` `3`            | 1:1 Original                     |
-| `Ctrl` `4`            | 2:1 Double                       |
-| `3`                   | Very short jump length (integer) |
-| `Ctrl` `F1-F10`       | Set playlist bookmark 1-10       |
-| `F1-F10`              | Play playlist bookmark 1-10      |
+| `Shift` `Z`           | 取消缩放                         |
+| `W`                   | 切换壁纸模式                     |
+| `Alt` `Shift` `M`     | 在顶部显示 OSD 菜单              |
+| `Alt` `Ctrl` `M`      | 不显示 OSD 菜单                  |
+| `Alt` `Shift` `Right` | 高亮右侧小部件                   |
+| `Alt` `Shift` `Left`  | 高亮左侧小部件                   |
+| `Alt` `Shift` `Up`    | 高亮顶部小部件                   |
+| `Alt` `Shift` `Down`  | 高亮底部小部件                   |
+| `Alt` `Shift` `Enter` | 选择当前小部件                   |
+| `Alt` `R`             | 从顶部裁剪一个像素               |
+| `Alt` `Shift` `R`     | 从顶部取消裁剪一个像素           |
+| `Alt` `D`             | 从左侧裁剪一个像素               |
+| `Alt` `Shift` `D`     | 从左侧取消裁剪一个像素           |
+| `Alt` `C`             | 从底部裁剪一个像素               |
+| `Alt` `Shift` `C`     | 从底部取消裁剪一个像素           |
+| `Alt` `F`             | 从右侧裁剪一个像素               |
+| `Alt` `Shift` `F`     | 从右侧取消裁剪一个像素           |
+| `R`                   | 随机播放                         |
+| `L`                   | 正常/重复/循环                   |
+| `Ctrl` `1`            | 1:4 四分之一                     |
+| `Ctrl` `2`            | 1:2 一半                         |
+| `Ctrl` `3`            | 1:1 原始                         |
+| `Ctrl` `4`            | 2:1 两倍                         |
+| `3`                   | 非常短的跳转长度 (整数)          |
+| `Ctrl` `F1-F10`       | 设置播放列表书签 1-10            |
+| `F1-F10`              | 播放播放列表书签 1-10            |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for VLC](https://wiki.videolan.org/hotkeys_table/) _(wiki.videolan.org)_
+- [VLC 键盘快捷键](https://wiki.videolan.org/hotkeys_table/) _(wiki.videolan.org)_

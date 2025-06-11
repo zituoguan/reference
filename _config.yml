@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: CheatSheets.zip
-subtitle: "Ultimate Cheat for Developers"
-description: "Share quick reference and cheat sheet for developers"
-keywords: cheat,sheet,cheatsheets,reference,programming,code table,snippets,linux,command,shortcuts,developers
-author: CheatSheets.zip
-language: en
-timezone: ""
+title: 参考
+subtitle: "开发者终极秘籍"
+description: "为开发者分享快速参考和速查表"
+keywords: 秘籍,表,速查表,参考,编程,代码表,代码片段,Linux,命令,快捷方式,开发者
+author: r3f.cn
+language: zh-CN
+timezone: "Asia/Shanghai" # Set your timezone, e.g., "America/New_York", "Europe/London", "Asia/Tokyo"
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://cheatsheets.zip
+url: https://r3f.cn
 root: /
 permalink: :name.html
 permalink_defaults:

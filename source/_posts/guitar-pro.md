@@ -7,268 +7,268 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 129 keyboard shortcuts found in Guitar Pro
+  Guitar Pro 中 129 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Track
+### 音轨
 
-| Shortcut                | Action     |
+| 快捷键                | 操作     |
 | ----------------------- | ---------- |
-| `Ctrl` `Shift` `Insert` | Add        |
-| `Ctrl` `Shift` `Delete` | Delete     |
-| `Ctrl` `Alt` `Up`       | Move up    |
-| `Ctrl` `Alt` `Down`     | Move down  |
-| `F6`                    | Properties |
+| `Ctrl` `Shift` `Insert` | 添加        |
+| `Ctrl` `Shift` `Delete` | 删除        |
+| `Ctrl` `Alt` `Up`       | 上移    |
+| `Ctrl` `Alt` `Down`     | 下移  |
+| `F6`                    | 属性 |
 
 {.shortcuts}
 
-### Bar - General {.row-span-2}
+### 小节 - 常规 {.row-span-2}
 
-| Shortcut        | Action             |
+| 快捷键        | 操作             |
 | --------------- | ------------------ | --------- |
-| `Ctrl` `Insert` | Insert bar         |
-| `Ctrl` `Delete` | Delete bar         |
-| `K`             | Clef               |
-| `Ctrl` `K`      | Key signature      |
-| `Ctrl` `T`      | Time signature     |
-| `Ctrl` `/`      | Triplet feel       |
-| `               | `                  | Free time |
-| `[`             | Repeat open        |
-| `]`             | Repeat close       |
-| `D`             | Directions         |
-| `Ctrl` `R`      | Multi rest         |
-| `Ctrl` `Enter`  | Force line break   |
-| `Shift` `7`     | Prevent line break |
+| `Ctrl` `Insert` | 插入小节         |
+| `Ctrl` `Delete` | 删除小节         |
+| `K`             | 谱号               |
+| `Ctrl` `K`      | 调号      |
+| `Ctrl` `T`      | 拍号     |
+| `Ctrl` `/`      | 三连音感觉       |
+| `               | `                  | 自由拍 |
+| `[`             | 反复开始        |
+| `]`             | 反复结束        |
+| `D`             | 指示         |
+| `Ctrl` `R`      | 多小节休止         |
+| `Ctrl` `Enter`  | 强制换行   |
+| `Shift` `7`     | 阻止换行 |
 
 {.shortcuts}
 
-### Bar - Section
+### 小节 - 段落
 
-| Shortcut         | Action           |
+| 快捷键         | 操作           |
 | ---------------- | ---------------- |
-| `Shift` `Insert` | Insert or remove |
-| `Alt` `Left`     | Previous section |
-| `Alt` `Right`    | Next section     |
+| `Shift` `Insert` | 插入或移除 |
+| `Alt` `Left`     | 上一段落 |
+| `Alt` `Right`    | 下一段落     |
 
 {.shortcuts}
 
-### Bar - Simile Mark
+### 小节 - 相似标记
 
-| Shortcut           | Action          |
+| 快捷键           | 操作          |
 | ------------------ | --------------- |
-| `Shift` `5`        | Repeat one bar  |
-| `Ctrl` `Shift` `5` | Repeat two bars |
+| `Shift` `5`        | 重复一小节  |
+| `Ctrl` `Shift` `5` | 重复两小节 |
 
 {.shortcuts}
 
-### Note - Duration
+### 音符 - 时值
 
-| Shortcut           | Action                                            |
+| 快捷键           | 操作                                            |
 | ------------------ | ------------------------------------------------- |
-| `+/-`              | Increase or decrease (whole note, half note, etc) |
-| `Shift` `5`        | Dotting                                           |
-| `Ctrl` `Shift` `5` | Double dotting                                    |
-| `/`                | Triplet                                           |
+| `+/-`              | 增加或减少 (全音符、二分音符等) |
+| `Shift` `5`        | 附点                                           |
+| `Ctrl` `Shift` `5` | 双附点                                    |
+| `/`                | 三连音                                           |
 
 {.shortcuts}
 
-### Note - General {.row-span-6}
+### 音符 - 常规 {.row-span-6}
 
-| Shortcut           | Action                    |
+| 快捷键           | 操作                    |
 | ------------------ | ------------------------- |
-| `Insert`           | Insert a beat             |
-| `Shift` `Delete`   | Delete the beats          |
-| `C`                | Copy the beats at the end |
-| `L`                | Tie note                  |
-| `Shift` `L`        | Tie the beat              |
-| `F`                | Fermata                   |
-| `R`                | Rest                      |
-| `Ctrl` `D`         | Brush downstroke          |
-| `Ctrl` `U`         | Brush upstroke            |
-| `Ctrl` `Shift` `D` | Arpeggio down             |
-| `Ctrl` `Shift` `U` | Arpeggio up               |
-| `Shift` `R`        | Rasgueado                 |
-| `Shift` `D`        | PickStroke down           |
-| `Shift` `U`        | PickStroke up             |
-| `Shift` `-`        | One semi-town down        |
-| `Shift` `+`        | One semi-tone up          |
-| `Alt` `Down`       | Shift down                |
-| `Alt` `Up`         | Shift up                  |
-| `A`                | Chord                     |
-| `Shift` `I`        | Barre                     |
-| `Shift` `2`        | Timer                     |
-| `T`                | Text                      |
+| `Insert`           | 插入一个节拍             |
+| `Shift` `Delete`   | 删除节拍          |
+| `C`                | 复制节拍到末尾 |
+| `L`                | 延音线                  |
+| `Shift` `L`        | 连接节拍              |
+| `F`                | 延长号                   |
+| `R`                | 休止符                      |
+| `Ctrl` `D`         | 向下扫弦          |
+| `Ctrl` `U`         | 向上扫弦          |
+| `Ctrl` `Shift` `D` | 向下琶音             |
+| `Ctrl` `Shift` `U` | 向上琶音             |
+| `Shift` `R`        | 扫弦 (Rasgueado)                 |
+| `Shift` `D`        | 向下拨弦           |
+| `Shift` `U`        | 向上拨弦           |
+| `Shift` `-`        | 降半音        |
+| `Shift` `+`        | 升半音        |
+| `Alt` `Down`       | 向下移位                |
+| `Alt` `Up`         | 向上移位                  |
+| `A`                | 和弦                     |
+| `Shift` `I`        | 横按                     |
+| `Shift` `2`        | 定时器                     |
+| `T`                | 文本                      |
 
 {.shortcuts}
 
-### Effects - General {.row-span-6}
+### 效果 - 常规 {.row-span-6}
 
-| Shortcut             | Action                |
+| 快捷键             | 操作                |
 | -------------------- | --------------------- |
-| `X`                  | Dead note             |
-| `O`                  | Ghost note            |
-| `;`                  | Accented note         |
-| `Shift` `;`          | Heavily accented note |
-| `Shift` `1`          | Staccato              |
-| `Shift` `-`          | Tenuto                |
-| `Shift` `H`          | Legato                |
-| `I`                  | Let ring              |
-| `[`                  | Palm mute note        |
-| `]`                  | Palm-mute on beat     |
-| `Y`                  | Natural harmonic      |
-| `Alt` `Y`            | Artificial harmonic   |
-| `B`                  | Bend                  |
-| `Shift` `W`          | Tremolo bar           |
-| `H`                  | Hammer on or pull-off |
-| `Shift` `9`          | Left-hand tapping     |
-| `Shift` `0`          | Tapping               |
-| `Shift` `4`          | Slap                  |
-| `Ctrl` `Shift` `4`   | Pop                   |
-| `N`                  | Trill                 |
-| `Shift` `,`          | Fade in               |
-| `Shift` `.`          | Fade out              |
-| `Ctrl` `Shift` `./,` | Volume swell          |
-| `Alt` `O`            | Wah open              |
-| `Alt` `C`            | Wah close             |
+| `X`                  | 闷音             |
+| `O`                  | 虚音             |
+| `;`                  | 重音符         |
+| `Shift` `;`          | 强重音符 |
+| `Shift` `1`          | 断奏              |
+| `Shift` `-`          | 持音              |
+| `Shift` `H`          | 连奏                |
+| `I`                  | 延音             |
+| `[`                  | 音符手掌闷音        |
+| `]`                  | 节拍手掌闷音     |
+| `Y`                  | 自然泛音      |
+| `Alt` `Y`            | 人工泛音   |
+| `B`                  | 推弦                  |
+| `Shift` `W`          | 摇把           |
+| `H`                  | 击弦或勾弦 |
+| `Shift` `9`          | 左手点弦     |
+| `Shift` `0`          | 点弦               |
+| `Shift` `4`          | 击弦 (Slap)                  |
+| `Ctrl` `Shift` `4`   | 勾弦 (Pop)                   |
+| `N`                  | 颤音                 |
+| `Shift` `,`          | 淡入               |
+| `Shift` `.`          | 淡出               |
+| `Ctrl` `Shift` `./,` | 音量渐强/渐弱          |
+| `Alt` `O`            | 哇音开              |
+| `Alt` `C`            | 哇音关              |
 
 {.shortcuts}
 
-### Note - Accidentals
+### 音符 - 变音记号
 
-| Shortcut         | Action                |
+| 快捷键         | 操作                |
 | ---------------- | --------------------- |
-| `Ctrl` `Alt` `7` | Double flat           |
-| `Ctrl` `7`       | Flat                  |
-| `Ctrl` `8`       | Natural               |
-| `Ctrl` `9`       | Sharp                 |
-| `Ctrl` `Alt` `9` | Double sharp          |
-| `Ctrl` `Alt` `8` | Change the accidental |
+| `Ctrl` `Alt` `7` | 重降号           |
+| `Ctrl` `7`       | 降号                  |
+| `Ctrl` `8`       | 还原号               |
+| `Ctrl` `9`       | 升号                 |
+| `Ctrl` `Alt` `9` | 重升号          |
+| `Ctrl` `Alt` `8` | 改变变音记号 |
 
 {.shortcuts}
 
-### Effects - Grace Note
+### 效果 - 装饰音
 
-| Shortcut  | Action          |
+| 快捷键  | 操作          |
 | --------- | --------------- |
-| `G`       | Before the beat |
-| `Alt` `G` | On the beat     |
+| `G`       | 节拍前 |
+| `Alt` `G` | 节拍上     |
 
 {.shortcuts}
 
-### Effects - Vibrato
+### 效果 - 揉弦
 
-| Shortcut  | Action                     |
+| 快捷键  | 操作                     |
 | --------- | -------------------------- |
-| `V`       | Left-hand vibrato (slight) |
-| `Alt` `V` | Left-hand vibrato (wide)   |
+| `V`       | 左手揉弦 (轻微) |
+| `Alt` `V` | 左手揉弦 (大幅)   |
 
 {.shortcuts}
 
-### Effects - Vibrato with Trem. Bar
+### 效果 - 摇把揉弦
 
-| Shortcut  | Action                          |
+| 快捷键  | 操作                          |
 | --------- | ------------------------------- |
-| `W`       | Vibrato with trem. bar (slight) |
-| `Alt` `W` | Vibrato with trem. bar (wide)   |
+| `W`       | 摇把揉弦 (轻微) |
+| `Alt` `W` | 摇把揉弦 (大幅)   |
 
 {.shortcuts}
 
-### Effects - Slide
+### 效果 - 滑音
 
-| Shortcut  | Action       |
+| 快捷键  | 操作       |
 | --------- | ------------ |
-| `S`       | Legato slide |
-| `Alt` `S` | Shift slide  |
+| `S`       | 连奏滑音 |
+| `Alt` `S` | 移位滑音  |
 
 {.shortcuts}
 
-### Effects - Tremolo
+### 效果 - 震音
 
-| Shortcut    | Action             |
+| 快捷键    | 操作             |
 | ----------- | ------------------ |
-| `Shift` `'` | Thirty-second note |
+| `Shift` `'` | 三十二分音符 |
 
 {.shortcuts}
 
-### Tools
+### 工具
 
-| Shortcut           | Action                   |
+| 快捷键           | 操作                   |
 | ------------------ | ------------------------ |
-| `F4`               | Check the bars' duration |
-| `Ctrl` `Shift` `M` | Move or swap voices      |
+| `F4`               | 检查小节时值 |
+| `Ctrl` `Shift` `M` | 移动或交换声部      |
 
 {.shortcuts}
 
-### Sound
+### 声音
 
-| Shortcut       | Action                        |
+| 快捷键       | 操作                        |
 | -------------- | ----------------------------- |
-| `Space`        | Play                          |
-| `Ctrl` `Space` | Play from the beginning       |
-| `Ctrl` `Home`  | First bar                     |
-| `Ctrl` `Left`  | Rewind                        |
-| `Ctrl` `Right` | Fast forward                  |
-| `Ctrl` `End`   | Last bar                      |
-| `F9`           | Play in loops (speed trainer) |
-| `F2`           | RSI (Realistic Sound Engine)  |
+| `Space`        | 播放                          |
+| `Ctrl` `Space` | 从头播放       |
+| `Ctrl` `Home`  | 第一小节                     |
+| `Ctrl` `Left`  | 快退                        |
+| `Ctrl` `Right` | 快进                        |
+| `Ctrl` `End`   | 最后一小节                     |
+| `F9`           | 循环播放 (速度练习器) |
+| `F2`           | RSI (真实声音引擎)  |
 
 {.shortcuts}
 
-### View
+### 视图
 
-| Shortcut         | Action         |
+| 快捷键         | 操作         |
 | ---------------- | -------------- |
-| `Ctrl` `Alt` `D` | Design mode    |
-| `F3`             | Multitrack     |
-| `Ctrl` `B`       | Enable browser |
-| `F6`             | Fretboard      |
-| `F6`             | Keyboard       |
-| `F6`             | Drums          |
-| `F11`            | Full screen    |
+| `Ctrl` `Alt` `D` | 设计模式    |
+| `F3`             | 多音轨     |
+| `Ctrl` `B`       | 启用浏览器 |
+| `F6`             | 指板      |
+| `F6`             | 键盘       |
+| `F6`             | 鼓组          |
+| `F11`            | 全屏           |
 
 {.shortcuts}
 
-### Edit
+### 编辑
 
-| Shortcut           | Action           |
+| 快捷键           | 操作           |
 | ------------------ | ---------------- |
-| `Ctrl` `Z`         | Undo             |
-| `Ctrl` `Shift` `Z` | Redo             |
-| `Ctrl` `X`         | Cut              |
-| `Ctrl` `C`         | Copy             |
-| `Ctrl` `V`         | Paste            |
-| `Ctrl` `Shift` `X` | Multitrack cut   |
-| `Ctrl` `Shift` `C` | Multitrack copy  |
-| `Ctrl` `Shift` `V` | Special paste    |
-| `Ctrl` `A`         | Select all       |
-| `Ctrl` `G`         | Go to            |
-| `F10`              | Edit automations |
-| `Ctrl` `1-4`       | Voices           |
+| `Ctrl` `Z`         | 撤销             |
+| `Ctrl` `Shift` `Z` | 重做             |
+| `Ctrl` `X`         |剪切              |
+| `Ctrl` `C`         | 复制             |
+| `Ctrl` `V`         | 粘贴             |
+| `Ctrl` `Shift` `X` | 多音轨剪切   |
+| `Ctrl` `Shift` `C` | 多音轨复制  |
+| `Ctrl` `Shift` `V` | 特殊粘贴    |
+| `Ctrl` `A`         | 全选           |
+| `Ctrl` `G`         | 转到            |
+| `F10`              | 编辑自动化 |
+| `Ctrl` `1-4`       | 声部           |
 
 {.shortcuts}
 
-### General
+### 常规
 
-| Shortcut           | Action            |
+| 快捷键           | 操作            |
 | ------------------ | ----------------- |
-| `Ctrl` `N`         | New steel guitar  |
-| `Ctrl` `O`         | Open              |
-| `Ctrl` `W`         | Close             |
-| `Ctrl` `S`         | Save              |
-| `Ctrl` `Shift` `S` | Save As           |
-| `F5`               | Score information |
-| `F7`               | Stylesheet        |
-| `F8`               | Print preview     |
-| `Ctrl` `P`         | Print             |
-| `F12`              | Preferences       |
-| `Ctrl` `Q`         | Quit              |
+| `Ctrl` `N`         | 新建钢弦吉他  |
+| `Ctrl` `O`         | 打开              |
+| `Ctrl` `W`         | 关闭             |
+| `Ctrl` `S`         | 保存              |
+| `Ctrl` `Shift` `S` | 另存为          |
+| `F5`               |乐谱信息 |
+| `F7`               | 样式表        |
+| `F8`               | 打印预览     |
+| `Ctrl` `P`         | 打印             |
+| `F12`              | 首选项        |
+| `Ctrl` `Q`         | 退出             |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Guitar Pro](https://shredaddict.com/guitar-pro-shortcuts/) _(shredaddict.com)_
+- [Guitar Pro 键盘快捷键](https://shredaddict.com/guitar-pro-shortcuts/) _(shredaddict.com)_

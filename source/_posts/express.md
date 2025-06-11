@@ -6,32 +6,32 @@ tags:
   - config
   - format
 categories:
-  - Programming
+  - 编程
 intro: |
-  A quick reference cheatsheet for Express, a flexible and streamlined web framework for Node.js
+  Express 快速参考备忘单，一个灵活且简化的 Node.js Web 框架。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 快速入门
 
 ### Hello World {.row-span-2}
 
-- "Create project, add `package.json` configuration
+- "创建项目，添加 `package.json` 配置
 
   ```bash
-  $ mkdir myapp # create directory
-  $ cd myapp    # enter the directory
-  $ npm init -y # Initialize a configuration
+  $ mkdir myapp # 创建目录
+  $ cd myapp    # 进入目录
+  $ npm init -y # 初始化配置
   ```
 
-- Install dependencies
+- 安装依赖
 
   ```bash
   $ npm install express
   ```
 
-- Entry file `index.js` add code:
+- 入口文件 `index.js` 添加代码：
 
   ```js
   const express = require("express");
@@ -41,11 +41,11 @@ plugins:
     res.send("Hello World!");
   });
   app.listen(port, () => {
-    console.log(`Listening port on ${port}`);
+    console.log(`监听端口 ${port}`);
   });
   ```
 
-- Run the application using the following command
+- 使用以下命令运行应用程序
   ```bash
   $ node index.js
   ```
@@ -54,28 +54,28 @@ plugins:
 ### express -h {.row-span-2}
 
 ```bash
-Usage: express [options] [dir]
-Options:
-  -h, --help output usage information
-      --version output version number
-  -e, --ejs add ejs engine support
-      --hbs add hbs engine support
-      --pug add pug engine support
-  -H, --hogan add hogan.js engine support
-      --no-view No view engine generated
-  -v, --view <engine> add view <engine> support (ejs|hbs|hjs|jade|pug|twig|vash) (default jade)
-  -c, --css <engine> add stylesheet <engine> support (less|stylus|compass|sass) (default css)
-      --git add .gitignore
-  -f, --force force non-empty directories
+用法: express [选项] [目录]
+选项:
+  -h, --help 输出用法信息
+      --version 输出版本号
+  -e, --ejs 添加 ejs 引擎支持
+      --hbs 添加 hbs 引擎支持
+      --pug 添加 pug 引擎支持
+  -H, --hogan 添加 hogan.js 引擎支持
+      --no-view 不生成视图引擎
+  -v, --view <引擎> 添加视图 <引擎> 支持 (ejs|hbs|hjs|jade|pug|twig|vash) (默认为 jade)
+  -c, --css <引擎> 添加样式表 <引擎> 支持 (less|stylus|compass|sass) (默认为 css)
+      --git 添加 .gitignore
+  -f, --force 强制操作非空目录
 ```
 
 {.wrap-text}
 
-Create a `myapp` project
+创建一个 `myapp` 项目
 
 ```bash
 $ express --view=pug myapp
-# run the application
+# 运行应用程序
 $ DEBUG=myapp:*npm start
 ```
 
@@ -90,7 +90,7 @@ $ DEBUG=myapp:*npm start
 | `express.text()`       | [#](http://expressjs.com/en/4x/api.html#express.text)       |
 | `express.urlencoded()` | [#](http://expressjs.com/en/4x/api.html#express.urlencoded) |
 
-### Router
+### 路由 (Router)
 
 | :-                | :-                                                     |
 | :---------------- | :----------------------------------------------------- |
@@ -100,7 +100,7 @@ $ DEBUG=myapp:*npm start
 | `router.route()`  | [#](http://expressjs.com/en/4x/api.html#router.route)  |
 | `router.use()`    | [#](http://expressjs.com/en/4x/api.html#router.use)    |
 
-### Application
+### 应用程序 (Application)
 
 ```js
 var express = require("express");
@@ -112,20 +112,20 @@ console.dir(app.locals.email);
 //=> 'me@myapp.com'
 ```
 
-#### Attribute
+#### 属性 (Attribute)
 
 | :-              | :-                                                                                        |
 | :-------------- | :---------------------------------------------------------------------------------------- |
-| `app.locals`    | Local variables in the application [#](http://expressjs.com/en/4x/api.html#app.locals)    |
-| `app.mountpath` | Path pattern for mounting sub-apps [#](http://expressjs.com/en/4x/api.html#app.mountpath) |
+| `app.locals`    | 应用程序中的局部变量 [#](http://expressjs.com/en/4x/api.html#app.locals)    |
+| `app.mountpath` | 用于挂载子应用程序的路径模式 [#](http://expressjs.com/en/4x/api.html#app.mountpath) |
 
-#### Events
+#### 事件 (Events)
 
 | :-      | :-                                                                                                                                                                   |
 | :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `mount` | The child application is mounted on the parent application, and the event is triggered on the child application [#](http://expressjs.com/en/4x/api.html#app.onmount) |
+| `mount` | 子应用程序挂载到父应用程序时，在子应用程序上触发该事件 [#](http://expressjs.com/en/4x/api.html#app.onmount) |
 
-#### Method
+#### 方法 (Method)
 
 | :-                        | :-                                                         |
 | :------------------------ | :--------------------------------------------------------- |
@@ -149,9 +149,9 @@ console.dir(app.locals.email);
 | `app.set()`               | [#](http://expressjs.com/en/4x/api.html#app.set)           |
 | `app.use()`               | [#](http://expressjs.com/en/4x/api.html#app.use)           |
 
-### Request
+### 请求 (Request)
 
-#### Attribute
+#### 属性 (Attribute)
 
 | :-                  | :-                                                         |
 | :------------------ | :--------------------------------------------------------- |
@@ -176,7 +176,7 @@ console.dir(app.locals.email);
 | `req.subdomains`    | [#](http://expressjs.com/en/4x/api.html#req.subdomains)    |
 | `req.xhr`           | [#](http://expressjs.com/en/4x/api.html#req.xhr)           |
 
-#### Method
+#### 方法 (Method)
 
 | :-                       | :-                                                                              |
 | :----------------------- | :------------------------------------------------------------------------------ |
@@ -184,12 +184,12 @@ console.dir(app.locals.email);
 | `req.acceptsCharsets()`  | [#](http://expressjs.com/en/4x/api.html#req.acceptsCharsets)                    |
 | `req.acceptsEncodings()` | [#](http://expressjs.com/en/4x/api.html#req.acceptsEncodings)                   |
 | `req.acceptsLanguages()` | [#](http://expressjs.com/en/4x/api.html#req.acceptsLanguages)                   |
-| `req.get()`              | Get HTTP request header fields [#](http://expressjs.com/en/4x/api.html#req.get) |
+| `req.get()`              | 获取 HTTP 请求头字段 [#](http://expressjs.com/en/4x/api.html#req.get) |
 | `req.is()`               | [#](http://expressjs.com/en/4x/api.html#req.is)                                 |
 | `req.param()`            | [#](http://expressjs.com/en/4x/api.html#req.param)                              |
 | `req.range()`            | [#](http://expressjs.com/en/4x/api.html#req.range)                              |
 
-### Response
+### 响应 (Response)
 
 ```js
 app.get("/", function (req, res) {
@@ -199,7 +199,7 @@ app.get("/", function (req, res) {
 });
 ```
 
-#### Attribute
+#### 属性 (Attribute)
 
 | :-                | :-                                                       |
 | :---------------- | :------------------------------------------------------- |
@@ -207,7 +207,7 @@ app.get("/", function (req, res) {
 | `res.headersSent` | [#](http://expressjs.com/en/4x/api.html#res.headersSent) |
 | `res.locals`      | [#](http://expressjs.com/en/4x/api.html#res.locals)      |
 
-#### Method
+#### 方法 (Method)
 
 | :-                  | :-                                                                                    |
 | :------------------ | :------------------------------------------------------------------------------------ |
@@ -215,60 +215,49 @@ app.get("/", function (req, res) {
 | `res.attachment()`  | [#](http://expressjs.com/en/4x/api.html#res.attachment)                               |
 | `res.cookie()`      | [#](http://expressjs.com/en/4x/api.html#res.cookie)                                   |
 | `res.clearCookie()` | [#](http://expressjs.com/en/4x/api.html#res.clearCookie)                              |
-| `res.download()`    | Prompt for files to download [#](http://expressjs.com/en/4x/api.html#res.download)    |
-| `res.end()`         | end the response process [#](http://expressjs.com/en/4x/api.html#res.end)             |
+| `res.download()`    | 提示文件下载 [#](http://expressjs.com/en/4x/api.html#res.download)    |
+| `res.end()`         | 结束响应过程 [#](http://expressjs.com/en/4x/api.html#res.end)             |
 | `res.format()`      | [#](http://expressjs.com/en/4x/api.html#res.format)                                   |
 | `res.get()`         | [#](http://expressjs.com/en/4x/api.html#res.get)                                      |
-| `res.json()`        | Send JSON response [#](http://expressjs.com/en/4x/api.html#res.json)                  |
-| `res.jsonp()`       | Send a response with JSONP support [#](http://expressjs.com/en/4x/api.html#res.jsonp) |
+| `res.json()`        | 发送 JSON 响应 [#](http://expressjs.com/en/4x/api.html#res.json)                  |
+| `res.jsonp()`       | 发送支持 JSONP 的响应 [#](http://expressjs.com/en/4x/api.html#res.jsonp) |
 | `res.links()`       | [#](http://expressjs.com/en/4x/api.html#res.links)                                    |
 | `res.location()`    | [#](http://expressjs.com/en/4x/api.html#res.location)                                 |
-| `res.redirect()`    | Redirect request [#](http://expressjs.com/en/4x/api.html#res.redirect)                |
-| `res.render()`      | render view template [#](http://expressjs.com/en/4x/api.html#res.render)              |
-| `res.send()`        | Send various types of responses [#](http://expressjs.com/en/4x/api.html#res.send)     |
-| `res.sendFile()`    | Send a file as an octet stream [#](http://expressjs.com/en/4x/api.html#res.sendFile)  |
+| `res.redirect()`    | 重定向请求 [#](http://expressjs.com/en/4x/api.html#res.redirect)                |
+| `res.render()`      | 渲染视图模板 [#](http://expressjs.com/en/4x/api.html#res.render)              |
+| `res.send()`        | 发送各种类型的响应 [#](http://expressjs.com/en/4x/api.html#res.send)     |
+| `res.sendFile()`    | 以八位字节流形式发送文件 [#](http://expressjs.com/en/4x/api.html#res.sendFile)  |
 | `res.sendStatus()`  | [#](http://expressjs.com/en/4x/api.html#res.sendStatus)                               |
 | `res.set()`         | [#](http://expressjs.com/en/4x/api.html#res.set)                                      |
 | `res.status()`      | [#](http://expressjs.com/en/4x/api.html#res.status)                                   |
 | `res.type()`        | [#](http://expressjs.com/en/4x/api.html#res.type)                                     |
 | `res.vary()`        | [#](http://expressjs.com/en/4x/api.html#res.vary)                                     |
 
-## Example
+## 示例 (Example)
 
-### Router {. row-span-2}
+### 路由 (Router) {. row-span-2}
 
-Called for any request passed to this router
+对传递给此路由器的任何请求调用
 
 ```js
 router.use(function (req, res, next) {
-  //.. some logic here .. like any other middleware
+  //.. 一些逻辑在这里 .. 像任何其他中间件一样
   next();
 });
 ```
 
-will handle any request ending in `/events`
+将处理任何以 `/events` 结尾的请求
 
 ```js
-//depends on where the router "use()"
+//取决于路由器 "use()" 的位置
 router.get("/events", (req, res, next) => {
   //..
 });
 ```
 
-### Response
+### 响应 (Response)
 
-The `res` object represents the HTTP response sent by the `Express` application when it receives an HTTP request
-
-```js
-app.get("/user/:id", (req, res) => {
-  res.send("user" + req.params.id);
-});
-```
-
-### Request
-
-A `req` object represents an `HTTP` request and has properties for the request query string, parameters, body, HTTP
-headers, etc.
+`res` 对象表示 `Express` 应用程序在收到 HTTP 请求时发送的 HTTP 响应
 
 ```js
 app.get("/user/:id", (req, res) => {
@@ -276,15 +265,26 @@ app.get("/user/:id", (req, res) => {
 });
 ```
 
-### res. end()
+### 请求 (Request)
+
+`req` 对象表示一个 `HTTP` 请求，并具有请求查询字符串、参数、正文、HTTP
+头等属性。
+
+```js
+app.get("/user/:id", (req, res) => {
+  res.send("user" + req.params.id);
+});
+```
+
+### res.end()
 
 ```js
 res.end();
 res.status(404).end();
 ```
 
-End the response process. This method actually comes from the Node core, specifically the `response.end()` method of
-`http.ServerResponse`
+结束响应过程。此方法实际上来自 Node 核心，特别是
+`http.ServerResponse` 的 `response.end()` 方法。
 
 ### res.json([body])
 
@@ -298,8 +298,8 @@ res.status(500).json({ error: "message" });
 
 ```js
 app.all("/secret", function (req, res, next) {
-  console.log("access secret section...");
-  next(); // Pass control to the next handler
+  console.log("访问秘密区域...");
+  next(); // 将控制权传递给下一个处理程序
 });
 ```
 
@@ -307,7 +307,7 @@ app.all("/secret", function (req, res, next) {
 
 ```js
 app.delete("/", function (req, res) {
-  res.send("DELETE request to homepage");
+  res.send("向主页发出 DELETE 请求");
 });
 ```
 
@@ -348,74 +348,73 @@ var app = express();
 app.listen(3000);
 ```
 
-### Routing
+### 路由 (Routing)
 
 ```js
 const express = require("express");
 const app = express();
 
-//Respond to "hello world" when making a GET request to the homepage
+//向主页发出 GET 请求时响应 "hello world"
 app.get("/", (req, res) => {
   res.send("hello world");
 });
 ```
 
 ```js
-// GET method routing
+// GET 方法路由
 app.get("/", (req, res) => {
-  res.send("GET request to the homepage");
+  res.send("向主页发出 GET 请求");
 });
 
-// POST method routing
+// POST 方法路由
 app.post("/", (req, res) => {
-  res.send("POST request to the homepage");
+  res.send("向主页发出 POST 请求");
 });
 ```
 
-### Middleware
+### 中间件 (Middleware)
 
 ```js
 function logOriginalUrl(req, res, next) {
-  console.log("ReqURL:", req.originalUrl);
+  console.log("请求URL:", req.originalUrl);
   next();
 }
 
 function logMethod(req, res, next) {
-  console.log("Request Type:", req.method);
+  console.log("请求类型:", req.method);
   next();
 }
 
 const log = [logOriginalUrl, logMethod];
 
 app.get("/user/:id", log, (req, res, next) => {
-  res.send("User Info");
+  res.send("用户信息");
 });
 ```
 
-### Using templates
+### 使用模板 (Using templates)
 
 ```js
 app.set("view engine", "pug");
 ```
 
-Create a `Pug` template file named `index.pug` in the `views` directory with the following content
+在 `views` 目录中创建一个名为 `index.pug` 的 `Pug` 模板文件，内容如下：
 
 ```pug
 html
-  the head
+  head
     title= title
-  the body
+  body
     h1=message
 ```
 
-Create a route to render the `index.pug` file. If the view engine property is not set, the extension of the view file
-must be specified
+创建一个路由来渲染 `index.pug` 文件。如果未设置视图引擎属性，则必须指定视图文件的扩展名。
 
 ```js
 app.get("/", (req, res) => {
   res.render("index", {
-    title: "Hey",
-    message: "Hello there!",
+    title: "嘿",
+    message: "你好！",
   });
 });
 ```

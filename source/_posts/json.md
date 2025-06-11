@@ -8,26 +8,26 @@ tags:
 categories:
   - Programming
 intro: |
-  This is a quick reference cheat sheet for understanding and writing JSON format configuration files.
+  这是一个用于理解和编写 JSON 格式配置文件的快速参考备忘单。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门
 
-### Introduction
+### 简介
 
-[JSON](https://json.org/) is a lightweight text-based open standard designed for human-readable data interchange.
+[JSON](https://json.org/) 是一种轻量级的基于文本的开放标准，专为人类可读的数据交换而设计。
 
-- JSON stands for JavaScript Object Notation
-- JSON is easy to read and write.
-- JSON is language agnostic data-interchange format
-- JSON filename extension is `.json`
-- JSON Internet Media type is `application/json`
+- JSON 代表 JavaScript Object Notation
+- JSON 易于阅读和编写。
+- JSON 是一种与语言无关的数据交换格式
+- JSON 文件扩展名是 `.json`
+- JSON 互联网媒体类型是 `application/json`
 
 {.marker-round}
 
-### Examples
+### 示例
 
 ```json
 {
@@ -44,59 +44,59 @@ plugins:
 }
 ```
 
-### Types
+### 类型
 
-| Type      | Description                             |
+| 类型      | 描述                             |
 | --------- | :-------------------------------------- |
-| `Number`  | Double precision floating-point         |
-| `String`  | Series of characters                    |
-| `Boolean` | `true` or `false`                       |
-| `Array`   | Ordered sequence of values              |
-| `Value`   | String, Number, Boolean, null etc       |
-| `Object`  | Unordered collection of key/value pairs |
-| `null`    | Null or Empty                           |
+| `Number`  | 双精度浮点数         |
+| `String`  | 字符序列                    |
+| `Boolean` | `true` 或 `false`                       |
+| `Array`   | 值的有序序列              |
+| `Value`   | 字符串、数字、布尔值、null 等       |
+| `Object`  | 键/值对的无序集合 |
+| `null`    | Null 或空                           |
 
-### String {.row-span-3}
+### 字符串 {.row-span-3}
 
 |      |                            |
 | ---- | :------------------------- |
-| `\"` | Double quote               |
-| `\\` | Backslash                  |
-| `\/` | Forward slash              |
-| `\b` | Backspace                  |
-| `\f` | Form feed                  |
-| `\n` | Newline                    |
-| `\r` | Carriage return            |
-| `\t` | Tab                        |
-| `\u` | Trailed by four hex digits |
+| `\"` | 双引号               |
+| `\\` | 反斜杠                  |
+| `\/` | 正斜杠              |
+| `\b` | 退格                  |
+| `\f` | 换页符                  |
+| `\n` | 换行符                    |
+| `\r` | 回车符            |
+| `\t` | 制表符                        |
+| `\u` | 后跟四个十六进制数字 |
 
-#### Examples
+#### 示例
 
 ```json {.wrap}
 {
-  "url": "https://cheatsheets.zip",
-  "msg": "Hi,\n\"CheatSheets.zip\"",
+  "url": "https://r3f.cn",
+  "msg": "Hi,\n\"r3f.cn\"",
   "intro": "Share quick reference and cheat sheet for developers."
 }
 ```
 
-#### Invalid String
+#### 无效字符串
 
 ```json
 { "foo": "bar" }
 ```
 
-Have to be delimited by double quotes
+必须用双引号分隔
 
-### Number {.row-span-2}
+### 数字 {.row-span-2}
 
-| Type       | Description                            |
+| 类型       | 描述                            |
 | ---------- | :------------------------------------- |
-| `Integer`  | Digits 1-9, 0 and positive or negative |
-| `Fraction` | Fractions like 0.3, 3.9                |
-| `Exponent` | Exponent like e, e+, e-, E, E+, E      |
+| `Integer`  | 数字 1-9、0 以及正数或负数 |
+| `Fraction` | 小数，如 0.3、3.9                |
+| `Exponent` | 指数，如 e、e+、e-、E、E+、E      |
 
-#### Examples
+#### 示例
 
 ```json
 {
@@ -108,15 +108,15 @@ Have to be delimited by double quotes
 }
 ```
 
-#### Invalid Number
+#### 无效数字
 
 ```json
 { "foo": 0xff }
 ```
 
-In JSON you can use only Decimal Literals
+在 JSON 中，您只能使用十进制字面量
 
-### Objects
+### 对象
 
 ```json
 {
@@ -131,17 +131,17 @@ In JSON you can use only Decimal Literals
 }
 ```
 
-Multiple key/value pairs separated by a comma
+多个键/值对，用逗号分隔
 
-### Arrays
+### 数组
 
 ```json
 [1, 2, 3, 4, 5]
 ```
 
-Begins with `[` and ends with `]`
+以 `[` 开始，以 `]` 结束
 
-### Array of objects
+### 对象数组
 
 ```json
 {
@@ -152,7 +152,7 @@ Begins with `[` and ends with `]`
 }
 ```
 
-### Object of arrays
+### 数组对象
 
 ```json
 {
@@ -162,7 +162,7 @@ Begins with `[` and ends with `]`
 }
 ```
 
-### 2D Array
+### 二维数组
 
 ```json
 {
@@ -175,7 +175,7 @@ Begins with `[` and ends with `]`
 }
 ```
 
-### Object of objects
+### 对象嵌套对象
 
 ```json
 {
@@ -190,7 +190,7 @@ Begins with `[` and ends with `]`
 }
 ```
 
-### Nested
+### 嵌套
 
 ```json
 {
@@ -207,9 +207,9 @@ Begins with `[` and ends with `]`
 }
 ```
 
-## Access JSON in JavaScript
+## 在 JavaScript 中访问 JSON
 
-### Access Object
+### 访问对象
 
 ```javascript
 let myObject = {
@@ -232,7 +232,7 @@ let myObject = {
 | `myObject.other`   | undefined |
 | `myObject[0]`      | undefined |
 
-### Access Nested {.row-span-2}
+### 访问嵌套对象 {.row-span-2}
 
 ```javascript
 let myObject = {
@@ -259,7 +259,7 @@ let myObject = {
 | `myObject.jsmith[3]`     | "F"                      |
 | `myObject[1]`            | undefined                |
 
-### Access Array of Objects {.row-span-2}
+### 访问对象数组 {.row-span-2}
 
 ```javascript
 let myArray = [
@@ -300,7 +300,7 @@ let myArray = [
 | `myArray[3]`        | undefined                  |
 | `myArray[3].gender` | TypeError: Cannot read...  |
 
-### Access Array
+### 访问数组
 
 ```javascript
 let myArray = ["Jason", "Doe", 39, "M", 70000, true];
@@ -314,8 +314,9 @@ let myArray = ["Jason", "Doe", 39, "M", 70000, true];
 | `myArray[5]` | true      |
 | `myArray[6]` | undefined |
 
-## Also see {.cols-1}
+## 另请参阅 {.cols-1}
 
 - [JSON](https://www.json.org/json-en.html) _(json.org)_
 - [JSON Editor Online](http://jsoneditoronline.org/) _(jsoneditoronline.org)_
 - [Convert JSON Array to Markdown Table, CSV and more](https://tableconvert.com/json-to-markdown) _(tableconvert.com)_
+

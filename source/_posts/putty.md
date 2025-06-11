@@ -7,52 +7,52 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 32 keyboard shortcuts found on the PuTTy app
+  PuTTy 应用程序中 32 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### General Shortcuts
+### 常规快捷键
 
-| Shortcut               | Action                                               |
+| 快捷键                 | 操作                                                 |
 | ---------------------- | ---------------------------------------------------- |
-| `Ctrl` `(right click)` | Open context menu                                    |
-| `Ctrl` `A`             | Jump to the start of the line                        |
-| `Ctrl` `B`             | Move back a character                                |
-| `Ctrl` `C`             | Terminal the command                                 |
-| `Ctrl` `D`             | Delete from under the cursor                         |
-| `Ctrl` `E`             | Jump to the end of the line                          |
-| `Ctrl` `F`             | Move forward a character                             |
-| `Ctrl` `K`             | Delete to end-of-line                                |
-| `Ctrl` `L`             | Clear the screen                                     |
-| `Ctrl` `R`             | Search the history backwards                         |
-| `Ctrl` `Shift` `R`     | Search the history backwards with multi occurrence   |
-| `Ctrl` `U`             | Delete backward from cursor                          |
-| `Ctrl` `X` `X`         | Move between end-of-line and current cursor position |
-| `Ctrl` `X` `@`         | Show possible hostname completions                   |
-| `Ctrl` `Z`             | Suspend or stop the command                          |
-| `Alt` `Left`           | Move to the first line in the history                |
-| `Alt` `Right`          | Move to the last line in the history                 |
-| `Alt` `?`              | Show current completion list                         |
-| `Alt` `*`              | Insert all possible completions                      |
-| `Alt` `/`              | Attempt to complete filename                         |
-| `Alt` `.`              | Yank last argument to previous command               |
-| `Alt` `B`              | Move backward                                        |
-| `Alt` `C`              | Capitalize the word                                  |
-| `Alt` `D`              | Delete word                                          |
-| `Alt` `F`              | Move forward                                         |
-| `Alt` `L`              | Make word lowercase                                  |
-| `Alt` `N`              | Search the history forwards non-incremental          |
-| `Alt` `P`              | Search the history backwards non-incremental         |
-| `Alt` `R`              | Recall command                                       |
-| `Alt` `T`              | Move words around                                    |
-| `Alt` `U`              | Make word uppercase                                  |
-| `Alt` `Backspace`      | Delete backwards from the cursor                     |
+| `Ctrl` `(右键单击)`    | 打开上下文菜单                                       |
+| `Ctrl` `A`             | 跳转到行首                                           |
+| `Ctrl` `B`             |向后移动一个字符                                      |
+| `Ctrl` `C`             | 终止命令                                             |
+| `Ctrl` `D`             | 删除光标下的内容                                     |
+| `Ctrl` `E`             | 跳转到行尾                                           |
+| `Ctrl` `F`             | 向前移动一个字符                                     |
+| `Ctrl` `K`             | 删除到行尾                                           |
+| `Ctrl` `L`             | 清除屏幕                                             |
+| `Ctrl` `R`             | 向后搜索历史记录                                     |
+| `Ctrl` `Shift` `R`     | 向后搜索历史记录（多次出现）                         |
+| `Ctrl` `U`             | 从光标处向前删除                                     |
+| `Ctrl` `X` `X`         | 在行尾和当前光标位置之间移动                         |
+| `Ctrl` `X` `@`         | 显示可能的主机名补全                                 |
+| `Ctrl` `Z`             | 暂停或停止命令                                       |
+| `Alt` `Left`           | 移动到历史记录中的第一行                             |
+| `Alt` `Right`          | 移动到历史记录中的最后一行                             |
+| `Alt` `?`              | 显示当前补全列表                                     |
+| `Alt` `*`              | 插入所有可能的补全                                   |
+| `Alt` `/`              | 尝试补全文件名                                       |
+| `Alt` `.`              | 提取上一个命令的最后一个参数                         |
+| `Alt` `B`              | 向后移动                                             |
+| `Alt` `C`              | 将单词大写                                           |
+| `Alt` `D`              | 删除单词                                             |
+| `Alt` `F`              | 向前移动                                             |
+| `Alt` `L`              | 将单词小写                                           |
+| `Alt` `N`              | 非增量向前搜索历史记录                               |
+| `Alt` `P`              | 非增量向后搜索历史记录                               |
+| `Alt` `R`              | 撤销命令                                             |
+| `Alt` `T`              | 移动单词                                             |
+| `Alt` `U`              | 将单词大写                                           |
+| `Alt` `Backspace`      | 从光标处向前删除                                     |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for PuTTy](http://rizwanansari.net/putty-shell-keyboard-shortcuts/) _(rizwanansari.net)_
+- [PuTTy 键盘快捷键](http://rizwanansari.net/putty-shell-keyboard-shortcuts/) _(rizwanansari.net)_

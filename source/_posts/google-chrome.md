@@ -1,5 +1,5 @@
 ---
-title: Google Chrome
+title: 谷歌浏览器
 date: 2022-11-23 16:23:31.696190
 background: bg-[#ca4732]
 label:
@@ -7,106 +7,106 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 65 keyboard shortcuts found in Google Chrome
+  谷歌浏览器中 65 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### Tab and window
+### 标签页和窗口
 
-| Shortcut             | Action                                                      |
-| -------------------- | ----------------------------------------------------------- |
-| `Ctrl` `N`           | Open a new window                                           |
-| `Ctrl` `Shift` `N`   | Open a new window in Incognito mode                         |
-| `Ctrl` `T`           | Open a new tab, and jump to it                              |
-| `Ctrl` `Shift` `T`   | Reopen the last closed tab, and jump to it                  |
-| `Ctrl` `Tab`         | Jump to the next open tab                                   |
-| `Ctrl` `Shift` `Tab` | Jump to the previous open tab                               |
-| `Ctrl` `1-8`         | Jump to a specific tab                                      |
-| `Ctrl` `9`           | Jump to the last tab                                        |
-| `Alt` `Home`         | Open your home page in the current tab                      |
-| `Alt` `Left`         | Open the previous page from your history in the current tab |
-| `Alt` `Right`        | Open the next page from your history in the current tab     |
-| `Ctrl` `W`           | Close the current tab                                       |
-| `Ctrl` `Shift` `W`   | Close the current window                                    |
-| `Alt` `Space` `N`    | Minimize the current window                                 |
-| `Alt` `Space` `X`    | Maximize the current window                                 |
-| `Alt` `F4`           | Close the current window                                    |
-| `Ctrl` `Shift` `Q`   | Quite Google Chrome                                         |
+| 快捷键               | 操作                                           |
+| -------------------- | ---------------------------------------------- |
+| `Ctrl` `N`           | 打开新窗口                                     |
+| `Ctrl` `Shift` `N`   | 在隐身模式下打开新窗口                         |
+| `Ctrl` `T`           | 打开新标签页并跳转到该标签页                   |
+| `Ctrl` `Shift` `T`   | 重新打开上次关闭的标签页并跳转到该标签页       |
+| `Ctrl` `Tab`         | 跳转到下一个打开的标签页                       |
+| `Ctrl` `Shift` `Tab` | 跳转到上一个打开的标签页                       |
+| `Ctrl` `1-8`         | 跳转到特定标签页                               |
+| `Ctrl` `9`           | 跳转到最后一个标签页                           |
+| `Alt` `Home`         | 在当前标签页中打开主页                         |
+| `Alt` `Left`         | 在当前标签页中打开历史记录中的上一页           |
+| `Alt` `Right`        | 在当前标签页中打开历史记录中的下一页           |
+| `Ctrl` `W`           | 关闭当前标签页                                 |
+| `Ctrl` `Shift` `W`   | 关闭当前窗口                                   |
+| `Alt` `Space` `N`    | 最小化当前窗口                                 |
+| `Alt` `Space` `X`    | 最大化当前窗口                                 |
+| `Alt` `F4`           | 关闭当前窗口                                   |
+| `Ctrl` `Shift` `Q`   | 退出谷歌浏览器                                 |
 
 {.shortcuts}
 
-### Google Chrome features
+### 谷歌浏览器功能
 
-| Shortcut                | Action                                             |
+| 快捷键                | 操作                                               |
 | ----------------------- | -------------------------------------------------- |
-| `Alt` `F`               | Open the Chrome menu                               |
-| `Ctrl` `Shift` `B`      | Show or hide the Bookmarks bar                     |
-| `Ctrl` `Shift` `O`      | Open the Bookmarks manager                         |
-| `Ctrl` `H`              | Open the History page in a new tab                 |
-| `Ctrl` `J`              | Open the Downloads page in a new tab               |
-| `Shift` `Esc`           | Open the Chrome Task Manager                       |
-| `Shift` `Alt` `T`       | Set focus on the first item in the Chrome toolbar  |
-| `F10`                   | Set focus on the last item in the Chrome toolbar   |
-| `F6`                    | Switch focus to unfocused dialog (if showing)      |
-| `Ctrl` `F`              | Open the Find Bar to search the current page       |
-| `Ctrl` `G`              | Jump to the next match to your Find Bar search     |
-| `Ctrl` `Shift` `G`      | Jump to the previous match to your Find Bar search |
-| `F12`                   | Open Developer Tools                               |
-| `Ctrl` `Shift` `Delete` | Open the Clear Browsing Data options               |
-| `F1`                    | Open the Chrome Help Center in a new tab           |
-| `Ctrl` `Shift` `M`      | Log in a different user or browse as a Guest       |
-| `Alt` `Shift` `I`       | Open a feedback form                               |
+| `Alt` `F`               | 打开 Chrome 菜单                                   |
+| `Ctrl` `Shift` `B`      | 显示或隐藏书签栏                                   |
+| `Ctrl` `Shift` `O`      | 打开书签管理器                                     |
+| `Ctrl` `H`              | 在新标签页中打开历史记录页面                       |
+| `Ctrl` `J`              | 在新标签页中打开下载页面                           |
+| `Shift` `Esc`           | 打开 Chrome 任务管理器                             |
+| `Shift` `Alt` `T`       | 将焦点设置到 Chrome 工具栏中的第一项               |
+| `F10`                   | 将焦点设置到 Chrome 工具栏中的最后一项               |
+| `F6`                    | 切换焦点到未聚焦的对话框（如果显示）               |
+| `Ctrl` `F`              | 打开查找栏以搜索当前页面                           |
+| `Ctrl` `G`              | 跳转到查找栏搜索的下一个匹配项                     |
+| `Ctrl` `Shift` `G`      | 跳转到查找栏搜索的上一个匹配项                     |
+| `F12`                   | 打开开发者工具                                     |
+| `Ctrl` `Shift` `Delete` | 打开清除浏览数据选项                               |
+| `F1`                    | 在新标签页中打开 Chrome 帮助中心                   |
+| `Ctrl` `Shift` `M`      | 登录其他用户或以访客身份浏览                       |
+| `Alt` `Shift` `I`       | 打开反馈表单                                       |
 
 {.shortcuts}
 
-### Address bar
+### 地址栏
 
-| Shortcut         | Action                                                        |
-| ---------------- | ------------------------------------------------------------- |
-| `(type)` `Enter` | Search with your default search engine                        |
-| `(type)` `Tab`   | Search using a different search engine                        |
-| `Ctrl` `Enter`   | Add www. and .com to a site name, and open in the current tab |
-| `Alt` `Enter`    | Open a new tab and perform a Google search                    |
-| `Ctrl` `L`       | Jump to the address bar                                       |
-| `Ctrl` `K`       | Search from anywhere on the page                              |
-| `Shift` `Delete` | Remove predictions from your address bar                      |
+| 快捷键         | 操作                                                           |
+| ---------------- | -------------------------------------------------------------- |
+| `(输入内容)` `Enter` | 使用默认搜索引擎进行搜索                                       |
+| `(输入内容)` `Tab`   | 使用其他搜索引擎进行搜索                                       |
+| `Ctrl` `Enter`   | 将 www. 和 .com 添加到网站名称，并在当前标签页中打开             |
+| `Alt` `Enter`    | 打开新标签页并执行 Google 搜索                                 |
+| `Ctrl` `L`       | 跳转到地址栏                                                   |
+| `Ctrl` `K`       | 从页面任何位置搜索                                             |
+| `Shift` `Delete` | 从地址栏中删除预测                                             |
 
 {.shortcuts}
 
-### Webpage shortcuts
+### 网页快捷键
 
-| Shortcut                 | Action                                                             |
+| 快捷键                 | 操作                                                               |
 | ------------------------ | ------------------------------------------------------------------ |
-| `Ctrl` `P`               | Open options to print the current page                             |
-| `Ctrl` `S`               | Open options to save the current page                              |
-| `Ctrl` `R`               | Reload the current page                                            |
-| `Ctrl` `Shift` `R`       | Reload the current page, ignoring cached content                   |
-| `Esc`                    | Stop the page loading                                              |
-| `Tab`                    | Browse clickable items moving forward                              |
-| `Shift` `Tab`            | Browse clickable items moving backward                             |
-| `Ctrl` `O`               | Open a file from your computer in Chrome                           |
-| `Ctrl` `U`               | Display non-editable HTML source code for the current page         |
-| `Ctrl` `D`               | Save your current webpage as a bookmark                            |
-| `Ctrl` `Shift` `D`       | Save all open tabs as bookmarks in a new folder                    |
-| `F11`                    | Turn full-screen mode on or off                                    |
-| `Ctrl` `+`               | Make everything on the page bigger                                 |
-| `Ctrl` `-`               | Make everything on the page smaller                                |
-| `Ctrl` `0`               | Return everything on the page to default size                      |
-| `Space`                  | Scroll down a webpage, a screen at a time                          |
-| `Shift` `Space`          | Scroll up a webpage, a screen at a time                            |
-| `Home`                   | Go to the top of the page                                          |
-| `End`                    | Go to the bottom of the page                                       |
-| `Shift` `(scroll mouse)` | Scroll horizontally on the page                                    |
-| `Ctrl` `Left`            | Move your cursor to the front of the previous word in a text field |
-| `Ctrl` `Right`           | Move your cursor to the back of the next word in a text field      |
-| `Ctrl` `Backspace`       | Delete the previous word in a text field                           |
-| `Alt` `Home`             | Open the Home page in the current tab                              |
+| `Ctrl` `P`               | 打开打印当前页面的选项                                             |
+| `Ctrl` `S`               | 打开保存当前页面的选项                                             |
+| `Ctrl` `R`               | 重新加载当前页面                                                   |
+| `Ctrl` `Shift` `R`       | 重新加载当前页面，忽略缓存内容                                     |
+| `Esc`                    | 停止页面加载                                                       |
+| `Tab`                    | 向前浏览可点击的项目                                               |
+| `Shift` `Tab`            | 向后浏览可点击的项目                                               |
+| `Ctrl` `O`               | 在 Chrome 中打开计算机上的文件                                     |
+| `Ctrl` `U`               | 显示当前页面的不可编辑 HTML 源代码                                 |
+| `Ctrl` `D`               | 将当前网页另存为书签                                               |
+| `Ctrl` `Shift` `D`       | 将所有打开的标签页在新文件夹中另存为书签                           |
+| `F11`                    | 打开或关闭全屏模式                                                 |
+| `Ctrl` `+`               | 放大页面上的所有内容                                               |
+| `Ctrl` `-`               | 缩小页面上的所有内容                                               |
+| `Ctrl` `0`               | 将页面上的所有内容恢复为默认大小                                   |
+| `Space`                  | 向下滚动网页，一次一屏                                             |
+| `Shift` `Space`          | 向上滚动网页，一次一屏                                             |
+| `Home`                   | 转到页面顶部                                                       |
+| `End`                    | 转到页面底部                                                       |
+| `Shift` `(滚动鼠标)`     | 在页面上水平滚动                                                   |
+| `Ctrl` `Left`            | 在文本字段中将光标移至上一个词的前面                               |
+| `Ctrl` `Right`           | 在文本字段中将光标移至下一个词的后面                               |
+| `Ctrl` `Backspace`       | 删除文本字段中的上一个词                                           |
+| `Alt` `Home`             | 在当前标签页中打开主页                                             |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Google Chrome](https://support.google.com/chrome/answer/157179?hl=en) _(support.google.com)_
+- [谷歌浏览器键盘快捷键](https://support.google.com/chrome/answer/157179?hl=zh-CN) _(support.google.com)_

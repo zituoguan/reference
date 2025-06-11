@@ -7,62 +7,62 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 27 default keyboard shortcuts found in Apex Legends
+  Apex Legends 中 27 个默认键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Movement
+### 移动
 
-| Shortcut     | Action         |
+| 快捷键     | 操作         |
 | ------------ | -------------- |
-| `W`          | Move forward   |
-| `S`          | Move back      |
-| `A`          | Move left      |
-| `D`          | Move right     |
-| `Left Shift` | Sprint         |
-| `Space`      | Jump           |
-| `C`          | Toggle crouch  |
-| `Left Ctrl`  | Hold to crouch |
+| `W`          | 前进   |
+| `S`          | 后退      |
+| `A`          | 左移      |
+| `D`          | 右移     |
+| `Left Shift` | 冲刺         |
+| `Space`      | 跳跃           |
+| `C`          | 切换蹲伏  |
+| `Left Ctrl`  | 按住蹲伏 |
 
 {.shortcuts}
 
-### Weapons and Abilities
+### 武器和技能
 
-| Shortcut | Action                    |
+| 快捷键 | 操作                    |
 | -------- | ------------------------- |
-| `Q`      | Tactical ability          |
-| `Z`      | Ultimate ability          |
-| `E`      | Interact or pickup        |
-| `X`      | Alternate interact        |
-| `Tab`    | Toggle inventory          |
-| `M`      | Toggle map                |
-| `B`      | Toggle fire mode          |
-| `V`      | Melee                     |
-| `R`      | Reload                    |
-| `1`      | Equip first weapon        |
-| `2`      | Equip second weapon       |
-| `3`      | Holster weapons           |
-| `G`      | Equip grenade             |
-| `4`      | Use selected health item  |
-| `H`      | Toggle Gibraltar's shield |
-| `N`      | Inspect weapon            |
+| `Q`      | 战术技能          |
+| `Z`      | 终极技能          |
+| `E`      | 互动/拾取        |
+| `X`      | 备用互动        |
+| `Tab`    | 切换物品栏          |
+| `M`      | 切换地图                |
+| `B`      | 切换开火模式          |
+| `V`      | 近战                     |
+| `R`      | 换弹                    |
+| `1`      | 装备第一把武器        |
+| `2`      | 装备第二把武器       |
+| `3`      | 收起武器           |
+| `G`      | 装备手榴弹             |
+| `4`      | 使用选定的治疗物品  |
+| `H`      | 切换直布罗陀的护盾 |
+| `N`      | 检视武器            |
 
 {.shortcuts}
 
-### Communication
+### 交流
 
-| Shortcut | Action                   |
+| 快捷键 | 操作                   |
 | -------- | ------------------------ |
-| `F`      | Ping enemy here          |
-| `T`      | Hold to use push to talk |
-| `Enter`  | Message team             |
+| `F`      | 在此标记敌人          |
+| `T`      | 按住以使用按键通话 |
+| `Enter`  | 向队伍发送消息             |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Apex Legends](https://www.metabomb.net/off-meta/gameplay-guides/apex-legends-controls-pc-playstation-4xbox-one)
+- [Apex Legends 键盘快捷键](https://www.metabomb.net/off-meta/gameplay-guides/apex-legends-controls-pc-playstation-4xbox-one)
   _(www.metabomb.net)_

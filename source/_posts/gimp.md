@@ -7,173 +7,173 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 97 keyboard shortcuts found in GIMP
+  GIMP 中 97 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Toolbox {.row-span-2}
+### 工具箱 {.row-span-2}
 
-| Shortcut    | Action           |
+| 快捷键      | 操作             |
 | ----------- | ---------------- |
-| `R`         | Rectangle select |
-| `E`         | Ellipse select   |
-| `F`         | Free select      |
-| `U`         | Fuzzy select     |
-| `Shift` `O` | Select by color  |
-| `I`         | Scissors         |
-| `B`         | Paths            |
-| `O`         | Color picker     |
-| `M`         | Move             |
-| `Shift` `C` | Crop and resize  |
-| `Shift` `R` | Rotate           |
-| `Shift` `T` | Scale            |
-| `Shift` `S` | Shear            |
-| `Shift` `P` | Perspective      |
-| `Shift` `F` | Flip             |
-| `T`         | Text             |
-| `Shift` `B` | Bucket fill      |
-| `L`         | Blend            |
-| `N`         | Pencil           |
-| `P`         | Paintbrush       |
-| `Shift` `E` | Eraser           |
-| `A`         | Airbrush         |
-| `K`         | Ink              |
-| `C`         | Clone            |
-| `V`         | Convolve         |
-| `S`         | Smudge           |
-| `Shift` `D` | Dodge or burn    |
-| `X`         | Swap colors      |
-| `D`         | Default colors   |
+| `R`         | 矩形选择         |
+| `E`         | 椭圆选择         |
+| `F`         | 自由选择         |
+| `U`         | 模糊选择 (魔棒)   |
+| `Shift` `O` | 按颜色选择       |
+| `I`         | 智能剪刀         |
+| `B`         | 路径             |
+| `O`         | 颜色拾取器       |
+| `M`         | 移动             |
+| `Shift` `C` | 裁剪和调整大小   |
+| `Shift` `R` | 旋转             |
+| `Shift` `T` | 缩放             |
+| `Shift` `S` | 切变             |
+| `Shift` `P` | 透视             |
+| `Shift` `F` | 翻转             |
+| `T`         | 文本             |
+| `Shift` `B` | 油漆桶填充       |
+| `L`         | 渐变             |
+| `N`         | 铅笔             |
+| `P`         | 画笔             |
+| `Shift` `E` | 橡皮擦           |
+| `A`         | 喷枪             |
+| `K`         | 墨水             |
+| `C`         | 克隆             |
+| `V`         | 卷积             |
+| `S`         | 涂抹             |
+| `Shift` `D` | 加亮或减淡       |
+| `X`         | 交换颜色         |
+| `D`         | 默认颜色         |
 
 {.shortcuts}
 
-### File
+### 文件
 
-| Shortcut         | Action                      |
+| 快捷键         | 操作                      |
 | ---------------- | --------------------------- |
-| `Ctrl` `N`       | New image                   |
-| `Ctrl` `O`       | Open image                  |
-| `Ctrl` `Alt` `N` | Open image as new layer     |
-| `Ctrl` `D`       | Duplicate image             |
-| `Ctrl` `1-0`     | Open recent image 1-10      |
-| `Ctrl` `S`       | Save image                  |
-| `Ctrl` `S`       | Save image under a new name |
-| `Ctrl` `Q`       | Quit                        |
+| `Ctrl` `N`       | 新建图像                   |
+| `Ctrl` `O`       | 打开图像                   |
+| `Ctrl` `Alt` `N` | 作为新图层打开图像         |
+| `Ctrl` `D`       | 复制图像                   |
+| `Ctrl` `1-0`     | 打开最近的图像 1-10      |
+| `Ctrl` `S`       | 保存图像                   |
+| `Ctrl` `S`       | 将图像另存为新名称         |
+| `Ctrl` `Q`       | 退出                        |
 
 {.shortcuts}
 
-### Dialogs
+### 对话框
 
-| Shortcut            | Action                              |
+| 快捷键            | 操作                              |
 | ------------------- | ----------------------------------- |
-| `Ctrl` `L`          | Layers                              |
-| `Ctrl` `Shift` `B`  | Brushes                             |
-| `Ctrl` `Shift` `P`  | Patterns                            |
-| `Ctrl` `G`          | Gradients                           |
-| `Ctrl` `Shift` `T`  | Tool options                        |
-| `Ctrl` `P`          | Palettes                            |
-| `Ctrl` `Shift` `I`  | Info window                         |
-| `Ctrl` `Shift` `N`  | Navigation window                   |
-| `Tab`               | Jump to next widget                 |
-| `Shift` `Tab`       | Jump to previous widget             |
-| `Enter`             | Set the new value                   |
-| `Space`             | Activate the current button or list |
-| `Ctrl` `Alt` `PgUp` | In a multi-tab dialog, switch tabs  |
-| `Shift` `L`         | Open location                       |
-| `Alt` `Up`          | Up folder                           |
-| `Alt` `Down`        | Down folder                         |
-| `Alt` `Home`        | Home folder                         |
-| `Esc`               | Close dialog                        |
+| `Ctrl` `L`          | 图层                              |
+| `Ctrl` `Shift` `B`  | 画笔                              |
+| `Ctrl` `Shift` `P`  | 图案                              |
+| `Ctrl` `G`          | 渐变                              |
+| `Ctrl` `Shift` `T`  | 工具选项                          |
+| `Ctrl` `P`          | 调色板                            |
+| `Ctrl` `Shift` `I`  | 信息窗口                          |
+| `Ctrl` `Shift` `N`  | 导航窗口                          |
+| `Tab`               | 跳转到下一个控件                 |
+| `Shift` `Tab`       | 跳转到上一个控件                 |
+| `Enter`             | 设置新值                          |
+| `Space`             | 激活当前按钮或列表               |
+| `Ctrl` `Alt` `PgUp` | 在多标签对话框中切换标签         |
+| `Shift` `L`         | 打开位置                          |
+| `Alt` `Up`          | 上一级文件夹                       |
+| `Alt` `Down`        | 下一级文件夹                       |
+| `Alt` `Home`        | 主文件夹                          |
+| `Esc`               | 关闭对话框                        |
 
 {.shortcuts}
 
-### View
+### 视图
 
-| Shortcut           | Action                |
+| 快捷键           | 操作                |
 | ------------------ | --------------------- |
-| `F10`              | Main menu             |
-| `Shift` `F10`      | Drop-down menu        |
-| `F11`              | Toggle fullscreen     |
-| `Shift` `Q`        | Toggle quickmask      |
-| `Ctrl` `W`         | Close document window |
-| `+`                | Zoom in               |
-| `-`                | Zoom out              |
-| `1`                | Zoom 1:1              |
-| `Ctrl` `E`         | Shrink wrap           |
-| `Ctrl` `Shift` `E` | Fit image in window   |
-| `Ctrl` `Shift` `R` | Toggle rulers         |
-| `Ctrl` `Shift` `T` | Toggle guides         |
+| `F10`              | 主菜单             |
+| `Shift` `F10`      | 下拉菜单        |
+| `F11`              | 切换全屏     |
+| `Shift` `Q`        | 切换快速蒙版      |
+| `Ctrl` `W`         | 关闭文档窗口 |
+| `+`                | 放大               |
+| `-`                | 缩小               |
+| `1`                | 1:1 缩放            |
+| `Ctrl` `E`         | 紧缩包裹           |
+| `Ctrl` `Shift` `E` | 图像适应窗口   |
+| `Ctrl` `Shift` `R` | 切换标尺         |
+| `Ctrl` `Shift` `T` | 切换参考线         |
 
 {.shortcuts}
 
-### Layers
+### 图层
 
-| Shortcut   | Action                 |
+| 快捷键   | 操作                 |
 | ---------- | ---------------------- |
-| `PgUp`     | Select the layer above |
-| `PgDn`     | Select the layer below |
-| `Home`     | Select the first layer |
-| `End`      | Select the last layer  |
-| `Ctrl` `M` | Merge visible layers   |
-| `Ctrl` `H` | Anchor layer           |
+| `PgUp`     | 选择上一图层 |
+| `PgDn`     | 选择下一图层 |
+| `Home`     | 选择第一个图层 |
+| `End`      | 选择最后一个图层  |
+| `Ctrl` `M` | 合并可见图层   |
+| `Ctrl` `H` | 锚定图层           |
 
 {.shortcuts}
 
-### Edit {.row-span-2}
+### 编辑 {.row-span-2}
 
-| Shortcut           | Action                     |
+| 快捷键           | 操作                     |
 | ------------------ | -------------------------- |
-| `Ctrl` `Z`         | Undo                       |
-| `Ctrl` `Y`         | Redo                       |
-| `Ctrl` `C`         | Copy selection             |
-| `Ctrl` `X`         | Cut selection              |
-| `Ctrl` `Shift` `C` | Copy visible               |
-| `Ctrl` `Shift` `V` | Paste as new image         |
-| `Ctrl` `V`         | Paste clipboard            |
-| `Ctrl` `K`         | Clears selection           |
-| `Ctrl` `Shift` `C` | Named copy selection       |
-| `Ctrl` `Shift` `X` | Named cut selection        |
-| `Ctrl` `Shift` `V` | Named paste clipboard      |
-| `Ctrl` `,`         | Fill with foreground color |
-| `Ctrl` `.`         | Fill with background color |
-| `Ctrl` `;`         | Fill with pattern          |
+| `Ctrl` `Z`         | 撤销                       |
+| `Ctrl` `Y`         | 重做                       |
+| `Ctrl` `C`         | 复制选区             |
+| `Ctrl` `X`         |剪切选区             |
+| `Ctrl` `Shift` `C` | 复制可见部分               |
+| `Ctrl` `Shift` `V` | 粘贴为新图像         |
+| `Ctrl` `V`         | 粘贴剪贴板            |
+| `Ctrl` `K`         | 清除选区           |
+| `Ctrl` `Shift` `C` | 命名复制选区       |
+| `Ctrl` `Shift` `X` | 命名剪切选区        |
+| `Ctrl` `Shift` `V` | 命名粘贴剪贴板      |
+| `Ctrl` `,`         | 用前景色填充 |
+| `Ctrl` `.`         | 用背景色填充 |
+| `Ctrl` `;`         | 用图案填充          |
 
 {.shortcuts}
 
-### Selections
+### 选区
 
-| Shortcut           | Action            |
+| 快捷键           | 操作            |
 | ------------------ | ----------------- |
-| `Ctrl` `T`         | Toggle selections |
-| `Ctrl` `A`         | Select all        |
-| `Ctrl` `Shift` `A` | Select none       |
-| `Ctrl` `I`         | Invert selection  |
-| `Ctrl` `Shift` `L` | Float selection   |
-| `Shift` `V`        | Path to selection |
+| `Ctrl` `T`         | 切换选区 |
+| `Ctrl` `A`         | 全选        |
+| `Ctrl` `Shift` `A` | 取消全选       |
+| `Ctrl` `I`         | 反转选区  |
+| `Ctrl` `Shift` `L` | 浮动选区   |
+| `Shift` `V`        | 路径到选区 |
 
 {.shortcuts}
 
-### Plug-Ins
+### 插件
 
-| Shortcut           | Action              |
+| 快捷键           | 操作              |
 | ------------------ | ------------------- |
-| `Ctrl` `F`         | Repeat last plug-in |
-| `Ctrl` `Shift` `F` | Reshow last plug-in |
+| `Ctrl` `F`         | 重复上一个插件 |
+| `Ctrl` `Shift` `F` | 重新显示上一个插件 |
 
 {.shortcuts}
 
-### Help
+### 帮助
 
-| Shortcut     | Action       |
+| 快捷键     | 操作       |
 | ------------ | ------------ |
-| `F1`         | Help         |
-| `Shift` `F1` | Context help |
+| `F1`         | 帮助         |
+| `Shift` `F1` | 上下文帮助 |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for GIMP](https://www.gimpusers.com/gimp/hotkeys) _(www.gimpusers.com)_
+- [GIMP 键盘快捷键](https://www.gimpusers.com/gimp/hotkeys) _(www.gimpusers.com)_

@@ -1,5 +1,5 @@
 ---
-title: Code Editor for iOS
+title: iOS 代码编辑器
 date: 2022-11-23 16:23:31.697110
 background: bg-[#4880c2]
 label: Mac
@@ -7,71 +7,71 @@ tags:
   -
   - mac
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 43 keyboard shortcuts found in the Code Editor for iOS app. This application is MacOS-only.
+  Code Editor for iOS 应用中的 43 个键盘快捷键的可视化速查表。此应用程序仅适用于 MacOS。
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### General Shortcuts I
+### 常规快捷键 I
 
-| Shortcut          | Action                                                        |
+| 快捷键            | 操作                                                          |
 | ----------------- | ------------------------------------------------------------- |
-| `Esc`             | Show completions                                              |
-| `Tab`             | Insert indent, depending on the preferences of tabs or spaces |
-| `Cmd` `N`         | New document tab                                              |
-| `Cmd` `W`         | Close tab                                                     |
-| `Cmd` `S`         | Save                                                          |
-| `Cmd` `Z`         | Undo                                                          |
-| `Cmd` `Shift` `Z` | Redo                                                          |
-| `Cmd` `A`         | Select all                                                    |
-| `Cmd` `X`         | Cut                                                           |
-| `Cmd` `C`         | Copy                                                          |
-| `Cmd` `V`         | Paste                                                         |
-| `Cmd` `F`         | Find                                                          |
-| `Cmd` `G`         | Find next                                                     |
-| `Cmd` `Shift` `G` | Find previous                                                 |
-| `Cmd` `/`         | Toggle comment                                                |
-| `Cmd` `[`         | Indent selection                                              |
-| `Cmd` `]`         | Dedent selection                                              |
-| `Cmd` `Shift` `[` | Move to previous tab                                          |
-| `Cmd` `Shift` `]` | Move to next tab                                              |
-| `Cmd` `4`         | Toggle preview, in editor only                                |
-| `Cmd` `K`         | Clear scrollback, in terminal and playgrounds only            |
+| `Esc`             | 显示自动补全                                                  |
+| `Tab`             | 插入缩进，具体取决于制表符或空格的偏好设置                    |
+| `Cmd` `N`         | 新建文档选项卡                                                |
+| `Cmd` `W`         | 关闭选项卡                                                    |
+| `Cmd` `S`         | 保存                                                          |
+| `Cmd` `Z`         | 撤销                                                          |
+| `Cmd` `Shift` `Z` | 重做                                                          |
+| `Cmd` `A`         | 全选                                                          |
+| `Cmd` `X`         | 剪切                                                          |
+| `Cmd` `C`         | 复制                                                          |
+| `Cmd` `V`         | 粘贴                                                          |
+| `Cmd` `F`         | 查找                                                          |
+| `Cmd` `G`         | 查找下一个                                                    |
+| `Cmd` `Shift` `G` | 查找上一个                                                    |
+| `Cmd` `/`         | 切换注释                                                      |
+| `Cmd` `[`         | 缩进所选内容                                                  |
+| `Cmd` `]`         | 减少所选内容缩进                                              |
+| `Cmd` `Shift` `[` | 移至上一个选项卡                                              |
+| `Cmd` `Shift` `]` | 移至下一个选项卡                                              |
+| `Cmd` `4`         | 切换预览（仅限编辑器）                                        |
+| `Cmd` `K`         | 清除回滚（仅限终端和 Playground）                             |
 
 {.shortcuts}
 
-### General Shortcuts II
+### 常规快捷键 II
 
-| Shortcut                    | Action                                      |
+| 快捷键                    | 操作                                      |
 | --------------------------- | ------------------------------------------- |
-| `Cmd` `R`                   | Reload, in preview only                     |
-| `Cmd` `Left`                | Back, in preview only                       |
-| `Cmd` `Right`               | Forward, in preview only                    |
-| `Shift` `Left`              | Select the previous character               |
-| `Shift` `Right`             | Select the next character                   |
-| `Cmd` `Left`                | Move to the beginning of the current line   |
-| `Cmd` `Right`               | Move to the end of the current line         |
-| `Cmd` `Shift` `Left`        | Select to the beginning of the current line |
-| `Cmd` `Shift` `Right`       | Select to the end of the current line       |
-| `Opt` `Left`                | Move to the beginning of the current word   |
-| `Opt` `Right`               | Move to the end of the current word         |
-| `Opt` `Shift` `Left`        | Select to the beginning of the current word |
-| `Opt` `Shift` `Right`       | Select to the end of the current word       |
-| `Cmd` `Del`                 | Delete to the beginning of the current line |
-| `Cmd` `Opt` `Del`           | Delete to the beginning of the current word |
-| `Cmd` `Del (forward)`       | Delete to the end of the current line       |
-| `Cmd` `Opt` `Del (forward)` | Delete to the end of the current word       |
-| `Ctrl` `A`                  | Move to the beginning of the current line   |
-| `Ctrl` `Shift` `A`          | Select to the beginning of the current line |
-| `Ctrl` `E`                  | Move to the end of the current line         |
-| `Ctrl` `Shift` `E`          | Select to the end of the current line       |
-| `Ctrl` `K`                  | Delete to the end of the current line       |
+| `Cmd` `R`                   | 重新加载（仅限预览）                        |
+| `Cmd` `Left`                | 后退（仅限预览）                            |
+| `Cmd` `Right`               | 前进（仅限预览）                            |
+| `Shift` `Left`              | 选择上一个字符                              |
+| `Shift` `Right`             | 选择下一个字符                              |
+| `Cmd` `Left`                | 移至当前行首                                |
+| `Cmd` `Right`               | 移至当前行尾                                |
+| `Cmd` `Shift` `Left`        | 选择至当前行首                              |
+| `Cmd` `Shift` `Right`       | 选择至当前行尾                              |
+| `Opt` `Left`                | 移至当前单词词首                            |
+| `Opt` `Right`               | 移至当前单词词尾                            |
+| `Opt` `Shift` `Left`        | 选择至当前单词词首                          |
+| `Opt` `Shift` `Right`       | 选择至当前单词词尾                          |
+| `Cmd` `Del`                 | 删除至当前行首                              |
+| `Cmd` `Opt` `Del`           | 删除至当前单词词首                          |
+| `Cmd` `Del (forward)`       | 删除至当前行尾                              |
+| `Cmd` `Opt` `Del (forward)` | 删除至当前单词词尾                          |
+| `Ctrl` `A`                  | 移至当前行首                                |
+| `Ctrl` `Shift` `A`          | 选择至当前行首                              |
+| `Ctrl` `E`                  | 移至当前行尾                                |
+| `Ctrl` `Shift` `E`          | 选择至当前行尾                              |
+| `Ctrl` `K`                  | 删除至当前行尾                              |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for the Code Editor iOS app](https://library.panic.com/code-editor/shortcut-keys/)
+- [Code Editor iOS 应用的键盘快捷键](https://library.panic.com/code-editor/shortcut-keys/)
   _(library.panic.com)_

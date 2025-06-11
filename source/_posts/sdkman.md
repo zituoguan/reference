@@ -5,102 +5,103 @@ background: bg-[#cf5e3c]
 label:
 tags:
   - command
-  - software development kits
+  - 软件开发工具包
   - sdk
 categories:
-  - Linux Command
+  - Linux 命令
 intro: |
-  This cheatsheet provides the most commonly used SDKMAN! command line instructions
+  本速查表提供了最常用的 SDKMAN! 命令行指令。
 plugins:
   - copyCode
 ---
 
-## Getting Started {.cols-2}
+## 入门 {.cols-2}
 
-### Installing SDKMAN!
+### 安装 SDKMAN!
 
-Download SDKMAN!
+下载 SDKMAN!
 
 ```shell script
 $ curl -s "https://get.sdkman.io" | bash
 ```
 
-Install SDKMAN!
+安装 SDKMAN!
 
 ```shell script
 $ source "$HOME/.sdkman/bin/sdkman-init.sh"
 ```
 
-Check the version
+检查版本
 
 ```shell script
 $ sdk version
 ```
 
-Update
+更新
 
 ```shell script
 $ sdk update
 ```
 
-Help
+帮助
 
 ```shell script
 $ sdk help
 ```
 
-### Installing and managing candidates {.row-span-2}
+### 安装和管理候选版本 {.row-span-2}
 
-List all candidates
+列出所有候选版本
 
 ```shell script
 $ sdk list
 ```
 
-List versions of a candidate
+列出某个候选版本的所有版本
 
 ```shell script
 $ sdk list <candidate>
 ```
 
-Install a candidate with the latest version
+安装最新版本的候选软件
 
 ```shell script
 $ sdk install <candidate>
 ```
 
-Install a candidate with specific version
+安装特定版本的候选软件
 
 ```shell script
 $ sdk install <candidate> <version>
 ```
 
-Temporarily switch between versions
+临时切换版本
 
 ```shell script
 $ sdk use <candidate> <version>
 ```
 
-Permanently switch to version
+永久切换到某个版本
 
 ```shell script
 $ sdk default <candidate> <version>
 ```
 
-Display specific candidate version in use
+显示正在使用的特定候选软件版本
 
 ```shell script
 $ sdk current <candidate>
 ```
 
-Display all candidates versions in use
+显示所有正在使用的候选软件版本
 
 ```shell script
 $ sdk current
 ```
 
-Remove a candidate
+移除某个候选软件版本
 
 ```shell script
 $ sdk uninstall <candidate> <version>
 ```
+

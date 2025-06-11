@@ -4,15 +4,15 @@ date: 2021-06-01 11:51:44
 background: bg-[#6d94c7]
 tags:
 categories:
-  - Programming
+  - 编程
 intro: |
-  C++ quick reference cheat sheet that provides basic syntax and methods.
+  C++ 快速参考备忘单，提供基本语法和方法。
 plugins:
   - copyCode
   - runCode
 ---
 
-## Getting Started
+## 入门
 
 ### hello.cpp
 
@@ -20,95 +20,95 @@ plugins:
 #include <iostream>
 
 int main() {
-    std::cout << "Hello CheatSheets\n";
+    std::cout << "你好，备忘单\n"; // "Hello CheatSheets" -> "你好，备忘单"
     return 0;
 }
 ```
 
-Compiling and running
+编译和运行
 
 ```shell script
 $ g++ hello.cpp -o hello
 $ ./hello
-Hello CheatSheets
+你好，备忘单
 ```
 
-### Variables
+### 变量
 
 ```cpp
-int number = 5;       // Integer
-float f = 0.95;       // Floating number
-double PI = 3.14159;  // Floating number
-char yes = 'Y';       // Character
-std::string s = "ME"; // String (text)
-bool isRight = true;  // Boolean
+int number = 5;       // 整数
+float f = 0.95;       // 浮点数
+double PI = 3.14159;  // 浮点数
+char yes = 'Y';       // 字符
+std::string s = "ME"; // 字符串 (文本)
+bool isRight = true;  // 布尔值
 
-// Constants
+// 常量
 const float RATE = 0.8;
 ```
 
 ---
 
 ```cpp
-int age {25};         // Since C++11
-std::cout << age;     // Print 25
+int age {25};         // C++11 起
+std::cout << age;     // 打印 25
 ```
 
-### Primitive Data Types
+### 基本数据类型
 
-| Data Type | Size           | Range               |
+| 数据类型  | 大小           | 范围                |
 | --------- | -------------- | ------------------- |
-| `int`     | 4 bytes        | -2^31^ ^to^ 2^31^-1 |
-| `float`   | 4 bytes        | _N/A_               |
-| `double`  | 8 bytes        | _N/A_               |
-| `char`    | 1 byte         | -128 ^to^ 127       |
-| `bool`    | 1 byte         | true / false        |
+| `int`     | 4 字节        | -2^31^ ^到^ 2^31^-1 |
+| `float`   | 4 字节        | _N/A_               |
+| `double`  | 8 字节        | _N/A_               |
+| `char`    | 1 字节         | -128 ^到^ 127       |
+| `bool`    | 1 字节         | true / false        |
 | `void`    | _N/A_          | _N/A_               |
-| `wchar_t` | 2 ^or^ 4 bytes | 1 wide character    |
+| `wchar_t` | 2 ^或^ 4 字节 | 1 宽字符    |
 
 {.show-header}
 
-### User Input
+### 用户输入
 
 ```cpp
 int num;
 
-std::cout << "Type a number: ";
+std::cout << "输入一个数字: "; // "Type a number: " -> "输入一个数字: "
 std::cin >> num;
 
-std::cout << "You entered " << num;
+std::cout << "你输入了 " << num; // "You entered " -> "你输入了 "
 ```
 
-### Swap
+### 交换
 
 ```cpp
 int a = 5, b = 10;
 std::swap(a, b);
 
-// Outputs: a=10, b=5
+// 输出: a=10, b=5
 std::cout << "a=" << a << ", b=" << b;
 ```
 
-### Comments
+### 注释
 
 ```cpp
-// A single one line comment in C++
+// C++ 中的单行注释
 
-/* This is a multiple line comment
-   in C++ */
+/* 这是 C++ 中的
+   多行注释 */
 ```
 
-### If statement
+### If 语句
 
 ```cpp
 if (a == 10) {
-    // do something
+    // 执行某些操作
 }
 ```
 
-See: [Conditionals](#c-conditionals)
+参见: [条件语句](#c-conditionals)
 
-### Loops
+### 循环
 
 ```cpp
 for (int i = 0; i < 10; i++) {
@@ -116,42 +116,42 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
-See: [Loops](#c-loops)
+参见: [循环](#c-loops)
 
-### Functions
+### 函数
 
 ```cpp
 #include <iostream>
 
-void hello(); // Declaring
+void hello(); // 声明
 
-int main() {  // main function
-    hello();    // Calling
+int main() {  // main 函数
+    hello();    // 调用
 }
 
-void hello() { // Defining
-    std::cout << "Hello CheatSheets!\n";
+void hello() { // 定义
+    std::cout << "你好，备忘单!\n"; // "Hello CheatSheets!" -> "你好，备忘单!"
 }
 ```
 
-See: [Functions](#c-functions)
+参见: [函数](#c-functions)
 
-### References
+### 引用
 
 ```cpp
 int i = 1;
-int& ri = i; // ri is a reference to i
+int& ri = i; // ri 是 i 的引用
 
-ri = 2; // i is now changed to 2
+ri = 2; // i 现在变为 2
 std::cout << "i=" << i;
 
-i = 3;   // i is now changed to 3
+i = 3;   // i 现在变为 3
 std::cout << "ri=" << ri;
 ```
 
-`ri` and `i` refer to the same memory location.
+`ri` 和 `i` 指向相同的内存位置。
 
-### Namespaces
+### 命名空间
 
 ```cpp
 #include <iostream>
@@ -175,27 +175,27 @@ int main()
 }
 ```
 
-Namespaces allow global identifiers under a name
+命名空间允许在名称下使用全局标识符
 
-## C++ Arrays
+## C++ 数组
 
-### Declaration
+### 声明
 
 ```cpp
-std::array<int, 3> marks; // Definition
+std::array<int, 3> marks; // 定义
 marks[0] = 92;
 marks[1] = 97;
 marks[2] = 98;
 
-// Define and initialize
+// 定义并初始化
 std::array<int, 3> = {92, 97, 98};
 
-// With empty members
+// 带有空成员
 std::array<int, 3> marks = {92, 97};
-std::cout << marks[2]; // Outputs: 0
+std::cout << marks[2]; // 输出: 0
 ```
 
-### Manipulation
+### 操作
 
 ```cpp
 ┌─────┬─────┬─────┬─────┬─────┬─────┐
@@ -209,33 +209,33 @@ std::cout << marks[2]; // Outputs: 0
 ```cpp
 std::array<int, 6> marks = {92, 97, 98, 99, 98, 94};
 
-// Print first element
+// 打印第一个元素
 std::cout << marks[0];
 
-// Change 2nd element to 99
+// 将第二个元素更改为 99
 marks[1] = 99;
 
-// Take input from the user
+// 从用户处获取输入
 std::cin >> marks[2];
 ```
 
-### Displaying
+### 显示
 
 ```cpp
 char ref[5] = {'R', 'e', 'f'};
 
-// Range based for loop
+// 基于范围的 for 循环
 for (const int &n : ref) {
     std::cout << std::string(1, n);
 }
 
-// Traditional for loop
+// 传统的 for 循环
 for (int i = 0; i < sizeof(ref); ++i) {
     std::cout << ref[i];
 }
 ```
 
-### Multidimensional
+### 多维数组
 
 ```cpp
      j0   j1   j2   j3   j4   j5
@@ -257,16 +257,16 @@ for (int i = 0; i < 2; ++i) {
         std::cout << x[i][j] << " ";
     }
 }
-// Outputs: 1 2 3 4 5 6 6 5 4 3 2 1
+// 输出: 1 2 3 4 5 6 6 5 4 3 2 1
 ```
 
-## C++ Conditionals
+## C++ 条件语句
 
-### If Clause
+### If 子句
 
 ```cpp
 if (a == 10) {
-    // do something
+    // 执行某些操作
 }
 ```
 
@@ -277,86 +277,86 @@ int number = 16;
 
 if (number % 2 == 0)
 {
-    std::cout << "even";
+    std::cout << "偶数"; // "even" -> "偶数"
 }
 else
 {
-    std::cout << "odd";
+    std::cout << "奇数"; // "odd" -> "奇数"
 }
 
-// Outputs: even
+// 输出: 偶数
 ```
 
-### Else if Statement
+### Else if 语句
 
 ```cpp
 int score = 99;
 if (score == 100) {
-    std::cout << "Superb";
+    std::cout << "棒极了"; // "Superb" -> "棒极了"
 }
 else if (score >= 90) {
-    std::cout << "Excellent";
+    std::cout << "优秀"; // "Excellent" -> "优秀"
 }
 else if (score >= 80) {
-    std::cout << "Very Good";
+    std::cout << "非常好"; // "Very Good" -> "非常好"
 }
 else if (score >= 70) {
-    std::cout << "Good";
+    std::cout << "良好"; // "Good" -> "良好"
 }
 else if (score >= 60)
-    std::cout << "OK";
+    std::cout << "及格"; // "OK" -> "及格"
 else
-    std::cout << "What?";
+    std::cout << "什么?"; // "What?" -> "什么?"
 ```
 
-### Operators {.row-span-2}
+### 运算符 {.row-span-2}
 
-#### Relational Operators
+#### 关系运算符
 
 |          |                              |
 | -------- | ---------------------------- |
-| `a == b` | a is equal to b              |
-| `a != b` | a is NOT equal to b          |
-| `a < b`  | a is less than b             |
-| `a > b`  | a is greater b               |
-| `a <= b` | a is less than or equal to b |
-| `a >= b` | a is greater or equal to b   |
+| `a == b` | a 等于 b              |
+| `a != b` | a 不等于 b          |
+| `a < b`  | a 小于 b             |
+| `a > b`  | a 大于 b               |
+| `a <= b` | a 小于或等于 b |
+| `a >= b` | a 大于或等于 b   |
 
-#### Assignment Operators
+#### 赋值运算符
 
-| Example  | Equivalent to    |
+| 示例  | 等同于    |
 | -------- | ---------------- |
-| `a += b` | _Aka_ a = a + b  |
-| `a -= b` | _Aka_ a = a - b  |
-| `a *= b` | _Aka_ a = a \* b |
-| `a /= b` | _Aka_ a = a / b  |
-| `a %= b` | _Aka_ a = a % b  |
+| `a += b` | _即_ a = a + b  |
+| `a -= b` | _即_ a = a - b  |
+| `a *= b` | _即_ a = a \* b |
+| `a /= b` | _即_ a = a / b  |
+| `a %= b` | _即_ a = a % b  |
 
-#### Logical Operators
+#### 逻辑运算符
 
-| Example                     | Meaning                |
+| 示例                     | 含义                |
 | --------------------------- | ---------------------- |
-| `exp1 && exp2`              | Both are true _(AND)_  |
-| <code>exp1 \|\| exp2</code> | Either is true _(OR)_  |
-| `!exp`                      | `exp` is false _(NOT)_ |
+| `exp1 && exp2`              | 两者都为真 _(与)_  |
+| <code>exp1 \|\| exp2</code> | 任一为真 _(或)_  |
+| `!exp`                      | `exp` 为假 _(非)_ |
 
-#### Bitwise Operators
+#### 位运算符
 
-| Operator            | Description             |
+| 运算符            | 描述             |
 | ------------------- | ----------------------- |
-| `a & b`             | Binary AND              |
-| <code>a \| b</code> | Binary OR               |
-| `a ^ b`             | Binary XOR              |
-| `~ a`               | Binary One's Complement |
-| `a << b`            | Binary Shift Left       |
-| `a >> b`            | Binary Shift Right      |
+| `a & b`             | 按位与              |
+| <code>a \| b</code> | 按位或               |
+| `a ^ b`             | 按位异或              |
+| `~ a`               | 按位取反 |
+| `a << b`            | 按位左移      |
+| `a >> b`            | 按位右移      |
 
-### Ternary Operator
+### 三元运算符
 
 ```
-           ┌── True ──┐
-Result = Condition ? Exp1 : Exp2;
-           └───── False ─────┘
+           ┌── 真 ──┐
+结果 = 条件 ? 表达式1 : 表达式2;
+           └───── 假 ─────┘
 ```
 
 ---
@@ -365,7 +365,7 @@ Result = Condition ? Exp1 : Exp2;
 int x = 3, y = 5, max;
 max = (x > y) ? x : y;
 
-// Outputs: 5
+// 输出: 5
 std::cout << max << std::endl;
 ```
 
@@ -378,34 +378,34 @@ if (x > y) {
 } else {
     max = y;
 }
-// Outputs: 5
+// 输出: 5
 std::cout << max << std::endl;
 ```
 
-### Switch Statement
+### Switch 语句
 
 ```cpp
 int num = 2;
 switch (num) {
     case 0:
-        std::cout << "Zero";
+        std::cout << "零"; // "Zero" -> "零"
         break;
     case 1:
-        std::cout << "One";
+        std::cout << "一"; // "One" -> "一"
         break;
     case 2:
-        std::cout << "Two";
+        std::cout << "二"; // "Two" -> "二"
         break;
     case 3:
-        std::cout << "Three";
+        std::cout << "三"; // "Three" -> "三"
         break;
     default:
-        std::cout << "What?";
+        std::cout << "什么?"; // "What?" -> "什么?"
         break;
 }
 ```
 
-## C++ Loops
+## C++ 循环
 
 ### While
 
@@ -415,7 +415,7 @@ while (i < 6) {
     std::cout << i++;
 }
 
-// Outputs: 012345
+// 输出: 012345
 ```
 
 ### Do-while
@@ -426,10 +426,10 @@ do {
     std::cout << i++;
 } while (i <= 5);
 
-// Outputs: 12345
+// 输出: 12345
 ```
 
-### Continue statements
+### Continue 语句
 
 ```cpp
 for (int i = 0; i < 10; i++) {
@@ -437,14 +437,14 @@ for (int i = 0; i < 10; i++) {
         continue;
     }
     std::cout << i;
-} // Outputs: 13579
+} // 输出: 13579
 ```
 
-### Infinite loop
+### 无限循环
 
 ```cpp
-while (true) { // true or 1
-    std::cout << "infinite loop";
+while (true) { // true 或 1
+    std::cout << "无限循环"; // "infinite loop" -> "无限循环"
 }
 ```
 
@@ -452,7 +452,7 @@ while (true) { // true or 1
 
 ```cpp
 for (;;) {
-    std::cout << "infinite loop";
+    std::cout << "无限循环";
 }
 ```
 
@@ -460,11 +460,11 @@ for (;;) {
 
 ```cpp
 for(int i = 1; i > 0; i++) {
-    std::cout << "infinite loop";
+    std::cout << "无限循环";
 }
 ```
 
-### for_each (Since C++11)
+### for_each (C++11 起)
 
 ```cpp
 #include <iostream>
@@ -480,53 +480,53 @@ int main()
 }
 ```
 
-### Range-based (Since C++11)
+### 基于范围的循环 (C++11 起)
 
 ```cpp
 for (int n : {1, 2, 3, 4, 5}) {
     std::cout << n << " ";
 }
-// Outputs: 1 2 3 4 5
+// 输出: 1 2 3 4 5
 ```
 
 ---
 
 ```cpp
-std::string hello = "CheatSheets.zip";
+std::string hello = "r3f.cn";
 for (char c: hello)
 {
     std::cout << c << " ";
 }
-// Outputs: Q u i c k R e f . M E
+// 输出: Q u i c k R e f . M E (保持原样，因为这是字符串内容)
 ```
 
-### Break statements
+### Break 语句
 
 ```cpp
 int password, times = 0;
 while (password != 1234) {
     if (times++ >= 3) {
-        std::cout << "Locked!\n";
+        std::cout << "已锁定!\n"; // "Locked!" -> "已锁定!"
         break;
     }
-    std::cout << "Password: ";
-    std::cin >> password; // input
+    std::cout << "密码: "; // "Password: " -> "密码: "
+    std::cin >> password; // 输入
 }
 ```
 
-### Several variations
+### 几种变体
 
 ```cpp
 for (int i = 0, j = 2; i < 3; i++, j--){
     std::cout << "i=" << i << ",";
     std::cout << "j=" << j << ";";
 }
-// Outputs: i=0,j=2;i=1,j=1;i=2,j=0;
+// 输出: i=0,j=2;i=1,j=1;i=2,j=0;
 ```
 
-## C++ Functions
+## C++ 函数
 
-### Arguments & Returns
+### 参数和返回值
 
 ```cpp
 #include <iostream>
@@ -540,9 +540,9 @@ int main() {
 }
 ```
 
-`add` is a function taking 2 ints and returning int
+`add` 是一个接受 2 个 int 类型参数并返回 int 类型的函数
 
-### Overloading
+### 重载
 
 ```cpp
 void fun(string a, string b) {
@@ -556,125 +556,125 @@ void fun(int a) {
 }
 ```
 
-### Built-in Functions
+### 内置函数
 
 ```cpp
 #include <iostream>
-#include <cmath> // import library
+#include <cmath> // 导入库
 
 int main() {
-    // sqrt() is from cmath
+    // sqrt() 来自 cmath
     std::cout << sqrt(9);
 }
 ```
 
-## C++ Classes & Objects {.cols-2}
+## C++ 类和对象 {.cols-2}
 
-### Defining a Class
+### 定义类
 
 ```cpp
 class MyClass {
-  public:             // Access specifier
-    int myNum;        // Attribute (int variable)
-    string myString;  // Attribute (string variable)
+  public:             // 访问修饰符
+    int myNum;        // 属性 (int 变量)
+    string myString;  // 属性 (string 变量)
 };
 
 ```
 
-### Creating an Object
+### 创建对象
 
 ```cpp
-MyClass myObj;  // Create an object of MyClass
+MyClass myObj;  // 创建 MyClass 的对象
 
-myObj.myNum = 15;          // Set the value of myNum to 15
-myObj.myString = "Hello";  // Set the value of myString to "Hello"
+myObj.myNum = 15;          // 将 myNum 的值设置为 15
+myObj.myString = "你好";  // 将 myString 的值设置为 "你好" ( "Hello" -> "你好")
 
-cout << myObj.myNum << endl;         // Output 15
-cout << myObj.myString << endl;      // Output "Hello"
+cout << myObj.myNum << endl;         // 输出 15
+cout << myObj.myString << endl;      // 输出 "你好"
 
 ```
 
-### Constructors
+### 构造函数
 
 ```cpp
 class MyClass {
   public:
     int myNum;
     string myString;
-    MyClass() {  // Constructor
+    MyClass() {  // 构造函数
       myNum = 0;
       myString = "";
     }
 };
 
-MyClass myObj;  // Create an object of MyClass
+MyClass myObj;  // 创建 MyClass 的对象
 
-cout << myObj.myNum << endl;         // Output 0
-cout << myObj.myString << endl;      // Output ""
+cout << myObj.myNum << endl;         // 输出 0
+cout << myObj.myString << endl;      // 输出 ""
 
 ```
 
-### Destructors
+### 析构函数
 
 ```cpp
 class MyClass {
   public:
     int myNum;
     string myString;
-    MyClass() {  // Constructor
+    MyClass() {  // 构造函数
       myNum = 0;
       myString = "";
     }
-    ~MyClass() {  // Destructor
-      cout << "Object destroyed." << endl;
+    ~MyClass() {  // 析构函数
+      cout << "对象已销毁。" << endl; // "Object destroyed." -> "对象已销毁。"
     }
 };
 
-MyClass myObj;  // Create an object of MyClass
+MyClass myObj;  // 创建 MyClass 的对象
 
-// Code here...
+// 此处代码...
 
-// Object is destroyed automatically when the program exits the scope
+// 当程序退出作用域时，对象会自动销毁
 
 
 ```
 
-### Class Methods
+### 类方法
 
 ```cpp
 class MyClass {
   public:
     int myNum;
     string myString;
-    void myMethod() {  // Method/function defined inside the class
-      cout << "Hello World!" << endl;
+    void myMethod() {  // 在类内部定义的方法/函数
+      cout << "世界你好!" << endl; // "Hello World!" -> "世界你好!"
     }
 };
 
-MyClass myObj;  // Create an object of MyClass
-myObj.myMethod();  // Call the method
+MyClass myObj;  // 创建 MyClass 的对象
+myObj.myMethod();  // 调用方法
 ```
 
-### Access Modifiers
+### 访问修饰符
 
 ```cpp
 class MyClass {
-  public:     // Public access specifier
-    int x;    // Public attribute
-  private:    // Private access specifier
-    int y;    // Private attribute
-  protected:  // Protected access specifier
-    int z;    // Protected attribute
+  public:     // 公共访问修饰符
+    int x;    // 公共属性
+  private:    // 私有访问修饰符
+    int y;    // 私有属性
+  protected:  // 受保护访问修饰符
+    int z;    // 受保护属性
 };
 
 MyClass myObj;
-myObj.x = 25;  // Allowed (public)
-myObj.y = 50;  // Not allowed (private)
-myObj.z = 75;  // Not allowed (protected)
+myObj.x = 25;  // 允许 (公共)
+myObj.y = 50;  // 不允许 (私有)
+myObj.z = 75;  // 不允许 (受保护)
 
 ```
 
-### Getters and Setters
+### Getters 和 Setters
 
 ```cpp
 class MyClass {
@@ -690,35 +690,35 @@ class MyClass {
 };
 
 MyClass myObj;
-myObj.setMyNum(15);  // Set the value of myNum to 15
-cout << myObj.getMyNum() << endl;  // Output 15
+myObj.setMyNum(15);  // 将 myNum 的值设置为 15
+cout << myObj.getMyNum() << endl;  // 输出 15
 
 ```
 
-### Inheritance
+### 继承
 
 ```cpp
 class Vehicle {
   public:
-    string brand = "Ford";
+    string brand = "福特"; // "Ford" -> "福特"
     void honk() {
-      cout << "Tuut, tuut!" << endl;
+      cout << "嘟嘟，嘟嘟!" << endl; // "Tuut, tuut!" -> "嘟嘟，嘟嘟!"
     }
 };
 
 class Car : public Vehicle {
   public:
-    string model = "Mustang";
+    string model = "野马"; // "Mustang" -> "野马"
 };
 
 Car myCar;
-myCar.honk();  // Output "Tuut, tuut!"
-cout << myCar.brand + " " + myCar.model << endl;  // Output "Ford Mustang"
+myCar.honk();  // 输出 "嘟嘟，嘟嘟!"
+cout << myCar.brand + " " + myCar.model << endl;  // 输出 "福特 野马"
 ```
 
-## C++ Preprocessor
+## C++ 预处理器
 
-### Preprocessor {.row-span-3}
+### 预处理器 {.row-span-3}
 
 - [if](https://en.cppreference.com/w/cpp/preprocessor/conditional)
 - [elif](https://en.cppreference.com/w/cpp/preprocessor/conditional)
@@ -741,18 +741,18 @@ cout << myCar.brand + " " + myCar.model << endl;  // Output "Ford Mustang"
 
 {.marker-none .cols-2}
 
-### Includes
+### Includes (包含)
 
 ```cpp
 #include "iostream"
 #include <iostream>
 ```
 
-### Defines
+### Defines (定义)
 
 ```cpp
 #define FOO
-#define FOO "hello"
+#define FOO "你好" // "hello" -> "你好"
 
 #undef FOO
 ```
@@ -761,7 +761,7 @@ cout << myCar.brand + " " + myCar.model << endl;  // Output "Ford Mustang"
 
 ```cpp
 #ifdef DEBUG
-  console.log('hi');
+  console.log('嗨'); // 'hi' -> '嗨'
 #elif defined VERBOSE
   ...
 #else
@@ -769,61 +769,61 @@ cout << myCar.brand + " " + myCar.model << endl;  // Output "Ford Mustang"
 #endif
 ```
 
-### Error
+### Error (错误)
 
 ```cpp
 #if VERSION == 2.0
-  #error Unsupported
-  #warning Not really supported
+  #error 不支持 // "Unsupported" -> "不支持"
+  #warning 并非真正支持 // "Not really supported" -> "并非真正支持"
 #endif
 ```
 
-### Macro
+### Macro (宏)
 
 ```cpp
 #define DEG(x) ((x) * 57.29)
 ```
 
-### Token concat
+### Token concat (标记连接)
 
 ```cpp
 #define DST(name) name##_s name##_t
 DST(object);   #=> object_s object_t;
 ```
 
-### Stringification
+### Stringification (字符串化)
 
 ```cpp
 #define STR(name) #name
 char * a = STR(object);   #=> char * a = "object";
 ```
 
-### file and line
+### file and line (文件和行号)
 
 ```cpp
 #define LOG(msg) console.log(__FILE__, __LINE__, msg)
-#=> console.log("file.txt", 3, "hey")
+#=> console.log("file.txt", 3, "嘿") // "hey" -> "嘿"
 ```
 
-## Miscellaneous
+## 其他
 
-### Escape Sequences
+### 转义序列
 
-| Escape Sequences | Characters            |
+| 转义序列 | 字符            |
 | ---------------- | --------------------- |
-| `\b`             | Backspace             |
-| `\f`             | Form feed             |
-| `\n`             | Newline               |
-| `\r`             | Return                |
-| `\t`             | Horizontal tab        |
-| `\v`             | Vertical tab          |
-| `\\`             | Backslash             |
-| `\'`             | Single quotation mark |
-| `\"`             | Double quotation mark |
-| `\?`             | Question mark         |
-| `\0`             | Null Character        |
+| `\b`             | 退格             |
+| `\f`             | 换页             |
+| `\n`             | 换行               |
+| `\r`             | 回车                |
+| `\t`             | 水平制表符        |
+| `\v`             | 垂直制表符        |
+| `\\`             | 反斜杠             |
+| `\'`             | 单引号 |
+| `\"`             | 双引号 |
+| `\?`             | 问号         |
+| `\0`             | 空字符        |
 
-### Keywords {.col-span-2 .row-span-2}
+### 关键字 {.col-span-2 .row-span-2}
 
 - [alignas](https://en.cppreference.com/w/cpp/keyword/alignas)
 - [alignof](https://en.cppreference.com/w/cpp/keyword/alignof)
@@ -927,7 +927,7 @@ char * a = STR(object);   #=> char * a = "object";
 - [transaction_safe](https://en.cppreference.com/w/cpp/language/transactional_memory)
 - [transaction_safe_dynamic](https://en.cppreference.com/w/cpp/language/transactional_memory) {.marker-none .cols-5}
 
-### Preprocessor
+### 预处理器
 
 - [if](https://en.cppreference.com/w/cpp/preprocessor/conditional)
 - [elif](https://en.cppreference.com/w/cpp/preprocessor/conditional)
@@ -949,9 +949,10 @@ char * a = STR(object);   #=> char * a = "object";
 - [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&action=edit&redlink=1) {.marker-none
   .cols-2}
 
-## Also see
+## 另请参阅
 
-- [C++ Infographics & Cheat Sheets](https://hackingcpp.com/cpp/cheat_sheets.html) _(hackingcpp.com)_
+- [C++ 信息图表和备忘单](https://hackingcpp.com/cpp/cheat_sheets.html) _(hackingcpp.com)_
 
-- [C++ reference](https://en.cppreference.com/w/) _(cppreference.com)_
-- [C++ Language Tutorials](http://www.cplusplus.com/doc/tutorial/) _(cplusplus.com)_
+- [C++ 参考](https://en.cppreference.com/w/) _(cppreference.com)_
+- [C++ 语言教程](http://www.cplusplus.com/doc/tutorial/) _(cplusplus.com)_
+

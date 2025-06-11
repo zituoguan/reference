@@ -1,5 +1,5 @@
 ---
-title: Brave Browser
+title: Brave 浏览器
 date: 2022-11-23 16:23:31.698868
 background: bg-[#da6b37]
 label:
@@ -7,106 +7,106 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 64 keyboard shortcuts found in the Brave browser
+  Brave 浏览器中 64 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### Tabs and Windows
+### 标签页和窗口
 
-| Shortcut             | Action                                                               |
+| 快捷键               | 操作                                                                 |
 | -------------------- | -------------------------------------------------------------------- |
-| `Ctrl` `N`           | Open a new window                                                    |
-| `Ctrl` `Shift` `N`   | Open a new window in Private mode                                    |
-| `Ctrl` `T`           | Open a new tab, and jump to it                                       |
-| `Ctrl` `Shift` `T`   | Reopen the last closed tab, and jump to it                           |
-| `Ctrl` `Tab`         | Jump to the next open tab                                            |
-| `Ctrl` `Shift` `Tab` | Jump to the previous open tab                                        |
-| `Ctrl` `1-8`         | Jump to a specific tab                                               |
-| `Ctrl` `9`           | Jump to the last tab                                                 |
-| `Alt` `Home`         | Open your home page in the current tab                               |
-| `Ctrl` `Left`        | Open the previous page from your browsing history in the current tab |
-| `Alt` `Right`        | Open the next page from your browsing history in the current tab     |
-| `Ctrl` `W`           | Close the current tab                                                |
-| `Ctrl` `Shift` `W`   | Close the current window                                             |
-| `Alt` `Space` `N`    | Minimize the current window                                          |
-| `Alt` `Space` `X`    | Maximize the current window                                          |
-| `Alt` `F4`           | Close the current window                                             |
-| `Ctrl` `Shift` `Q`   | Quit Brave                                                           |
+| `Ctrl` `N`           | 打开新窗口                                                           |
+| `Ctrl` `Shift` `N`   | 在隐私模式下打开新窗口                                               |
+| `Ctrl` `T`           | 打开新标签页并跳转到该标签页                                         |
+| `Ctrl` `Shift` `T`   | 重新打开最后关闭的标签页并跳转到该标签页                             |
+| `Ctrl` `Tab`         | 跳转到下一个打开的标签页                                             |
+| `Ctrl` `Shift` `Tab` | 跳转到上一个打开的标签页                                             |
+| `Ctrl` `1-8`         | 跳转到特定标签页                                                     |
+| `Ctrl` `9`           | 跳转到最后一个标签页                                                 |
+| `Alt` `Home`         | 在当前标签页中打开主页                                               |
+| `Ctrl` `Left`        | 在当前标签页中打开浏览历史记录中的上一页                             |
+| `Alt` `Right`        | 在当前标签页中打开浏览历史记录中的下一页                             |
+| `Ctrl` `W`           | 关闭当前标签页                                                       |
+| `Ctrl` `Shift` `W`   | 关闭当前窗口                                                         |
+| `Alt` `Space` `N`    | 最小化当前窗口                                                       |
+| `Alt` `Space` `X`    | 最大化当前窗口                                                       |
+| `Alt` `F4`           | 关闭当前窗口                                                         |
+| `Ctrl` `Shift` `Q`   | 退出 Brave                                                           |
 
 {.shortcuts}
 
-### Browser
+### 浏览器
 
-| Shortcut                | Action                                             |
-| ----------------------- | -------------------------------------------------- |
-| `Alt` `F`               | Open the main menu                                 |
-| `Ctrl` `Shift` `B`      | Show or hide the bookmarks bar                     |
-| `Ctrl` `H`              | Open the history page in a new tab                 |
-| `Ctrl` `J`              | Open the downloads page in a new tab               |
-| `Shift` `Esc`           | Open the Brave task manager                        |
-| `Shift` `Alt` `T`       | Set focus on the first item in the toolbar         |
-| `F10`                   | Set focus on the last item in the toolbar          |
-| `F6`                    | Switch focus to unfocused dialog, if showing       |
-| `Ctrl` `F`              | Open the find bar to search the current page       |
-| `Ctrl` `G`              | Jump to the next match in your find bar search     |
-| `Ctrl` `Shift` `G`      | Jump to the previous match in your find bar search |
-| `Ctrl` `Shift` `J`      | Open developer tools                               |
-| `Ctrl` `Shift` `Delete` | Open the clear browser data options                |
-| `F1`                    | Open the Brave help center in a new tab            |
-| `Ctrl` `Shift` `M`      | Open profile menu                                  |
-| ``                      |
-
-{.shortcuts}
-
-### Address Bar
-
-| Shortcut         | Action                                                                          |
-| ---------------- | ------------------------------------------------------------------------------- |
-| `Enter`          | Search with your default search engine (after typing)                           |
-| `Tab`            | Search using a different search engine (after typing)                           |
-| `Ctrl` `Enter`   | Add www. and .com to a site name, and open it in the current tab (after typing) |
-| `Alt` `Enter`    | Open a new tab and perform a search (after typing)                              |
-| `Ctrl` `L`       | Jump to the address bar                                                         |
-| `Ctrl` `K`       | Search from anywhere on the page                                                |
-| `Shift` `Delete` | Remove predictions from your address bar (after highlighting them)              |
+| 快捷键                  | 操作                                                               |
+| ----------------------- | ------------------------------------------------------------------ |
+| `Alt` `F`               | 打开主菜单                                                         |
+| `Ctrl` `Shift` `B`      | 显示或隐藏书签栏                                                   |
+| `Ctrl` `H`              | 在新标签页中打开历史记录页面                                       |
+| `Ctrl` `J`              | 在新标签页中打开下载页面                                           |
+| `Shift` `Esc`           | 打开 Brave 任务管理器                                              |
+| `Shift` `Alt` `T`       | 将焦点设置到工具栏中的第一个项目                                   |
+| `F10`                   | 将焦点设置到工具栏中的最后一个项目                                   |
+| `F6`                    | 如果显示对话框，则将焦点切换到未聚焦的对话框                       |
+| `Ctrl` `F`              | 打开查找栏以搜索当前页面                                           |
+| `Ctrl` `G`              | 跳转到查找栏搜索中的下一个匹配项                                   |
+| `Ctrl` `Shift` `G`      | 跳转到查找栏搜索中的上一个匹配项                                   |
+| `Ctrl` `Shift` `J`      | 打开开发者工具                                                     |
+| `Ctrl` `Shift` `Delete` | 打开清除浏览数据选项                                               |
+| `F1`                    | 在新标签页中打开 Brave 帮助中心                                    |
+| `Ctrl` `Shift` `M`      | 打开个人资料菜单                                                   |
+| ``                      |                                                                    |
 
 {.shortcuts}
 
-### Webpage
+### 地址栏
 
-| Shortcut           | Action                                                             |
-| ------------------ | ------------------------------------------------------------------ |
-| `Ctrl` `P`         | Open options to print the current page                             |
-| `Ctrl` `S`         | Open options to save the current page                              |
-| `Ctrl` `R`         | Reload the current page                                            |
-| `Ctrl` `Shift` `R` | Reload the current page, ignoring cached content                   |
-| `Esc`              | Stop the page loading                                              |
-| `Tab`              | Browse clickable items moving forward                              |
-| `Shift` `Tab`      | Browse clickable items moving backwards                            |
-| `Ctrl` `O`         | Open a file from your computer in Brave                            |
-| `Ctrl` `U`         | Display non-editable HTML source code for the current page         |
-| `Ctrl` `D`         | Save your current webpage as a bookmark                            |
-| `Ctrl` `Shift` `D` | Save all open tabs as bookmarks in a new folder                    |
-| `F11`              | Turn full-screen mode on or off                                    |
-| `Ctrl` `+`         | Make everything on the page bigger                                 |
-| `Ctrl` `-`         | Make everything on the page smaller                                |
-| `Ctrl` `0`         | Return everything on the page to default size                      |
-| `Space`            | Scroll down a webpage, a screen at a time                          |
-| `Shift` `Space`    | Scroll up a webpage, a screen at a time                            |
-| `Home`             | Go to the top of the page                                          |
-| `End`              | Go to the bottom of the page                                       |
-| `Shift` `(scroll)` | Scroll horizontally on the page                                    |
-| `Alt` `Left`       | Move your cursor to the front of the previous word in a text field |
-| `Ctrl` `Right`     | Move your cursor to the back of the next word in a text field      |
-| `Ctrl` `Back`      | Delete the previous word in a text field                           |
-| `Alt` `Home`       | Open the home page in the current tab                              |
+| 快捷键           | 操作                                                                               |
+| ---------------- | ---------------------------------------------------------------------------------- |
+| `Enter`          | 使用默认搜索引擎搜索（输入后）                                                     |
+| `Tab`            | 使用其他搜索引擎搜索（输入后）                                                     |
+| `Ctrl` `Enter`   | 将 www. 和 .com 添加到网站名称，并在当前标签页中打开（输入后）                     |
+| `Alt` `Enter`    | 打开新标签页并执行搜索（输入后）                                                   |
+| `Ctrl` `L`       | 跳转到地址栏                                                                       |
+| `Ctrl` `K`       | 从页面任何位置搜索                                                                 |
+| `Shift` `Delete` | 从地址栏中删除预测（突出显示后）                                                   |
 
 {.shortcuts}
 
-## Also see
+### 网页
 
-- [Keyboard shortcuts for Brave](https://support.brave.com/hc/en-us/articles/360032272171-What-keyboard-shortcuts-can-I-use-in-Brave-)
+| 快捷键             | 操作                                                                               |
+| ------------------ | ---------------------------------------------------------------------------------- |
+| `Ctrl` `P`         | 打开打印当前页面的选项                                                             |
+| `Ctrl` `S`         | 打开保存当前页面的选项                                                             |
+| `Ctrl` `R`         | 重新加载当前页面                                                                   |
+| `Ctrl` `Shift` `R` | 重新加载当前页面，忽略缓存内容                                                       |
+| `Esc`              | 停止页面加载                                                                       |
+| `Tab`              | 向前浏览可点击项目                                                                 |
+| `Shift` `Tab`      | 向后浏览可点击项目                                                                 |
+| `Ctrl` `O`         | 在 Brave 中打开计算机上的文件                                                      |
+| `Ctrl` `U`         | 显示当前页面的不可编辑 HTML 源代码                                                 |
+| `Ctrl` `D`         | 将当前网页另存为书签                                                               |
+| `Ctrl` `Shift` `D` | 将所有打开的标签页在新文件夹中另存为书签                                           |
+| `F11`              | 打开或关闭全屏模式                                                                 |
+| `Ctrl` `+`         | 放大页面上的所有内容                                                               |
+| `Ctrl` `-`         | 缩小页面上的所有内容                                                               |
+| `Ctrl` `0`         | 将页面上的所有内容恢复为默认大小                                                   |
+| `Space`            | 向下滚动网页，一次一屏                                                             |
+| `Shift` `Space`    | 向上滚动网页，一次一屏                                                             |
+| `Home`             | 转到页面顶部                                                                       |
+| `End`              | 转到页面底部                                                                       |
+| `Shift` `(scroll)` | 在页面上水平滚动                                                                   |
+| `Alt` `Left`       | 在文本字段中将光标移动到上一个单词的前面                                           |
+| `Ctrl` `Right`     | 在文本字段中将光标移动到下一个单词的后面                                           |
+| `Ctrl` `Back`      | 删除文本字段中的上一个单词                                                         |
+| `Alt` `Home`       | 在当前标签页中打开主页                                                             |
+
+{.shortcuts}
+
+## 另请参阅
+
+- [Brave 键盘快捷键](https://support.brave.com/hc/en-us/articles/360032272171-What-keyboard-shortcuts-can-I-use-in-Brave-)
   _(support.brave.com)_

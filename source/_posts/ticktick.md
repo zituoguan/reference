@@ -7,53 +7,53 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 25 keyboard shortcuts found in the TickTick desktop app
+  TickTick 桌面应用程序中 25 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### General I
+### 常规操作 I
 
-| Shortcut           | Action                   |
+| 快捷键             | 操作                     |
 | ------------------ | ------------------------ |
-| `Ctrl` `Shift` `A` | Show quick add bar       |
-| `Ctrl` `Shift` `L` | Show or hide mini window |
-| `Ctrl` `Shift` `P` | Start or abandon pomo    |
-| `Ctrl` `S`         | Sync task                |
-| `Ctrl` `F`         | Search for a task        |
-| `Ctrl` `N`         | Add task                 |
-| `Ctrl` `Shift` `M` | Complete task            |
-| `Ctrl` `0`         | Clear date               |
-| `Ctrl` `D`         | Set date                 |
-| `Ctrl` `1`         | Set today                |
-| `Ctrl` `2`         | Set tomorrow             |
-| `Ctrl` `3`         | Set next week            |
+| `Ctrl` `Shift` `A` | 显示快速添加栏           |
+| `Ctrl` `Shift` `L` | 显示或隐藏迷你窗口       |
+| `Ctrl` `Shift` `P` | 开始或放弃番茄钟         |
+| `Ctrl` `S`         | 同步任务                 |
+| `Ctrl` `F`         | 搜索任务                 |
+| `Ctrl` `N`         | 添加任务                 |
+| `Ctrl` `Shift` `M` | 完成任务                 |
+| `Ctrl` `0`         | 清除日期                 |
+| `Ctrl` `D`         | 设置日期                 |
+| `Ctrl` `1`         | 设置为今天               |
+| `Ctrl` `2`         | 设置为明天               |
+| `Ctrl` `3`         | 设置为下周               |
 
 {.shortcuts}
 
-### General II
+### 常规操作 II
 
-| Shortcut         | Action                       |
+| 快捷键             | 操作                         |
 | ---------------- | ---------------------------- |
-| `Ctrl` `0`       | Set no priority              |
-| `Ctrl` `1`       | Set low priority             |
-| `Ctrl` `2`       | Set medium priority          |
-| `Ctrl` `3`       | Set high priority            |
-| `Ctrl` `P`       | Print                        |
-| `Ctrl` `Alt` `T` | Open today's list            |
-| `Ctrl` `Opt` `T` | Open tomorrow's list         |
-| `Ctrl` `Alt` `N` | Open next 7 days list        |
-| `Ctrl` `Alt` `A` | Open all list                |
-| `Ctrl` `Alt` `C` | Open the calendar view       |
-| `Ctrl` `Alt` `A` | Open the assigned to me list |
-| `Ctrl` `Alt` `1` | Open the inbox               |
-| `Ctrl` `Alt` `C` | Open completed tasks         |
+| `Ctrl` `0`       | 设置无优先级                 |
+| `Ctrl` `1`       | 设置低优先级                 |
+| `Ctrl` `2`       | 设置中优先级                 |
+| `Ctrl` `3`       | 设置高优先级                 |
+| `Ctrl` `P`       | 打印                         |
+| `Ctrl` `Alt` `T` | 打开“今天”列表               |
+| `Ctrl` `Opt` `T` | 打开“明天”列表               |
+| `Ctrl` `Alt` `N` | 打开“最近7天”列表            |
+| `Ctrl` `Alt` `A` | 打开“所有”列表               |
+| `Ctrl` `Alt` `C` | 打开日历视图                 |
+| `Ctrl` `Alt` `A` | 打开“分配给我”列表           |
+| `Ctrl` `Alt` `1` | 打开“收集箱”                 |
+| `Ctrl` `Alt` `C` | 打开“已完成”任务             |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for TickTick](https://support.ticktick.com/hc/en-us/articles/360016272252-Shortcuts)
+- [TickTick 快捷键](https://support.ticktick.com/hc/en-us/articles/360016272252-Shortcuts)
   _(support.ticktick.com)_

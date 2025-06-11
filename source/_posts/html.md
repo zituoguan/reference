@@ -5,15 +5,15 @@ background: bg-[#cc5534]
 tags:
   - web
 categories:
-  - Programming
+  - 编程
 intro: |
-  This HTML quick reference cheat sheet lists the common HTML and HTML5 tags in readable layout.
+  这份 HTML 快速参考备忘单以易读的布局列出了常用的 HTML 和 HTML5 标签。
 plugins:
   - copyCode
   - runCode
 ---
 
-## Getting Started
+## 入门
 
 ### hello.html {.col-span-2 .row-span-2}
 
@@ -24,127 +24,127 @@ plugins:
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML5 Boilerplate</title>
+    <title>HTML5 样板</title>
   </head>
   <body>
-    <h1>Hello world, hello CheatSheets.zip!</h1>
+    <h1>你好世界，你好 r3f.cn！</h1>
   </body>
 </html>
 ```
 
-Or try it out in the [jsfiddle](https://jsfiddle.net/Fechin/1e4wz20b/)
+或者在 [jsfiddle](https://jsfiddle.net/Fechin/1e4wz20b/) 中尝试一下
 
-### Comment
+### 注释
 
 ```html
-<!-- this is a comment -->
+<!-- 这是一个注释 -->
 
 <!--
-    Or you can comment out a
-    large number of lines.
+    或者你可以注释掉
+    大量的代码行。
 -->
 ```
 
-### Paragraph
+### 段落
 
 ```html
-<p>I'm from CheatSheets.zip</p>
-<p>Share quick reference cheat sheet.</p>
+<p>我来自 r3f.cn</p>
+<p>分享快速参考备忘单。</p>
 ```
 
-See: [The Paragraph element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
+参见：[段落元素 (The Paragraph element)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/p)
 
-### HTML link
+### HTML 链接
 
 ```html
-<a href="https://cheatsheets.zip">CheatSheets</a>
-<a href="mailto:jack@abc.com">Email</a>
-<a href="tel:+12345678">Call</a>
-<a href="sms:+12345678&body=ha%20ha">Msg</a>
+<a href="https://r3f.cn">CheatSheets</a>
+<a href="mailto:jack@abc.com">邮件</a>
+<a href="tel:+12345678">呼叫</a>
+<a href="sms:+12345678&body=ha%20ha">短信</a>
 ```
 
 ---
 
 |     |          |                                                                 |
 | --- | -------- | --------------------------------------------------------------- |
-|     | `href`   | The URL that the hyperlink points to                            |
-|     | `rel`    | Relationship of the linked URL                                  |
-|     | `target` | Link target location: <br/>`_self`, `_blank`, `_top`, `_parent` |
+|     | `href`   | 超链接指向的 URL                                                |
+|     | `rel`    | 链接 URL 的关系                                                 |
+|     | `target` | 链接目标位置：<br/>`_self` (自身)、`_blank` (新窗口)、`_top` (顶层)、`_parent` (父框架) |
 
 {.left-text}
 
-See: [The \<a> Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes)
+参见：[\<a> 属性 (The \<a> Attributes)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#attributes)
 
-### Image Tag
+### 图像标签
 
 ```html {.wrap}
-<img loading="lazy" src="https://xxx.png" alt="Describe image here" width="400" height="400" />
+<img loading="lazy" src="https://xxx.png" alt="在此描述图像" width="400" height="400" />
 ```
 
 ---
 
 |     |           |                                          |
 | --- | --------- | ---------------------------------------- |
-|     | `src`     | Required, Image location _(URL \| Path)_ |
-|     | `alt`     | Describe of the image                    |
-|     | `width`   | Width of the image                       |
-|     | `height`  | Height of the image                      |
-|     | `loading` | How the browser should load              |
+|     | `src`     | 必需，图像位置 (URL | 路径)             |
+|     | `alt`     | 图像描述                                 |
+|     | `width`   | 图像宽度                                 |
+|     | `height`  | 图像高度                                 |
+|     | `loading` | 浏览器应如何加载                         |
 
 {.left-text}
 
-See: [The Image Embed element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
+参见：[图像嵌入元素 (The Image Embed element)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img)
 
-### Text Formatting Tags
+### 文本格式化标签
 
 ```html
-<b>Bold Text</b>
-<strong>This text is important</strong>
-<i>Italic Text</i>
-<em>This text is emphasized</em>
-<u>Underline Text</u>
-<pre>Pre-formatted Text</pre>
-<code>Source code</code>
-<del>Deleted text</del>
-<mark>Highlighted text (HTML5)</mark>
-<ins>Inserted text</ins>
-<sup>Makes text superscripted</sup>
-<sub>Makes text subscripted</sub>
-<small>Makes text smaller</small>
+<b>粗体文本</b>
+<strong>此文本很重要</strong>
+<i>斜体文本</i>
+<em>此文本被强调</em>
+<u>下划线文本</u>
+<pre>预格式化文本</pre>
+<code>源代码</code>
+<del>删除的文本</del>
+<mark>高亮文本 (HTML5)</mark>
+<ins>插入的文本</ins>
+<sup>使文本成为上标</sup>
+<sub>使文本成为下标</sub>
+<small>使文本更小</small>
 <kbd>Ctrl</kbd>
-<blockquote>Text Block Quote</blockquote>
+<blockquote>文本块引用</blockquote>
 ```
 
-### Headings
+### 标题
 
 ```html
-<h1>This is Heading 1</h1>
-<h2>This is Heading 2</h2>
-<h3>This is Heading 3</h3>
-<h4>This is Heading 4</h4>
-<h5>This is Heading 5</h5>
-<h6>This is Heading 6</h6>
+<h1>这是标题 1</h1>
+<h2>这是标题 2</h2>
+<h3>这是标题 3</h3>
+<h4>这是标题 4</h4>
+<h5>这是标题 5</h5>
+<h6>这是标题 6</h6>
 ```
 
-You should only have one h1 on your page
+你的页面上应该只有一个 h1 标签
 
-### Section Divisions
+### 区块划分
 
 |                 |                                      |
 | --------------- | ------------------------------------ |
-| `<div></div>`   | Division or Section of Page Content  |
-| `<span></span>` | Section of text within other content |
-| `<p></p>`       | Paragraph of Text                    |
-| `<br>`          | Line Break                           |
-| `<hr>`          | Basic Horizontal Line                |
+| `<div></div>`   | 页面内容的分区或区块                 |
+| `<span></span>` | 其他内容中的文本区块                 |
+| `<p></p>`       | 文本段落                             |
+| `<br>`          | 换行符                               |
+| `<hr>`          | 基本水平线                           |
 
-These are the tags used to divide your page up into sections
+这些是用于将页面划分为区块的标签
 
-### Inline Frame {.row-span-2}
+### 内联框架 {.row-span-2}
 
 ```html {.wrap}
 <iframe
-  title="New York"
+  title="纽约"
   width="342"
   height="306"
   id="gmap_canvas"
@@ -154,9 +154,9 @@ These are the tags used to divide your page up into sections
 </iframe>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
-<iframe title="New York"
+<iframe title="纽约"
     width="342"
     height="306"
     id="gmap_canvas"
@@ -164,18 +164,18 @@ These are the tags used to divide your page up into sections
     scrolling="no">
 </iframe>
 
-See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
+参见：[内联框架元素 (The Inline Frame element)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe)
 
-### JavaScript in HTML
+### HTML 中的 JavaScript
 
 ```html
 <script type="text/javascript">
-  let text = "Hello CheatSheets.zip";
+  let text = "你好 r3f.cn";
   alert(text);
 </script>
 ```
 
-#### External JavaScript
+#### 外部 JavaScript
 
 ```html
 <body>
@@ -185,7 +185,7 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 </body>
 ```
 
-### CSS in HTML
+### HTML 中的 CSS
 
 ```html
 <style type="text/css">
@@ -195,7 +195,7 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 </style>
 ```
 
-#### External stylesheet
+#### 外部样式表
 
 ```html
 <head>
@@ -204,9 +204,9 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 </head>
 ```
 
-## HTML5 Tags
+## HTML5 标签
 
-### Document
+### 文档
 
 ```html
 <body>
@@ -214,21 +214,21 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
     <nav>...</nav>
   </header>
   <main>
-    <h1>CheatSheets.zip</h1>
+    <h1>r3f.cn</h1>
   </main>
   <footer>
-    <p>©2023 CheatSheets.zip</p>
+    <p>©2023 r3f.cn</p>
   </footer>
 </body>
 ```
 
-### Header Navigation
+### 头部导航
 
 ```html
 <header>
   <nav>
     <ul>
-      <li><a href="#">Edit Page</a></li>
+      <li><a href="#">编辑页面</a></li>
       <li><a href="#">Twitter</a></li>
       <li><a href="#">Facebook</a></li>
     </ul>
@@ -236,72 +236,71 @@ See: [The Inline Frame element](https://developer.mozilla.org/en-US/docs/Web/HTM
 </header>
 ```
 
-### HTML5 Tags {.row-span-4}
+### HTML5 标签 {.row-span-4}
 
 |                                                                                    |                                        |
 | ---------------------------------------------------------------------------------- | -------------------------------------- |
-| [article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)       | Content that’s independent             |
-| [aside](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside)           | Secondary content                      |
-| [audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)           | Embeds a sound, or an audio stream     |
-| [bdi](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi)               | The Bidirectional Isolate element      |
-| [canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas)         | Draw graphics via JavaScript           |
-| [data](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data)             | Machine readable content               |
-| [datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)     | A set of pre-defined options           |
-| [details](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)       | Additional information                 |
-| [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)         | A dialog box or sub-window             |
-| [embed](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed)           | Embeds external application            |
-| [figcaption](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption) | A caption or legend for a figure       |
-| [figure](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)         | A figure illustrated                   |
-| [footer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)         | Footer or least important              |
-| [header](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)         | Masthead or important information      |
-| [main](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)             | The main content of the document       |
-| [mark](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark)             | Text highlighted                       |
-| [meter](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter)           | A scalar value within a known range    |
-| [nav](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)               | A section of navigation links          |
-| [output](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output)         | The result of a calculation            |
-| [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)       | A container for multiple image sources |
-| [progress](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)     | The completion progress of a task      |
-| [rp](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp)                 | Provides fall-back parenthesis         |
-| [rt](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt)                 | Defines the pronunciation of character |
-| [ruby](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby)             | Represents a ruby annotation           |
-| [section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)       | A group in a series of related content |
-| [source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)         | Resources for the media elements       |
-| [summary](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary)       | A summary for the \<details> element   |
-| [template](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)     | Defines the fragments of HTML          |
-| [time](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)             | A time or date                         |
-| [track](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track)           | Text tracks for the media elements     |
-| [video](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)           | Embeds video                           |
-| [wbr](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr)               | A line break opportunity               |
+| [article](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/article)       | 独立的内容                             |
+| [aside](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/aside)           | 次要内容                               |
+| [audio](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio)           | 嵌入声音或音频流                       |
+| [bdi](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/bdi)               | 双向隔离元素                           |
+| [canvas](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/canvas)         | 通过 JavaScript 绘制图形               |
+| [data](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/data)             | 机器可读内容                           |
+| [datalist](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/datalist)     | 一组预定义选项                         |
+| [details](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/details)       | 附加信息                               |
+| [dialog](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/dialog)         | 对话框或子窗口                         |
+| [embed](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/embed)           | 嵌入外部应用程序                       |
+| [figcaption](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figcaption) | figure 元素的标题或图例                |
+| [figure](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figure)         | 图示                                   |
+| [footer](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/footer)         | 页脚或最不重要的信息                   |
+| [header](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/header)         | 页眉或重要信息                         |
+| [main](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/main)             | 文档的主要内容                         |
+| [mark](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/mark)             | 高亮文本                               |
+| [meter](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meter)           | 已知范围内的标量值                     |
+| [nav](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/nav)               | 导航链接区块                           |
+| [output](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/output)         | 计算结果                               |
+| [picture](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/picture)       | 多个图像源的容器                       |
+| [progress](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/progress)     | 任务的完成进度                         |
+| [rp](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/rp)                 | 提供回退括号                           |
+| [rt](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/rt)                 | 定义字符的发音                         |
+| [ruby](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ruby)             | 表示 ruby 注解                         |
+| [section](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/section)       | 一系列相关内容中的一个组               |
+| [source](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/source)         | 媒体元素的资源                         |
+| [summary](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/summary)       | \<details> 元素的摘要                  |
+| [template](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/template)     | 定义 HTML 片段                         |
+| [time](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/time)             | 时间或日期                             |
+| [track](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/track)           | 媒体元素的文本轨道                     |
+| [video](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video)           | 嵌入视频                               |
+| [wbr](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/wbr)               | 换行机会                               |
 
-### HTML5 Video
+### HTML5 视频
 
 ```html {.wrap}
 <video controls="" width="100%">
   <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-  Sorry, your browser doesn't support embedded videos.
+  抱歉，您的浏览器不支持嵌入式视频。
 </video>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <video controls="" width="100%">
     <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-    Sorry, your browser doesn't support embedded videos.
+    抱歉，您的浏览器不支持嵌入式视频。
 </video>
 
-### HTML5 Audio
+### HTML5 音频
 
 ```html {.wrap}
 <audio controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">
-  Your browser does not support the audio element.
+  您的浏览器不支持音频元素。
 </audio>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <audio controls class="w-full"
-    src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"> Your browser does not support the
-audio element. </audio>
+    src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"> 您的浏览器不支持音频元素。 </audio>
 
 ### HTML5 Ruby
 
@@ -309,29 +308,29 @@ audio element. </audio>
 <ruby> 汉 <rp>(</rp><rt>hàn</rt><rp>)</rp> 字 <rp>(</rp><rt>zì</rt><rp>)</rp> </ruby>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <ruby class="mt-4 text-center text-5xl">
   汉 <rp>(</rp><rt>hàn</rt><rp>)</rp>
   字 <rp>(</rp><rt>zì</rt><rp>)</rp>
 </ruby>
 
-### HTML5 kdi
+### HTML5 bdi
 
 ```html
 <ul>
-  <li>User <bdi>hrefs</bdi>: 60 points</li>
-  <li>User <bdi>jdoe</bdi>: 80 points</li>
-  <li>User <bdi>إيان</bdi>: 90 points</li>
+  <li>用户 <bdi>hrefs</bdi>: 60 分</li>
+  <li>用户 <bdi>jdoe</bdi>: 80 分</li>
+  <li>用户 <bdi>إيان</bdi>: 90 分</li>
 </ul>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <ul>
- <li>User <bdi>hrefs</bdi>: 60 points</li>
- <li>User <bdi>jdoe</bdi>: 80 points</li>
- <li>User <bdi>إيان</bdi>: 90 points</li>
+ <li>用户 <bdi>hrefs</bdi>: 60 分</li>
+ <li>用户 <bdi>jdoe</bdi>: 80 分</li>
+ <li>用户 <bdi>إيان</bdi>: 90 分</li>
 </ul>
 
 ### HTML5 progress
@@ -345,21 +344,21 @@ audio element. </audio>
 ### HTML5 mark
 
 ```html
-<p>I Love <mark>CheatSheets.zip</mark></p>
+<p>我爱 <mark>r3f.cn</mark></p>
 ```
 
-<p>I Love <mark>CheatSheets.zip</mark></p>
+<p>我爱 <mark>r3f.cn</mark></p>
 
-## HTML Tables
+## HTML 表格
 
-### Table Example {.row-span-2}
+### 表格示例 {.row-span-2}
 
 ```html
 <table>
   <thead>
     <tr>
-      <td>name</td>
-      <td>age</td>
+      <td>姓名</td>
+      <td>年龄</td>
     </tr>
   </thead>
   <tbody>
@@ -375,135 +374,135 @@ audio element. </audio>
 </table>
 ```
 
-### HTML Table Tags {.row-span-2}
+### HTML 表格标签 {.row-span-2}
 
-| Tag                                                                               | Description                      |
+| 标签                                                                              | 描述                             |
 | --------------------------------------------------------------------------------- | -------------------------------- |
-| [\<table>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)       | Defines a table                  |
-| [\<th>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th)             | Defines a header cell in a table |
-| [\<tr>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr)             | Defines a row in a table         |
-| [\<td>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td)             | Defines a cell in a table        |
-| [\<caption>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption)   | Defines a table caption          |
-| [\<colgroup>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/colgroup) | Defines a group of columns       |
-| [\<col>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col)           | Defines a column within a table  |
-| [\<thead>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead)       | Groups the header content        |
-| [\<tbody>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody)       | Groups the body content          |
-| [\<tfoot>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot)       | Groups the footer content        |
+| [\<table>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table)       | 定义一个表格                     |
+| [\<th>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/th)             | 定义表格中的表头单元格           |
+| [\<tr>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tr)             | 定义表格中的行                   |
+| [\<td>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td)             | 定义表格中的单元格               |
+| [\<caption>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/caption)   | 定义表格标题                     |
+| [\<colgroup>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/colgroup) | 定义一组列                       |
+| [\<col>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/col)           | 定义表格中的列                   |
+| [\<thead>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/thead)       | 对表头内容进行分组               |
+| [\<tbody>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tbody)       | 对表体内容进行分组               |
+| [\<tfoot>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/tfoot)       | 对表尾内容进行分组               |
 
-### \<td> Attributes
+### \<td> 属性
 
-| Attribute | Description                                   |
-| --------- | --------------------------------------------- |
-| `colspan` | Number of columns a cell should span          |
-| `headers` | One or more header cells a cell is related to |
-| `rowspan` | Number of rows a cell should span             |
+| 属性      | 描述                                   |
+| --------- | -------------------------------------- |
+| `colspan` | 单元格应跨越的列数                     |
+| `headers` | 单元格关联的一个或多个表头单元格       |
+| `rowspan` | 单元格应跨越的行数                     |
 
-See: [td\#Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attributes)
+参见：[td\#属性 (td\#Attributes)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td#attributes)
 
-### \<th> Attributes
+### \<th> 属性
 
-| Attribute                                                                        | Description                                   |
-| -------------------------------------------------------------------------------- | --------------------------------------------- |
-| `colspan`                                                                        | Number of columns a cell should span          |
-| `headers`                                                                        | One or more header cells a cell is related to |
-| `rowspan`                                                                        | Number of rows a cell should span             |
-| `abbr`                                                                           | Description of the cell's content             |
-| [scope](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attr-scope) | The header element relates to                 |
+| 属性                                                                             | 描述                                   |
+| -------------------------------------------------------------------------------- | -------------------------------------- |
+| `colspan`                                                                        | 单元格应跨越的列数                     |
+| `headers`                                                                        | 单元格关联的一个或多个表头单元格       |
+| `rowspan`                                                                        | 单元格应跨越的行数                     |
+| `abbr`                                                                           | 单元格内容的描述                       |
+| [scope](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/th#attr-scope) | 表头元素关联的范围                     |
 
-See: [th\#Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#attributes)
+参见：[th\#属性 (th\#Attributes)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/th#attributes)
 
-## HTML Lists
+## HTML 列表
 
-### Unordered list
+### 无序列表
 
 ```html
 <ul>
-  <li>I'm an item</li>
-  <li>I'm another item</li>
-  <li>I'm another item</li>
+  <li>我是一个列表项</li>
+  <li>我是另一个列表项</li>
+  <li>我是又一个列表项</li>
 </ul>
 ```
 
-See: [The Unordered List element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
+参见：[无序列表元素 (The Unordered List element)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ul)
 
-### Ordered list
+### 有序列表
 
 ```html
 <ol>
-  <li>I'm the first item</li>
-  <li>I'm the second item</li>
-  <li>I'm the third item</li>
+  <li>我是第一个列表项</li>
+  <li>我是第二个列表项</li>
+  <li>我是第三个列表项</li>
 </ol>
 ```
 
-See: [The Ordered List element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)
+参见：[有序列表元素 (The Ordered List element)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/ol)
 
-### Definition list
+### 定义列表
 
 ```html
 <dl>
-  <dt>A Term</dt>
-  <dd>Definition of a term</dd>
-  <dt>Another Term</dt>
-  <dd>Definition of another term</dd>
+  <dt>一个术语</dt>
+  <dd>术语的定义</dd>
+  <dt>另一个术语</dt>
+  <dd>另一个术语的定义</dd>
 </dl>
 ```
 
-See: [The Description List element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl)
+参见：[描述列表元素 (The Description List element)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/dl)
 
-## HTML Forms
+## HTML 表单
 
-### Form tags {.row-span-2}
+### 表单标签 {.row-span-2}
 
 ```html
 <form method="POST" action="api/login">
-  <label for="mail">Email: </label>
+  <label for="mail">邮箱：</label>
   <input type="email" id="mail" name="mail" />
   <br />
-  <label for="pw">Password: </label>
+  <label for="pw">密码：</label>
   <input type="password" id="pw" name="pw" />
   <br />
-  <input type="submit" value="Login" />
+  <input type="submit" value="登录" />
   <br />
   <input type="checkbox" id="ck" name="ck" />
-  <label for="ck">Remember me</label>
+  <label for="ck">记住我</label>
 </form>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <form method="POST" action="api/login" style="padding: 20px;">
-    <label for="email">Email: </label> 
+    <label for="email">邮箱：</label>
     <input type="email" id="email" name="email" class="border border-slate-400 mt-2">
     <br/>
-    <label for="pwd">Password: </label> 
+    <label for="pwd">密码：</label>
     <input type="password" id="pwd" name="pwd" class="border border-slate-400 mt-2">
     <br/>
-    <input type="submit" value="Login" class="mt-2">
+    <input type="submit" value="登录" class="mt-2">
     <br/>
     <input type="checkbox" id="ck" name="ck" class="mt-2">
-    <label for="ck">Remember me</label> 
+    <label for="ck">记住我</label>
 </form>
 
-The HTML `<form>` element is used to collect and send information to an external source.
+HTML `<form>` 元素用于收集信息并将其发送到外部源。
 
-### Form Attribute
+### 表单属性
 
-| Attribute  | Description                                                                                         |
-| ---------- | --------------------------------------------------------------------------------------------------- |
-| `name`     | Name of form for scripting                                                                          |
-| `action`   | URL of form script                                                                                  |
-| `method`   | HTTP method, `POST` / `GET` _(default)_                                                             |
-| `enctype`  | Media type, See [enctype](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype) |
-| `onsubmit` | Runs when the form was submit                                                                       |
-| `onreset`  | Runs when the form was reset                                                                        |
+| 属性       | 描述                                                                                         |
+| ---------- | -------------------------------------------------------------------------------------------- |
+| `name`     | 用于脚本的表单名称                                                                           |
+| `action`   | 表单脚本的 URL                                                                               |
+| `method`   | HTTP 方法，`POST` / `GET` (默认)                                                             |
+| `enctype`  | 媒体类型，参见 [enctype](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLFormElement/enctype) |
+| `onsubmit` | 表单提交时运行                                                                               |
+| `onreset`  | 表单重置时运行                                                                               |
 
-### Label tags
+### Label 标签
 
 ```html
-<!-- Nested label -->
+<!-- 嵌套标签 -->
 <label
-  >Click me
+  >点我
   <input type="text" id="user" name="name" />
 </label>
 ```
@@ -511,134 +510,134 @@ The HTML `<form>` element is used to collect and send information to an external
 ---
 
 ```html
-<!-- 'for' attribute -->
-<label for="user">Click me</label>
+<!-- 'for' 属性 -->
+<label for="user">点我</label>
 <input id="user" type="text" name="name" />
 ```
 
-`for` in a label references an input's `id` attribute
+label 中的 `for` 引用 input 的 `id` 属性
 
-### Input tags
+### Input 标签
 
 ```html
-<label for="Name">Name:</label> <input type="text" name="Name" id="" />
+<label for="Name">姓名：</label> <input type="text" name="Name" id="" />
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <form style="padding: 20px;">
-    <label for="username">Username:</label>
+    <label for="username">用户名：</label>
     <input type="text" name="username" id="username" class="border border-slate-400">
 </form>
 
-See: [HTML input Tags](/html#html-input-tags)
+参见：[HTML input 标签](/html#html-input-tags)
 
-### Textarea tags
+### Textarea 标签
 
 ```html {.wrap}
 <textarea rows="2" cols="30" name="address" id="address"></textarea>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <form style="padding: 20px;">
     <textarea rows="2" cols="30" name="address" id="address" class="border border-slate-400"style="width: 100%"></textarea>
 </form>
 
-Textarea is a multiple-line text input control
+Textarea 是一个多行文本输入控件
 
-### Radio Buttons
+### 单选按钮
 
 ```html
 <input type="radio" name="gender" id="m" />
-<label for="m">Male</label>
+<label for="m">男</label>
 <input type="radio" name="gender" id="f" />
-<label for="f">Female</label>
+<label for="f">女</label>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <form style="padding: 20px;">
     <input type="radio" name="gender" id="m">
-    <label for="m">Male</label>
+    <label for="m">男</label>
     <input type="radio" name="gender" id="f">
-    <label for="f">Female</label>
+    <label for="f">女</label>
 </form>
 
-Radio buttons are used to let the user select exactly one
+单选按钮用于让用户精确选择一个选项
 
-### Checkboxes
+### 复选框
 
 ```html
 <input type="checkbox" name="s" id="soc" />
-<label for="soc">Soccer</label>
+<label for="soc">足球</label>
 <input type="checkbox" name="s" id="bas" />
-<label for="bas">Baseball</label>
+<label for="bas">棒球</label>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <form style="padding: 20px;">
     <input type="checkbox" name="sports" id="soccer">
-    <label for="soccer">Soccer</label>
+    <label for="soccer">足球</label>
     <input type="checkbox" name="sports" id="baseball">
-    <label for="baseball">Baseball</label>
+    <label for="baseball">棒球</label>
 </form>
 
-Checkboxes allows the user to select one or more
+复选框允许用户选择一个或多个选项
 
-### Select tags
+### Select 标签
 
 ```html
-<label for="city">City:</label>
+<label for="city">城市：</label>
 <select name="city" id="city">
-  <option value="1">Sydney</option>
-  <option value="2">Melbourne</option>
-  <option value="3">Cromwell</option>
+  <option value="1">悉尼</option>
+  <option value="2">墨尔本</option>
+  <option value="3">克伦威尔</option>
 </select>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <form style="padding: 20px">
-    <label for="city">City:</label>
+    <label for="city">城市：</label>
     <select name="city" id="city" class="border border-slate-400">
-        <option value="1">Sydney</option>
-        <option value="2">Melbourne</option>
-        <option value="3">Cromwell</option>
+        <option value="1">悉尼</option>
+        <option value="2">墨尔本</option>
+        <option value="3">克伦威尔</option>
     </select>
 </form>
 
-A select box is a dropdown list of options
+选择框是一个下拉选项列表
 
-### Fieldset tags
+### Fieldset 标签
 
 ```html
 <fieldset>
-  <legend>Your favorite monster</legend>
+  <legend>你最喜欢的怪物</legend>
   <input type="radio" id="kra" name="m" />
-  <label for="kraken">Kraken</label><br />
+  <label for="kraken">克拉肯</label><br />
   <input type="radio" id="sas" name="m" />
-  <label for="sas">Sasquatch</label>
+  <label for="sas">大脚怪</label>
 </fieldset>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <form style="padding: 20px">
     <fieldset class="border border-slate-400" style="padding: 20px">
-        <legend>Your favorite monster</legend>
+        <legend>你最喜欢的怪物</legend>
         <input type="radio" id="kra" name="monster">
-        <label for="kra">Kraken</label><br/>
+        <label for="kra">克拉肯</label><br/>
         <input type="radio" id="sas" name="monster">
-        <label for="sas">Sasquatch</label>
+        <label for="sas">大脚怪</label>
     </fieldset>
 </form>
 
-### Datalist tags(HTML5)
+### Datalist 标签 (HTML5)
 
 ```html
-<label for="b">Choose a browser: </label>
+<label for="b">选择一个浏览器：</label>
 <input list="list" id="b" name="browser" />
 <datalist id="list">
   <option value="Chrome"></option>
@@ -650,10 +649,10 @@ A select box is a dropdown list of options
 </datalist>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <form style="padding: 20px">
-    <label for="myBrowser">Choose a browser:</label>
+    <label for="myBrowser">选择一个浏览器：</label>
     <input list="browsers" id="myBrowser" name="myBrowser" class="border border-slate-400"/>
     <datalist id="browsers">
       <option value="Chrome">
@@ -665,33 +664,33 @@ A select box is a dropdown list of options
     </datalist>
 </form>
 
-### Submit and Reset Buttons
+### 提交和重置按钮
 
 ```html
 <form action="register.php" method="post">
-  <label for="foo">Name:</label>
+  <label for="foo">姓名：</label>
   <input type="text" name="name" id="foo" />
-  <input type="submit" value="Submit" />
-  <input type="reset" value="Reset" />
+  <input type="submit" value="提交" />
+  <input type="reset" value="重置" />
 </form>
 ```
 
-#### ↓ Preview
+#### ↓ 预览
 
 <form action="register.php" method="post" style="padding: 20px">
-    <label for="name">Name:</label>
+    <label for="name">姓名：</label>
     <input type="text" name="name" id="name" class="border border-slate-400">
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
+    <input type="submit" value="提交">
+    <input type="reset" value="重置">
 </form>
 
-`Submit` the data to server; `Reset` to default values
+`提交` 数据到服务器；`重置` 为默认值
 
-## HTML input Tags {.cols-2}
+## HTML input 标签 {.cols-2}
 
-### Input Attributes {.row-span-2}
+### Input 属性 {.row-span-2}
 
-The input tag is an empty element, identifying the particular type of field information to obtain from a user.
+input 标签是一个空元素，用于标识从用户处获取特定类型字段信息。
 
 ```html {.wrap}
 <input type="text" name="?" value="?" minlength="6" required />
@@ -701,87 +700,87 @@ The input tag is an empty element, identifying the particular type of field info
 
 | -   |                         |                                                                                                                               |
 | --- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-|     | `type="…"`              | The type of data that is being input                                                                                          |
-|     | `value="…"`             | Default value                                                                                                                 |
-|     | `name="…"`              | Used to describe this data in the HTTP request                                                                                |
-|     | `id="…"`                | Unique identifier that other HTML elements                                                                                    |
-|     | `readonly`              | Stops the user from modifying                                                                                                 |
-|     | `disabled`              | Stops any interaction                                                                                                         |
-|     | `checked`               | The radio or checkbox select or not                                                                                           |
-|     | `required`              | Being compulsory, See [required](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/required#example)               |
-|     | `placeholder="…"`       | Adds a temporary, See [::placeholder](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder#examples)                |
-|     | `autocomplete="off"`    | Disable auto completion                                                                                                       |
-|     | `autocapitalize="none"` | Disable auto capitalization                                                                                                   |
-|     | `inputmode="…"`         | Display a specific keyboard, See [inputmode](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode)   |
-|     | `list="…"`              | The id of an associated [datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)                        |
-|     | `maxlength="…"`         | Maximum number of characters                                                                                                  |
-|     | `minlength="…"`         | Minimum number of characters                                                                                                  |
-|     | `min="…"`               | Minimum numerical value on range & number                                                                                     |
-|     | `max="…"`               | Maximum numerical value on range & number                                                                                     |
-|     | `step="…"`              | How the number will increment in range & number                                                                               |
-|     | `pattern="…"`           | Specifies a [Regular expression](/regex), See [pattern](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern) |
-|     | `autofocus`             | Be focused                                                                                                                    |
-|     | `spellcheck`            | Perform spell checking                                                                                                        |
-|     | `multiple`              | Whether to allow [multiple](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/multiple) values                     |
-|     | `accept=""`             | Expected file type in [file](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file) upload controls            |
+|     | `type="…"`              | 输入数据的类型                                                                                                                |
+|     | `value="…"`             | 默认值                                                                                                                        |
+|     | `name="…"`              | 用于在 HTTP 请求中描述此数据                                                                                                  |
+|     | `id="…"`                | 其他 HTML 元素的唯一标识符                                                                                                    |
+|     | `readonly`              | 阻止用户修改                                                                                                                  |
+|     | `disabled`              | 停止任何交互                                                                                                                  |
+|     | `checked`               | 单选框或复选框是否选中                                                                                                        |
+|     | `required`              | 必填项，参见 [required](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Attributes/required#example)                         |
+|     | `placeholder="…"`       | 添加临时提示，参见 [::placeholder](https://developer.mozilla.org/zh-CN/docs/Web/CSS/::placeholder#examples)                     |
+|     | `autocomplete="off"`    | 禁用自动完成                                                                                                                  |
+|     | `autocapitalize="none"` | 禁用自动大写                                                                                                                  |
+|     | `inputmode="…"`         | 显示特定键盘，参见 [inputmode](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/inputmode)                   |
+|     | `list="…"`              | 关联的 [datalist](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/datalist) 的 id                                   |
+|     | `maxlength="…"`         | 最大字符数                                                                                                                    |
+|     | `minlength="…"`         | 最小字符数                                                                                                                    |
+|     | `min="…"`               | range 和 number 类型的最小值                                                                                                  |
+|     | `max="…"`               | range 和 number 类型的最大值                                                                                                  |
+|     | `step="…"`              | range 和 number 类型中数字的增量                                                                                              |
+|     | `pattern="…"`           | 指定一个[正则表达式](/regex)，参见 [pattern](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Attributes/pattern)             |
+|     | `autofocus`             | 自动获取焦点                                                                                                                  |
+|     | `spellcheck`            | 执行拼写检查                                                                                                                  |
+|     | `multiple`              | 是否允许多个值，参见 [multiple](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Attributes/multiple)                         |
+|     | `accept=""`             | [file](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/file) 上传控件中预期的文件类型                         |
 
 {.left-text}
 
-Also see:
-[Attributes for the \<input> element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes)
+另请参见：
+[\<input> 元素的属性 (Attributes for the \<input> element)](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#attributes)
 
-### Input types
+### Input 类型
 
 |                   |                                                                                                                                          |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `type="checkbox"` | <input type="checkbox" class="border border-slate-400">                                                                                  |
-| `type="radio"`    | <input type="radio" class="border border-slate-400">                                                                                     |
-| `type="file"`     | <input type="file" class="border border-slate-400">                                                                                      |
-| `type="hidden"`   | <input type="hidden" class="border border-slate-400">                                                                                    |
-| `type="text"`     | <input type="text" class="border border-slate-400">                                                                                      |
-| `type="password"` | <input type="password" class="border border-slate-400">                                                                                  |
-| `type="image"`    | <input type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" width="70"> |
-| `type="reset"`    | <input type="reset" class="border border-slate-400">                                                                                     |
-| `type="button"`   | <input type="button" class="border border-slate-400" value="button">                                                                     |
-| `type="submit"`   | <input type="submit" class="border border-slate-400">                                                                                    |
+| `type="checkbox"` | <input type="checkbox" class="border border-slate-400"> (复选框)                                                                         |
+| `type="radio"`    | <input type="radio" class="border border-slate-400"> (单选按钮)                                                                          |
+| `type="file"`     | <input type="file" class="border border-slate-400"> (文件)                                                                               |
+| `type="hidden"`   | <input type="hidden" class="border border-slate-400"> (隐藏)                                                                             |
+| `type="text"`     | <input type="text" class="border border-slate-400"> (文本)                                                                               |
+| `type="password"` | <input type="password" class="border border-slate-400"> (密码)                                                                           |
+| `type="image"`    | <input type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" width="70"> (图像按钮) |
+| `type="reset"`    | <input type="reset" class="border border-slate-400"> (重置按钮)                                                                          |
+| `type="button"`   | <input type="button" class="border border-slate-400" value="按钮"> (按钮)                                                                |
+| `type="submit"`   | <input type="submit" class="border border-slate-400"> (提交按钮)                                                                         |
 
-#### New Input Types in HTML5
+#### HTML5 中的新 Input 类型
 
 |                         |                                                                      |
 | ----------------------- | -------------------------------------------------------------------- |
-| `type="color"`          | <input type="color" value="#0FB881" class="border border-slate-400"> |
-| `type="date"`           | <input type="date" class="border border-slate-400">                  |
-| `type="time"`           | <input type="time" class="border border-slate-400">                  |
-| `type="month"`          | <input type="month" class="border border-slate-400">                 |
-| `type="datetime-local"` | <input type="datetime-local" class="border border-slate-400">        |
-| `type="week"`           | <input type="week" class="border border-slate-400">                  |
-| `type="email"`          | <input type="email" class="border border-slate-400">                 |
-| `type="tel"`            | <input type="tel" class="border border-slate-400">                   |
-| `type="url"`            | <input type="url" class="border border-slate-400">                   |
-| `type="number"`         | <input type="number" class="border border-slate-400">                |
-| `type="search"`         | <input type="search" class="border border-slate-400">                |
-| `type="range"`          | <input type="range" class="border border-slate-400">                 |
+| `type="color"`          | <input type="color" value="#0FB881" class="border border-slate-400"> (颜色) |
+| `type="date"`           | <input type="date" class="border border-slate-400"> (日期)           |
+| `type="time"`           | <input type="time" class="border border-slate-400"> (时间)           |
+| `type="month"`          | <input type="month" class="border border-slate-400"> (月份)          |
+| `type="datetime-local"` | <input type="datetime-local" class="border border-slate-400"> (本地日期时间) |
+| `type="week"`           | <input type="week" class="border border-slate-400"> (周)             |
+| `type="email"`          | <input type="email" class="border border-slate-400"> (邮箱)          |
+| `type="tel"`            | <input type="tel" class="border border-slate-400"> (电话)            |
+| `type="url"`            | <input type="url" class="border border-slate-400"> (URL)             |
+| `type="number"`         | <input type="number" class="border border-slate-400"> (数字)         |
+| `type="search"`         | <input type="search" class="border border-slate-400"> (搜索)         |
+| `type="range"`          | <input type="range" class="border border-slate-400"> (范围)          |
 
-### Input CSS selectors
+### Input CSS 选择器
 
 |               |                           |
 | ------------- | ------------------------- |
-| `input:focus` | When its keyboard focused |
+| `input:focus` | 当其获得键盘焦点时        |
 
-See: [Input pseudo classes](/css#input-pseudo-classes)
+参见：[Input 伪类](/css#input-pseudo-classes)
 
-## HTML meta Tags {.cols-2}
+## HTML meta 标签 {.cols-2}
 
-### Meta tags {.row-span-3}
+### Meta 标签 {.row-span-3}
 
-The meta tag describes meta data within an HTML document. It explains additional material about the HTML.
+meta 标签描述 HTML 文档中的元数据。它解释了关于 HTML 的附加材料。
 
 ```html
 <meta charset="utf-8" />
 ```
 
 ```html
-<!-- title -->
+<!-- 标题 -->
 <title>···</title>
 <meta property="og:title" content="···" />
 <meta name="twitter:title" content="···" />
@@ -799,7 +798,7 @@ The meta tag describes meta data within an HTML document. It explains additional
 ---
 
 ```html
-<!-- description -->
+<!-- 描述 -->
 <meta name="description" content="···" />
 <meta property="og:description" content="···" />
 <meta name="twitter:description" content="···" />
@@ -808,7 +807,7 @@ The meta tag describes meta data within an HTML document. It explains additional
 ---
 
 ```html
-<!-- image -->
+<!-- 图像 -->
 <meta property="og:image" content="https://···" />
 <meta name="twitter:image" content="https://···" />
 ```
@@ -823,7 +822,7 @@ The meta tag describes meta data within an HTML document. It explains additional
 ---
 
 ```html
-<!-- viewport -->
+<!-- 视口 -->
 <meta name="viewport" content="width=device-width" />
 <meta name="viewport" content="width=1024" />
 ```
@@ -832,40 +831,40 @@ The meta tag describes meta data within an HTML document. It explains additional
 
 ```html
 <meta property="og:type" content="website" />
-<meta property="og:locale" content="en_CA" />
-<meta property="og:title" content="HTML cheatsheet" />
-<meta property="og:url" content="https://cheatsheets.zip/html" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:title" content="HTML 备忘单" />
+<meta property="og:url" content="https://r3f.cn/html" />
 <meta property="og:image" content="https://xxx.com/image.jpg" />
-<meta property="og:site_name" content="Name of your website" />
-<meta property="og:description" content="Description of this page" />
+<meta property="og:site_name" content="你的网站名称" />
+<meta property="og:description" content="此页面的描述" />
 ```
 
-Used by Facebook, Instagram, Pinterest, LinkedIn, etc.
+供 Facebook、Instagram、Pinterest、LinkedIn 等使用。
 
 ### Twitter Cards
 
 ```html
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@FechinLi" />
-<meta name="twitter:title" content="HTML cheatsheet" />
-<meta name="twitter:url" content="https://cheatsheets.zip/html" />
-<meta name="twitter:description" content="Description of this page" />
+<meta name="twitter:title" content="HTML 备忘单" />
+<meta name="twitter:url" content="https://r3f.cn/html" />
+<meta name="twitter:description" content="此页面的描述" />
 <meta name="twitter:image" content="https://xxx.com/image.jpg" />
 ```
 
-See: [Twitter Card Documentation](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary)
+参见：[Twitter Card 文档](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary)
 
-### Geotagging
+### 地理标记
 
 ```html
 <meta name="ICBM" content="45.416667,-75.7" />
 <meta name="geo.position" content="45.416667;-75.7" />
 <meta name="geo.region" content="ca-on" />
-<meta name="geo.placename" content="Ottawa" />
+<meta name="geo.placename" content="渥太华" />
 ```
 
-See: [Geotagging](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
+参见：[地理标记 (Geotagging)](https://zh.wikipedia.org/wiki/地理标记)
 
-## Also see
+## 另请参见
 
-- [HTML 4.01 Specification](https://www.w3.org/TR/REC-html40/cover.html#minitoc) _(w3.org)_
+- [HTML 4.01 规范](https://www.w3.org/TR/REC-html40/cover.html#minitoc) _(w3.org)_

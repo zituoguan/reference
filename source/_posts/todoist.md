@@ -7,93 +7,93 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 37 keyboard shortcuts found in Todoist
+  Todoist 中 37 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Task Quick Add
+### 任务快速添加
 
-| Shortcut      | Action                                |
+| 快捷键        | 操作                                  |
 | ------------- | ------------------------------------- |
-| `@`           | Add a label                           |
-| `#`           | Pick a project                        |
-| `+`           | Add an assignee                       |
-| `p1/p2/p3/p4` | Set a priority level                  |
-| `Ctrl` `M`    | Add a comment to a newly created task |
-| `Alt` `Enter` | Save and go to comments (Win 10 only) |
-| `Tab`         | Open full task editor (Win 10 only)   |
+| `@`           | 添加标签                              |
+| `#`           | 选择项目                              |
+| `+`           | 添加分配人                            |
+| `p1/p2/p3/p4` | 设置优先级                            |
+| `Ctrl` `M`    | 为新创建的任务添加评论                |
+| `Alt` `Enter` | 保存并转到评论 (仅限 Win 10)          |
+| `Tab`         | 打开完整任务编辑器 (仅限 Win 10)      |
 
 {.shortcuts}
 
-### General
+### 常规
 
-| Shortcut       | Action                                   |
+| 快捷键         | 操作                                     |
 | -------------- | ---------------------------------------- |
-| `Ctrl` `Click` | Select and change multiple tasks at once |
-| `Q`            | Add task                                 |
-| `A`            | Add new task at the bottom of the list   |
-| `Shift` `A`    | Add new task at the top of the list      |
-| `/`            | Open search                              |
-| `U`            | Undo last action                         |
-| `F5`           | Manually sync                            |
-| `Home`         | Navigate to default page                 |
-| `PgUp`         | Navigate back in 1-pane/2-pane view      |
-| `PgDown`       | Navigate forward in 1-pane/2-pane view   |
+| `Ctrl` `Click` | 一次选择并更改多个任务                   |
+| `Q`            | 添加任务                                 |
+| `A`            | 在列表底部添加新任务                     |
+| `Shift` `A`    | 在列表顶部添加新任务                     |
+| `/`            | 打开搜索                                 |
+| `U`            | 撤销上一个操作                           |
+| `F5`           | 手动同步                                 |
+| `Home`         | 导航到默认页面                           |
+| `PgUp`         | 在单栏/双栏视图中向后导航                |
+| `PgDown`       | 在单栏/双栏视图中向前导航                |
 
 {.shortcuts}
 
-### Adding or editing tasks
+### 添加或编辑任务
 
-| Shortcut        | Action                                                                            |
+| 快捷键          | 操作                                                                              |
 | --------------- | --------------------------------------------------------------------------------- |
-| `Esc`           | Cancel current changes                                                            |
-| `Enter`         | Save a newly created task and create a new one below it                           |
-| `Shift` `Enter` | Save changes to an existing task and create a new task below it                   |
-| `Ctrl` `Enter`  | Save a new task or save changes to an existing one and create a new task above it |
-| `Ctrl` `Up`     | Move to the task above the task currently being edited                            |
-| `Ctrl` `Down`   | Move to the task below the task currently being edited                            |
+| `Esc`           | 取消当前更改                                                                      |
+| `Enter`         | 保存新创建的任务并在其下方创建一个新任务                                            |
+| `Shift` `Enter` | 保存对现有任务的更改并在其下方创建一个新任务                                        |
+| `Ctrl` `Enter`  | 保存新任务或保存对现有任务的更改并在其上方创建一个新任务                            |
+| `Ctrl` `Up`     | 移动到当前正在编辑的任务上方的任务                                                  |
+| `Ctrl` `Down`   | 移动到当前正在编辑的任务下方的任务                                                  |
 
 {.shortcuts}
 
-### Creating and completing sub-tasks
+### 创建和完成子任务
 
-| Shortcut             | Action                                               |
+| 快捷键               | 操作                                                 |
 | -------------------- | ---------------------------------------------------- |
-| `Ctrl` `Alt` `Right` | Increase task indent                                 |
-| `Ctrl` `Alt` `Left`  | Decrease task indent                                 |
-| `Shift` `(click)`    | Complete a sub-task or recurring task and archive it |
+| `Ctrl` `Alt` `Right` | 增加任务缩进                                         |
+| `Ctrl` `Alt` `Left`  | 减少任务缩进                                         |
+| `Shift` `(click)`    | 完成子任务或重复任务并将其存档                       |
 
 {.shortcuts}
 
-### Sorting tasks inside a project
+### 在项目中排序任务
 
-| Shortcut | Action           |
+| 快捷键 | 操作             |
 | -------- | ---------------- |
-| `S`      | Sort by date     |
-| `P`      | Sort by priority |
-| `R`      | Sort by assignee |
+| `S`      | 按日期排序       |
+| `P`      | 按优先级排序     |
+| `R`      | 按分配人排序     |
 
 {.shortcuts}
 
-### Navigation
+### 导航
 
-| Shortcut           | Action                             |
-| ------------------ | ---------------------------------- |
-| `Ctrl` `1`         | Inbox                              |
-| `Ctrl` `Shift` `1` | Team Inbox (Todoist Business only) |
-| `Ctrl` `2`         | Today                              |
-| `Ctrl` `3`         | Next 7 days                        |
-| `Ctrl` `4`         | Projects                           |
-| `Ctrl` `5`         | Labels                             |
-| `Ctrl` `6`         | Filters                            |
-| `Ctrl` `,`         | Settings                           |
+| 快捷键             | 操作                                   |
+| ------------------ | -------------------------------------- |
+| `Ctrl` `1`         | 收件箱                                 |
+| `Ctrl` `Shift` `1` | 团队收件箱 (仅限 Todoist 商业版)       |
+| `Ctrl` `2`         | 今天                                   |
+| `Ctrl` `3`         | 未来 7 天                              |
+| `Ctrl` `4`         | 项目                                   |
+| `Ctrl` `5`         | 标签                                   |
+| `Ctrl` `6`         | 筛选器                                 |
+| `Ctrl` `,`         | 设置                                   |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Todoist](https://get.todoist.help/hc/en-us/articles/205063212-Keyboard-Shortcuts)
+- [Todoist 键盘快捷键](https://get.todoist.help/hc/en-us/articles/205063212-Keyboard-Shortcuts)
   _(get.todoist.help)_

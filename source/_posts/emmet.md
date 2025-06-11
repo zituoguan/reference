@@ -3,31 +3,31 @@ title: Emmet
 date: 2020-12-14 18:28:43
 background: bg-[#95c844]
 tags:
-  - snippets
-  - coding
+  - 代码片段
+  - 编程
   - html
   - css
-  - abbr
+  - 缩写
 categories:
-  - Toolkit
+  - 工具箱
 intro: |
-  [Emmet](https://emmet.io/) is a web-developer’s toolkit for boosting HTML & CSS code writing, which allows you to write large HTML code blocks at speed of light using well-known CSS selectors.
+  [Emmet](https://emmet.io/) 是一个面向 Web 开发人员的工具包，用于提升 HTML 和 CSS 代码编写效率，它允许您使用众所周知的 CSS 选择器以光速编写大型 HTML 代码块。
 plugins:
   - copyCode
 ---
 
-## Emmet Syntax
+## Emmet 语法
 
-### Getting started
+### 入门
 
-Let us start to improve your development to the speed of light.
+让我们开始以光速提升您的开发效率。
 
-- [Emmet in Visual Studio Code](https://code.visualstudio.com/docs/editor/emmet) _(code.visualstudio.com)_
-- [Emmet 2 for Sublime Text](https://github.com/emmetio/sublime-text-plugin) _(github.com)_
-- [Emmet for Coda](https://emmet.io/download/coda/) _(emmet.io)_
-- [Emmet for Atom](https://github.com/emmetio/emmet-atom#readme) _(github.com)_
+- [Visual Studio Code 中的 Emmet](https://code.visualstudio.com/docs/editor/emmet) _(code.visualstudio.com)_
+- [Sublime Text 的 Emmet 2 插件](https://github.com/emmetio/sublime-text-plugin) _(github.com)_
+- [Coda 的 Emmet 插件](https://emmet.io/download/coda/) _(emmet.io)_
+- [Atom 的 Emmet 插件](https://github.com/emmetio/emmet-atom#readme) _(github.com)_
 
-### Multiplication: \*
+### 重复: \*
 
 <code>ul>li\*5</code>
 
@@ -41,7 +41,7 @@ Let us start to improve your development to the speed of light.
 </ul>
 ```
 
-### Child: >
+### 子代: >
 
 `nav>ul>li`
 
@@ -53,12 +53,12 @@ Let us start to improve your development to the speed of light.
 </nav>
 ```
 
-### Custom attributes {.col-span-2}
+### 自定义属性 {.col-span-2}
 
-`p[title="Hello world"]`
+<code>p[title="你好世界"]</code>
 
 ```html
-<p title="Hello world"></p>
+<p title="你好世界"></p>
 ```
 
 `td[rowspan=2 colspan=3 title]`
@@ -73,21 +73,21 @@ Let us start to improve your development to the speed of light.
 <div a="value1" b="value2"></div>
 ```
 
-### Text: {}
+### 文本: {}
 
-`a{Click me}`
+<code>a{点我}</code>
 
 ```html
-<a href="">Click me</a>
+<a href="">点我</a>
 ```
 
-`p>{Click }+a{here}+{ to continue}`
+<code>p>{点击 }+a{这里}+{ 继续}</code>
 
 ```html {.wrap}
-<p>Click <a href="">here</a> to continue</p>
+<p>点击 <a href="">这里</a> 继续</p>
 ```
 
-### ID and CLASS attributes {.row-span-2}
+### ID 和 CLASS 属性 {.row-span-2}
 
 `#header`
 
@@ -113,7 +113,7 @@ Let us start to improve your development to the speed of light.
 <p class="class1 class2 class3"></p>
 ```
 
-### Implicit tag names {.row-span-2}
+### 隐式标签名 {.row-span-2}
 
 `.class`
 
@@ -145,7 +145,7 @@ Let us start to improve your development to the speed of light.
 </table>
 ```
 
-### Sibling: +
+### 同级: +
 
 `div+p+bq`
 
@@ -155,7 +155,7 @@ Let us start to improve your development to the speed of light.
 <blockquote></blockquote>
 ```
 
-### Climb-up: ^
+### 向上一级: ^
 
 `div+div>p>span+em^bq`
 
@@ -177,7 +177,7 @@ Let us start to improve your development to the speed of light.
 <blockquote></blockquote>
 ```
 
-### Grouping: ()
+### 分组: ()
 
 <code>div>(header>ul>li\*2>a)+footer>p</code>
 
@@ -215,7 +215,7 @@ Let us start to improve your development to the speed of light.
 </footer>
 ```
 
-### Indexing: $ {.col-span-2}
+### 编号: $ {.col-span-2}
 
 <code>ul>li.item$\*3</code>
 
@@ -227,12 +227,12 @@ Let us start to improve your development to the speed of light.
 </ul>
 ```
 
-<code>h$[title=item$]{Header $}\*3</code>
+<code>h$[title=项目$]{标题 $}\*3</code>
 
 ```html
-<h1 title="item1">Header 1</h1>
-<h2 title="item2">Header 2</h2>
-<h3 title="item3">Header 3</h3>
+<h1 title="项目1">标题 1</h1>
+<h2 title="项目2">标题 2</h2>
+<h3 title="项目3">标题 3</h3>
 ```
 
 <code>ul>li.item$$$\*3</code>
@@ -265,6 +265,6 @@ Let us start to improve your development to the speed of light.
 </ul>
 ```
 
-## Also see {.cols-1}
+## 另请参阅 {.cols-1}
 
-- [Emmet Cheat sheet](https://docs.emmet.io/cheat-sheet/) _(docs.emmet.io)_
+- [Emmet 速查表](https://docs.emmet.io/cheat-sheet/) _(docs.emmet.io)_

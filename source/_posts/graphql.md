@@ -3,190 +3,190 @@ title: GraphQL
 date: 2021-07-15 20:51:44
 background: bg-[#cc44a2]
 tags:
-  - query
-  - API
+    - 查询
+    - API
 categories:
-  - Programming
+    - 编程
 intro: |
-  This quick reference cheat sheet provides a brief overview of GraphQL.
+    本快速参考备忘单简要概述了 GraphQL。
 plugins:
-  - copyCode
+    - copyCode
 ---
 
-## Getting Started
+## 入门
 
-### Overview
+### 概述
 
-- An alternative approach to RESTful APIs
-- GraphQL is a query language for APIs
-- Easily describe the shape of the GraphQL API using clear shared terms.
-- Clients issue queries/mutations to read and update data
-- GraphQL syntax can express complex entity relations
-- Libraries to implement GraphQL in [different languages](https://graphql.org/code/)
+- RESTful API 的一种替代方法
+- GraphQL 是一种 API 查询语言
+- 使用清晰共享的术语轻松描述 GraphQL API 的结构。
+- 客户端发出查询/变更以读取和更新数据
+- GraphQL 语法可以表达复杂的实体关系
+- 用于在[不同语言](https://graphql.org/code/)中实现 GraphQL 的库
 
 [GraphQL](https://graphql.org/) {.link-arrow}
 
-### Schema
+### Schema (模式)
 
 |                |                                  |
 | -------------- | -------------------------------- |
-| `schema`       | GraphQL schema definition        |
-| `query`        | Read and traverse data           |
-| `mutation`     | Modify data or trigger an action |
-| `subscription` | Run a query when an event occurs |
+| `schema`       | GraphQL 模式定义                 |
+| `query`        | 读取和遍历数据                   |
+| `mutation`     | 修改数据或触发操作               |
+| `subscription` | 事件发生时运行查询               |
 
-### Built-in Scalar Types
+### 内建标量类型
 
 |           |                                              |
 | --------- | -------------------------------------------- |
-| `Int`     | Signed 32‐bit integer                        |
-| `Float`   | Signed double-precision floating-point value |
-| `String`  | UTF‐8 character sequence                     |
-| `Boolean` | true or false                                |
-| `ID`      | A Unique identifier                          |
+| `Int`     | 有符号 32 位整数                             |
+| `Float`   | 有符号双精度浮点值                           |
+| `String`  | UTF‐8 字符序列                               |
+| `Boolean` | true 或 false                                |
+| `ID`      | 唯一标识符                                   |
 
-### Type Definitions
+### 类型定义
 
 |             |                   |
 | ----------- | ----------------- |
-| `scalar`    | Scalar Type       |
-| `type`      | Object Type       |
-| `interface` | Interface Type    |
-| `union`     | Union Type        |
-| `enum`      | Enum Type         |
-| `input`     | Input Object Type |
+| `scalar`    | 标量类型          |
+| `type`      | 对象类型          |
+| `interface` | 接口类型          |
+| `union`     | 联合类型          |
+| `enum`      | 枚举类型          |
+| `input`     | 输入对象类型      |
 
-### Type Modifiers
+### 类型修饰符
 
 |              |                                   |
 | ------------ | --------------------------------- |
-| `String`     | Nullable String                   |
-| `String!`    | Non-null String                   |
-| `[String]`   | List of nullable Strings          |
-| `[String]!`  | Non-null list of nullable Strings |
-| `[String!]!` | Non-null list of non-null Strings |
+| `String`     | 可为空的字符串                    |
+| `String!`    | 非空字符串                        |
+| `[String]`   | 可为空字符串的列表                |
+| `[String]!`  | 非空的可为空字符串列表            |
+| `[String!]!` | 非空的非空字符串列表              |
 
-### Input Arguments {.row-span-2}
+### 输入参数 {.row-span-2}
 
-#### Basic Input
-
-```js
-type Query {
-    users(limit: Int): [User]
-}
-```
-
-#### Input with default value
+#### 基本输入
 
 ```js
 type Query {
-    users(limit: Int = 10): [User]
+        users(limit: Int): [User]
 }
 ```
 
-#### Input with multiple arguments
+#### 带默认值的输入
 
 ```js
 type Query {
-    users(limit: Int, sort: String): [User]
+        users(limit: Int = 10): [User]
 }
 ```
 
-#### Input with multiple arguments and default values
+#### 带多个参数的输入
+
+```js
+type Query {
+        users(limit: Int, sort: String): [User]
+}
+```
+
+#### 带多个参数和默认值的输入
 
 ```js {.wrap}
 type Query {
-    users(limit: Int = 10, sort: String): [User]
+        users(limit: Int = 10, sort: String): [User]
 }
 type Query {
-    users(limit: Int, sort: String = "asc"): [User]
+        users(limit: Int, sort: String = "asc"): [User]
 }
 type Query {
-    users(limit: Int = 10, sort: String = "asc"): [User]
+        users(limit: Int = 10, sort: String = "asc"): [User]
 }
 ```
 
-### Input Types
+### 输入类型
 
 ```js
 input ListUsersInput {
-    limit: Int
-    since_id: ID
+        limit: Int
+        since_id: ID
 }
 ```
 
 ```js
 type Mutation {
-    users(params: ListUsersInput): [User]!
+        users(params: ListUsersInput): [User]!
 }
 ```
 
-### Custom Scalars
+### 自定义标量
 
 ```js
 scalar Url
 type User {
-    name: String
-    homepage: Url
+        name: String
+        homepage: Url
 }
 ```
 
-### Interfaces
+### 接口 (Interfaces)
 
 ```js
 interface Foo {
-    is_foo: Boolean
+        is_foo: Boolean
 }
 interface Goo {
-    is_goo: Boolean
+        is_goo: Boolean
 }
 type Bar implements Foo {
-    is_foo: Boolean
-    is_bar: Boolean
+        is_foo: Boolean
+        is_bar: Boolean
 }
 type Baz implements Foo, Goo {
-    is_foo: Boolean
-    is_goo: Boolean
-    is_baz: Boolean
+        is_foo: Boolean
+        is_goo: Boolean
+        is_baz: Boolean
 }
 ```
 
-Object implementing one or more Interfaces
+实现一个或多个接口的对象
 
-### Unions
+### 联合 (Unions)
 
 ```js
 type Foo {
-    name: String
+        name: String
 }
 type Bar {
-    is_bar: String
+        is_bar: String
 }
 union SingleUnion = Foo
 union MultipleUnion = Foo | Bar
 type Root {
-    single: SingleUnion
-    multiple: MultipleUnion
+        single: SingleUnion
+        multiple: MultipleUnion
 }
 ```
 
-Union of one or more Objects
+一个或多个对象的联合
 
-### Enums
+### 枚举 (Enums)
 
 ```js {.wrap}
 enum USER_STATE {
-    NOT_FOUND
-    ACTIVE
-    INACTIVE
-    SUSPENDED
+        NOT_FOUND
+        ACTIVE
+        INACTIVE
+        SUSPENDED
 }
 type Root {
-    stateForUser(userID: ID!): USER_STATE!
-    users(state: USER_STATE, limit: Int = 10): [User]
+        stateForUser(userID: ID!): USER_STATE!
+        users(state: USER_STATE, limit: Int = 10): [User]
 }
 ```
 
-## Also see
+## 另请参阅
 
 - [GraphQL Schema Language Cheat Sheet](https://github.com/sogko/graphql-schema-language-cheat-sheet) _(github.com)_

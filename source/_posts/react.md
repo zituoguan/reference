@@ -6,19 +6,19 @@ tags:
   - react
   - web
 categories:
-  - Programming
+  - 编程
 intro: |
-  A React cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
+  一份 React 速查表，包含最重要的概念、函数、方法等。为初学者准备的完整快速参考。
 plugins:
   - copyCode
   - runCode
 ---
 
-## Getting Started
+## 入门指南
 
 ### JSX
 
-JSX is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file.
+JSX 是一种 JavaScript 的语法扩展，它允许你在 JavaScript 文件中编写类似 HTML 的标记。
 
 ```javascript
 let element = <h1>Hello, world!</h1>;
@@ -26,7 +26,7 @@ let element = <h1>Hello, world!</h1>;
 let emptyHeading = <h1 />;
 ```
 
-### JSX Expressions
+### JSX 表达式
 
 ```javascript
 let name = "Josh Perez";
@@ -38,14 +38,14 @@ function fullName(firstName, lastName) {
 let element = <h1>Hello, {fullName("Julie", "Johnson")}</h1>;
 ```
 
-### JSX Attributes
+### JSX 属性
 
 ```javascript
 const element = <img src={user.avatarUrl} />;
 const element = <button className="btn">Click me</button>;
 ```
 
-### JSX Functions
+### JSX 函数
 
 ```javascript
 name() {
@@ -59,7 +59,7 @@ return (
 )
 ```
 
-### JSX Conditional Rendering {.col-span-2}
+### JSX 条件渲染 {.col-span-2}
 
 ```javascript
 import React from "react";
@@ -82,11 +82,11 @@ function Weather(props) {
 export default () => <Weather city="New York" temperature={24} />;
 ```
 
-Note: A component must always return something.
+注意：组件必须总是返回一些东西。
 
-## Components
+## 组件
 
-### Functional Component
+### 函数式组件
 
 ```javascript
 import React from "react";
@@ -101,9 +101,9 @@ export default function UserProfile() {
 }
 ```
 
-Note: Every component needs one root element
+注意：每个组件都需要一个根元素。
 
-### Embed an internal Component
+### 嵌入内部组件
 
 ```javascript
 import React from "react";
@@ -119,9 +119,9 @@ export default function UserProfile() {
 }
 ```
 
-Note: Assuming UserAvatar is declared in UserAvatar.js
+注意：假设 UserAvatar 在 UserAvatar.js 中声明。
 
-### Embed an external Component
+### 嵌入外部组件
 
 ```javascript
 import React from "react";
@@ -136,9 +136,9 @@ export default function UserProfile() {
 }
 ```
 
-Note: External components are found on npmjs.com and need to be imported first.
+注意：外部组件可以在 npmjs.com 上找到，并且需要先导入。
 
-### Advanced Functional Components
+### 高级函数式组件
 
 ```javascript
 import React from "react";
@@ -153,9 +153,9 @@ function Hello(props) {
 export default () => <Hello firstName="Matt" lastName="Delac" />;
 ```
 
-## Properties {.cols-2}
+## 属性 {.cols-2}
 
-### Passing Properties to a Component
+### 向组件传递属性
 
 <!-- prettier-ignore -->
 ```javascript
@@ -167,7 +167,7 @@ export default () => <Hello firstName="Matt" lastName="Delac" />;
 />
 ```
 
-### Assigning the Properties from a Component
+### 从组件分配属性
 
 ```javascript
 import React from "react";
@@ -181,9 +181,9 @@ export default function Student(props) {
 }
 ```
 
-## States {.cols-1}
+## 状态 {.cols-1}
 
-### React State
+### React 状态
 
 ```javascript
 import React, { useState } from "react";
@@ -204,9 +204,9 @@ export default function Hello(props) {
 }
 ```
 
-## Events {.cols-1}
+## 事件 {.cols-1}
 
-### Event Listener
+### 事件监听器
 
 ```javascript
 import React from "react";
@@ -225,11 +225,11 @@ export default function Hello() {
 }
 ```
 
-Note: The most common event listeners are onClick for links/buttons and onSubmit for forms.
+注意：最常见的事件监听器是用于链接/按钮的 onClick 和用于表单的 onSubmit。
 
-## Loops {.cols-2}
+## 循环 {.cols-2}
 
-### Looping through an Array
+### 遍历数组
 
 ```javascript
 let elements = ["one", "two", "three"];
@@ -243,9 +243,9 @@ return (
 );
 ```
 
-Note: Each list item inside a map loop needs a key attribute with a unique value which is generally the index.
+注意：map 循环中的每个列表项都需要一个具有唯一值的 key 属性，通常是索引。
 
-### Looping through an Array of Objects
+### 遍历对象数组
 
 ```javascript
 let elements = [
@@ -275,11 +275,11 @@ return (
 );
 ```
 
-Note: Each list item inside a map loop needs a key attribute with a unique value which is generally the index.
+注意：map 循环中的每个列表项都需要一个具有唯一值的 key 属性，通常是索引。
 
-## Forms {.cols-1}
+## 表单 {.cols-1}
 
-### React Forms
+### React 表单
 
 ```javascript
 import React, { useState } from "react";
@@ -313,7 +313,7 @@ export default function LoginForm() {
 
 ## CSS {.cols-1}
 
-### CSS in a React Component
+### React 组件中的 CSS
 
 ```javascript
 import React from "react";
@@ -324,11 +324,11 @@ export default function Student() {
 }
 ```
 
-Note: You'll then have to crate a css file called Student.css
+注意：然后你需要创建一个名为 Student.css 的 CSS 文件。
 
 ## AJAX {.cols-1}
 
-### AJAX Request with Axios
+### 使用 Axios 发送 AJAX 请求
 
 ```javascript
 import React from "react";
@@ -349,9 +349,9 @@ export default function Weather(props) {
 }
 ```
 
-Note: Make sure to import Axios first to your project.
+注意：确保首先将 Axios 导入到你的项目中。
 
-## Hooks {.cols-2}
+## Hooks (钩子) {.cols-2}
 
 ### useState Hook
 
@@ -372,10 +372,9 @@ function Counter() {
 export default Counter;
 ```
 
-Note: The useState Hook is a built-in React Hook that allows functional components to manage local state. It provides a
-way to declare state variables and update them within a functional component. Example code illustrating how to use it
+注意：useState Hook 是一个内置的 React Hook，它允许函数式组件管理本地状态。它提供了一种在函数式组件内声明状态变量并更新它们的方法。示例代码演示了如何使用它。
 
-### Multiple State Variable Declaration
+### 多个状态变量声明
 
 ```javascript
 import React, { useState } from "react";
@@ -415,10 +414,9 @@ function Counter() {
 export default Counter;
 ```
 
-Note: You can declare multiple state variables using the useState Hook by calling it multiple times in a functional
-component. Each call to useState manages a separate piece of state.
+注意：你可以通过在函数式组件中多次调用 useState Hook 来声明多个状态变量。每次调用 useState 都会管理一个独立的状态片段。
 
-### Input State Management
+### 输入状态管理
 
 ```javascript
 import { useState } from "react";
@@ -477,10 +475,9 @@ function Timer() {
 export default Timer;
 ```
 
-Note: The useEffect Hook in React is used for performing side effects in functional components. It allows you to execute
-code based on component lifecycle events like mounting, updating, and unmounting.
+注意：React 中的 useEffect Hook 用于在函数式组件中执行副作用。它允许你根据组件生命周期事件（如挂载、更新和卸载）执行代码。
 
-### Fetch API using useEffect
+### 使用 useEffect 获取 API 数据
 
 ```javascript
 import React, { useState, useEffect } from "react";
@@ -515,9 +512,9 @@ function UserList() {
 export default UserList;
 ```
 
-Note: Make sure to import Axios first to your project.
+注意：确保首先将 Axios 导入到你的项目中。
 
-### Custom Hook creation useLocalStorage
+### 创建自定义 Hook useLocalStorage
 
 ```javascript
 import { useState, useEffect } from "react";
@@ -538,10 +535,9 @@ function useLocalStorage(key, initialValue) {
 export default useLocalStorage;
 ```
 
-Note: Custom Hooks are reusable functions in React that contain logic shared across multiple components. They allow you
-to extract stateful logic from components into standalone functions.
+注意：自定义 Hook 是 React 中的可复用函数，它们包含跨多个组件共享的逻辑。它们允许你将有状态逻辑从组件中提取到独立函数中。
 
-### Creating Refs in Class Components
+### 在类组件中创建 Refs
 
 ```javascript
 import React, { Component } from "react";
@@ -564,7 +560,7 @@ class MyComponent extends Component {
 export default MyComponent;
 ```
 
-### Using Refs in Functional Components
+### 在函数式组件中使用 Refs
 
 ```javascript
 import React, { useRef, useEffect } from "react";
@@ -582,7 +578,7 @@ function MyComponent() {
 export default MyComponent;
 ```
 
-### Callback Refs
+### 回调 Refs
 
 ```javascript
 import React, { Component } from "react";
@@ -608,10 +604,9 @@ class MyComponent extends Component {
 export default MyComponent;
 ```
 
-### Forwarding Refs
+### Refs 转发
 
 ```javascript
-Copy code
 import React from "react";
 
 const FancyButton = React.forwardRef((props, ref) => (
@@ -625,7 +620,7 @@ const ref = React.createRef();
 <FancyButton ref={ref}>Click me!</FancyButton>;
 ```
 
-### Accessing DOM Elements with Refs
+### 使用 Refs 访问 DOM 元素
 
 ```javascript
 import React, { useRef, useEffect } from "react";
@@ -643,9 +638,9 @@ function FocusInput() {
 
 export default FocusInput;
 ```
-Note: Refs are often used to access and interact with DOM elements directly. Here's an example where we focus an input element using a ref.
+注意：Refs 通常用于直接访问和操作 DOM 元素。这是一个使用 ref 来聚焦输入元素的示例。
 
-### Managing Focus with Refs
+### 使用 Refs 管理焦点
 
 ```javascript
 import React, { useRef } from "react";
@@ -670,4 +665,4 @@ function Form() {
 
 export default Form;
 ```
-Note: You can also manage focus between multiple elements using refs.
+注意：你也可以使用 refs 来管理多个元素之间的焦点。

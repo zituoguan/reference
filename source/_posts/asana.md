@@ -7,95 +7,95 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 40 keyboard shortcuts found in Asana
+  Asana 中 40 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### My Tasks
+### 我的任务
 
-| Shortcut  | Action                            |
-| --------- | --------------------------------- |
-| `Tab` `Y` | Mark as Today in your My Tasks    |
-| `Tab` `U` | Mark as Upcoming in your My Tasks |
-| `Tab` `L` | Mark as Later in your My Tasks    |
+| 快捷键    | 操作                               |
+| --------- | ---------------------------------- |
+| `Tab` `Y` | 在“我的任务”中标记为“今天”           |
+| `Tab` `U` | 在“我的任务”中标记为“即将开始”       |
+| `Tab` `L` | 在“我的任务”中标记为“稍后”           |
 
 {.shortcuts}
 
-### Inbox
+### 收件箱
 
-| Shortcut | Action              |
+| 快捷键 | 操作                |
 | -------- | ------------------- |
-| `K/J`    | Move Up/Down        |
-| `H`      | Jump to Inbox tab   |
-| `S`      | Jump to Archive tab |
-| `F`      | Follow or Unfollow  |
-| `I`      | Archive             |
-| `U`      | Move to Inbox       |
+| `K/J`    | 上移/下移           |
+| `H`      | 跳转到“收件箱”选项卡 |
+| `S`      | 跳转到“归档”选项卡   |
+| `F`      | 关注或取消关注      |
+| `I`      | 归档                |
+| `U`      | 移动到收件箱        |
 
 {.shortcuts}
 
-### Task Actions {.row-span-2}
+### 任务操作 {.row-span-2}
 
-| Shortcut                 | Action                                        |
+| 快捷键                 | 操作                                          |
 | ------------------------ | --------------------------------------------- |
-| `Enter`                  | New Task                                      |
-| `Tab` `Backspace`        | Delete Selected Task(s)                       |
-| `Backspace`              | Delete current task (when task name is empty) |
-| `Ctrl` `Enter`           | Complete Selected Task(s)                     |
-| `Ctrl` `Up/Down`         | Move Up/Down                                  |
-| `Ctrl` `Shift` `Up/Down` | Jump Up/Down to the next Section              |
-| `Ctrl` `C`               | Copy Selected Tasks                           |
-| `Ctrl` `V`               | Paste Tasks (one per line)                    |
-| `Tab` `M`                | Assign to Me                                  |
-| `Tab` `H`                | Like a Selected Task                          |
-| `:`                      | Create a Section (at the end of a task name)  |
+| `Enter`                  | 新建任务                                      |
+| `Tab` `Backspace`        | 删除选定的任务                                |
+| `Backspace`              | 删除当前任务（当任务名称为空时）              |
+| `Ctrl` `Enter`           | 完成选定的任务                                |
+| `Ctrl` `Up/Down`         | 上移/下移                                     |
+| `Ctrl` `Shift` `Up/Down` | 上/下跳转到下一个版块                         |
+| `Ctrl` `C`               | 复制选定的任务                                |
+| `Ctrl` `V`               | 粘贴任务（每行一个）                          |
+| `Tab` `M`                | 分配给我                                      |
+| `Tab` `H`                | 赞选定的任务                                  |
+| `:`                      | 创建一个版块（在任务名称的末尾）              |
 
 {.shortcuts}
 
-### Navigation
+### 导航
 
-| Shortcut  | Action                                     |
+| 快捷键    | 操作                                       |
 | --------- | ------------------------------------------ |
-| `Tab` `Z` | Navigate to My Tasks                       |
-| `Tab` `I` | Navigate to Inbox                          |
-| `Tab` `C` | Comment on Selected Task                   |
-| `Tab` `A` | Assign Selected Task                       |
-| `Tab` `D` | Set Due Date                               |
-| `Tab` `F` | Add Follower                               |
-| `Tab` `T` | Add a tag to the task                      |
-| `Tab` `S` | Focus Subtasks                             |
-| `Tab` `/` | Search for a project, tag, person, or task |
+| `Tab` `Z` | 导航到“我的任务”                           |
+| `Tab` `I` | 导航到“收件箱”                             |
+| `Tab` `C` | 评论选定的任务                             |
+| `Tab` `A` | 分配选定的任务                             |
+| `Tab` `D` | 设置截止日期                               |
+| `Tab` `F` | 添加关注者                                 |
+| `Tab` `T` | 给任务添加标签                             |
+| `Tab` `S` | 聚焦子任务                                 |
+| `Tab` `/` | 搜索项目、标签、人员或任务                 |
 
 {.shortcuts}
 
-### Selection
+### 选择
 
-| Shortcut          | Action                       |
+| 快捷键          | 操作                         |
 | ----------------- | ---------------------------- |
-| `Up/Down`         | Change Selection             |
-| `Shift` `(click)` | Select Range                 |
-| `Shift` `Up/Down` | Select Range                 |
-| `Ctrl` `(click)`  | Multi-select Individual Task |
+| `Up/Down`         | 更改选择                     |
+| `Shift` `(click)` | 选择范围                     |
+| `Shift` `Up/Down` | 选择范围                     |
+| `Ctrl` `(click)`  | 多选单个任务                 |
 
 {.shortcuts}
 
-### Application
+### 应用
 
-| Shortcut      | Action                            |
+| 快捷键      | 操作                              |
 | ------------- | --------------------------------- |
-| `Ctrl` `/`    | Show Keyboard Shortcuts           |
-| `Tab`         | Expand the right pane             |
-| `Esc`         | Collapse the right pane           |
-| `Tab` `X`     | Enter Focus Mode                  |
-| `Tab` `Q`     | Quick Add                         |
-| `Tab` `Enter` | Post Comment (from comment field) |
-| `Tab` `B`     | What it sounds like               |
+| `Ctrl` `/`    | 显示键盘快捷键                    |
+| `Tab`         | 展开右侧窗格                      |
+| `Esc`         | 折叠右侧窗格                      |
+| `Tab` `X`     | 进入专注模式                      |
+| `Tab` `Q`     | 快速添加                          |
+| `Tab` `Enter` | 发表评论（从评论字段）            |
+| `Tab` `B`     | 听起来像什么（原文如此，可能指特定功能） |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Asana](https://asana.com/guide/help/faq/shortcuts) _(asana.com)_
+- [Asana 键盘快捷键](https://asana.com/guide/help/faq/shortcuts) _(asana.com)_

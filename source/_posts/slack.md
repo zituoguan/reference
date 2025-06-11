@@ -7,132 +7,132 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 62 keyboard shortcuts found in Slack
+  Slack 中 62 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Navigation {.row-span-4}
+### 导航 {.row-span-4}
 
-| Shortcut             | Action                                         |
+| 快捷键               | 操作                                           |
 | -------------------- | ---------------------------------------------- |
-| `Tab`                | Move focus to the next element                 |
-| `Shift` `Tab`        | Move focus to the previous element             |
-| `Up/Down`            | Move focus through messages in a channel or DM |
-| `F6`                 | Move focus to the next section                 |
-| `Shift` `F6`         | Move focus to the previous section             |
-| `Space`              | Take action or 'click' on buttons              |
-| `Enter`              | Take action or 'click' on links                |
-| `Esc`                | Close windows, menus, or the message field     |
-| `Ctrl` `+/-`         | Zoom in/out                                    |
-| `Home/PgUp`          | Scroll up                                      |
-| `End/PgDown`         | Scroll down                                    |
-| `Ctrl` `K`           | Quick Switcher                                 |
-| `Ctrl` `Shift` `K`   | Open direct messages menu                      |
-| `Ctrl` `Shift` `L`   | Browse all channels                            |
-| `Ctrl` `Shift` `T`   | Open All Threads view                          |
-| `Alt` `Up`           | Previous channel or DM                         |
-| `Alt` `Down`         | Next channel or DM                             |
-| `Alt` `Shift` `Up`   | Previous unread channel or DM                  |
-| `Alt` `Shift` `Down` | Next unread channel or DM                      |
-| `Alt` `Left`         | Previous channel or DM visited                 |
-| `Alt` `Right`        | Next channel or DM visited                     |
-| `Ctrl` `,`           | Preferences (desktop apps only)                |
-| `Ctrl` `.`           | Open or close right pane                       |
-| `Ctrl` `Shift` `I`   | Channel info pane                              |
-| `Ctrl` `Shift` `M`   | Activity                                       |
-| `Ctrl` `Shift` `E`   | Directory                                      |
-| `Ctrl` `Shift` `S`   | Starred Items                                  |
-| `Ctrl` `F`           | Search the current channel or conversation     |
-| `Ctrl` `G`           | Open previous search                           |
-| `Ctrl` `Shift` `F`   | Toggle full screen view                        |
+| `Tab`                | 将焦点移至下一个元素                           |
+| `Shift` `Tab`        | 将焦点移至上一个元素                           |
+| `Up/Down`            | 在频道或私信中上下移动焦点                     |
+| `F6`                 | 将焦点移至下一区域                             |
+| `Shift` `F6`         | 将焦点移至上一区域                             |
+| `Space`              | 执行操作或“点击”按钮                           |
+| `Enter`              | 执行操作或“点击”链接                           |
+| `Esc`                | 关闭窗口、菜单或消息输入框                     |
+| `Ctrl` `+/-`         | 放大/缩小                                      |
+| `Home/PgUp`          | 向上滚动                                       |
+| `End/PgDown`         | 向下滚动                                       |
+| `Ctrl` `K`           | 快速切换器                                     |
+| `Ctrl` `Shift` `K`   | 打开私信菜单                                   |
+| `Ctrl` `Shift` `L`   | 浏览所有频道                                   |
+| `Ctrl` `Shift` `T`   | 打开所有话题视图                               |
+| `Alt` `Up`           | 上一个频道或私信                               |
+| `Alt` `Down`         | 下一个频道或私信                               |
+| `Alt` `Shift` `Up`   | 上一个未读频道或私信                           |
+| `Alt` `Shift` `Down` | 下一个未读频道或私信                           |
+| `Alt` `Left`         | 上一个访问过的频道或私信                       |
+| `Alt` `Right`        | 下一个访问过的频道或私信                       |
+| `Ctrl` `,`           | 首选项 (仅限桌面应用)                          |
+| `Ctrl` `.`           | 打开或关闭右侧面板                             |
+| `Ctrl` `Shift` `I`   | 频道信息面板                                   |
+| `Ctrl` `Shift` `M`   | 活动                                           |
+| `Ctrl` `Shift` `E`   | 目录                                           |
+| `Ctrl` `Shift` `S`   | 已加星标的项目                                 |
+| `Ctrl` `F`           | 搜索当前频道或对话                             |
+| `Ctrl` `G`           | 打开上一次搜索                                 |
+| `Ctrl` `Shift` `F`   | 切换全屏视图                                   |
 
 {.shortcuts}
 
-### All Unreads navigation
+### 所有未读导航
 
-| Shortcut                  | Action                                |
+| 快捷键                    | 操作                                  |
 | ------------------------- | ------------------------------------- |
-| `Ctrl` `Shift` `A`        | Open All Unreads view                 |
-| `Alt` `(click a message)` | Mark message as unread                |
-| `Left/Right`              | Move between channels                 |
-| `R`                       | Toggle current channel read or unread |
+| `Ctrl` `Shift` `A`        | 打开所有未读视图                      |
+| `Alt` `(点击消息)`        | 将消息标记为未读                      |
+| `Left/Right`              | 在频道之间切换                        |
+| `R`                       | 切换当前频道已读或未读状态            |
 
 {.shortcuts}
 
-### Switch workspaces
+### 切换工作区
 
-| Shortcut             | Action                         |
+| 快捷键               | 操作                           |
 | -------------------- | ------------------------------ |
-| `Ctrl` `Shift` `Tab` | Switch to previous workspace   |
-| `Ctrl` `Tab`         | Switch to next workspace       |
-| `Ctrl` `[number]`    | Switch to a specific workspace |
+| `Ctrl` `Shift` `Tab` | 切换到上一个工作区             |
+| `Ctrl` `Tab`         | 切换到下一个工作区             |
+| `Ctrl` `[数字]`      | 切换到指定的工作区             |
 
 {.shortcuts}
 
-### Mark messages read or unread
+### 标记消息已读或未读
 
-| Shortcut                  | Action                                             |
+| 快捷键                    | 操作                                               |
 | ------------------------- | -------------------------------------------------- |
-| `Esc`                     | Mark all messages in current channel or DM as read |
-| `Shift` `Esc`             | Mark all messages as read                          |
-| `Alt` `(click a message)` | Set a message as your oldest unread message        |
+| `Esc`                     | 将当前频道或私信中的所有消息标记为已读             |
+| `Shift` `Esc`             | 将所有消息标记为已读                               |
+| `Alt` `(点击消息)`        | 将一条消息设置为最早的未读消息                     |
 
 {.shortcuts}
 
-### Message shortcuts {.row-span-2}
+### 消息快捷键 {.row-span-2}
 
-| Shortcut           | Action                                   |
+| 快捷键             | 操作                                     |
 | ------------------ | ---------------------------------------- |
-| `Up`               | Edit your last message                   |
-| `Shift` `Up`       | Select text to beginning of current line |
-| `Shift` `Down`     | Select text to end of current line       |
-| `Shift` `Enter`    | Create a new line in your message        |
-| `Ctrl` `Shift` `\` | Add emoji reactions to a message         |
-| `Ctrl` `B`         | Bold selected text                       |
-| `Ctrl` `I`         | Italicize selected text                  |
-| `Ctrl` `Shift` `X` | Strikethrough selected text              |
-| `Ctrl` `Shift` `>` | Quote selected text                      |
-| `Ctrl` `Shift` `C` | Codeblock selected text                  |
-| `Ctrl` `Shift` `7` | Turn selected text into a numbered list  |
-| `Ctrl` `Shift` `8` | Turn selected text into a bulleted list  |
-| `Ctrl` `Shift` `Y` | Set or edit your status                  |
+| `Up`               | 编辑上一条消息                             |
+| `Shift` `Up`       | 选中文本至当前行开头                       |
+| `Shift` `Down`     | 选中文本至当前行末尾                       |
+| `Shift` `Enter`    | 在消息中创建新行                           |
+| `Ctrl` `Shift` `\` | 为消息添加表情符号回应                     |
+| `Ctrl` `B`         | 加粗选中文本                               |
+| `Ctrl` `I`         | 斜体化选中文本                             |
+| `Ctrl` `Shift` `X` | 为选中文本添加删除线                       |
+| `Ctrl` `Shift` `>` | 引用选中文本                               |
+| `Ctrl` `Shift` `C` | 将选中文本设为代码块                       |
+| `Ctrl` `Shift` `7` | 将选中文本转换为编号列表                   |
+| `Ctrl` `Shift` `8` | 将选中文本转换为项目符号列表               |
+| `Ctrl` `Shift` `Y` | 设置或编辑你的状态                         |
 
 {.shortcuts}
 
-### Message autocomplete
+### 消息自动完成
 
-| Shortcut             | Action                                                |
+| 快捷键               | 操作                                                  |
 | -------------------- | ----------------------------------------------------- |
-| `[character]` `Tab`  | Autocomplete @display name beginning with [character] |
-| `#[character]` `Tab` | Autocomplete channel beginning with [character]       |
-| `:[character]` `Tab` | Autocomplete emoji beginning with [character]         |
+| `[字符]` `Tab`       | 自动完成以 `[字符]` 开头的 @显示名称                  |
+| `#[字符]` `Tab`      | 自动完成以 `[字符]` 开头的频道                        |
+| `:[字符]` `Tab`      | 自动完成以 `[字符]` 开头的表情符号                    |
 
 {.shortcuts}
 
-### File and snippets
+### 文件和代码片段
 
-| Shortcut               | Action               |
+| 快捷键                 | 操作                 |
 | ---------------------- | -------------------- |
-| `Ctrl` `U`             | Upload a file        |
-| `Ctrl` `Shift` `Enter` | Create a new snippet |
+| `Ctrl` `U`             | 上传文件             |
+| `Ctrl` `Shift` `Enter` | 创建新的代码片段     |
 
 {.shortcuts}
 
-### Call actions
+### 通话操作
 
-| Shortcut  | Action                          |
+| 快捷键    | 操作                            |
 | --------- | ------------------------------- |
-| `M`       | Toggle mute on and off          |
-| `V`       | Toggle video on and off         |
-| `+/A`     | Show the invite list            |
-| `E` `1-9` | View and select emoji reactions |
+| `M`       | 切换静音开/关                   |
+| `V`       | 切换视频开/关                   |
+| `+/A`     | 显示邀请列表                    |
+| `E` `1-9` | 查看并选择表情符号回应          |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Slack](https://get.slack.help/hc/en-us/articles/201374536-Slack-keyboard-shortcuts)
+- [Slack 键盘快捷键](https://get.slack.help/hc/zh-cn/articles/201374536-Slack-keyboard-shortcuts)
   _(get.slack.help)_

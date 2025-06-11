@@ -1,122 +1,122 @@
 ---
-title: CheatSheets
+title: 速查表
 date: 2020-11-25 18:28:43
 background: bg-gradient-to-l from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500
 tags:
-  - guide
-  - reference
+  - 指南
+  - 参考
 categories:
-  - Other
+  - 其他
 intro:
-  This is the magic syntax variant manual that you can use on CheatSheets.zip, It's a good practice for contributors.
+  这是您可以在 r3f.cn 上使用的魔法语法变体手册，对于贡献者来说这是一个很好的实践。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门指南
 
-### Develop Setup
+### 开发设置
 
-- Clone Repository [View on Github](https://github.com/Fechin/reference.git)
+- 克隆仓库 [在 Github 上查看](https://github.com/Fechin/reference.git)
   ```shell script {.wrap}
   $ git clone https://github.com/Fechin/reference.git
   ```
-- Install Dependencies in the project directory
+- 在项目目录中安装依赖项
   ```shell script
   $ npm install
   ```
-- Start a Dev Server [http://localhost:4000](http://localhost:4000)
+- 启动开发服务器 [http://localhost:4000](http://localhost:4000)
   ```shell script
   $ npm run dev
   ```
-- Create or modify `source/_posts/{name}.md`
-- Send us pull request and chill {.marker-timeline}
+- 创建或修改 `source/_posts/{name}.md`
+- 向我们发送拉取请求然后放松一下 {.marker-timeline}
 
-It's a good practice to refer to the source code of the
-[CheatSheets reference](https://github.com/Fechin/reference/blob/main/source/_posts/quickref.md).
+参考源代码是一个好习惯
+[速查表参考](https://github.com/Fechin/reference/blob/main/source/_posts/quickref.md)。
 
-### Directory Structure
+### 目录结构
 
 ```yaml
 .
 ├── source
-│   ├── _posts   # Cheatsheet source files
+│   ├── _posts   # 速查表源文件
 │   │   ├── awk.md
-│   │   ├── vim.md # => cheatsheets.zip/vim
+│   │   ├── vim.md # => r3f.cn/vim
 │   │   ├── php.md
-│   │   ├── css.md # => cheatsheets.zip/css
+│   │   ├── css.md # => r3f.cn/css
 │   │   ├── ...
-│   └── widget   # Widget files
+│   └── widget   # 小部件文件
 │       └── chmod.html
-├── public       # Distribution files
+├── public       # 分发文件
 ├── _config.yml
 ├── gulpfile.js
 ├── package.json
 ├── postcss.config.js
 ├── tailwind.config.js
 └── themes
-    └── coo      # Theme files
+    └── coo      # 主题文件
 ```
 
-### Cheatsheet Structure {.row-span-2}
+### 速查表结构 {.row-span-2}
 
 ```yaml
 .
-├── Section 1   # Header
-│   ├── Card 1
-│   ├── Card 2
-│   ├── Card 3
+├── 区域 1   # 标题
+│   ├── 卡片 1
+│   ├── 卡片 2
+│   ├── 卡片 3
 │   ├── ...
-├── Section 2
-│   ├── Card 1
-│   │   ├── Paragraph
-│   │   ├── Code
-│   │   ├── <hr/> (aka "---")
-│   │   ├── List
-│   │   │   ├── Paragraph
-│   │   │   └── Code
-│   │   └── Table
-│   │       ├── Paragraph
-│   │       └── Code
-│   ├── Card 2
-│   ├── Card 3
+├── 区域 2
+│   ├── 卡片 1
+│   │   ├── 段落
+│   │   ├── 代码
+│   │   ├── <hr/> (即 "---")
+│   │   ├── 列表
+│   │   │   ├── 段落
+│   │   │   └── 代码
+│   │   └── 表格
+│   │       ├── 段落
+│   │       └── 代码
+│   ├── 卡片 2
+│   ├── 卡片 3
 │   └── ...
-├── Section 3
-├── Section 4
+├── 区域 3
+├── 区域 4
 └── ...
 ```
 
 ---
 
-- One cheatsheet contains multiple sections
-- One section contains multiple cards
-- One card can contain Code, Table, List and Paragraph
-- One list can contain Code and Paragraph
-- One table can contain Code and Paragraph
+- 一张速查表包含多个区域
+- 一个区域包含多个卡片
+- 一张卡片可以包含代码、表格、列表和段落
+- 一个列表可以包含代码和段落
+- 一个表格可以包含代码和段落
 
-### Syntax Variants
+### 语法变体
 
-- [Section Variants](#section-variants)
-- [Card Variants](#card-variants)
-- [Table Variants](#table-variants)
-- [List Variants](#list-variants)
-- [Code Variants](#code-variants)
-- [Paragraph Variants](#paragraph-variants)
-- [Cards Example](#cards-example)
+- [区域变体](#section-variants)
+- [卡片变体](#card-variants)
+- [表格变体](#table-variants)
+- [列表变体](#list-variants)
+- [代码变体](#code-variants)
+- [段落变体](#paragraph-variants)
+- [卡片示例](#cards-example)
 
-All the magic variants supported by CheatSheets.zip
+r3f.cn 支持的所有魔法变体
 
-### Create source/\_posts/demo.md
+### 创建 source/\_posts/demo.md
 
 ```markdown
-## Getting Started
+## 入门指南
 
-### List Card {.col-span-2}
+### 列表卡片 {.col-span-2}
 
-- Share quick reference
-- Cheatsheet for developers ... {.style-timeline}
+- 分享快速参考
+- 开发人员速查表 ... {.style-timeline}
 
-### Table Card
+### 表格卡片
 
 | id  | name    |
 | --- | ------- |
@@ -125,30 +125,30 @@ All the magic variants supported by CheatSheets.zip
 {.show-header}
 ```
 
-## Section Variants
+## 区域变体
 
-### Section Overview {.secondary}
+### 区域概览 {.secondary}
 
 | -           | -                               |
 | ----------- | ------------------------------- |
-| `{.cols-1}` | one-column layout               |
-| `{.cols-2}` | two-column layout               |
-| `{.cols-3}` | three-column layout _(default)_ |
+| `{.cols-1}` | 单列布局               |
+| `{.cols-2}` | 双列布局               |
+| `{.cols-3}` | 三列布局 _(默认)_ |
 | ...         |                                 |
-| `{.cols-6}` | six-column layout               |
+| `{.cols-6}` | 六列布局               |
 
 ---
 
-- Section contains multiple cards
-- Use {.cols-`n`} to specify section as a `n`-column layout
-- Click the preview button below to focus on the section
+- 区域包含多个卡片
+- 使用 {.cols-`n`} 将区域指定为 `n` 列布局
+- 点击下面的预览按钮以聚焦该区域
 
-[Preview](/quickref#section-variants) {.link-arrow}
+[预览](/quickref#section-variants) {.link-arrow}
 
 ### .cols-1
 
 ```text
-# One Column Example {.cols-1}
+# 单列示例 {.cols-1}
 ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮
 ┆  1                                  ┆
 ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
@@ -157,22 +157,22 @@ All the magic variants supported by CheatSheets.zip
 ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
 ```
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
-## One Column Example {.cols-1}
+## 单列示例 {.cols-1}
 
 ### 1
 
 ### 2
 ```
 
-[Preview](resolutions#lists-of-resolutions) {.link-arrow}
+[预览](resolutions#lists-of-resolutions) {.link-arrow}
 
 ### .cols-2
 
 ```text
-# Two Columns Example
+# 双列示例
 ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮
 ┆  1              ┆ ┆  2              ┆
 ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
@@ -181,10 +181,10 @@ All the magic variants supported by CheatSheets.zip
 ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
 ```
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
-## Two Columns Example {.cols-2}
+## 双列示例 {.cols-2}
 
 ### 1
 
@@ -193,12 +193,12 @@ All the magic variants supported by CheatSheets.zip
 ### 3
 ```
 
-[Preview](resolutions#getting-started) {.link-arrow}
+[预览](resolutions#getting-started) {.link-arrow}
 
-### .cols-3 (default)
+### .cols-3 (默认)
 
 ```text
-# Default
+# 默认
 ╭┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈╮
 ┆  1       ┆ ┆  2       ┆ ┆  3       ┆
 ╰┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈╯
@@ -207,10 +207,10 @@ All the magic variants supported by CheatSheets.zip
 ╰┈┈┈┈┈┈┈┈┈┈╯
 ```
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
-## Default
+## 默认
 
 ### 1
 
@@ -221,40 +221,40 @@ All the magic variants supported by CheatSheets.zip
 ### 4
 ```
 
-## Card Variants
+## 卡片变体
 
-### Card Overview {.secondary}
+### 卡片概览 {.secondary}
 
-#### Specifies the number of columns the card spans
+#### 指定卡片跨越的列数
 
 | -               | -                      |
 | --------------- | ---------------------- |
-| `{.col-span-2}` | [Example](#col-span-2) |
+| `{.col-span-2}` | [示例](#col-span-2) |
 | `{.col-span-3}` |                        |
 | ...             |                        |
 | `.col-span-6}`  |                        |
 
-#### Specifies the number of rows the card spans {.text-left}
+#### 指定卡片跨越的行数 {.text-left}
 
 | -               | -                      |
 | --------------- | ---------------------- |
-| `{.row-span-2}` | [Example](#row-span-2) |
+| `{.row-span-2}` | [示例](#row-span-2) |
 | `{.row-span-3}` |                        |
 | ...             |                        |
 | `{.row-span-6}` |                        |
 
-#### Emphasize card (aka `H3` Section)
+#### 强调卡片 (即 `H3` 区域)
 
 | -              | -                                         |
 | -------------- | ----------------------------------------- |
-| `{.primary}`   | Red titles, [Example](#primary-card)      |
-| `{.secondary}` | Yellow titles, [Example](#secondary-card) |
+| `{.primary}`   | 红色标题, [示例](#primary-card)      |
+| `{.secondary}` | 黄色标题, [示例](#secondary-card) |
 
-A complete example: [Cards Example](#cards-example)
+一个完整的示例：[卡片示例](#cards-example)
 
 ### .col-span-2 {.row-span-2}
 
-#### The fifth card spans two columns
+#### 第五个卡片跨越两列
 
 ```text
 ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮
@@ -279,7 +279,7 @@ A complete example: [Cards Example](#cards-example)
 ### 5 {.col-span-2}
 ```
 
-#### The second card spans two columns
+#### 第二个卡片跨越两列
 
 ```text
 ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮
@@ -304,7 +304,7 @@ A complete example: [Cards Example](#cards-example)
 ### 5
 ```
 
-#### The fourth card spans two columns
+#### 第四个卡片跨越两列
 
 ```text
 ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮
@@ -331,7 +331,7 @@ A complete example: [Cards Example](#cards-example)
 
 ### .row-span-2 {.row-span-2}
 
-#### The first card spans two rows
+#### 第一个卡片跨越两行
 
 ```text
 ╭┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮
@@ -356,7 +356,7 @@ A complete example: [Cards Example](#cards-example)
 ### 5
 ```
 
-#### The second card spans two rows
+#### 第二个卡片跨越两行
 
 ```text
 ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮
@@ -381,7 +381,7 @@ A complete example: [Cards Example](#cards-example)
 ### 5
 ```
 
-#### The third card spans two rows
+#### 第三个卡片跨越两行
 
 ```text
 ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈╮
@@ -420,7 +420,7 @@ A complete example: [Cards Example](#cards-example)
 ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯
 ```
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
 ### 1 {.col-span-2 .row-span-2}
@@ -434,265 +434,265 @@ A complete example: [Cards Example](#cards-example)
 ### 5
 ```
 
-Spans rows and columns at the same time
+同时跨越行和列
 
-## Table Variants
+## 表格变体
 
-### Table Overview {.secondary}
+### 表格概览 {.secondary}
 
 | -                | -                            |
 | ---------------- | ---------------------------- |
-| `{.show-header}` | Show the header of the table |
-| `{.shortcuts}`   | Render shortcut key style    |
-| `{.bold-first}`  | Bold first column            |
-| `{.plus-first}`  | Plus first column            |
-| `{.show-header}` | Show headers                 |
-| `{.left-text}`   | Align the last column left   |
-| `{.no-wrap}`     | Don't wrap text              |
+| `{.show-header}` | 显示表格的表头 |
+| `{.shortcuts}`   | 渲染快捷键样式    |
+| `{.bold-first}`  | 加粗第一列            |
+| `{.plus-first}`  | 第一列加号            |
+| `{.show-header}` | 显示表头                 |
+| `{.left-text}`   | 最后一列左对齐   |
+| `{.no-wrap}`     | 不换行              |
 
-### Basic table
+### 基本表格
 
-| Pattern  | Description            |
+| 模式  | 描述            |
 | -------- | ---------------------- |
-| `[abc]`  | Match a, b or c        |
-| `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a to z           |
+| `[abc]`  | 匹配 a, b 或 c        |
+| `[^abc]` | 匹配除 a, b 或 c 之外的字符 |
+| `[a-z]`  | 匹配 a 到 z           |
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
-| Pattern  | Description            |
+| 模式  | 描述            |
 | -------- | ---------------------- |
-| `[abc]`  | Match a, b or c        |
-| `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a to z           |
+| `[abc]`  | 匹配 a, b 或 c        |
+| `[^abc]` | 匹配除 a, b 或 c 之外的字符 |
+| `[a-z]`  | 匹配 a 到 z           |
 ```
 
 ### .shortcuts
 
 | -          | -        |
 | ---------- | -------- |
-| `Ctrl` `N` | New File |
-| `Ctrl` `S` | Save     |
+| `Ctrl` `N` | 新建文件 |
+| `Ctrl` `S` | 保存     |
 
 {.shortcuts}
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
 | -          | -        |
 | ---------- | -------- |
-| `Ctrl` `N` | New File |
-| `Ctrl` `S` | Save     |
+| `Ctrl` `N` | 新建文件 |
+| `Ctrl` `S` | 保存     |
 
 {.shortcuts}
 ```
 
 ### .show-header
 
-| Pattern  | Description            |
+| 模式  | 描述            |
 | -------- | ---------------------- |
-| `[abc]`  | Match a, b or c        |
-| `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a to z           |
+| `[abc]`  | 匹配 a, b 或 c        |
+| `[^abc]` | 匹配除 a, b 或 c 之外的字符 |
+| `[a-z]`  | 匹配 a 到 z           |
 
 {.show-header}
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
-| Pattern  | Description            |
+| 模式  | 描述            |
 | -------- | ---------------------- |
-| `[abc]`  | Match a, b or c        |
-| `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a to z           |
+| `[abc]`  | 匹配 a, b 或 c        |
+| `[^abc]` | 匹配除 a, b 或 c 之外的字符 |
+| `[a-z]`  | 匹配 a 到 z           |
 
 {.show-header}
 ```
 
 ### .left-text
 
-| Pattern  | Description            |
+| 模式  | 描述            |
 | -------- | ---------------------- |
-| `[abc]`  | Match a, b or c        |
-| `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a to z           |
+| `[abc]`  | 匹配 a, b 或 c        |
+| `[^abc]` | 匹配除 a, b 或 c 之外的字符 |
+| `[a-z]`  | 匹配 a 到 z           |
 
 {.left-text}
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
-| Pattern  | Description            |
+| 模式  | 描述            |
 | -------- | ---------------------- |
-| `[abc]`  | Match a, b or c        |
-| `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a to z           |
+| `[abc]`  | 匹配 a, b 或 c        |
+| `[^abc]` | 匹配除 a, b 或 c 之外的字符 |
+| `[a-z]`  | 匹配 a 到 z           |
 
 {.left-text}
 ```
 
 ### .bold-first
 
-| Pattern  | Description            |
+| 模式  | 描述            |
 | -------- | ---------------------- |
-| `[abc]`  | Match a, b or c        |
-| `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a to z           |
+| `[abc]`  | 匹配 a, b 或 c        |
+| `[^abc]` | 匹配除 a, b 或 c 之外的字符 |
+| `[a-z]`  | 匹配 a 到 z           |
 
 {.bold-first}
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
-| Pattern  | Description            |
+| 模式  | 描述            |
 | -------- | ---------------------- |
-| `[abc]`  | Match a, b or c        |
-| `[^abc]` | Match except a, b or c |
-| `[a-z]`  | Match a to z           |
+| `[abc]`  | 匹配 a, b 或 c        |
+| `[^abc]` | 匹配除 a, b 或 c 之外的字符 |
+| `[a-z]`  | 匹配 a 到 z           |
 
 {.bold-first}
 ```
 
-## List Variants
+## 列表变体
 
-### List Overview {.secondary}
+### 列表概览 {.secondary}
 
-List columns
+列表列
 
 | -           | -                      |
 | ----------- | ---------------------- |
-| `{.cols-1}` | one column _(default)_ |
-| `{.cols-2}` | two columns            |
+| `{.cols-1}` | 单列 _(默认)_ |
+| `{.cols-2}` | 双列            |
 | ...         |                        |
 | `{.cols-6}` |                        |
 
-List markers
+列表标记
 
 | -                    | -                          |
 | -------------------- | -------------------------- |
-| `{.marker-none}`     | Marker is not set          |
-| `{.marker-timeline}` | Marker style like timeline |
-| `{.marker-round}`    | Round marker               |
+| `{.marker-none}`     | 未设置标记          |
+| `{.marker-timeline}` | 时间轴样式的标记 |
+| `{.marker-round}`    | 圆形标记               |
 
-### One Column (Default)
+### 单列 (默认)
 
-- Share quick reference.
-- cheat sheet for developers.
-- Contributed by open source angels.
-- Manage your code snippets.
+- 分享快速参考。
+- 开发人员速查表。
+- 由开源天使贡献。
+- 管理您的代码片段。
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
-- Share quick reference.
-- cheat sheet for developers.
-- Contributed by open source angels.
-- Manage your code snippets.
+- 分享快速参考。
+- 开发人员速查表。
+- 由开源天使贡献。
+- 管理您的代码片段。
 ```
 
 ### .cols-3
 
-- Share
-- Quick
-- Reference
-- And
-- Cheat Sheet
-- For
-- Developers
+- 分享
+- 快速
+- 参考
+- 和
+- 速查表
+- 为了
+- 开发人员
 
 {.cols-3}
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
-- Share
-- Quick
-- Reference
-- And
-- Cheat Sheet
-- For
-- Developers
+- 分享
+- 快速
+- 参考
+- 和
+- 速查表
+- 为了
+- 开发人员
 
 {.cols-3}
 ```
 
 ### .marker-timeline {.row-span-2}
 
-- **Renamed** to `new_name`
+- **重命名** 为 `new_name`
   ```shell script
   $ git branch -m <new_name>
   ```
-- **Push** and reset
+- **推送** 并重置
   ```shell script
   $ git push origin -u <new_name>
   ```
-- **Delete** remote branch `shell script     $ git push origin --delete <old>     `
+- **删除** 远程分支 `shell script     $ git push origin --delete <old>     `
 
 {.marker-timeline}
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ````markdown
-- **Renamed** to `new_name`
+- **重命名** 为 `new_name`
   ```shell script
   $ git branch -m <new_name>
   ```
-- **Push** and reset
+- **推送** 并重置
   ```shell script
   $ git push origin -u <new_name>
   ```
-- **Delete** remote branch `shell script     $ git push origin --delete <old>     `
+- **删除** 远程分支 `shell script     $ git push origin --delete <old>     `
 
 {.marker-timeline}
 ````
 
 ### .marker-none
 
-- Share
-- Quick
-- Reference
-- And
-- Cheat Sheet
+- 分享
+- 快速
+- 参考
+- 和
+- 速查表
 
 {.cols-2 .marker-none}
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
-- Share
-- Quick
-- Reference
-- And
-- Cheat Sheet
+- 分享
+- 快速
+- 参考
+- 和
+- 速查表
 
 {.cols-2 .marker-none}
 ```
 
 ### .marker-round
 
-- Share
-- Quick
-- Reference
+- 分享
+- 快速
+- 参考
 
 {.marker-round}
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown
-- Share
-- Quick
-- Reference
+- 分享
+- 快速
+- 参考
 
 {.marker-round}
 ```
 
-## Code Variants
+## 代码变体
 
-### Basic code
+### 基本代码
 
 ```js
-cheatsheets.zip.is(() => {
+r3f.cn.is(() => {
   awesome.site();
 });
 ```
@@ -701,11 +701,11 @@ cheatsheets.zip.is(() => {
 here.is.some.more();
 ```
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 `````markdown
 ````js
-cheatsheets.zip.is(() => {
+r3f.cn.is(() => {
   awesome.site()
 })
 \```
@@ -716,14 +716,14 @@ here.is.some.more()
 ````
 `````
 
-Code blocks can be placed one after the other.
+代码块可以一个接一个地放置。
 
-### Code with headings
+### 带标题的代码
 
 #### index.js
 
 ```js
-cheatsheets.zip.is(() => {
+r3f.cn.is(() => {
   awesome.site();
 });
 ```
@@ -734,13 +734,13 @@ cheatsheets.zip.is(() => {
 here.is.some.more();
 ```
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ````markdown
 #### index.js
 
 ```js
-cheatsheets.zip.is(() => {
+r3f.cn.is(() => {
   awesome.site();
 });
 ```
@@ -752,15 +752,15 @@ here.is.some.more();
 ```
 ````
 
-Code blocks can have headings.
+代码块可以有标题。
 
-### Line wrapping
+### 换行
 
 ```js {.wrap}
 <script>(function(d,s){if(window.Promise&&[].includes&&Object.assign&&window.Map)return;var js,sc=d.getElementsByTagName(s)[0];js=d.createElement(s);js.src='https://cdn.polyfill.io/v2/polyfill.min.js';sc.parentNode.insertBefore(js, sc);}(document,'script'))</script>
 ```
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ````markdown {.wrap}
 ```js {.wrap}
@@ -768,9 +768,9 @@ Code blocks can have headings.
 ```
 ````
 
-Add `{.wrap}` to wrap long lines.
+添加 `{.wrap}` 以换行长行。
 
-### Long lines (default)
+### 长行 (默认)
 
 ```js
 function createNode(nodeName: string, options: { key: string }) {
@@ -778,27 +778,27 @@ function createNode(nodeName: string, options: { key: string }) {
 }
 ```
 
-Long lines will have scrollbars.
+长行将有滚动条。
 
-## Paragraph Variants
+## 段落变体
 
-### Header paragraphs
+### 头部段落
 
-The text that appears in the header
+出现在头部的文本
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ```markdown {.wrap}
-### Basic paragraphs
+### 基本段落
 
-The text that appears in the header
+出现在头部的文本
 ```
 
-### Middle paragraphs {.row-span-2}
+### 中间段落 {.row-span-2}
 
-- This is a list
+- 这是一个列表
 
-This paragraph will appear in the middle
+此段落将出现在中间
 
 ```js
 cheatsheets.is(() => {
@@ -806,14 +806,14 @@ cheatsheets.is(() => {
 });
 ```
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ````markdown
-### Middle paragraphs
+### 中间段落
 
-- This is a list
+- 这是一个列表
 
-This paragraph will appear in the middle
+此段落将出现在中间
 
 ```js
 cheatsheets.is(() => {
@@ -822,7 +822,7 @@ cheatsheets.is(() => {
 ```
 ````
 
-### Footer paragraphs {.row-span-2}
+### 尾部段落 {.row-span-2}
 
 ```js
 cheatsheets.is(() => {
@@ -830,7 +830,7 @@ cheatsheets.is(() => {
 });
 ```
 
-#### ↓ Source Code
+#### ↓ 源代码
 
 ````markdown
 ```js
@@ -839,22 +839,22 @@ cheatsheets.is(() => {
 });
 ```
 
-This paragraph will appear in the footer
+此段落将出现在尾部
 ````
 
-This paragraph will appear in the footer
+此段落将出现在尾部
 
-### Crosslink
+### 交叉链接
 
-Add `{.link-arrow}` to make big loud external links:
+添加 `{.link-arrow}` 以创建醒目的外部链接：
 
 ```js
-[Home](/) {.link-arrow}
+[主页](/) {.link-arrow}
 ```
 
-[Home](/) {.link-arrow}
+[主页](/) {.link-arrow}
 
-## Cards Example
+## 卡片示例
 
 ### row-span-2 {.row-span-2}
 
@@ -868,24 +868,25 @@ Add `{.link-arrow}` to make big loud external links:
 2
 ```
 
-### Primary Card {.primary}
+### 主卡片 {.primary}
 
 ```
 3
 ```
 
-Add `{.primary}` to make the title red.
+添加 `{.primary}` 使标题变为红色。
 
-### Secondary Card {.secondary}
+### 次要卡片 {.secondary}
 
 ```
 4
 ```
 
-Add `{.secondary}` to make the title yellow.
+添加 `{.secondary}` 使标题变为黄色。
 
 ### col-span-3 {.col-span-3}
 
 ```
 5
 ```
+

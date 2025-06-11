@@ -1,59 +1,59 @@
 ---
-title: Dart
+title: Dart 语言
 date: 2021-11-04 10:12:25
 background: bg-[#58aee9]
 tags:
   - dart
   - flutter
 categories:
-  - Programming
+  - 编程
 intro: |
-  A Dart cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
+  一份 Dart 速查表，包含最重要的概念、函数、方法等。为初学者准备的完整快速参考。
 plugins:
   - copyCode
 ---
 
-## Getting Started {.cols-2}
+## 入门 {.cols-2}
 
 ### hello.dart
 
 ```dart
-// top-level function where app execution starts
+// 应用执行开始的顶级函数
 void main(){
-    print("Hello World!"); // Print to console
+    print("Hello World!"); // 打印到控制台
 }
 ```
 
-Every app has a main() function
+每个应用都有一个 main() 函数
 
-### Variables
+### 变量
 
 ```dart
-int x = 2; // explicitly typed
-var p = 5; // type inferred - Generic var with type inference
+int x = 2; // 显式类型
+var p = 5; // 类型推断 - 具有类型推断的泛型 var
 
-dynamic z = 8; // variable can take on any type
+dynamic z = 8; // 变量可以接受任何类型
 z = "cool"; // cool
 
-// if you never intend to change a variable use final or const. Something like this:
+// 如果你从不打算更改变量，请使用 final 或 const。像这样：
 
-final email = "temid@gmail.com"; // Same as var but cannot be reassigned
-final String email = "temid@gmail.com"; // you can't change the value
+final email = "temid@gmail.com"; // 与 var 相同，但不能重新赋值
+final String email = "temid@gmail.com"; // 你不能改变这个值
 
-const qty = 5; // Compile-time constant
+const qty = 5; // 编译时常量
 ```
 
-### Datatypes
+### 数据类型
 
 ```dart
 
-int age = 20; // integers, range -2^63 to 2^63 - 1
-double height = 1.85; // floating-point numbers
+int age = 20; // 整数，范围 -2^63 到 2^63 - 1
+double height = 1.85; // 浮点数
 
-// You can also declare a variable as a num
-num x = 1;  // x can have both int and double values
+// 你也可以将变量声明为 num
+num x = 1;  // x 可以同时具有 int 和 double 值
 x += 2.5;
-print(x); //Print: 3.5
+print(x); //打印: 3.5
 
 String name = "Nicola";
 
@@ -61,115 +61,115 @@ bool isFavourite = true;
 bool isLoaded = false;
 ```
 
-### String interpolation
+### 字符串插值
 
 ```dart
-// can use single or double qoutes for String type
+// String 类型可以使用单引号或双引号
 var firstName = 'Nicola';
 var lastName = "Tesla";
 
-//can embed variables in string with $
+// 可以使用 $ 在字符串中嵌入变量
 String fullName = "$firstName $lastName";
 
-// concatenate with +
+// 使用 + 连接
 var name = "Albert " + "Einstein";
 
 String upperCase = '${firstName.toUpperCase()}';
-print(upperCase); //Print: NICOLA
+print(upperCase); //打印: NICOLA
 ```
 
-### Comments
+### 注释
 
 ```dart
-// This is a normal, one-line comment.
+// 这是一个普通的单行注释。
 
-/// This is a documentation comment, used to document libraries,
-/// classes, and their members. Tools like IDEs and dartdoc treat
-/// doc comments specially.
+/// 这是一个文档注释，用于记录库、
+/// 类及其成员。像 IDE 和 dartdoc 这样的工具
+/// 会特殊处理文档注释。
 
-/* Comments like these are also supported. */
+/* 也支持像这样的注释。 */
 ```
-### multiline String
+### 多行字符串
 
 ```dart
-For multiline String we have to use ''' your text'''
-for example
-print('''My long string''');
-//this will show long string
-//this will help for only long strings
+// 对于多行字符串，我们必须使用 ''' 你的文本 '''
+// 例如
+print('''我的长字符串''');
+// 这将显示长字符串
+// 这只对长字符串有帮助
 ```
 
 
-### Imports
+### 导入
 
 ```dart
-// Importing core libraries
+// 导入核心库
 import 'dart:math';
 
-// Importing libraries from external packages
+// 从外部包导入库
 import 'package:test/test.dart';
 
-// Importing files
+// 导入文件
 import 'path/to/my_other_file.dart';
 ```
 
-## Operators {.cols-2}
+## 运算符 {.cols-2}
 
-### Arithmatic Operators
+### 算术运算符
 
 ```dart
-print(2 + 3); //Print: 5
-print(2 - 3); //Print: -1
-print(2 * 3); //Print: 6
-print(5 / 2);  //Print: 2.5 - Result is a double
-print(5 ~/ 2); //Print: 2 - Result is an int
-print(5 % 2); //Print: 1 - Remainder
+print(2 + 3); //打印: 5
+print(2 - 3); //打印: -1
+print(2 * 3); //打印: 6
+print(5 / 2);  //打印: 2.5 - 结果是 double 类型
+print(5 ~/ 2); //打印: 2 - 结果是 int 类型
+print(5 % 2); //打印: 1 - 余数
 
 int a = 1, b;
-// Increment
-b = ++a; // preIncrement - Increment a before b gets its value.
-b = a++; // postIncrement - Increment a AFTER b gets its value.
+// 递增
+b = ++a; // 前缀递增 - 在 b 获取其值之前递增 a。
+b = a++; // 后缀递增 - 在 b 获取其值之后递增 a。
 
-//Decrement
-b = --a; // predecrement - Decrement a before b gets its value.
-b = a--; // postdecrement - Decrement a AFTER b gets its value.
+//递减
+b = --a; // 前缀递减 - 在 b 获取其值之前递减 a。
+b = a--; // 后缀递减 - 在 b 获取其值之后递减 a。
 ```
 
-### Equality and relational operators
+### 相等和关系运算符
 
 ```dart
-print(2 == 2);  //Print: true - Equal
-print(2 != 3); //Print: true - Not  Equal
-print(3 > 2); //Print: true - Grater than
-print(2 < 3); //Print: true - Less than
-print(3 >= 3); //Print: true - Greater than or equal to
-print(2 <= 3); //Print: true - Less than or equal to
+print(2 == 2);  //打印: true - 相等
+print(2 != 3); //打印: true - 不相等
+print(3 > 2); //打印: true - 大于
+print(2 < 3); //打印: true - 小于
+print(3 >= 3); //打印: true - 大于或等于
+print(2 <= 3); //打印: true - 小于或等于
 ```
 
-### Logical operators
+### 逻辑运算符
 
 ```dart
-// !expr inverts the expression (changes false to true, and vice versa)
-// ||	logical OR
-// &&	logical AND
+// !expr 反转表达式（将 false 更改为 true，反之亦然）
+// ||	逻辑或
+// &&	逻辑与
 bool isOutOfStock = false;
 int quantity = 3;
 if (!isOutOfStock && (quantity == 2 || quantity == 3)) {
-  // ...Order the product...
+  // ...订购产品...
 }
 ```
 
-## Control Flows : Conditionals {.cols-2}
+## 控制流：条件语句 {.cols-2}
 
-### if and else if
+### if 和 else if
 
 ```dart
 if(age < 18){
-    print("Teen");
+    print("青少年");
 } else if( age > 18 && age <60){
-    print("Adult");
+    print("成年人");
 } else {
-    print("Old");
+    print("老年人");
 }
 ```
 
@@ -180,20 +180,20 @@ enum Pet {dog, cat}
 Pet myPet = Pet.dog;
 switch(myPet){
     case Pet.dog:
-        print('My Pet is Dog.');
+        print('我的宠物是狗。');
         break;
     case Pet.cat:
-        print('My Pet is Cat.');
+        print('我的宠物是猫。');
         break;
     default:
-        print('I don\'t have a Pet');
+        print('我没有宠物。');
 }
-// Prints: My Pet is Dog.
+// 打印: 我的宠物是狗。
 ```
 
-## Control Flows : Loops
+## 控制流：循环
 
-### while loop
+### while 循环
 
 ```dart
 while (!dreamsAchieved) {
@@ -201,9 +201,9 @@ while (!dreamsAchieved) {
 }
 ```
 
-while loop check condition before iteration of the loop
+while 循环在循环迭代之前检查条件
 
-### do-while loop
+### do-while 循环
 
 ```dart
 do {
@@ -211,9 +211,9 @@ do {
 } while (!dreamsAchieved);
 ```
 
-do-while loop verifies the condition after the execution of the statements inside the loop
+do-while 循环在执行循环内的语句后验证条件
 
-### for loop
+### for 循环
 
 ```dart
 for(int i=0; i< 10; i++){
@@ -221,152 +221,152 @@ for(int i=0; i< 10; i++){
 }
 
 var numbers = [1,2,3];
-// for-in loop for lists
+// 列表的 for-in 循环
 for(var number in numbers){
     print(number);
 }
 ```
 
 
-### for in loop
+### for in 循环
 
 ```dart
-  // Define a list of numbers
+  // 定义一个数字列表
   var numbers = [1, 2, 3, 4, 5];
 
-  // Use a for-in loop to iterate over the list
+  // 使用 for-in 循环遍历列表
   for (var number in numbers) {
     print(number);
   }
 
-  // Define a list of strings
+  // 定义一个字符串列表
   var fruits = ['Apple', 'Banana', 'Cherry'];
 
-  // Use a for-in loop to iterate over the list
+  // 使用 for-in 循环遍历列表
   for (var fruit in fruits) {
     print(fruit);
   }
 ```
 
 
-## Collections {.cols-2}
+## 集合 {.cols-2}
 
-### Lists
+### 列表 (Lists)
 
 ```dart
-// ordered group of objects
+// 对象的有序组
 var list = [1, 2, 3];
 
-print(list.length); //Print: 3
-print(list[1]); //Print: 2
+print(list.length); //打印: 3
+print(list[1]); //打印: 2
 
-// other ways of list declaration and initializations
+// 列表声明和初始化的其他方式
 
 List<String> cities = <String>["New York", "Mumbai", "Tokyo"];
 
-// To create a list that’s a compile-time constant
+// 创建一个编译时常量列表
 const constantCities = const ["New York", "Mumbai", "Tokyo"];
 ```
 
-### Sets
+### 集合 (Sets)
 
 ```dart
-// A set in Dart is an unordered collection of unique items.
+// Dart 中的集合是唯一项的无序集合。
 var halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
 
-// to create an empty set
+// 创建一个空集合
 var names = <String>{};
-Set<String> names = {}; // This works, too.
-//var names = {}; // Creates a map, not a set.
+Set<String> names = {}; // 这也有效。
+//var names = {}; // 创建一个映射，而不是一个集合。
 ```
 
-### Maps
+### 映射 (Maps)
 
 ```dart
-// a map is an object that associates keys and values
+// 映射是将键与值关联的对象
 var person = Map<String, String>();
-// To initialize the map, do this:
- 
+// 要初始化映射，请执行以下操作：
+
 person['lastName'] = 'Tesla';
 
-print(person); //Print: {firstName: Nicola, lastName: Tesla}
-print(person['lastName']); //Print: Tesla
+print(person); //打印: {firstName: Nicola, lastName: Tesla}
+print(person['lastName']); //打印: Tesla
 
 
 var nobleGases = {
-  // Key: Value
+  // 键: 值
   2: 'helium',
   10: 'neon',
   18: 'argon',
 };
 ```
 
-## Functions {.cols-2}
+## 函数 {.cols-2}
 
-### Functions
+### 函数
 
 ```dart
-// functions in dart are objects and have a type
+// dart 中的函数是对象并且有类型
 int add(int a, int b){
     return a+b;
 }
 
-// functions can be assigned to variables
-int sum = add(2,3); // returns: 5
+// 函数可以赋值给变量
+int sum = add(2,3); // 返回: 5
 
-// can be passed as arguments to other functions
-int totalSum = add(2, add(2,3)); // returns : 7
+// 可以作为参数传递给其他函数
+int totalSum = add(2, add(2,3)); // 返回 : 7
 ```
 
-### Arrow Syntax (=>)
+### 箭头语法 (=>)
 
 ```dart
-// functions that contain just one expression, you can use a shorthand syntax
+// 只包含一个表达式的函数，可以使用简写语法
 bool isFav(Product product) => favProductsList.contains(product);
 ```
 
-### Anonymous (lambda) functions
+### 匿名 (lambda) 函数
 
 ```dart
-// small one line functions that dont have name
+// 没有名称的小型单行函数
 int add(a,b) => a+b;
 
-// lambda functions mostly passed as parameter to other functions
+// lambda 函数通常作为参数传递给其他函数
 const list = ['apples', 'bananas', 'oranges'];
 list.forEach(
 (item) => print('${list.indexOf(item)}: $item'));
-//Prints: 0: apples 1: bananas 2: oranges
+//打印: 0: apples 1: bananas 2: oranges
 ```
 
-## Classes and Objects
+## 类和对象
 
-### Class
+### 类 (Class)
 
 ```dart
 class Cat {
     String name;
 
-    // method
+    // 方法
     void voice(){
         print("Meow");
     }
 }
 ```
 
-### Object
+### 对象 (Object)
 
 ```dart
-// instance of a class
-// below myCat is Object of class Cat
+// 类的实例
+// 下面的 myCat 是 Cat 类的对象
 
 void main(){
     Cat myCat = Cat();
     myCat.name = "Kitty";
-    myCat.voice(); // Prints: Meow
+    myCat.voice(); // 打印: Meow
 }
 ```
 
-### Constructors
+### 构造函数 (Constructors)
 
 ```dart
 class Cat {
@@ -375,26 +375,26 @@ class Cat {
 }
 void main(){
     Cat myCat = Cat("Kitty");
-    print(myCat.name); // Prints: Kitty
+    print(myCat.name); // 打印: Kitty
 }
 ```
 
-### Abstract Classes
+### 抽象类 (Abstract Classes)
 
 ```dart
-// abstract class—a class that can’t be instantiated
-// This class is declared abstract and thus can't be instantiated.
+// 抽象类——不能被实例化的类
+// 这个类被声明为 abstract，因此不能被实例化。
 abstract class AbstractContainer {
-  // Define constructors, fields, methods...
+  // 定义构造函数、字段、方法...
 
-  void updateChildren(); // Abstract method.
+  void updateChildren(); // 抽象方法。
 }
 ```
 
-### Getters Setters
+### Getters 和 Setters
 
 ```dart
-// provide read and write access to an object’s properties
+// 提供对对象属性的读写访问
 class Cat {
     String name;
 
@@ -410,39 +410,39 @@ class Cat {
 }
 ```
 
-## Implicit interfaces {.cols-2}
+## 隐式接口 {.cols-2}
 
-### A basic interface
+### 一个基本的接口
 
 ```dart
-// A person. The implicit interface contains greet().
+// 一个人。隐式接口包含 greet()。
 class Person {
-  // In the interface, but visible only in this library.
+  // 在接口中，但仅在此库中可见。
   final String _name;
 
-  // Not in the interface, since this is a constructor.
+  // 不在接口中，因为这是一个构造函数。
   Person(this._name);
 
-  // In the interface.
-  String greet(String who) => 'Hello, $who. I am $_name.';
+  // 在接口中。
+  String greet(String who) => '你好，$who。我是 $_name。';
 }
 
-// An implementation of the Person interface.
+// Person 接口的一个实现。
 class Impostor implements Person {
   String get _name => '';
 
-  String greet(String who) => 'Hi $who. Do you know who I am?';
+  String greet(String who) => '嗨，$who。你知道我是谁吗？';
 }
 
 String greetBob(Person person) => person.greet('Bob');
 
 void main() {
-  print(greetBob(Person('Kathy'))); // Hello, Bob. I am Kathy.
-  print(greetBob(Impostor())); // Hi Bob. Do you know who I am?
+  print(greetBob(Person('Kathy'))); // 你好，Bob。我是 Kathy。
+  print(greetBob(Impostor())); // 嗨 Bob。你知道我是谁吗？
 }
 ```
 
-### Extending a class
+### 扩展一个类
 
 ```dart
 class Phone {
@@ -452,10 +452,10 @@ class Phone {
         _sendMessage();
     }
 }
-// Use extends to create a subclass
+// 使用 extends 创建一个子类
 class SmartPhone extends Phone {
     void use(){
-        // use super to refer to the superclass
+        // 使用 super 引用超类
         super.use();
         _takePhotos();
         _playGames();
@@ -463,16 +463,16 @@ class SmartPhone extends Phone {
 }
 ```
 
-## Exceptions
+## 异常
 
 ### Throw
 
 ```dart
-// throws or raises and exception
+// 抛出或引发异常
 throw IntegerDivisionByZeroException();
 
-// You can also throw arbitrary objects
-throw "Product out of stock!";
+// 你也可以抛出任意对象
+throw "产品缺货！";
 ```
 
 ### Catch
@@ -483,14 +483,14 @@ try {
     int c = 3/0;
     print(c);
 } on IntegerDivisionByZeroException {
-    // A specific exception
-    print('Can not divide integer by 0.')
+    // 一个特定的异常
+    print('整数不能除以 0。')
 } on Exception catch (e) {
-    // Anything else that is an exception
-    print('Unknown exception: $e');
+    // 其他任何异常
+    print('未知异常: $e');
 } catch (e) {
-    // No specified type, handles all
-    print('Something really unknown: $e');
+    // 未指定类型，处理所有异常
+    print('真正未知的事情: $e');
 }
 
 ```
@@ -498,13 +498,13 @@ try {
 ### Finally
 
 ```dart
-// To ensure that some code runs whether or not an exception is thrown
+// 确保无论是否抛出异常，某些代码都会运行
 try {
   cookFood();
 } catch (e) {
-  print('Error: $e'); // Handle the exception first.
+  print('错误: $e'); // 首先处理异常。
 } finally {
-  cleanKitchen(); // Then clean up.
+  cleanKitchen(); // 然后清理。
 }
 ```
 
@@ -513,8 +513,8 @@ try {
 ### Async Await
 
 ```dart
-// functions which are asynchronous: they return after setting up a possibly time-consuming operation
-// The async and await keywords support asynchronous programming
+// 异步函数：它们在设置一个可能耗时的操作后返回
+// async 和 await 关键字支持异步编程
 
 Future<String> login() {
  String userName="Temidjoy";
@@ -523,22 +523,22 @@ Future<String> login() {
     Duration(seconds: 4), () => userName);
 }
 
-// Asynchronous
+// 异步
 main() async {
- print('Authenticating please wait...');
+ print('正在验证，请稍候...');
  print(await login());
 }
 ```
 
-## Extensions {.cols-2}
+## 扩展 {.cols-2}
 
-### Why use extensions? {.row-span-2}
+### 为什么要使用扩展？ {.row-span-2}
 
 ```dart
-// Extensions allow you to add methods to existing
-// classes without modifying them.
+// 扩展允许您向现有类添加方法
+// 而无需修改它们。
 
-// Instead of defining a util class.
+// 而不是定义一个工具类。
 class StringUtil {
   static bool isValidEmail(String str) {
     final emailRegExp = RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
@@ -546,10 +546,10 @@ class StringUtil {
   }
 }
 
-print(StringUtil.isValidEmail('someString')); //Print: false
+print(StringUtil.isValidEmail('someString')); //打印: false
 
-// We can define an extension which will be applied
-// on a certain type.
+// 我们可以定义一个将应用于
+// 特定类型的扩展。
 
 extension StringExtensions on String {
   bool get isValidEmail {
@@ -558,23 +558,23 @@ extension StringExtensions on String {
   }
 }
 
-print('test@example.com'.isValidEmail); //Print: true
-print('SomeString'.isValidEmail); //Print: false
+print('test@example.com'.isValidEmail); //打印: true
+print('SomeString'.isValidEmail); //打印: false
 
 ```
 
-### Generic Extensions
+### 泛型扩展
 
 ```dart
-// allows you to apply the same logic to a range of types.
+// 允许您将相同的逻辑应用于一系列类型。
 extension NumGenericExtensions<T extends num> on T {
   T addTwo() => this + 2 as T;
 }
 
-print(7.addTwo()); // Print: 9
+print(7.addTwo()); // 打印: 9
 ```
 
-### Dart Extensions in Flutter
+### Flutter 中的 Dart 扩展
 
 ```dart
 extension ContextExtension on BuildContext {
@@ -582,7 +582,7 @@ extension ContextExtension on BuildContext {
   double get screenWidth => MediaQuery.of(this).size.width;
 }
 
-// usage
+// 用法
 @override
 Widget build(BuildContext context) => MaterialApp(
     home: Scaffold(
@@ -596,109 +596,110 @@ Widget build(BuildContext context) => MaterialApp(
   );
 ```
 
-## Miscellaneous {.cols-2}
+## 其他 {.cols-2}
 
-### Null and Null aware
+### Null 和空值感知
 
 ```dart
-int x; // The initial value of any object is null
+int x; // 任何对象的初始值都是 null
 
-// ?? null aware operator
+// ?? 空值感知运算符
 
-x ??=6; // ??= assignment operator, which assigns a value of a variable only if that variable is currently null
-print(x); //Print: 6
+x ??=6; // ??= 赋值运算符，仅当该变量当前为 null 时才为其赋值
+print(x); //打印: 6
 
 x ??=3;
-print(x); // Print: 6 - result is still 6
+print(x); // 打印: 6 - 结果仍然是 6
 
-print(null ?? 10); // Prints: 10. Display the value on the left if it's not null else return the value on the right
+print(null ?? 10); // 打印: 10. 如果左侧的值不为 null，则显示左侧的值，否则返回右侧的值
 ```
 
-### Ternary Operator
+### 三元运算符
 
 ```dart
-// condition ? exprIfTrue : exprIfFalse
+// 条件 ? 为真时的表达式 : 为假时的表达式
 bool isAvailable;
 
 isAvailable ? orderproduct() : addToFavourite();
 ```
 
-### Spread Operator (...)
+### 扩展运算符 (...)
 
 ```dart
-// to insert multiple values into a collection.
+// 向集合中插入多个值。
 var list = [1, 2, 3];
 var list2 = [0, ...list];
 
-print(list2.length); //Print: 4
+print(list2.length); //打印: 4
 ```
 
-### Cascade notation (..)
+### 级联表示法 (..)
 
 ```dart
-// allows you to make a sequence of operations on the same object
+// 允许您对同一对象执行一系列操作
 
-// rather than doing this
+// 而不是这样做
 var user = User();
 user.name = "Nicola";
 user.email = "nicola@g.c";
 user.age = 24;
 
-// you can do this
+// 你可以这样做
 var user = User()
   ..name = "Nicola"
   ..email = "nicola@g.c"
   ..age = 24;
 ```
 
-### Conditional Property Access
+### 条件属性访问
 
 ```dart
 userObject?.userName
 
-//The code snippet above is equivalent to following:
+//上面的代码片段等同于以下内容：
 (userObject != null) ? userObject.userName : null
 
-//You can chain multiple uses of ?. together in a single expression
+//您可以在单个表达式中将多个 ?. 链接在一起
 userObject?.userName?.toString()
 
-// The preceeding code returns null and never calls toString() if either userObject or userObject.userName is null
+// 如果 userObject 或 userObject.userName 为 null，则前面的代码返回 null 并且从不调用 toString()
 ```
-### enum in dart
+### Dart 中的枚举 (enum)
 ```dart
-defination: An enum (short for "enumeration") is a special data type that enables a variable to be a set of predefined constants. Enums are used to define variables that can only take one out of a small set of possible values. They help make code more readable and less error-prone by providing meaningful names to these sets of values.
+定义：枚举（enum，"enumeration" 的缩写）是一种特殊的数据类型，它使变量能够成为一组预定义常量。枚举用于定义只能取一小组可能值之一的变量。它们通过为这些值集提供有意义的名称来帮助使代码更具可读性并减少错误。
 
-// Define the enum
+// 定义枚举
 enum TrafficLight {
   red,
   yellow,
   green
 }
 
-// A function that prints a message based on the traffic light state
+// 一个根据交通灯状态打印消息的函数
 void printTrafficLightMessage(TrafficLight light) {
   switch (light) {
     case TrafficLight.red:
-      print('Stop!');
+      print('停止！');
       break;
     case TrafficLight.yellow:
-      print('Get ready...');
+      print('准备...');
       break;
     case TrafficLight.green:
-      print('Go!');
+      print('通行！');
       break;
   }
 }
 
 void main() {
-  // Example usage of the enum
+  // 枚举的示例用法
   TrafficLight currentLight = TrafficLight.green;
 
-  // Print the message for the current traffic light state
+  // 打印当前交通灯状态的消息
   printTrafficLightMessage(currentLight);
 }
 
 
 ```
+
 
 

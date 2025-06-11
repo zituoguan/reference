@@ -7,205 +7,205 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 135 default keyboard shortcuts found in Audacity
+  Audacity 中 135 个默认键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### File Menu
+### 文件菜单
 
-| Shortcut           | Action          |
+| 快捷键             | 操作         |
 | ------------------ | --------------- |
-| `Ctrl` `N`         | New             |
-| `Ctrl` `O`         | Open            |
-| `Ctrl` `W`         | Close           |
-| `Ctrl` `Q`         | Exit            |
-| `Ctrl` `S`         | Save project    |
-| `Ctrl` `Shift` `E` | Export audio    |
-| `Ctrl` `Shift` `L` | Export multiple |
-| `Ctrl` `Shift` `I` | Import audio    |
+| `Ctrl` `N`         | 新建            |
+| `Ctrl` `O`         | 打开            |
+| `Ctrl` `W`         | 关闭            |
+| `Ctrl` `Q`         | 退出            |
+| `Ctrl` `S`         | 保存项目        |
+| `Ctrl` `Shift` `E` | 导出音频        |
+| `Ctrl` `Shift` `L` | 导出多个        |
+| `Ctrl` `Shift` `I` | 导入音频        |
 
 {.shortcuts}
 
-### Edit Menu
+### 编辑菜单
 
-| Shortcut           | Action                           |
+| 快捷键             | 操作                           |
 | ------------------ | -------------------------------- |
-| `Ctrl` `Z`         | Undo                             |
-| `Ctrl` `Y`         | Redo                             |
-| `Ctrl` `X`         | Cut                              |
-| `Ctrl` `K`         | Delete                           |
-| `Ctrl` `C`         | Copy                             |
-| `Ctrl` `V`         | Paste                            |
-| `Ctrl` `D`         | Duplicate                        |
-| `Ctrl` `P`         | Preferences                      |
-| `Ctrl` `Alt` `X`   | Split cut                        |
-| `Ctrl` `Alt` `K`   | Split delete                     |
-| `Ctrl` `L`         | Silence audio                    |
-| `Ctrl` `T`         | Trim audio                       |
-| `Ctrl` `Alt` `I`   | Split new                        |
-| `Ctrl` `J`         | Join                             |
-| `Ctrl` `Shift` `J` | Detach at silences               |
-| `Ctrl` `B`         | Add label at selection           |
-| `Ctrl` `M`         | Add label at playback position   |
-| `Ctrl` `Alt` `V`   | Paste text to new label          |
-| `Alt` `X`          | Cut labeled audio                |
-| `Alt` `K`          | Delete labeled audio             |
-| `Alt` `Shift` `X`  | Split cut labeled audio          |
-| `Alt` `Shift` `K`  | Split delete labeled audio       |
-| `Alt` `L`          | Silence labeled audio            |
-| `Alt` `Shift` `C`  | Copy labeled audio               |
-| `Alt` `I`          | Split labeled audio              |
-| `Alt` `J`          | Join labeled audio               |
-| `Alt` `Shift` `J`  | Detach labeled audio at silences |
+| `Ctrl` `Z`         | 撤销                             |
+| `Ctrl` `Y`         | 重做                             |
+| `Ctrl` `X`         | 剪切                             |
+| `Ctrl` `K`         | 删除                             |
+| `Ctrl` `C`         | 复制                             |
+| `Ctrl` `V`         | 粘贴                             |
+| `Ctrl` `D`         | 复制副本                         |
+| `Ctrl` `P`         | 首选项                           |
+| `Ctrl` `Alt` `X`   | 分割剪切                         |
+| `Ctrl` `Alt` `K`   | 分割删除                         |
+| `Ctrl` `L`         | 静音音频                         |
+| `Ctrl` `T`         | 修剪音频                         |
+| `Ctrl` `Alt` `I`   | 分割新建                         |
+| `Ctrl` `J`         | 合并                             |
+| `Ctrl` `Shift` `J` | 在静音处分离                     |
+| `Ctrl` `B`         | 在选区添加标签                   |
+| `Ctrl` `M`         | 在播放位置添加标签               |
+| `Ctrl` `Alt` `V`   | 粘贴文本到新标签                 |
+| `Alt` `X`          | 剪切标签音频                     |
+| `Alt` `K`          | 删除标签音频                     |
+| `Alt` `Shift` `X`  | 分割剪切标签音频                 |
+| `Alt` `Shift` `K`  | 分割删除标签音频                 |
+| `Alt` `L`          | 静音标签音频                     |
+| `Alt` `Shift` `C`  | 复制标签音频                     |
+| `Alt` `I`          | 分割标签音频                     |
+| `Alt` `J`          | 合并标签音频                     |
+| `Alt` `Shift` `J`  | 在静音处分离标签音频             |
 
 {.shortcuts}
 
-### Extra Menu {.row-span-4}
+### 扩展菜单 {.row-span-4}
 
-| Shortcut               | Action                                 |
+| 快捷键                 | 操作                                   |
 | ---------------------- | -------------------------------------- |
-| `F11`                  | Toggle full screen                     |
-| `1`                    | Play one second                        |
-| `B`                    | Play to selection                      |
-| `Shift` `F5`           | Play before selection start            |
-| `Shift` `F6`           | Play after selection start             |
-| `Shift` `F7`           | Play before selection end              |
-| `Shift` `F8`           | Play after selection end               |
-| `Ctrl` `Shift` `F5`    | Play before and after selection start  |
-| `Ctrl` `Shift` `F7`    | Play before and after selection end    |
-| `C`                    | Play cut preview                       |
-| `F1`                   | Selection tool                         |
-| `F2`                   | Envelope tool                          |
-| `F3`                   | Draw tool                              |
-| `F4`                   | Zoom tool                              |
-| `F5`                   | Time shift tool                        |
-| `F6`                   | Multi tool                             |
-| `A`                    | Previous tool                          |
-| `D`                    | Next tool                              |
-| `Backspace`            | Delete                                 |
-| `Alt` `Left`           | Move to previous label                 |
-| `Alt` `Right`          | Move to next label                     |
-| `Left`                 | Short seek left during playback        |
-| `Right`                | Short seek right during playback       |
-| `Shift` `Left`         | Long seek left during playback         |
-| `Shift` `Right`        | Long seek right during playback        |
-| `Shift` `I`            | Change recording device                |
-| `Shift` `O`            | Change playback device                 |
-| `Shift` `H`            | Change audio host                      |
-| `Shift` `N`            | Change recording channels              |
-| `Shift` `Home`         | Selection to start                     |
-| `Shift` `End`          | Selection to end                       |
-| `Shift` `Left`         | Selection extend left                  |
-| `Shift` `Right`        | Selection extend right                 |
-| `Ctrl` `Shift` `Right` | Selection contract left                |
-| `Ctrl` `Shift` `Left`  | Selection contract right               |
-| `Ctrl` `Shift` `F6`    | Move backwards from toolbars to tracks |
-| `Ctrl` `F6`            | Move forward from toolbars to tracks   |
-| `Up`                   | Move focus to previous track           |
-| `Down`                 | Move focus to next track               |
-| `Ctrl` `Home`          | Move focus to first track              |
-| `Ctrl` `End`           | Move focus to last track               |
-| `Shift` `Up`           | Move focus to previous and select      |
-| `Shift` `Down`         | Move focus to next and select          |
-| `Enter`                | Toggle focused track                   |
-| `Left`                 | Cursor left                            |
-| `Right`                | Cursor right                           |
-| `,`                    | Cursor short jump left                 |
-| `.`                    | Cursor short jump right                |
-| `Shift` `,`            | Cursor long jump left                  |
-| `Shift` `.`            | Cursor long jump right                 |
-| `Shift` `P`            | Change pan on focused track            |
-| `Alt` `Shift` `Left`   | Pan left on focused track              |
-| `Alt` `Shift` `Right`  | Pan right on focused track             |
-| `Shift` `G`            | Change gain on focused track           |
-| `Alt` `Shift` `Up`     | Increase gain on focused track         |
-| `Alt` `Shift` `Down`   | Decrease gain on focused track         |
-| `Shift` `U`            | Mute or unmute focused track           |
-| `Shift` `S`            | Solo or unsolo focused track           |
-| `Shift` `C`            | Close focused track                    |
+| `F11`                  | 切换全屏                               |
+| `1`                    | 播放一秒                               |
+| `B`                    | 播放至选区                             |
+| `Shift` `F5`           | 播放选区开始前内容                     |
+| `Shift` `F6`           | 播放选区开始后内容                     |
+| `Shift` `F7`           | 播放选区结束前内容                     |
+| `Shift` `F8`           | 播放选区结束后内容                     |
+| `Ctrl` `Shift` `F5`    | 播放选区开始前后内容                   |
+| `Ctrl` `Shift` `F7`    | 播放选区结束前后内容                   |
+| `C`                    | 播放剪切预览                           |
+| `F1`                   | 选择工具                               |
+| `F2`                   | 包络工具                               |
+| `F3`                   | 绘制工具                               |
+| `F4`                   | 缩放工具                               |
+| `F5`                   | 时间位移工具                           |
+| `F6`                   | 多功能工具                             |
+| `A`                    | 上一个工具                             |
+| `D`                    | 下一个工具                             |
+| `Backspace`            | 删除                                   |
+| `Alt` `Left`           | 移至上一个标签                         |
+| `Alt` `Right`          | 移至下一个标签                         |
+| `Left`                 | 播放时向左短跳转                       |
+| `Right`                | 播放时向右短跳转                       |
+| `Shift` `Left`         | 播放时向左长跳转                       |
+| `Shift` `Right`        | 播放时向右长跳转                       |
+| `Shift` `I`            | 更改录音设备                           |
+| `Shift` `O`            | 更改播放设备                           |
+| `Shift` `H`            | 更改音频主机                           |
+| `Shift` `N`            | 更改录音通道                           |
+| `Shift` `Home`         | 选区至开始                             |
+| `Shift` `End`          | 选区至末尾                             |
+| `Shift` `Left`         | 选区向左扩展                           |
+| `Shift` `Right`        | 选区向右扩展                           |
+| `Ctrl` `Shift` `Right` | 选区向左收缩                           |
+| `Ctrl` `Shift` `Left`  | 选区向右收缩                           |
+| `Ctrl` `Shift` `F6`    | 从工具栏向后移动到音轨                 |
+| `Ctrl` `F6`            | 从工具栏向前移动到音轨                 |
+| `Up`                   | 焦点移至上一音轨                       |
+| `Down`                 | 焦点移至下一音轨                       |
+| `Ctrl` `Home`          | 焦点移至第一音轨                       |
+| `Ctrl` `End`           | 焦点移至最后音轨                       |
+| `Shift` `Up`           | 焦点移至上一音轨并选择                 |
+| `Shift` `Down`         | 焦点移至下一音轨并选择                 |
+| `Enter`                | 切换聚焦音轨                           |
+| `Left`                 | 光标向左                               |
+| `Right`                | 光标向右                               |
+| `,`                    | 光标向左短跳                           |
+| `.`                    | 光标向右短跳                           |
+| `Shift` `,`            | 光标向左长跳                           |
+| `Shift` `.`            | 光标向右长跳                           |
+| `Shift` `P`            | 更改聚焦音轨声像                       |
+| `Alt` `Shift` `Left`   | 聚焦音轨声像向左                       |
+| `Alt` `Shift` `Right`  | 聚焦音轨声像向右                       |
+| `Shift` `G`            | 更改聚焦音轨增益                       |
+| `Alt` `Shift` `Up`     | 增加聚焦音轨增益                       |
+| `Alt` `Shift` `Down`   | 减少聚焦音轨增益                       |
+| `Shift` `U`            | 静音/取消静音聚焦音轨                  |
+| `Shift` `S`            | 独奏/取消独奏聚焦音轨                  |
+| `Shift` `C`            | 关闭聚焦音轨                           |
 
 {.shortcuts}
 
-### Select Menu
+### 选择菜单
 
-| Shortcut           | Action                           |
-| ------------------ | -------------------------------- |
-| `Ctrl` `A`         | Select all                       |
-| `Ctrl` `Shift` `A` | Select none                      |
-| `Z`                | Select at zero crossings         |
-| `Ctrl` `Shift` `K` | Select in all tracks             |
-| `Ctrl` `Shift` `Y` | Select in all sync-locked tracks |
-| `[`                | Left at playback position        |
-| `]`                | Right at playback position       |
-| `Shift` `J`        | Track start to cursor            |
-| `Shift` `K`        | Cursor to track end              |
-| `Q`                | Toggle spectral selection        |
-| `Ctrl` `Alt` `P`   | Previous clip                    |
-| `Ctrl` `Alt` `N`   | Next clip                        |
-
-{.shortcuts}
-
-### View Menu
-
-| Shortcut           | Action                  |
-| ------------------ | ----------------------- |
-| `Ctrl` `1`         | Zoom in                 |
-| `Ctrl` `2`         | Zoom normal             |
-| `Ctrl` `3`         | Zoom out                |
-| `Ctrl` `E`         | Zoom to selection       |
-| `Shift` `Z`        | Zoom toggle             |
-| `Ctrl` `F`         | Fit to width            |
-| `Ctrl` `Shift` `F` | Fit to height           |
-| `Ctrl` `Shift` `C` | Collapse all tracks     |
-| `Ctrl` `Shift` `X` | Expand collapsed tracks |
-| `Ctrl` `[`         | Skip to selection start |
-| `Ctrl` `]`         | Skip to selection end   |
+| 快捷键             | 操作                               |
+| ------------------ | ---------------------------------- |
+| `Ctrl` `A`         | 全选                               |
+| `Ctrl` `Shift` `A` | 取消全选                           |
+| `Z`                | 在过零点选择                       |
+| `Ctrl` `Shift` `K` | 在所有音轨中选择                   |
+| `Ctrl` `Shift` `Y` | 在所有同步锁定音轨中选择           |
+| `[`                | 在播放位置标记选区左边界           |
+| `]`                | 在播放位置标记选区右边界           |
+| `Shift` `J`        | 音轨开始到光标处                   |
+| `Shift` `K`        | 光标处到音轨末尾                   |
+| `Q`                | 切换频谱选择                       |
+| `Ctrl` `Alt` `P`   | 上一个片段                         |
+| `Ctrl` `Alt` `N`   | 下一个片段                         |
 
 {.shortcuts}
 
-### Transport Menu
+### 视图菜单
 
-| Shortcut        | Action                      |
-| --------------- | --------------------------- |
-| `Space`         | Play or stop                |
-| `X`             | Play or stop and set cursor |
-| `Shift` `Space` | Loop play                   |
-| `P`             | Pause                       |
-| `R`             | Record                      |
-| `Shift` `R`     | Record new track            |
-| `Shift` `T`     | Timer record...             |
-| `Shift` `D`     | Punch and roll record       |
-| `P`             | Pause                       |
-| `J`             | Cursor to track start       |
-| `K`             | Cursor to track end         |
-| `Home`          | Cursor to project start     |
-| `End`           | Cursor to project end       |
+| 快捷键             | 操作                     |
+| ------------------ | ------------------------ |
+| `Ctrl` `1`         | 放大                     |
+| `Ctrl` `2`         | 正常缩放                 |
+| `Ctrl` `3`         | 缩小                     |
+| `Ctrl` `E`         | 缩放至选区               |
+| `Shift` `Z`        | 切换缩放                 |
+| `Ctrl` `F`         | 适应宽度                 |
+| `Ctrl` `Shift` `F` | 适应高度                 |
+| `Ctrl` `Shift` `C` | 折叠所有音轨             |
+| `Ctrl` `Shift` `X` | 展开所有折叠音轨         |
+| `Ctrl` `[`         | 跳转至选区开始           |
+| `Ctrl` `]`         | 跳转至选区末尾           |
 
 {.shortcuts}
 
-### Tracks Menu
+### 走带控制菜单
 
-| Shortcut           | Action                      |
-| ------------------ | --------------------------- |
-| `Ctrl` `Shift` `N` | Add new mono track          |
-| `Ctrl` `Shift` `M` | Mix and render to new track |
-| `Ctrl` `U`         | Mute all tracks             |
-| `Ctrl` `Shift` `U` | Unmute all tracks           |
+| 快捷键          | 操作                         |
+| --------------- | ---------------------------- |
+| `Space`         | 播放或停止                   |
+| `X`             | 播放或停止并设置光标         |
+| `Shift` `Space` | 循环播放                     |
+| `P`             | 暂停                         |
+| `R`             | 录制                         |
+| `Shift` `R`     | 录制新音轨                   |
+| `Shift` `T`     | 定时录制...                  |
+| `Shift` `D`     | 插入补录                     |
+| `P`             | 暂停                         |
+| `J`             | 光标至音轨开始               |
+| `K`             | 光标至音轨末尾               |
+| `Home`          | 光标至项目开始               |
+| `End`           | 光标至项目末尾               |
 
 {.shortcuts}
 
-### Effect Menu
+### 音轨菜单
 
-| Shortcut   | Action             |
+| 快捷键             | 操作                         |
+| ------------------ | ---------------------------- |
+| `Ctrl` `Shift` `N` | 添加新的单声道音轨           |
+| `Ctrl` `Shift` `M` | 混音并渲染到新音轨           |
+| `Ctrl` `U`         | 静音所有音轨                 |
+| `Ctrl` `Shift` `U` | 取消静音所有音轨             |
+
+{.shortcuts}
+
+### 效果菜单
+
+| 快捷键     | 操作               |
 | ---------- | ------------------ |
-| `Ctrl` `R` | Repeat last effect |
+| `Ctrl` `R` | 重复上一个效果     |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Audacity](https://manual.audacityteam.org/man/keyboard_shortcut_reference.html)
+- [Audacity 键盘快捷键](https://manual.audacityteam.org/man/keyboard_shortcut_reference.html)
   _(manual.audacityteam.org)_

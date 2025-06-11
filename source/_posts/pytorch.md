@@ -6,216 +6,211 @@ tags:
   - AI
   - Python
 categories:
-  - Other
-intro: This is a quick reference list of cheat sheets for PyTorch. See also [PyTorch website](https://pytorch.org/)
+  - 其他
+intro: 这是 PyTorch 的快速参考备忘单列表。另请参阅 [PyTorch 网站](https://pytorch.org/)
 ---
 
-## Imports { .cols-1 }
+## 导入 { .cols-1 }
 
-### General
-
-```
-import torch                                        # root package
-from torch.utils.data import Dataset, DataLoader    # dataset representation and loading
-```
-
-### Neural Network API
+### 通用
 
 ```
-import torch.autograd as autograd         # computation graph
-from torch import Tensor                  # tensor node in the computation graph
-import torch.nn as nn                     # neural networks
-import torch.nn.functional as F           # layers, activations and more
-import torch.optim as optim               # optimizers e.g. gradient descent, ADAM, etc.
-from torch.jit import script, trace       # hybrid frontend decorator and tracing jit
+import torch                                        # 根包
+from torch.utils.data import Dataset, DataLoader    # 数据集表示和加载
 ```
 
-### Torchscript and JIT
+### 神经网络 API
 
 ```
-torch.jit.trace()         # takes your module or function and an example
-                          # data input, and traces the computational steps
-                          # that the data encounters as it progresses through the model
+import torch.autograd as autograd         # 计算图
+from torch import Tensor                  # 计算图中的张量节点
+import torch.nn as nn                     # 神经网络
+import torch.nn.functional as F           # 层、激活函数等
+import torch.optim as optim               # 优化器，例如梯度下降、ADAM 等
+from torch.jit import script, trace       # 混合前端装饰器和跟踪 JIT
+```
 
-@script                   # decorator used to indicate data-dependent
-                          # control flow within the code being traced
+### Torchscript 和 JIT
+
+```
+torch.jit.trace()         # 获取你的模块或函数以及一个示例
+                          # 数据输入，并跟踪数据在模型中传播时
+                          #遇到的计算步骤
+
+@script                   # 用于指示正在跟踪的代码中
+                          # 存在数据依赖控制流的装饰器
 ```
 
 ### ONNX
 
 ```
-torch.onnx.export(model, dummy data, xxxx.proto)       # exports an ONNX formatted
-                                                       # model using a trained model, dummy
-                                                       # data and the desired file name
+torch.onnx.export(model, dummy data, xxxx.proto)       # 使用训练好的模型、虚拟数据
+                                                       # 和所需的文件名导出 ONNX 格式的模型
 
-model = onnx.load("alexnet.proto")                     # load an ONNX model
-onnx.checker.check_model(model)                        # check that the model
-                                                       # IR is well formed
+model = onnx.load("alexnet.proto")                     # 加载 ONNX 模型
+onnx.checker.check_model(model)                        # 检查模型 IR
+                                                       # 是否格式良好
 
-onnx.helper.printable_graph(model.graph)               # print a human readable
-                                                       # representation of the graph
+onnx.helper.printable_graph(model.graph)               # 打印图的人类可读
+                                                       # 表示形式
 ```
 
-### Vision
+### 视觉
 
 ```
-from torchvision import datasets, models, transforms     # vision datasets,
-                                                         # architectures &
-                                                         # transforms
+from torchvision import datasets, models, transforms     # 视觉数据集、
+                                                         # 架构和转换
 
-import torchvision.transforms as transforms              # composable transforms
+import torchvision.transforms as transforms              # 可组合的转换
 ```
 
-### Distributed Training
+### 分布式训练
 
 ```
-import torch.distributed as dist             # distributed communication
-from torch.multiprocessing import Process    # memory sharing processes
+import torch.distributed as dist             # 分布式通信
+from torch.multiprocessing import Process    # 内存共享进程
 ```
 
-## Tensors { .cols-1 }
+## 张量 { .cols-1 }
 
-### Creation
-
-```
-x = torch.randn(*size)              # tensor with independent N(0,1) entries
-x = torch.[ones|zeros](*size)       # tensor with all 1's [or 0's]
-x = torch.tensor(L)                 # create tensor from [nested] list or ndarray L
-y = x.clone()                       # clone of x
-with torch.no_grad():               # code wrap that stops autograd from tracking tensor history
-requires_grad=True                  # arg, when set to True, tracks computation
-                                    # history for future derivative calculations
-```
-
-### Dimensionality
+### 创建
 
 ```
-x.size()                                  # return tuple-like object of dimensions
-x = torch.cat(tensor_seq, dim=0)          # concatenates tensors along dim
-y = x.view(a,b,...)                       # reshapes x into size (a,b,...)
-y = x.view(-1,a)                          # reshapes x into size (b,a) for some b
-y = x.transpose(a,b)                      # swaps dimensions a and b
-y = x.permute(*dims)                      # permutes dimensions
-y = x.unsqueeze(dim)                      # tensor with added axis
-y = x.unsqueeze(dim=2)                    # (a,b,c) tensor -> (a,b,1,c) tensor
-y = x.squeeze()                           # removes all dimensions of size 1 (a,1,b,1) -> (a,b)
-y = x.squeeze(dim=1)                      # removes specified dimension of size 1 (a,1,b,1) -> (a,b,1)
+x = torch.randn(*size)              # 具有独立 N(0,1) 条目的张量
+x = torch.[ones|zeros](*size)       # 全为 1 [或 0] 的张量
+x = torch.tensor(L)                 # 从 [嵌套] 列表或 ndarray L 创建张量
+y = x.clone()                       # x 的克隆
+with torch.no_grad():               # 停止 autograd 跟踪张量历史记录的代码块
+requires_grad=True                  # 参数，设置为 True 时，跟踪计算
+                                    # 历史记录以用于将来的导数计算
 ```
 
-### Algebra
+### 维度
 
 ```
-ret = A.mm(B)       # matrix multiplication
-ret = A.mv(x)       # matrix-vector multiplication
-x = x.t()           # matrix transpose
+x.size()                                  # 返回类似元组的维度对象
+x = torch.cat(tensor_seq, dim=0)          # 沿维度 dim 连接张量
+y = x.view(a,b,...)                       # 将 x 重塑为大小 (a,b,...)
+y = x.view(-1,a)                          # 将 x 重塑为大小 (b,a)，其中 b 为某个值
+y = x.transpose(a,b)                      # 交换维度 a 和 b
+y = x.permute(*dims)                      # 排列维度
+y = x.unsqueeze(dim)                      # 添加了轴的张量
+y = x.unsqueeze(dim=2)                    # (a,b,c) 张量 -> (a,b,1,c) 张量
+y = x.squeeze()                           # 移除所有大小为 1 的维度 (a,1,b,1) -> (a,b)
+y = x.squeeze(dim=1)                      # 移除指定的大小为 1 的维度 (a,1,b,1) -> (a,b,1)
 ```
 
-### GPU Usage
+### 代数
 
 ```
-torch.cuda.is_available                                     # check for cuda
-x = x.cuda()                                                # move x's data from
-                                                            # CPU to GPU and return new object
+ret = A.mm(B)       # 矩阵乘法
+ret = A.mv(x)       # 矩阵向量乘法
+x = x.t()           # 矩阵转置
+```
 
-x = x.cpu()                                                 # move x's data from GPU to CPU
-                                                            # and return new object
+### GPU 使用
 
-if not args.disable_cuda and torch.cuda.is_available():     # device agnostic code
-    args.device = torch.device('cuda')                      # and modularity
+```
+torch.cuda.is_available                                     # 检查 CUDA 是否可用
+x = x.cuda()                                                # 将 x 的数据从 CPU 移动到
+                                                            # GPU 并返回新对象
+
+x = x.cpu()                                                 # 将 x 的数据从 GPU 移动到 CPU
+                                                            # 并返回新对象
+
+if not args.disable_cuda and torch.cuda.is_available():     # 设备无关的代码
+    args.device = torch.device('cuda')                      # 和模块化
 else:                                                       #
     args.device = torch.device('cpu')                       #
 
-net.to(device)                                              # recursively convert their
-                                                            # parameters and buffers to
-                                                            # device specific tensors
+net.to(device)                                              # 递归地将其参数和缓冲区
+                                                            # 转换为特定于设备的张量
 
-x = x.to(device)                                            # copy your tensors to a device
+x = x.to(device)                                            # 将张量复制到设备
                                                             # (gpu, cpu)
 ```
 
-### Deep Learning
+### 深度学习
 
 ```
-nn.Linear(m,n)                                # fully connected layer from
-                                              # m to n units
+nn.Linear(m,n)                                # 从 m 到 n 个单元的全连接层
 
-nn.ConvXd(m,n,s)                              # X dimensional conv layer from
-                                              # m to n channels where X⍷{1,2,3}
-                                              # and the kernel size is s
+nn.ConvXd(m,n,s)                              # X 维卷积层，从 m 到 n 个通道，
+                                              # 其中 X⍷{1,2,3}，核大小为 s
 
-nn.MaxPoolXd(s)                               # X dimension pooling layer
-                                              # (notation as above)
+nn.MaxPoolXd(s)                               # X 维池化层
+                                              # (符号同上)
 
-nn.BatchNormXd                                # batch norm layer
-nn.RNN/LSTM/GRU                               # recurrent layers
-nn.Dropout(p=0.5, inplace=False)              # dropout layer for any dimensional input
-nn.Dropout2d(p=0.5, inplace=False)            # 2-dimensional channel-wise dropout
-nn.Embedding(num_embeddings, embedding_dim)   # (tensor-wise) mapping from
-                                              # indices to embedding vectors
+nn.BatchNormXd                                # 批量归一化层
+nn.RNN/LSTM/GRU                               # 循环层
+nn.Dropout(p=0.5, inplace=False)              # 适用于任何维度输入的 dropout 层
+nn.Dropout2d(p=0.5, inplace=False)            # 二维通道级 dropout
+nn.Embedding(num_embeddings, embedding_dim)   # 从索引到嵌入向量的
+                                              # (张量级) 映射
 ```
 
-### Loss Functions
+### 损失函数
 
 ```
-nn.X                                  # where X is L1Loss, MSELoss, CrossEntropyLoss
+nn.X                                  # 其中 X 是 L1Loss, MSELoss, CrossEntropyLoss
                                       # CTCLoss, NLLLoss, PoissonNLLLoss,
                                       # KLDivLoss, BCELoss, BCEWithLogitsLoss,
                                       # MarginRankingLoss, HingeEmbeddingLoss,
                                       # MultiLabelMarginLoss, SmoothL1Loss,
                                       # SoftMarginLoss, MultiLabelSoftMarginLoss,
                                       # CosineEmbeddingLoss, MultiMarginLoss,
-                                      # or TripletMarginLoss
+                                      # 或 TripletMarginLoss
 ```
 
-### Activation Functions
+### 激活函数
 
 ```
-nn.X                                  # where X is ReLU, ReLU6, ELU, SELU, PReLU, LeakyReLU,
+nn.X                                  # 其中 X 是 ReLU, ReLU6, ELU, SELU, PReLU, LeakyReLU,
                                       # RReLu, CELU, GELU, Threshold, Hardshrink, HardTanh,
                                       # Sigmoid, LogSigmoid, Softplus, SoftShrink,
                                       # Softsign, Tanh, TanhShrink, Softmin, Softmax,
-                                      # Softmax2d, LogSoftmax or AdaptiveSoftmaxWithLoss
+                                      # Softmax2d, LogSoftmax 或 AdaptiveSoftmaxWithLoss
 ```
 
-### Optimizers
+### 优化器
 
 ```
-opt = optim.x(model.parameters(), ...)      # create optimizer
-opt.step()                                  # update weights
-optim.X                                     # where X is SGD, Adadelta, Adagrad, Adam,
+opt = optim.x(model.parameters(), ...)      # 创建优化器
+opt.step()                                  # 更新权重
+optim.X                                     # 其中 X 是 SGD, Adadelta, Adagrad, Adam,
                                             # AdamW, SparseAdam, Adamax, ASGD,
-                                            # LBFGS, RMSprop or Rprop
+                                            # LBFGS, RMSprop 或 Rprop
 ```
 
-### Learning rate scheduling
+### 学习率调度
 
 ```
-scheduler = optim.X(optimizer,...)      # create lr scheduler
-scheduler.step()                        # update lr after optimizer updates weights
-optim.lr_scheduler.X                    # where X is LambdaLR, MultiplicativeLR,
+scheduler = optim.X(optimizer,...)      # 创建学习率调度器
+scheduler.step()                        # 在优化器更新权重后更新学习率
+optim.lr_scheduler.X                    # 其中 X 是 LambdaLR, MultiplicativeLR,
                                         # StepLR, MultiStepLR, ExponentialLR,
                                         # CosineAnnealingLR, ReduceLROnPlateau, CyclicLR,
                                         # OneCycleLR, CosineAnnealingWarmRestarts,
 ```
 
-## Data Utilities { .cols-1 }
+## 数据工具 { .cols-1 }
 
-### Datasets
-
-```
-Dataset                    # abstract class representing dataset
-TensorDataset              # labelled dataset in the form of tensors
-Concat Dataset             # concatenation of Datasets
-```
-
-### Dataloaders and DataSamplers
+### 数据集
 
 ```
-DataLoader(dataset, batch_size=1, ...)      # loads data batches agnostic
-                                            # of structure of individual data points
+Dataset                    # 表示数据集的抽象类
+TensorDataset              # 张量形式的带标签数据集
+Concat Dataset             # 数据集的串联
+```
 
-sampler.Sampler(dataset,...)                # abstract class dealing with
-                                            # ways to sample from dataset
+### 数据加载器和数据采样器
+
+```
+DataLoader(dataset, batch_size=1, ...)      # 加载数据批次，与单个
+                                            # 数据点的结构无关
+
+sampler.Sampler(dataset,...)                # 处理从数据集中采样方式的
+                                            # 抽象类
 
 sampler.XSampler where ...                  # Sequential, Random, SubsetRandom,
                                             # WeightedRandom, Batch, Distributed

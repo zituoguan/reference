@@ -7,71 +7,71 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 36 keyboard shortcuts found on Pocket for Web
+  Pocket 网页版 36 个键盘快捷键的图示速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Viewing Your List
+### 查看您的列表
 
-| Shortcut | Action                |
+| 快捷键  | 操作                |
 | -------- | --------------------- |
-| `G` `L`  | Go to My List         |
-| `G` `A`  | Go to Archive         |
-| `G` `F`  | Go to Favorites       |
-| `G` `R`  | Go to Articles        |
-| `G` `H`  | Go to Highlights      |
-| `G` `V`  | Go to Videos          |
-| `G` `T`  | Go to All Tags        |
-| `G` `S`  | Go to Search          |
-| `G` `B`  | Bulk Edit             |
-| `G` `U`  | Save a URL            |
-| `S` `N`  | Sort by Newest        |
-| `S` `O`  | Sort by Oldest        |
-| `V` `L`  | List View             |
-| `V` `G`  | Grid View             |
-| `V` `D`  | Detail View           |
-| `C` `L`  | Change to Light Theme |
-| `C` `D`  | Change to Dark Theme  |
-| `C` `S`  | Change to Sepia Theme |
-| `?`      | Open Help Overlay     |
+| `G` `L`  | 转到我的列表         |
+| `G` `A`  | 转到存档         |
+| `G` `F`  | 转到收藏夹       |
+| `G` `R`  | 转到文章        |
+| `G` `H`  | 转到高亮      |
+| `G` `V`  | 转到视频          |
+| `G` `T`  | 转到所有标签        |
+| `G` `S`  | 转到搜索          |
+| `G` `B`  | 批量编辑             |
+| `G` `U`  | 保存 URL            |
+| `S` `N`  | 按最新排序        |
+| `S` `O`  | 按最旧排序        |
+| `V` `L`  | 列表视图             |
+| `V` `G`  | 网格视图             |
+| `V` `D`  | 详细视图           |
+| `C` `L`  | 切换到浅色主题 |
+| `C` `D`  | 切换到深色主题  |
+| `C` `S`  | 切换到棕褐色主题 |
+| `?`      | 打开帮助浮层     |
 
 {.shortcuts}
 
-### Item Actions
+### 项目操作
 
-| Shortcut | Action                         |
+| 快捷键  | 操作                         |
 | -------- | ------------------------------ |
-| `O`      | Open the original in a new tab |
-| `A`      | Archive the selected item      |
-| `F`      | Favorite the selected item     |
-| `T`      | Tag the selected item          |
-| `D`      | Delete the selected item       |
-| `X`      | Select item in bulk edit       |
-| `J`      | Select the next item           |
-| `K`      | Select the previous item       |
+| `O`      | 在新标签页中打开原文 |
+| `A`      | 存档所选项目      |
+| `F`      | 收藏所选项目     |
+| `T`      | 标记所选项目          |
+| `D`      | 删除所选项目       |
+| `X`      | 在批量编辑中选择项目       |
+| `J`      | 选择下一个项目           |
+| `K`      | 选择上一个项目           |
 
 {.shortcuts}
 
-### Article View
+### 文章视图
 
-| Shortcut   | Action                                   |
+| 快捷键   | 操作                                   |
 | ---------- | ---------------------------------------- |
-| `Ctrl` `=` | Increase the font size                   |
-| `Ctrl` `-` | Decrease the font size                   |
-| `B`        | Toggle full screen mode                  |
-| `D`        | Edit tags                                |
-| `T`        | Archive the item                         |
-| `F`        | Favorite the item                        |
-| `O`        | View the original                        |
-| `Alt` `=`  | Increase the column width (premium only) |
-| `Alt` `-`  | Decrease the column width (premium only) |
+| `Ctrl` `=` | 增大字号                   |
+| `Ctrl` `-` | 减小字号                   |
+| `B`        | 切换全屏模式                  |
+| `D`        | 编辑标签                                |
+| `T`        | 存档项目                         |
+| `F`        | 收藏项目                        |
+| `O`        | 查看原文                        |
+| `Alt` `=`  | 增加列宽（仅限高级版） |
+| `Alt` `-`  | 减小列宽（仅限高级版） |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Pocket](https://help.getpocket.com/article/994-keyboard-shortcuts-in-pocket-for-web)
+- [Pocket 键盘快捷键](https://help.getpocket.com/article/994-keyboard-shortcuts-in-pocket-for-web)
   _(help.getpocket.com)_

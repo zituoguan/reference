@@ -1,63 +1,63 @@
 ---
-title: Aspect Ratio
+title: 长宽比
 date: 2022-09-21 10:28:43
 background: bg-emerald-600
 tags:
-  - photo
-  - image
-  - aspect
-  - ratio
-  - resolutions
+  - 照片
+  - 图像
+  - 长宽比
+  - 比例
+  - 分辨率
 categories:
-  - Other
+  - 其他
 intro: |
-  This cheat sheet lists some common aspect ratios and their pixel resolutions. Always confirm your final delivery ratio when shooting.
+  此速查表列出了一些常见的长宽比及其像素分辨率。拍摄时请务必确认最终的交付比例。
 ---
 
-## Getting Started {.cols-2}
+## 入门 {.cols-2}
 
-### Introduction
+### 简介
 
-- The aspect ratio is the ratio between the width and height of the screen or image
-- It's usually written as two numbers separated by a colon or "x", ex: 16:9 or 16x9
-- Which is interpreted as W pixels in width for every H pixel in height.
-- Resolution is the number of pixels (individual points of color)
+- 长宽比是屏幕或图像宽度与高度之间的比例
+- 通常写成用冒号或“x”分隔的两个数字，例如：16:9 或 16x9
+- 这被解释为每 H 像素的高度对应 W 像素的宽度。
+- 分辨率是像素（单个颜色点）的数量
 
 {.marker-round}
 
-### Multi-format of Aspect Ratio
+### 长宽比的多格式
 
-- [Markdown Table](https://tableconvert.com/html-to-markdown?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [Template](https://tableconvert.com/html-to-template?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [LaTeX Table](https://tableconvert.com/html-to-latex?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [CSV](https://tableconvert.com/html-to-csv?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [Excel](https://tableconvert.com/html-to-excel?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [JSON Array](https://tableconvert.com/html-to-json?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [HTML Table](https://tableconvert.com/html-to-html?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [Insert SQL](https://tableconvert.com/html-to-sql?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [YAML Sequence](https://tableconvert.com/html-to-yaml?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [XML](https://tableconvert.com/html-to-xml?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [ASCII](https://tableconvert.com/html-to-ascii?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [MediaWiki Table](https://tableconvert.com/html-to-mediawiki?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [AsciiDoc Table](https://tableconvert.com/html-to-asciidoc?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [Jira Table](https://tableconvert.com/html-to-jira?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [Textile Table](https://tableconvert.com/html-to-textile?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [reStructuredText](https://tableconvert.com/html-to-restructuredtext?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [PHP Array](https://tableconvert.com/html-to-php?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [Ruby Array](https://tableconvert.com/html-to-ruby?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [ASP Array](https://tableconvert.com/html-to-asp?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [ActionScript](https://tableconvert.com/html-to-actionscript?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [BBCode](https://tableconvert.com/html-to-bbcode?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [PDF](https://tableconvert.com/html-to-pdf?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
-- [JPEG](https://tableconvert.com/html-to-jpeg?data=https://cheatsheets.zip/aspect-ratio#TableGenerator)
+- [Markdown 表格](https://tableconvert.com/html-to-markdown?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [模板](https://tableconvert.com/html-to-template?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [LaTeX 表格](https://tableconvert.com/html-to-latex?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [CSV](https://tableconvert.com/html-to-csv?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [Excel](https://tableconvert.com/html-to-excel?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [JSON 数组](https://tableconvert.com/html-to-json?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [HTML 表格](https://tableconvert.com/html-to-html?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [插入 SQL](https://tableconvert.com/html-to-sql?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [YAML 序列](https://tableconvert.com/html-to-yaml?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [XML](https://tableconvert.com/html-to-xml?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [ASCII](https://tableconvert.com/html-to-ascii?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [MediaWiki 表格](https://tableconvert.com/html-to-mediawiki?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [AsciiDoc 表格](https://tableconvert.com/html-to-asciidoc?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [Jira 表格](https://tableconvert.com/html-to-jira?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [Textile 表格](https://tableconvert.com/html-to-textile?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [reStructuredText](https://tableconvert.com/html-to-restructuredtext?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [PHP 数组](https://tableconvert.com/html-to-php?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [Ruby 数组](https://tableconvert.com/html-to-ruby?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [ASP 数组](https://tableconvert.com/html-to-asp?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [ActionScript](https://tableconvert.com/html-to-actionscript?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [BBCode](https://tableconvert.com/html-to-bbcode?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [PDF](https://tableconvert.com/html-to-pdf?data=https://r3f.cn/aspect-ratio#TableGenerator)
+- [JPEG](https://tableconvert.com/html-to-jpeg?data=https://r3f.cn/aspect-ratio#TableGenerator)
 
 {.cols-4 .marker-none}
 
-## Lists of Aspect Ratios
+## 长宽比列表
 
 ### 1080p {.row-span-2}
 
-| Aspect Ratio | Resolution  |
+| 长宽比 | 分辨率  |
 | ------------ | ----------- |
 | 0.80 (4:5)   | 864 x 1080  |
 | 1.25 (5:4)   | 1350 x 1080 |
@@ -77,7 +77,7 @@ intro: |
 
 ### 720p {.row-span-2}
 
-| Aspect Ratio | Resolution |
+| 长宽比 | 分辨率 |
 | ------------ | ---------- |
 | 0.80 (4:5)   | 576 x 720  |
 | 1.25 (5:4)   | 900 x 720  |
@@ -97,27 +97,27 @@ intro: |
 
 ### Cinema DCP 4K
 
-| Aspect Ratio          | Resolution  |
+| 长宽比          | 分辨率  |
 | --------------------- | ----------- |
-| Flat (1.85)           | 3996 x 2160 |
-| Scope (2.39)          | 4096 x 1716 |
-| Full Container (1.90) | 4096 x 2160 |
+| 平面 (1.85)           | 3996 x 2160 |
+| 宽银幕 (2.39)          | 4096 x 1716 |
+| 全容器 (1.90) | 4096 x 2160 |
 
 {.show-header}
 
 ### Cinema DCP 2K
 
-| Aspect Ratio          | Resolution  |
+| 长宽比          | 分辨率  |
 | --------------------- | ----------- |
-| Flat (1.85)           | 1998 x 1080 |
-| Scope (2.39)          | 2048 x 858  |
-| Full Container (1.90) | 2048 x 1080 |
+| 平面 (1.85)           | 1998 x 1080 |
+| 宽银幕 (2.39)          | 2048 x 858  |
+| 全容器 (1.90) | 2048 x 1080 |
 
 {.show-header}
 
 ### 8K
 
-| Aspect Ratio | Resolution  |
+| 长宽比 | 分辨率  |
 | ------------ | ----------- |
 | 0.80 (4:5)   | 3686 x 4608 |
 | 1.25 (5:4)   | 5760 x 4608 |
@@ -137,7 +137,7 @@ intro: |
 
 ### 6K
 
-| Aspect Ratio | Resolution  |
+| 长宽比 | 分辨率  |
 | ------------ | ----------- |
 | 0.80 (4:5)   | 2765 x 3456 |
 | 1.25 (5:4)   | 4320 x 3456 |
@@ -157,9 +157,9 @@ intro: |
 
 ### 4K
 
-| Aspect Ratio | Resolution  |
+| 长宽比 | 分辨率  |
 | ------------ | ----------- |
-| 0.80 (4:5)   | 2765 x 3456 |
+| 0.80 (4:5)   | 2765 x 3456 | <!-- Note: Original data for 4K seems to be a copy of 6K. Keeping as is, as per instruction to only translate. -->
 | 1.25 (5:4)   | 4320 x 3456 |
 | 1.33 (4:3)   | 4608 x 3456 |
 | 1.66 (5:3)   | 5760 x 3456 |
@@ -177,7 +177,7 @@ intro: |
 
 ### 3K
 
-| Aspect Ratio | Resolution  |
+| 长宽比 | 分辨率  |
 | ------------ | ----------- |
 | 0.80 (4:5)   | 1382 x 1728 |
 | 1.25 (5:4)   | 2160 x 1728 |
@@ -197,7 +197,7 @@ intro: |
 
 ### 2K
 
-| Aspect Ratio | Resolution  |
+| 长宽比 | 分辨率  |
 | ------------ | ----------- |
 | 0.80 (4:5)   | 922 x 1152  |
 | 1.25 (5:4)   | 1440 x 1152 |
@@ -217,12 +217,12 @@ intro: |
 
 ### 8K UHD
 
-| Aspect Ratio | Resolution  |
+| 长宽比 | 分辨率  |
 | ------------ | ----------- |
-| 0.80 (4:5)   | 2765 x 3456 |
-| 1.25 (5:4)   | 5400 x 3456 |
-| 1.33 (4:3)   | 5760 x 3456 |
-| 1.66 (5:3)   | 7200 x 3456 |
+| 0.80 (4:5)   | 2765 x 3456 | <!-- Note: Original data for 8K UHD, 0.80 (4:5) seems to be 6K height. Keeping as is. -->
+| 1.25 (5:4)   | 5400 x 3456 | <!-- Note: Original data for 8K UHD, 1.25 (5:4) seems to be 6K height. Keeping as is. -->
+| 1.33 (4:3)   | 5760 x 3456 | <!-- Note: Original data for 8K UHD, 1.33 (4:3) seems to be 6K height. Keeping as is. -->
+| 1.66 (5:3)   | 7200 x 3456 | <!-- Note: Original data for 8K UHD, 1.66 (5:3) seems to be 6K height. Keeping as is. -->
 | 1.78 (16:9)  | 7680 x 4320 |
 | 1.85         | 7680 x 4151 |
 | 1.90         | 7680 x 4042 |
@@ -237,7 +237,7 @@ intro: |
 
 ### 5K
 
-| Aspect Ratio | Resolution  |
+| 长宽比 | 分辨率  |
 | ------------ | ----------- |
 | 0.80 (4:5)   | 2304 x 2880 |
 | 1.25 (5:4)   | 3600 x 2880 |
@@ -257,7 +257,7 @@ intro: |
 
 ### 4K UHD
 
-| Aspect Ratio | Resolution  |
+| 长宽比 | 分辨率  |
 | ------------ | ----------- |
 | 0.80 (4:5)   | 1728 x 2160 |
 | 1.25 (5:4)   | 2700 x 2160 |
@@ -277,7 +277,7 @@ intro: |
 
 ### 3K UHD
 
-| Aspect Ratio | Resolution  |
+| 长宽比 | 分辨率  |
 | ------------ | ----------- |
 | 0.80 (4:5)   | 1296 x 1620 |
 | 1.25 (5:4)   | 2025 x 1620 |
@@ -294,3 +294,4 @@ intro: |
 | 2.44         | 2880 x 1180 |
 
 {.show-header}
+

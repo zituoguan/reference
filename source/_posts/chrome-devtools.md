@@ -1,5 +1,5 @@
 ---
-title: Chrome Developer Tools
+title: Chrome 开发者工具
 date: 2022-11-23 16:23:31.696017
 background: bg-[#c64d3e]
 label:
@@ -7,126 +7,126 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 56 keyboard shortcuts found in Chrome's Developer Tools
+  Chrome 开发者工具中 56 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Opening DevTools
+### 打开开发者工具
 
-| Shortcut           | Action                            |
-| ------------------ | --------------------------------- |
-| `Ctrl` `Shift` `I` | Open whatever panel you used last |
-| `Ctrl` `Shift` `J` | Open the Console panel            |
-| `Ctrl` `Shift` `C` | Open the Elements panel           |
+| 快捷键             | 操作                                |
+| ------------------ | ----------------------------------- |
+| `Ctrl` `Shift` `I` | 打开上次使用的面板                    |
+| `Ctrl` `Shift` `J` | 打开控制台面板                      |
+| `Ctrl` `Shift` `C` | 打开元素面板                        |
 
 {.shortcuts}
 
-### Global Shortcuts {.row-span-2}
+### 全局快捷键 {.row-span-2}
 
-| Shortcut           | Action                                                 |
+| 快捷键             | 操作                                                   |
 | ------------------ | ------------------------------------------------------ |
-| `F1`               | Show Settings                                          |
-| `Ctrl` `]`         | Focus the next panel                                   |
-| `Ctrl` `[`         | Focus the previous panel                               |
-| `Ctrl` `Shift` `D` | Switch back to whatever docking position you last used |
-| `Ctrl` `Shift` `M` | Toggle Device Mode                                     |
-| `Ctrl` `Shift` `C` | Toggle Inspect Element Mode                            |
-| `Ctrl` `Shift` `P` | Open the Command Menu                                  |
-| `Esc`              | Toggle the Drawer                                      |
-| `Ctrl` `R`         | Normal reload                                          |
-| `Ctrl` `Shift` `R` | Hard reload                                            |
-| `Ctrl` `F`         | Search for text within the current panel               |
-| `Ctrl` `Shift` `F` | Opens the Search tab in the Drawer                     |
-| `Ctrl` `P`         | Open a file in the Sources panel                       |
-| `Ctrl` `Shift` `+` | Zoom in                                                |
-| `Ctrl` `-`         | Zoom out                                               |
-| `Ctrl` `0`         | Restore default zoom level                             |
-| `Ctrl` `O` `!`     | Run snippet                                            |
+| `F1`               | 显示设置                                               |
+| `Ctrl` `]`         | 聚焦下一个面板                                         |
+| `Ctrl` `[`         | 聚焦上一个面板                                         |
+| `Ctrl` `Shift` `D` | 切换回上次使用的停靠位置                               |
+| `Ctrl` `Shift` `M` | 切换设备模式                                           |
+| `Ctrl` `Shift` `C` | 切换检查元素模式                                       |
+| `Ctrl` `Shift` `P` | 打开命令菜单                                           |
+| `Esc`              | 切换抽屉                                               |
+| `Ctrl` `R`         | 普通刷新                                               |
+| `Ctrl` `Shift` `R` | 强制刷新                                               |
+| `Ctrl` `F`         | 在当前面板中搜索文本                                   |
+| `Ctrl` `Shift` `F` | 在抽屉中打开搜索标签页                                 |
+| `Ctrl` `P`         | 在源代码面板中打开文件                                 |
+| `Ctrl` `Shift` `+` | 放大                                                   |
+| `Ctrl` `-`         | 缩小                                                   |
+| `Ctrl` `0`         | 恢复默认缩放级别                                       |
+| `Ctrl` `O` `!`     | 运行代码片段                                           |
 
 {.shortcuts}
 
-### Elements Panel
+### 元素面板
 
-| Shortcut      | Action                                                            |
+| 快捷键        | 操作                                                              |
 | ------------- | ----------------------------------------------------------------- |
-| `Ctrl` `Z`    | Undo change                                                       |
-| `Ctrl` `Y`    | Redo change                                                       |
-| `Up/Down`     | Select the element above or below the currently-selected element  |
-| `Right`       | Expand the currently-selected node                                |
-| `Left`        | Collapse the currently-selected node                              |
-| `Enter`       | Toggle Edit Attributes mode on the currently-selected element     |
-| `Tab`         | Select the next attribute after entering Edit Attributes mode     |
-| `Shift` `Tab` | Select the previous attribute after entering Edit Attributes mode |
-| `H`           | Hide the currently-selected element                               |
-| `F2`          | Toggle Edit as HTML mode on the currently-selected element        |
+| `Ctrl` `Z`    | 撤销更改                                                          |
+| `Ctrl` `Y`    | 重做更改                                                          |
+| `Up/Down`     | 选择当前选中元素上方或下方的元素                                  |
+| `Right`       | 展开当前选中的节点                                                |
+| `Left`        | 折叠当前选中的节点                                                |
+| `Enter`       | 在当前选中的元素上切换编辑属性模式                                |
+| `Tab`         | 进入编辑属性模式后选择下一个属性                                  |
+| `Shift` `Tab` | 进入编辑属性模式后选择上一个属性                                  |
+| `H`           | 隐藏当前选中的元素                                                |
+| `F2`          | 在当前选中的元素上切换“编辑为 HTML”模式                           |
 
 {.shortcuts}
 
-### Sources Panel
+### 源代码面板
 
-| Shortcut           | Action                                                            |
+| 快捷键             | 操作                                                              |
 | ------------------ | ----------------------------------------------------------------- |
-| `Ctrl` `\`         | Pause script execution (if running), or resume (if paused)        |
-| `Ctrl` `'`         | Step over next function call                                      |
-| `Ctrl` `;`         | Step into next function call                                      |
-| `Ctrl` `Shift` `;` | Step out of current function                                      |
-| `Ctrl` `./,`       | Select the call frame below or above the currently-selected frame |
-| `Ctrl` `S`         | Save changes to local modifications                               |
-| `Ctrl` `Alt` `S`   | Save all changes                                                  |
-| `Ctrl` `G`         | Go to line                                                        |
-| `Alt` `W`          | Close the active tab                                              |
+| `Ctrl` `\`         | 暂停脚本执行（如果正在运行），或恢复（如果已暂停）                  |
+| `Ctrl` `'`         | 跳过下一个函数调用                                                |
+| `Ctrl` `;`         | 进入下一个函数调用                                                |
+| `Ctrl` `Shift` `;` | 跳出当前函数                                                      |
+| `Ctrl` `./,`       | 选择当前选中帧上方或下方的调用帧                                  |
+| `Ctrl` `S`         | 将更改保存到本地修改                                              |
+| `Ctrl` `Alt` `S`   | 保存所有更改                                                      |
+| `Ctrl` `G`         | 转到行                                                            |
+| `Alt` `W`          | 关闭活动标签页                                                    |
 
 {.shortcuts}
 
-### Code Editor
+### 代码编辑器
 
-| Shortcut     | Action                                                         |
+| 快捷键       | 操作                                                           |
 | ------------ | -------------------------------------------------------------- |
-| `Ctrl` `Del` | Delete all characters in the last word, up to the cursor       |
-| `Ctrl` `M`   | Go to matching bracket                                         |
-| `Ctrl` `/`   | Toggle single-line comment                                     |
-| `Ctrl` `D`   | Select the next occurrence of whatever word the cursor is on   |
-| `Ctrl` `U`   | Deselect the next occurrence of whatever word the cursor is on |
+| `Ctrl` `Del` | 删除光标前最后一个单词中的所有字符                             |
+| `Ctrl` `M`   | 转到匹配的括号                                                 |
+| `Ctrl` `/`   | 切换单行注释                                                   |
+| `Ctrl` `D`   | 选择光标所在单词的下一个匹配项                                 |
+| `Ctrl` `U`   | 取消选择光标所在单词的下一个匹配项                             |
 
 {.shortcuts}
 
-### Performance Panel
+### 性能面板
 
-| Shortcut   | Action                  |
+| 快捷键     | 操作                    |
 | ---------- | ----------------------- |
-| `Ctrl` `E` | Start or stop recording |
-| `Ctrl` `S` | Save recording          |
-| `Ctrl` `O` | Load recording          |
+| `Ctrl` `E` | 开始或停止录制          |
+| `Ctrl` `S` | 保存录制                |
+| `Ctrl` `O` | 加载录制                |
 
 {.shortcuts}
 
-### Memory Panel
+### 内存面板
 
-| Shortcut   | Action                  |
+| 快捷键     | 操作                    |
 | ---------- | ----------------------- |
-| `Ctrl` `E` | Start or stop recording |
+| `Ctrl` `E` | 开始或停止录制          |
 
 {.shortcuts}
 
-### Console Panel
+### 控制台面板
 
-| Shortcut               | Action                         |
+| 快捷键                 | 操作                           |
 | ---------------------- | ------------------------------ |
-| `Tab`                  | Accept autocomplete suggestion |
-| `Esc`                  | Reject autocomplete suggestion |
-| `Up`                   | Get previous statement         |
-| `Down`                 | Get next statement             |
-| `Ctrl` <code>\`</code> | Focus the Console              |
-| `Ctrl` `L`             | Clear the console              |
-| `Shift` `Enter`        | Force a multi-line entry       |
-| `Enter`                | Execute                        |
+| `Tab`                  | 接受自动完成建议               |
+| `Esc`                  | 拒绝自动完成建议               |
+| `Up`                   | 获取上一条语句                 |
+| `Down`                 | 获取下一条语句                 |
+| `Ctrl` <code>\`</code> | 聚焦控制台                     |
+| `Ctrl` `L`             | 清除控制台                     |
+| `Shift` `Enter`        | 强制多行输入                   |
+| `Enter`                | 执行                           |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/shortcuts)
+- [Chrome 开发者工具键盘快捷键](https://developers.google.com/web/tools/chrome-devtools/shortcuts)
   _(developers.google.com)_

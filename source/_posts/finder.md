@@ -7,82 +7,82 @@ tags:
   -
   - mac
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 55 keyboard shortcuts found in Finder. This application is part of MacOS.
+  Finder 中 55 个键盘快捷键的可视化速查表。此应用程序是 MacOS 的一部分。
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### Finder Shortcuts
+### Finder 快捷键
 
-| Shortcut                 | Action                                                                             |
+| 快捷键                 | 操作                                                                             |
 | ------------------------ | ---------------------------------------------------------------------------------- |
-| `Cmd` `D`                | Duplicate the selected files                                                       |
-| `Cmd` `E`                | Eject the selected disk or volume                                                  |
-| `Cmd` `F`                | Start a Spotlight search in the Finder window                                      |
-| `Cmd` `I`                | Show the get info window for a selected file                                       |
-| `Cmd` `R`                | When an alias is selected in the Finder, show original file for the selected alias |
-| `Cmd` `Shift` `C`        | Open the Computer window                                                           |
-| `Cmd` `Shift` `D`        | Open the desktop folder                                                            |
-| `Cmd` `Shift` `F`        | Open the Recents window, showing all files you viewed or changed recently          |
-| `Cmd` `Shift` `G`        | Open a Go to Folder window                                                         |
-| `Cmd` `Shift` `H`        | Open the Home folder of the current MacOS user account                             |
-| `Cmd` `Shift` `I`        | Open the iCloud drive                                                              |
-| `Cmd` `Shift` `K`        | Open the Network window                                                            |
-| `Cmd` `Opt` `L`          | Open the Downloads folder                                                          |
-| `Cmd` `Shift` `N`        | Create a new folder                                                                |
-| `Cmd` `Shift` `O`        | Open the Documents folder                                                          |
-| `Cmd` `Shift` `P`        | Show or hide the Preview pane in Finder windows                                    |
-| `Cmd` `Shift` `R`        | Open the AirDrop window                                                            |
-| `Cmd` `Shift` `T`        | Show or hide the tab bar in Finder windows                                         |
-| `Ctrl` `Cmd` `Shift` `T` | Add selected Finder items to the Dock                                              |
-| `Cmd` `Shift` `U`        | Open the Utilities folder                                                          |
-| `Cmd` `Opt` `D`          | Show or hide the Dock                                                              |
-| `Cmd` `Ctrl` `T`         | Add the selected item to the sidebar                                               |
-| `Cmd` `Opt` `P`          | Hide or show the path bar in Finder windows                                        |
-| `Cmd` `Opt` `S`          | Hide or show the Sidebar in Finder windows                                         |
-| `Cmd` `/`                | Hide or show the status bar in Finder windows                                      |
-| `Cmd` `J`                | Show view options                                                                  |
-| `Cmd` `K`                | Open the Connect to Server window                                                  |
+| `Cmd` `D`                | 复制所选文件                                                                       |
+| `Cmd` `E`                | 推出所选磁盘或宗卷                                                                 |
+| `Cmd` `F`                | 在 Finder 窗口中开始 Spotlight 搜索                                                |
+| `Cmd` `I`                | 显示所选文件的“显示简介”窗口                                                       |
+| `Cmd` `R`                | 当在 Finder 中选择替身时，显示所选替身的原始文件                                   |
+| `Cmd` `Shift` `C`        | 打开“电脑”窗口                                                                     |
+| `Cmd` `Shift` `D`        | 打开桌面文件夹                                                                     |
+| `Cmd` `Shift` `F`        | 打开“最近使用”窗口，显示您最近查看或更改过的所有文件                               |
+| `Cmd` `Shift` `G`        | 打开“前往文件夹”窗口                                                               |
+| `Cmd` `Shift` `H`        | 打开当前 MacOS 用户帐户的个人文件夹                                                  |
+| `Cmd` `Shift` `I`        | 打开 iCloud 云盘                                                                   |
+| `Cmd` `Shift` `K`        | 打开“网络”窗口                                                                     |
+| `Cmd` `Opt` `L`          | 打开“下载”文件夹                                                                   |
+| `Cmd` `Shift` `N`        | 创建一个新文件夹                                                                   |
+| `Cmd` `Shift` `O`        | 打开“文稿”文件夹                                                                   |
+| `Cmd` `Shift` `P`        | 在 Finder 窗口中显示或隐藏预览面板                                                 |
+| `Cmd` `Shift` `R`        | 打开 AirDrop 窗口                                                                  |
+| `Cmd` `Shift` `T`        | 在 Finder 窗口中显示或隐藏标签页栏                                                 |
+| `Ctrl` `Cmd` `Shift` `T` | 将所选 Finder 项目添加到程序坞                                                     |
+| `Cmd` `Shift` `U`        | 打开“实用工具”文件夹                                                               |
+| `Cmd` `Opt` `D`          | 显示或隐藏程序坞                                                                   |
+| `Cmd` `Ctrl` `T`         | 将所选项目添加到边栏                                                               |
+| `Cmd` `Opt` `P`          | 在 Finder 窗口中隐藏或显示路径栏                                                   |
+| `Cmd` `Opt` `S`          | 在 Finder 窗口中隐藏或显示边栏                                                     |
+| `Cmd` `/`                | 在 Finder 窗口中隐藏或显示状态栏                                                   |
+| `Cmd` `J`                | 显示显示选项                                                                       |
+| `Cmd` `K`                | 打开“连接服务器”窗口                                                               |
 
 {.shortcuts}
 
-### Finder Shortcuts
+### Finder 快捷键
 
-| Shortcut                  | Action                                                                               |
+| 快捷键                  | 操作                                                                               |
 | ------------------------- | ------------------------------------------------------------------------------------ |
-| `Cmd` `Ctrl` `A`          | Make an alias of the selected item                                                   |
-| `Cmd` `N`                 | Open a new Finder window                                                             |
-| `Cmd` `Opt` `N`           | Create a new Smart Folder                                                            |
-| `Cmd` `T`                 | Show or hide the tab bar when a single tab is open in the current Finder window      |
-| `Cmd` `Opt` `T`           | Show or hide the toolbar when a single tab is open in the current Finder window      |
-| `Cmd` `Opt` `V`           | Move the files in the Clipboard from their original location to the current location |
-| `Cmd` `Y`                 | Use Quick Look to preview the selected files                                         |
-| `Cmd` `Opt` `Y`           | View a Quick Look slideshow of the selected files                                    |
-| `Cmd` `1`                 | View the items in the Finder window as icons                                         |
-| `Cmd` `2`                 | View the items in a Finder window as a list                                          |
-| `Cmd` `3`                 | View the items in a Finder window in columns                                         |
-| `Cmd` `4`                 | View the items in a Finder window in a gallery                                       |
-| `Cmd` `[`                 | Go to the previous folder                                                            |
-| `Cmd` `]`                 | Go to the next folder                                                                |
-| `Cmd` `Up`                | Open the folder that contains the current folder                                     |
-| `Cmd` `Ctrl` `Up`         | Open the folder that contains the current folder, in a new window                    |
-| `Cmd` `Down`              | Open the selected item                                                               |
-| `Right`                   | Open the selected folder, this only works when in list view                          |
-| `Left`                    | Close the selected folder, this only works when in list view                         |
-| `Cmd` `Del`               | Move the selected item to the trash                                                  |
-| `Cmd` `Shift` `Del`       | Empty the trash                                                                      |
-| `Cmd` `Opt` `Shift` `Del` | Empty the trash without the confirmation dialogue                                    |
-| `Cmd` `Bright-Down`       | Turn video mirroring on or off when your Mac is connected to more than one display   |
-| `Cmd` `Bright-Up`         | Open Displays preferences                                                            |
-| `Ctrl` `Bright`           | Change the brightness of your external display, if supported                         |
-| `Opt` `Shift` `Bright`    | Adjust the display brightness in smaller steps                                       |
-| `Ctrl` `Down`             | Show all windows of the front app                                                    |
-| `Opt` `Vol`               | Open Sound preferences                                                               |
+| `Cmd` `Ctrl` `A`          | 为所选项目制作替身                                                                   |
+| `Cmd` `N`                 | 打开一个新的 Finder 窗口                                                             |
+| `Cmd` `Opt` `N`           | 创建一个新的智能文件夹                                                               |
+| `Cmd` `T`                 | 当当前 Finder 窗口中只有一个标签页打开时，显示或隐藏标签页栏                         |
+| `Cmd` `Opt` `T`           | 当当前 Finder 窗口中只有一个标签页打开时，显示或隐藏工具栏                         |
+| `Cmd` `Opt` `V`           | 将剪贴板中的文件从其原始位置移动到当前位置                                           |
+| `Cmd` `Y`                 | 使用“快速查看”预览所选文件                                                           |
+| `Cmd` `Opt` `Y`           | 查看所选文件的“快速查看”幻灯片显示                                                   |
+| `Cmd` `1`                 | 以图标方式查看 Finder 窗口中的项目                                                   |
+| `Cmd` `2`                 | 以列表方式查看 Finder 窗口中的项目                                                   |
+| `Cmd` `3`                 | 以分栏方式查看 Finder 窗口中的项目                                                   |
+| `Cmd` `4`                 | 以画廊方式查看 Finder 窗口中的项目                                                   |
+| `Cmd` `[`                 | 前往上一个文件夹                                                                     |
+| `Cmd` `]`                 | 前往下一个文件夹                                                                     |
+| `Cmd` `Up`                | 打开包含当前文件夹的文件夹                                                           |
+| `Cmd` `Ctrl` `Up`         | 在新窗口中打开包含当前文件夹的文件夹                                                 |
+| `Cmd` `Down`              | 打开所选项目                                                                       |
+| `Right`                   | 打开所选文件夹，这仅在列表视图中有效                                                 |
+| `Left`                    | 关闭所选文件夹，这仅在列表视图中有效                                                 |
+| `Cmd` `Del`               | 将所选项目移到废纸篓                                                                 |
+| `Cmd` `Shift` `Del`       | 清倒废纸篓                                                                         |
+| `Cmd` `Opt` `Shift` `Del` | 无需确认对话框即可清倒废纸篓                                                         |
+| `Cmd` `Bright-Down`       | 当 Mac 连接到多个显示器时，打开或关闭视频镜像                                        |
+| `Cmd` `Bright-Up`         | 打开“显示器”偏好设置                                                               |
+| `Ctrl` `Bright`           | 更改外接显示器的亮度（如果支持）                                                     |
+| `Opt` `Shift` `Bright`    | 以较小的步长调整显示器亮度                                                           |
+| `Ctrl` `Down`             | 显示最前应用的所有窗口                                                               |
+| `Opt` `Vol`               | 打开“声音”偏好设置                                                                 |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for MacOS Finder](https://support.apple.com/en-us/HT201236) _(support.apple.com)_
+- [MacOS Finder 的键盘快捷键](https://support.apple.com/zh-cn/HT201236) _(support.apple.com)_

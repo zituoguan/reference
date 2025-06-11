@@ -7,79 +7,79 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 44 keyboard shortcuts found in Jira
+  Jira 中 44 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Global Shortcuts
+### 全局快捷键
 
-| Shortcut                     | Action                           |
+| 快捷键                       | 操作                           |
 | ---------------------------- | -------------------------------- |
-| `G` `D`                      | Go to Dashboard                  |
-| `G` `P`                      | Browse to a Project              |
-| `G` `A`                      | Go to Agile                      |
-| `G` `I`                      | Go to Issue Navigator            |
-| `G` `G`                      | Administration Search Dialog Box |
-| `/`                          | Quick Search                     |
-| `C`                          | Create an Issue                  |
-| `?`                          | Open shortcut help               |
-| `Ctrl` `Alt` `D`             | Dashboards drop-down menu        |
-| `Ctrl` `Alt` `P`             | Projects drop-down menu          |
-| `Ctrl` `Alt` `I`             | Issues drop-down menu            |
-| `Ctrl` `Alt` `G`             | Agile drop-down menu             |
-| `Ctrl` `Alt` `S`             | Form Submit                      |
-| `Ctrl` `Alt` <code>\`</code> | Cancel Form                      |
+| `G` `D`                      | 转到仪表盘                     |
+| `G` `P`                      | 浏览项目                       |
+| `G` `A`                      | 转到敏捷看板                   |
+| `G` `I`                      | 转到问题导航器                 |
+| `G` `G`                      | 管理搜索对话框                 |
+| `/`                          | 快速搜索                       |
+| `C`                          | 创建问题                       |
+| `?`                          | 打开快捷键帮助                 |
+| `Ctrl` `Alt` `D`             | 仪表盘下拉菜单                 |
+| `Ctrl` `Alt` `P`             | 项目下拉菜单                   |
+| `Ctrl` `Alt` `I`             | 问题下拉菜单                   |
+| `Ctrl` `Alt` `G`             | 敏捷看板下拉菜单               |
+| `Ctrl` `Alt` `S`             | 提交表单                       |
+| `Ctrl` `Alt` <code>\`</code> | 取消表单                       |
 
 {.shortcuts}
 
-### Agile Shortcuts
+### 敏捷看板快捷键
 
-| Shortcut | Action                        |
+| 快捷键  | 操作                        |
 | -------- | ----------------------------- |
-| `J`      | Next Issue                    |
-| `K`      | Previous Issue                |
-| `N`      | Next Column                   |
-| `P`      | Previous Column               |
-| `-`      | Expand/Collapse All Swimlanes |
-| `T`      | Hide/Show Detail View         |
-| `O`      | View Issue                    |
-| `Enter`  | Add a New Line                |
-| `Enter`  | Submit changes                |
-| `Esc`    | Cancel changes                |
-| `I`      | Assign to Me                  |
-| `S` `T`  | Send to Top                   |
-| `S` `B`  | Send to Bottom                |
-| `E`      | Edit Issue                    |
-| `Z`      | Projector Mode                |
+| `J`      | 下一个问题                    |
+| `K`      | 上一个问题                    |
+| `N`      | 下一列                        |
+| `P`      | 上一列                        |
+| `-`      | 展开/折叠所有泳道             |
+| `T`      | 隐藏/显示详情视图             |
+| `O`      | 查看问题                      |
+| `Enter`  | 添加新行                      |
+| `Enter`  | 提交更改                      |
+| `Esc`    | 取消更改                      |
+| `I`      | 分配给我                      |
+| `S` `T`  | 发送到顶部                    |
+| `S` `B`  | 发送到末尾                    |
+| `E`      | 编辑问题                      |
+| `Z`      | 投影模式                      |
 
 {.shortcuts}
 
-### Issue Actions and Navigator Shortcuts
+### 问题操作和导航器快捷键
 
-| Shortcut | Action                 |
+| 快捷键  | 操作                 |
 | -------- | ---------------------- |
-| `O`      | View selected issue    |
-| `J`      | Next Issue             |
-| `K`      | Previous Issue         |
-| `U`      | Back to the Navigator  |
-| `[`      | Hide/Show Left Section |
-| `N`      | Next Activity          |
-| `P`      | Previous Activity      |
-| `F`      | Focus search field     |
-| `Esc`    | Escape field           |
-| `E`      | Edit Issue             |
-| `A`      | Assign Issue           |
-| `M`      | Comment on Issue       |
-| `L`      | Edit Issue Labels      |
-| `S`      | Share Issue            |
-| `.`      | Operations dialog box  |
+| `O`      | 查看选定问题           |
+| `J`      | 下一个问题             |
+| `K`      | 上一个问题             |
+| `U`      | 返回导航器             |
+| `[`      | 隐藏/显示左侧区域      |
+| `N`      | 下一个活动             |
+| `P`      | 上一个活动             |
+| `F`      | 聚焦搜索字段           |
+| `Esc`    | 退出字段               |
+| `E`      | 编辑问题               |
+| `A`      | 分配问题               |
+| `M`      | 评论问题               |
+| `L`      | 编辑问题标签           |
+| `S`      | 分享问题               |
+| `.`      | 操作对话框             |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Atlassian's Jira](https://confluence.atlassian.com/agile066/jira-agile-user-s-guide/using-keyboard-shortcuts)
+- [Atlassian Jira 的键盘快捷键](https://confluence.atlassian.com/agile066/jira-agile-user-s-guide/using-keyboard-shortcuts)
   _(confluence.atlassian.com)_

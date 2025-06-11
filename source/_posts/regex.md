@@ -1,450 +1,447 @@
 ---
-title: RegEX
+title: 正则表达式 (RegEX)
 date: 2020-11-25 18:28:43
 background: bg-[#e56d2d]
 tags:
-  - regular expression
+  - 正则表达式
   - regexp
-  - pattern
+  - 模式
 categories:
-  - Toolkit
+  - 工具箱
 intro: |
-  A quick reference for regular expressions (regex), including symbols, ranges, grouping, assertions and some sample patterns to get you started.
+  正则表达式 (regex) 快速参考，包括符号、范围、分组、断言以及一些入门示例模式。
 plugins:
   - copyCode
 ---
 
-<!-- Editor's note: this page uses <yel> (yellow tailwind spans) to color matching text and <red> to color non-matching
-text -->
+<!-- 编者注：此页面使用 <yel> (黄色 tailwind span) 为匹配文本着色，使用 <red> 为不匹配文本着色 -->
 
-## Getting Started
+## 入门指南
 
-### Introduction
+### 简介
 
-This is a quick cheat sheet to getting started with regular expressions.
+这是一个正则表达式入门的快速备忘单。
 
-- [Regex in Python](#regex-in-python) _(cheatsheets.zip)_
-- [Regex in JavaScript](#regex-in-javascript) _(cheatsheets.zip)_
-- [Regex in PHP](#regex-in-php) _(cheatsheets.zip)_
-- [Regex in Java](#regex-in-java) _(cheatsheets.zip)_
-- [Regex in MySQL](#regex-in-mysql) _(cheatsheets.zip)_
-- [Regex in Vim](/vim#search-and-replace) _(cheatsheets.zip)_
-- [Regex in Emacs](/emacs#search) _(cheatsheets.zip)_
-- [Online regex tester](https://regex101.com/) _(regex101.com)_
+- [Python 中的 Regex](#regex-in-python) _(r3f.cn)_
+- [JavaScript 中的 Regex](#regex-in-javascript) _(r3f.cn)_
+- [PHP 中的 Regex](#regex-in-php) _(r3f.cn)_
+- [Java 中的 Regex](#regex-in-java) _(r3f.cn)_
+- [MySQL 中的 Regex](#regex-in-mysql) _(r3f.cn)_
+- [Vim 中的 Regex](/vim#search-and-replace) _(r3f.cn)_
+- [Emacs 中的 Regex](/emacs#search) _(r3f.cn)_
+- [在线 regex 测试器](https://regex101.com/) _(regex101.com)_
 
 {.cols-2 .marker-round}
 
-### Character Classes
+### 字符类
 
-| Pattern       | Description                                                                |
+| 模式          | 描述                                                                       |
 | ------------- | :------------------------------------------------------------------------- |
-| `[abc]`       | A single character of: <yel>a</yel>, <yel>b</yel> or <yel>c</yel>          |
-| `[^abc]`      | A character except: <yel>a</yel>, <yel>b</yel> or <yel>c</yel>             |
-| `[a-z]`       | A character in the range: <yel>a-z</yel>                                   |
-| `[^a-z]`      | A character not in the range: <red>a-z</red>                               |
-| `[0-9]`       | A digit in the range: <yel>0-9</yel>                                       |
-| `[a-zA-Z]`    | A character in the range: <yel>a-z</yel> or <yel>A-Z</yel>                 |
-| `[a-zA-Z0-9]` | A character in the range: <yel>a-z</yel>, <yel>A-Z</yel> or <yel>0-9</yel> |
+| `[abc]`       | 单个字符：<yel>a</yel>、<yel>b</yel> 或 <yel>c</yel>                         |
+| `[^abc]`      | 除 <yel>a</yel>、<yel>b</yel> 或 <yel>c</yel> 之外的字符                    |
+| `[a-z]`       | 范围内的字符：<yel>a-z</yel>                                                  |
+| `[^a-z]`      | 不在范围内的字符：<red>a-z</red>                                              |
+| `[0-9]`       | 范围内的数字：<yel>0-9</yel>                                                  |
+| `[a-zA-Z]`    | 范围内的字符：<yel>a-z</yel> 或 <yel>A-Z</yel>                               |
+| `[a-zA-Z0-9]` | 范围内的字符：<yel>a-z</yel>、<yel>A-Z</yel> 或 <yel>0-9</yel>                |
 
 {.style-list}
 
-### Quantifiers
+### 量词
 
-| Pattern  | Description           |
+| 模式     | 描述              |
 | -------- | :-------------------- |
-| `a?`     | Zero or one of a      |
-| `a*`     | Zero or more of a     |
-| `a+`     | One or more of a      |
-| `[0-9]+` | One or more of 0-9    |
-| `a{3}`   | Exactly 3 of a        |
-| `a{3,}`  | 3 or more of a        |
-| `a{3,6}` | Between 3 and 6 of a  |
-| `a*`     | Greedy quantifier     |
-| `a*?`    | Lazy quantifier       |
-| `a*+`    | Possessive quantifier |
+| `a?`     | 零个或一个 a          |
+| `a*`     | 零个或多个 a          |
+| `a+`     | 一个或多个 a          |
+| `[0-9]+` | 一个或多个 0-9       |
+| `a{3}`   | 正好 3 个 a         |
+| `a{3,}`  | 3 个或更多个 a        |
+| `a{3,6}` | 3 到 6 个 a 之间    |
+| `a*`     | 贪婪量词            |
+| `a*?`    | 懒惰量词            |
+| `a*+`    | 独占量词            |
 
-### Common Metacharacters
-| Pattern  | Description                                |
+### 常用元字符
+| 模式     | 描述                                       |
 | -------- | :----------------------------------------- |
-| `^`     | Matches the start of a string.             |
-| `{`     | Starts a quantifier for the number of occurrences. |
-| `+`     | Matches one or more of the preceding element. |
-| `<`     | Not a standard regex meta character (commonly used in HTML). |
-| `[`     | Starts a character class.                  |
-| `*`     | Matches zero or more of the preceding element. |
-| `)`     | Ends a capturing group.                    |
-| `>`     | Not a standard regex meta character (commonly used in HTML). |
-| `.`     | Matches any character except a newline.    |
-| `(`     | Starts a capturing group.                  |
-| `|`     | Acts as a logical OR within a regex pattern. |
-| `$`     | Matches the end of a string.               |
-| `\`     | Escapes a meta character, giving it literal meaning. |
-| `?`     | Matches zero or one of the preceding element. |
-
+| `^`      | 匹配字符串的开头。                             |
+| `{`      | 开始一个量词，用于指定出现次数。                   |
+| `+`      | 匹配前一个元素一次或多次。                       |
+| `<`      | 不是标准的 regex 元字符（常用于 HTML）。          |
+| `[`      | 开始一个字符类。                               |
+| `*`      | 匹配前一个元素零次或多次。                       |
+| `)`      | 结束一个捕获组。                               |
+| `>`      | 不是标准的 regex 元字符（常用于 HTML）。          |
+| `.`      | 匹配除换行符以外的任何字符。                     |
+| `(`      | 开始一个捕获组。                               |
+| `|`      | 在 regex 模式中充当逻辑或。                    |
+| `$`      | 匹配字符串的结尾。                             |
+| `\`      | 转义一个元字符，使其具有字面意义。                 |
+| `?`      | 匹配前一个元素零次或一次。                       |
 
 {.cols-3 .marker-none}
 
-Escape these special characters with `\`
+使用 `\` 转义这些特殊字符
 
-### Meta Sequences {.row-span-4}
+### 元序列 {.row-span-4}
 
-| Pattern      | Description                                                 |
+| 模式         | 描述                                                        |
 | ------------ | :---------------------------------------------------------- |
-| `.`          | Any single character                                        |
-| `\s`         | Any whitespace character                                    |
-| `\S`         | Any non-whitespace character                                |
-| `\d`         | Any digit, Same as [0-9]                                    |
-| `\D`         | Any non-digit, Same as [^0-9]                               |
-| `\w`         | Any word character                                          |
-| `\W`         | Any non-word character                                      |
-| `\X`         | Any Unicode sequences, linebreaks included                  |
-| `\C`         | Match one data unit                                         |
-| `\R`         | Unicode newlines                                            |
-| `\v`         | Vertical whitespace character                               |
-| `\V`         | Negation of \v - anything except newlines and vertical tabs |
-| `\h`         | Horizontal whitespace character                             |
-| `\H`         | Negation of \h                                              |
-| `\K`         | Reset match                                                 |
-| `\n`         | Match nth subpattern                                        |
-| `\pX`        | Unicode property X                                          |
-| `\p{...}`    | Unicode property or script category                         |
-| `\PX`        | Negation of \pX                                             |
-| `\P{...}`    | Negation of \p                                              |
-| `\Q...\E`    | Quote; treat as literals                                    |
-| `\k<name>`   | Match subpattern `name`                                     |
-| `\k'name'`   | Match subpattern `name`                                     |
-| `\k{name}`   | Match subpattern `name`                                     |
-| `\gn`        | Match nth subpattern                                        |
-| `\g{n}`      | Match nth subpattern                                        |
-| `\g<n>`      | Recurse nth capture group                                   |
-| `\g'n'`      | Recurses nth capture group.                                 |
-| `\g{-n}`     | Match nth relative previous subpattern                      |
-| `\g<+n>`     | Recurse nth relative upcoming subpattern                    |
-| `\g'+n'`     | Match nth relative upcoming subpattern                      |
-| `\g'letter'` | Recurse named capture group `letter`                        |
-| `\g{letter}` | Match previously-named capture group `letter`               |
-| `\g<letter>` | Recurses named capture group `letter`                       |
-| `\xYY`       | Hex character YY                                            |
-| `\x{YYYY}`   | Hex character YYYY                                          |
-| `\ddd`       | Octal character ddd                                         |
-| `\cY`        | Control character Y                                         |
-| `[\b]`       | Backspace character                                         |
-| `\`          | Makes any character literal                                 |
+| `.`          | 任何单个字符                                                |
+| `\s`         | 任何空白字符                                                |
+| `\S`         | 任何非空白字符                                              |
+| `\d`         | 任何数字，与 [0-9] 相同                                     |
+| `\D`         | 任何非数字字符，与 [^0-9] 相同                               |
+| `\w`         | 任何单词字符                                                |
+| `\W`         | 任何非单词字符                                              |
+| `\X`         | 任何 Unicode 序列，包括换行符                               |
+| `\C`         | 匹配一个数据单元                                            |
+| `\R`         | Unicode 换行符                                              |
+| `\v`         | 垂直空白字符                                                |
+| `\V`         | \v 的否定 - 除换行符和垂直制表符外的任何字符                  |
+| `\h`         | 水平空白字符                                                |
+| `\H`         | \h 的否定                                                   |
+| `\K`         | 重置匹配                                                    |
+| `\n`         | 匹配第 n 个子模式                                           |
+| `\pX`        | Unicode 属性 X                                              |
+| `\p{...}`    | Unicode 属性或脚本类别                                      |
+| `\PX`        | \pX 的否定                                                  |
+| `\P{...}`    | \p 的否定                                                   |
+| `\Q...\E`    | 引号；视为字面量                                            |
+| `\k<name>`   | 匹配名为 `name` 的子模式                                    |
+| `\k'name'`   | 匹配名为 `name` 的子模式                                    |
+| `\k{name}`   | 匹配名为 `name` 的子模式                                    |
+| `\gn`        | 匹配第 n 个子模式                                           |
+| `\g{n}`      | 匹配第 n 个子模式                                           |
+| `\g<n>`      | 递归第 n 个捕获组                                           |
+| `\g'n'`      | 递归第 n 个捕获组                                           |
+| `\g{-n}`     | 匹配第 n 个相对前一个子模式                                 |
+| `\g<+n>`     | 递归第 n 个相对后一个子模式                                 |
+| `\g'+n'`     | 匹配第 n 个相对后一个子模式                                 |
+| `\g'letter'` | 递归名为 `letter` 的捕获组                                  |
+| `\g{letter}` | 匹配先前命名的捕获组 `letter`                               |
+| `\g<letter>` | 递归名为 `letter` 的捕获组                                  |
+| `\xYY`       | 十六进制字符 YY                                             |
+| `\x{YYYY}`   | 十六进制字符 YYYY                                           |
+| `\ddd`       | 八进制字符 ddd                                              |
+| `\cY`        | 控制字符 Y                                                  |
+| `[\b]`       | 退格字符                                                    |
+| `\`          | 使任何字符成为字面量                                        |
 
-### Anchors
+### 锚点
 
-| Pattern | Description            |
+| 模式    | 描述                   |
 | ------- | :--------------------- |
-| `\G`    | Start of match         |
-| `^`     | Start of string        |
-| `$`     | End of string          |
-| `\A`    | Start of string        |
-| `\Z`    | End of string          |
-| `\z`    | Absolute end of string |
-| `\b`    | A word boundary        |
-| `\B`    | Non-word boundary      |
+| `\G`    | 匹配的开始             |
+| `^`     | 字符串的开始           |
+| `$`     | 字符串的结束           |
+| `\A`    | 字符串的开始           |
+| `\Z`    | 字符串的结束           |
+| `\z`    | 字符串的绝对结束       |
+| `\b`    | 单词边界               |
+| `\B`    | 非单词边界             |
 
-### Substitution
+### 替换
 
-| Pattern    | Description                     |
+| 模式       | 描述                        |
 | ---------- | :------------------------------ |
-| `\0`       | Complete match contents         |
-| `\1`       | Contents in capture group 1     |
-| `$1`       | Contents in capture group 1     |
-| `${foo}`   | Contents in capture group `foo` |
-| `\x20`     | Hexadecimal replacement values  |
-| `\x{06fa}` | Hexadecimal replacement values  |
-| `\t`       | Tab                             |
-| `\r`       | Carriage return                 |
-| `\n`       | Newline                         |
-| `\f`       | Form-feed                       |
-| `\U`       | Uppercase Transformation        |
-| `\L`       | Lowercase Transformation        |
-| `\E`       | Terminate any Transformation    |
+| `\0`       | 完整匹配内容                    |
+| `\1`       | 捕获组 1 中的内容               |
+| `$1`       | 捕获组 1 中的内容               |
+| `${foo}`   | 捕获组 `foo` 中的内容           |
+| `\x20`     | 十六进制替换值                  |
+| `\x{06fa}` | 十六进制替换值                  |
+| `\t`       | 制表符                          |
+| `\r`       | 回车符                          |
+| `\n`       | 换行符                          |
+| `\f`       | 换页符                          |
+| `\U`       | 大写转换                        |
+| `\L`       | 小写转换                        |
+| `\E`       | 终止任何转换                    |
 
-### Group Constructs
+### 分组构造
 
-| Pattern               | Description                           |
+| 模式                  | 描述                              |
 | --------------------- | :------------------------------------ |
-| `(...)`               | Capture everything enclosed           |
-| <code>(a\|b)</code>   | Match either a or b                   |
-| `(?:...)`             | Match everything enclosed             |
-| `(?>...)`             | Atomic group (non-capturing)          |
-| <code>(?\|...)</code> | Duplicate subpattern group number     |
-| `(?#...)`             | Comment                               |
-| `(?'name'...)`        | Named Capturing Group                 |
-| `(?<name>...)`        | Named Capturing Group                 |
-| `(?P<name>...)`       | Named Capturing Group                 |
-| `(?imsxXU)`           | Inline modifiers                      |
-| `(?(DEFINE)...)`      | Pre-define patterns before using them |
+| `(...)`               | 捕获所有括起来的内容                  |
+| <code>(a\|b)</code>   | 匹配 a 或 b                         |
+| `(?:...)`             | 匹配所有括起来的内容（非捕获）        |
+| `(?>...)`             | 原子组（非捕获）                      |
+| <code>(?\|...)</code> | 重复子模式组号                      |
+| `(?#...)`             | 注释                                |
+| `(?'name'...)`        | 命名捕获组                          |
+| `(?<name>...)`        | 命名捕获组                          |
+| `(?P<name>...)`       | 命名捕获组                          |
+| `(?imsxXU)`           | 内联修饰符                          |
+| `(?(DEFINE)...)`      | 在使用前预定义模式                    |
 
-### Assertions
+### 断言
 
 | -                               | -                               |
 | ------------------------------- | :------------------------------ |
-| <code>(?(1)yes\|no)</code>      | Conditional statement           |
-| <code>(?(R)yes\|no)</code>      | Conditional statement           |
-| <code>(?(R#)yes\|no)</code>     | Recursive Conditional statement |
-| <code>(?(R&name\yes\|no)</code> | Conditional statement           |
-| <code>(?(?=...)yes\|no)</code>  | Lookahead conditional           |
-| <code>(?(?<=...)yes\|no)</code> | Lookbehind conditional          |
+| <code>(?(1)yes\|no)</code>      | 条件语句                          |
+| <code>(?(R)yes\|no)</code>      | 条件语句                          |
+| <code>(?(R#)yes\|no)</code>     | 递归条件语句                      |
+| <code>(?(R&name\yes\|no)</code> | 条件语句                          |
+| <code>(?(?=...)yes\|no)</code>  | 前瞻条件                          |
+| <code>(?(?<=...)yes\|no)</code> | 后顾条件                          |
 
-### Lookarounds
+### 环视 (Lookarounds)
 
 | -          | -                   |
 | ---------- | :------------------ |
-| `(?=...)`  | Positive Lookahead  |
-| `(?!...)`  | Negative Lookahead  |
-| `(?<=...)` | Positive Lookbehind |
-| `(?<!...)` | Negative Lookbehind |
+| `(?=...)`  | 正向前瞻            |
+| `(?!...)`  | 负向前瞻            |
+| `(?<=...)` | 正向后顾            |
+| `(?<!...)` | 负向后顾            |
 
-Lookaround lets you match a group before (lookbehind) or after (lookahead) your main pattern without including it in the
-result.
+环视允许您在主模式之前（后顾）或之后（前瞻）匹配一个组，而不将其包含在结果中。
 
-### Flags/Modifiers
+### 标志/修饰符
 
-| Pattern | Description           |
+| 模式    | 描述                  |
 | ------- | :-------------------- |
-| `g`     | Global                |
-| `m`     | Multiline             |
-| `i`     | Case insensitive      |
-| `x`     | Ignore whitespace     |
-| `s`     | Single line           |
+| `g`     | 全局匹配              |
+| `m`     | 多行模式              |
+| `i`     | 不区分大小写          |
+| `x`     | 忽略空白              |
+| `s`     | 单行模式              |
 | `u`     | Unicode               |
-| `X`     | eXtended              |
-| `U`     | Ungreedy              |
-| `A`     | Anchor                |
-| `J`     | Duplicate group names |
+| `X`     | 扩展模式 (eXtended)   |
+| `U`     | 非贪婪模式            |
+| `A`     | 锚定模式              |
+| `J`     | 重复组名              |
 
-### Recurse
+### 递归
 
 | -           | -                                 |
 | ----------- | :-------------------------------- |
-| `(?R)`      | Recurse entire pattern            |
-| `(?1)`      | Recurse first subpattern          |
-| `(?+1)`     | Recurse first relative subpattern |
-| `(?&name)`  | Recurse subpattern `name`         |
-| `(?P=name)` | Match subpattern `name`           |
-| `(?P>name)` | Recurse subpattern `name`         |
+| `(?R)`      | 递归整个模式                      |
+| `(?1)`      | 递归第一个子模式                  |
+| `(?+1)`     | 递归第一个相对子模式              |
+| `(?&name)`  | 递归名为 `name` 的子模式          |
+| `(?P=name)` | 匹配名为 `name` 的子模式          |
+| `(?P>name)` | 递归名为 `name` 的子模式          |
 
-### POSIX Character Classes {.col-span-2}
+### POSIX 字符类 {.col-span-2}
 
-| Character Class | Same as                                            | Meaning                        |
+| 字符类          | 等同于                                             | 含义                           |
 | --------------- | -------------------------------------------------- | :----------------------------- |
-| `[[:alnum:]]`   | `[0-9A-Za-z]`                                      | Letters and digits             |
-| `[[:alpha:]]`   | `[A-Za-z]`                                         | Letters                        |
-| `[[:ascii:]]`   | `[\x00-\x7F]`                                      | ASCII codes 0-127              |
-| `[[:blank:]]`   | `[\t ]`                                            | Space or tab only              |
-| `[[:cntrl:]]`   | `[\x00-\x1F\x7F]`                                  | Control characters             |
-| `[[:digit:]]`   | `[0-9]`                                            | Decimal digits                 |
-| `[[:graph:]]`   | `[[:alnum:][:punct:]]`                             | Visible characters (not space) |
-| `[[:lower:]]`   | `[a-z]`                                            | Lowercase letters              |
-| `[[:print:]]`   | `[ -~] == [ [:graph:]]`                            | Visible characters             |
-| `[[:punct:]]`   | <code>[!"#$%&’()\*+,-./:;<=>?@[]^\_\`{\|}~]</code> | Visible punctuation characters |
-| `[[:space:]]`   | <code>[\t\n\v\f\r ]</code>                         | Whitespace                     |
-| `[[:upper:]]`   | `[A-Z]`                                            | Uppercase letters              |
-| `[[:word:]]`    | `[0-9A-Za-z_]`                                     | Word characters                |
-| `[[:xdigit:]]`  | `[0-9A-Fa-f]`                                      | Hexadecimal digits             |
-| `[[:<:]]`       | `[\b(?=\w)]`                                       | Start of word                  |
-| `[[:>:]]`       | `[\b(?<=\w)]`                                      | End of word                    |
+| `[[:alnum:]]`   | `[0-9A-Za-z]`                                      | 字母和数字                     |
+| `[[:alpha:]]`   | `[A-Za-z]`                                         | 字母                           |
+| `[[:ascii:]]`   | `[\x00-\x7F]`                                      | ASCII 码 0-127                 |
+| `[[:blank:]]`   | `[\t ]`                                            | 仅空格或制表符                 |
+| `[[:cntrl:]]`   | `[\x00-\x1F\x7F]`                                  | 控制字符                       |
+| `[[:digit:]]`   | `[0-9]`                                            | 十进制数字                     |
+| `[[:graph:]]`   | `[[:alnum:][:punct:]]`                             | 可见字符（非空格）             |
+| `[[:lower:]]`   | `[a-z]`                                            | 小写字母                       |
+| `[[:print:]]`   | `[ -~] == [ [:graph:]]`                            | 可见字符                       |
+| `[[:punct:]]`   | <code>[!"#$%&’()\*+,-./:;<=>?@[]^\_\`{\|}~]</code> | 可见标点字符                   |
+| `[[:space:]]`   | <code>[\t\n\v\f\r ]</code>                         | 空白字符                       |
+| `[[:upper:]]`   | `[A-Z]`                                            | 大写字母                       |
+| `[[:word:]]`    | `[0-9A-Za-z_]`                                     | 单词字符                       |
+| `[[:xdigit:]]`  | `[0-9A-Fa-f]`                                      | 十六进制数字                   |
+| `[[:<:]]`       | `[\b(?=\w)]`                                       | 单词开头                       |
+| `[[:>:]]`       | `[\b(?<=\w)]`                                      | 单词结尾                       |
 
 {.show-header}
 
-### Control verb
+### 控制动词
 
 | -                      | -                     |
 | ---------------------- | :-------------------- |
-| `(*ACCEPT)`            | Control verb          |
-| `(*FAIL)`              | Control verb          |
-| `(*MARK:NAME)`         | Control verb          |
-| `(*COMMIT)`            | Control verb          |
-| `(*PRUNE)`             | Control verb          |
-| `(*SKIP)`              | Control verb          |
-| `(*THEN)`              | Control verb          |
-| `(*UTF)`               | Pattern modifier      |
-| `(*UTF8)`              | Pattern modifier      |
-| `(*UTF16)`             | Pattern modifier      |
-| `(*UTF32)`             | Pattern modifier      |
-| `(*UCP)`               | Pattern modifier      |
-| `(*CR)`                | Line break modifier   |
-| `(*LF)`                | Line break modifier   |
-| `(*CRLF)`              | Line break modifier   |
-| `(*ANYCRLF)`           | Line break modifier   |
-| `(*ANY)`               | Line break modifier   |
-| `\R`                   | Line break modifier   |
-| `(*BSR_ANYCRLF)`       | Line break modifier   |
-| `(*BSR_UNICODE)`       | Line break modifier   |
-| `(*LIMIT_MATCH=x)`     | Regex engine modifier |
-| `(*LIMIT_RECURSION=d)` | Regex engine modifier |
-| `(*NO_AUTO_POSSESS)`   | Regex engine modifier |
-| `(*NO_START_OPT)`      | Regex engine modifier |
+| `(*ACCEPT)`            | 控制动词              |
+| `(*FAIL)`              | 控制动词              |
+| `(*MARK:NAME)`         | 控制动词              |
+| `(*COMMIT)`            | 控制动词              |
+| `(*PRUNE)`             | 控制动词              |
+| `(*SKIP)`              | 控制动词              |
+| `(*THEN)`              | 控制动词              |
+| `(*UTF)`               | 模式修饰符            |
+| `(*UTF8)`              | 模式修饰符            |
+| `(*UTF16)`             | 模式修饰符            |
+| `(*UTF32)`             | 模式修饰符            |
+| `(*UCP)`               | 模式修饰符            |
+| `(*CR)`                | 换行符修饰符          |
+| `(*LF)`                | 换行符修饰符          |
+| `(*CRLF)`              | 换行符修饰符          |
+| `(*ANYCRLF)`           | 换行符修饰符          |
+| `(*ANY)`               | 换行符修饰符          |
+| `\R`                   | 换行符修饰符          |
+| `(*BSR_ANYCRLF)`       | 换行符修饰符          |
+| `(*BSR_UNICODE)`       | 换行符修饰符          |
+| `(*LIMIT_MATCH=x)`     | 正则表达式引擎修饰符  |
+| `(*LIMIT_RECURSION=d)` | 正则表达式引擎修饰符  |
+| `(*NO_AUTO_POSSESS)`   | 正则表达式引擎修饰符  |
+| `(*NO_START_OPT)`      | 正则表达式引擎修饰符  |
 
-## Regex examples{.cols-3}
+## 正则表达式示例 {.cols-3}
 
-### Characters
+### 字符
 
-| Pattern        | Matches                                                   |
+| 模式           | 匹配                                                      |
 | -------------- | :-------------------------------------------------------- |
-| `ring        ` | Match <yel>ring</yel> sp<yel>ring</yel>board etc.         |
-| `.           ` | Match <yel>a</yel>, <yel>9</yel>, <yel>+</yel> etc.       |
-| `h.o         ` | Match <yel>hoo</yel>, <yel>h2o</yel>, <yel>h/o</yel> etc. |
-| `ring\?      ` | Match <yel>ring?</yel>                                    |
-| `\(quiet\)   ` | Match <yel>(quiet)</yel>                                  |
-| `c:\\windows ` | Match <yel>c:\windows</yel>                               |
+| `ring        ` | 匹配 <yel>ring</yel> sp<yel>ring</yel>board 等。         |
+| `.           ` | 匹配 <yel>a</yel>, <yel>9</yel>, <yel>+</yel> 等。       |
+| `h.o         ` | 匹配 <yel>hoo</yel>, <yel>h2o</yel>, <yel>h/o</yel> 等。 |
+| `ring\?      ` | 匹配 <yel>ring?</yel>                                    |
+| `\(quiet\)   ` | 匹配 <yel>(quiet)</yel>                                  |
+| `c:\\windows ` | 匹配 <yel>c:\windows</yel>                               |
 
-Use `\` to search for these special characters: <br> `[ \ ^ $ . | ? * + ( ) { }`
+使用 `\` 搜索这些特殊字符：<br> `[ \ ^ $ . | ? * + ( ) { }`
 
-### Alternatives
+### 多选分支 (Alternatives)
 
-| Pattern                   | Matches                                    |
+| 模式                      | 匹配                                       |
 | ------------------------- | :----------------------------------------- |
-| <code>cat\|dog</code>     | Match <yel>cat</yel> or <yel>dog</yel>     |
-| <code>id\|identity</code> | Match <yel>id</yel> or <yel>id</yel>entity |
-| <code>identity\|id</code> | Match <yel>id</yel> or <yel>identity</yel> |
+| <code>cat\|dog</code>     | 匹配 <yel>cat</yel> 或 <yel>dog</yel>     |
+| <code>id\|identity</code> | 匹配 <yel>id</yel> 或 <yel>id</yel>entity |
+| <code>identity\|id</code> | 匹配 <yel>id</yel> 或 <yel>identity</yel> |
 
-Order longer to shorter when alternatives overlap
+当多选分支重叠时，按从长到短的顺序排列
 
-### Character classes
+### 字符类
 
-| Pattern           | Matches                                                                |
+| 模式              | 匹配                                                                   |
 | ----------------- | :--------------------------------------------------------------------- |
-| `[aeiou]`         | Match any vowel                                                        |
-| `[^aeiou]`        | Match a NON vowel                                                      |
-| `r[iau]ng`        | Match <yel>ring</yel>, w<yel>rang</yel>le, sp<yel>rung</yel>, etc.     |
-| `gr[ae]y`         | Match <yel>gray</yel> or <yel>grey</yel>                               |
-| `[a-zA-Z0-9]`     | Match any letter or digit                                              |
-| `[\u3a00-\ufa99]` | Match any [Unicode Hàn (中文)](https://unicode.org/charts/unihan.html) |
+| `[aeiou]`         | 匹配任何元音字母                                                       |
+| `[^aeiou]`        | 匹配任何非元音字母                                                     |
+| `r[iau]ng`        | 匹配 <yel>ring</yel>, w<yel>rang</yel>le, sp<yel>rung</yel>, 等。     |
+| `gr[ae]y`         | 匹配 <yel>gray</yel> 或 <yel>grey</yel>                               |
+| `[a-zA-Z0-9]`     | 匹配任何字母或数字                                                     |
+| `[\u3a00-\ufa99]` | 匹配任何 [Unicode 韩字 (中文)](https://unicode.org/charts/unihan.html) |
 
-In `[ ]` always escape `. \ ]` and sometimes `^ - .`
+在 `[ ]` 中总是转义 `. \ ]`，有时转义 `^ - .`
 
-### Shorthand classes
+### 简写类
 
-| Pattern          | Meaning                                               |
+| 模式             | 含义                                                  |
 | ---------------- | :---------------------------------------------------- |
-| `\w            ` | "Word" character <br>_(letter, digit, or underscore)_ |
-| `\d            ` | Digit                                                 |
-| `\s            ` | Whitespace <br>_(space, tab, vtab, newline)_          |
-| `\W, \D, or \S ` | Not word, digit, or whitespace                        |
-| `[\D\S]        ` | Means not digit or whitespace, both match             |
-| `[^\d\s]       ` | Disallow digit and whitespace                         |
+| `\w            ` | “单词”字符 <br>_(字母、数字或下划线)_                  |
+| `\d            ` | 数字                                                  |
+| `\s            ` | 空白字符 <br>_(空格、制表符、垂直制表符、换行符)_      |
+| `\W, \D, or \S ` | 非单词、非数字或非空白字符                            |
+| `[\D\S]        ` | 表示非数字或非空白，两者都匹配                        |
+| `[^\d\s]       ` | 不允许数字和空白字符                                  |
 
-### Occurrences
+### 出现次数
 
-| Pattern             | Matches                                                            |
+| 模式                | 匹配                                                               |
 | ------------------- | :----------------------------------------------------------------- |
-| `colou?r`           | Match <yel>color</yel> or <yel>colour</yel>                        |
-| `[BW]ill[ieamy's]*` | Match <yel>Bill</yel>, <yel>Willy</yel>, <yel>William's</yel> etc. |
-| `[a-zA-Z]+`         | Match 1 or more letters                                            |
-| `\d{3}-\d{2}-\d{4}` | Match a SSN                                                        |
-| `[a-z]\w{1,7}`      | Match a UW NetID                                                   |
+| `colou?r`           | 匹配 <yel>color</yel> 或 <yel>colour</yel>                        |
+| `[BW]ill[ieamy's]*` | 匹配 <yel>Bill</yel>, <yel>Willy</yel>, <yel>William's</yel> 等。 |
+| `[a-zA-Z]+`         | 匹配 1 个或多个字母                                                |
+| `\d{3}-\d{2}-\d{4}` | 匹配社会安全号码 (SSN)                                             |
+| `[a-z]\w{1,7}`      | 匹配 UW NetID                                                      |
 
-### Greedy versus lazy
+### 贪婪与懒惰
 
-| Pattern                  | Meaning                                                 |
+| 模式                     | 含义                                                    |
 | ------------------------ | :------------------------------------------------------ |
-| `*  + {n,}`<br>_greedy_  | Match as much as possible                               |
-| `<.+>   `                | Finds 1 big match in <yel>\<b>bold\<\/b></yel>          |
-| `*?  +? {n,}?`<br>_lazy_ | Match as little as possible                             |
-| `<.+?>`                  | Finds 2 matches in \<<yel>b</yel>>bold\<<yel>\/b</yel>> |
+| `*  + {n,}`<br>_贪婪_    | 尽可能多地匹配                                          |
+| `<.+>   `                | 在 <yel>\<b>bold\<\/b></yel> 中找到 1 个大的匹配        |
+| `*?  +? {n,}?`<br>_懒惰_ | 尽可能少地匹配                                          |
+| `<.+?>`                  | 在 \<<yel>b</yel>>bold\<<yel>\/b</yel>> 中找到 2 个匹配 |
 
-### Scope {.col-span-2}
+### 范围 (Scope) {.col-span-2}
 
-| Pattern            | Meaning                                                                                 |
+| 模式               | 含义                                                                                    |
 | ------------------ | :-------------------------------------------------------------------------------------- |
-| `\b              ` | "Word" edge (next to non "word" character)                                              |
-| `\bring          ` | Word starts with "ring", ex <yel>ringtone</yel>                                         |
-| `ring\b          ` | Word ends with "ring", ex <yel>spring</yel>                                             |
-| `\b9\b           ` | Match single digit <yel>9</yel>, not <red>19</red>, <red>91</red>, <red>99</red>, etc.. |
-| `\b[a-zA-Z]{6}\b ` | Match 6-letter words                                                                    |
-| `\B              ` | Not word edge                                                                           |
-| `\Bring\B        ` | Match <yel>springs</yel> and <yel>wringer</yel>                                         |
-| `^\d*$           ` | Entire string must be digits                                                            |
-| `^[a-zA-Z]{4,20}$` | String must have 4-20 letters                                                           |
-| `^[A-Z]          ` | String must begin with capital letter                                                   |
-| `[\.!?"')]$      ` | String must end with terminal puncutation                                               |
+| `\b              ` | “单词”边界 (与非“单词”字符相邻)                                                         |
+| `\bring          ` | 以 "ring" 开头的单词，例如 <yel>ringtone</yel>                                          |
+| `ring\b          ` | 以 "ring" 结尾的单词，例如 <yel>spring</yel>                                            |
+| `\b9\b           ` | 匹配单个数字 <yel>9</yel>，而不是 <red>19</red>、<red>91</red>、<red>99</red> 等。      |
+| `\b[a-zA-Z]{6}\b ` | 匹配 6 个字母的单词                                                                     |
+| `\B              ` | 非单词边界                                                                              |
+| `\Bring\B        ` | 匹配 <yel>springs</yel> 和 <yel>wringer</yel>                                         |
+| `^\d*$           ` | 整个字符串必须是数字                                                                    |
+| `^[a-zA-Z]{4,20}$` | 字符串必须有 4-20 个字母                                                                |
+| `^[A-Z]          ` | 字符串必须以大写字母开头                                                                |
+| `[\.!?"')]$      ` | 字符串必须以终端标点符号结尾                                                            |
 
-### Modifiers
+### 修饰符
 
-| Pattern              | Meaning                                                  |
+| 模式                 | 含义                                                     |
 | -------------------- | :------------------------------------------------------- |
-| `(?i)`[a-z]\*`(?-i)` | Ignore case ON / OFF                                     |
-| `(?s)`.\*`(?-s)`     | Match multiple lines (causes . to match newline)         |
-| `(?m)`^.\*;$`(?-m)`  | <yel>^</yel> & <yel>$</yel> match lines not whole string |
-| `(?x)`               | #free-spacing mode, this EOL comment ignored             |
-| `(?-x)`              | free-spacing mode OFF                                    |
-| /regex/`ismx`        | Modify mode for entire string                            |
+| `(?i)`[a-z]\*`(?-i)` | 忽略大小写 开 / 关                                       |
+| `(?s)`.\*`(?-s)`     | 匹配多行 (导致 . 匹配换行符)                             |
+| `(?m)`^.\*;$`(?-m)`  | <yel>^</yel> & <yel>$</yel> 匹配行而不是整个字符串        |
+| `(?x)`               | #自由间距模式，此行尾注释被忽略                            |
+| `(?-x)`              | 自由间距模式 关                                          |
+| /regex/`ismx`        | 修改整个字符串的模式                                     |
 
-### Groups
+### 分组
 
-| Pattern                   | Meaning                                     |
+| 模式                      | 含义                                        |
 | ------------------------- | :------------------------------------------ |
-| <code>(in\|out)put</code> | Match <yel>input</yel> or <yel>output</yel> |
-| `\d{5}(-\d{4})?`          | US zip code _("+ 4" optional)_              |
+| <code>(in\|out)put</code> | 匹配 <yel>input</yel> 或 <yel>output</yel> |
+| `\d{5}(-\d{4})?`          | 美国邮政编码 _("+ 4" 可选)_                 |
 
-Parser tries EACH alternative if match fails after group. <br> Can lead to catastrophic backtracking.
+如果匹配在组后失败，解析器会尝试每个备选项。<br> 可能导致灾难性回溯。
 
-### Back references
+### 反向引用
 
-| Pattern                  | Matches                                                                     |
+| 模式                     | 匹配                                                                        |
 | ------------------------ | :-------------------------------------------------------------------------- |
-| `(to) (be) or not \1 \2` | Match <yel>to be or not to be</yel>                                         |
-| `([^\s])\1{2}`           | Match non-space, then same twice more &nbsp; <yel>aaa</yel>, <yel>...</yel> |
-| `\b(\w+)\s+\1\b`         | Match doubled words                                                         |
+| `(to) (be) or not \1 \2` | 匹配 <yel>to be or not to be</yel>                                         |
+| `([^\s])\1{2}`           | 匹配非空格字符，然后是相同的字符两次 &nbsp; <yel>aaa</yel>, <yel>...</yel> |
+| `\b(\w+)\s+\1\b`         | 匹配重复的单词                                                              |
 
-### Non-capturing group
+### 非捕获组
 
-| Pattern                        | Meaning                            |
+| 模式                           | 含义                               |
 | ------------------------------ | :--------------------------------- |
-| <code>on(?:click\|load)</code> | Faster than: <br>`on(click\|load)` |
+| <code>on(?:click\|load)</code> | 比以下更快：<br>`on(click\|load)` |
 
-Use non-capturing or atomic groups when possible
+尽可能使用非捕获组或原子组
 
-### Atomic groups
+### 原子组
 
-| Pattern                           | Meaning                                          |
+| 模式                              | 含义                                             |
 | --------------------------------- | :----------------------------------------------- |
-| <code>(?>red\|green\|blue)</code> | Faster than non-capturing                        |
-| <code>(?>id\|identity)\b</code>   | Match <yel>id</yel>, but not <red>id</red>entity |
+| <code>(?>red\|green\|blue)</code> | 比非捕获组更快                                   |
+| <code>(?>id\|identity)\b</code>   | 匹配 <yel>id</yel>，但不匹配 <red>id</red>entity |
 
-"id" matches, but `\b` fails after atomic group, parser doesn't backtrack into group to retry 'identity'
+"id" 匹配，但在原子组之后 `\b` 失败，解析器不会回溯到组中重试 'identity'
 
-If alternatives overlap, order longer to shorter.
+如果备选项重叠，则按从长到短的顺序排列。
 
-### Lookaround {.row-span-2 .col-span-2}
+### 环视 (Lookaround) {.row-span-2 .col-span-2}
 
-| Pattern                 | Meaning                                                               |
+| 模式                    | 含义                                                                  |
 | ----------------------- | :-------------------------------------------------------------------- |
-| `(?= )`                 | Lookahead, if you can find ahead                                      |
-| `(?! )`                 | Lookahead,if you can not find ahead                                   |
-| `(?<= )`                | Lookbehind, if you can find behind                                    |
-| `(?<! )`                | Lookbehind, if you can NOT find behind                                |
-| `\b\w+?(?=ing\b)`       | Match <yel>warbl</yel>ing, <yel>str</yel>ing, <yel>fish</yel>ing, ... |
-| `\b(?!\w+ing\b)\w+\b`   | Words NOT ending in <red>ing</red>                                    |
-| `(?<=\bpre).*?\b `      | Match pre<yel>tend</yel>, pre<yel>sent</yel>, pre<yel>fix</yel>, ...  |
-| `\b\w{3}(?<!pre)\w*?\b` | Words NOT starting with <red>pre</red>                                |
-| `\b\w+(?<!ing)\b`       | Match words NOT ending in <red>ing</red>                              |
+| `(?= )`                 | 前瞻，如果能在前面找到                                                  |
+| `(?! )`                 | 前瞻，如果不能在前面找到                                                |
+| `(?<= )`                | 后顾，如果能在后面找到                                                  |
+| `(?<! )`                | 后顾，如果不能在后面找到                                                |
+| `\b\w+?(?=ing\b)`       | 匹配 <yel>warbl</yel>ing, <yel>str</yel>ing, <yel>fish</yel>ing, ... |
+| `\b(?!\w+ing\b)\w+\b`   | 不以 <red>ing</red> 结尾的单词                                        |
+| `(?<=\bpre).*?\b `      | 匹配 pre<yel>tend</yel>, pre<yel>sent</yel>, pre<yel>fix</yel>, ...  |
+| `\b\w{3}(?<!pre)\w*?\b` | 不以 <red>pre</red> 开头的单词                                        |
+| `\b\w+(?<!ing)\b`       | 匹配不以 <red>ing</red> 结尾的单词                                    |
 
 ### If-then-else
 
-Match "Mr." or "Ms." if word "her" is later in string
+如果字符串后面出现单词 "her"，则匹配 "Mr." 或 "Ms."
 
 ```regex
 M(?(?=.*?\bher\b)s|r)\.
 ```
 
-requires lookaround for IF condition
+IF 条件需要环视
 
-## RegEx in Python
+## Python 中的 RegEx
 
-### Getting started
+### 入门
 
-Import the regular expressions module
+导入正则表达式模块
 
 ```python
 import re
 ```
 
-### Examples {.col-span-2 .row-span-3}
+### 示例 {.col-span-2 .row-span-3}
 
 #### re.search()
 
@@ -502,30 +499,30 @@ True
 False
 ```
 
-### Functions
+### 函数
 
-| Function      | Description                                                       |
+| 函数          | 描述                                                              |
 | ------------- | :---------------------------------------------------------------- |
-| `re.findall`  | Returns a list containing all matches                             |
-| `re.finditer` | Return an iterable of match objects (one for each match)          |
-| `re.search`   | Returns a Match object if there is a match anywhere in the string |
-| `re.split`    | Returns a list where the string has been split at each match      |
-| `re.sub`      | Replaces one or many matches with a string                        |
-| `re.compile`  | Compile a regular expression pattern for later use                |
-| `re.escape`   | Return string with all non-alphanumerics backslashed              |
+| `re.findall`  | 返回包含所有匹配项的列表                                          |
+| `re.finditer` | 返回匹配对象的可迭代对象（每个匹配项一个）                        |
+| `re.search`   | 如果字符串中任何位置有匹配，则返回一个 Match 对象                 |
+| `re.split`    | 返回一个列表，其中字符串已在每个匹配处拆分                        |
+| `re.sub`      | 用字符串替换一个或多个匹配项                                      |
+| `re.compile`  | 编译正则表达式模式以供后续使用                                    |
+| `re.escape`   | 返回所有非字母数字字符都已反斜杠转义的字符串                      |
 
-### Flags
+### 标志
 
 | -      | -               | -                                            |
 | ------ | --------------- | :------------------------------------------- |
-| `re.I` | `re.IGNORECASE` | Ignore case                                  |
-| `re.M` | `re.MULTILINE`  | Multiline                                    |
-| `re.L` | `re.LOCALE`     | Make `\w`,`\b`,`\s` _locale dependent_       |
-| `re.S` | `re.DOTALL`     | Dot matches all _(including newline)_        |
-| `re.U` | `re.UNICODE`    | Make `\w`,`\b`,`\d`,`\s` _unicode dependent_ |
-| `re.X` | `re.VERBOSE`    | Readable style                               |
+| `re.I` | `re.IGNORECASE` | 忽略大小写                                   |
+| `re.M` | `re.MULTILINE`  | 多行模式                                     |
+| `re.L` | `re.LOCALE`     | 使 `\w`、`\b`、`\s` _依赖于区域设置_          |
+| `re.S` | `re.DOTALL`     | 点号匹配所有字符 _(包括换行符)_              |
+| `re.U` | `re.UNICODE`    | 使 `\w`、`\b`、`\d`、`\s` _依赖于 Unicode_    |
+| `re.X` | `re.VERBOSE`    | 可读样式                                     |
 
-## Regex in JavaScript
+## JavaScript 中的 Regex
 
 ### test()
 
@@ -534,10 +531,10 @@ let textA = "I like APPles very much";
 let textB = "I like APPles";
 let regex = /apples$/i;
 
-// Output: false
+// 输出: false
 console.log(regex.test(textA));
 
-// Output: true
+// 输出: true
 console.log(regex.test(textB));
 ```
 
@@ -548,10 +545,10 @@ let text = "I like APPles very much";
 let regexA = /apples/;
 let regexB = /apples/i;
 
-// Output: -1
+// 输出: -1
 console.log(text.search(regexA));
 
-// Output: 7
+// 输出: 7
 console.log(text.search(regexB));
 ```
 
@@ -561,10 +558,10 @@ console.log(text.search(regexB));
 let text = "Do you like apples?";
 let regex = /apples/;
 
-// Output: apples
+// 输出: apples
 console.log(regex.exec(text)[0]);
 
-// Output: Do you like apples?
+// 输出: Do you like apples?
 console.log(regex.exec(text).input);
 ```
 
@@ -574,7 +571,7 @@ console.log(regex.exec(text).input);
 let text = "Here are apples and apPleS";
 let regex = /apples/gi;
 
-// Output: [ "apples", "apPleS" ]
+// 输出: [ "apples", "apPleS" ]
 console.log(text.match(regex));
 ```
 
@@ -584,7 +581,7 @@ console.log(text.match(regex));
 let text = "This 593 string will be brok294en at places where d1gits are.";
 let regex = /\d+/g;
 
-// Output: [ "This ", " string will be brok", "en at places where d", "gits are." ]
+// 输出: [ "This ", " string will be brok", "en at places where d", "gits are." ]
 console.log(text.split(regex));
 ```
 
@@ -595,10 +592,10 @@ let regex = /t(e)(st(\d?))/g;
 let text = "test1test2";
 let array = [...text.matchAll(regex)];
 
-// Output: ["test1", "e", "st1", "1"]
+// 输出: ["test1", "e", "st1", "1"]
 console.log(array[0]);
 
-// Output: ["test2", "e", "st2", "2"]
+// 输出: ["test2", "e", "st2", "2"]
 console.log(array[1]);
 ```
 
@@ -608,7 +605,7 @@ console.log(array[1]);
 let text = "Do you like aPPles?";
 let regex = /apples/i;
 
-// Output: Do you like mangoes?
+// 输出: Do you like mangoes?
 let result = text.replace(regex, "mangoes");
 console.log(result);
 ```
@@ -619,23 +616,23 @@ console.log(result);
 let regex = /apples/gi;
 let text = "Here are apples and apPleS";
 
-// Output: Here are mangoes and mangoes
+// 输出: Here are mangoes and mangoes
 let result = text.replaceAll(regex, "mangoes");
 console.log(result);
 ```
 
-## Regex in PHP
+## PHP 中的 Regex
 
-### Functions {.col-span-2}
+### 函数 {.col-span-2}
 
 | -                         | -                                                                |
 | ------------------------- | :--------------------------------------------------------------- |
-| `preg_match()`            | Performs a regex match                                           |
-| `preg_match_all()`        | Perform a global regular expression match                        |
-| `preg_replace_callback()` | Perform a regular expression search and replace using a callback |
-| `preg_replace()`          | Perform a regular expression search and replace                  |
-| `preg_split()`            | Splits a string by regex pattern                                 |
-| `preg_grep()`             | Returns array entries that match a pattern                       |
+| `preg_match()`            | 执行正则表达式匹配                                               |
+| `preg_match_all()`        | 执行全局正则表达式匹配                                           |
+| `preg_replace_callback()` | 使用回调函数执行正则表达式搜索和替换                             |
+| `preg_replace()`          | 执行正则表达式搜索和替换                                         |
+| `preg_split()`            | 按正则表达式模式拆分字符串                                       |
+| `preg_grep()`             | 返回与模式匹配的数组条目                                         |
 
 ### preg_replace
 
@@ -643,7 +640,7 @@ console.log(result);
 $str = "Visit Microsoft!";
 $regex = "/microsoft/i";
 
-// Output: Visit CheatSheets!
+// 输出: Visit CheatSheets!
 echo preg_replace($regex, "CheatSheets", $str);
 ```
 
@@ -653,7 +650,7 @@ echo preg_replace($regex, "CheatSheets", $str);
 $str = "Visit CheatSheets";
 $regex = "#cheatsheets#i";
 
-// Output: 1
+// 输出: 1
 echo preg_match($regex, $str);
 ```
 
@@ -664,16 +661,16 @@ $regex = "/[a-zA-Z]+ (\d+)/";
 $input_str = "June 24, August 13, and December 30";
 if (preg_match_all($regex, $input_str, $matches_out)) {
 
-    // Output: 2
+    // 输出: 2
     echo count($matches_out);
 
-    // Output: 3
+    // 输出: 3
     echo count($matches_out[0]);
 
-    // Output: Array("June 24", "August 13", "December 30")
+    // 输出: Array("June 24", "August 13", "December 30")
     print_r($matches_out[0]);
 
-    // Output: Array("24", "13", "30")
+    // 输出: Array("24", "13", "30")
     print_r($matches_out[1]);
 }
 ```
@@ -684,7 +681,7 @@ if (preg_match_all($regex, $input_str, $matches_out)) {
 $arr = ["Jane", "jane", "Joan", "JANE"];
 $regex = "/Jane/";
 
-// Output: Jane
+// 输出: Jane
 echo preg_grep($regex, $arr);
 ```
 
@@ -694,50 +691,50 @@ echo preg_grep($regex, $arr);
 $str = "Jane\tKate\nLucy Marion";
 $regex = "@\s@";
 
-// Output: Array("Jane", "Kate", "Lucy", "Marion")
+// 输出: Array("Jane", "Kate", "Lucy", "Marion")
 print_r(preg_split($regex, $str));
 ```
 
-## Regex in Java
+## Java 中的 Regex
 
-### Styles {.col-span-2}
+### 样式 {.col-span-2}
 
-#### First way
+#### 第一种方式
 
 ```java
 Pattern p = Pattern.compile(".s", Pattern.CASE_INSENSITIVE);
 Matcher m = p.matcher("aS");
 boolean s1 = m.matches();
-System.out.println(s1);   // Outputs: true
+System.out.println(s1);   // 输出: true
 ```
 
-#### Second way
+#### 第二种方式
 
 ```java
 boolean s2 = Pattern.compile("[0-9]+").matcher("123").matches();
-System.out.println(s2);   // Outputs: true
+System.out.println(s2);   // 输出: true
 ```
 
-#### Third way
+#### 第三种方式
 
 ```java
 boolean s3 = Pattern.matches(".s", "XXXX");
-System.out.println(s3);   // Outputs: false
+System.out.println(s3);   // 输出: false
 ```
 
-### Pattern Fields
+### Pattern 字段
 
 | -                  | -                               |
 | ------------------ | :------------------------------ |
-| `CANON_EQ`         | Canonical equivalence           |
-| `CASE_INSENSITIVE` | Case-insensitive matching       |
-| `COMMENTS`         | Permits whitespace and comments |
-| `DOTALL`           | Dotall mode                     |
-| `MULTILINE`        | Multiline mode                  |
-| `UNICODE_CASE`     | Unicode-aware case folding      |
-| `UNIX_LINES`       | Unix lines mode                 |
+| `CANON_EQ`         | 规范等价                        |
+| `CASE_INSENSITIVE` | 不区分大小写匹配                |
+| `COMMENTS`         | 允许空白和注释                  |
+| `DOTALL`           | Dotall 模式                     |
+| `MULTILINE`        | 多行模式                        |
+| `UNICODE_CASE`     | Unicode 感知的大小写折叠        |
+| `UNIX_LINES`       | Unix 行模式                     |
 
-### Methods
+### 方法
 
 #### Pattern
 
@@ -760,11 +757,11 @@ System.out.println(s3);   // Outputs: false
 - String replaceAll(String regex, String replacement)
 - String[] split(String regex[, int limit])
 
-There are more methods ...
+还有更多方法...
 
-### Examples {.col-span-2}
+### 示例 {.col-span-2}
 
-Replace sentence:
+替换句子：
 
 ```java
 String regex = "[A-Z\n]{5}$";
@@ -773,11 +770,11 @@ String str = "I like APP\nLE";
 Pattern p = Pattern.compile(regex, Pattern.MULTILINE);
 Matcher m = p.matcher(str);
 
-// Outputs: I like Apple!
+// 输出: I like Apple!
 System.out.println(m.replaceAll("pple!"));
 ```
 
-Array of all matches:
+所有匹配项的数组：
 
 ```java
 String str = "She sells seashells by the Seashore";
@@ -791,21 +788,21 @@ while (m.find()) {
     matches.add(m.group());
 }
 
-// Outputs: [sells, seashells, Seashore]
+// 输出: [sells, seashells, Seashore]
 System.out.println(matches);
 ```
 
-## Regex in MySQL {.cols-2}
+## MySQL 中的 Regex {.cols-2}
 
-### Functions
+### 函数
 
-| Name               | Description                                                              |
+| 名称               | 描述                                                                     |
 | ------------------ | :----------------------------------------------------------------------- |
-| `REGEXP          ` | Whether string matches regex                                             |
-| `REGEXP_INSTR()  ` | Starting index of substring matching regex <br>_(NOTE: Only MySQL 8.0+)_ |
-| `REGEXP_LIKE()   ` | Whether string matches regex <br>_(NOTE: Only MySQL 8.0+)_               |
-| `REGEXP_REPLACE()` | Replace substrings matching regex <br>_(NOTE: Only MySQL 8.0+)_          |
-| `REGEXP_SUBSTR() ` | Return substring matching regex <br>_(NOTE: Only MySQL 8.0+)_            |
+| `REGEXP          ` | 字符串是否匹配正则表达式                                                 |
+| `REGEXP_INSTR()  ` | 匹配正则表达式的子字符串的起始索引 <br>_(注意：仅限 MySQL 8.0+)_         |
+| `REGEXP_LIKE()   ` | 字符串是否匹配正则表达式 <br>_(注意：仅限 MySQL 8.0+)_                   |
+| `REGEXP_REPLACE()` | 替换匹配正则表达式的子字符串 <br>_(注意：仅限 MySQL 8.0+)_               |
+| `REGEXP_SUBSTR() ` | 返回匹配正则表达式的子字符串 <br>_(注意：仅限 MySQL 8.0+)_               |
 
 ### REGEXP
 
@@ -813,7 +810,7 @@ System.out.println(matches);
 expr REGEXP pat
 ```
 
-#### Examples
+#### 示例
 
 ```sql
 mysql> SELECT 'abc' REGEXP '^[a-d]';
@@ -831,7 +828,7 @@ mysql> SELECT 'a' REGEXP 'A', 'a' REGEXP BINARY 'A';
 REGEXP_REPLACE(expr, pat, repl[, pos[, occurrence[, match_type]]])
 ```
 
-#### Examples
+#### 示例
 
 ```sql
 mysql> SELECT REGEXP_REPLACE('a b c', 'b', 'X');
@@ -846,7 +843,7 @@ abc X
 REGEXP_SUBSTR(expr, pat[, pos[, occurrence[, match_type]]])
 ```
 
-#### Examples
+#### 示例
 
 ```sql
 mysql> SELECT REGEXP_SUBSTR('abc def ghi', '[a-z]+');
@@ -861,17 +858,17 @@ ghi
 REGEXP_LIKE(expr, pat[, match_type])
 ```
 
-#### Examples
+#### 示例
 
 ```sql
 mysql> SELECT regexp_like('aba', 'b+')
 1
 mysql> SELECT regexp_like('aba', 'b{2}')
 0
-mysql> # i: case-insensitive
+mysql> # i: 不区分大小写
 mysql> SELECT regexp_like('Abba', 'ABBA', 'i');
 1
-mysql> # m: multi-line
+mysql> # m: 多行模式
 mysql> SELECT regexp_like('a\nb\nc', '^b$', 'm');
 1
 ```
@@ -882,7 +879,7 @@ mysql> SELECT regexp_like('a\nb\nc', '^b$', 'm');
 REGEXP_INSTR(expr, pat[, pos[, occurrence[, return_option[, match_type]]]])
 ```
 
-#### Examples
+#### 示例
 
 ```sql
 mysql> SELECT regexp_instr('aa aaa aaaa', 'a{3}');

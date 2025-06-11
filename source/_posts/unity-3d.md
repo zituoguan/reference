@@ -7,113 +7,113 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 50 keyboard shortcuts found in Unity 3D
+  Unity 3D 中 50 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Tools
+### 工具
 
-| Shortcut              | Action                |
+| 快捷键                | 操作                  |
 | --------------------- | --------------------- |
-| `Q`                   | Pan                   |
-| `W`                   | Move                  |
-| `E`                   | Rotate                |
-| `R`                   | Scale                 |
-| `T`                   | Rect tool             |
-| `Z`                   | Pivot mode toggle     |
-| `X`                   | Pivot rotation toggle |
-| `V`                   | Vertex snap           |
-| `Ctrl` `(left click)` | Snap                  |
+| `Q`                   | 平移                  |
+| `W`                   | 移动                  |
+| `E`                   | 旋转                  |
+| `R`                   | 缩放                  |
+| `T`                   | 矩形工具              |
+| `Z`                   | 轴心模式切换          |
+| `X`                   | 轴心旋转切换          |
+| `V`                   | 顶点吸附              |
+| `Ctrl` `(左键单击)` | 吸附                  |
 
 {.shortcuts}
 
-### GameObject
+### 游戏对象
 
-| Shortcut           | Action                                                 |
+| 快捷键             | 操作                                                 |
 | ------------------ | ------------------------------------------------------ |
-| `Ctrl` `Shift` `N` | New empty game object                                  |
-| `Alt` `Shift` `N`  | New empty child to selected game object                |
-| `Ctrl` `Alt` `F`   | Move to view                                           |
-| `Ctrl` `Shift` `F` | Align with view                                        |
-| `Shift` `F`        | Locks the scene view camera to the selected GameObject |
+| `Ctrl` `Shift` `N` | 新建空游戏对象                                         |
+| `Alt` `Shift` `N`  | 为选定游戏对象新建空子对象                             |
+| `Ctrl` `Alt` `F`   | 移动到视图                                             |
+| `Ctrl` `Shift` `F` | 与视图对齐                                             |
+| `Shift` `F`        | 将场景视图摄像机锁定到选定的游戏对象                   |
 
 {.shortcuts}
 
-### Window
+### 窗口
 
-| Shortcut           | Action          |
+| 快捷键             | 操作          |
 | ------------------ | --------------- |
-| `Ctrl` `1`         | Scene           |
-| `Ctrl` `2`         | Game            |
-| `Ctrl` `3`         | Inspector       |
-| `Ctrl` `4`         | Hierarchy       |
-| `Ctrl` `5`         | Project         |
-| `Ctrl` `6`         | Animation       |
-| `Ctrl` `7`         | Profiler        |
-| `Ctrl` `9`         | Asset store     |
-| `Ctrl` `0`         | Version control |
-| `Ctrl` `Shift` `C` | Console         |
+| `Ctrl` `1`         | 场景          |
+| `Ctrl` `2`         | 游戏          |
+| `Ctrl` `3`         | 检视面板      |
+| `Ctrl` `4`         | 层级面板      |
+| `Ctrl` `5`         | 项目面板      |
+| `Ctrl` `6`         | 动画          |
+| `Ctrl` `7`         | 分析器        |
+| `Ctrl` `9`         | 资源商店      |
+| `Ctrl` `0`         | 版本控制      |
+| `Ctrl` `Shift` `C` | 控制台        |
 
 {.shortcuts}
 
-### Edit {.row-span-2}
+### 编辑 {.row-span-2}
 
-| Shortcut           | Action                 |
+| 快捷键             | 操作                 |
 | ------------------ | ---------------------- |
-| `Ctrl` `Z`         | Undo                   |
-| `Ctrl` `Shift` `Z` | Redo (MacOS)           |
-| `Ctrl` `Y`         | Redo (Windows)         |
-| `Ctrl` `X`         | Cut                    |
-| `Ctrl` `C`         | Copy                   |
-| `Ctrl` `V`         | Paste                  |
-| `Ctrl` `D`         | Duplicate              |
-| `Shift` `Del`      | Delete                 |
-| `F`                | Frame center selection |
-| `Ctrl` `F`         | Find                   |
-| `Ctrl` `A`         | Select all             |
-| `Ctrl` `P`         | Play                   |
-| `Ctrl` `Shift` `P` | Pause                  |
-| `Ctrl` `Alt` `P`   | Step                   |
+| `Ctrl` `Z`         | 撤销                   |
+| `Ctrl` `Shift` `Z` | 重做 (MacOS)           |
+| `Ctrl` `Y`         | 重做 (Windows)         |
+| `Ctrl` `X`         |剪切                   |
+| `Ctrl` `C`         | 复制                   |
+| `Ctrl` `V`         | 粘贴                   |
+| `Ctrl` `D`         | 复制                   |
+| `Shift` `Del`      | 删除                   |
+| `F`                | 框选居中               |
+| `Ctrl` `F`         | 查找                   |
+| `Ctrl` `A`         | 全选                   |
+| `Ctrl` `P`         | 播放                   |
+| `Ctrl` `Shift` `P` | 暂停                   |
+| `Ctrl` `Alt` `P`   | 步进                   |
 
 {.shortcuts}
 
-### Selection
+### 选择
 
-| Shortcut             | Action             |
+| 快捷键               | 操作               |
 | -------------------- | ------------------ |
-| `Ctrl` `Shift` `1-9` | Load selection 1-9 |
-| `Ctrl` `Alt` `1-9`   | Save selection 1-9 |
+| `Ctrl` `Shift` `1-9` | 加载选择 1-9       |
+| `Ctrl` `Alt` `1-9`   | 保存选择 1-9       |
 
 {.shortcuts}
 
-### Assets
+### 资源
 
-| Shortcut   | Action  |
+| 快捷键     | 操作  |
 | ---------- | ------- |
-| `Ctrl` `R` | Refresh |
+| `Ctrl` `R` | 刷新  |
 
 {.shortcuts}
 
-### Animation
+### 动画
 
-| Shortcut    | Action            |
+| 快捷键      | 操作              |
 | ----------- | ----------------- |
-| `Shift` `,` | First keyframe    |
-| `Shift` `K` | Key modified      |
-| `K`         | Key selected      |
-| `Shift` `.` | Last keyframe     |
-| `.`         | Next frame        |
-| `Alt` `.`   | Next keyframe     |
-| `Space`     | Play animation    |
-| `,`         | Previous frame    |
-| `Alt` `,`   | Previous keyframe |
+| `Shift` `,` | 第一帧            |
+| `Shift` `K` | 修改的帧          |
+| `K`         | 选定的帧          |
+| `Shift` `.` | 最后一帧          |
+| `.`         | 下一帧            |
+| `Alt` `.`   | 下一个关键帧      |
+| `Space`     | 播放动画          |
+| `,`         | 上一帧            |
+| `Alt` `,`   | 上一个关键帧      |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Unity 3D](https://docs.unity3d.com/2018.1/Documentation/Manual/UnityHotkeys.html)
+- [Unity 3D 键盘快捷键](https://docs.unity3d.com/2018.1/Documentation/Manual/UnityHotkeys.html)
   _(docs.unity3d.com)_

@@ -9,116 +9,116 @@ tags:
 categories:
   - Keyboard Shortcuts
 intro: |
-  A visual cheat-sheet for the 48 keyboard shortcuts found in Proto.io
+  Proto.io 中的 48 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Main
+### 主要
 
-| Shortcut           | Action                  |
+| 快捷键             | 操作                  |
 | ------------------ | ----------------------- |
-| `Ctrl` `F`         | Find                    |
-| `Ctrl` `K`         | Show keyboard shortcuts |
-| `Ctrl` `S`         | Save                    |
-| `Esc`              | Close modal windows     |
-| `Shift` `P`        | Preview                 |
-| `Ctrl` `Shift` `S` | Save and Preview        |
+| `Ctrl` `F`         | 查找                    |
+| `Ctrl` `K`         | 显示键盘快捷键          |
+| `Ctrl` `S`         | 保存                    |
+| `Esc`              | 关闭模态窗口            |
+| `Shift` `P`        | 预览                    |
+| `Ctrl` `Shift` `S` | 保存并预览              |
 
 {.shortcuts}
 
-### History
+### 历史记录
 
-| Shortcut           | Action                |
+| 快捷键             | 操作                  |
 | ------------------ | --------------------- |
-| `Ctrl` `Z`         | Undo                  |
-| `Ctrl` `Shift` `Z` | Redo                  |
-| `Ctrl` `[`         | Go to previous canvas |
-| `Ctrl` `]`         | Go to next canvas     |
+| `Ctrl` `Z`         | 撤销                  |
+| `Ctrl` `Shift` `Z` | 重做                  |
+| `Ctrl` `[`         | 转到上一个画布        |
+| `Ctrl` `]`         | 转到下一个画布        |
 
 {.shortcuts}
 
-### Edit
+### 编辑
 
-| Shortcut    | Action     |
+| 快捷键      | 操作       |
 | ----------- | ---------- |
-| `Ctrl` `A`  | Select all |
-| `Ctrl` `X`  | Cut        |
-| `Ctrl` `C`  | Copy       |
-| `Ctrl` `V`  | Paste      |
-| `Ctrl` `D`  | Duplicate  |
-| `Backspace` | Delete     |
+| `Ctrl` `A`  | 全选       |
+| `Ctrl` `X`  | 剪切       |
+| `Ctrl` `C`  | 复制       |
+| `Ctrl` `V`  | 粘贴       |
+| `Ctrl` `D`  | 创建副本   |
+| `Backspace` | 删除       |
 
 {.shortcuts}
 
-### Grid
+### 网格
 
-| Shortcut   | Action                                |
+| 快捷键     | 操作                                  |
 | ---------- | ------------------------------------- |
-| `Ctrl` `'` | Toggle grid                           |
-| `Ctrl` `\` | Toggle grid system                    |
-| `Ctrl` `;` | Toggle custom guides                  |
-| `Ctrl` `L` | Toggle smart guides                   |
-| `Alt`      | Toggle snap to grid on drag or resize |
+| `Ctrl` `'` | 切换网格                              |
+| `Ctrl` `\` | 切换网格系统                          |
+| `Ctrl` `;` | 切换自定义参考线                      |
+| `Ctrl` `L` | 切换智能参考线                        |
+| `Alt`      | 拖动或调整大小时切换吸附到网格          |
 
 {.shortcuts}
 
-### View
+### 视图
 
-| Shortcut       | Action                                                                       |
+| 快捷键         | 操作                                                                         |
 | -------------- | ---------------------------------------------------------------------------- |
-| `Ctrl` `+`     | Zoom in                                                                      |
-| `Ctrl` `-`     | Zoom out                                                                     |
-| `Ctrl` `0`     | Zoom to 100%                                                                 |
-| `Ctrl` `1`     | Fit to screen                                                                |
-| `Ctrl` `2`     | Zoom to selected layers, or fit all layers if none selected                  |
-| `Ctrl` `3`     | Center selected layer(s) in the canvas, or center on screen if none selected |
-| `Ctrl` `Right` | Toggle right pane                                                            |
-| `Ctrl` `Left`  | Toggle left pane                                                             |
-| `Space`        | Pan canvas while keydown                                                     |
+| `Ctrl` `+`     | 放大                                                                         |
+| `Ctrl` `-`     | 缩小                                                                         |
+| `Ctrl` `0`     | 缩放到 100%                                                                  |
+| `Ctrl` `1`     | 适应屏幕                                                                     |
+| `Ctrl` `2`     | 缩放到选定图层，如果未选择图层则适应所有图层                                   |
+| `Ctrl` `3`     | 将选定图层居中于画布，如果未选择图层则在屏幕上居中                             |
+| `Ctrl` `Right` | 切换右侧面板                                                                 |
+| `Ctrl` `Left`  | 切换左侧面板                                                                 |
+| `Space`        | 按住按键时平移画布                                                           |
 
 {.shortcuts}
 
-### Item
+### 项目
 
-| Shortcut              | Action                                    |
+| 快捷键                | 操作                                      |
 | --------------------- | ----------------------------------------- |
-| `Ctrl` `Up`           | Bring to front                            |
-| `Ctrl` `Down`         | Send to back                              |
-| `Ctrl` `Shift` `Up`   | Bring forward                             |
-| `Ctrl` `Shift` `Down` | Send backwards                            |
-| `(arrows)`            | Move item                                 |
-| `Shift` `(arrows)`    | Snap item                                 |
-| `Shift`               | Lock drag direction (hold while dragging) |
-| `R`                   | Insert rectangle                          |
-| `O`                   | Insert oval                               |
-| `L`                   | Insert line                               |
-| `T`                   | Insert text                               |
-| `I`                   | Insert interaction area                   |
-| `Enter`               | Enter selected container                  |
+| `Ctrl` `Up`           | 置于顶层                                  |
+| `Ctrl` `Down`         | 置于底层                                  |
+| `Ctrl` `Shift` `Up`   | 上移一层                                  |
+| `Ctrl` `Shift` `Down` | 下移一层                                  |
+| `(arrows)`            | 移动项目                                  |
+| `Shift` `(arrows)`    | 吸附项目                                  |
+| `Shift`               | 锁定拖动方向（拖动时按住）                |
+| `R`                   | 插入矩形                                  |
+| `O`                   | 插入椭圆形                                |
+| `L`                   | 插入线条                                  |
+| `T`                   | 插入文本                                  |
+| `I`                   | 插入交互区域                              |
+| `Enter`               | 进入选定容器                              |
 
 {.shortcuts}
 
-### Group
+### 编组
 
-| Shortcut           | Action           |
+| 快捷键             | 操作             |
 | ------------------ | ---------------- |
-| `Ctrl` `G`         | Group selected   |
-| `Ctrl` `Shift` `G` | Ungroup selected |
+| `Ctrl` `G`         | 编组选定项       |
+| `Ctrl` `Shift` `G` | 取消编组选定项   |
 
 {.shortcuts}
 
-### States Preview
+### 状态预览
 
-| Shortcut | Action                         |
+| 快捷键  | 操作                   |
 | -------- | ------------------------------ |
-| `Space`  | Play or pause state transition |
-| `.`      | Forward state transition       |
-| `,`      | Rewind state transition        |
+| `Space`  | 播放或暂停状态转换             |
+| `.`      | 前进状态转换                   |
+| `,`      | 后退状态转换                   |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Proto.io](https://support.proto.io/hc/en-us/articles/115001423511-Keyboard-shortcuts)
+- [Proto.io 键盘快捷键](https://support.proto.io/hc/en-us/articles/115001423511-Keyboard-shortcuts)
   _(support.proto.io)_

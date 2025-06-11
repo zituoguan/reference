@@ -4,410 +4,405 @@ date: 2024-05-15 10:12:25
 background: bg-[#214a35]
 label: Python
 tags:
-  - python
-  - web
+    - python
+    - web
 categories:
-  - Programming
+    - 编程
 intro: |
-  A Django cheat sheet.
+    一份 Django 速查表。
 plugins:
-  - copyCode
+    - copyCode
 ---
 
-## Getting Started
+## 入门指南
 
-### Start a new Django Project
+### 启动一个新的 Django 项目
 
 {.row-span-2}
 
 ```python
-# Create et access project folder
+# 创建并访问项目文件夹
 ~$  mkdir project_name
 ~$  cd project_name
 
-# Create Python virtual env
+# 创建 Python 虚拟环境
 ~$  python3 -m venv venv
 
-# Activate virtual env
+# 激活虚拟环境
 ~$  source venv/bin/activate
 
-# If you want to deactivate virtual env
+# 如果你想停用虚拟环境
 ~$  deactivate
 
-# Install django (~= same as 4.2.*)
+# 安装 django (~= 等同于 4.2.*)
 ~$  pip install django~=4.2.0
 
-# New django project (from project_name folder)
+# 新建 django 项目 (在 project_name 文件夹内)
 ~$  django-admin startproject config
 
-# Create app (from project_name folder)
+# 创建应用 (在 project_name 文件夹内)
 ~$  python manage.py startapp app_name
 ```
 
-### Migration:
+### 数据库迁移 (Migration):
 
-<small>Django create a database table for each models present in your app using those commands:</small>
+<small>Django 使用这些命令为应用中存在的每个模型创建数据库表：</small>
 
-Makemigrations: Create a file under app_name/migrations with the database structure to create
+Makemigrations: 在 app_name/migrations 目录下创建一个文件，其中包含要创建的数据库结构。
 
 ```python
 ~$  python manage.py makemigrations
 ```
 
-Migrate: Will read the migrations files and create the actual database and tables
+Migrate: 将读取迁移文件并创建实际的数据库和表。
 
 ```python
 ~$  python manage.py migrate
 ```
 
-### Create superuser for authenficiation/admin panel
+### 为认证/管理面板创建超级用户
 
 ```python
 ~$  python manage.py createsuperuser
 ```
 
-### Start server
+### 启动服务器
 
 ```python
-~$  python manage.py runserver  => ex.  http://127.0.0.1:8000
+~$  python manage.py runserver  => 例如 http://127.0.0.1:8000
 ```
 
-### Requirements
+### 依赖管理 (Requirements)
 
 ```python
-# Create a requirements file that contain all your project dependencies
+# 创建一个包含所有项目依赖的 requirements 文件
 ~$  pip freeze > requirements.txt
 
-# Install your project requirements (if a requirements file exist)
+# 安装项目依赖 (如果 requirements 文件存在)
 ~$  pip install -r requirements.txt
 ```
 
-### Other commands
+### 其他命令
 
 ```python
-# Django shell (Run project code directly)
+# Django shell (直接运行项目代码)
 ~$ python manage.py shell
 
-# example of code to run in the shell:
+# 在 shell 中运行的代码示例:
  >>> from app_name.models import User
  >>> user1 = User.objects.first()
 
-# Prepare static folders for production
+# 为生产环境准备静态文件夹
 ~$ python manage.py collectstatic
 
-# Take all data from app blog and export in json
+# 从应用 blog 中获取所有数据并导出为 json
 ~$ python manage.py dumpdata blog > myapp.json
 
-# Take all data in json file and import in app data table
+# 将 json 文件中的所有数据导入到应用数据表中
 ~$ python manage.py loaddata myapp.json
 
-# To Create or Update a message file for Translation, run this command
+# 创建或更新翻译的消息文件，运行此命令
 ~$ django-admin makemessages -l de
-# Updating message files
+# 更新消息文件
 ~$ django-admin compilemessages
 ```
 
-## Project config {.cols-1}
+## 项目配置 {.cols-1}
 
-### Configuration settings
+### 配置设置
 
-##### Project base templates directory and Apps templates directory:
+##### 项目基础模板目录和应用模板目录：
 
-- create folder project/templates
-- create folder appfolder/templates/appname
+- 创建文件夹 project/templates
+- 创建文件夹 appfolder/templates/appname
 
-##### Create Static folder in base root and separate for apps:
+##### 在基础根目录和应用中分别创建静态文件夹：
 
 - project_name\static\root
 - app_name\static\app_name
 
 ```python
-# Add app to settings.py
+# 将应用添加到 settings.py
 INSTALLED_APPS = [
-         … ,
-         'app_name.apps.App_nameConfig',
+                 … ,
+                 'app_name.apps.App_nameConfig',
  ]
 
-# template directory config
-Project templates settings.py:
-    TEMPLATES = [
-        { …
-           'DIRS': [BASE_DIR / 'templates'],
-        … }
+# 模板目录配置
+# 项目模板 settings.py:
+        TEMPLATES = [
+                { …
+                     'DIRS': [BASE_DIR / 'templates'],
+                … }
 
-# Static folder:
+# 静态文件夹:
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [ BASE_DIR / 'static' ]
 STATIC_ROOT = 'static_root'
-# Media folder:
+# 媒体文件夹:
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = (
-    (BASE_DIR / 'static'),
+        (BASE_DIR / 'static'),
 )
 MEDIA_ROOT = BASE_DIR / 'media'
 
-# To use PostgresSQL
+# 使用 PostgresSQL
 # pip install psycopg2
 # settings.py
 DATABASE = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blog',
-        'USER': 'admin',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'default': {
+                'ENGINE': 'django.db.backends.postgresql',
+                'NAME': 'blog',
+                'USER': 'admin',
+                'PASSWORD': '123456',
+                'HOST': 'localhost',
+                'PORT': '5432'
+                }
         }
-    }
 
 TIME_INPUT_FORMATS = [
-    '%H:%M:%S',     # '14:30:59'
-    '%H:%M',        # '14:30'
+        '%H:%M:%S',     # '14:30:59'
+        '%H:%M',        # '14:30'
 ]
 
 DATE_FORMAT = "Y/M/d"
 
-# locale for Translations
+# 翻译区域设置
 LANGUAGES = [
-    ('en', 'English'),
-    ('de', 'German'),
+        ('en', 'English'), # 英语
+        ('de', 'German'),  # 德语
 ]
 
 LOCALE_PATHS = (
-    BASE_DIR / 'locale',
+        BASE_DIR / 'locale',
 )
 
-# CK Editor Configuration
+# CK Editor 配置
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_RESTRICT_BY_USER = True
 CKEDITOR_BROWSE_SHOW_DIRS = True
 CKEDITOR_ALLOW_NONIMGE_FILES = True
 CKEDITOR_IMAGE_BACKEND = "pillow"
 CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'full',
-    }}
+        'default': {
+                'toolbar': 'full',
+        }}
 
 # SSL
-# If you have an SSL certificate
+# 如果你有 SSL 证书
 SECURE_SSL_REDIRECT = True
-# cookies will only be sent via HTTPS connections
+# cookies 将仅通过 HTTPS 连接发送
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 ```
 
-## Data Models
+## 数据模型
 
-### Create Data Model {.col-span-2}
+### 创建数据模型 {.col-span-2}
 
-<small>Theses models can be created as database tables with the migrations commands</small>
+<small>这些模型可以通过迁移命令创建为数据库表</small>
 
 ```python
 # models.py
-# The id fields is automaticly created by Django
-# for each model that why it's not show below
+# id 字段由 Django 自动为每个模型创建，因此下面未显示
 from django.db import models
 
 class Customer(models.Model)
-    name = models.Charfield('Customer', max_length=120)
-    age = models.IntegerField()
-    note = models.TextField(blank=True, null = True)
-    email = models.EmailField(max_length=255, blank=True, null=True)
-    credit = models.FloatField(blank=True)
-    is_active = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    img = models.ImageField(upload_to ='uploads/')
-    # Select Field (return value, display value)
-    TYPE_CHOICES = (
-        ('Customer', _('Customer')),
-        ('Supplier', _('Supplier')),
-        ('Student', _('Student')),
-    )
-    type = models.CharField(choices=TYPE_CHOICES)
+        name = models.Charfield('Customer', max_length=120) # 客户
+        age = models.IntegerField() # 年龄
+        note = models.TextField(blank=True, null = True) # 备注
+        email = models.EmailField(max_length=255, blank=True, null=True) # 邮箱
+        credit = models.FloatField(blank=True) # 信用额度
+        is_active = models.BooleanField(default=True) # 是否激活
+        created_at = models.DateTimeField(auto_now_add=True) # 创建时间
+        updated_at = models.DateTimeField(auto_now=True) # 更新时间
+        img = models.ImageField(upload_to ='uploads/') # 图片
+        # 选择字段 (返回的值, 显示的值)
+        TYPE_CHOICES = (
+                ('Customer', _('Customer')), # 客户
+                ('Supplier', _('Supplier')), # 供应商
+                ('Student', _('Student')),   # 学生
+        )
+        type = models.CharField(choices=TYPE_CHOICES) # 类型
 
-    class Meta:
-        verbose_name = "Customer"
-        verbose_name_plural = "Customers"
+        class Meta:
+                verbose_name = "Customer" # 客户
+                verbose_name_plural = "Customers" # 客户 (复数)
 
-    # Model string representation
-    def __str__(self):
-        return self.name
+        # 模型的字符串表示
+        def __str__(self):
+                return self.name
 
-    # the URL that points to a resource or page on your website
-    def get_absolute_url(self):
-        return reverse("customer_detail", kwargs={"pk": self.pk})
+        # 指向网站上资源或页面的 URL
+        def get_absolute_url(self):
+                return reverse("customer_detail", kwargs={"pk": self.pk})
 ```
 
-#### We can also use this method to define the ChoiceField value.
+#### 我们也可以使用此方法定义 ChoiceField 的值。
 
 ```python
-  class Customer(models.Model)
-    class TypeList(models.IntegerChoices):
-        customer = (1, _('Customer'))
-        supplier = (2, _('Supplier'))
-        student = (3, _('Student'))
-    .
-    .
-    .
-    type = models.CharField(choices=TypeList.choices, default=1)
+    class Customer(models.Model)
+        class TypeList(models.IntegerChoices):
+                customer = (1, _('Customer')) # 客户
+                supplier = (2, _('Supplier')) # 供应商
+                student = (3, _('Student'))   # 学生
+        .
+        .
+        .
+        type = models.CharField(choices=TypeList.choices, default=1)
 ```
 
-#### To access the ChoiceField value in the template, we need to do the following in the template:
+#### 要在模板中访问 ChoiceField 的值，我们需要在模板中执行以下操作：
 
-- In Django templates you can use the "`get_FOO_display()`" method, that will return the readable alias for the field, where `'FOO'` is the name of the field.
-- If the choices are stored in the variable `CHOICES` and the model field storing the selected choice is `'type'` then you can directly use
+- 在 Django 模板中，您可以使用 "`get_FOO_display()`" 方法，该方法将返回字段的可读别名，其中 `'FOO'` 是字段的名称。
+- 如果选项存储在变量 `CHOICES` 中，并且存储所选选项的模型字段是 `'type'`，那么您可以直接使用
 
 ```html
-<!-- Here, X is the model instance -->
+<!-- 这里，X 是模型实例 -->
 {{ X.get_type_display }}
 
-<!-- You can even use this method to display its translation. -->
+<!-- 您甚至可以使用此方法显示其翻译。 -->
 {% trans X.get_type_display %}
 ```
 
-#### Relationship between models
+#### 模型之间的关系
 
 ```python
-# One-to-Many: (use double quotes if the entity is not yet declare) ex. "Supplier"
+# 一对多：(如果实体尚未声明，请使用双引号) 例如 "Supplier"
 supplier = models.ForeignKey(Supplier, blank=True, null=True, on_delete=models.CASCADE,related_name="supplierother")
 
-# on_delete can be set to models.CASCADE, models.ST_DEFAULT or models.SET_NULL
-# The related_name attribute specifies the name of the reverse relation from the supplier model back to your model
+# on_delete 可以设置为 models.CASCADE, models.SET_DEFAULT 或 models.SET_NULL
+# related_name 属性指定从 supplier 模型返回到您的模型的反向关系的名称
 
-# Many-to-Many:
+# 多对多：
 tags = models.ManyToManyField(Tag, blank=True)
 
-# One to One
+# 一对一
 User = models.OneToOneField(User, on_delete=models.CASCADE)
 
-# Overwrite save method
+# 覆盖 save 方法
 def save(self, (*args, **kwargs):
-    if not self.slug:
-        self.slug = slugify(self.title)
-    super().save(*args, **kwargs)
+        if not self.slug:
+                self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
 ```
 
-## Lookup
+## 查询 (Lookup)
 
-### Field Lookups {.col-span-2}
+### 字段查询 {.col-span-2}
 
-In Django, the `field__lookuptype` syntax is used to perform lookups on fields in queries. The `field` represents the
-name of the field you want to perform the lookup on, and `lookuptype` represents the type of lookup you want to perform.
+在 Django 中，`field__lookuptype` 语法用于在查询中对字段执行查找。`field` 表示要执行查找的字段名称，`lookuptype` 表示要执行的查找类型。
 
-For example, let's say you have a model called `Book` with a field called `title` . You can use the `field__lookuptype`
-syntax to perform different types of lookups on the `title` field.
+例如，假设您有一个名为 `Book` 的模型，其中有一个名为 `title` 的字段。您可以使用 `field__lookuptype` 语法对 `title` 字段执行不同类型的查找。
 
-Here are a few examples:
+以下是一些示例：
 
 ```python
 
-# 1. Exact Match Lookup:
+# 1. 精确匹配查询:
 Book.objects.filter(title__exact='Python Tricks')
-# 2. Case-insensitive Lookup:
+# 2. 不区分大小写查询:
 Book.objects.filter(title__iexact='python tricks')
-# 3. Contains Lookup:
+# 3. 包含查询:
 Book.objects.filter(title__contains='Python')
-# 4. Startswith Lookup:
+# 4. 以...开头查询:
 Book.objects.filter(title__startswith='Python')
-# 5. Endswith Lookup:
+# 5. 以...结尾查询:
 Book.objects.filter(title__endswith='Tricks')
 ```
 
-### Field Lookups Reference
+### 字段查询参考
 
-| Keyword        | Description                                      |
+| 关键字         | 描述                                       |
 | -------------- | :----------------------------------------------- |
-| `contains`     | Contains the phrase                              |
-| `icontains`    | Same as contains, but case-insensitive           |
-| `date`         | Matches a date                                   |
-| `day`          | Matches a date (day of month, 1-31) (for dates)  |
-| `endswith`     | Ends with                                        |
-| `iendswith`    | Same as endswidth, but case-insensitive          |
-| `exact`        | An exact match                                   |
-| `iexact`       | Same as exact, but case-insensitive              |
-| `in`           | Matches one of the values                        |
-| `isnull`       | Matches NULL values                              |
-| `gt`           | Greater than                                     |
-| `gte`          | Greater than, or equal to                        |
-| `hour`         | Matches an hour (for datetimes)                  |
-| `lt`           | Less than                                        |
-| `lte`          | Less than, or equal to                           |
-| `minute`       | Matches a minute (for datetimes)                 |
-| `month`        | Matches a month (for dates)                      |
-| `quarter`      | Matches a quarter of the year (1-4) (for dates)  |
-| `range`        | Match between                                    |
-| `regex`        | Matches a regular expression                     |
-| `iregex`       | Same as regex, but case-insensitive              |
-| `second`       | Matches a second (for datetimes)                 |
-| `startswith`   | Starts with                                      |
-| `istartswith`  | Same as startswith, but case-insensitive         |
-| `time`         | Matches a time (for datetimes)                   |
-| `week`         | Matches a week number (1-53) (for dates)         |
-| `week_day`     | Matches a day of week (1-7) 1 is Sunday          |
-| `iso_week_day` | Matches a ISO 8601 day of week (1-7) 1 is Monday |
-| `year`         | Matches a year (for dates)                       |
-| `iso_year`     | Matches an ISO 8601 year (for dates)             |
+| `contains`     | 包含短语                                     |
+| `icontains`    | 与 contains 相同，但不区分大小写             |
+| `date`         | 匹配日期                                     |
+| `day`          | 匹配日期 (月份中的天，1-31) (用于日期)        |
+| `endswith`     | 以...结尾                                      |
+| `iendswith`    | 与 endswith 相同，但不区分大小写             |
+| `exact`        | 精确匹配                                     |
+| `iexact`       | 与 exact 相同，但不区分大小写                |
+| `in`           | 匹配其中一个值                                 |
+| `isnull`       | 匹配 NULL 值                                  |
+| `gt`           | 大于                                         |
+| `gte`          | 大于或等于                                   |
+| `hour`         | 匹配小时 (用于日期时间)                        |
+| `lt`           | 小于                                         |
+| `lte`          | 小于或等于                                   |
+| `minute`       | 匹配分钟 (用于日期时间)                        |
+| `month`        | 匹配月份 (用于日期)                            |
+| `quarter`      | 匹配年份的季度 (1-4) (用于日期)                |
+| `range`        | 匹配范围                                     |
+| `regex`        | 匹配正则表达式                               |
+| `iregex`       | 与 regex 相同，但不区分大小写                |
+| `second`       | 匹配秒 (用于日期时间)                          |
+| `startswith`   | 以...开头                                      |
+| `istartswith`  | 与 startswith 相同，但不区分大小写           |
+| `time`         | 匹配时间 (用于日期时间)                        |
+| `week`         | 匹配周数 (1-53) (用于日期)                     |
+| `week_day`     | 匹配星期几 (1-7) 1 是星期日                  |
+| `iso_week_day` | 匹配 ISO 8601 星期几 (1-7) 1 是星期一        |
+| `year`         | 匹配年份 (用于日期)                            |
+| `iso_year`     | 匹配 ISO 8601 年份 (用于日期)                  |
 
-### Admin Panel {.col-span-2}
+### 管理面板 {.col-span-2}
 
-Every Django projects come with an Admin Panel that can be open at /admin url (ex: localhost:8000/admin)<br> To display
-the model in the Admin panel register the model in the app_name/admin.py file<br> For each models you can specify the
-fields you want to use</small>
+每个 Django 项目都带有一个管理面板，可以通过 /admin URL 打开 (例如：localhost:8000/admin)<br> 要在管理面板中显示模型，请在 app_name/admin.py 文件中注册模型<br> 对于每个模型，您可以指定要使用的字段</small>
 
 ```python
 from django.contrib import admin
 from app_name.models import Blog
 
-# Custom model Admin (admin.py):
-@admin.register(Blog)   # Register app
+# 自定义模型管理 (admin.py):
+@admin.register(Blog)   # 注册应用
 class BlogAdmin(admin.ModelAdmin)
-    fields = ("title", "description") # Fields to use for add/edit/show page
-    list_display = ("title", "description") # fields to display in search page
-    list_display_links = ("title",) # fields that will be a link in search page
-    ordering = ("date_created",) # Ordering allowed in the search page
-    search_fields = ("title", "description") # Search fields allowed in the search page
-    list_filter =("title",) # define list filters that appear in the right sidebar
+        fields = ("title", "description") # 用于添加/编辑/显示页面的字段
+        list_display = ("title", "description") # 在搜索页面中显示的字段
+        list_display_links = ("title",) # 在搜索页面中将作为链接的字段
+        ordering = ("date_created",) # 搜索页面中允许的排序
+        search_fields = ("title", "description") # 搜索页面中允许的搜索字段
+        list_filter =("title",) # 定义出现在右侧边栏的列表过滤器
 ```
 
-### Routing
+### 路由
 
-Django routing info is store in project_folder/urls.py file
+Django 路由信息存储在 project_folder/urls.py 文件中
 
 ```python
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls), # pre-created admin urls routes
-    path('', include('app_name.urls')) # include your app urls
+        path('admin/', admin.site.urls), # 预先创建的管理 URL 路由
+        path('', include('app_name.urls')) # 包含您的应用 URL
 ]
 ```
 
-The 'include()' method allow to link another urls.py file created in your app folder (app_name/urls.py)
+`include()` 方法允许链接到在您的应用文件夹中创建的另一个 urls.py 文件 (app_name/urls.py)
 
 ```python
 from django.urls import path
 from app_name import views
 
 urlpatterns = [
-    path('posts', views.index, name='posts.index'),
-    path('posts/create/', views.create, name='posts.create',
-    path('posts/<int:id>/', views.show, name='posts.show'),
-    path('posts/<int:id>/edit/', views.edit, name='posts.edit'),
-    path('posts/<int:id>/delete/', views.delete, name='posts.delete'),
-    path('posts/<int:id>/<int:state>/', views.status, name='posts.status'), # two arguments
+        path('posts', views.index, name='posts.index'),
+        path('posts/create/', views.create, name='posts.create'),
+        path('posts/<int:id>/', views.show, name='posts.show'),
+        path('posts/<int:id>/edit/', views.edit, name='posts.edit'),
+        path('posts/<int:id>/delete/', views.delete, name='posts.delete'),
+        path('posts/<int:id>/<int:state>/', views.status, name='posts.status'), # 两个参数
 ]
 ```
 
-## Static Route and Customize Admin Panel {.cols-1}
+## 静态路由和自定义管理面板 {.cols-1}
 
-### Customizing Admin Panel
+### 自定义管理面板
 
-Header and Title admin panel & Custom `404`, `500`, and `503` Template
+管理面板的页眉和标题 & 自定义 `404`、`500` 和 `503` 模板
 
 ```python
-# add in project/urls.py
+# 添加到 project/urls.py
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
@@ -415,23 +410,23 @@ from django.conf.urls.static import static
 urlpatterns = [  ...  ]
 
 if settings.DEBUG == True:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+        urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+        urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# Customize Admin Panel Header & Title
-admin.site.site_header = _('Administrator Control Panel')
-admin.site.site_title = _('Administrator Control Panel')
-admin.site.index_title = _('Wellcome to Control Panel')
+# 自定义管理面板页眉和标题
+admin.site.site_header = _('Administrator Control Panel') # 管理员控制面板
+admin.site.site_title = _('Administrator Control Panel')  # 管理员控制面板
+admin.site.index_title = _('Wellcome to Control Panel') # 欢迎来到控制面板
 
-# Costomize 404 Template page
+# 自定义 404 模板页面
 handler404 = 'app_name.views.handler404'
 handler500 = 'app_name.views.handler500'
 handler503 = 'app_name.views.handler503'
 ```
 
-## Views {.cols-1}
+## 视图 (Views) {.cols-1}
 
-### Function Based Views
+### 基于函数的视图
 
 ```python
 # views.py
@@ -440,253 +435,248 @@ from app_name.models import Post
 from app_name.forms import PostForm
 
 def index(request):
-    # Get all Posts
-    posts = Post.objects.all()
+        # 获取所有帖子
+        posts = Post.objects.all()
 
-    # Render app template with context
-    return render(request, 'appfolder/index.html', {'posts': posts})
+        # 使用上下文渲染应用模板
+        return render(request, 'appfolder/index.html', {'posts': posts})
 
 def show(request, id):
-    post = Post.objects.get(id=id)
-    return render(request, 'appfolder/show.html', {'post': post})
+        post = Post.objects.get(id=id)
+        return render(request, 'appfolder/show.html', {'post': post})
 
 def create(request):
-    form = PostForm(request.POST or None, request.FILES or None)
-    # When the form contains an image or file field, we should use request.FILES
-    if form.is_valid():
-        # optionally we can access form data with form.cleaned_data['first_name']
-        post = form.save(commit=False)
-        post.user = request.user
-        post.save()
-        return redirect('/posts')
+        form = PostForm(request.POST or None, request.FILES or None)
+        # 当表单包含图像或文件字段时，我们应该使用 request.FILES
+        if form.is_valid():
+                # 可选地，我们可以使用 form.cleaned_data['first_name'] 访问表单数据
+                post = form.save(commit=False)
+                post.user = request.user
+                post.save()
+                return redirect('/posts')
 
-    return render(request, 'appfolder/create.html', {'form': form)
+        return render(request, 'appfolder/create.html', {'form': form})
 
 def edit(request, id):
-    post = Post.objects.get(id=id)
-    form = PostForm(request.POST or None, request.FILES or None, instance=post)
-    if form.is_valid():
-        form.save()
-        return redirect('/posts')
+        post = Post.objects.get(id=id)
+        form = PostForm(request.POST or None, request.FILES or None, instance=post)
+        if form.is_valid():
+                form.save()
+                return redirect('/posts')
 
-    return render(request, 'appfolder/edit.html', {'form': form)
+        return render(request, 'appfolder/edit.html', {'form': form})
 
 def delete(request, id):
-    post = Post.objects.get(id=id)
-    post.delete()
-    return redirect('/posts')
+        post = Post.objects.get(id=id)
+        post.delete()
+        return redirect('/posts')
 
 def status(request, id, state):
-    post = Post.objects.get(id=id, state=state)
-    return redirect('appfolder/status.html', {'post': post})
+        post = Post.objects.get(id=id, state=state)
+        return redirect('appfolder/status.html', {'post': post})
 ```
 
-### Class Based Views
+### 基于类的视图
 
 ```python
-from django.views.generic import TemplateView, ListView, DetailView,
-           CreateView, UpdateView, DeleteView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 
 class LandingPageView(TemplateView):
-    template_name = 'landing.html'
+        template_name = 'landing.html'
 
-    # Optional: Change context data dict
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'Landing Page'
-        return context
+        # 可选：更改上下文数据字典
+        def get_context_data(self, **kwargs):
+                context = super().get_context_data(**kwargs)
+                context['title'] = 'Landing Page' # 着陆页
+                return context
 
 
 class PostsListView(ListView):
-    queryset = Post.objects.all()
-    # Optional
-    # context_object_name = "posts" (default: post_list)
-    # template_name = 'posts.html' (default: posts/post_list.html)
+        queryset = Post.objects.all()
+        # 可选
+        # context_object_name = "posts" (默认: post_list)
+        # template_name = 'posts.html' (默认: posts/post_list.html)
 
 
 class PostsDetailView(DetailView):
-    model = Post # object var in template
-    # Optional
-    # template_name = 'post.html' (default: posts/post_detail.html)
+        model = Post # 模板中的对象变量
+        # 可选
+        # template_name = 'post.html' (默认: posts/post_detail.html)
 
 
 class PostsCreateView(CreateView):
-    form_class = PostForm
-    template_name = 'posts/post_create.html' # no default value
+        form_class = PostForm
+        template_name = 'posts/post_create.html' # 没有默认值
 
-    def get_success_url(self):
-        return reverse('posts-list')
+        def get_success_url(self):
+                return reverse('posts-list')
 
-    # Optional: Overwrite form data (before save)
-    def form_valid(self, form):
-        if self.request.user.is_authenticated:
-            from.instance.author = self.request.user
-        return super().form_valid(form)
+        # 可选：覆盖表单数据 (保存前)
+        def form_valid(self, form):
+                if self.request.user.is_authenticated:
+                        form.instance.author = self.request.user # 注意：这里原文是 from.instance.author，应该是 form.instance.author
+                return super().form_valid(form)
 
 
 class PostsUpdateView(UpdateView):
-    model = Post
-    form_class = PostForm
-    template_name = 'posts/post_update.html'
+        model = Post
+        form_class = PostForm
+        template_name = 'posts/post_update.html'
 
-    def get_success_url(self):
-        return reverse('post-list')
+        def get_success_url(self):
+                return reverse('post-list')
 
-    # Optional: Change context data dict
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['submit_text'] = 'Update'
-        return context
+        # 可选：更改上下文数据字典
+        def get_context_data(self, **kwargs):
+                context = super().get_context_data(**kwargs)
+                context['submit_text'] = 'Update' # 更新
+                return context
 
 
 class PostsDeleteView(DeleteView):
-    model = Post
-    template_name = 'posts/post_delete.html'
-    success_url = reverse_lazy('posts-list')
+        model = Post
+        template_name = 'posts/post_delete.html'
+        success_url = reverse_lazy('posts-list')
 
-# Urls.py route declaration
+# Urls.py 路由声明
 path('<int:pk>/update/', PostsUpdateView.as_view(), name='post-update')
 ```
 
-## Templates
+## 模板 (Templates)
 
-### Basic Template
+### 基本模板
 
-Templates are store in `project_folder/templates` or in your <code>app_folder/templates/app_name/\*.html</code>
+模板存储在 `project_folder/templates` 或您的 <code>app_folder/templates/app_name/\*.html</code> 中
 
 ```html
-<!-- Extend from another template -->
-<!-- can use the same parts of your HTML for different template -->
+<!-- 继承自另一个模板 -->
+<!-- 可以为不同的模板使用 HTML 的相同部分 -->
 {% extends 'base.html' %}
 
-<!-- A part of the parent template that is defined and is replaced by a part in the child template -->
+<!-- 父模板中定义的一部分，在子模板中被替换 -->
 {% block contents %} {% endblock contents %}
 
-<!-- include template-->
+<!-- 包含模板 -->
 {% include 'partials/header.html' %}
-<!-- include template with One or More Parameters -->
+<!-- 包含带有一个或多个参数的模板 -->
 {% include 'body.html' with key1=value1 key2=value2 %}
 
-<!-- If statement in template -->
+<!-- 模板中的 If 语句 -->
 {% if user.username = 'Mike' %}
-<p>Hello Admin</p>
+<p>你好管理员</p>
 {% elif user.username = 'john' %}
-<p>Hello John Doe</p>
+<p>你好 John Doe</p>
 {% else %}
-<p>Hello User</p>
+<p>你好用户</p>
 {% endif %}
 
-<!-- for loop in template -->
+<!-- 模板中的 for 循环 -->
 {% for product in products %}
-<p>row: {{ forloop.counter }} # starting index 1 {{ forloop.counter0 }} # starting index 0</p>
-<p>The product name is {{ product.name }}</p>
+<p>行: {{ forloop.counter }} # 起始索引 1 {{ forloop.counter0 }} # 起始索引 0</p>
+<p>产品名称是 {{ product.name }}</p>
 <p></p>
-<p>The product name is {{ product.price }}</p>
+<p>产品价格是 {{ product.price }}</p>
 <p>
-  {% endfor %}
+    {% endfor %}
 
-  <!-- Access to the variable in the template -->
-  {{ var_name }}
+    <!-- 访问模板中的变量 -->
+    {{ var_name }}
 
-  <!-- Template variables formating  -->
-  {{ title | lower }} {{ blog.post | truncatwords:50 }} {{ order.date | date:"D M Y" }} {{ list_items | slice:":3" }} {{
-  total | default:"nil" }}
+    <!-- 模板变量格式化 -->
+    {{ title | lower }} {{ blog.post | truncatewords:50 }} {{ order.date | date:"D M Y" }} {{ list_items | slice:":3" }} {{
+    total | default:"nil" }}
 
-  <!-- Current path (ex. posts/1/show) -->
-  {{ request.path }}
+    <!-- 当前路径 (例如 posts/1/show) -->
+    {{ request.path }}
 
-  <!-- URL by name with param -->
-  {% url 'posts.delete' id=post.id %}
+    <!-- 按名称生成带参数的 URL -->
+    {% url 'posts.delete' id=post.id %}
 
-  <!-- Use static in template: -->
-  {% load static %} {% static 'css/main.css' %}
+    <!-- 在模板中使用 static： -->
+    {% load static %} {% static 'css/main.css' %}
 
-  <!-- Define the variable in the template -->
-  {% with name="World" %}
-  <html>
-    <div>Hello {{ name }}!</div>
-  </html>
-  {% endwith %}
+    <!-- 在模板中定义变量 -->
+    {% with name="World" %}
+    <html>
+        <div>你好 {{ name }}!</div>
+    </html>
+    {% endwith %}
 
-  <!-- Template translate text -->
-  {% load i18n %}
-  <title>{% trans "This is the title." %}</title>
-  <!-- Use variable translate in the template -->
-  <title>{% trans object.title %}</title>
+    <!-- 模板翻译文本 -->
+    {% load i18n %}
+    <title>{% trans "This is the title." %}</title> <!-- 这是标题。 -->
+    <!-- 在模板中使用变量翻译 -->
+    <title>{% trans object.title %}</title>
 
-  <!-- Define the list in the template -->
-  <input type="number" {% if product.unit in 'kg,milligram,milliliter' %} step="0.01" {% else %} step="1" {% endif %}>
+    <!-- 在模板中定义列表 -->
+    <input type="number" {% if product.unit in 'kg,milligram,milliliter' %} step="0.01" {% else %} step="1" {% endif %}>
 
-  <!-- Safely Pass Data to JavaScript in a Django Template: -->
-  <!--+ Use data attributes for simple values -->
-  <script data-username="{{ username }}">
-    const data = document.currentScript.dataset;
-    const username = data.username;
-  </script>
+    <!-- 在 Django 模板中安全地将数据传递给 JavaScript： -->
+    <!--+ 对于简单值使用 data 属性 -->
+    <script data-username="{{ username }}">
+        const data = document.currentScript.dataset;
+        const username = data.username;
+    </script>
 
-  <!-- + Separate script files: can use document.currentScript for separate script files -->
-  <script src="{% static 'index.js' %}" data-username="{{ username }}"></script>
+    <!-- + 单独的脚本文件：对于单独的脚本文件可以使用 document.currentScript -->
+    <script src="{% static 'index.js' %}" data-username="{{ username }}"></script>
 
-  <!-- + Case conversion -->
-  <script src="{% static 'index.js' %}" data-full-name="{{ full_name }}"></script>
-  <!--  Read it in JavaScript as fullName: -->
-  <script>
-    const data = document.currentScript.dataset;
-    const fullName = data.fullName;
-  </script>
+    <!-- + 大小写转换 -->
+    <script src="{% static 'index.js' %}" data-full-name="{{ full_name }}"></script>
+    <!--  在 JavaScript 中以 fullName 读取： -->
+    <script>
+        const data = document.currentScript.dataset;
+        const fullName = data.fullName;
+    </script>
 
-  <!-- + Non-string types -->
-  <script src="{% static 'index.js' %}" data-follower-count="{{ follower_count }}"></script>
+    <!-- + 非字符串类型 -->
+    <script src="{% static 'index.js' %}" data-follower-count="{{ follower_count }}"></script>
 
-  <!--  parseInt() to convert this value from a string: -->
-  <script>
-    const data = document.currentScript.dataset;
-    const followerCount = parseInt(data.followerCount, 10);
-  </script>
+    <!--  使用 parseInt() 将此值从字符串转换： -->
+    <script>
+        const data = document.currentScript.dataset;
+        const followerCount = parseInt(data.followerCount, 10);
+    </script>
 
-  <!-- + There’s no limit: A <script> can have as many data attributes as you like: -->
-  <script
-    src="{% static 'index.js' %}"
-    defer
-    data-settings-url="{% url 'settings' %}"
-    data-configuration-url="{% url 'configuration' %}"
-    data-options-url="{% url 'options' %}"
-    data-preferences-url="{% url 'preferences' %}"
-    data-setup-url="{% url 'setup' %}"
-  ></script>
+    <!-- + 没有限制：一个 <script> 可以有任意数量的 data 属性： -->
+    <script
+        src="{% static 'index.js' %}"
+        defer
+        data-settings-url="{% url 'settings' %}"
+        data-configuration-url="{% url 'configuration' %}"
+        data-options-url="{% url 'options' %}"
+        data-preferences-url="{% url 'preferences' %}"
+        data-setup-url="{% url 'setup' %}"
+    ></script>
 </p>
 ```
 
-### Custom Template Tags and Filters
+### 自定义模板标签和过滤器
 
-For example, if your custom tags/filters are in a file called `basetags.py`, your app layout might look like this:
+例如，如果您的自定义标签/过滤器位于名为 `basetags.py` 的文件中，您的应用布局可能如下所示：
 
 ```
 app_name/
 └─── templatetags/
-     └─── basetags.py
-     __init__.py
-     models.py
-     views.py
+         └─── basetags.py
+         __init__.py
+         models.py
+         views.py
 ```
 
-- And in your template you would use the following:
+- 在您的模板中，您将使用以下内容：
 
 ```html
 {% load basetags %}
 ```
 
-- the module must contain a module-level variable named register that is a template.Library instance, in which all the
-  tags and filters are registered. So, near the top of your module, put the following:
+- 该模块必须包含一个名为 `register` 的模块级变量，它是一个 `template.Library` 实例，所有标签和过滤器都在其中注册。因此，在模块的顶部附近，放置以下内容：
 
-### Writing custom template filters
+### 编写自定义模板过滤器
 
-Custom filters are Python functions that take one or two arguments: The value of the variable (input) – not necessarily
-a string. The value of the argument – this can have a default value, or be left out altogether. For example, in the
-filter `{{ var|foo:"bar" }}`, the filter foo would be passed the variable var and the argument "bar".
+自定义过滤器是接受一个或两个参数的 Python 函数：变量的值 (输入) – 不一定是字符串。参数的值 – 这可以有一个默认值，或者完全省略。例如，在过滤器 `{{ var|foo:"bar" }}` 中，过滤器 `foo` 将传递变量 `var` 和参数 `"bar"`。
 
-The Library.filter() method takes two arguments: The name of the filter – a string. The compilation function – a Python
-function (not the name of the function as a string). You can use register.filter() as a decorator instead:
+`Library.filter()` 方法接受两个参数：过滤器的名称 – 一个字符串。编译函数 – 一个 Python 函数 (而不是作为字符串的函数名称)。您可以改用 `register.filter()` 作为装饰器：
 
 ```python
 # basetags.py
@@ -696,208 +686,206 @@ register = template.Library()
 
 @register.filter(name="cut")
 def cut(value, arg):
-    """Removes all values of arg from the given string"""
-    return value.replace(arg, "")
+        """从给定字符串中移除所有 arg 的值"""
+        return value.replace(arg, "")
 
-# Most filters don’t take arguments. In this case, leave the argument out of your function
+# 大多数过滤器不接受参数。在这种情况下，请从函数中省略参数
 @register.filter()
-def lower(value): # Only one argument.
-    """Converts a string into all lowercase"""
-    return value.lower()
+def lower(value): # 只有一个参数。
+        """将字符串转换为全小写"""
+        return value.lower()
 
 
 @register.simple_tag
 def to_class_name(object):
-    return str(object.__class__.__name__)
+        return str(object.__class__.__name__)
 
-# Template
-# And here’s an example of how that filter would be used in Template:
+# 模板
+# 以下是如何在模板中使用该过滤器的示例：
 {{ somevariable | cut:"0" }}
 
-# Put the result of simple tag into a variable
+# 将 simple tag 的结果放入变量中
 {% to_class_name object as objectmodel %}
-<p>Model Class Name: {{ objectmodel }}</p>
+<p>模型类名: {{ objectmodel }}</p>
 ```
 
-## Context Processor {.cols-1}
+## 上下文处理器 (Context Processor) {.cols-1}
 
-### Creating custom Context Processor
+### 创建自定义上下文处理器
 
-Anywhere, create a `context_processors.py` file
+在任何地方创建一个 `context_processors.py` 文件
 
 ```
 project_name
 └───app_name
-    ├───...
-    └───context_processors.pyy
+        ├───...
+        └───context_processors.py
 ```
 
-Create a function in context_processors.py that accepts a HttpRequest object as an argument and returns a dictionary
+在 `context_processors.py` 中创建一个函数，该函数接受一个 `HttpRequest` 对象作为参数并返回一个字典。
 
-A context processor is just a function that accepts an HttpRequest object as an argument and returns a dictionary. Like
-this:
+上下文处理器只是一个接受 `HttpRequest` 对象作为参数并返回字典的函数。像这样：
 
 ```python
 # app_name/context_processors.py
 def site_email(request):
-    return { 'site_email' : 'example@gmail.com' }
+        return { 'site_email' : 'example@gmail.com' }
 ```
 
-3. Add this to your context_processors setting in settings.py (at the bottom for security reasons)
+3. 将此添加到 `settings.py` 中的 `context_processors` 设置中 (出于安全原因，放在底部)
 
 ```python
  TEMPLATES = [
-    { …
-        'OPTIONS': {
-          'context_processors': [
-            …
-              'app_name.context_processors.site_email',
-              # New context processor here
-            …
-          ],
-    … },
+        { …
+                'OPTIONS': {
+                    'context_processors': [
+                        …
+                            'app_name.context_processors.site_email',
+                            # 新的上下文处理器在这里
+                        …
+                    ],
+        … },
 
-# Now be able to access the 'site_email' template variable on every single django template across your whole site.
+# 现在可以在整个站点的每个 Django 模板中访问 'site_email' 模板变量。
 ```
 
-## Model Managers and Querysets
+## 模型管理器和查询集 (Querysets)
 
-### Model Manager
+### 模型管理器
 
-Model manager allow model database reads and writes
+模型管理器允许模型数据库的读写操作
 
 ```python
-# One line create and save
+# 一行创建并保存
 Article.objects.create(name='Item 1', price=19.95)
 
-# Read all
+# 读取所有
 Article.objects.all()
 
-# Create
+# 创建
 user = User.objects.first()
 article = Article(user=user, name='Item 1', price=19.95)
 
-# Save
+# 保存
 article.save()
 
-# Read one
+# 读取一个
 Article.objects.get(id=1)
 
-# Select Related (to avoid n+1 query)
+# Select Related (避免 n+1 查询)
 posts = Post.objects.select_related('user', 'category').all()
 
-# Read or render a 404 not found page
+# 读取或渲染 404 未找到页面
 from django.shortcuts import get_object_or_404
 article = get_object_or_404(Article, id=512)
 
-# Filter
-Article.objects.filter(model='dyson', name__icontains='dyson') # __icontains
-Article.objects.filter(year__gt=2016) # __gt = greater than
-Article.objects.filter(year__lt=2001) # __lt = less than
+# 过滤
+Article.objects.filter(model='dyson', name__icontains='dyson') # __icontains 不区分大小写包含
+Article.objects.filter(year__gt=2016) # __gt = 大于
+Article.objects.filter(year__lt=2001) # __lt = 小于
 
-# Filter on relationship sub model field
+# 根据关系子模型字段过滤
 Article.objects.get(user__username='mike')
 
-# Ordering
-Article.objects.order_by('name')     # ascending
-Article.objects.order_by('-name')   # descending
+# 排序
+Article.objects.order_by('name')     # 升序
+Article.objects.order_by('-name')   # 降序
 
-# Slicing return first
+# 切片返回第一个
 Article.objects.all().order_by('name')[0]
 
-# Slicing return last
+# 切片返回最后一个
 Article.objects.all().order_by('-name')[0]
 
-# Slicing limit/offset
-Article.objects.all().order_by('name')[1..10]
+# 切片限制/偏移
+Article.objects.all().order_by('name')[1:10] # 原文是 1..10，Python 切片语法是 [1:10]
 
-# Updating
+# 更新
 article = Article.objects.first()
 article.name = 'new name'
 article.save()
 
-# One line update
+# 一行更新
 Article.objects.filter(id=4).update(name='new name')
 
-# Deleting
+# 删除
 article = Article.objects.first()
 article.delete()
 
-# One line delete
-article.objects.get(id=1).delete()
+# 一行删除
+Article.objects.get(id=1).delete() # 原文是 article.objects.get(id=1).delete()，应该是 Article.objects.get(id=1).delete()
 
-# Delete all
+# 删除所有
 Article.objects.all().delete()
 
-# Set ForeignKey field value
+# 设置外键字段值
 model1 = Model(name='dyson')
 article.model = model1
 
-# Get ForeignKey value
+# 获取外键值
 article1.model.name
 model1.article_set.all()
 
-# Add Many-to-Many
+# 添加多对多关系
 article1.tags.add(tag1)
 article1.tags.all()
-tag1.articles_set.all()
+tag1.article_set.all() # 原文是 tag1.articles_set.all()，Django 默认反向名称是 modelname_set
 ```
 
-## Form
+## 表单 (Form)
 
-### Form creation {.col-span-2}
+### 表单创建 {.col-span-2}
 
-In HTML, a form is a collection of elements inside `<form>...</form>` that allow a visitor to do things like enter text,
-select options, manipulate objects or controls, and so on, and then send that information back to the server.
+在 HTML 中，表单是 `<form>...</form>` 内的一组元素，允许访问者执行诸如输入文本、选择选项、操作对象或控件等操作，然后将该信息发送回服务器。
 
 ```python
 # app_name/forms.py
 from django import forms
 class ArticleForm(forms.Form):
-    name = forms.Charfield(max_length=100)
-    description = forms.Charfield(blank=True, null = True)
+        name = forms.CharField(max_length=100) # 名称，原文 Charfield，应为 CharField
+        description = forms.CharField(blank=True, null = True) # 描述，原文 Charfield，应为 CharField
 
 
-# Model Form
+# 模型表单
 from django.forms import ModelForm
 from app_name.models import Article
 class ArticleForm(ModelForm):
-    class Meta:
-        model = Article
-        fields = ['name', 'description', 'price'] # Use '__all__' for all fields
-        widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control'}),
-        }
-        labels = {
-            'name': 'First Name',
-        }
-        error_messages = {
-            'name': {'required': 'This field is required',},
-            }
-        help_texts = {
-        'name': 'Enter Your First Name',
-        }
+        class Meta:
+                model = Article
+                fields = ['name', 'description', 'price'] # 使用 '__all__' 表示所有字段
+                widgets = {
+                        'name': forms.TextInput(attrs={'class': 'form-control'}),
+                }
+                labels = {
+                        'name': 'First Name', # 姓
+                }
+                error_messages = {
+                        'name': {'required': 'This field is required',}, # 此字段是必填项
+                        }
+                help_texts = {
+                'name': 'Enter Your First Name', # 输入您的姓
+                }
 ```
 
 ```html
-<!-- Render form in template -->
-<form method="“post”" action="“”" novalidate>
-  {% csrf_token %} {{ form }}
-  <button type="submit">Submit</button>
+<!-- 在模板中渲染表单 -->
+<form method="post" action="" novalidate> <!-- 原文 method="“post”" action="“”" -->
+    {% csrf_token %} {{ form }}
+    <button type="submit">提交</button>
 </form>
 ```
 
-- NOTE: If the form contains a file field, your form MUST contain `enctype="multipart/form-data"`, eg:
+- 注意：如果表单包含文件字段，您的表单必须包含 `enctype="multipart/form-data"`，例如：
 
 ```html
 <form action="" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">{% trans 'Submit' %}</button>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{% trans 'Submit' %}</button> <!-- 提交 -->
 </form>
 ```
 
-##### A Tailwind CSS template pack for the wonderful django-crispy-forms.
+##### 一个用于优秀的 django-crispy-forms 的 Tailwind CSS 模板包。
 
 ```bash
 pip install crispy-tailwind
@@ -906,248 +894,258 @@ pip install crispy-tailwind
 ```python
 # settings.py
 INSTALLED_APPS = (
-    ...
-    "crispy_forms",
-    "crispy_tailwind",
-    ...
+        ...
+        "crispy_forms",
+        "crispy_tailwind",
+        ...
 )
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'tailwind'
 CRISPY_TEMPLATE_PACK = 'tailwind'
 ```
 
 ```html
-<!-- template usage -->
+<!-- 模板用法 -->
 {% load tailwind_filters %} {{ form|crispy }}
 ```
 
-### Form Validation
+### 表单验证
 
 ```python
 # forms.py
 from django.core.exceptions import ValidationError
 
-# field validation
+# 字段验证
 def clean_first_name(self):
-    data = self.cleaned_data['first_name']
-    if data = 'Mike':
-        raise ValidationError('Your name must not be Mike')
-    return data
+        data = self.cleaned_data['first_name']
+        if data == 'Mike': # 原文 data = 'Mike'，应为 data == 'Mike'
+                raise ValidationError('Your name must not be Mike') # 您的名字不能是 Mike
+        return data
 
-# form validation
+# 表单验证
 def clean(self):
-    first_name = self.cleaned_data['first_name']
-    last_name = self.cleaned_data['last_name']
-    if first_name + last_name = 'MikeTaylor':
-        raise ValidationError('Your name must not be Mike Taylor')
+        first_name = self.cleaned_data['first_name']
+        last_name = self.cleaned_data['last_name']
+        if first_name + last_name == 'MikeTaylor': # 原文 first_name + last_name = 'MikeTaylor'，应为 ==
+                raise ValidationError('Your name must not be Mike Taylor') # 您的名字不能是 Mike Taylor
 ```
 
-## Flash messages {.cols-1}
+## Flash 消息 {.cols-1}
 
-### Displaying messages
+### 显示消息
 
 ```python
-# Message tags
-# debug, info, success, warning and error
+# 消息标签
+# debug, info, success, warning 和 error
 
-messages.success(request, 'Login successful')
-messages.error(request, 'Login error')
+messages.success(request, 'Login successful') # 登录成功
+messages.error(request, 'Login error')       # 登录错误
 ```
 
 ```html
-<!-- Display flash messages in template -->
-{% if messages %} {% for message in messages %} {% message %} {% message.tags %} {% endfor %} {% endif %}
+<!-- 在模板中显示 flash 消息 -->
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}"> <!-- 原文 {% message %} {% message.tags %}，通常这样使用 -->
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
 ```
 
-## User Model
+## 用户模型
 
-### Pre-created
+### 预创建
 
-User Model (pre-created)
+用户模型 (预创建)
 
 ```python
-# Get a reference to Django pre-created User model
+# 获取对 Django 预创建用户模型的引用
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
-# Or if you want to custom user model
+# 或者如果您想自定义用户模型
 from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
-    # add custom fields and methods
+        # 添加自定义字段和方法
+        pass # 原文没有 pass，添加以使其成为有效的类定义
 
-# To make Django use that model go to settings.py and add: AUTH_USER_MODEL = 'app_name.User'
+# 要让 Django 使用该模型，请转到 settings.py 并添加：AUTH_USER_MODEL = 'app_name.User'
 ```
 
-## Authentication
+## 认证 (Authentication)
 
-### Authentication : LoginView
+### 认证：LoginView
 
 ```python
-# LoginView is already pre-created by Django
+# LoginView 已由 Django 预创建
 from django.contrib.auth.views import LoginView
 
-# Add a url to reach that view
+# 添加一个 URL 以访问该视图
 path('login/', LoginView.as_view(), name='login')
 
-# By default the LoginView will try to open a template name 'registration/login.html' and send a login form with it.
+# 默认情况下，LoginView 将尝试打开名为 'registration/login.html' 的模板并向其发送登录表单。
 ```
 
 ```html
-<!-- Create a template under registration/login.html -->
+<!-- 在 registration/login.html 下创建模板 -->
 {% extends "base.html" %} {% block content %}
 <form method="post">
-  {% csrf_token %} {{ form }}
-  <button type="submit">Login</button>
+    {% csrf_token %} {{ form }}
+    <button type="submit">登录</button>
 </form>
 {% endblock content %}
 
-<!-- When user click the Login button, the LoginView will try to authenticate the user with the form username ans password -->
+<!-- 当用户单击“登录”按钮时，LoginView 将尝试使用表单中的用户名和密码对用户进行身份验证 -->
 
-<!-- If successful il will then login the user and redirect to LOGIN_REDIRECT_URL specified in your settings.py -->
+<!-- 如果成功，它将登录用户并重定向到 settings.py 中指定的 LOGIN_REDIRECT_URL -->
 ```
 
-#### Authentication : LogoutView
+#### 认证：LogoutView
 
 ```python
-# LogoutView is already pre-created by Django
+# LogoutView 已由 Django 预创建
 from django.contrib.auth.views import LogoutView
 
-# Add a url to reach that view
-path('logout/', LoginView.as_view(), name='logout')
+# 添加一个 URL 以访问该视图
+path('logout/', LogoutView.as_view(), name='logout') # 原文 LoginView.as_view()，应为 LogoutView.as_view()
 
-# Include a link in a template
-<a> href="{% url 'logout' %}">Logout</a>
+# 在模板中包含一个链接
+<a href="{% url 'logout' %}">登出</a>
 
-# After link is execute, the user will be logout and redirect to LOGOUT_REDIRECT_URL specified in your settings.py
+# 链接执行后，用户将被登出并重定向到 settings.py 中指定的 LOGOUT_REDIRECT_URL
 ```
 
-#### Authentication : SignupView
+#### 认证：SignupView
 
 ```python
-# Create a SignupView (that view is not created by default)
-# import sinupview form pre-created by Django
+# 创建一个 SignupView (该视图默认未创建)
+# 导入 Django 预创建的注册表单
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import CreateView
+from django.urls import reverse # 导入 reverse
 
 class SignupView(CreateView):
-    template_name = 'registration/signup.html'
-    form_class = UserCreationForm
+        template_name = 'registration/signup.html'
+        form_class = UserCreationForm
 
-    def get_success_url(self):
-        return reverse("login")
+        def get_success_url(self):
+                return reverse("login")
 ```
 
 ```html
-<!-- Create template: registration/signup.html -->
+<!-- 创建模板：registration/signup.html -->
 {% extends "base.html" %} {% block content %}
 <form method="post">
-  {% csrf_token %} {{ form }}
-  <button type="submit">Signup</button>
+    {% csrf_token %} {{ form }}
+    <button type="submit">注册</button>
 </form>
 {% endblock content %}
 ```
 
 ```python
-# Add a url to reach that view
-from posts.views import SignupView
+# 添加一个 URL 以访问该视图
+from posts.views import SignupView # 假设 SignupView 在 posts.views 中
 
 path('signup/', SignupView.as_view(), name='signup')
 ```
 
 ```python
-# Optional: Customize the UserCreationForm
+# 可选：自定义 UserCreationForm
 # (forms.py)
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UsernameField # 导入 UsernameField
 
 User = get_user_model()
-class CustomUserCreationForm(UserCreattionForm):
-    class Meta:
-        model = User
-        fields = ['username']
-        fields_classes = {'username': UsernameField}
+class CustomUserCreationForm(UserCreationForm): # 原文 UserCreattionForm，应为 UserCreationForm
+        class Meta:
+                model = User
+                fields = ['username']
+                field_classes = {'username': UsernameField} # 原文 fields_classes，应为 field_classes
 ```
 
-#### Optional pre-created Authentication routes
+#### 可选的预创建认证路由
 
 ```python
 # urls.py
-urlpatterns += path('', include('django.contrib.auth.urls'))
-# /login, /lougout, /signup, etc.
+urlpatterns += [path('', include('django.contrib.auth.urls'))] # 原文 urlpatterns += path(...)
+# /login, /logout, /signup, 等。
 ```
 
-#### Template Authentication helpers
+#### 模板认证助手
 
 ```html
-<!-- Authentication links -->
-<a href="{% url 'login' %}">Login</a>
-<a href="{% url 'signup' %}">Signup</a>
-<a href="{% url 'logout' %}">Logout</a>
+<!-- 认证链接 -->
+<a href="{% url 'login' %}">登录</a>
+<a href="{% url 'signup' %}">注册</a>
+<a href="{% url 'logout' %}">登出</a>
 
-<!-- Check if user login -->
-{% if request.user.is_authenticated %} Logged in as: {{ request.user.username }} {% endif %}
+<!-- 检查用户是否登录 -->
+{% if request.user.is_authenticated %} 已登录为: {{ request.user.username }} {% endif %}
 ```
 
-#### Authorization: LoginRequiredMixin and login_required
+#### 授权：LoginRequiredMixin 和 login_required
 
 ```python
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views import generic # 假设 generic 被使用
 
-# Restrict views to auth user only (views.py)
+# 仅限已认证用户访问视图 (views.py)
 class PostsCreateView(LoginRequiredMixin, generic.CreateView):
-    ...
-    ...
+        ...
+        ...
 
 
 from django.contrib.auth.decorators import login_required
 
 @login_required(login_url='/login')
 def search_page(request):
-    ...
-    ...
+        ...
+        ...
 ```
 
-#### Manual Authentication , Login and Logout
+#### 手动认证、登录和登出
 
 ```python
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout # 导入 logout
+from django.shortcuts import redirect, render # 导入 render, redirect
 
 def login_page(request):
-    if request.method == "POST":
-        username = request.POST.get("username")
-        password = request.POST.get("password")
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect("index")
+        if request.method == "POST":
+                username = request.POST.get("username")
+                password = request.POST.get("password")
+                user = authenticate(request, username=username, password=password)
+                if user is not None:
+                        login(request, user)
+                        return redirect("index") # 假设 "index" 是一个有效的 URL 名称
 
-return render(request, "registration/login.html", {})
+        return render(request, "registration/login.html", {})
 
 
 def logout_page(request):
-    logout(request)
-    return redirect("index")
+        logout(request)
+        return redirect("index") # 假设 "index" 是一个有效的 URL 名称
 ```
 
-#### User Change password
+#### 用户更改密码
 
 ```python
-# set_password will hash the password
+# set_password 会对密码进行哈希处理
 user.set_password('raw password')
 ```
 
-## Create Custom Accounts Model
+## 创建自定义账户模型
 
 ```python
 ~$ python manage.py startapp accounts
 ```
 
 ```python
-# Add accounts app to settings.py
+# 将 accounts 应用添加到 settings.py
 INSTALLED_APPS = [ … ,
-         'accounts.apps.AccountsConfig',
-          ]
+                 'accounts.apps.AccountsConfig',
+                    ]
 .
 .
 .
@@ -1160,47 +1158,51 @@ from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
 
 class UserManager(BaseUserManager):
-    def create_user(self, username, email, password=None, **extra_fields):
-        if not username:
-            raise ValueError('Users must have an username')
-        if not email:
-            raise ValueError('Users must have an email')
+        def create_user(self, username, email, password=None, **extra_fields):
+                if not username:
+                        raise ValueError('用户必须有一个用户名')
+                if not email:
+                        raise ValueError('用户必须有一个邮箱')
 
-        user = self.model(email=email, **extra_fields)
-        user.set_password(password)
-        user.save(using=self._db)
-        return user
+                email = self.normalize_email(email) # 添加 email 规范化
+                user = self.model(username=username, email=email, **extra_fields) # 确保 username 也被传递
+                user.set_password(password)
+                user.save(using=self._db)
+                return user
 
-    def create_superuser(self, username,  email, password=None, **extra_fields):
-        extra_fields.setdefault('is_staff', True)
-        extra_fields.setdefault('is_superuser', True)
-        extra_fields.setdefault('is_active', True)
+        def create_superuser(self, username,  email, password=None, **extra_fields):
+                extra_fields.setdefault('is_staff', True)
+                extra_fields.setdefault('is_superuser', True)
+                extra_fields.setdefault('is_active', True)
 
-        user = self.create_user(username, email, password=password, **extra_fields)
-        user.save(using=self._db)
-        return user
+                if extra_fields.get('is_staff') is not True: # 确保 is_staff 为 True
+                        raise ValueError('超级用户必须设置 is_staff=True。')
+                if extra_fields.get('is_superuser') is not True: # 确保 is_superuser 为 True
+                        raise ValueError('超级用户必须设置 is_superuser=True。')
+
+                return self.create_user(username, email, password, **extra_fields) # 原文 user.save() 重复，create_user 已保存
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    username = models.CharField(verbose_name='Username', max_length=255, unique=True)
-    email = models.EmailField(verbose_name='email', max_length=255, unique=True)
-    phone = models.BigIntegerField(verbose_name='Phone Number', unique=True, blank=True, null=True)
-    is_active = models.BooleanField(default=True, verbose_name="is_active")
-    is_staff = models.BooleanField(default=False, verbose_name="is_staff")
-    is_superuser = models.BooleanField(default=False, verbose_name="is_superuser")
+        username = models.CharField(verbose_name='用户名', max_length=255, unique=True)
+        email = models.EmailField(verbose_name='邮箱', max_length=255, unique=True)
+        phone = models.BigIntegerField(verbose_name='电话号码', unique=True, blank=True, null=True)
+        is_active = models.BooleanField(default=True, verbose_name="是否激活")
+        is_staff = models.BooleanField(default=False, verbose_name="是否为员工")
+        is_superuser = models.BooleanField(default=False, verbose_name="是否为超级用户")
 
-    objects = UserManager()
+        objects = UserManager()
 
-    # We can use any field for username
-    USERNAME_FIELD = 'username'  # or 'email' or 'phone'
-    REQUIRED_FIELDS = ['username', 'email']
+        # 我们可以使用任何字段作为用户名
+        USERNAME_FIELD = 'username'  # 或 'email' 或 'phone'
+        REQUIRED_FIELDS = ['email'] # 如果 USERNAME_FIELD 是 username，则 email 通常是 REQUIRED_FIELDS
 
-    def __str__(self):
-        return self.username
+        def __str__(self):
+                return self.username
 
-    class Meta:
-        verbose_name = "User"
-        verbose_name_plural = "Users"
+        class Meta:
+                verbose_name = "用户"
+                verbose_name_plural = "用户"
 ```
 
 ```python
@@ -1213,98 +1215,120 @@ from django.utils.translation import gettext_lazy as _
 
 
 class UserCreationForm(forms.ModelForm):
-    password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
+        password1 = forms.CharField(label='密码', widget=forms.PasswordInput)
+        password2 = forms.CharField(label='确认密码', widget=forms.PasswordInput)
 
-    class Meta:
-        model = User
-        fields = ('username', 'email', 'phone', 'is_active', 'is_staff')
+        class Meta:
+                model = User
+                fields = ('username', 'email', 'phone') # 移除了 is_active, is_staff，这些通常不由用户创建时设置
 
-    def clean_password2(self):
-        password1 = self.cleaned_data.get("password1")
-        password2 = self.cleaned_data.get("password2")
-        if password1 and password2 and password1 != password2:
-            raise ValidationError("Passwords don't match")
-        return password2
+        def clean_password2(self):
+                password1 = self.cleaned_data.get("password1")
+                password2 = self.cleaned_data.get("password2")
+                if password1 and password2 and password1 != password2:
+                        raise ValidationError("密码不匹配")
+                return password2
 
-    def save(self, commit=True):
-        user = super().save(commit=False)
-        user.set_password(self.cleaned_data["password1"])
-        if commit:
-            user.save()
-        return user
+        def save(self, commit=True):
+                user = super().save(commit=False)
+                user.set_password(self.cleaned_data["password1"])
+                if commit:
+                        user.save()
+                return user
 
 
 class UserChangeForm(forms.ModelForm):
-    password = ReadOnlyPasswordHashField()
+        password = ReadOnlyPasswordHashField(label=_("Password"), help_text=_("Raw passwords are not stored, so there is no way to see this user's password, but you can change the password using <a href=\"../password/\">this form</a>.")) # 添加了 help_text
 
-    class Meta:
-        model = User
-        fields = ('username', 'email', 'phone', 'is_active', 'is_staff')
+        class Meta:
+                model = User
+                fields = ('username', 'email', 'phone', 'password', 'is_active', 'is_staff') # 添加了 password
 
-    def clean_password(self):
-        return self.initial["password"]
+        def clean_password(self):
+                # 不管用户输入什么，都返回初始哈希值。
+                # 这可以防止用户意外地将哈希值更改为空字符串。
+                return self.initial["password"]
 
 
 class LoginForm(forms.Form):
-    email = forms.CharField(
-        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email'}), label='Email')
-    password = forms.CharField(
-        widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'}),label='Password')
+        # 原文使用 email 作为登录字段，但模型 USERNAME_FIELD 是 username
+        # 这里假设登录也使用 username，如果用 email 登录，User 模型和 authenticate 调用需要相应调整
+        username = forms.CharField( # 改为 username
+                widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': '用户名'}), label='用户名') # 改为 用户名
+        password = forms.CharField(
+                widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': '密码'}),label='密码')
 
 
 class RegisterForm(forms.ModelForm):
-    password1 = forms.CharField(label='Password', widget=forms.PasswordInput(
-        attrs={'class': 'form-control'}))
-    password2 = forms.CharField(label='Password confirmation',
-                                widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+        password1 = forms.CharField(label='密码', widget=forms.PasswordInput(
+                attrs={'class': 'form-control'}))
+        password2 = forms.CharField(label='确认密码',
+                                                                widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
-    class Meta:
-        model = User
-        fields = ('username', 'email', 'phone')
+        class Meta:
+                model = User
+                fields = ('username', 'email', 'phone')
 
-        widgets = {  # Optional
-            'username': forms.TextInput(attrs={'class': 'form-control'}),
-            'email': forms.EmailInput(attrs={'class': 'form-control'}),
-            'phone': forms.NumberInput(
-                attrs={'class': 'form-control', 'type': 'tel', 'maxlength': '11',
-                       'minlength': '11',  'onkeypress': 'return isNumber(event)', 'required': 'false'})}
+                widgets = {  # 可选
+                        'username': forms.TextInput(attrs={'class': 'form-control'}),
+                        'email': forms.EmailInput(attrs={'class': 'form-control'}),
+                        'phone': forms.NumberInput(
+                                attrs={'class': 'form-control', 'type': 'tel', # 'maxlength': '11', 'minlength': '11' 通常由模型或前端处理
+                                             'onkeypress': 'return isNumber(event)', 'required': 'false'})} # required 属性应为布尔值或省略
 
-    def clean_password2(self):
-        password1 = self.cleaned_data.get("password1")
-        password2 = self.cleaned_data.get("password2")
-        if password1 and password2 and password1 != password2:
-            raise ValidationError("Passwords don't match")
-        else:
-            return password2
+        def clean_password2(self):
+                password1 = self.cleaned_data.get("password1")
+                password2 = self.cleaned_data.get("password2")
+                if password1 and password2 and password1 != password2:
+                        raise ValidationError("密码不匹配")
+                # else: # else 不是必需的
+                return password2 # 返回 password2
 
-    def save(self, commit=True):
-        user = super().save(commit=False)
-        user.set_password(self.cleaned_data["password1"])
-        if commit:
-            user.save()
-        return user
+        def save(self, commit=True):
+                user = super().save(commit=False)
+                user.set_password(self.cleaned_data["password1"])
+                if commit:
+                        user.save()
+                return user
 
 class EditProfileForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = ('username', 'email', 'phone')
+        class Meta:
+                model = User
+                fields = ('username', 'email', 'phone')
 
 
-class ChangePassword(forms.Form):
-    password1 = forms.CharField(label=_('Password'), widget=forms.PasswordInput(
-        attrs={'class': 'form-control', 'placeholder': 'Password'}))
-    password2 = forms.CharField(label=_('Password confirmation'),
-                                widget=forms.PasswordInput(
-                                    attrs={'class': 'form-control', 'placeholder': 'Re-Enter Password'}))
+class ChangePasswordForm(forms.Form): # 类名更改以更清晰
+        password_old = forms.CharField(label=_('旧密码'), widget=forms.PasswordInput( # 添加旧密码字段
+                attrs={'class': 'form-control', 'placeholder': '旧密码'}))
+        password1 = forms.CharField(label=_('新密码'), widget=forms.PasswordInput(
+                attrs={'class': 'form-control', 'placeholder': '新密码'}))
+        password2 = forms.CharField(label=_('确认新密码'),
+                                                                widget=forms.PasswordInput(
+                                                                        attrs={'class': 'form-control', 'placeholder': '再次输入新密码'}))
 
-    def clean_password2(self):
-        password1 = self.cleaned_data.get("password1")
-        password2 = self.cleaned_data.get("password2")
-        if password1 and password2 and password1 != password2:
-            raise ValidationError("Passwords don't match")
-        else:
-            return password2
+        def __init__(self, user, *args, **kwargs): # 添加 user 参数
+                self.user = user
+                super().__init__(*args, **kwargs)
+
+        def clean_password_old(self): # 验证旧密码
+                password_old = self.cleaned_data.get("password_old")
+                if not self.user.check_password(password_old):
+                        raise ValidationError(_("您的旧密码输入不正确。请重新输入。"))
+                return password_old
+
+        def clean_password2(self):
+                password1 = self.cleaned_data.get("password1")
+                password2 = self.cleaned_data.get("password2")
+                if password1 and password2 and password1 != password2:
+                        raise ValidationError("新密码不匹配")
+                return password2
+
+        def save(self, commit=True): # 添加 save 方法
+                password = self.cleaned_data["password1"]
+                self.user.set_password(password)
+                if commit:
+                        self.user.save()
+                return self.user
 ```
 
 ```python
@@ -1312,73 +1336,45 @@ class ChangePassword(forms.Form):
 from django import forms
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from django.contrib.auth.forms import ReadOnlyPasswordHashField
+# from django.contrib.auth.forms import ReadOnlyPasswordHashField # 已在 accounts.forms 中导入
 from django.core.exceptions import ValidationError
-from django.contrib.auth.models import Group
+# from django.contrib.auth.models import Group # 如果要取消注册 Group，则需要导入
 from accounts.models import User
+from .forms import UserCreationForm as AdminUserCreationForm, UserChangeForm as AdminUserChangeForm # 从本地 forms.py 导入并重命名以避免冲突
 
 
-class UserCreationForm(forms.ModelForm):
-    password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
-
-    class Meta:
-        model = User
-        fields = ('username', 'email', 'phone')
-
-    def clean_password2(self):
-        # Check that the two password entries match
-        password1 = self.cleaned_data.get("password1")
-        password2 = self.cleaned_data.get("password2")
-        if password1 and password2 and password1 != password2:
-            raise ValidationError("Passwords don't match")
-        return password2
-
-    def save(self, commit=True):
-        user = super().save(commit=False)
-        user.set_password(self.cleaned_data["password1"])
-        if commit:
-            user.save()
-        return user
-
-
-class UserChangeForm(forms.ModelForm):
-    password = ReadOnlyPasswordHashField()
-
-    class Meta:
-        model = User
-        fields = ('username', 'email', 'phone', 'password', 'is_active', 'is_staff')
-
+# UserCreationForm 和 UserChangeForm 已在 accounts/forms.py 中定义，可以直接使用或在 admin 中重新定义
+# 这里假设使用 accounts/forms.py 中定义的，但 admin 中通常有自己的版本
+# 为清晰起见，我们使用上面导入的 AdminUserCreationForm 和 AdminUserChangeForm
 
 class UserAdmin(BaseUserAdmin):
-    form = UserChangeForm
-    add_form = UserCreationForm
-    list_display = ('username', 'email', 'is_active', 'is_staff', 'is_superuser')
-    list_editable = ('is_staff', 'is_active')
-    list_filter = ('is_staff', 'groups')
-    fieldsets = (
-        (None, {'fields': ( 'username', 'email', 'phone', 'password')}),
-        ('Permissions', {'fields': ('is_staff',)}),
-        ('Group Permissions', {
-            'fields': ('is_active', 'is_superuser', 'groups', 'user_permissions'),
-        })
-    )
-    add_fieldsets = (
-        (None, {
-            'classes': ('wide',),
-            'fields': ('username', 'email', 'phone', 'password1', 'password2'),
-        }),
-        ('Group Permissions', {
-            'fields': ('is_active', 'is_superuser', 'groups', 'user_permissions'),
-        })
-    )
-    search_fields = ('username', 'email', 'phone')
-    ordering = ('username', 'email', 'phone')
-    filter_horizontal = ('groups', 'user_permissions',)
+        form = AdminUserChangeForm
+        add_form = AdminUserCreationForm
+        list_display = ('username', 'email', 'phone', 'is_active', 'is_staff', 'is_superuser') # 添加了 phone
+        list_editable = ('is_staff', 'is_active')
+        list_filter = ('is_staff', 'is_superuser', 'is_active', 'groups') # 添加了 is_superuser, is_active
+        fieldsets = (
+                (None, {'fields': ( 'username', 'email', 'phone', 'password')}),
+                ('权限', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}), # 合并权限字段
+        )
+        add_fieldsets = (
+                (None, {
+                        'classes': ('wide',),
+                        'fields': ('username', 'email', 'phone', 'password1', 'password2'),
+                }),
+                # ('权限', { # 在创建时，权限通常通过 staff/superuser 状态和组来处理
+                #     'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions'),
+                # })
+        )
+        search_fields = ('username', 'email', 'phone')
+        ordering = ('username',) # 通常按 username 排序
+        filter_horizontal = ('groups', 'user_permissions',)
+        # 如果 User 模型有 first_name, last_name，BaseUserAdmin 会期望它们
+        # 如果没有，需要从 fieldsets 和 list_display 中移除或调整
 
 
 admin.site.register(User, UserAdmin)
-# unregister the Group model from admin.
+# from django.contrib.auth.models import Group # 如果要取消注册 Group
 # admin.site.unregister(Group)
 ```
 
@@ -1389,9 +1385,9 @@ from accounts import views
 
 app_name = 'accounts'
 urlpatterns = [
-    path('login/', views.userLogin, name='login'),
-    path('register/', views.userRegister, name='register'),
-    path('logout/', views.LogoutPage, name='logout')
+        path('login/', views.userLogin, name='login'),
+        path('register/', views.userRegister, name='register'),
+        path('logout/', views.userLogout, name='logout') # 原文 LogoutPage，通常用 userLogout
 ]
 ```
 
@@ -1401,437 +1397,474 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import gettext_lazy as _
-from accounts.forms import LoginForm, RegisterForm
+from accounts.forms import LoginForm, RegisterForm # 假设 RegisterForm 用于注册
 from django.contrib import messages
 from accounts.models import User
 
 
 def userRegister(request):
-    form = RegisterForm()
-    if request.method == 'POST':
-        form = RegisterForm(request.POST)
-        if form.is_valid():
-            cd = form.cleaned_data
-            if not User.objects.filter(email=cd['username']).exists():
-                if not User.objects.filter(email=cd['email']).exists():
-                    user = User.objects.create_user(
-                        username=cd['username'], phone=cd['phone'], email=cd['email'], password=cd['password1'])
-                    user.save()
-                    login(request, user)
-                    messages.success(request, _("You successfully registered a user"), extra_tags="success")
-                    return redirect('app_name:home')
+        if request.user.is_authenticated: # 如果用户已登录，重定向
+                return redirect('app_name:home') # 假设 app_name:home 是主页
+        form = RegisterForm()
+        if request.method == 'POST':
+                form = RegisterForm(request.POST)
+                if form.is_valid():
+                        # cd = form.cleaned_data # form.save() 会处理 cleaned_data
+                        # 下面的逻辑应该在 RegisterForm 的 save 方法或 clean 方法中处理唯一性检查
+                        # 这里简化，假设表单已处理验证
+                        user = form.save()
+                        login(request, user)
+                        messages.success(request, _("您已成功注册用户"), extra_tags="success")
+                        return redirect('app_name:home') # 假设 app_name:home 是主页
                 else:
-                    messages.error(request, _("This Email is exists"), extra_tags="warning")
-            else:
-                messages.error(request, _("This Username is exists"), extra_tags="warning")
-        else:
-            import json
-            er = json.loads(form.errors.as_json())
-            for e in er:
-                messages.error(request, er[e][0]['message'], 'warning')
-    return render(request, 'accounts/register.html', {'form': form})
+                        # 表单错误处理
+                        for field, errors in form.errors.items():
+                                for error in errors:
+                                        messages.error(request, f"{form.fields[field].label if field != '__all__' else ''}: {error}", 'warning')
+        return render(request, 'accounts/register.html', {'form': form})
 
 
 def userLogin(request):
-    if not request.user.is_active:
+        if request.user.is_authenticated: # 如果用户已登录，重定向
+                return redirect('app_name:home')
         if request.method == 'POST':
-            form = LoginForm(request.POST)
-            if form.is_valid():
-                cd = form.cleaned_data
-                if User.objects.filter(username=cd['username']).exists():
-                    user = authenticate(request, username=cd['username'], password=cd['password'])
-                    if user is not None:
-                        login(request, user)
-                        messages.success(request, _("logged in successfully"), extra_tags="success")
-                        return redirect('app_name:home')
-                    else:
-                        messages.error(request, _("your username Or Password is wrong"), extra_tags="warning")
+                form = LoginForm(request.POST)
+                if form.is_valid():
+                        cd = form.cleaned_data
+                        # USERNAME_FIELD 在模型中是 'username'，所以 authenticate 使用 username
+                        user = authenticate(request, username=cd['username'], password=cd['password'])
+                        if user is not None:
+                                if user.is_active: # 检查用户是否激活
+                                        login(request, user)
+                                        messages.success(request, _("登录成功"), extra_tags="success")
+                                        # 重定向到 next 参数或主页
+                                        next_url = request.GET.get('next')
+                                        return redirect(next_url or 'app_name:home')
+                                else:
+                                        messages.error(request, _("此账户已被禁用。"), extra_tags="warning")
+                        else:
+                                messages.error(request, _("您的用户名或密码错误"), extra_tags="warning")
                 else:
-                    messages.error(request, _("No account created with this username"), extra_tags="warning")
-                    return redirect('accounts:login')
-            else:
-                messages.error(request, _("Please enter your information correctly"), extra_tags="warning")
+                        messages.error(request, _("请正确输入您的信息"), extra_tags="warning")
         else:
-            form = LoginForm()
+                form = LoginForm()
         return render(request, 'accounts/login.html', {'form': form})
-    else:
+
+
+@login_required # 默认 login_url 是 settings.LOGIN_URL
+def userLogout(request): # 原文 LogoutPage
+        logout(request)
+        messages.success(request, _("您已成功登出"), extra_tags="success")
         return redirect('app_name:home')
-
-
-@login_required()
-def LogoutPage(request):
-    logout(request)
-    messages.success(request, _("You Logged Out successfully"), extra_tags="success")
-    return redirect('app_name:home')
 ```
 
-## Send Email
+## 发送邮件
 
 ```python
 # settings.py
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" # 开发时输出到控制台
 
-# Send email function
-from django.core.email import send_mail
+# 发送邮件函数
+from django.core.mail import send_mail
 
 send_mail(
-    subject = "A new post has been created",
-    message = "Go to the web site to see the detail",
-    from_email = "test@test.com",
-    recipient_list = ["test2@text.com"]
+        subject = "一篇新帖子已创建",
+        message = "前往网站查看详情",
+        from_email = "test@test.com", # 发件人邮箱
+        recipient_list = ["test2@test.com"] # 收件人列表
 )
 ```
 
-## Signals
+## 信号 (Signals)
 
 ```python
-# models.py
-from django.db.models.signals import post_save, pre_save
+# models.py (或 signals.py)
+from django.db.models.signals import post_save # pre_save 未在此示例中使用
+from django.dispatch import receiver # 使用 receiver 装饰器是更现代的方式
+# from .models import UserProfile # 假设 UserProfile 模型已定义
+# from django.contrib.auth.models import User # 或自定义的 User 模型
 
+# 假设 User 和 UserProfile 模型已定义
+# class UserProfile(models.Model):
+# user = models.OneToOneField(User, on_delete=models.CASCADE)
+# ... 其他字段
+
+@receiver(post_save, sender=User) # User 应为实际的用户模型
 def post_user_created_signal(sender, instance, created, **kwargs):
-    if created:
-        UserProfile.objects.create(user=instance)
+        if created:
+                UserProfile.objects.create(user=instance)
 
-# Launch the post_user_created_signal method if User model is save
-post_save.connect(post_user_created_signal, sender=User)
+# 如果不使用装饰器：
+# post_save.connect(post_user_created_signal, sender=User)
+# 确保此代码在 Django 加载时运行，例如在 app_name/apps.py 的 ready 方法中导入信号处理模块
 ```
 
-## Seed
+## 数据填充 (Seed)
 
 ```python
 from app_name.models import Product, Category
-from django.shortcuts import HttpResponse
+from django.http import HttpResponse
 from faker import Faker
-
+import random # 用于随机选择分类
 
 def seed(request):
-    Product.objects.all().delete()
-    Category.objects.all().delete()
+        Product.objects.all().delete()
+        Category.objects.all().delete()
 
-    category = Category()
-    category.name = "Sports"
-    category.save()
+        categories_names = ["体育", "家居", "电子产品", "书籍", "服装"] # 示例分类名称
+        created_categories = []
+        for cat_name in categories_names:
+                category = Category.objects.create(name=cat_name)
+                created_categories.append(category)
 
-    category = Category()
-    category.name = "Home"
-    category.save()
+        fake = Faker()
+        for _ in range(100):
+                product = Product()
+                product.name = fake.unique.bs() # 使用更像产品名的假数据
+                product.short_description = fake.sentence(nb_words=10)
+                product.main_picture = fake.image_url(width=400, height=300) # 指定图片大小
+                product.price = round(random.uniform(5.0, 500.0), 2) # 生成更真实的价格
+                product.category =  random.choice(created_categories) # 从已创建的分类中随机选择
+                product.save()
 
-    fake = Faker()
-    for _ in range(100):
-        product = Product()
-        product.name = fake.unique.word()
-        product.short_description = fake.sentence()
-        product.main_picture = fake.image_url()
-        product.price = fake.random_digit() * 10
-        product.category =  Category.objects.order_by('?').first()
-        product.save()
-
-    return HttpResponse('Seeded')
+        return HttpResponse('数据填充完成')
 ```
 
-## Environment Variables
+## 环境变量
 
-### .env key/value file
+### .env 键/值文件
 
 ```python
 $ pip install python-decouple
 ```
 
-Create a file name '.env' in the root folder of your project
+在项目根文件夹中创建一个名为 `.env` 的文件
 
-```python
-SECRET_KEY = 'your secret key'
-ALLOWED_HOST = 127.0.0.1
+```env
+SECRET_KEY='your secret key'
+ALLOWED_HOSTS='127.0.0.1,localhost,your_domain.com' # ALLOWED_HOSTS 是一个列表，decouple 可以处理
+DEBUG=True # 示例
+DATABASE_URL='postgres://user:password@host:port/dbname' # 示例
 ```
 
-In settings.py change security related settings to point to the .env file
+在 `settings.py` 中更改与安全相关的设置以指向 `.env` 文件
 
 ```python
-from decouple import config
+from decouple import config, Csv
 
 SECRET_KEY = config('SECRET_KEY')
-ALLOWED_HOST = config('ALLOWED_HOST')
+# ALLOWED_HOSTS 应该是一个列表
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+DEBUG = config('DEBUG', default=False, cast=bool) # 示例
+# DATABASE_URL = config('DATABASE_URL') # 示例，如果使用 dj-database-url
 ```
 
-## Asynchronous Tasks
+## 异步任务
 
 ### Django Celery Redis
 
-Celery is a distributed task queue that can collect, record, schedule, and perform tasks outside of your main program.
+Celery 是一个分布式任务队列，可以在主程序之外收集、记录、调度和执行任务。
 
-#### Step 1: Install Celery Using pip
+#### 步骤 1：使用 pip 安装 Celery
 
 ```python
-~$ pip install celery       # pip install celery[redis]
+~$ pip install celery redis # 同时安装 redis 依赖，或者 pip install celery[redis]
 ```
 
-#### Step 2. Add celery.py File in Your Project Module
+#### 步骤 2：在您的项目模块中添加 `celery.py` 文件
 
 ```python
-# your_project/celery.py
+# your_project_name/celery.py (与 settings.py 同级)
 import os
 from celery import Celery
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE','your_project_name.settings')
+# 设置 Django 设置模块的默认环境变量。
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_project_name.settings')
+
 app = Celery('your_project_name')
+
+# 使用字符串参数，这样 worker 就不必序列化配置对象。
+# - namespace='CELERY' 表示所有 Celery 相关的配置键都应该有一个 `CELERY_` 前缀。
 app.config_from_object('django.conf:settings', namespace='CELERY')
+
+# 从所有已注册的 Django app configs 中自动发现任务。
 app.autodiscover_tasks()
 
 @app.task(bind=True)
 def debug_task(self):
-    print(f'Request: {self.request!r}')
+        print(f'Request: {self.request!r}')
 ```
 
-#### Step 3: Import the Celery App to Django
+#### 步骤 3：将 Celery 应用导入 Django
 
-<small>To ensure that the Celery app is loaded when Django starts, add the following code into the `__init__.py` file
-that sits on the project module beside on settings.py file.</small>
+<small>为确保 Django 启动时加载 Celery 应用，请将以下代码添加到项目模块中 `settings.py` 文件旁边的 `__init__.py` 文件中。</small>
 
 ```python
-# your_project/__init__.py
+# your_project_name/__init__.py
 from .celery import app as celery_app
 
 __all__ = ('celery_app',)
 ```
 
-#### Step 4: Download and Run Redis as a Celery ‘broker’
+#### 步骤 4：下载并运行 Redis 作为 Celery 的 ‘broker’
 
-```python
+```bash
 ~$ redis-server
 ```
 
-<small>You can test that Redis is working properly by typing this into your terminal:</small>
+<small>您可以通过在终端中输入以下内容来测试 Redis 是否正常工作：</small>
 
-```python
+```bash
 ~$ redis-cli ping
 ```
 
-Redis should reply with PONG - try it!
+Redis 应该回复 PONG - 试试看！
 
-#### Step 5: Add Redis as a Dependency in the Django Project:
+#### 步骤 5：在 Django 项目中添加 Redis 作为依赖项：
 
 ```python
-~$ pip install redis
+~$ pip install redis # 如果步骤1中已安装 celery[redis] 或 redis，则此步骤可省略
 ```
 
-#### Step 6: Celery Stuff Configure to the Django Settings File
+#### 步骤 6：将 Celery 相关配置添加到 Django 设置文件
 
-Once Redis is up, add the following code to your settings.py file and use celery-result
+一旦 Redis 启动，将以下代码添加到您的 `settings.py` 文件中，并使用 `django-celery-results` 来存储结果。
 
 ```python
 ~$ pip install django-celery-results
 ```
 
-This extension enables you to store Celery task results using the Django ORM.<br> It defines a single model
-(`django_celery_results.models.TaskResult`) used to store task results, and you can query this database table like any
-other Django model.
+此扩展使您能够使用 Django ORM 存储 Celery 任务结果。<br> 它定义了一个用于存储任务结果的单一模型 (`django_celery_results.models.TaskResult`)，您可以像查询任何其他 Django 模型一样查询此数据库表。
 
 ```python
-INSTALLED_APPS = [
-                … ,
-                'django_celery_results',
-                ]
+# settings.py
 
-BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+INSTALLED_APPS = [
+                                … ,
+                                'django_celery_results',
+                                ]
+
+# Celery 配置
+CELERY_BROKER_URL = 'redis://localhost:6379/0' # /0 表示 Redis 的第0个数据库
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0' # 也可以使用 'django-db'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = TIME_ZONE
-CELERY_RESULT_BACKEND = 'django-db'
-CELERY_CACHE_BACKEND = 'django-cache'
+CELERY_TIMEZONE = TIME_ZONE # TIME_ZONE 是 Django settings.py 中已定义的
+# 如果使用 django-celery-results 作为结果后端
+# CELERY_RESULT_BACKEND = 'django-db'
+# CELERY_CACHE_BACKEND = 'django-cache' # 如果使用 Django 缓存作为 Celery 缓存后端
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-        'LOCATION': 'redis://localhost:6379/1',
-        "OPTIONS": {
-                    "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
-    }
-}
+# Django 缓存配置 (如果 CELERY_CACHE_BACKEND = 'django-cache')
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django_redis.cache.RedisCache', # 使用 django-redis
+#         'LOCATION': 'redis://127.0.0.1:6379/1', # 使用不同的 Redis 数据库用于缓存
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#         }
+#     }
+# }
+# 如果 CELERY_RESULT_BACKEND = 'django-db'，则不需要 CACHES 配置，除非项目其他部分需要
+# 确保运行迁移以创建 django_celery_results 所需的表
+# python manage.py migrate django_celery_results
 ```
 
-#### That’s it! You should now be able to use Celery with Django
+#### 就是这样！您现在应该能够将 Celery 与 Django 一起使用了
 
-Test that the Celery worker is ready to receive tasks:
+测试 Celery worker 是否准备好接收任务：
 
 ```python
 ~$ celery -A your_project_name worker -l info
 ```
 
-The most important task is: Always run a worker is needed to execute the celery task if any error throws from Redis like
-this:
+最重要的任务是：始终需要运行一个 worker 来执行 celery 任务，如果 Redis 抛出任何错误，例如：
 
-```python
+```
 AttributeError: 'str' object has no attribute 'items'
 ```
 
-- the solution is: you have to use Redis old version
+- 解决方案是：您可能需要检查 Celery 和 Redis 的版本兼容性，或者配置序列化问题。
 
-### Add a New Task
+### 添加一个新任务
 
-#### Step 1: Add tasks.py File to Your Django App.
+#### 步骤 1：在您的 Django 应用中添加 `tasks.py` 文件。
 
 ```python
 # app_name/tasks.py
 from celery import shared_task
-from celery.decorators import task
+# from celery.decorators import task # shared_task 是推荐的方式
 from time import sleep
+import time # 导入 time 模块
 
-
-@task(name='my_first_task')
+@shared_task(name='my_first_task') # 使用 shared_task 更好，因为它不需要直接访问 celery app 实例
 def my_first_task(duration):
-    sleep(duration)
-    return('first_task_done')
+        sleep(duration)
+        return('第一个任务完成')
 
 @shared_task
 def test_func():
-    for i in range(10):
-        print(i)
-    return 'End_OK'
+        for i in range(10):
+                print(i)
+                sleep(0.1) # 添加少量延迟以便观察
+        return '测试函数结束_OK'
 
 @shared_task
 def adding(x, y):
-    time.sleep(10)
-    result = x + y
-    return result
+        time.sleep(10) # 确保 time 已导入
+        result = x + y
+        return result
 ```
 
-#### Step 2: Assign Task to the Celery.
+#### 步骤 2：将任务分配给 Celery。
 
-You need to assign a task to the celery. To assign this task you need to call this function with something different.
-celery gives us two methods `delay()` and `apply_async()` to call task.
+您需要将任务分配给 celery。要分配此任务，您需要以不同的方式调用此函数。celery 提供了 `delay()` 和 `apply_async()` 方法来调用任务。
 
 ```bash
-# Normal function call in python
-~$ my_first_task()
+# Python 中的普通函数调用
+~$ my_first_task() # 这不会通过 Celery 执行
 
-# add task to the celery with function call
+# 通过函数调用将任务添加到 celery
 ~$ my_first_task.delay()
 ```
 
-You can send argument to the function using the delay method. <small>To check celery on the action open a separate tab
-of the terminal then go to the project directory (activate environment if you are using one) and run this command
-again</small>
+您可以使用 `delay` 方法向函数发送参数。<small>要查看 celery 的运行情况，请打开终端的另一个选项卡，然后转到项目目录 (如果您正在使用虚拟环境，请激活它) 并再次运行此命令</small>
 
 ```bash
 ~$ celery -A your_project_name worker -l info
 ```
 
-### Create a View in your App
+### 在您的应用中创建一个视图
 
 ```python
 # app_name/views.py
 from django.http import HttpResponse
-from app_name.tasks import my_first_task, test_func, adding
+from .tasks import my_first_task, test_func, adding # 使用相对导入
 
 def index(request):
-    my_first_task.delay(10)
-    result = adding.delay(x=4, y=5)
-    return HttpResponse(f'response done. {result}')
+        my_first_task.delay(10)
+        task_result = adding.delay(x=4, y=5)
+        # task_result.id 可以用来稍后查询任务状态或结果
+        return HttpResponse(f'响应完成。任务 ID: {task_result.id}')
 
 def test(request):
-    test_func.delay()
-    return HttpResponse("Done")
+        test_func.delay()
+        return HttpResponse("测试任务已分派")
 ```
 
-#### Then call the view from your app URL
+#### 然后从您的应用 URL 调用视图
 
 ```python
 # app_name/urls.py
 from django.urls import path
-from app_name.views import index, test
+from .views import index, test # 使用相对导入
+
+app_name = 'app_name' # 定义 app_name 以便在模板或重定向中使用命名空间
+
 urlpatterns = [
-    path('celery-index/', index, name='celery_index_url'),
-    path('celery-test/', test, name='celery_test_url'),
+        path('celery-index/', index, name='celery_index_url'),
+        path('celery-test/', test, name='celery_test_url'),
 ]
 ```
 
-### Celery In Production Using Supervisor
+### 在生产环境中使用 Supervisor 运行 Celery
 
-#### Step 1: Install Supervisor on Ubuntu Server
+#### 步骤 1：在 Ubuntu 服务器上安装 Supervisor
 
 ```bash
+~$ sudo apt-get update
 ~$ sudo apt-get install supervisor
 ```
 
-#### Step 2: Add .conf File in Supervisor
+#### 步骤 2：在 Supervisor 中添加 `.conf` 文件
 
 ```bash
-~$ sudo nano /etc/supervisor/conf.d/app_name.conf
+~$ sudo nano /etc/supervisor/conf.d/your_project_name_celery.conf
 ```
+`your_project_name_celery` 可以是任何您喜欢的名称，但最好与您的项目相关。
 
-`app_name` can be anything you like, it should be similar to your project name.
+#### 步骤 3：在 `your_project_name_celery.conf` 中添加一些配置
 
-#### Step 3: Add some Configure in app_name.conf
-
-```bash
-[program:your_app_name]
-command=/path/to/env/bin/celery worker -A your_project_name --loglevel=INFO
-directory=/path/to/workflow/your_project_name/
-user=www-data
+```ini
+[program:your_project_name_celery]
+command=/path/to/your/virtualenv/bin/celery -A your_project_name worker -l INFO
+directory=/path/to/your/django_project_directory/
+user=your_user # 运行 celery worker 的用户，例如 www-data 或您的部署用户
+numprocs=1
 autostart=true
 autorestart=true
-stdout_logfile=/path/to/workflow/your_project_name/logs/celeryd.log
-redirect_stderr=true
+startsecs=10
+stopwaitsecs=600
+killasgroup=true
+stdout_logfile=/path/to/your/django_project_directory/logs/celery_worker.log
+stderr_logfile=/path/to/your/django_project_directory/logs/celery_worker_err.log
 ```
 
-Describe the configure file:
+描述配置文件：
+```ini
+[program:your_project_name_celery]
+# 您的 supervisord 程序名称
 
-```bash
-[program:your_app_name]
-#The name of your supervisord program
+command=/path/to/your/virtualenv/bin/celery -A your_project_name worker -l INFO
+# 如果使用虚拟环境，请设置 celery 程序的完整路径
 
-command=/path/to/env/bin/celery worker -A your_project_name --loglevel=INFO
-#Set full path to celery program if using virtualenv
+directory=/path/to/your/django_project_directory/
+# 您的 Django 项目目录
 
-directory=/path/to/workflow/your_project_name/
-#The directory to your Django project
+user=your_user
+# 运行 celery worker 的用户。该用户必须存在。
 
-user=www-data
-#The web server has to be run under a specific user. That user must exist.
+numprocs=1
+# 启动的进程数 (通常为1，除非您了解 Celery 并发模型)
 
 autostart=true
-#If true, this program will start automatically when supervisord is started
+# 如果为 true，则在 supervisord 启动时此程序将自动启动
 
 autorestart=true
-#May be one of false, unexpected, or true. If false, the process will never be autorestarted. If unexpected, the process will be restart when the program exits with an exit code that is not one of the exit codes associated with this process’ configuration (see exitcodes). If true, the process will be unconditionally restarted when it exits, without regard to its exit code.
+# 可以是 false、unexpected 或 true。如果为 false，则进程永远不会自动重启。如果为 unexpected，则当程序以非此进程配置关联的退出代码 (参见 exitcodes) 退出时，进程将重新启动。如果为 true，则当进程退出时，无论其退出代码如何，都将无条件重新启动。
 
-stdout_logfile=/path/to/workflow/your_project_name/logs/celeryd.log
-#Put process stdout output in this file
+startsecs=10
+# 程序启动后需要保持运行的秒数，以认为启动成功
 
-redirect_stderr=true
-#If true, cause the process’ stderr output to be sent back to supervisord on its stdout file descriptor (in UNIX shell terms, this is the equivalent of executing /the/program 2>&1).
+stopwaitsecs=600
+# 发送 SIGTERM 后等待进程退出的秒数，之后发送 SIGKILL
+
+killasgroup=true
+# 如果为 true，当停止或杀死主进程时，也会杀死其整个进程组
+
+stdout_logfile=/path/to/your/django_project_directory/logs/celery_worker.log
+# 将进程标准输出放入此文件
+
+stderr_logfile=/path/to/your/django_project_directory/logs/celery_worker_err.log
+# 将进程标准错误输出放入此文件 (如果 redirect_stderr=false)
+# redirect_stderr=true # 如果为 true，则将进程的 stderr 输出发送回 supervisord 的 stdout 文件描述符 (在 UNIX shell 术语中，这相当于执行 /the/program 2>&1)。如果使用此选项，则不需要 stderr_logfile。
 ```
 
-#### Step 4: Inform Configuration to the Server
+#### 步骤 4：通知服务器配置更改
 
-After adding a new program, we should run the following two commands, to inform the server to reread the configuration
-files and to apply any changes.
+添加新程序后，我们应该运行以下两个命令，以通知服务器重新读取配置文件并应用任何更改。
 
-```python
+```bash
 ~$ sudo supervisorctl reread
 ~$ sudo supervisorctl update
 ```
 
-#### Managing Supervisor App
+#### 管理 Supervisor 应用
 
 ```bash
 ~$ sudo supervisorctl
 ```
 
-You will be greeted with a list of the registered processes. You will see a process called `your_app_name` with a
-`RUNNING` status.
+您将看到已注册进程的列表。您应该会看到一个名为 `your_project_name_celery` 的进程，状态为 `RUNNING`。
 
-```bash
-your_app_name                 RUNNING   pid 6853, uptime 0:22:30
+```
+your_project_name_celery      RUNNING   pid 6853, uptime 0:22:30
 supervisor>
 ```
 
-Type `help` for a list of available commands.
+输入 `help` 获取可用命令列表。
 
-```bash
+```
 supervisor> help
 default commands (type help <topic>):
 =====================================
@@ -1840,190 +1873,191 @@ avail  fg        pid   remove  shutdown  status  update
 clear  maintail  quit  reread  signal    stop    version
 ```
 
-In a nutshell, we can `start`, `stop` and `restart` programs bypassing the program name as an argument to the respective
-command. We can also take a look at the program output with the `tail` command. Once you are finished, you can `quit`.
+简而言之，我们可以通过将程序名称作为参数传递给相应命令来 `start`、`stop` 和 `restart` 程序。我们还可以使用 `tail` 命令查看程序输出。完成后，您可以 `quit`。
 
 ```bash
-~$ supervisor> quit
+supervisor> quit
 ```
 
-## Deployment Django in Server
+## 在服务器上部署 Django
 
-### Set Up Django with Postgres, Nginx, and Gunicorn on Ubuntu server
+### 在 Ubuntu 服务器上使用 Postgres、Nginx 和 Gunicorn 设置 Django
 
-#### Step 1 — Installing the Packages from the Ubuntu Repositories
+#### 步骤 1 — 从 Ubuntu 存储库安装软件包
 
 ```bash
 sudo apt update
 sudo apt install python3-venv python3-dev libpq-dev postgresql postgresql-contrib nginx curl
 ```
 
-#### Step 2 — Creating the PostgreSQL Database and User
+#### 步骤 2 — 创建 PostgreSQL 数据库和用户
 
 ```bash
 sudo -u postgres psql
 ```
 
-- First, create a database for your project:
+- 首先，为您的项目创建一个数据库：
 
-```bash
+```sql
 postgres=# CREATE DATABASE myproject;
 ```
 
-- Next, create a database user for our project. Make sure to select a secure password:
+- 接下来，为我们的项目创建一个数据库用户。确保选择一个安全的密码：
 
-```bash
+```sql
 postgres=# CREATE USER myprojectuser WITH PASSWORD 'password';
 ```
 
-- Afterwards, you’ll modify a few of the connection parameters for the user that you just created
+- 之后，您将修改刚创建的用户的一些连接参数
 
-```bash
+```sql
 postgres=# ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
 postgres=# ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
 postgres=# ALTER ROLE myprojectuser SET timezone TO 'UTC';
 ```
 
-- Now, you can give the new user access to administer the new database:
+- 现在，您可以授予新用户管理新数据库的权限：
 
-```bash
+```sql
 postgres=# GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
 ```
 
-- When you are finished, exit out of the PostgreSQL prompt by typing:
+- 完成后，通过键入以下命令退出 PostgreSQL 提示符：
 
-```bash
+```sql
 postgres=# \q
 ```
 
-#### Step 3 — Creating a Python Virtual Environment for your Project
+#### 步骤 3 — 为您的项目创建 Python 虚拟环境
 
-- thin the project directory, create a Python virtual environment by typing:
+- 在项目目录中，通过键入以下命令创建 Python 虚拟环境：
 
 ```bash
 mkdir ~/myprojectdir
 cd ~/myprojectdir
 ```
 
-- Within the project directory, create a Python virtual environment by typing:
+- 在项目目录中，通过键入以下命令创建 Python 虚拟环境：
 
 ```bash
 python3 -m venv myprojectenv
 ```
 
-- Before installing your project’s Python requirements, you will need to activate the virtual environment. You can do
-  that by typing:
+- 在安装项目的 Python 依赖项之前，您需要激活虚拟环境。您可以通过键入以下命令来执行此操作：
 
 ```bash
 source myprojectenv/bin/activate
 ```
 
-- With your virtual environment active, install Django, Gunicorn, and the psycopg2 PostgreSQL adaptor with the local
-  instance of pip
+- 激活虚拟环境后，使用本地 pip 实例安装 Django、Gunicorn 和 psycopg2 PostgreSQL 适配器
 
 ```bash
 (myprojectenv)$ pip install django gunicorn psycopg2-binary
 ```
 
-#### Step 4 — Creating and Configuring a New Django Project
+#### 步骤 4 — 创建和配置新的 Django 项目
 
-- With your Python components installed, you can now create the actual Django project files.
-
-```bash
-(myprojectenv)$ django-admin startproject myproject ~/myprojectdir
-```
-
-- The first thing you should do with your newly created project files is adjust the settings. Open the settings file in
-  your text editor:
+- 安装 Python 组件后，您现在可以创建实际的 Django 项目文件。
 
 ```bash
-(myprojectenv)$ nano ~/myprojectdir/myproject/settings.py
+(myprojectenv)$ django-admin startproject myprojectname ~/myprojectdir # myprojectname 是项目名
+# 注意：上面的命令会在 ~/myprojectdir 内部创建一个名为 myprojectname 的目录，
+# 并在该目录内创建 manage.py 和另一个 myprojectname 目录 (包含 settings.py 等)。
+# 如果希望项目文件直接在 ~/myprojectdir 中，可以使用：
+# (myprojectenv)$ django-admin startproject myprojectname .
+# (在 cd ~/myprojectdir 之后)
 ```
 
-- Start by locating the ALLOWED_HOSTS directive.
+- 对于新创建的项目文件，您应该做的第一件事是调整设置。在文本编辑器中打开设置文件：
+
+```bash
+(myprojectenv)$ nano ~/myprojectdir/myprojectname/settings.py # 路径取决于上面的 startproject 命令
+```
+
+- 首先找到 `ALLOWED_HOSTS` 指令。
 
 ```python
-# ~/myprojectdir/myproject/settings.py
-ALLOWED_HOSTS = ['your_server_domain_or_IP', 'second_domain_or_IP', . . ., 'localhost']
+# ~/myprojectdir/myprojectname/settings.py
+ALLOWED_HOSTS = ['your_server_domain_or_IP', 'second_domain_or_IP', '. . .', 'localhost']
 ```
 
-- Next, find the section that configures database access. It will start with DATABASES. The configuration in the file is
-  for a SQLite database.
+- 接下来，找到配置数据库访问的部分。它将以 `DATABASES` 开头。文件中的配置适用于 SQLite 数据库。
 
 ```python
 . . .
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myproject',
-        'USER': 'myprojectuser',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
+        'default': {
+                'ENGINE': 'django.db.backends.postgresql_psycopg2', # 或 'django.db.backends.postgresql'
+                'NAME': 'myproject', # 之前创建的数据库名
+                'USER': 'myprojectuser', # 之前创建的用户名
+                'PASSWORD': 'password', # 用户的密码
+                'HOST': 'localhost', # 或 PostgreSQL 服务器的 IP 地址
+                'PORT': '', # 默认为 5432，如果不同则指定
+        }
 }
 . . .
 ```
 
-- Next, move down to the bottom of the file and add a setting indicating where the static files should be placed.
+- 接下来，移至文件底部并添加一个设置，指示应放置静态文件的位置。
 
 ```python
 . . .
-STATIC_URL = 'static/'
+STATIC_URL = '/static/' # URL 前缀，用于在模板中引用静态文件
 
-# Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # collectstatic 将收集静态文件到此目录
+# MEDIA_URL = '/media/' # 如果使用媒体文件
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles') # 存储上传的媒体文件
+. . .
 ```
 
-#### Step 5 — Completing Initial Project Setup
+#### 步骤 5 — 完成初始项目设置
 
-- Now, you can migrate the initial database schema to our PostgreSQL database using the management script:
+- 现在，您可以使用管理脚本将初始数据库模式迁移到我们的 PostgreSQL 数据库：
 
 ```bash
-(myprojectenv)$ ~/myprojectdir/manage.py makemigrations
-(myprojectenv)$ ~/myprojectdir/manage.py migrate
+(myprojectenv)$ python ~/myprojectdir/manage.py makemigrations
+(myprojectenv)$ python ~/myprojectdir/manage.py migrate
 ```
 
-- Create an administrative user for the project by typing:
+- 通过键入以下命令为项目创建一个管理用户：
 
 ```bash
-(myprojectenv)$ ~/myprojectdir/manage.py createsuperuser
+(myprojectenv)$ python ~/myprojectdir/manage.py createsuperuser
 ```
 
-- You can collect all of the static content into the directory location that you configured by typing:
+- 您可以通过键入以下命令将所有静态内容收集到您配置的目录位置：
 
 ```bash
-(myprojectenv)$ ~/myprojectdir/manage.py collectstatic
+(myprojectenv)$ python ~/myprojectdir/manage.py collectstatic
 ```
 
-#### Step 6 — Testing Gunicorn’s Ability to Serve the Project
+#### 步骤 6 — 测试 Gunicorn 服务项目的能力
 
 ```bash
 (myprojectenv)$ cd ~/myprojectdir
-(myprojectenv)$ gunicorn --bind 0.0.0.0:8000 myproject.wsgi
+(myprojectenv)$ gunicorn --bind 0.0.0.0:8000 myprojectname.wsgi:application # myprojectname.wsgi
 ```
 
-- You’re now finished configuring your Django application. You can back out of our virtual environment by typing:
+- 您现在已完成 Django 应用程序的配置。您可以通过键入以下命令退出我们的虚拟环境：
 
 ```bash
 (myprojectenv)$ deactivate
 ```
 
-#### Step 7 — Creating systemd Socket and Service Files for Gunicorn You have tested tha
+#### 步骤 7 — 为 Gunicorn 创建 systemd Socket 和服务文件
 
 ```bash
 sudo nano /etc/systemd/system/gunicorn.socket
 ```
 
-- Inside, you will create a `[Unit]` section to describe the socket, a `[Socket]` section to define the socket location,
-  and an `[Install]` section to make sure the socket is created at the right time:
+- 在内部，您将创建一个 `[Unit]` 部分来描述套接字，一个 `[Socket]` 部分来定义套接字位置，以及一个 `[Install]` 部分来确保在正确的时间创建套接字：
 
-```bash /etc/systemd/system/gunicorn.socket
+```ini
+# /etc/systemd/system/gunicorn.socket
 [Unit]
 Description=gunicorn socket
 
@@ -2034,171 +2068,164 @@ ListenStream=/run/gunicorn.sock
 WantedBy=sockets.target
 ```
 
-- Save and close the file when you are finished.
-- Next, create and open a systemd service file for Gunicorn with sudo privileges in your text editor. The service
-  filename should match the socket filename with the exception of the extension:
+- 完成后保存并关闭文件。
+- 接下来，在文本编辑器中使用 sudo 权限为 Gunicorn 创建并打开一个 systemd 服务文件。服务文件名应与套接字文件名匹配，但扩展名除外：
 
 ```bash
 sudo nano /etc/systemd/system/gunicorn.service
 ```
 
-```bash
+```ini
+# /etc/systemd/system/gunicorn.service
 [Unit]
 Description=gunicorn daemon
 Requires=gunicorn.socket
 After=network.target
 
 [Service]
-User=sammy
-Group=www-data
-WorkingDirectory=/home/sammy/myprojectdir
+User=sammy # 替换为运行 Gunicorn 的用户
+Group=www-data # 替换为适当的组，通常是用户的主组或 www-data
+WorkingDirectory=/home/sammy/myprojectdir # 替换为您的项目目录
 ExecStart=/home/sammy/myprojectdir/myprojectenv/bin/gunicorn \
-          --access-logfile - \
-          --workers 3 \
-          --bind unix:/run/gunicorn.sock \
-          myproject.wsgi:application
+                    --access-logfile - \
+                    --workers 3 \
+                    --bind unix:/run/gunicorn.sock \
+                    myprojectname.wsgi:application # 替换为您的项目名.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-- You can now start and enable the Gunicorn socket. This will create the socket file at /run/gunicorn.sock now and at
-  boot. When a connection is made to that socket, systemd will automatically start the gunicorn.service to handle it
+- 您现在可以启动并启用 Gunicorn 套接字。这将在 `/run/gunicorn.sock` 创建套接字文件，并在启动时创建。当连接到该套接字时，systemd 将自动启动 `gunicorn.service` 来处理它
 
 ```bash
 sudo systemctl start gunicorn.socket
 sudo systemctl enable gunicorn.socket
 ```
 
-#### Step 8 — Checking for the Gunicorn Socket File
+#### 步骤 8 — 检查 Gunicorn 套接字文件
 
-- Check the status of the process to find out whether it was able to start:
+- 检查进程的状态以了解它是否能够启动：
 
 ```bash
 sudo systemctl status gunicorn.socket
 ```
 
-- Next, check for the existence of the gunicorn.sock file within the /run directory:
+- 接下来，检查 `/run` 目录中是否存在 `gunicorn.sock` 文件：
 
 ```bash
 file /run/gunicorn.sock
 ```
 
-#### Step 9 — Testing Socket Activation
+#### 步骤 9 — 测试套接字激活
 
 ```bash
-sudo systemctl status gunicorn
+sudo systemctl status gunicorn # 此时可能未运行，因为还没有连接
 ```
 
-- To test the socket activation mechanism, you can send a connection to the socket through curl by typing:
+- 要测试套接字激活机制，您可以通过 `curl` 向套接字发送连接，方法是键入：
 
 ```bash
 curl --unix-socket /run/gunicorn.sock localhost
 ```
 
-- You should receive the HTML output from your application in the terminal. This indicates that Gunicorn was started and
-  was able to serve your Django application. You can verify that the Gunicorn service is running by typing:
+- 您应该在终端中收到应用程序的 HTML 输出。这表明 Gunicorn 已启动并且能够为您的 Django 应用程序提供服务。您可以通过键入以下命令来验证 Gunicorn 服务是否正在运行：
 
 ```bash
 sudo systemctl status gunicorn
 ```
 
-- Check your /etc/systemd/system/gunicorn.service file for problems. If you make changes to the
-  /etc/systemd/system/gunicorn.service file, reload the daemon to reread the service definition and restart the Gunicorn
-  process by typing
+- 检查您的 `/etc/systemd/system/gunicorn.service` 文件是否有问题。如果您对 `/etc/systemd/system/gunicorn.service` 文件进行了更改，请重新加载守护程序以重新读取服务定义，并通过键入以下命令重新启动 Gunicorn 进程
 
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl restart gunicorn
 ```
 
-#### Step 10 — Configure Nginx to Proxy Pass to Gunicorn
+#### 步骤 10 — 配置 Nginx 以代理传递到 Gunicorn
 
-- Start by creating and opening a new server block in Nginx’s sites-available directory:
+- 首先在 Nginx 的 `sites-available` 目录中创建并打开一个新的服务器块：
 
 ```bash
-sudo nano /etc/nginx/sites-available/myproject
+sudo nano /etc/nginx/sites-available/myproject # myproject 是配置文件名
 ```
 
-```bash
+```nginx
 server {
-    listen 80;
-    server_name server_domain_or_IP;
+        listen 80;
+        server_name your_server_domain_or_IP; # 替换为您的域名或 IP
 
-    location = /favicon.ico { access_log off; log_not_found off; }
-    location /static/ {
-        alias /home/sammy/myprojectdir/staticfiles/;
-    }
+        location = /favicon.ico { access_log off; log_not_found off; }
+        location /static/ {
+                alias /home/sammy/myprojectdir/staticfiles/; # 替换为您的 STATIC_ROOT 路径
+        }
 
-    location /media {
-        autoindex on;
-        alias /home/sammy/myprojectdir/media/;
-    }
+        location /media/ { # 如果使用媒体文件
+                alias /home/sammy/myprojectdir/mediafiles/; # 替换为您的 MEDIA_ROOT 路径
+        }
 
-    location / {
-        include proxy_params;
-        proxy_pass http://unix:/run/gunicorn.sock;
-    }
+        location / {
+                include proxy_params;
+                proxy_pass http://unix:/run/gunicorn.sock;
+        }
 }
 ```
 
-- Save and close the file when you are finished. Now, you can enable the file by linking it to the sites-enabled
-  directory:
+- 完成后保存并关闭文件。现在，您可以通过将其链接到 `sites-enabled` 目录来启用该文件：
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/myproject /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/myproject /etc/nginx/sites-enabled/
 ```
 
-- Test your Nginx configuration for syntax errors by typing:
+- 通过键入以下命令测试 Nginx 配置是否存在语法错误：
 
 ```bash
 sudo nginx -t
 ```
 
-- If no errors are reported, go ahead and restart Nginx by typing:
+- 如果没有报告错误，请通过键入以下命令重新启动 Nginx：
 
 ```bash
 sudo systemctl restart nginx
 ```
 
-- you need to open up your firewall to normal traffic on port 80
+- 您需要为端口 80 上的正常流量打开防火墙
 
 ```bash
 sudo ufw allow 'Nginx Full'
 ```
 
-You should now be able to go to your server’s domain or IP address to view your application.
+您现在应该能够转到服务器的域或 IP 地址来查看您的应用程序。
 
-#### Step 11 — Troubleshooting Nginx and Gunicorn
+#### 步骤 11 — Nginx 和 Gunicorn 故障排除
 
-- Nginx Is Showing the Default Page Instead of the Django Application
+- Nginx 显示默认页面而不是 Django 应用程序
 
 ```bash
 sudo tail -F /var/log/nginx/error.log
 ```
 
-- Django Is Displaying: “could not connect to server: Connection refused”
+- Django 显示：“could not connect to server: Connection refused”（无法连接到服务器：连接被拒绝）
 
 ```bash
 sudo systemctl status postgresql
 ```
 
-- If it is not, you can start it and enable it to start automatically at boot (if it is not already configured to do so)
-  by typing:
+- 如果它没有运行，您可以通过键入以下命令启动它并使其在启动时自动启动 (如果尚未配置为这样做)：
 
 ```bash
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
 ```
 
-If you change Gunicorn socket or service files, reload the daemon and restart the process by typing:
+如果您更改 Gunicorn 套接字或服务文件，请重新加载守护程序并通过键入以下命令重新启动进程：
 
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl restart gunicorn.socket gunicorn.service
 ```
 
-If you change the Nginx server block configuration, test the configuration and then Nginx by typing:
+如果您更改 Nginx 服务器块配置，请测试配置然后通过键入以下命令重新启动 Nginx：
 
 ```bash
 sudo nginx -t && sudo systemctl restart nginx

@@ -3,126 +3,126 @@ title: Screen
 date: 2021-01-02 20:03:55
 background: bg-emerald-500
 tags:
-  - terminal
-  - session
-  - utility
+  - 终端
+  - 会话
+  - 实用工具
 categories:
-  - Linux Command
+  - Linux 命令
 intro: |
-  This is a quick reference guide cheat sheet for the screen command.
+  这是 screen 命令的快速参考指南备忘单。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门
 
-### Getting started
+### 入门
 
 ```shell script
 $ screen
 ```
 
-1\. Press <kbd>Ctrl-A</kbd> <kbd>D</kbd> to detach session
+1\. 按 <kbd>Ctrl-A</kbd> <kbd>D</kbd> 分离会话
 
 ---
 
-2\. List all screen sessions
+2\. 列出所有 screen 会话
 
 ```shell script
 $ screen -ls
 ```
 
-3\. Re-attach a screen Session
+3\. 重新附加一个 screen 会话
 
 ```shell script
-$ screen -r <name/pid>
+$ screen -r <名称/PID>
 ```
 
-### Options {.col-span-2}
+### 选项 {.col-span-2}
 
-| Options | Example                               | Description                                             |
-| ------- | ------------------------------------- | ------------------------------------------------------- |
-| `-S`    | screen -S debug                       | Start a new session with session name                   |
-| `-ls`   | screen -ls                            | List running sessions / screens                         |
-| `-x`    | screen -x                             | Attach to a running session                             |
-| `-r`    | screen -r debug                       | Attach to a running session with name                   |
-| `-R`    | screen -R debug                       | Attach to a session _(Will create if it doesn't exist)_ |
-| `-d`    | screen -d -m wget xxxx.com/large.file | Start screen in detached mode                           |
-| `-X`    | screen -X -S debug kill               | Kill a running session                                  |
+| 选项   | 示例                                  | 描述                                                    |
+| ------ | ------------------------------------- | ------------------------------------------------------- |
+| `-S`   | screen -S debug                       | 使用会话名称启动一个新会话                                  |
+| `-ls`  | screen -ls                            | 列出正在运行的会话/屏幕                                   |
+| `-x`   | screen -x                             | 附加到一个正在运行的会话                                  |
+| `-r`   | screen -r debug                       | 通过名称附加到一个正在运行的会话                            |
+| `-R`   | screen -R debug                       | 附加到一个会话 _(如果不存在则创建)_                         |
+| `-d`   | screen -d -m wget xxxx.com/large.file | 以分离模式启动 screen                                     |
+| `-X`   | screen -X -S debug kill               | 终止一个正在运行的会话                                    |
 
 {.show-header}
 
-### Help
+### 帮助
 
-| Command      | Description                    |
-| ------------ | ------------------------------ |
-| `Ctrl-A` `?` | See help _(Lists keybindings)_ |
-
-{.shortcuts}
-
-### Window Management {.col-span-2 .row-span-2}
-
-| Command                                | Description                             |
-| -------------------------------------- | --------------------------------------- |
-| `Ctrl-A` `C`                           | Create new window                       |
-| `Ctrl-A` `Ctrl-A`                      | Change to last-visited active window    |
-| `Ctrl-A` `0...9`                       | Change to window by number              |
-| `Ctrl-A` `'` `<0...9 or title>`        | Change to window by number or name      |
-| `Ctrl-A` `N` or `Ctrl-A` `<space>`     | Change to next window in list           |
-| `Ctrl-A` `P` or `Ctrl-A` `<backspace>` | Change to previous window in list       |
-| `Ctrl-A` `"`                           | See window list                         |
-| `Ctrl-A` `W`                           | Show window bar                         |
-| `Ctrl-A` `K`                           | Kill current window _(not recommended)_ |
-| `Ctrl-A` `\`                           | Kill all windows _(not recommended)_    |
-| `Ctrl-A` `A`                           | Rename current window                   |
+| 命令         | 描述                       |
+| ------------ | -------------------------- |
+| `Ctrl-A` `?` | 查看帮助 _(列出快捷键)_      |
 
 {.shortcuts}
 
-### Getting Out
+### 窗口管理 {.col-span-2 .row-span-2}
 
-| Command          | Description                               |
-| ---------------- | ----------------------------------------- |
-| `Ctrl-A` `D`     | Detach                                    |
-| `Ctrl-A` `D` `D` | Detach and logout <br>_(quick exit)_      |
-| `Ctrl-A` `:`     | Exit all session                          |
-| `Ctrl-A` `C-\`   | Force-exit screen <br>_(not recommended)_ |
-
-{.shortcuts}
-
-### Split screen
-
-| Command        | Description                            |
-| -------------- | -------------------------------------- | ------------------------ |
-| `Ctrl-A` `S`   | Split display horizontally             |
-| `Ctrl-A` `V`   | Split display vertically               |
-| `Ctrl-A` `     | `                                      | Split display vertically |
-| `Ctrl-A` `TAB` | Jump to next display region            |
-| `Ctrl-A` `X`   | Remove current region                  |
-| `Ctrl-A` `Q`   | Remove all regions but the current one |
+| 命令                                   | 描述                                 |
+| -------------------------------------- | ------------------------------------ |
+| `Ctrl-A` `C`                           | 创建新窗口                           |
+| `Ctrl-A` `Ctrl-A`                      | 切换到上一个访问的活动窗口             |
+| `Ctrl-A` `0...9`                       | 按编号切换到窗口                     |
+| `Ctrl-A` `'` `<0...9 或 标题>`        | 按编号或名称切换到窗口               |
+| `Ctrl-A` `N` 或 `Ctrl-A` `<space>`     | 切换到列表中的下一个窗口             |
+| `Ctrl-A` `P` 或 `Ctrl-A` `<backspace>` | 切换到列表中的上一个窗口             |
+| `Ctrl-A` `"`                           | 查看窗口列表                         |
+| `Ctrl-A` `W`                           | 显示窗口栏                           |
+| `Ctrl-A` `K`                           | 终止当前窗口 _(不推荐)_              |
+| `Ctrl-A` `\`                           | 终止所有窗口 _(不推荐)_              |
+| `Ctrl-A` `A`                           | 重命名当前窗口                       |
 
 {.shortcuts}
 
-### Misc {.col-span-2 .row-span-2}
+### 退出
 
-| Command           | Description                                |
-| ----------------- | ------------------------------------------ |
-| `Ctrl-A` `C-l`    | Redraw window                              |
-| `Ctrl-A` `[`      | Copy mode                                  |
-| `Ctrl-A` `ESC`    | Copy mode                                  |
-| `Ctrl-A` `]`      | Paste                                      |
-| `Ctrl-A` `M`      | Monitor window for activity                |
-| `Ctrl-A` `_`      | Monitor window for silence                 |
-| `Ctrl-A` `Ctrl-V` | Enter digraph <br>_(non-ASCII characters)_ |
-| `Ctrl-A` `X`      | Lock (password protect) display            |
-| `Ctrl-A` `:`      | Enter screen command                       |
-| `Ctrl-A` `H`      | Enable logging in the screen session       |
+| 命令             | 描述                                  |
+| ---------------- | ------------------------------------- |
+| `Ctrl-A` `D`     | 分离                                  |
+| `Ctrl-A` `D` `D` | 分离并注销 <br>_(快速退出)_            |
+| `Ctrl-A` `:`     | 退出所有会话                          |
+| `Ctrl-A` `C-\`   | 强制退出 screen <br>_(不推荐)_        |
 
 {.shortcuts}
 
-### Screen tricks
+### 分割屏幕
 
-SSH and attach in one line
+| 命令           | 描述                                   |
+| -------------- | -------------------------------------- |
+| `Ctrl-A` `S`   | 水平分割显示                           |
+| `Ctrl-A` `V`   | 垂直分割显示                           |
+| `Ctrl-A` `     | `                                      | 垂直分割显示                           |
+| `Ctrl-A` `TAB` | 跳转到下一个显示区域                   |
+| `Ctrl-A` `X`   | 移除当前区域                           |
+| `Ctrl-A` `Q`   | 移除除当前区域外的所有区域             |
+
+{.shortcuts}
+
+### 杂项 {.col-span-2 .row-span-2}
+
+| 命令              | 描述                                   |
+| ----------------- | -------------------------------------- |
+| `Ctrl-A` `C-l`    | 重绘窗口                               |
+| `Ctrl-A` `[`      | 进入复制模式                           |
+| `Ctrl-A` `ESC`    | 进入复制模式                           |
+| `Ctrl-A` `]`      | 粘贴                                   |
+| `Ctrl-A` `M`      | 监控窗口活动                           |
+| `Ctrl-A` `_`      | 监控窗口静默                           |
+| `Ctrl-A` `Ctrl-V` | 输入双字符 <br>_(非 ASCII 字符)_       |
+| `Ctrl-A` `X`      | 锁定 (密码保护) 显示                   |
+| `Ctrl-A` `:`      | 进入 screen 命令                       |
+| `Ctrl-A` `H`      | 在 screen 会话中启用日志记录           |
+
+{.shortcuts}
+
+### Screen 技巧
+
+SSH 并一步附加
 
 ```shell script
-$ ssh -t user@host screen -x <name/pid>
+$ ssh -t user@host screen -x <名称/PID>
 ```

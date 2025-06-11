@@ -1,5 +1,5 @@
 ---
-title: Google Drive
+title: 谷歌云端硬盘
 date: 2022-11-23 16:23:31.701360
 background: bg-[#479b61]
 label:
@@ -7,123 +7,123 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 54 keyboard shortcuts found in Google Drive on the web
+  一个包含谷歌云端硬盘网页版 54 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Navigation and views
+### 导航和视图
 
-| Shortcut | Action                                     |
+| 快捷键   | 操作                                     |
 | -------- | ------------------------------------------ |
-| `G` `N`  | Go to navigation panel (folders list)      |
-| `G` `L`  | Go to items view                           |
-| `V`      | Switch between grid and list in items view |
-| `G` `D`  | Go to details pane                         |
-| `G` `T`  | Go to top of application (Google bar)      |
-| `G` `A`  | Go to download status                      |
-| `G` `U`  | Go to upload status                        |
-| `D`      | Show or hide details pane                  |
-| `I`      | Show or hide activity pane                 |
+| `G` `N`  | 转到导航面板（文件夹列表）      |
+| `G` `L`  | 转到条目视图                           |
+| `V`      | 在条目视图中切换网格和列表视图 |
+| `G` `D`  | 转到详情窗格                         |
+| `G` `T`  | 转到应用顶部（谷歌栏）      |
+| `G` `A`  | 转到下载状态                      |
+| `G` `U`  | 转到上传状态                        |
+| `D`      | 显示或隐藏详情窗格                  |
+| `I`      | 显示或隐藏活动窗格                 |
 
 {.shortcuts}
 
-### Select items
+### 选择条目
 
-| Shortcut        | Action                        |
+| 快捷键        | 操作                        |
 | --------------- | ----------------------------- |
-| `X`             | Select or deselect item       |
-| `J/Down`        | Select next item down         |
-| `K/Up`          | Select next item up           |
-| `H/Left`        | Select next item to the left  |
-| `L/Right`       | Select next item to the right |
-| `Shift` `Down`  | Extend selection down         |
-| `Shift` `Up`    | Extend selection up           |
-| `Shift` `Left`  | Extend selection left         |
-| `Shift` `Right` | Extend selection right        |
-| `Shift` `A`     | Select all visible items      |
-| `Shift` `N`     | Clear all selections          |
+| `X`             | 选择或取消选择条目       |
+| `J/Down`        | 选择下一个条目（向下）         |
+| `K/Up`          | 选择下一个条目（向上）           |
+| `H/Left`        | 选择下一个条目（向左）  |
+| `L/Right`       | 选择下一个条目（向右） |
+| `Shift` `Down`  |向下扩展选择         |
+| `Shift` `Up`    | 向上扩展选择           |
+| `Shift` `Left`  | 向左扩展选择         |
+| `Shift` `Right` | 向右扩展选择        |
+| `Shift` `A`     | 选择所有可见条目      |
+| `Shift` `N`     | 清除所有选择          |
 
 {.shortcuts}
 
-### Move between items
+### 在条目之间移动
 
-| Shortcut       | Action                                |
+| 快捷键       | 操作                                |
 | -------------- | ------------------------------------- |
-| `Ctrl` `Down`  | Move down without changing selection  |
-| `Ctrl` `Up`    | Move up without changing selection    |
-| `Ctrl` `Left`  | Move left without changing selection  |
-| `Ctrl` `Right` | Move right without changing selection |
+| `Ctrl` `Down`  | 向下移动而不更改选择  |
+| `Ctrl` `Up`    | 向上移动而不更改选择    |
+| `Ctrl` `Left`  | 向左移动而不更改选择  |
+| `Ctrl` `Right` | 向右移动而不更改选择 |
 
 {.shortcuts}
 
-### Take action on selected items
+### 对所选条目执行操作
 
-| Shortcut           | Action                                     |
+| 快捷键           | 操作                                     |
 | ------------------ | ------------------------------------------ |
-| `Enter`            | Open selected item                         |
-| `N`                | Rename selected item                       |
-| `.`                | Share selected items                       |
-| `Z`                | Move selected items to new folder          |
-| `S`                | Star or unstar selected items              |
-| `Shift` `Z`        | Add selected items to an additional folder |
-| `Delete`           | Remove selected items                      |
-| `Ctrl` `Z`         | Undo last action                           |
-| `Ctrl` `Shift` `Z` | Redo last undone action                    |
+| `Enter`            | 打开所选条目                         |
+| `N`                | 重命名所选条目                       |
+| `.`                | 分享所选条目                       |
+| `Z`                | 将所选条目移动到新文件夹          |
+| `S`                | 为所选条目标注星号或取消星号              |
+| `Shift` `Z`        | 将所选条目添加到其他文件夹 |
+| `Delete`           | 删除所选条目                      |
+| `Ctrl` `Z`         | 撤消上一个操作                           |
+| `Ctrl` `Shift` `Z` | 重做上次撤消的操作                    |
 
 {.shortcuts}
 
-### Create new items
+### 创建新条目
 
-| Shortcut    | Action       |
+| 快捷键    | 操作       |
 | ----------- | ------------ |
-| `Shift` `T` | Document     |
-| `Shift` `P` | Presentation |
-| `Shift` `S` | Spreadsheet  |
-| `Shift` `D` | Drawing      |
-| `Shift` `F` | Folder       |
-| `Shift` `O` | Form         |
+| `Shift` `T` | 文档     |
+| `Shift` `P` | 演示文稿 |
+| `Shift` `S` | 电子表格  |
+| `Shift` `D` | 绘图      |
+| `Shift` `F` | 文件夹       |
+| `Shift` `O` | 表单         |
 
 {.shortcuts}
 
-### Open menus
+### 打开菜单
 
-| Shortcut | Action                      |
+| 快捷键 | 操作                      |
 | -------- | --------------------------- |
-| `C`      | Create menu                 |
-| `A`      | More actions menu           |
-| `F`      | Current folder actions menu |
-| `R`      | Sort menu                   |
-| `T`      | Settings menu               |
+| `C`      | 创建菜单                 |
+| `A`      | 更多操作菜单           |
+| `F`      | 当前文件夹操作菜单 |
+| `R`      | 排序菜单                   |
+| `T`      | 设置菜单               |
 
 {.shortcuts}
 
-### Application actions
+### 应用操作
 
-| Shortcut    | Action                          |
+| 快捷键    | 操作                          |
 | ----------- | ------------------------------- |
-| `Shift` `/` | Display keyboard shortcuts list |
-| `Q` `Q`     | Choose next visual density      |
-| `Ctrl` `F`  | Find/find next                  |
-| `Ctrl` `P`  | Print                           |
-| `M`         | Show last message               |
-| `/`         | Search your drive               |
+| `Shift` `/` | 显示键盘快捷键列表 |
+| `Q` `Q`     | 选择下一个视觉密度      |
+| `Ctrl` `F`  | 查找/查找下一个                  |
+| `Ctrl` `P`  | 打印                           |
+| `M`         | 显示最后一条消息               |
+| `/`         | 搜索您的云端硬盘               |
 
 {.shortcuts}
 
-### Preview mode actions
+### 预览模式操作
 
-| Shortcut | Action     |
+| 快捷键 | 操作     |
 | -------- | ---------- |
-| `Esc`    | Close      |
-| `Space`  | Play/pause |
-| `+/=`    | Zoom in    |
-| `-`      | Zoom out   |
+| `Esc`    | 关闭      |
+| `Space`  | 播放/暂停 |
+| `+/=`    | 放大    |
+| `-`      | 缩小   |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
 - [Keyboard shortcuts for Google Drive](https://support.google.com/drive/answer/2563044?hl=en) _(support.google.com)_

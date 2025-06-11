@@ -1,103 +1,104 @@
 ---
-title: HTTP Status Code
+title: HTTP 状态码
 background: bg-[#3b7dc0]
 date: 2020-12-26 16:09:09
 tags:
-  - response
-  - server
+  - 响应
+  - 服务器
 categories:
-  - Other
+  - 其他
 intro: |
-  The HTTP status codes cheat sheet. A quick reference to every HTTP status code.
+  HTTP 状态码速查表。每个 HTTP 状态码的快速参考。
 plugins:
   - tooltip
 ---
 
-## HTTP Status code
+## HTTP 状态码
 
-### Means
-
-<!-- prettier-ignore -->
-- [1xx: Informational](#1xx-information){data-tooltip="It means the request has been received and the process is continuing."}
-- [2xx: Success](#2xx-successful){data-tooltip="It means the action was successfully received, understood, and accepted."}
-- [3xx: Redirection](#3xx-redirection){data-tooltip="It means further action must be taken in order to complete the request."}
-- [4xx: Client Error](#4xx-client-error){data-tooltip="It means the request contains incorrect syntax or cannot be fulfilled."}
-- [5xx: Server Error](#5xx-server-error){data-tooltip="It means the server failed to fulfill an apparently valid request."}
-
-### 2xx. Successful {.row-span-2}
+### 含义
 
 <!-- prettier-ignore -->
-- [200: OK](https://tools.ietf.org/html/rfc7231#section-6.3.1){data-tooltip="The request is OK."}
-- [201: Created](https://tools.ietf.org/html/rfc7231#section-6.3.2){data-tooltip="The request is complete, and a new resource is created."}
-- [202: Accepted](https://tools.ietf.org/html/rfc7231#section-6.3.3){data-tooltip="The request is accepted for processing, but the processing is not complete."}
-- [203: Non-Authoritative Information](https://tools.ietf.org/html/rfc7231#section-6.3.4){data-tooltip="The information in the entity header is from a local or third-party copy, not from the original server."}
-- [204: No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5){data-tooltip="A status code and a header are given in the response, but there is no entity-body in the reply."}
-- [205: Reset Content](https://tools.ietf.org/html/rfc7231#section-6.3.6){data-tooltip="The browser should clear the form used for this transaction for additional input."}
-- [206: Partial Content](https://tools.ietf.org/html/rfc7233#section-4.1){data-tooltip="The server is returning partial data of the size requested. Used in response to a request specifying a Range header. The server must specify the range included in the response with the Content-Range header."}
-- [207: Multi-Status](https://tools.ietf.org/html/rfc4918#section-11.1){data-tooltip="Provides status for multiple independent operations."}
-- [208: Already Reported](https://tools.ietf.org/html/rfc5842#section-7.1){data-tooltip="Used inside a DAV: propstat response element to avoid enumerating the internal members of multiple bindings to the same collection repeatedly."}
-- [226: IM Used](https://tools.ietf.org/html/rfc3229#section-10.4.1){data-tooltip="The server has fulfilled a request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance."}
+- [1xx: 信息性状态码](#1xx-information){data-tooltip="表示请求已接收，继续处理。"}
+- [2xx: 成功状态码](#2xx-successful){data-tooltip="表示操作已成功接收、理解并接受。"}
+- [3xx: 重定向状态码](#3xx-redirection){data-tooltip="表示需要进一步操作以完成请求。"}
+- [4xx: 客户端错误状态码](#4xx-client-error){data-tooltip="表示请求包含错误语法或无法完成。"}
+- [5xx: 服务器错误状态码](#5xx-server-error){data-tooltip="表示服务器未能完成一个看似有效的请求。"}
 
-### 4xx. Client Error {.row-span-3}
+### 2xx. 成功状态码 {.row-span-2}
 
 <!-- prettier-ignore -->
-- [400: Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1){data-tooltip="The server did not understand the request."}
-- [401: Unauthorized](https://tools.ietf.org/html/rfc7235#section-3.1){data-tooltip="The requested page needs a username and a password."}
-- [402: Payment Required](https://tools.ietf.org/html/rfc7231#section-6.5.2){data-tooltip="You can not use this code yet."}
-- [403: Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3){data-tooltip="Access is forbidden to the requested page."}
-- [404: Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4){data-tooltip="The server can not find the requested page."}
-- [405: Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5){data-tooltip="The method specified in the request is not allowed."}
-- [406: Not Acceptable](https://tools.ietf.org/html/rfc7231#section-6.5.6){data-tooltip="The server can only generate a response that is not accepted by the client."}
-- [407: Proxy Authentication Required](https://tools.ietf.org/html/rfc7235#section-3.2){data-tooltip="You must authenticate with a proxy server before this request can be served."}
-- [408: Request Timeout](https://tools.ietf.org/html/rfc7231#section-6.5.7){data-tooltip="The request took longer than the server was prepared to wait."}
-- [409: Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8){data-tooltip="The request could not be completed because of a conflict."}
-- [410: Gone](https://tools.ietf.org/html/rfc7231#section-6.5.9){data-tooltip="The requested page is no longer available."}
-- [411: Length Required](https://tools.ietf.org/html/rfc7231#section-6.5.10){data-tooltip="The "Content-Length" is not defined. The server will not accept the request without it."}
-- [412: Precondition Failed](https://tools.ietf.org/html/rfc7232#section-4.2){data-tooltip="The pre condition given in the request evaluated to false by the server."}
-- [413: Payload Too Large](https://tools.ietf.org/html/rfc7231#section-6.5.11){data-tooltip="The server will not accept the request, because the request entity is too large."}
-- [414: URI Too Long](https://tools.ietf.org/html/rfc7231#section-6.5.12){data-tooltip="The server will not accept the request, because the URL is too long. Occurs when you convert a "post" request to a "get" request with a long query information."}
-- [415: Unsupported Media Type](https://tools.ietf.org/html/rfc7231#section-6.5.13){data-tooltip="The server will not accept the request, because the media type is not supported."}
-- [416: Range Not Satisfiable](https://tools.ietf.org/html/rfc7233#section-4.4){data-tooltip="The requested byte range is not available and is out of bounds."}
-- [417: Expectation Failed](https://tools.ietf.org/html/rfc7231#section-6.5.14){data-tooltip="The expectation given in an Expect request-header field could not be met by this server."}
-- [421: Misdirected Request](https://tools.ietf.org/html/rfc7540#section-9.1.2){data-tooltip="The request was directed at a server that is not able to produce a response."}
-- [426: Upgrade Required](https://tools.ietf.org/html/rfc7231#section-6.5.15){data-tooltip="The server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol."}
-- [428: Precondition Required](https://tools.ietf.org/html/rfc6585#section-3){data-tooltip="The origin server requires the request to be conditional."}
-- [429: Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4){data-tooltip="The user has sent too many requests in a given amount of time."}
-- [431: Request Header Fields Too Large](https://tools.ietf.org/html/rfc6585#section-5){data-tooltip="The server is unwilling to process the request because its header fields are too large."}
-- [451: Unavailable For Legal Reasons](https://datatracker.ietf.org/doc/html/rfc7725#section-3){data-tooltip="This status code indicates that the server is denying access to the resource as a consequence of a legal demand."}
+- [200: OK](https://tools.ietf.org/html/rfc7231#section-6.3.1){data-tooltip="请求成功。"}
+- [201: 已创建](https://tools.ietf.org/html/rfc7231#section-6.3.2){data-tooltip="请求完成，并创建了新资源。"}
+- [202: 已接受](https://tools.ietf.org/html/rfc7231#section-6.3.3){data-tooltip="请求已接受处理，但处理尚未完成。"}
+- [203: 非授权信息](https://tools.ietf.org/html/rfc7231#section-6.3.4){data-tooltip="实体头中的信息来自本地或第三方副本，而非原始服务器。"}
+- [204: 无内容](https://tools.ietf.org/html/rfc7231#section-6.3.5){data-tooltip="响应中给出了状态码和头部，但回复中没有实体主体。"}
+- [205: 重置内容](https://tools.ietf.org/html/rfc7231#section-6.3.6){data-tooltip="浏览器应清除用于此事务的表单以进行额外输入。"}
+- [206: 部分内容](https://tools.ietf.org/html/rfc7233#section-4.1){data-tooltip="服务器正在返回所请求大小的部分数据。用于响应指定 Range 头的请求。服务器必须使用 Content-Range 头指定响应中包含的范围。"}
+- [207: 多状态](https://tools.ietf.org/html/rfc4918#section-11.1){data-tooltip="为多个独立操作提供状态。"}
+- [208: 已报告](https://tools.ietf.org/html/rfc5842#section-7.1){data-tooltip="在 DAV: propstat 响应元素内部使用，以避免重复枚举到同一集合的多个绑定的内部成员。"}
+- [226: IM 已使用](https://tools.ietf.org/html/rfc3229#section-10.4.1){data-tooltip="服务器已完成对资源的请求，响应是应用于当前实例的一个或多个实例操作结果的表示。"}
 
-### 1xx. Information
+### 4xx. 客户端错误状态码 {.row-span-3}
 
 <!-- prettier-ignore -->
-- [100: Continue](https://tools.ietf.org/html/rfc7231#section-6.2.1){data-tooltip="Only a part of the request has been received by the server, but as long as it has not been rejected, the client should continue with the request."}
-- [101: Switching Protocols](https://tools.ietf.org/html/rfc7231#section-6.2.2){data-tooltip="The server switches protocol."}
-- [102: Processing](https://tools.ietf.org/html/rfc2518#section-10.1){data-tooltip="An interim response used to inform the client that the server has accepted the complete request, but has not yet completed it."}
-- [103: Early Hints](https://tools.ietf.org/html/rfc8297){data-tooltip="Indicates to the client that the server is likely to send a final response with the header fields included in the informational response."}
+- [400: 错误请求](https://tools.ietf.org/html/rfc7231#section-6.5.1){data-tooltip="服务器无法理解该请求。"}
+- [401: 未授权](https://tools.ietf.org/html/rfc7235#section-3.1){data-tooltip="请求的页面需要用户名和密码。"}
+- [402: 需要付款](https://tools.ietf.org/html/rfc7231#section-6.5.2){data-tooltip="您尚不能使用此代码。"}
+- [403: 禁止访问](https://tools.ietf.org/html/rfc7231#section-6.5.3){data-tooltip="禁止访问请求的页面。"}
+- [404: 未找到](https://tools.ietf.org/html/rfc7231#section-6.5.4){data-tooltip="服务器找不到请求的页面。"}
+- [405: 方法不允许](https://tools.ietf.org/html/rfc7231#section-6.5.5){data-tooltip="请求中指定的方法不被允许。"}
+- [406: 不可接受](https://tools.ietf.org/html/rfc7231#section-6.5.6){data-tooltip="服务器只能生成客户端不接受的响应。"}
+- [407: 需要代理身份验证](https://tools.ietf.org/html/rfc7235#section-3.2){data-tooltip="在处理此请求之前，您必须通过代理服务器进行身份验证。"}
+- [408: 请求超时](https://tools.ietf.org/html/rfc7231#section-6.5.7){data-tooltip="请求花费的时间超过了服务器准备等待的时间。"}
+- [409: 冲突](https://tools.ietf.org/html/rfc7231#section-6.5.8){data-tooltip="由于冲突，请求无法完成。"}
+- [410: 已移除](https://tools.ietf.org/html/rfc7231#section-6.5.9){data-tooltip="请求的页面不再可用。"}
+- [411: 需要内容长度](https://tools.ietf.org/html/rfc7231#section-6.5.10){data-tooltip="未定义“Content-Length”。服务器在没有它的情况下不会接受请求。"}
+- [412: 前提条件失败](https://tools.ietf.org/html/rfc7232#section-4.2){data-tooltip="服务器评估请求中给出的前提条件为 false。"}
+- [413: 负载过大](https://tools.ietf.org/html/rfc7231#section-6.5.11){data-tooltip="服务器不会接受该请求，因为请求实体过大。"}
+- [414: URI 过长](https://tools.ietf.org/html/rfc7231#section-6.5.12){data-tooltip="服务器不会接受该请求，因为 URL 太长。当您将带有长查询信息的“post”请求转换为“get”请求时发生。"}
+- [415: 不支持的媒体类型](https://tools.ietf.org/html/rfc7231#section-6.5.13){data-tooltip="服务器不会接受该请求，因为不支持该媒体类型。"}
+- [416: 范围不满足](https://tools.ietf.org/html/rfc7233#section-4.4){data-tooltip="请求的字节范围不可用且超出范围。"}
+- [417: 期望失败](https://tools.ietf.org/html/rfc7231#section-6.5.14){data-tooltip="此服务器无法满足 Expect 请求头字段中给出的期望。"}
+- [421: 错误导向的请求](https://tools.ietf.org/html/rfc7540#section-9.1.2){data-tooltip="请求被导向到一个无法产生响应的服务器。"}
+- [426: 需要升级](https://tools.ietf.org/html/rfc7231#section-6.5.15){data-tooltip="服务器拒绝使用当前协议执行请求，但在客户端升级到不同协议后可能愿意这样做。"}
+- [428: 需要前提条件](https://tools.ietf.org/html/rfc6585#section-3){data-tooltip="源服务器要求该请求是附带条件的。"}
+- [429: 请求过多](https://tools.ietf.org/html/rfc6585#section-4){data-tooltip="用户在给定时间内发送了太多请求。"}
+- [431: 请求头字段太大](https://tools.ietf.org/html/rfc6585#section-5){data-tooltip="服务器不愿意处理该请求，因为其头字段太大。"}
+- [451: 因法律原因不可用](https://datatracker.ietf.org/doc/html/rfc7725#section-3){data-tooltip="此状态代码表示服务器因法律要求而拒绝访问资源。"}
 
-### 3xx. Redirection
+### 1xx. 信息性状态码
 
 <!-- prettier-ignore -->
-- [300: Multiple Choices](https://tools.ietf.org/html/rfc7231#section-6.4.1){data-tooltip="A link list. The user can select a link and go to that location. Maximum five addresses."}
-- [301: Moved Permanently](https://tools.ietf.org/html/rfc7231#section-6.4.2){data-tooltip="The requested page has moved to a new URL."}
-- [302: Found](https://tools.ietf.org/html/rfc7231#section-6.4.3){data-tooltip="The requested page has moved temporarily to a new URL."}
-- [303: See Other](https://tools.ietf.org/html/rfc7231#section-6.4.4){data-tooltip="The requested page can be found under a different URL."}
-- [304: Not Modified](https://tools.ietf.org/html/rfc7232#section-4.1){data-tooltip="This is the response code to an If-Modified-Since or If-None-Match header, where the URL has not been modified since the specified date."}
-- [305: Use Proxy](https://tools.ietf.org/html/rfc7231#section-6.4.5){data-tooltip="The requested URL must be accessed through the proxy mentioned in the Location header."}
-- [306: Unused](https://tools.ietf.org/html/rfc7231#section-6.4.6){data-tooltip="This code was used in a previous version. It is no longer used, but the code is reserved."}
-- [307: Temporary Redirect](https://tools.ietf.org/html/rfc7231#section-6.4.7){data-tooltip="The requested page has moved temporarily to a new URL."}
-- [308: Permanent Redirect](https://tools.ietf.org/html/rfc7538#section-3){data-tooltip="The request and all future requests should be repeated using another URI."}
+- [100: 继续](https://tools.ietf.org/html/rfc7231#section-6.2.1){data-tooltip="服务器仅收到请求的一部分，但只要请求未被拒绝，客户端就应继续该请求。"}
+- [101: 切换协议](https://tools.ietf.org/html/rfc7231#section-6.2.2){data-tooltip="服务器切换协议。"}
+- [102: 处理中](https://tools.ietf.org/html/rfc2518#section-10.1){data-tooltip="一个临时响应，用于通知客户端服务器已接受完整请求，但尚未完成。"}
+- [103: 早期提示](https://tools.ietf.org/html/rfc8297){data-tooltip="向客户端指示服务器可能发送最终响应，其中包含信息响应中包含的头字段。"}
 
-### 5xx. Server Error
+### 3xx. 重定向状态码
 
 <!-- prettier-ignore -->
-- [500: Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1){data-tooltip="The request was not completed. The server met an unexpected condition."}
-- [501: Not Implemented](https://tools.ietf.org/html/rfc7231#section-6.6.2){data-tooltip="The request was not completed. The server did not support the functionality required."}
-- [502: Bad Gateway](https://tools.ietf.org/html/rfc7231#section-6.6.3){data-tooltip="The request was not completed. The server received an invalid response from the upstream server."}
-- [503: Service Unavailable](https://tools.ietf.org/html/rfc7231#section-6.6.4){data-tooltip="The request was not completed. The server is temporarily overloading or down."}
-- [504: Gateway Timeout](https://tools.ietf.org/html/rfc7231#section-6.6.5){data-tooltip="The gateway has timed out."}
-- [505: HTTP Version Not Supported](https://tools.ietf.org/html/rfc7231#section-6.6.6){data-tooltip="The server does not support the "http protocol" version."}
-- [506: Variant Also Negotiates](https://tools.ietf.org/html/rfc2295#section-8.1){data-tooltip="Transparent content negotiation for the request results in a circular reference."}
-- [507: Insufficient Storage](https://tools.ietf.org/html/rfc4918#section-11.5){data-tooltip="The server is unable to store the representation needed to complete the request."}
-- [508: Loop Detected](https://tools.ietf.org/html/rfc5842#section-7.2){data-tooltip="The server detected an infinite loop while processing the request."}
-- [510: Not Extended](https://tools.ietf.org/html/rfc2774#section-7){data-tooltip="Further extensions to the request are required for the server to fulfill it."}
-- [511: Network Authentication Required](https://tools.ietf.org/html/rfc6585#section-6){data-tooltip="The client needs to authenticate to gain network access."}
+- [300: 多种选择](https://tools.ietf.org/html/rfc7231#section-6.4.1){data-tooltip="一个链接列表。用户可以选择一个链接并转到该位置。最多五个地址。"}
+- [301: 永久移动](https://tools.ietf.org/html/rfc7231#section-6.4.2){data-tooltip="请求的页面已移至新的 URL。"}
+- [302: 找到](https://tools.ietf.org/html/rfc7231#section-6.4.3){data-tooltip="请求的页面已临时移至新的 URL。"}
+- [303: 查看其他位置](https://tools.ietf.org/html/rfc7231#section-6.4.4){data-tooltip="可以在不同的 URL 下找到请求的页面。"}
+- [304: 未修改](https://tools.ietf.org/html/rfc7232#section-4.1){data-tooltip="这是对 If-Modified-Since 或 If-None-Match 头的响应代码，表示自指定日期以来 URL 未被修改。"}
+- [305: 使用代理](https://tools.ietf.org/html/rfc7231#section-6.4.5){data-tooltip="必须通过 Location 头中提到的代理访问请求的 URL。"}
+- [306: 未使用](https://tools.ietf.org/html/rfc7231#section-6.4.6){data-tooltip="此代码在先前版本中使用过。现已不再使用，但该代码被保留。"}
+- [307: 临时重定向](https://tools.ietf.org/html/rfc7231#section-6.4.7){data-tooltip="请求的页面已临时移至新的 URL。"}
+- [308: 永久重定向](https://tools.ietf.org/html/rfc7538#section-3){data-tooltip="该请求及所有将来的请求都应使用另一个 URI 重复。"}
+
+### 5xx. 服务器错误状态码
+
+<!-- prettier-ignore -->
+- [500: 内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1){data-tooltip="请求未完成。服务器遇到意外情况。"}
+- [501: 未实现](https://tools.ietf.org/html/rfc7231#section-6.6.2){data-tooltip="请求未完成。服务器不支持所需的功能。"}
+- [502: 错误网关](https://tools.ietf.org/html/rfc7231#section-6.6.3){data-tooltip="请求未完成。服务器从上游服务器收到无效响应。"}
+- [503: 服务不可用](https://tools.ietf.org/html/rfc7231#section-6.6.4){data-tooltip="请求未完成。服务器暂时过载或宕机。"}
+- [504: 网关超时](https://tools.ietf.org/html/rfc7231#section-6.6.5){data-tooltip="网关已超时。"}
+- [505: HTTP 版本不受支持](https://tools.ietf.org/html/rfc7231#section-6.6.6){data-tooltip="服务器不支持该“http 协议”版本。"}
+- [506: 变体也协商](https://tools.ietf.org/html/rfc2295#section-8.1){data-tooltip="请求的透明内容协商导致循环引用。"}
+- [507: 存储空间不足](https://tools.ietf.org/html/rfc4918#section-11.5){data-tooltip="服务器无法存储完成请求所需的表示。"}
+- [508: 检测到循环](https://tools.ietf.org/html/rfc5842#section-7.2){data-tooltip="服务器在处理请求时检测到无限循环。"}
+- [510: 未扩展](https://tools.ietf.org/html/rfc2774#section-7){data-tooltip="服务器需要对请求进行进一步扩展才能完成它。"}
+- [511: 需要网络身份验证](https://tools.ietf.org/html/rfc6585#section-6){data-tooltip="客户端需要进行身份验证才能获得网络访问权限。"}
+

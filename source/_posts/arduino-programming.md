@@ -1,90 +1,90 @@
 ---
-title: Arduino Programming
+title: Arduino 编程
 date: 2024-05-29 8:58:31
 background: bg-[#387f83]
 label:
 tags: -cpp
   -I/O
 categories:
-  - Programming
+  - 编程
 intro: |
-  Ardunio programming cheat-sheet for I/O programming and  ardunio board programming.
+  Arduino I/O 编程和 Arduino 板编程速查表。
 
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门指南
 
-### Gather Necessary Materials
+### 准备必要材料
 
-- Arduino Board: Any model, such as Arduino Uno, Mega, Nano, etc.
-- USB Cable: Compatible with your Arduino board (commonly USB Type-A to Type-B for Uno).
-- Computer: Windows, macOS, or Linux.
+- Arduino 板：任何型号，如 Arduino Uno、Mega、Nano 等。
+- USB 数据线：与您的 Arduino 板兼容（Uno 通常使用 USB Type-A 转 Type-B）。
+- 电脑：Windows、macOS 或 Linux。
 
-### Install the Arduino IDE
+### 安装 Arduino IDE
 
-- windows/mac/linux
-- Go to the Arduino Software page.
-- Download the os installer.
-- Run the installer and follow the instructions.
+- Windows/Mac/Linux
+- 前往 Arduino 软件页面。
+- 下载对应操作系统的安装程序。
+- 运行安装程序并按照说明操作。
 
-### Connect Your Arduino Board
+### 连接您的 Arduino 板
 
-- Connect the Arduino board to your computer using the USB cable.
-- The power LED on the Arduino should light up, indicating it’s receiving power.
+- 使用 USB 数据线将 Arduino 板连接到您的计算机。
+- Arduino 上的电源 LED 应亮起，表示已通电。
 
-### Configure the Arduino IDE
+### 配置 Arduino IDE
 
-- Open the Arduino IDE.
-- Select Your Board:
-- Go to Tools > Board and select the model of your Arduino board (e.g., Arduino Uno).
+- 打开 Arduino IDE。
+- 选择您的电路板：
+- 前往 工具 > 开发板 并选择您的 Arduino 板型号（例如 Arduino Uno）。
 
-- Select the Port:
+- 选择端口：
 
-- Go to Tools > Port and select the port that the Arduino is connected to (it usually shows as COMx on Windows, /dev/cu.usbmodemxxxx on macOS, and /dev/ttyUSBx on Linux).
+- 前往 工具 > 端口 并选择 Arduino 连接的端口（在 Windows 上通常显示为 COMx，在 macOS 上显示为 /dev/cu.usbmodemxxxx，在 Linux 上显示为 /dev/ttyUSBx）。
 
-## Basic Structure
+## 基本结构
 
-### Setup and Loop
+### Setup 和 Loop
 
 ```cpp
 void setup() {
-  // Code here runs once
+  // 此处的代码运行一次
 }
 
 void loop() {
-  // Code here runs repeatedly
+  // 此处的代码重复运行
 }
 ```
 
-### Comment
+### 注释
 
 ```cpp
-// Single-line comment
+// 单行注释
 
 /*
-Multi-line
-comment
+多行
+注释
 */
 ```
 
-### Variable
+### 变量
 
 ```cpp
-int ledPin = 13; // Integer
-float voltage = 5.0; // Floating-point number
-char letter = 'A'; // Character
-String text = "Hello"; // String
+int ledPin = 13; // 整数
+float voltage = 5.0; // 浮点数
+char letter = 'A'; // 字符
+String text = "Hello"; // 字符串
 ```
 
-### Pin Modes
+### 引脚模式
 
 ```cpp
 pinMode(pin, mode);
 ```
 
-### Digital I/O
+### 数字 I/O
 
 ```cpp
 digitalWrite(pin, value);
@@ -92,7 +92,7 @@ int value = digitalRead(pin);
 
 ```
 
-### Analog I/O
+### 模拟 I/O
 
 ```cpp
 analogWrite(pin, value);
@@ -100,22 +100,22 @@ int value = analogRead(pin);
 
 ```
 
-## Serial Communication
+## 串行通信
 
-### Begin Serial Communication
+### 开始串行通信
 
 ```cpp
 Serial.begin(baudRate);
 ```
 
-### Print to Serial Monitor
+### 打印到串行监视器
 
 ```cpp
 Serial.print(data);
 Serial.println(data);
 ```
 
-### Read from Serial Monitor
+### 从串行监视器读取
 
 ```cpp
 if (Serial.available()) {
@@ -123,52 +123,52 @@ if (Serial.available()) {
 }
 ```
 
-## Control Structures
+## 控制结构
 
-### If Statement
+### If 语句
 
 ```cpp
 if (condition) {
-  // Code to execute if condition is true
+  // 条件为真时执行的代码
 } else {
-  // Code to execute if condition is false
+  // 条件为假时执行的代码
 }
 ```
 
-### For Loop
+### For 循环
 
 ```cpp
 for (initialization; condition; increment) {
-  // Code to execute
+  // 要执行的代码
 }
 ```
 
-### While Loop
+### While 循环
 
 ```cpp
 while (condition) {
-  // Code to execute
+  // 要执行的代码
 }
 ```
 
-### Functions
+### 函数
 
 ```cpp
 returnType functionName(parameters) {
-  // Code to execute
+  // 要执行的代码
   return value;
 }
 ```
 
-## Libraries
+## 库
 
-### Include a Library
+### 包含库
 
 ```cpp
 #include <LibraryName.h>
 ```
 
-### Using a Library
+### 使用库
 
 ```cpp
 #include <Servo.h>
@@ -176,18 +176,18 @@ returnType functionName(parameters) {
 Servo myServo;
 
 void setup() {
-  myServo.attach(9); // Attach servo to pin 9
+  myServo.attach(9); // 将舵机连接到引脚 9
 }
 
 void loop() {
-  myServo.write(90); // Set servo to 90 degrees
+  myServo.write(90); // 将舵机设置到 90 度
   delay(1000);
-  myServo.write(0); // Set servo to 0 degrees
+  myServo.write(0); // 将舵机设置到 0 度
   delay(1000);
 }
 ```
 
-## Common Functions
+## 常用函数
 
 ### Delay
 
@@ -221,18 +221,18 @@ long randomValue = random(min, max);
 ### Random Seed
 
 ```cpp
-randomSeed(analogRead(0)); // Seed from analog pin 0
+randomSeed(analogRead(0)); // 从模拟引脚 0 获取种子
 
 ```
 
-## Sensors and Modules
+## 传感器和模块
 
-### Reading Temperature with DHT Sensor
+### 使用 DHT 传感器读取温度
 
 ```cpp
 #include <DHT.h>
 
-#define DHTPIN 2     // Pin which is connected to the DHT sensor
+#define DHTPIN 2     // DHT 传感器连接的引脚
 #define DHTTYPE DHT11   // DHT 11
 
 DHT dht(DHTPIN, DHTTYPE);
@@ -246,10 +246,10 @@ void loop() {
   float humidity = dht.readHumidity();
   float temperature = dht.readTemperature();
 
-  Serial.print("Humidity: ");
+  Serial.print("湿度: ");
   Serial.print(humidity);
   Serial.print(" %\t");
-  Serial.print("Temperature: ");
+  Serial.print("温度: ");
   Serial.print(temperature);
   Serial.println(" *C");
 
@@ -257,7 +257,7 @@ void loop() {
 }
 ```
 
-### Blinking LED
+### LED 闪烁
 
 ```cpp
 const int ledPin = 13;
@@ -267,98 +267,98 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(ledPin, HIGH);  // Turn the LED on
-  delay(1000);                 // Wait for 1 second
-  digitalWrite(ledPin, LOW);   // Turn the LED off
-  delay(1000);                 // Wait for 1 second
+  digitalWrite(ledPin, HIGH);  // 打开 LED
+  delay(1000);                 // 等待 1 秒
+  digitalWrite(ledPin, LOW);   // 关闭 LED
+  delay(1000);                 // 等待 1 秒
 }
 
 ```
 
-### Read Button Input
+### 读取按钮输入
 
 ```cpp
-const int buttonPin = 2;  // Pin where the push button is connected
-const int ledPin = 13;    // Pin where the LED is connected
+const int buttonPin = 2;  // 按钮连接的引脚
+const int ledPin = 13;    // LED 连接的引脚
 
 void setup() {
-  pinMode(buttonPin, INPUT);  // Set the button pin as an input
-  pinMode(ledPin, OUTPUT);    // Set the LED pin as an output
+  pinMode(buttonPin, INPUT);  // 将按钮引脚设置为输入
+  pinMode(ledPin, OUTPUT);    // 将 LED 引脚设置为输出
 }
 
 void loop() {
-  int buttonState = digitalRead(buttonPin);  // Read the state of the button
+  int buttonState = digitalRead(buttonPin);  // 读取按钮状态
 
   if (buttonState == HIGH) {
-    digitalWrite(ledPin, HIGH);  // Turn the LED on
+    digitalWrite(ledPin, HIGH);  // 打开 LED
   } else {
-    digitalWrite(ledPin, LOW);   // Turn the LED off
+    digitalWrite(ledPin, LOW);   // 关闭 LED
   }
 }
 
 
 ```
 
-### Analog Input
+### 模拟输入
 
 ```cpp
-const int potPin = A0;    // Pin where the potentiometer is connected
-const int ledPin = 9;     // Pin where the LED is connected
+const int potPin = A0;    // 电位器连接的引脚
+const int ledPin = 9;     // LED 连接的引脚
 
 void setup() {
-  pinMode(ledPin, OUTPUT);  // Set the LED pin as an output
+  pinMode(ledPin, OUTPUT);  // 将 LED 引脚设置为输出
 }
 
 void loop() {
-  int potValue = analogRead(potPin);  // Read the potentiometer value
-  int ledBrightness = map(potValue, 0, 1023, 0, 255);  // Map the value to a range from 0 to 255
+  int potValue = analogRead(potPin);  // 读取电位器值
+  int ledBrightness = map(potValue, 0, 1023, 0, 255);  // 将值映射到 0 到 255 的范围
 
-  analogWrite(ledPin, ledBrightness);  // Set the brightness of the LED
-  delay(10);  // Small delay to make the LED change smoothly
+  analogWrite(ledPin, ledBrightness);  // 设置 LED 亮度
+  delay(10);  // 短暂延迟使 LED 平滑变化
 }
 
 
 ```
 
-### Serial Communication
+### 串行通信
 
 ```cpp
 void setup() {
-  Serial.begin(9600);  // Start the serial communication at 9600 baud rate
+  Serial.begin(9600);  // 以 9600 波特率启动串行通信
 }
 
 void loop() {
-  Serial.println("Hello, world!");  // Send a message to the serial monitor
-  delay(1000);  // Wait for 1 second
+  Serial.println("Hello, world!");  // 向串行监视器发送消息
+  delay(1000);  // 等待 1 秒
 }
 
 
 ```
 
-### Temperature Sensor
+### 温度传感器
 
 ```cpp
-const int tempPin = A0;  // Pin where the TMP36 sensor is connected
+const int tempPin = A0;  // TMP36 传感器连接的引脚
 
 void setup() {
-  Serial.begin(9600);  // Start the serial communication at 9600 baud rate
+  Serial.begin(9600);  // 以 9600 波特率启动串行通信
 }
 
 void loop() {
-  int tempValue = analogRead(tempPin);  // Read the sensor value
-  float voltage = tempValue * (5.0 / 1023.0);  // Convert the value to voltage
-  float temperatureC = (voltage - 0.5) * 100;  // Convert the voltage to temperature in Celsius
+  int tempValue = analogRead(tempPin);  // 读取传感器值
+  float voltage = tempValue * (5.0 / 1023.0);  // 将值转换为电压
+  float temperatureC = (voltage - 0.5) * 100;  // 将电压转换为摄氏温度
 
-  Serial.print("Temperature: ");
+  Serial.print("温度: ");
   Serial.print(temperatureC);
   Serial.println(" C");
-  delay(1000);  // Wait for 1 second
+  delay(1000);  // 等待 1 秒
 }
 
 
 ```
 
-### RGB LED Control
+### RGB LED 控制
 
 ```cpp
 const int redPin = 9;
@@ -389,7 +389,7 @@ void loop() {
 
 ```
 
-### Ultrasonic Sensor
+### 超声波传感器
 
 ```cpp
 const int trigPin = 9;
@@ -414,14 +414,14 @@ void loop() {
   duration = pulseIn(echoPin, HIGH);
   distance = duration * 0.034 / 2;
 
-  Serial.print("Distance: ");
+  Serial.print("距离: ");
   Serial.print(distance);
   Serial.println(" cm");
   delay(1000);
 }
 ```
 
-### Controlling a Servo Motor
+### 控制舵机
 
 ```cpp
 #include <Servo.h>
@@ -430,54 +430,54 @@ Servo myServo;
 const int potPin = A0;
 
 void setup() {
-  myServo.attach(9);  // Attach the servo to pin 9
+  myServo.attach(9);  // 将舵机连接到引脚 9
 }
 
 void loop() {
-  int potValue = analogRead(potPin);  // Read the potentiometer value
-  int angle = map(potValue, 0, 1023, 0, 180);  // Map the value to an angle between 0 and 180
+  int potValue = analogRead(potPin);  // 读取电位器值
+  int angle = map(potValue, 0, 1023, 0, 180);  // 将值映射到 0 到 180 度的角度
 
-  myServo.write(angle);  // Set the servo position
-  delay(15);  // Small delay for the servo to reach the position
+  myServo.write(angle);  // 设置舵机位置
+  delay(15);  // 短暂延迟让舵机到达位置
 }
 
 ```
 
-### Displaying Text on an LCD
+### 在 LCD 上显示文本
 
 ```cpp
 #include <LiquidCrystal.h>
 
-// Initialize the library with the numbers of the interface pins
+// 使用接口引脚编号初始化库
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
 void setup() {
-  // Set up the LCD's number of columns and rows
+  // 设置 LCD 的列数和行数
   lcd.begin(16, 2);
-  // Print a message to the LCD
+  // 向 LCD 打印消息
   lcd.print("Hello, World!");
 }
 
 void loop() {
-  // Set the cursor to column 0, line 1 (second row)
+  // 将光标设置到第 0 列，第 1 行（第二行）
   lcd.setCursor(0, 1);
-  // Print the number of seconds since reset
+  // 打印自复位以来的秒数
   lcd.print(millis() / 1000);
 }
 ```
 
-## Wireless Communication with NRF24L01
+## 使用 NRF24L01 进行无线通信
 
-### Transmitter Code
+### 发射器代码
 
 ```cpp
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
 
-RF24 radio(9, 10);  // CE, CSN pins
+RF24 radio(9, 10);  // CE, CSN 引脚
 
-const byte address[6] = "00001";  // Address
+const byte address[6] = "00001";  // 地址
 
 void setup() {
   radio.begin();
@@ -493,16 +493,16 @@ void loop() {
 }
 ```
 
-### Receiver Code
+### 接收器代码
 
 ```cpp
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
 
-RF24 radio(9, 10);  // CE, CSN pins
+RF24 radio(9, 10);  // CE, CSN 引脚
 
-const byte address[6] = "00001";  // Address
+const byte address[6] = "00001";  // 地址
 
 void setup() {
   Serial.begin(9600);
@@ -522,6 +522,6 @@ void loop() {
 
 ```
 
-## Also Read
+## 另请阅读
 
-- [Ardunio](https://www.arduino.cc/en/software)
+- [Arduino 官网](https://www.arduino.cc/en/software)

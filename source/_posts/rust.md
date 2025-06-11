@@ -1,17 +1,17 @@
 ---
-title: Rust
+title: Rust 语言
 date: 2022-01-01 11:51:44
 background: bg-black
 tags:
 categories:
-  - Programming
+  - 编程
 intro: |
-  The Rust quick reference cheat sheet that aims at providing help on writing basic syntax and methods.
+  Rust 快速参考备忘单，旨在帮助编写基本语法和方法。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门指南
 
 ### Hello_World.rs
 
@@ -21,7 +21,7 @@ fn main() {
 }
 ```
 
-#### Compiling and Running
+#### 编译和运行
 
 ```shell
 $ rustc Hello_World.rs
@@ -29,103 +29,103 @@ $ ./Hello_World
 Hello, World!
 ```
 
-### Primitive types
+### 基本类型
 
 |                           |                                 |
 | ------------------------- | :------------------------------ |
-| `bool`                    | Boolean (`true` _/_ `false`)    |
-| `char`                    | character                       |
-| `f32`, `f64`              | 32-bits, 64-bits floats         |
-| `i64`, `i32`, `i16`, `i8` | signed 16- ... integers         |
-| `u64`, `u32`, `u16`, `u8` | unsigned 16-bits, ... integers  |
-| `isize`                   | pointer-sized signed integers   |
-| `usize`                   | pointer-sized unsigned integers |
+| `bool`                    | 布尔值 (`true` _/_ `false`)    |
+| `char`                    | 字符                       |
+| `f32`, `f64`              | 32位, 64位浮点数         |
+| `i64`, `i32`, `i16`, `i8` | 有符号 16位 ... 整数         |
+| `u64`, `u32`, `u16`, `u8` | 无符号 16位 ... 整数  |
+| `isize`                   | 指针大小的有符号整数   |
+| `usize`                   | 指针大小的无符号整数 |
 
-See: [Rust Types](#rust-types)
+参见: [Rust 类型](#rust-types)
 
-### Formatting {.row-span-2}
+### 格式化输出 {.row-span-2}
 
 ```rust {.wrap}
-// Single Placeholder
+// 单个占位符
 println!("{}", 1);
 
-// Multiple Placeholder
+// 多个占位符
 println!("{} {}", 1, 3);
 
-// Positional Arguments
+// 位置参数
 println!(
     "{0} is {1} {2}, also {0} is a {3} programming language",
     "Rust", "cool", "language", "safe"
 );
 
-// Named Arguments
+// 命名参数
 println!(
     "{country} is a diverse nation with unity.",
     country = "India"
 );
 
-// Placeholder traits :b for binary, :0x is for hex and :o is octal
+// 占位符特性 :b 代表二进制, :0x 代表十六进制, :o 代表八进制
 println!("Let us print 76 is binary which is {:b} , and hex equivalent is {:0x} and octal equivalent is {:o}", 76, 76, 76);
 
-// Debug Trait
+// Debug 特性
 println!(
     "Print whatever we want to here using debug trait {:?}",
     (76, 'A', 90)
 );
 
-// New Format Strings in 1.58
+// 1.58 版本中的新格式化字符串
 let x = "world";
 println!("Hello {x}!");
 ```
 
-### Printing Styles
+### 打印样式
 
 ```rust
-// Prints the output
+// 打印输出
 print!("Hello World\n");
 
-// Appends a new line after printing
+// 打印后追加新行
 println!("Appending a new line");
 
-// Prints as an error
+// 作为错误打印
 eprint!("This is an error\n");
 
-// Prints as an error with new line
+// 作为错误打印并换行
 eprintln!("This is an error with new line");
 ```
 
-### Variables
+### 变量
 
 ```rust
-// Initializing and declaring a variable
+// 初始化并声明变量
 let some_variable = "This_is_a_variable";
 
-// Making a variable mutable
+// 使变量可变
 let mut mutable_variable = "Mutable";
 
-// Assigning multiple variables
+// 赋多个值给变量
 let (name, age) = ("ElementalX", 20);
 
-// (Global) constant
+// (全局) 常量
 const SCREAMING_SNAKE_CASE: i64 = 9;
 ```
 
-### Comments
+### 注释
 
 ```rust
-// Line Comments
-/*.............Block Comments */
-/// Outer doc comments
-//! Inner doc comments
+// 行注释
+/*.............块注释 */
+/// 外部文档注释
+//! 内部文档注释
 ```
 
-See: [Comment](https://doc.rust-lang.org/reference/comments.html)
+参见: [注释](https://doc.rust-lang.org/reference/comments.html)
 
-### Functions
+### 函数
 
 ```rust
 fn test() {
-    println!("This is a function!");
+    println!("This is a function!"); // 这是一个函数！
 }
 
 fn main() {
@@ -133,11 +133,11 @@ fn main() {
 }
 ```
 
-See: [Functions](#rust-functions)
+参见: [Rust 函数](#rust-functions)
 
-## Rust Types
+## Rust 类型
 
-### Integer
+### 整数
 
 ```rust
 let mut a: u32 = 8;
@@ -146,7 +146,7 @@ let c: i64 = 8999;
 let d = -90;
 ```
 
-### Floating-Point
+### 浮点数
 
 ```rust
 let mut sixty_bit_float: f64 = 89.90;
@@ -154,7 +154,7 @@ let thirty_two_bit_float: f32 = 7.90;
 let just_a_float = 69.69;
 ```
 
-### Boolean
+### 布尔型
 
 ```rust {.wrap}
 let true_val: bool = true;
@@ -163,7 +163,7 @@ let just_a_bool = true;
 let is_true = 8 < 5; // => false
 ```
 
-### Character
+### 字符
 
 ```rust
 let first_letter_of_alphabet = 'a';
@@ -172,18 +172,19 @@ let implicit_char = '8';
 let emoji = "\u{1f600}"; // => 😀
 ```
 
-### String Literal
+### 字符串字面量
 
 ```rust {.wrap}
 let community_name = "AXIAL";
 let no_of_members: &str = "ten";
 
+// 社区名称是 AXIAL，它有 ten 个成员
 println!("The name of the community is {community_name} and it has {no_of_members} members");
 ```
 
-See: [Strings](#rust-strings)
+参见: [字符串](#rust-strings)
 
-### Arrays
+### 数组
 
 ```rust
 ┌─────┬─────┬─────┬─────┬─────┬─────┐
@@ -198,7 +199,7 @@ See: [Strings](#rust-strings)
 let array: [i64; 6] = [92, 97, 98, 99, 98, 94];
 ```
 
-### Multi-Dimensional Array {.row-span-2}
+### 多维数组 {.row-span-2}
 
 ```rust
      j0   j1   j2   j3   j4   j5
@@ -218,7 +219,7 @@ let array: [[i64; 6]; 2] = [
 ];
 ```
 
-### Mutable Array
+### 可变数组
 
 ```rust
 let mut array: [i32; 3] = [2, 6, 10];
@@ -227,53 +228,56 @@ array[1] = 4;
 array[2] = 6;
 ```
 
-Use the `mut` keyword to make it mutable.
+使用 `mut` 关键字使其可变。
 
-### Slices
+### 切片
 
 ```rust
 let mut array: [i64; 4] = [1, 2, 3, 4];
-let mut slices: &[i64] = &array[0..3]; // Lower range is inclusive and upper range is exclusive
+// 低位边界包含在内，高位边界不包含在内
+let mut slices: &[i64] = &array[0..3];
 
+// 切片的元素是 : [1, 2, 3]
 println!("The elements of the slices are : {slices:?}");
 ```
 
-### Vectors
+### Vector (动态数组)
 
 ```rust
 let some_vector = vec![1, 2, 3, 4, 5];
 ```
 
-A vector is declared using the `vec!` macro.
+Vector 使用 `vec!` 宏声明。
 
-### Tuples
+### 元组
 
 ```rust
 let tuple = (1, 'A', "Cool", 78, true);
 ```
 
-## Rust Strings
+## Rust 字符串
 
-### String Literal
+### 字符串字面量
 
 ```rust
 let cs: &str = "cheat sheet";
 
-// => Share cheat sheet for developers
+// => 为开发者分享 cheat sheet
 println!("Share {cs} for developers");
 ```
 
-### String Object
+### String 对象
 
 ```rust
-// Creating an empty string object
+// 创建一个空的 String 对象
 let my_string = String::new();
 
-// Converting to a string object
-let S_string = a_string.to_string()
+// 转换为 String 对象 (假设 a_string 是一个 &str)
+// let S_string = a_string.to_string();
 
-// Creating an initialized string object
+// 创建一个初始化的 String 对象
 let lang = String::from("Rust");
+// 第一门语言是 Rust
 println!("First language is {lang}");
 ```
 
@@ -284,7 +288,7 @@ let rand = String::from("Random String");
 rand.capacity() // => 13
 ```
 
-Calculates the capacity of the string in bytes.
+计算字符串的容量（字节数）。
 
 ### .contains()
 
@@ -293,16 +297,16 @@ let name = String::from("ElementalX");
 name.contains("Element") // => true
 ```
 
-Checks if the substring is contained inside the original string or not.
+检查子字符串是否包含在原始字符串中。
 
-### Pushing a single character
+### 推入单个字符
 
 ```rust
 let mut half_text = String::from("Hal");
 half_text.push('f'); // => Half
 ```
 
-### Pushing an entire String
+### 推入整个字符串
 
 ```rust
 let mut hi = String::from("Hey there...");
@@ -312,18 +316,18 @@ hi.push_str("How are you doing??");
 println!("{hi}");
 ```
 
-## Rust Operators
+## Rust 运算符
 
-### Comparison Operators
+### 比较运算符
 
 |          |                                  |
 | -------- | :------------------------------- |
-| `e == f` | `e` is equal to `f`              |
-| `e != f` | `e` is NOT equal to `f`          |
-| `e < f`  | `e` is less than `f`             |
-| `e > f`  | `e` is greater `f`               |
-| `e <= f` | `e` is less than or equal to `f` |
-| `e >= f` | `e` is greater or equal to `f`   |
+| `e == f` | `e` 等于 `f`              |
+| `e != f` | `e` 不等于 `f`          |
+| `e < f`  | `e` 小于 `f`             |
+| `e > f`  | `e` 大于 `f`               |
+| `e <= f` | `e` 小于或等于 `f` |
+| `e >= f` | `e` 大于或等于 `f`   |
 
 ---
 
@@ -338,15 +342,15 @@ let equal_to = e == f;      // => false
 let not_equal_to = e != f;  // => true
 ```
 
-### Arithmetic Operators
+### 算术运算符
 
 |          |                                            |
 | -------- | :----------------------------------------- |
-| `a +  b` | `a` is added to `b`                        |
-| `a -  b` | `b` is subtracted from `a`                 |
-| `a /  b` | `a` is divided by `b`                      |
-| `a % b`  | Gets remainder of `a` by dividing with `b` |
-| `a * b`  | `a` is multiplied with `b`                 |
+| `a +  b` | `a` 加上 `b`                        |
+| `a -  b` | `a` 减去 `b`                 |
+| `a /  b` | `a` 除以 `b`                      |
+| `a % b`  | `a` 除以 `b` 的余数 |
+| `a * b`  | `a` 乘以 `b`                 |
 
 ---
 
@@ -360,16 +364,16 @@ let division: i32 = a / b;       // => 0
 let modulus: i32 = a % b;        // => 4
 ```
 
-### Bitwise Operators
+### 位运算符
 
 | Operator            | Description             |
 | ------------------- | ----------------------- |
-| `g & h`             | Binary AND              |
-| <code>g \| h</code> | Binary OR               |
-| `g ^ h`             | Binary XOR              |
-| `!g`                | Binary one's complement |
-| `g << h`            | Binary shift left       |
-| `g >> h`            | Binary shift right      |
+| `g & h`             | 按位与              |
+| `g \| h`            | 按位或               |
+| `g ^ h`             | 按位异或              |
+| `!g`                | 按位取反 (一的补码) |
+| `g << h`            | 按位左移       |
+| `g >> h`            | 按位右移      |
 
 ---
 
@@ -383,13 +387,13 @@ let right_shift = g >> 2; // => 0
 let left_shift = h << 4;  // => 32
 ```
 
-### Logical Operators
+### 逻辑运算符
 
 | Example               | Meaning               |
 | --------------------- | --------------------- |
-| `c && d`              | Both are true _(AND)_ |
-| <code>c \|\| d</code> | Either is true _(OR)_ |
-| `!c`                  | `c` is false _(NOT)_  |
+| `c && d`              | 两者都为真 _(与)_ |
+| `c \|\| d`            | 任一为真 _(或)_ |
+| `!c`                  | `c` 为假 _(非)_  |
 
 ---
 
@@ -401,7 +405,7 @@ let or = c || d;   // => true
 let not = !c;      // => false
 ```
 
-### Compound Assignment Operator
+### 复合赋值运算符
 
 ```rust
 let mut k = 9;
@@ -412,66 +416,66 @@ let mut l = k;
 
 | Operator             | Description                             |
 | -------------------- | --------------------------------------- |
-| `k += l`             | Add a value and assign, then k=9        |
-| `k -= l`             | Substrate a value and assign, then k=18 |
-| `k /= l`             | Divide a value and assign, then k=9     |
-| `k *= l`             | Multiply a value and assign, then k=81  |
-| <code>k \|= l</code> | Bitwise OR and assign, then k=89        |
+| `k += l`             | 加一个值并赋值，然后 k=9        |
+| `k -= l`             | 减去一个值并赋值，然后 k=18 |
+| `k /= l`             | 除以一个值并赋值，然后 k=9     |
+| `k *= l`             | 乘以一个值并赋值，然后 k=81  |
+| `k \|= l`            | 按位或并赋值，然后 k=89        |
 
-## Rust Flow Control
+## Rust 流程控制
 
-### If Expression
+### If 表达式
 
 ```rust
 let case1: i32 = 81;
 let case2: i32 = 82;
 
 if case1 < case2 {
-  println!("case1 is greater than case2");
+  println!("case1 大于 case2"); // 注意：原文消息与条件逻辑不符，此处按原文消息翻译
 }
 ```
 
-### If...Else Expression
+### If...Else 表达式
 
 ```rust
 let case3 = 8;
 let case4 = 9;
 
 if case3 >= case4 {
-    println!("case3 is better than case4");
+    println!("case3 优于 case4");
 } else {
-    println!("case4 is greater than case3");
+    println!("case4 大于 case3");
 }
 ```
 
-### If...Else...if...Else Expression
+### If...Else...if...Else 表达式
 
 ```rust
 let foo = 12;
 let bar = 13;
 
 if foo == bar {
-    println!("foo is equal to bar");
+    println!("foo 等于 bar");
 } else if foo < bar {
-    println!("foo less than bar");
+    println!("foo 小于 bar");
 } else if foo != bar {
-    println!("foo is not equal to bar");
+    println!("foo 不等于 bar");
 } else {
-    println!("Nothing");
+    println!("无");
 }
 ```
 
-### If...Let Expression {.row-span-3}
+### If...Let 表达式 {.row-span-3}
 
 ```rust
 let mut arr1: [i64; 3] = [1, 2, 3];
 if let [1, 2, _] = arr1 {
-    println!("Works with array");
+    println!("适用于数组");
 }
 
 let mut arr2: [&str; 2] = ["one", "two"];
 if let ["Apple", _] = arr2 {
-    println!("Works with str array too");
+    println!("也适用于字符串数组");
 }
 ```
 
@@ -480,106 +484,106 @@ if let ["Apple", _] = arr2 {
 ```rust
 let tuple_1 = ("India", 7, 90, 90.432);
 if let (_, 7, 9, 78.99) = tuple_1 {
-    println!("Works with tuples too");
+    println!("也适用于元组");
 }
 
 let tuple_2 = (9, 7, 89, 12, "Okay");
 if let (9, 7, 89, 12, blank) = tuple_2 {
-    println!("Everything {blank} mate?");
+    println!("一切都 {blank} 吗？");
 }
 
 let tuple_3 = (89, 90, "Yes");
 if let (9, 89, "Yes") = tuple_3 {
-    println!("Pattern did match");
+    println!("模式匹配成功");
 } else {
-    println!("Pattern did not match");
+    println!("模式不匹配");
 }
 ```
 
-### Match Expression {.row-span-3}
+### Match 表达式 {.row-span-3}
 
 ```rust
 let day_of_week = 2;
 match day_of_week {
     1 => {
-        println!("Its Monday my dudes");
+        println!("今天是星期一");
     }
     2 => {
-        println!("It's Tuesday my dudes");
+        println!("今天是星期二");
     }
     3 => {
-        println!("It's Wednesday my dudes");
+        println!("今天是星期三");
     }
     4 => {
-        println!("It's Thursday my dudes");
+        println!("今天是星期四");
     }
     5 => {
-        println!("It's Friday my dudes");
+        println!("今天是星期五");
     }
     6 => {
-        println!("It's Saturday my dudes");
+        println!("今天是星期六");
     }
     7 => {
-        println!("It's Sunday my dudes");
+        println!("今天是星期日");
     }
     _ => {
-        println!("Default!")
+        println!("默认！")
     }
 };
 ```
 
-### Nested...If Expression
+### 嵌套 If 表达式
 
 ```rust
 let nested_conditions = 89;
 if nested_conditions == 89 {
     let just_a_value = 98;
     if just_a_value >= 97 {
-        println!("Greater than 97");
+        println!("大于 97");
     }
 }
 ```
 
-### For Loop
+### For 循环
 
 ```rust
 for mut i in 0..15 {
     i -= 1;
-    println!("The value of i is : {i}");
+    println!("i 的值是 : {i}");
 }
 ```
 
-### While Loop
+### While 循环
 
 ```rust
 let mut check = 0;
 while check < 11 {
-    println!("Check is : {check}");
+    println!("Check 是 : {check}");
     check += 1;
-    println!("After incrementing: {check}");
+    println!("递增后: {check}");
 
     if check == 10 {
-        break; // stop while
+        break; // 停止 while 循环
     }
 }
 ```
 
-### Loop keyword
+### Loop 关键字
 
 ```rust
 loop {
-    println!("hello world forever!");
+    println!("永远的 hello world！");
 }
 ```
 
-The infinite loop indicated.
+表示无限循环。
 
-### Break Statement
+### Break 语句
 
 ```rust
 let mut i = 1;
 loop {
-    println!("i is {i}");
+    println!("i 是 {i}");
     if i > 100 {
         break;
     }
@@ -587,35 +591,35 @@ loop {
 }
 ```
 
-### Continue Statement
+### Continue 语句
 
 ```rust
 for (v, c) in (0..10 + 1).enumerate() {
-    println!("The {c} number loop");
+    println!("第 {c} 次循环");
     if v == 9 {
-        println!("Here we go continue?");
+        println!("这里要 continue 吗？");
         continue;
     }
-    println! {"The value of v is : {v}"};
+    println! {"v 的值是 : {v}"};
 }
 ```
 
-## Rust Functions
+## Rust 函数
 
-### Basic function
+### 基本函数
 
 ```rust
 fn print_message() {
-    println!("Hello, CheatSheets.zip!");
+    println!("你好，r3f.cn！");
 }
 
 fn main() {
-    //Invoking a function in Rust.
+    // 在 Rust 中调用函数。
     print_message();
 }
 ```
 
-### Pass by Value
+### 按值传递
 
 ```rust
 fn main() {
@@ -623,7 +627,7 @@ fn main() {
     let y: u32 = 20;
 
     // => 200
-    println!("Calc: {}", cal_rect(x, y));
+    println!("计算结果: {}", cal_rect(x, y));
 }
 
 fn cal_rect(x: u32, y: u32) -> u32 {
@@ -631,7 +635,7 @@ fn cal_rect(x: u32, y: u32) -> u32 {
 }
 ```
 
-### Pass by Reference
+### 按引用传递
 
 ```rust
 fn main() {
@@ -641,13 +645,13 @@ fn main() {
 }
 
 fn power_of_three(by_ref: &mut i32) {
-    // de-referencing is important
+    // 解引用很重要
     *by_ref = *by_ref * *by_ref;
     println!("{by_ref}"); // => 9
 }
 ```
 
-### Returns
+### 返回值
 
 ```rust {.wrap}
 fn main() {
@@ -656,7 +660,7 @@ fn main() {
         &mut radius,
         &mut pi
     );
-    println!("The area and the perimeter of the circle are: {area} & {_perimeter}");
+    println!("圆的面积和周长是: {area} & {_perimeter}");
 }
 
 fn calculate(radius: &mut f64, pi: &mut f64) -> (f64, f64) {
@@ -666,13 +670,13 @@ fn calculate(radius: &mut f64, pi: &mut f64) -> (f64, f64) {
 }
 ```
 
-### Arrays as Arguments
+### 数组作为参数
 
 ```rust
 fn main() {
     let mut array: [i32; 5] = [1, 2, 3, 4, 6];
     print_arrays(array);
-    println!("The elements: {array:?}");
+    println!("元素: {array:?}");
 }
 
 fn print_arrays(mut array: [i32; 5]) {
@@ -681,17 +685,17 @@ fn print_arrays(mut array: [i32; 5]) {
     array[2] = 91;
     array[3] = 92;
     array[4] = 93;
-    println!("The elements: {array:?}");
+    println!("元素: {array:?}");
 }
 ```
 
-### Returning Arrays
+### 返回数组
 
 ```rust
 fn main() {
     let mut arr: [i32; 5] = [2, 4, 6, 8, 10];
     multiply(arr);
-    println!("The array is : {:?}", multiply(arr));
+    println!("数组是 : {:?}", multiply(arr));
 }
 
 fn multiply(mut arr: [i32; 5]) -> [i32; 5] {
@@ -703,13 +707,13 @@ fn multiply(mut arr: [i32; 5]) -> [i32; 5] {
 }
 ```
 
-## Misc
+## 其他
 
-### Type Casting
+### 类型转换
 
 ```rust
-let a_int = 90; // int
-// int to float
+let a_int = 90; // 整数
+// 整数转浮点数
 let mut type_cast = (a_int as f64);
 ```
 
@@ -717,13 +721,13 @@ let mut type_cast = (a_int as f64);
 
 ```rust
 let original: char = 'I';
-// char to int => 73
+// 字符转整数 => 73
 let type_casted: i64 = original as i64;
 ```
 
-To perform type-casting in Rust one must use the `as` keyword.
+在 Rust 中执行类型转换必须使用 `as` 关键字。
 
-### Borrowing
+### 借用
 
 ```rust
 let mut foo = 4;
@@ -739,9 +743,9 @@ let mut mutable_borrowed_bar = &mut bar;
 println!("{mutable_borrowed_bar}");
 ```
 
-Here borrowed value borrows the value from value one using `&` operator.
+这里，借用值使用 `&` 运算符从原值借用。
 
-### De-referencing
+### 解引用
 
 ```rust
 let mut borrow = 10;
@@ -750,22 +754,22 @@ let deref = &mut borrow;
 println!("{}", *deref);
 ```
 
-De-referencing in rust can be done using the `*` operator
+在 Rust 中可以使用 `*` 运算符进行解引用。
 
-### Variable Scope
+### 变量作用域
 
 ```rust
 {
-    // The scope limited to this braces
+    // 作用域限定在此花括号内
     let a_number = 1;
 }
-println!("{a_number}");
+// println!("{a_number}"); // 此行会报错，因为 a_number 超出作用域
 ```
 
-This will produce error as the scope of the variable `a_number` ends at the braces
+这会产生错误，因为变量 `a_number` 的作用域在花括号处结束。
 
-## Also see
+## 另请参阅
 
-- [The Rust Document](https://doc.rust-lang.org/book/ch00-00-introduction.html) _(doc.rust-lang.org)_
-- [The Rust Reference](https://doc.rust-lang.org/reference/introduction.html) _(doc.rust-lang.org)_
-- [Rust Cheatsheet](https://phaiax.github.io/rust-cheatsheet/) _(phaiax.github.io)_
+- [Rust 文档](https://doc.rust-lang.org/book/ch00-00-introduction.html) _(doc.rust-lang.org)_
+- [Rust 参考](https://doc.rust-lang.org/reference/introduction.html) _(doc.rust-lang.org)_
+- [Rust 备忘单](https://phaiax.github.io/rust-cheatsheet/) _(phaiax.github.io)_

@@ -1,115 +1,103 @@
 ---
-title: Conventional Commits
+title: Conventional Commits (约定式提交)
 date: 2024-03-11 09:51:44
 background: bg-[#e86d7a]
 tags:
   - permission
 categories:
-  - Other
+  - 其他
 intro: |
-  A cheat sheet of the Conventional Commits and Conventional Comments standards
+  一份 Conventional Commits (约定式提交) 和 Conventional Comments (约定式注释) 标准的速查表
 plugins:
 ---
 
-## Getting Started {.cols-3}
+## 入门指南 {.cols-3}
 
-### Quick Guide
+### 快速指南
 
-#### Why Conventional Commits
+#### 为什么使用约定式提交
 
-- Easy-to-follow structure for commit messages.
-- Clearly states the nature of changes.
-- Ensures uniformity in commit messages across teams.
-- Enables automated versioning and changelog generation.
-- Makes commit history easy to browse.
-- Allows the specification of 'scope' for more clarity.
-- Has a special notation for breaking changes.
-- Facilitates better understanding among team members.
-- Makes the review process efficient.
-- Helps in future troubleshooting with descriptive commit messages.
+- 易于遵循的提交信息结构。
+- 清晰地说明变更的性质。
+- 确保团队间提交信息的一致性。
+- 支持自动化版本控制和变更日志生成。
+- 使提交历史易于浏览。
+- 允许指定“范围”以获得更清晰的说明。
+- 对破坏性变更有特殊标记。
+- 促进团队成员之间更好的理解。
+- 使审查过程更高效。
+- 通过描述性的提交信息帮助未来进行故障排除。
 
-#### Structure
+#### 结构
 
 ```javascript
-<type>[optional scope]: <description>
+<类型>[可选 范围]: <描述>
 
-[optional body]
+[可选 正文]
 
-[optional footer(s)]
+[可选 脚注]
 ```
 
-[Official Website](https://www.conventionalcommits.org/en) {.link-arrow}
+[官方网站](https://www.conventionalcommits.org/zh-hans/) {.link-arrow}
 
-### Examples
+### 示例
 
-- feat: add jwt support
-- feat!: breaking change in API
-- feat!(ui): redesign user profile page
-- fix: fix SQL injection vulnerability
-- fix(database): resolve data race condition
-- docs: update setup section of README
-- style(login): correct indentation in login component
-- refactor: refactor user database schema
-- perf: optimize user retrieval code for faster response
-- test: add tests for jwt authentication
-- test(payment): add tests for the payment gateway
-- chore: update build script
-- chore(deps): update dependencies
-- build(docker): update Dockerfile to use node 14
-- ci: add job for integration tests
-- revert: revert commit a1b2c3d4e5f
+- feat: 添加 jwt 支持
+- feat!: API 中的破坏性变更
+- feat!(ui): 重新设计用户个人资料页面
+- fix: 修复 SQL 注入漏洞
+- fix(database): 解决数据竞争条件
+- docs: 更新 README 的设置部分
+- style(login): 修正登录组件中的缩进
+- refactor: 重构用户数据库模式
+- perf: 优化用户检索代码以加快响应速度
+- test: 为 jwt 身份验证添加测试
+- test(payment): 为支付网关添加测试
+- chore: 更新构建脚本
+- chore(deps): 更新依赖项
+- build(docker): 更新 Dockerfile 以使用 node 14
+- ci: 为集成测试添加作业
+- revert: 还原提交 a1b2c3d4e5f
 
-### Types
+### 类型
 
-| Type     | Description                                                                                                      |
+| 类型     | 描述                                                                                                     |
 | -------- | ---------------------------------------------------------------------------------------------------------------- |
-| `feat`   | Introduces a new feature                                                                                         |
-| `fix`    | Fixes a bug                                                                                                      |
-| `docs`   | Changes in documentation only                                                                                    |
-| `style`  | Code changes that do not impact the functionality (e.g., formatting, white-space, etc)                           |
-| refactor | Code changes that neither fix a bug nor introduce a feature, typically improving code readability or structure   |
-| perf     | Code changes that improve performance                                                                            |
-| test     | Addition of missing tests or corrections to existing tests                                                       |
-| `chore`  | Changes that do not modify the source code or test files, like tweaking the build process or adding dependencies |
-| build    | Changes affecting the build system or external dependencies (e.g., changes in webpack, npm packages)             |
-| ci       | Changes to Continuous Integration configuration files and scripts (e.g., Travis, CircleCI, Jenkins)              |
-| revert   | Reverts a previously made commit                                                                                 |
+| `feat`   | 引入新功能                                                                                                       |
+| `fix`    | 修复缺陷                                                                                                       |
+| `docs`   | 仅文档变更                                                                                                     |
+| `style`  | 不影响功能的代码变更（例如，格式化、空白等）                                                                       |
+| refactor | 既不修复缺陷也不引入新功能的代码变更，通常用于改进代码可读性或结构                                                       |
+| perf     | 提升性能的代码变更                                                                                                 |
+| test     | 添加缺失的测试或修正现有测试                                                                                       |
+| `chore`  | 不修改源代码或测试文件的变更，例如调整构建过程或添加依赖项                                                               |
+| build    | 影响构建系统或外部依赖项的变更（例如，webpack、npm 包的变更）                                                        |
+| ci       | 对持续集成配置文件和脚本的变更（例如，Travis、CircleCI、Jenkins）                                                    |
+| revert   | 还原先前进行的提交                                                                                                 |
 
 {.bold-first}
 
-## Specification {.cols-1}
+## 规范 {.cols-1}
 
-### Specification
+### 规范
 
-- Commits MUST be prefixed with a type, which consists of a noun, feat, fix, etc., followed by the OPTIONAL scope,
-  OPTIONAL !, and REQUIRED terminal colon and space.
-- The type feat MUST be used when a commit adds a new feature to your application or library.
-- The type fix MUST be used when a commit represents a bug fix for your application.
-- A scope MAY be provided after a type. A scope MUST consist of a noun describing a section of the codebase surrounded
-  by parenthesis, e.g., fix(parser):
-- A description MUST immediately follow the colon and space after the type/scope prefix. The description is a short
-  summary of the code changes, e.g., fix: array parsing issue when multiple spaces were contained in string.
-- A longer commit body MAY be provided after the short description, providing additional contextual information about
-  the code changes. The body MUST begin one blank line after the description.
-- A commit body is free-form and MAY consist of any number of newline separated paragraphs.
-- One or more footers MAY be provided one blank line after the body. Each footer MUST consist of a word token, followed
-  by either a :<space> or <space># separator, followed by a string value (this is inspired by the
-  [git trailer convention](https://git-scm.com/docs/git-interpret-trailers)).
-- A footer’s token MUST use - in place of whitespace characters, e.g., Acked-by (this helps differentiate the footer
-  section from a multi-paragraph body). An exception is made for BREAKING CHANGE, which MAY also be used as a token.
-- A footer’s value MAY contain spaces and newlines, and parsing MUST terminate when the next valid footer
-  token/separator pair is observed.
-- Breaking changes MUST be indicated in the type/scope prefix of a commit, or as an entry in the footer.
-- If included as a footer, a breaking change MUST consist of the uppercase text BREAKING CHANGE, followed by a colon,
-  space, and description, e.g., BREAKING CHANGE: environment variables now take precedence over config files.
-- If included in the type/scope prefix, breaking changes MUST be indicated by a ! immediately before the :. If ! is
-  used, BREAKING CHANGE: MAY be omitted from the footer section, and the commit description SHALL be used to describe
-  the breaking change.
-- Types other than feat and fix MAY be used in your commit messages, e.g., docs: update ref docs.
-- The units of information that make up Conventional Commits MUST NOT be treated as case sensitive by implementors, with
-  the exception of BREAKING CHANGE which MUST be uppercase.
-- BREAKING-CHANGE MUST be synonymous with BREAKING CHANGE, when used as a token in a footer.
+- 提交必须以类型为前缀，该类型由名词（feat、fix 等）组成，后跟可选的作用域、可选的 !，以及必需的冒号和空格。
+- 当提交为您的应用程序或库添加新功能时，必须使用类型 feat。
+- 当提交代表对您的应用程序的错误修复时，必须使用类型 fix。
+- 可以在类型之后提供作用域。作用域必须由描述代码库某个部分的名词组成，并用圆括号括起来，例如 `fix(parser):`
+- 描述必须紧跟在类型/作用域前缀后的冒号和空格之后。描述是对代码更改的简短总结，例如：`fix: array parsing issue when multiple spaces were contained in string.`
+- 可以在简短描述之后提供更长的提交正文，提供有关代码更改的附加上下文信息。正文必须在描述后空一行开始。
+- 提交正文是自由格式的，可以包含任意数量的换行分隔段落。
+- 可以在正文后空一行提供一个或多个脚注。每个脚注必须包含一个单词标记，后跟 `: ` 或 ` #` 分隔符，然后是一个字符串值（这受到 [git trailer 约定](https://git-scm.com/docs/git-interpret-trailers) 的启发）。
+- 脚注的标记必须使用 `-` 代替空格字符，例如 `Acked-by`（这有助于区分脚注部分和多段落正文）。BREAKING CHANGE 是一个例外，它也可以用作标记。
+- 脚注的值可以包含空格和换行符，当观察到下一个有效的脚注标记/分隔符对时，解析必须终止。
+- 破坏性变更必须在提交的类型/作用域前缀中指出，或作为脚注中的条目。
+- 如果作为脚注包含，破坏性变更必须由大写文本 BREAKING CHANGE 组成，后跟冒号、空格和描述，例如：`BREAKING CHANGE: environment variables now take precedence over config files.`
+- 如果包含在类型/作用域前缀中，则必须通过紧接在 `:` 之前的 `!` 来指示破坏性变更。如果使用 `!`，则可以从脚注部分省略 `BREAKING CHANGE:`，并且提交描述应用于描述破坏性变更。
+- 除了 feat 和 fix 之外的类型也可以在您的提交消息中使用，例如：`docs: update ref docs.`
+- 构成约定式提交的信息单元，除了必须大写的 BREAKING CHANGE 外，实现者不应将其视为区分大小写。
+- 当在脚注中用作标记时，BREAKING-CHANGE 必须与 BREAKING CHANGE 同义。
 
-## Also see
+## 另请参阅
 
-- [Conventional Commits](https://conventionalcommits.org/) _(conventionalcommits.org)_
+- [Conventional Commits (约定式提交)](https://conventionalcommits.org/zh-hans/) _(conventionalcommits.org)_

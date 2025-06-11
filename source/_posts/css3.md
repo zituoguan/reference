@@ -1,33 +1,33 @@
 ---
-title: CSS 3
+title: CSS 3 速查表
 date: 2020-12-25 20:22:47
 background: bg-[#3473b5]
 tags:
   - web
   - css
-  - style
+  - 样式
 categories:
-  - Programming
+  - 编程
 intro: |
-  This is a quick reference cheat sheet for CSS goodness, listing selector syntax, properties, units and other useful bits of information.
+  这是一个 CSS 精华的快速参考备忘单，列出了选择器语法、属性、单位和其他有用的信息片段。
 plugins:
   - copyCode
   - runCode
 ---
 
-## Getting Started
+## 入门指南
 
-### Introduction {.row-span-3}
+### 简介 {.row-span-3}
 
-CSS is rich in capabilities and is more than simply laying out pages.
+CSS 功能丰富，不仅仅是简单地布局页面。
 
-#### External stylesheet
+#### 外部样式表
 
 ```html {.wrap}
 <link href="./path/to/stylesheet/style.css" rel="stylesheet" type="text/css" />
 ```
 
-#### Internal stylesheet
+#### 内部样式表
 
 ```html
 <style>
@@ -37,22 +37,22 @@ CSS is rich in capabilities and is more than simply laying out pages.
 </style>
 ```
 
-#### Inline styles
+#### 内联样式
 
 ```html {.wrap}
-<h2 style="text-align: center;">Centered text</h2>
+<h2 style="text-align: center;">居中文本</h2>
 
-<p style="color: blue; font-size: 18px;">Blue, 18-point text</p>
+<p style="color: blue; font-size: 18px;">蓝色，18磅文本</p>
 ```
 
-### Add class
+### 添加类
 
 ```html
 <div class="classname"></div>
 <div class="class1 ... classn"></div>
 ```
 
-Support multiple classes on one element.
+一个元素支持多个类。
 
 ### !important
 
@@ -62,9 +62,9 @@ Support multiple classes on one element.
 }
 ```
 
-Overrides all previous styling rules.
+覆盖所有先前的样式规则。
 
-### Selector
+### 选择器
 
 ```css
 h1 {
@@ -77,9 +77,9 @@ div > p {
 }
 ```
 
-See: [Selectors](#css-selectors)
+参见：[选择器](#css-selectors)
 
-### Text color
+### 文本颜色
 
 ```css
 color: #2a2aff;
@@ -88,9 +88,9 @@ color: rgb(34, 12, 64, 0.6);
 color: hsla(30 100% 50% / 0.6);
 ```
 
-See: [Colors](#css-colors)
+参见：[颜色](#css-colors)
 
-### Background
+### 背景
 
 ```css
 background-color: blue;
@@ -98,9 +98,9 @@ background-image: url("nyan-cat.gif");
 background-image: url("../image.png");
 ```
 
-See: [Backgrounds](#css-backgrounds)
+参见：[背景](#css-backgrounds)
 
-### Font
+### 字体
 
 ```css
 .page-title {
@@ -110,9 +110,9 @@ See: [Backgrounds](#css-backgrounds)
 }
 ```
 
-See: [Fonts](#css-fonts)
+参见：[字体](#css-fonts)
 
-### Position
+### 定位
 
 ```css
 .box {
@@ -122,9 +122,9 @@ See: [Fonts](#css-fonts)
 }
 ```
 
-See also: [Position](https://learn-the-web.algonquindesign.ca/topics/css-layout-cheat-sheet/)
+另请参阅：[Position](https://learn-the-web.algonquindesign.ca/topics/css-layout-cheat-sheet/)
 
-### Animation
+### 动画
 
 ```css
 animation: 300ms linear 0s infinite;
@@ -132,18 +132,18 @@ animation: 300ms linear 0s infinite;
 animation: bounce 300ms linear infinite;
 ```
 
-See: [Animation](#css-animation)
+参见：[动画](#css-animation)
 
-### Comment
+### 注释
 
 ```css
-/* This is a single line comment */
+/* 这是单行注释 */
 
-/* This is a 
-   multi-line comment */
+/* 这是
+   多行注释 */
 ```
 
-### Flex layout
+### Flex 布局
 
 ```css
 div {
@@ -156,9 +156,9 @@ div {
 }
 ```
 
-See: [Flexbox](#css-flexbox) | [Flex Tricks](#css-flexbox-tricks)
+参见：[Flexbox](#css-flexbox) | [Flex 技巧](#css-flexbox-tricks)
 
-### Grid layout
+### Grid 布局
 
 ```css
 #container {
@@ -173,9 +173,9 @@ See: [Flexbox](#css-flexbox) | [Flex Tricks](#css-flexbox-tricks)
 }
 ```
 
-See: [Grid Layout](#css-grid-layout)
+参见：[Grid 布局](#css-grid-layout)
 
-### Variable & Counter
+### 变量和计数器
 
 ```css
 counter-set: subsection;
@@ -190,13 +190,13 @@ element {
 }
 ```
 
-See: [Dynamic content](#css-dynamic-content)
+参见：[动态内容](#css-dynamic-content)
 
-## CSS Selectors
+## CSS 选择器
 
-### Examples {.row-span-2}
+### 示例 {.row-span-2}
 
-#### Groups Selector
+#### 分组选择器
 
 ```css
 h1,
@@ -205,7 +205,7 @@ h2 {
 }
 ```
 
-#### Chaining Selector
+#### 链式选择器
 
 ```css
 h3.section-heading {
@@ -213,7 +213,7 @@ h3.section-heading {
 }
 ```
 
-#### Attribute Selector
+#### 属性选择器
 
 ```css
 div[attribute="SomeValue"] {
@@ -221,7 +221,7 @@ div[attribute="SomeValue"] {
 }
 ```
 
-#### First Child Selector
+#### 首子元素选择器
 
 ```css
 p:first-child {
@@ -229,7 +229,7 @@ p:first-child {
 }
 ```
 
-#### No Children Selector
+#### 无子元素选择器
 
 ```css
 .box:empty {
@@ -239,138 +239,137 @@ p:first-child {
 }
 ```
 
-### Basic
+### 基本选择器
 
 |              |                             |
 | ------------ | --------------------------- |
-| `*`          | All elements                |
-| `div`        | All div tags                |
-| `.classname` | All elements with class     |
-| `#idname`    | Element with ID             |
-| `div,p`      | All divs and paragraphs     |
-| `#idname *`  | All elements inside #idname |
+| `*`          | 所有元素                    |
+| `div`        | 所有 div 标签               |
+| `.classname` | 所有带此类的元素            |
+| `#idname`    | 带此 ID 的元素              |
+| `div,p`      | 所有 div 和 p 标签          |
+| `#idname *`  | `#idname` 内的所有元素      |
 
-See also: [Type](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors) /
-[Class](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) /
+另请参阅：[类型](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors) /
+[类](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) /
 [ID](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) /
-[Universal](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) selectors
+[通用](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) 选择器
 
-### Combinators
+### 组合器
 
-| Selector        | Description                           |
+| 选择器          | 描述                                  |
 | --------------- | ------------------------------------- |
-| `div.classname` | Div with certain classname            |
-| `div#idname`    | Div with certain ID                   |
-| `div p`         | Paragraphs inside divs                |
-| `div > p`       | All p tags<br>_one level deep in div_ |
-| `div + p`       | P tags immediately after div          |
-| `div ~ p`       | P tags preceded by div                |
+| `div.classname` | 具有特定类名的 Div                    |
+| `div#idname`    | 具有特定 ID 的 Div                    |
+| `div p`         | div 内的段落                          |
+| `div > p`       | 所有 p 标签<br>_div 内一层深_          |
+| `div + p`       | 紧跟 div 后的 P 标签                  |
+| `div ~ p`       | div 之后的所有同级 P 标签             |
 
-See also: [Adjacent](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) /
-[Sibling](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) /
-[Child](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) selectors
+另请参阅：[相邻兄弟](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) /
+[后续兄弟](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) /
+[子代](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) 选择器
 
-### Attribute selectors
+### 属性选择器
 
 |                      |                                    |
-| -------------------- | ---------------------------------- | ---------------------------- |
-| `a[target]`          | With a <yel>target</yel> attribute |
-| `a[target="_blank"]` | Open in new tab                    |
-| `a[href^="/index"]`  | Starts with <yel>/index</yel>      |
-| `[class              | ="chair"]`                         | Starts with <yel>chair</yel> |
-| `[class*="chair"]`   | containing <yel>chair</yel>        |
-| `[title~="chair"]`   | Contains the word <yel>chair</yel> |
-| `a[href$=".doc"]`    | Ends with <yel>.doc</yel>          |
-| `[type="button"]`    | Specified type                     |
+| -------------------- | ---------------------------------- |
+| `a[target]`          | 带有 <yel>target</yel> 属性        |
+| `a[target="_blank"]` | 在新标签页中打开                   |
+| `a[href^="/index"]`  | 以 <yel>/index</yel> 开头           |
+| `[class|="chair"]`   | 以 <yel>chair</yel> 开头            |
+| `[class*="chair"]`   | 包含 <yel>chair</yel>              |
+| `[title~="chair"]`   | 包含单词 <yel>chair</yel>          |
+| `a[href$=".doc"]`    | 以 <yel>.doc</yel> 结尾            |
+| `[type="button"]`    | 指定类型                           |
 
-See also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+另请参阅：[属性选择器](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 
-### User action pseudo classes
+### 用户行为伪类
 
 |              |                         |
 | ------------ | ----------------------- |
-| `a:link    ` | Link in normal state    |
-| `a:active  ` | Link in clicked state   |
-| `a:hover   ` | Link with mouse over it |
-| `a:visited ` | Visited link            |
+| `a:link    ` | 正常状态的链接          |
+| `a:active  ` | 点击状态的链接          |
+| `a:hover   ` | 鼠标悬停的链接          |
+| `a:visited ` | 已访问的链接            |
 
-### Pseudo classes
+### 伪类
 
 |                   |                                                                                         |
 | ----------------- | --------------------------------------------------------------------------------------- |
-| `p::after`        | Add content after p                                                                     |
-| `p::before`       | Add content before p                                                                    |
-| `p::first-letter` | First letter in p                                                                       |
-| `p::first-line`   | First line in p                                                                         |
-| `::selection`     | Selected by user                                                                        |
-| `::placeholder`   | [Placeholder](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder) attribute |
-| `:root`           | Documents root element                                                                  |
-| `:target`         | Highlight active anchor                                                                 |
-| `div:empty`       | Element with no children                                                                |
-| `p:lang(en)`      | P with en language attribute                                                            |
-| `:not(span)`      | Element that's not a span                                                               |
+| `p::after`        | 在 p 之后添加内容                                                                       |
+| `p::before`       | 在 p 之前添加内容                                                                       |
+| `p::first-letter` | p 中的首字母                                                                            |
+| `p::first-line`   | p 中的首行                                                                              |
+| `::selection`     | 用户选中的部分                                                                          |
+| `::placeholder`   | [占位符](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder) 属性           |
+| `:root`           | 文档根元素                                                                              |
+| `:target`         | 高亮活动锚点                                                                            |
+| `div:empty`       | 没有子元素的元素                                                                        |
+| `p:lang(en)`      | 具有 en 语言属性的 P                                                                    |
+| `:not(span)`      | 不是 span 的元素                                                                        |
 
-### Input pseudo classes
+### 输入伪类
 
 |                       |                                                                                             |
 | --------------------- | ------------------------------------------------------------------------------------------- |
-| `input:checked`       | Checked inputs                                                                              |
-| `input:disabled`      | Disabled inputs                                                                             |
-| `input:enabled`       | Enabled inputs                                                                              |
-| `input:focus`         | Input has focus                                                                             |
-| `input:in-range`      | Value in range                                                                              |
-| `input:out-of-range`  | Input value out of range                                                                    |
-| `input:valid`         | Input with valid value                                                                      |
-| `input:invalid`       | Input with invalid value                                                                    |
-| `input:optional`      | No required attribute                                                                       |
-| `input:required`      | Input with required attribute                                                               |
-| `input:read-only`     | With readonly attribute                                                                     |
-| `input:read-write`    | No readonly attribute                                                                       |
-| `input:indeterminate` | With [indeterminate](https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate) state |
+| `input:checked`       | 选中的输入                                                                                  |
+| `input:disabled`      | 禁用的输入                                                                                  |
+| `input:enabled`       | 启用的输入                                                                                  |
+| `input:focus`         | 输入框获得焦点                                                                              |
+| `input:in-range`      | 值在范围内                                                                                  |
+| `input:out-of-range`  | 输入值超出范围                                                                              |
+| `input:valid`         | 具有有效值的输入                                                                            |
+| `input:invalid`       | 具有无效值的输入                                                                            |
+| `input:optional`      | 没有 required 属性                                                                        |
+| `input:required`      | 具有 required 属性的输入                                                                    |
+| `input:read-only`     | 具有 readonly 属性                                                                        |
+| `input:read-write`    | 没有 readonly 属性                                                                        |
+| `input:indeterminate` | 处于[不确定](https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate)状态           |
 
-### Structural pseudo classes
+### 结构伪类
 
 |                         |                            |
 | ----------------------- | -------------------------- |
-| `p:first-child`         | First child                |
-| `p:last-child`          | Last child                 |
-| `p:first-of-type`       | First of some type         |
-| `p:last-of-type`        | Last of some type          |
-| `p:nth-child(2)`        | Second child of its parent |
-| `p:nth-child(3n42)`     | Nth-child (an + b) formula |
-| `p:nth-last-child(2)`   | Second child from behind   |
-| `p:nth-of-type(2)`      | Second p of its parent     |
-| `p:nth-last-of-type(2)` | ...from behind             |
-| `p:only-of-type`        | Unique of its parent       |
-| `p:only-child`          | Only child of its parent   |
+| `p:first-child`         | 首个子元素                 |
+| `p:last-child`          | 末尾子元素                 |
+| `p:first-of-type`       | 某种类型的首个             |
+| `p:last-of-type`        | 某种类型的末尾             |
+| `p:nth-child(2)`        | 其父元素的第二个子元素     |
+| `p:nth-child(3n42)`     | Nth-child (an + b) 公式    |
+| `p:nth-last-child(2)`   | 从后往前数的第二个子元素   |
+| `p:nth-of-type(2)`      | 其父元素的第二个 p 元素    |
+| `p:nth-last-of-type(2)` | ...从后往前数              |
+| `p:only-of-type`        | 其父元素的唯一此类元素     |
+| `p:only-child`          | 其父元素的唯一子元素       |
 
-## CSS Fonts
+## CSS 字体
 
-### Properties {.row-span-3}
+### 属性 {.row-span-3}
 
-| Property          | Description     |
-| ----------------- | --------------- |
-| `font-family:`    | \<font> <fontN> |
-| `font-size:`      | \<size>         |
-| `letter-spacing:` | \<size>         |
-| `line-height:`    | \<number>       |
+| 属性              | 描述                          |
+| ----------------- | ----------------------------- |
+| `font-family:`    | <字体> <字体N>                |
+| `font-size:`      | <大小>                        |
+| `letter-spacing:` | <大小>                        |
+| `line-height:`    | <数字>                        |
 
-| `font-weight:` | \<number> / bold / normal | | `font-style:` | italic / normal | | `text-decoration:` | underline /
-none |
+| `font-weight:` | <数字> / bold / normal | | `font-style:` | italic / normal | | `text-decoration:` | underline / none |
 
 | `text-align:` | left / right<br>center / justify | | `text-transform:` | capitalize / uppercase / lowercase |
 {.left-text}
 
-See also: [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+另请参阅：[字体](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
-### Shorthand {.secondary .col-span-2}
+### 简写 {.secondary .col-span-2}
 
-|         | style    | weight | size (required) |     | line-height | family            |
+|         | 样式     | 字重   | 大小 (必需)     |     | 行高        | 字体族 (必需)     |
 | ------- | -------- | ------ | --------------- | --- | ----------- | ----------------- |
 | `font:` | `italic` | `400`  | `14px`          | `/` | `1.5`       | `sans-serif`      |
-|         | style    | weight | size (required) |     | line-height | family (required) |
+|         | 样式     | 字重   | 大小 (必需)     |     | 行高        | 字体族 (必需)     |
 
-### Example
+### 示例
 
 ```css
 font-family: Arial, sans-serif;
@@ -378,7 +377,7 @@ font-size: 12pt;
 letter-spacing: 0.02em;
 ```
 
-### Case {.row-span-2}
+### 大小写转换 {.row-span-2}
 
 ```css
 /* Hello */
@@ -400,9 +399,9 @@ text-transform: lowercase;
 }
 ```
 
-## CSS Colors
+## CSS 颜色
 
-### Named color
+### 命名颜色
 
 ```css
 color: red;
@@ -411,7 +410,7 @@ color: tan;
 color: rebeccapurple;
 ```
 
-### Hexadecimal color
+### 十六进制颜色
 
 ```css
 color: #090;
@@ -420,7 +419,7 @@ color: #090a;
 color: #009900aa;
 ```
 
-### rgb() Colors
+### rgb() 颜色
 
 ```css
 color: rgb(34, 12, 64, 0.6);
@@ -431,7 +430,7 @@ color: rgb(34 12 64 / 60%);
 color: rgba(34.6 12 64 / 30%);
 ```
 
-### HSL Colors
+### HSL 颜色
 
 ```css
 color: hsl(30, 100%, 50%, 0.6);
@@ -442,7 +441,7 @@ color: hsl(30 100% 50% / 60%);
 color: hsla(30.2 100% 50% / 60%);
 ```
 
-### Other
+### 其他
 
 ```css
 color: inherit;
@@ -453,28 +452,26 @@ color: transparent;
 color: currentcolor; /* keyword */
 ```
 
-## CSS Backgrounds
+## CSS 背景
 
-### Properties {.row-span-2}
+### 属性 {.row-span-2}
 
-| Property      | Description   |
-| ------------- | ------------- |
-| `background:` | _(Shorthand)_ |
+| 属性          | 描述                       |
+| ------------- | -------------------------- |
+| `background:` | _(简写)_                   |
 
-| `background-color:` | See: [Colors](#css-colors) | | `background-image:` | url(...) | | `background-position:` |
-left/center/right<br/>top/center/bottom | | `background-size:` | cover X Y | | `background-clip:` |
-border-box<br/>padding-box<br/>content-box | | `background-repeat:` | no-repeat<br/>repeat-x<br/>repeat-y | |
-`background-attachment:` | scroll/fixed/local | {.left-text}
+| `background-color:` | 参见：[颜色](#css-colors) | | `background-image:` | url(...) | | `background-position:` | left/center/right<br/>top/center/bottom | | `background-size:` | cover X Y | | `background-clip:` | border-box<br/>padding-box<br/>content-box | | `background-repeat:` | no-repeat<br/>repeat-x<br/>repeat-y | | `background-attachment:` | scroll/fixed/local |
+{.left-text}
 
-### Shorthand {.secondary .col-span-2}
+### 简写 {.secondary .col-span-2}
 
-|               | color  | image        | positionX | positionY |     | size           | repeat      | attachment |
+|               | 颜色   | 图像         | 位置X    | 位置Y    |     | 大小           | 重复        | 附件       |
 | ------------- | ------ | ------------ | --------- | --------- | --- | -------------- | ----------- | ---------- |
 | `background:` | `#ff0` | `url(a.jpg)` | `left`    | `top`     | `/` | `100px` `auto` | `no-repeat` | `fixed;`   |
 | `background:` | `#abc` | `url(b.png)` | `center`  | `center`  | `/` | `cover`        | `repeat-x`  | `local;`   |
-|               | color  | image        | posX      | posY      |     | size           | repeat      | attach..   |
+|               | 颜色   | 图像         | 位置X     | 位置Y     |     | 大小           | 重复        | 附件..     |
 
-### Examples {.col-span-2}
+### 示例 {.col-span-2}
 
 ```css {.wrap}
 background: url(img_man.jpg) no-repeat center;
@@ -487,9 +484,9 @@ background: rgb(2, 0, 36);
 background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(13, 232, 230, 1) 35%, rgba(0, 212, 255, 1) 100%);
 ```
 
-## CSS The Box Model
+## CSS 盒模型
 
-### Maximums/Minimums
+### 最大/最小值
 
 ```css
 .column {
@@ -498,12 +495,12 @@ background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(13, 232, 230, 1) 3
 }
 ```
 
-See also: [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) /
+另请参阅：[max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) /
 [min-width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width) /
 [max-height](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height) /
 [min-height](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height)
 
-### Margin / Padding
+### 外边距 / 内边距
 
 ```css
 .block-one {
@@ -512,8 +509,8 @@ See also: [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width
 }
 ```
 
-See also: [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) /
-[Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+另请参阅：[外边距](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) /
+[内边距](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 
 ### Box-sizing
 
@@ -523,9 +520,9 @@ See also: [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) /
 }
 ```
 
-See also: [Box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/Box-sizing)
+另请参阅：[Box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/Box-sizing)
 
-### Visibility
+### 可见性
 
 ```css
 .invisible-elements {
@@ -533,9 +530,9 @@ See also: [Box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/Box-sizi
 }
 ```
 
-See also: [Visibility](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility)
+另请参阅：[可见性](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility)
 
-### Auto keyword
+### Auto 关键字
 
 ```css
 div {
@@ -543,9 +540,9 @@ div {
 }
 ```
 
-See also: [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
+另请参阅：[外边距](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 
-### Overflow
+### 溢出
 
 ```css
 .small-block {
@@ -553,36 +550,36 @@ See also: [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 }
 ```
 
-See also: [Overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
+另请参阅：[溢出](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
 
-## CSS Animation {.cols-5}
+## CSS 动画 {.cols-5}
 
-### Shorthand {.col-span-5 .secondary}
+### 简写 {.col-span-5 .secondary}
 
-|              | name     | duration | timing-function | delay   | count      | direction           | fill-mode | play-state |
+|              | 名称     | 持续时间 | 时间函数        | 延迟    | 次数       | 方向                | 填充模式  | 播放状态   |
 | ------------ | -------- | -------- | --------------- | ------- | ---------- | ------------------- | --------- | ---------- |
 | `animation:` | `bounce` | `300ms`  | `linear`        | `100ms` | `infinite` | `alternate-reverse` | `both`    | `reverse`  |
-|              | name     | duration | timing-function | delay   | count      | direction           | fill-mode | play-state |
+|              | 名称     | 持续时间 | 时间函数        | 延迟    | 次数       | 方向                | 填充模式  | 播放状态   |
 
-### Properties {.row-span-2 .col-span-2}
+### 属性 {.row-span-2 .col-span-2}
 
-| Property                     | Value                                                  |
+| 属性                         | 值                                                     |
 | ---------------------------- | ------------------------------------------------------ |
-| `animation:`                 | _(shorthand)_                                          |
-| `animation-name:`            | \<name>                                                |
-| `animation-duration:`        | \<time>ms                                              |
+| `animation:`                 | _(简写)_                                               |
+| `animation-name:`            | <名称>                                                 |
+| `animation-duration:`        | <时间>ms                                               |
 | `animation-timing-function:` | ease / linear / ease-in / ease-out / ease-in-out       |
-| `animation-delay:`           | \<time>ms                                              |
-| `animation-iteration-count:` | infinite / \<number>                                   |
+| `animation-delay:`           | <时间>ms                                               |
+| `animation-iteration-count:` | infinite / <数字>                                      |
 | `animation-direction:`       | normal / reverse / alternate / alternate-reverse       |
 | `animation-fill-mode:`       | none / forwards / backwards / both / initial / inherit |
 | `animation-play-state:`      | normal / reverse / alternate / alternate-reverse       |
 
 {.left-text}
 
-See also: [Animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
+另请参阅：[动画](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
 
-### Example {.col-span-3}
+### 示例 {.col-span-3}
 
 ```css
 /* @keyframes duration | timing-function | delay |
@@ -602,7 +599,7 @@ animation: bounce 300ms linear infinite alternate-reverse;
 animation: bounce 300ms linear 2s infinite alternate-reverse forwards normal;
 ```
 
-### Javascript Event {.col-span-3}
+### Javascript 事件 {.col-span-3}
 
 ```js
 .one('webkitAnimationEnd oanimationend msAnimationEnd animationend')
@@ -610,7 +607,7 @@ animation: bounce 300ms linear 2s infinite alternate-reverse forwards normal;
 
 ## CSS Flexbox {.cols-2}
 
-### Simple example
+### 简单示例
 
 ```css
 .container {
@@ -624,7 +621,7 @@ animation: bounce 300ms linear 2s infinite alternate-reverse forwards normal;
 }
 ```
 
-### Container {.row-span-2}
+### 容器 {.row-span-2}
 
 .container {
 
@@ -634,22 +631,22 @@ display: inline-flex;
 ```
 
 ```css
-flex-direction: row; /* ltr - default */
-flex-direction: row-reverse; /* rtl */
-flex-direction: column; /* top-bottom */
-flex-direction: column-reverse; /* bottom-top */
+flex-direction: row; /* 从左到右 - 默认 */
+flex-direction: row-reverse; /* 从右到左 */
+flex-direction: column; /* 从上到下 */
+flex-direction: column-reverse; /* 从下到上 */
 ```
 
 ```css
-flex-wrap: nowrap; /* one-line */
-flex-wrap: wrap; /* multi-line */
+flex-wrap: nowrap; /* 单行 */
+flex-wrap: wrap; /* 多行 */
 ```
 
 ```css
-align-items: flex-start; /* vertical-align to top */
-align-items: flex-end; /* vertical-align to bottom */
-align-items: center; /* vertical-align to center */
-align-items: stretch; /* same height on all (default) */
+align-items: flex-start; /* 垂直对齐到顶部 */
+align-items: flex-end; /* 垂直对齐到底部 */
+align-items: center; /* 垂直居中对齐 */
+align-items: stretch; /* 所有项目等高 (默认) */
 ```
 
 ```css
@@ -663,15 +660,15 @@ justify-content: space-evenly; /* [  x  x  x  ] */
 
 }
 
-### Child
+### 子项
 
 .container > div {
 
 ```css
-/* This: */
+/* 如下所示：*/
 flex: 1 0 auto;
 
-/* Is equivalent to this: */
+/* 等同于：*/
 flex-grow: 1;
 flex-shrink: 0;
 flex-basis: auto;
@@ -682,15 +679,15 @@ order: 1;
 ```
 
 ```css
-align-self: flex-start; /* left */
-margin-left: auto; /* right */
+align-self: flex-start; /* 左对齐 */
+margin-left: auto; /* 右对齐 */
 ```
 
 }
 
-## CSS Flexbox Tricks
+## CSS Flexbox 技巧
 
-### Vertical center
+### 垂直居中
 
 ```css
 .container {
@@ -704,21 +701,21 @@ margin-left: auto; /* right */
 }
 ```
 
-### Vertical center (2)
+### 垂直居中 (2)
 
 ```css
 .container {
   display: flex;
 
-  /* vertical */
+  /* 垂直 */
   align-items: center;
 
-  /* horizontal */
+  /* 水平 */
   justify-content: center;
 }
 ```
 
-### Reordering
+### 重新排序
 
 ```css
 .container > .top {
@@ -730,7 +727,7 @@ margin-left: auto; /* right */
 }
 ```
 
-### Mobile layout
+### 移动端布局
 
 ```css
 .container {
@@ -747,16 +744,16 @@ margin-left: auto; /* right */
 }
 ```
 
-A fixed-height top bar and a dynamic-height content area.
+一个固定高度的顶部栏和一个动态高度的内容区域。
 
-### Table-like {.col-span-2}
+### 表格样式 {.col-span-2}
 
 ```css
 .container {
   display: flex;
 }
 
-/* the 'px' values here are just suggested percentages */
+/* 这里的 'px' 值仅为建议的百分比 */
 .container > .checkbox {
   flex: 1 0 20px;
 }
@@ -768,9 +765,9 @@ A fixed-height top bar and a dynamic-height content area.
 }
 ```
 
-This creates columns that have different widths, but size accordingly according to the circumstances.
+这将创建具有不同宽度但会根据情况相应调整大小的列。
 
-### Vertical
+### 垂直对齐
 
 ```css
 .container {
@@ -778,9 +775,9 @@ This creates columns that have different widths, but size accordingly according 
 }
 ```
 
-Vertically-center all items.
+垂直居中所有项目。
 
-### Left and right {.col-span-2}
+### 左右对齐 {.col-span-2}
 
 ```css
 .menu > .left {
@@ -791,9 +788,9 @@ Vertically-center all items.
 }
 ```
 
-## CSS Grid Layout
+## CSS Grid 布局
 
-### Grid Template Columns
+### 网格模板列
 
 ```css
 #grid-container {
@@ -803,7 +800,7 @@ Vertically-center all items.
 }
 ```
 
-### fr Relative Unit
+### fr 相对单位
 
 ```css
 .grid {
@@ -813,18 +810,18 @@ Vertically-center all items.
 }
 ```
 
-### Grid Gap
+### 网格间距
 
 ```css
-/*The distance between rows is 20px*/
-/*The distance between columns is 10px*/
+/*行间距为 20px*/
+/*列间距为 10px*/
 #grid-container {
   display: grid;
   grid-gap: 20px 10px;
 }
 ```
 
-### CSS Block Level Grid
+### CSS 块级网格
 
 ```css
 #grid-container {
@@ -834,11 +831,11 @@ Vertically-center all items.
 
 ### CSS grid-row
 
-CSS syntax:
+CSS 语法：
 
 - grid-row: grid-row-start / grid-row-end;
 
-#### Example
+#### 示例
 
 ```css
 .item {
@@ -846,7 +843,7 @@ CSS syntax:
 }
 ```
 
-### CSS Inline Level Grid
+### CSS 内联级网格
 
 ```css
 #grid-container {
@@ -854,7 +851,7 @@ CSS syntax:
 }
 ```
 
-### minmax() Function
+### minmax() 函数
 
 ```css {.wrap}
 .grid {
@@ -863,14 +860,14 @@ CSS syntax:
 }
 ```
 
-### grid-row-start & grid-row-end
+### grid-row-start 和 grid-row-end
 
-CSS syntax:
+CSS 语法：
 
 - grid-row-start: auto|row-line;<br>
 - grid-row-end: auto|row-line|span n;
 
-#### Example
+#### 示例
 
 ```css
 grid-row-start: 2;
@@ -883,7 +880,7 @@ grid-row-end: span 2;
 grid-row-gap: length;
 ```
 
-Any legal length value, like px or %. 0 is the default value
+任何合法的长度值，如 px 或 %。0 是默认值
 
 ### CSS grid-area
 
@@ -893,7 +890,7 @@ Any legal length value, like px or %. 0 is the default value
 }
 ```
 
-### Justify Items
+### Justify Items (对齐网格项 - 主轴)
 
 ```css
 #container {
@@ -919,7 +916,7 @@ Any legal length value, like px or %. 0 is the default value
 }
 ```
 
-### Justify Self
+### Justify Self (对齐单个网格项 - 主轴)
 
 ```css
 #grid-container {
@@ -932,9 +929,9 @@ Any legal length value, like px or %. 0 is the default value
 }
 ```
 
-The grid items are positioned to the right (end) of the row.
+网格项位于行的右侧（末端）。
 
-### Align Items
+### Align Items (对齐网格项 - 交叉轴)
 
 ```css
 #container {
@@ -946,11 +943,11 @@ The grid items are positioned to the right (end) of the row.
 }
 ```
 
-## CSS Dynamic Content
+## CSS 动态内容
 
-### Variable
+### 变量
 
-Define CSS Variable
+定义 CSS 变量
 
 ```css
 :root {
@@ -959,7 +956,7 @@ Define CSS Variable
 }
 ```
 
-Variable Usage
+变量用法
 
 ```css
 #firstParagraph {
@@ -968,33 +965,33 @@ Variable Usage
 }
 ```
 
-See also: [CSS Variable](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+另请参阅：[CSS 变量](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 
-### Counter
+### 计数器
 
 ```css
-/* Set "my-counter" to 0 */
+/* 设置 "my-counter" 为 0 */
 counter-set: my-counter;
 ```
 
 ```css
-/* Increment "my-counter" by 1 */
+/* "my-counter" 增加 1 */
 counter-increment: my-counter;
 ```
 
 ```css
-/* Decrement "my-counter" by 1 */
+/* "my-counter" 减少 1 */
 counter-increment: my-counter -1;
 ```
 
 ```css
-/* Reset "my-counter" to 0 */
+/* 重置 "my-counter" 为 0 */
 counter-reset: my-counter;
 ```
 
-See also: [Counter set](https://developer.mozilla.org/en-US/docs/Web/CSS/counter-set)
+另请参阅：[计数器设置](https://developer.mozilla.org/en-US/docs/Web/CSS/counter-set)
 
-### Using counters
+### 使用计数器
 
 ```css
 body {
@@ -1019,9 +1016,9 @@ li::before {
 }
 ```
 
-## Css 3 tricks
+## Css 3 技巧
 
-### Scrollbar smooth
+### 平滑滚动条
 
 ```css
 html {
@@ -1029,11 +1026,11 @@ html {
 }
 ```
 
-[Click me](#css-getting-started), the page will scroll smoothly to Getting started
+[点击我](#css-getting-started)，页面将平滑滚动到“入门指南”
 
-## Modern CSS
+## 现代 CSS
 
-### container queries(size)
+### 容器查询 (大小)
 
 ```css
 .element-wrap {
@@ -1047,7 +1044,7 @@ html {
 }
 ```
 
-### container qeries(style)
+### 容器查询 (样式)
 
 ```css
 .container {
@@ -1060,7 +1057,7 @@ html {
 
 @container style(--variant: 1) {
   button {
-  } /* You can't style .container, but can select inside it */
+  } /* 你不能直接为 .container 设置样式，但可以选择其内部元素 */
   .other-things {
   }
 }
@@ -1073,14 +1070,14 @@ html {
 }
 ```
 
-### container units
+### 容器单位
 
-- The units are cqw (“container query width”),
-- cqh (“container query height”),
-- cqi (“container query inline”),
-- cqb (“container query block”),
-- cqmin (smaller of cqi and cqb),
-- and cqmax (larger of cqi and cqb)
+- 单位包括 cqw (“容器查询宽度”),
+- cqh (“容器查询高度”),
+- cqi (“容器查询内联尺寸”),
+- cqb (“容器查询块级尺寸”),
+- cqmin (cqi 和 cqb 中的较小者),
+- 以及 cqmax (cqi 和 cqb 中的较大者)
 
 ```css
 .card {
@@ -1096,7 +1093,7 @@ h2 {
 }
 ```
 
-### the :has() pseudo selector
+### :has() 伪选择器
 
 ```css
 figure:has(figcaption) {
@@ -1105,7 +1102,7 @@ figure:has(figcaption) {
 }
 ```
 
-### nesting
+### 嵌套
 
 ```css
 .cards {
@@ -1120,9 +1117,7 @@ figure:has(figcaption) {
 }
 ```
 
-###
-
-### scoping
+### 作用域
 
 ```css
 @scope {
@@ -1144,13 +1139,13 @@ figure:has(figcaption) {
 }
 ```
 
-### cascade layers
+### 层叠层
 
 ```css
-/* Specify the order to apply styles in cascade */
+/* 指定层叠中应用样式的顺序 */
 @layer legacyCard, newCard;
 
-/* Imagine you have a lot of styles */
+/* 假设你有很多样式 */
 @layer newCard {
   .card {
     background-color: red;
@@ -1163,7 +1158,7 @@ figure:has(figcaption) {
 }
 ```
 
-### logical properties
+### 逻辑属性
 
 ```css
 button {
@@ -1185,7 +1180,7 @@ button {
 }
 ```
 
-### p3 colors
+### P3 颜色
 
 ```html
 <div class="container">
@@ -1249,7 +1244,7 @@ button {
 </div>
 ```
 
-### color mixing
+### 颜色混合
 
 ```css
 .swatch {
@@ -1272,21 +1267,21 @@ button {
 }
 ```
 
-### margin trim
+### 外边距裁剪
 
 ```css
 .container {
-  /* prevent "extra" margin at the end of the element */
+  /* 防止元素末尾出现“多余”外边距 */
   margin-trim: block-end;
 
-  /* an element like this might be the culprit, but it could be anything */
+  /* 类似这样的元素可能是罪魁祸首，但也可能是任何元素 */
   > p {
     margin-block-end: 1rem;
   }
 }
 ```
 
-### text wrapping
+### 文本换行
 
 ```css
 .balance {
@@ -1306,7 +1301,7 @@ main {
 }
 ```
 
-### subgrid
+### 子网格
 
 ```css
 .grid {
@@ -1329,12 +1324,13 @@ main {
 }
 ```
 
-## Also see {.cols-1}
+## 另请参阅 {.cols-1}
 
 - [frontendmasters.com ](https://frontendmasters.com/blog/what-you-need-to-know-about-modern-css-spring-2024-edition/)
-- [CSS selectors cheatsheet](https://frontend30.com/css-selectors-cheatsheet/) _(frontend30.com)_
-- [MDN: Using CSS flexbox](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)
-- [Ultimate flexbox cheatsheet](http://www.sketchingwithcss.com/samplechapter/cheatsheet.html)
-- [GRID: A simple visual cheatsheet](http://grid.malven.co/)
-- [CSS Tricks: A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-- [Browser support](https://caniuse.com/#feat=css-grid)
+- [CSS 选择器备忘单](https://frontend30.com/css-selectors-cheatsheet/) _(frontend30.com)_
+- [MDN: 使用 CSS flexbox](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)
+- [终极 flexbox 备忘单](http://www.sketchingwithcss.com/samplechapter/cheatsheet.html)
+- [GRID: 简单的可视化备忘单](http://grid.malven.co/)
+- [CSS Tricks: Grid 完全指南](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [浏览器支持](https://caniuse.com/#feat=css-grid)
+

@@ -1,5 +1,5 @@
 ---
-title: Affinity Photo
+title: Affinity Photo 快捷键
 date: 2022-11-23 16:23:31.694998
 background: bg-[#d578f0]
 label:
@@ -7,324 +7,324 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 177 keyboard shortcuts found in Affinity Photo
+  Affinity Photo 中 177 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Editing {.row-span-2}
+### 编辑 {.row-span-2}
 
-| Shortcut           | Action                                         |
+| 快捷键             | 操作                                           |
 | ------------------ | ---------------------------------------------- |
-| `Ctrl` `Alt` `I`   | Resize document                                |
-| `Ctrl` `Alt` `C`   | Resize canvas                                  |
-| `.`                | Reset selection box                            |
-| `;`                | Toggle snapping                                |
-| `Ctrl`             | Erase with pixel tool on current layer         |
-| `X`                | Switch between Stroke/Fill color selectors     |
-| `Shift` `X`        | Swap Stroke/Fill colour selectors              |
-| `/`                | Set no fill on Stroke/Fill color selectors     |
-| `O`                | Toggle between crop tool overlays              |
-| `Shift` `O`        | Flip golden spiral overlay (crop tool enabled) |
-| `Esc`              | Cancel a sizing, moving, or creating operation |
-| `(arrows)`         | Move item                                      |
-| `Shift` `(arrows)` | Move item in 10x measurement units             |
+| `Ctrl` `Alt` `I`   | 调整文档大小                                   |
+| `Ctrl` `Alt` `C`   | 调整画布大小                                   |
+| `.`                | 重置选择框                                     |
+| `;`                | 切换吸附                                       |
+| `Ctrl`             | 在当前图层上使用像素工具擦除                   |
+| `X`                | 切换描边/填充颜色选择器                        |
+| `Shift` `X`        | 交换描边/填充颜色选择器                        |
+| `/`                | 在描边/填充颜色选择器上设置无填充              |
+| `O`                | 切换裁剪工具叠加层                             |
+| `Shift` `O`        | 翻转黄金螺旋叠加层 (裁剪工具启用时)            |
+| `Esc`              | 取消调整大小、移动或创建操作                   |
+| `(方向键)`         | 移动项目                                       |
+| `Shift` `(方向键)` | 以10倍测量单位移动项目                         |
 
 {.shortcuts}
 
-### Tools (Tone Mapping Persona)
+### 工具 (色调映射角色)
 
-| Shortcut | Action                |
+| 快捷键 | 操作                |
 | -------- | --------------------- |
-| `H`      | View tool             |
-| `Z`      | Zoom tool             |
-| `B`      | Overlay paint tool    |
-| `E`      | Overlay erase tool    |
-| `G`      | Overlay gradient tool |
+| `H`      | 视图工具              |
+| `Z`      | 缩放工具              |
+| `B`      | 叠加绘制工具          |
+| `E`      | 叠加擦除工具          |
+| `G`      | 叠加渐变工具          |
 
 {.shortcuts}
 
-### Files
+### 文件
 
-| Shortcut                 | Action                                                  |
-| ------------------------ | ------------------------------------------------------- |
-| `Ctrl` `N`               | New document                                            |
-| `Ctrl` `Shift` `Alt` `N` | New from clipboard                                      |
-| `Ctrl` `O`               | Open document                                           |
-| `Ctrl` `W`               | Close document, or close app when no documents are open |
-| `Ctrl` `Tab`             | Switch document/view                                    |
-| `Ctrl` `S`               | Save                                                    |
-| `Ctrl` `Shift` `S`       | Save as                                                 |
-| `Ctrl` `Shift` `Alt` `S` | Export                                                  |
-| `Ctrl` `P`               | Print                                                   |
+| 快捷键                   | 操作                                                     |
+| ------------------------ | -------------------------------------------------------- |
+| `Ctrl` `N`               | 新建文档                                                 |
+| `Ctrl` `Shift` `Alt` `N` | 从剪贴板新建                                             |
+| `Ctrl` `O`               | 打开文档                                                 |
+| `Ctrl` `W`               | 关闭文档，或在没有文档打开时关闭应用                     |
+| `Ctrl` `Tab`             | 切换文档/视图                                            |
+| `Ctrl` `S`               | 保存                                                     |
+| `Ctrl` `Shift` `S`       | 另存为                                                   |
+| `Ctrl` `Shift` `Alt` `S` | 导出                                                     |
+| `Ctrl` `P`               | 打印                                                     |
 
 {.shortcuts}
 
-### Vector Graphics
+### 矢量图形
 
-| Shortcut       | Action                                                |
+| 快捷键         | 操作                                                  |
 | -------------- | ----------------------------------------------------- |
-| `Ctrl`         | Edit curves as you draw using node editing (from pen) |
-| `Ctrl` `Enter` | Convert to curves                                     |
+| `Ctrl`         | 在使用节点编辑绘制时编辑曲线 (从钢笔工具)             |
+| `Ctrl` `Enter` | 转换为曲线                                            |
 
 {.shortcuts}
 
-### Tools (Export Persona)
+### 工具 (导出角色)
 
-| Shortcut | Action            |
+| 快捷键 | 操作              |
 | -------- | ----------------- |
-| `S`      | Slice tool        |
-| `L`      | Layer select tool |
+| `S`      | 切片工具          |
+| `L`      | 图层选择工具      |
 
 {.shortcuts}
 
-### Tools (Develop Persona)
+### 工具 (开发角色)
 
-| Shortcut | Action                |
+| 快捷键 | 操作                |
 | -------- | --------------------- |
-| `S`      | Sampler tool          |
-| `W`      | White balance tool    |
-| `R`      | Red eye removal tool  |
-| `L`      | Blemish removal tool  |
-| `B`      | Overlay paint tool    |
-| `E`      | Overlay erase tool    |
-| `G`      | Overlay gradient tool |
-| `C`      | Crop tool             |
-| `Z`      | Zoom tool             |
-| `H`      | View tool             |
+| `S`      | 采样器工具            |
+| `W`      | 白平衡工具            |
+| `R`      | 红眼消除工具          |
+| `L`      | 瑕疵消除工具          |
+| `B`      | 叠加绘制工具          |
+| `E`      | 叠加擦除工具          |
+| `G`      | 叠加渐变工具          |
+| `C`      | 裁剪工具              |
+| `Z`      | 缩放工具              |
+| `H`      | 视图工具              |
 
 {.shortcuts}
 
-### Tools
+### 工具
 
-| Shortcut | Action                                   |
-| -------- | ---------------------------------------- |
-| `G`      | Flood fill tool/gradient cycle           |
-| `H`      | View tool                                |
-| `V`      | Move tool                                |
-| `C`      | Crop tool                                |
-| `W`      | Selection tools cycle                    |
-| `P`      | Pen and node tool cycle                  |
-| `Z`      | Zoom tool                                |
-| `S`      | Clone tool                               |
-| `U`      | Shape tools cycle                        |
-| `T`      | Text tools cycle                         |
-| `O`      | Dodge, burn, and sponge brush tool cycle |
-| `J`      | Retouch tools cycle                      |
-| `B`      | Painting tools cycle                     |
-| `E`      | Erase tools cycle                        |
-| `M`      | Marquee selection tools cycle            |
-| `L`      | Free hand selection tool                 |
+| 快捷键 | 操作                                         |
+| -------- | -------------------------------------------- |
+| `G`      | 油漆桶工具/渐变循环                          |
+| `H`      | 视图工具                                     |
+| `V`      | 移动工具                                     |
+| `C`      | 裁剪工具                                     |
+| `W`      | 选择工具循环                                 |
+| `P`      | 钢笔和节点工具循环                           |
+| `Z`      | 缩放工具                                     |
+| `S`      | 仿制图章工具                                 |
+| `U`      | 形状工具循环                                 |
+| `T`      | 文本工具循环                                 |
+| `O`      | 减淡、加深和海绵画笔工具循环                 |
+| `J`      | 修饰工具循环                                 |
+| `B`      | 绘画工具循环                                 |
+| `E`      | 擦除工具循环                                 |
+| `M`      | 选框选择工具循环                             |
+| `L`      | 自由选择工具                                 |
 
 {.shortcuts}
 
-### Tools (Liquify Persona)
+### 工具 (液化角色)
 
-| Shortcut | Action                    |
+| 快捷键 | 操作                      |
 | -------- | ------------------------- |
-| `P`      | Liquify push forward tool |
-| `L`      | Liquify push left tool    |
-| `T`      | Liquify twirl tool        |
-| `U`      | Liquify pinch tool        |
-| `B`      | Liquify turbulence tool   |
-| `C`      | Liquify mesh clone tool   |
-| `R`      | Liquify reconstruct tool  |
-| `F`      | Liquify freeze tool       |
-| `W`      | Liquify thaw tool         |
-| `Z`      | Liquify zoom tool         |
-| `H`      | Liquify view tool         |
+| `P`      | 液化向前推工具            |
+| `L`      | 液化向左推工具            |
+| `T`      | 液化旋转扭曲工具          |
+| `U`      | 液化收缩工具              |
+| `B`      | 液化紊乱工具              |
+| `C`      | 液化网格仿制工具          |
+| `R`      | 液化重建工具              |
+| `F`      | 液化冻结工具              |
+| `W`      | 液化解冻工具              |
+| `Z`      | 液化缩放工具              |
+| `H`      | 液化视图工具              |
 
 {.shortcuts}
 
-### Text {.row-span-3}
+### 文本 {.row-span-3}
 
-| Shortcut                    | Action                             |
+| 快捷键                      | 操作                               |
 | --------------------------- | ---------------------------------- |
-| `Ctrl` `>`                  | Bigger text                        |
-| `Ctrl` `<`                  | Smaller text                       |
-| `Ctrl` `Alt` `>`            | Precise bigger text                |
-| `Ctrl` `Alt` `<`            | Precise smaller text               |
-| `Alt` `Left`                | Tighten                            |
-| `Alt` `Right`               | Loosen                             |
-| `Alt` `Shift` `Left`        | Tighten more                       |
-| `Alt` `Shift` `Right`       | Loosen more                        |
-| `Ctrl` `B`                  | Bold                               |
-| `Ctrl` `I`                  | Italic                             |
-| `Ctrl` `U`                  | Underline                          |
-| `Ctrl` `T`                  | Show character                     |
-| `Ctrl` `Shift` `T`          | Show typography                    |
-| `Ctrl` `Alt` `+`            | Superscript                        |
-| `Ctrl` `Alt` `-`            | Subscript                          |
-| `Ctrl` `Alt` `L`            | Align left                         |
-| `Ctrl` `Alt` `R`            | Align right                        |
-| `Ctrl` `Alt` `C`            | Align center                       |
-| `Ctrl` `Alt` `Shift` `\`    | Justify left                       |
-| `Alt` `Down`                | Increase paragraph leading         |
-| `Alt` `Up`                  | Decrease paragraph leading         |
-| `Ctrl` `Shift` `Up`         | Precise paragraph increase leading |
-| `Ctrl` `Shift` `Down`       | Precise paragraph decrease leading |
-| `Alt` `Shift` `Up`          | Raise baseline                     |
-| `Alt` `Shift` `Down`        | Lower baseline                     |
-| `Ctrl` `Alt` `Shift` `Up`   | Precise raise baseline             |
-| `Ctrl` `Alt` `Shift` `Down` | Precise lower baseline             |
-| `Ctrl` `Alt` `Space`        | Special characters                 |
-| `Ctrl` `Enter`              | Line break                         |
-| `Alt` `Space`               | Non-breaking space                 |
-| `Alt` `-`                   | En dash                            |
-| `Alt` `Shift` `-`           | Em dash                            |
-| `Ctrl` `Shift` `;`          | Spelling options                   |
+| `Ctrl` `>`                  | 增大文本                           |
+| `Ctrl` `<`                  | 减小文本                           |
+| `Ctrl` `Alt` `>`            | 精确增大文本                       |
+| `Ctrl` `Alt` `<`            | 精确减小文本                       |
+| `Alt` `Left`                | 收紧字距                           |
+| `Alt` `Right`               | 放宽字距                           |
+| `Alt` `Shift` `Left`        | 更大幅度收紧字距                   |
+| `Alt` `Shift` `Right`       | 更大幅度放宽字距                   |
+| `Ctrl` `B`                  | 粗体                               |
+| `Ctrl` `I`                  | 斜体                               |
+| `Ctrl` `U`                  | 下划线                             |
+| `Ctrl` `T`                  | 显示字符面板                       |
+| `Ctrl` `Shift` `T`          | 显示排版面板                       |
+| `Ctrl` `Alt` `+`            | 上标                               |
+| `Ctrl` `Alt` `-`            | 下标                               |
+| `Ctrl` `Alt` `L`            | 左对齐                             |
+| `Ctrl` `Alt` `R`            | 右对齐                             |
+| `Ctrl` `Alt` `C`            | 居中对齐                           |
+| `Ctrl` `Alt` `Shift` `\`    | 两端对齐 (左)                      |
+| `Alt` `Down`                | 增加段落行距                       |
+| `Alt` `Up`                  | 减少段落行距                       |
+| `Ctrl` `Shift` `Up`         | 精确增加段落行距                   |
+| `Ctrl` `Shift` `Down`       | 精确减少段落行距                   |
+| `Alt` `Shift` `Up`          | 提升基线                           |
+| `Alt` `Shift` `Down`        | 降低基线                           |
+| `Ctrl` `Alt` `Shift` `Up`   | 精确提升基线                       |
+| `Ctrl` `Alt` `Shift` `Down` | 精确降低基线                       |
+| `Ctrl` `Alt` `Space`        | 特殊字符                           |
+| `Ctrl` `Enter`              | 换行符                             |
+| `Alt` `Space`               | 不间断空格                         |
+| `Alt` `-`                   | 短破折号 (En dash)                 |
+| `Alt` `Shift` `-`           | 长破折号 (Em dash)                 |
+| `Ctrl` `Shift` `;`          | 拼写选项                           |
 
 {.shortcuts}
 
-### Tools (Panorama Persona)
+### 工具 (全景图角色)
 
-| Shortcut | Action                            |
+| 快捷键 | 操作                              |
 | -------- | --------------------------------- |
-| `A`      | Transform source image tool       |
-| `L`      | Add to source image mask tool     |
-| `U`      | Erase from source image mask tool |
+| `A`      | 变换源图像工具                    |
+| `L`      | 添加到源图像蒙版工具              |
+| `U`      | 从源图像蒙版擦除工具              |
 
 {.shortcuts}
 
-### Edit
+### 编辑
 
-| Shortcut                 | Action               |
-| ------------------------ | -------------------- |
-| `Ctrl` `Z`               | Undo                 |
-| `Ctrl` `Shift` `Z`       | Redo                 |
-| `Ctrl` `Shift` `C`       | Copy merged          |
-| `Ctrl` `Shift` `V`       | Paste style          |
-| `Ctrl` `Alt` `V`         | Paste FX             |
-| `Ctrl` `Shift` `Alt` `V` | Paste without format |
-| `Ctrl` `Alt` `V`         | Paste inside         |
-| `Shift` `F5`             | Fill                 |
-| `Alt` `Tab`              | Inpaint              |
+| 快捷键                   | 操作                         |
+| ------------------------ | ---------------------------- |
+| `Ctrl` `Z`               | 撤销                         |
+| `Ctrl` `Shift` `Z`       | 重做                         |
+| `Ctrl` `Shift` `C`       | 合并复制                     |
+| `Ctrl` `Shift` `V`       | 粘贴样式                     |
+| `Ctrl` `Alt` `V`         | 粘贴效果 (FX)                |
+| `Ctrl` `Shift` `Alt` `V` | 无格式粘贴                   |
+| `Ctrl` `Alt` `V`         | 粘贴到内部                   |  <!-- Note: Original had Ctrl Alt V twice, assuming this is distinct -->
+| `Shift` `F5`             | 填充                         |
+| `Alt` `Tab`              | 内容感知修复 (Inpaint)       |
 
 {.shortcuts}
 
-### Layer Operations
+### 图层操作
 
-| Shortcut                 | Action                                     |
+| 快捷键                   | 操作                                       |
 | ------------------------ | ------------------------------------------ |
-| `Ctrl` `Alt` `A`         | Select all layers                          |
-| `Ctrl` `G`               | Group                                      |
-| `Ctrl` `Shift` `G`       | Ungroup                                    |
-| `Ctrl` `J`               | Duplicate                                  |
-| `Ctrl` `I`               | Invert                                     |
-| `Ctrl` `Shift` `]`       | Move to front                              |
-| `Ctrl` `]`               | Move forward one                           |
-| `Ctrl` `Shift` `[`       | Move to back                               |
-| `Ctrl` `[`               | Move back one                              |
-| `Ctrl` `Shift` `N`       | New layer                                  |
-| `Ctrl` `E`               | Merge down                                 |
-| `Ctrl` `Shift` `E`       | Merge selected                             |
-| `Ctrl` `Shift` `Alt` `E` | Merge visible                              |
-| `F`                      | Toggle between frequency separation layers |
-| `Ctrl` `Alt` `P`         | Edit live projection                       |
+| `Ctrl` `Alt` `A`         | 选择所有图层                               |
+| `Ctrl` `G`               | 编组                                       |
+| `Ctrl` `Shift` `G`       | 取消编组                                   |
+| `Ctrl` `J`               | 复制图层                                   |
+| `Ctrl` `I`               | 反相                                       |
+| `Ctrl` `Shift` `]`       | 移到最前                                   |
+| `Ctrl` `]`               | 向前移动一层                               |
+| `Ctrl` `Shift` `[`       | 移到最后                                   |
+| `Ctrl` `[`               | 向后移动一层                               |
+| `Ctrl` `Shift` `N`       | 新建图层                                   |
+| `Ctrl` `E`               | 向下合并                                   |
+| `Ctrl` `Shift` `E`       | 合并选中图层                               |
+| `Ctrl` `Shift` `Alt` `E` | 合并可见图层                               |
+| `F`                      | 切换频率分离图层                           |
+| `Ctrl` `Alt` `P`         | 编辑实时投影                               |
 
 {.shortcuts}
 
-### Brush
+### 画笔
 
-| Shortcut | Action                                             |
+| 快捷键 | 操作                                               |
 | -------- | -------------------------------------------------- |
-| `0-9`    | Change selected layer content/brush tool's opacity |
-| `[/]`    | Increase/decrease brush width                      |
+| `0-9`    | 更改所选图层内容/画笔工具的不透明度                |
+| `[/]`    | 增加/减少画笔宽度                                  |
 
 {.shortcuts}
 
-### View
+### 视图
 
-| Shortcut       | Action               |
+| 快捷键         | 操作                 |
 | -------------- | -------------------- |
-| `Ctrl` `+`     | Zoom in              |
-| `Ctrl` `-`     | Zoom out             |
-| `Ctrl` `0`     | Zoom to fit          |
-| `Ctrl` `1`     | Zoom to 100%         |
-| `Ctrl` `2`     | Zoom to 200%         |
-| `Ctrl` `3`     | Zoom to 400%         |
-| `Ctrl` `4`     | Zoom to 800%         |
-| `Ctrl` `8`     | Zoom to actual size  |
-| `Ctrl` `9`     | Zoom to pixel size   |
-| `Space`        | Hot key panning      |
-| `Ctrl` `Space` | Hot key zoom in      |
-| `H`            | View tool            |
-| `Ctrl` `Tab`   | Switch between views |
-| `Ctrl` `R`     | Show rulers          |
-| `Ctrl` `;`     | Show guides          |
-| `Ctrl` `'`     | Show grid            |
+| `Ctrl` `+`     | 放大                 |
+| `Ctrl` `-`     | 缩小                 |
+| `Ctrl` `0`     | 缩放以适合屏幕       |
+| `Ctrl` `1`     | 缩放到 100%          |
+| `Ctrl` `2`     | 缩放到 200%          |
+| `Ctrl` `3`     | 缩放到 400%          |
+| `Ctrl` `4`     | 缩放到 800%          |
+| `Ctrl` `8`     | 缩放到实际大小       |
+| `Ctrl` `9`     | 缩放到像素大小       |
+| `Space`        | 快捷键平移           |
+| `Ctrl` `Space` | 快捷键放大           |
+| `H`            | 视图工具             |
+| `Ctrl` `Tab`   | 切换视图             |
+| `Ctrl` `R`     | 显示标尺             |
+| `Ctrl` `;`     | 显示参考线           |
+| `Ctrl` `'`     | 显示网格             |
 
 {.shortcuts}
 
-### Pixel Selection / Mask
+### 像素选择 / 蒙版
 
-| Shortcut           | Action                                                       |
+| 快捷键             | 操作                                                         |
 | ------------------ | ------------------------------------------------------------ |
-| `Ctrl` `A`         | Select all                                                   |
-| `Ctrl` `D`         | Deselect                                                     |
-| `Ctrl` `Shift` `I` | Invert pixel selection                                       |
-| `Ctrl`             | Add to selection (marquee or free hand selection tools only) |
-| `Alt`              | Remove from selection                                        |
-| `Ctrl` `B`         | Grow or shrink                                               |
-| `Shift` `F6`       | Feather                                                      |
-| `Ctrl` `Alt` `R`   | Refine edges                                                 |
-| `(arrows)`         | Move selection in 1 pixel increments                         |
-| `Shift` `(arrows)` | Move selection in 10 pixel increments                        |
-| `Q`                | Quick mask                                                   |
-| `Ctrl` `I`         | Invert mask                                                  |
+| `Ctrl` `A`         | 全选                                                         |
+| `Ctrl` `D`         | 取消选择                                                     |
+| `Ctrl` `Shift` `I` | 反选像素选区                                                 |
+| `Ctrl`             | 添加到选区 (仅限选框或自由选择工具)                          |
+| `Alt`              | 从选区中移除                                                 |
+| `Ctrl` `B`         | 扩大或收缩选区                                               |
+| `Shift` `F6`       | 羽化                                                         |
+| `Ctrl` `Alt` `R`   | 调整边缘                                                     |
+| `(方向键)`         | 以1像素增量移动选区                                          |
+| `Shift` `(方向键)` | 以10像素增量移动选区                                         |
+| `Q`                | 快速蒙版                                                     |
+| `Ctrl` `I`         | 反转蒙版                                                     |
 
 {.shortcuts}
 
-### Workspace
+### 工作区
 
-| Shortcut           | Action                     |
+| 快捷键             | 操作                       |
 | ------------------ | -------------------------- |
-| `Ctrl` `Shift` `H` | Show or hide studio panels |
-| `Ctrl` `Alt` `T`   | Show or hide toolbar       |
-| `Tab`              | Toggle UI                  |
-| `Ctrl` `H`         | Hide workspace             |
+| `Ctrl` `Shift` `H` | 显示或隐藏工作室面板       |
+| `Ctrl` `Alt` `T`   | 显示或隐藏工具栏           |
+| `Tab`              | 切换用户界面               |
+| `Ctrl` `H`         | 隐藏工作区                 |
 
 {.shortcuts}
 
-### Adjustment and Filter
+### 调整和滤镜
 
-| Shortcut                 | Action                     |
+| 快捷键                   | 操作                       |
 | ------------------------ | -------------------------- |
-| `Ctrl` `L`               | Levels adjustment          |
-| `Ctrl` `U`               | HSL adjustment             |
-| `Ctrl` `I`               | Invert adjustment          |
-| `Ctrl` `M`               | Curves adjustment          |
-| `Ctrl` `Shift` `Alt` `B` | Black and white adjustment |
-| `Ctrl` `F`               | Repeat filter              |
+| `Ctrl` `L`               | 色阶调整                   |
+| `Ctrl` `U`               | HSL 调整                   |
+| `Ctrl` `I`               | 反相调整                   |
+| `Ctrl` `M`               | 曲线调整                   |
+| `Ctrl` `Shift` `Alt` `B` | 黑白调整                   |
+| `Ctrl` `F`               | 重复滤镜                   |
 
 {.shortcuts}
 
-### Liquify Persona
+### 液化角色
 
-| Shortcut   | Action      |
+| 快捷键     | 操作        |
 | ---------- | ----------- |
-| `Ctrl` `D` | Mask all    |
-| `Ctrl` `I` | Invert mask |
-| `Ctrl` `A` | Clear mask  |
+| `Ctrl` `D` | 全部蒙版    |
+| `Ctrl` `I` | 反转蒙版    |
+| `Ctrl` `A` | 清除蒙版    |
 
 {.shortcuts}
 
-### Misc
+### 其他
 
-| Shortcut         | Action                     |
+| 快捷键           | 操作                       |
 | ---------------- | -------------------------- |
-| `Ctrl` `,`       | Preferences                |
-| `Ctrl` `Alt` `L` | Liquify persona            |
-| `Ctrl` `Alt` `E` | Export persona             |
-| `Ctrl` `Alt` `R` | Develop persona            |
-| `Ctrl` `Alt` `H` | Hide others (applications) |
-| `Ctrl` `Alt` `M` | Media browser              |
+| `Ctrl` `,`       | 首选项                     |
+| `Ctrl` `Alt` `L` | 液化角色                   |
+| `Ctrl` `Alt` `E` | 导出角色                   |
+| `Ctrl` `Alt` `R` | 开发角色                   |
+| `Ctrl` `Alt` `H` | 隐藏其他 (应用程序)        |
+| `Ctrl` `Alt` `M` | 媒体浏览器                 |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Affinity Photo](https://affinityspotlight.com/article/downloadable-affinity-keyboard-shortcut-cheat-sheets/)
+- [Affinity Photo 键盘快捷键](https://affinityspotlight.com/article/downloadable-affinity-keyboard-shortcut-cheat-sheets/)
   _(affinityspotlight.com)_

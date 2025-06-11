@@ -6,43 +6,43 @@ tags:
   - config
   - format
 categories:
-  - Programming
+  - 编程
 intro: |
-  This is a quick reference cheat sheet for understanding and writing YAML format configuration files.
+  这是一个用于理解和编写 YAML 格式配置文件的快速参考备忘单。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门
 
-### Introduction
+### 简介
 
-[YAML](https://yaml.org/) is a data serialization language designed to be directly writable and readable by humans
+[YAML](https://yaml.org/) 是一种数据序列化语言，旨在让人类可以直接编写和阅读。
 
-- YAML does not allow the use of tabs
-- Must be space between the element parts
-- YAML is CASE sensitive
-- End your YAML file with the `.yaml` or `.yml` extension
-- YAML is a superset of JSON
-- Ansible playbooks are YAML files {.marker-round}
+- YAML 不允许使用制表符
+- 元素各部分之间必须有空格
+- YAML 区分大小写
+- YAML 文件以 `.yaml` 或 `.yml` 扩展名结尾
+- YAML 是 JSON 的超集
+- Ansible playbooks 是 YAML 文件 {.marker-round}
 
-### Scalar types {.row-span-2}
+### 标量类型 {.row-span-2}
 
 <!-- prettier-ignore -->
 ```yaml
-n1: 1            # integer
-n2: 1.234        # float
+n1: 1            # 整数
+n2: 1.234        # 浮点数
 
-s1: 'abc'        # string
-s2: "abc"        # string
-s3: abc          # string
+s1: 'abc'        # 字符串
+s2: "abc"        # 字符串
+s3: abc          # 字符串
 
-b: false         # boolean type
+b: false         # 布尔类型
 
-d: 2015-04-05    # date type
+d: 2015-04-05    # 日期类型
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 ```json {.wrap}
 {
@@ -56,16 +56,16 @@ d: 2015-04-05    # date type
 }
 ```
 
-Use spaces to indent. There must be space between the element parts.
+使用空格进行缩进。元素各部分之间必须有空格。
 
-### Variables
+### 变量
 
 ```yaml
 some_thing: &VAR_NAME foobar
 other_thing: *VAR_NAME
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 <!-- prettier-ignore -->
 ```json {.wrap}
@@ -75,18 +75,18 @@ other_thing: *VAR_NAME
 }
 ```
 
-### Comments
+### 注释
 
 ```yaml
-# A single line comment example
+# 单行注释示例
 
-# block level comment example
-# comment line 1
-# comment line 2
-# comment line 3
+# 块级注释示例
+# 注释行 1
+# 注释行 2
+# 注释行 3
 ```
 
-### Multiline strings
+### 多行字符串
 
 ```yaml
 description: |
@@ -94,13 +94,13 @@ description: |
   world
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 ```json {.wrap}
 { "description": "hello\nworld\n" }
 ```
 
-### Inheritance {.row-span-2}
+### 继承 {.row-span-2}
 
 ```yaml
 parent: &defaults
@@ -112,7 +112,7 @@ child:
   b: 4
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 ```json {.wrap}
 {
@@ -127,7 +127,7 @@ child:
 }
 ```
 
-### Reference {.row-span-2}
+### 引用 {.row-span-2}
 
 ```yaml
 values: &ref
@@ -138,7 +138,7 @@ other_values:
   i_am_ref: *ref
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 <!-- prettier-ignore -->
 ```json {.wrap}
@@ -156,33 +156,33 @@ other_values:
 }
 ```
 
-### Folded strings
+### 折叠字符串
 
 ```yaml
 description: >
   hello world
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 ```json {.wrap}
 { "description": "hello world\n" }
 ```
 
-### Two Documents
+### 两个文档
 
 ```yaml
 ---
-document: this is doc 1
+document: 这是文档 1
 ---
-document: this is doc 2
+document: 这是文档 2
 ```
 
-YAML uses `---` to separate directives from document content.
+YAML 使用 `---` 来分隔指令和文档内容。
 
-## YAML Collections
+## YAML 集合
 
-### Sequence
+### 序列
 
 ```yaml
 - Mark McGwire
@@ -190,7 +190,7 @@ YAML uses `---` to separate directives from document content.
 - Ken Griffey
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 <!-- prettier-ignore -->
 ```json {.wrap}
@@ -201,16 +201,16 @@ YAML uses `---` to separate directives from document content.
 ]
 ```
 
-### Mapping
+### 映射
 
 <!-- prettier-ignore -->
 ```yaml
-hr:  65       # Home runs
-avg: 0.278    # Batting average
-rbi: 147      # Runs Batted In
+hr:  65       # 本垒打
+avg: 0.278    # 打击率
+rbi: 147      # 打点
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 ```json {.wrap}
 {
@@ -220,7 +220,7 @@ rbi: 147      # Runs Batted In
 }
 ```
 
-### Mapping to Sequences
+### 映射到序列
 
 ```yaml
 attributes:
@@ -229,7 +229,7 @@ attributes:
 methods: [getter, setter]
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 ```json {.wrap}
 {
@@ -238,7 +238,7 @@ methods: [getter, setter]
 }
 ```
 
-### Sequence of Mappings
+### 映射序列
 
 <!-- prettier-ignore -->
 ```yaml
@@ -252,7 +252,7 @@ children:
     age: 12
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 <!-- prettier-ignore -->
 ```json {.wrap}
@@ -265,7 +265,7 @@ children:
 }
 ```
 
-### Sequence of Sequences
+### 序列的序列
 
 <!-- prettier-ignore -->
 ```yaml
@@ -276,10 +276,10 @@ my_sequences:
     - 7
     - 8
     - 9
-    - 0 
+    - 0
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 ```json {.wrap}
 {
@@ -291,14 +291,14 @@ my_sequences:
 }
 ```
 
-### Mapping of Mappings
+### 映射的映射
 
 ```yaml
 Mark McGwire: { hr: 65, avg: 0.278 }
 Sammy Sosa: { hr: 63, avg: 0.288 }
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 ```json {.wrap}
 {
@@ -313,7 +313,7 @@ Sammy Sosa: { hr: 63, avg: 0.288 }
 }
 ```
 
-### Nested Collections
+### 嵌套集合
 
 ```yaml
 Jack:
@@ -326,7 +326,7 @@ Jack:
   location: { country: "A", city: "A-A" }
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 ```json {.wrap}
 {
@@ -343,7 +343,7 @@ Jack:
 }
 ```
 
-### Unordered Sets
+### 无序集合
 
 ```yaml
 set1: !!set
@@ -352,7 +352,7 @@ set1: !!set
 set2: !!set { "one", "two" }
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 ```json {.wrap}
 {
@@ -361,9 +361,9 @@ set2: !!set { "one", "two" }
 }
 ```
 
-Sets are represented as a Mapping where each key is associated with a null value
+集合表示为一个映射，其中每个键都与一个 null 值相关联。
 
-### Ordered Mappings
+### 有序映射
 
 ```yaml
 ordered: !!omap
@@ -372,7 +372,7 @@ ordered: !!omap
   - Ken Griffy: 58
 ```
 
-#### ↓ Equivalent JSON
+#### ↓ 等效 JSON
 
 <!-- prettier-ignore -->
 ```json {.wrap}
@@ -385,149 +385,149 @@ ordered: !!omap
 }
 ```
 
-## YAML Reference
+## YAML 参考
 
-### Terms
+### 术语
 
-- Sequences aka arrays or lists
-- Scalars aka strings or numbers
-- Mappings aka hashes or dictionaries {.marker-round}
+- 序列 (Sequences) 又称数组 (arrays) 或列表 (lists)
+- 标量 (Scalars) 又称字符串 (strings) 或数字 (numbers)
+- 映射 (Mappings) 又称哈希 (hashes) 或字典 (dictionaries) {.marker-round}
 
-Based on the YAML.org [refcard](https://yaml.org/refcard.html).
+基于 YAML.org [参考卡片](https://yaml.org/refcard.html)。
 
-### Document indicators
+### 文档指示符
 
-|       |                     |
-| ----- | ------------------- |
-| `%`   | Directive indicator |
-| `---` | Document header     |
-| `...` | Document terminator |
+|       |             |
+| ----- | ----------- |
+| `%`   | 指令指示符  |
+| `---` | 文档头      |
+| `...` | 文档结束符  |
 
-### Collection indicators {.row-span-2}
+### 集合指示符 {.row-span-2}
 
-|      |                                 |
-| ---- | ------------------------------- |
-| `?`  | Key indicator                   |
-| `:`  | Value indicator                 |
-| `-`  | Nested series entry indicator   |
-| `,`  | Separate in-line branch entries |
-| `[]` | Surround in-line series branch  |
-| `{}` | Surround in-line keyed branch   |
+|      |                               |
+| ---- | ----------------------------- |
+| `?`  | 键指示符                      |
+| `:`  | 值指示符                      |
+| `-`  | 嵌套序列条目指示符            |
+| `,`  | 分隔内联分支条目              |
+| `[]` | 包围内联序列分支              |
+| `{}` | 包围内联键控分支              |
 
-### Alias indicators
+### 别名指示符
 
-|     |                 |
-| --- | --------------- |
-| `&` | Anchor property |
-| `*` | Alias indicator |
+|     |             |
+| --- | ----------- |
+| `&` | 锚点属性    |
+| `*` | 别名指示符  |
 
-### Special keys
+### 特殊键
 
-|      |                                 |
-| ---- | ------------------------------- |
-| `=`  | Default "value" mapping key     |
-| `<<` | Merge keys from another mapping |
+|      |                               |
+| ---- | ----------------------------- |
+| `=`  | 默认“值”映射键                |
+| `<<` | 从另一个映射合并键            |
 
-### Scalar indicators
+### 标量指示符
 
-|       |                                   |
-| ----- | --------------------------------- | --------------------------------------------- | ----------- |
-| `''`  | Surround in-line unescaped scalar |
-| `"`   | Surround in-line escaped scalar   |
-| `     | `                                 | Block scalar indicator                        |
-| `>`   | Folded scalar indicator           |
-| `-`   | Strip chomp modifier (`           | -`or`>-`)                                     |
-| `+`   | Keep chomp modifier (`            | +`or`>+`)                                     |
-| `1-9` | Explicit indentation modifier (`  | 1`or`>2`). <br/> Modifiers can be combined (` | 2-`, `>+1`) |
+|       |                                   |                                                                 | ----------- |
+| ----- | --------------------------------- | --------------------------------------------------------------- | ----------- |
+| `''`  | 包围内联未转义标量                |                                                                 |
+| `"`   | 包围内联转义标量                  |                                                                 |
+| `     | `                                 | 块标量指示符                                                    |
+| `>`   | 折叠标量指示符                    |                                                                 |
+| `-`   | 去除 chomp 修饰符 (`           | -` 或 `>-`)                                                     |
+| `+`   | 保留 chomp 修饰符 (`            | +` 或 `>+`)                                                     |
+| `1-9` | 显式缩进修饰符 (`  | 1` 或 `>2`)。 <br/> 修饰符可以组合 (` | 2-`, `>+1`) |
 
-### Tag Property (usually unspecified) {.col-span-2}
+### 标签属性 (通常未指定) {.col-span-2}
 
 |          |                                                             |
 | -------- | ----------------------------------------------------------- |
-| `none`   | Unspecified tag (automatically resolved by application)     |
-| `!`      | Non-specific tag (by default, `!!map`/`!!seq`/`!!str`)      |
-| `!foo`   | Primary (by convention, means a local `!foo` tag)           |
-| `!!foo`  | Secondary (by convention, means `tag:yaml.org,2002:foo`)    |
-| `!h!foo` | Requires `%TAG !h! <prefix>` (and then means `<prefix>foo`) |
-| `!<foo>` | Verbatim tag (always means `foo`)                           |
+| `none`   | 未指定标签 (由应用程序自动解析)                             |
+| `!`      | 非特定标签 (默认为 `!!map`/`!!seq`/`!!str`)                  |
+| `!foo`   | 主标签 (按约定，表示本地 `!foo` 标签)                       |
+| `!!foo`  | 次要标签 (按约定，表示 `tag:yaml.org,2002:foo`)             |
+| `!h!foo` | 需要 `%TAG !h! <prefix>` (然后表示 `<prefix>foo`)           |
+| `!<foo>` | 逐字标签 (始终表示 `foo`)                                   |
 
-### Misc indicators
+### 其他指示符
 
-|                  |                              |
-| ---------------- | ---------------------------- |
-| `#`              | Throwaway comment indicator  |
-| <code>\`@</code> | Both reserved for future use |
+|                  |                      |
+| ---------------- | -------------------- |
+| `#`              | 注释指示符           |
+| <code>\`@</code> | 两者均保留供将来使用 |
 
-### Core types (default automatic tags) {.row-span-2}
+### 核心类型 (默认自动标签) {.row-span-2}
 
 |         |                                          |
 | ------- | ---------------------------------------- |
-| `!!map` | `{Hash table, dictionary, mapping}`      |
-| `!!seq` | `{List, array, tuple, vector, sequence}` |
-| `!!str` | Unicode string                           |
+| `!!map` | `{哈希表, 字典, 映射}`                   |
+| `!!seq` | `{列表, 数组, 元组, 向量, 序列}`         |
+| `!!str` | Unicode 字符串                           |
 
-### Escape Codes {.row-span-3}
+### 转义码 {.row-span-3}
 
-#### Numeric
+#### 数字
 
-- `\x12` (8-bit)
-- `\u1234` (16-bit)
-- `\U00102030` (32-bit)
+- `\x12` (8位)
+- `\u1234` (16位)
+- `\U00102030` (32位)
 
 {.cols-2 .marker-none}
 
-#### Protective
+#### 保护性
 
 - `\\` (\\)
 - `\"` (")
-- `\ ` ( )
-- `\<TAB>` (TAB)
+- `\ ` (空格)
+- `\<TAB>` (制表符)
 
 {.cols-3 .marker-none}
 
-#### C
+#### C 语言
 
-- `\0` (NUL)
-- `\a` (BEL)
-- `\b` (BS)
-- `\f` (FF)
-- `\n` (LF)
-- `\r` (CR)
-- `\t` (TAB)
-- `\v` (VTAB)
-
-{.cols-3 .marker-none}
-
-#### Additional
-
-- `\e` (ESC)
-- `\_` (NBSP)
-- `\N` (NEL)
-- `\L` (LS)
-- `\P` (PS)
+- `\0` (NUL 空字符)
+- `\a` (BEL 响铃)
+- `\b` (BS 退格)
+- `\f` (FF 换页)
+- `\n` (LF 换行)
+- `\r` (CR 回车)
+- `\t` (TAB 制表符)
+- `\v` (VTAB 垂直制表符)
 
 {.cols-3 .marker-none}
 
-### More types
+#### 附加
+
+- `\e` (ESC 转义)
+- `\_` (NBSP 不换行空格)
+- `\N` (NEL 下一行)
+- `\L` (LS 行分隔符)
+- `\P` (PS 段落分隔符)
+
+{.cols-3 .marker-none}
+
+### 更多类型
 
 |          |                             |
 | -------- | --------------------------- |
-| `!!set`  | `{cherries, plums, apples}` |
-| `!!omap` | `[one: 1, two: 2]`          |
+| `!!set`  | `{樱桃, 李子, 苹果}`        |
+| `!!omap` | `[一: 1, 二: 2]`            |
 
-### Language Independent Scalar Types {.col-span-2}
+### 语言无关标量类型 {.col-span-2}
 
 |                           |                                            |
 | ------------------------- | ------------------------------------------ |
-| `{~, null}`               | Null (no value).                           |
-| `[1234, 0x4D2, 02333]`    | [Decimal int, Hexadecimal int, Octal int]  |
-| `[1_230.15, 12.3015e+02]` | [Fixed float, Exponential float]           |
-| `[.inf, -.Inf, .NAN]`     | [Infinity (float), Negative, Not a number] |
-| `{Y, true, Yes, ON}`      | Boolean true                               |
-| `{n, FALSE, No, off}`     | Boolean false                              |
+| `{~, null}`               | Null (无值)。                              |
+| `[1234, 0x4D2, 02333]`    | [十进制整数, 十六进制整数, 八进制整数]     |
+| `[1_230.15, 12.3015e+02]` | [定点浮点数, 指数浮点数]                   |
+| `[.inf, -.Inf, .NAN]`     | [无穷大 (浮点数), 负无穷大, 非数字]        |
+| `{Y, true, Yes, ON}`      | 布尔真                                     |
+| `{n, FALSE, No, off}`     | 布尔假                                     |
 
-## Also see
+## 另请参阅
 
-- [YAML Reference Card](https://yaml.org/refcard.html) _(yaml.org)_
-- [Learn X in Y minutes](https://learnxinyminutes.com/docs/yaml/) _(learnxinyminutes.com)_
-- [YAML lint online](http://www.yamllint.com/) _(yamllint.com)_
+- [YAML 参考卡片](https://yaml.org/refcard.html) _(yaml.org)_
+- [X分钟学习Y](https://learnxinyminutes.com/docs/yaml/) _(learnxinyminutes.com)_
+- [YAML 在线校验](http://www.yamllint.com/) _(yamllint.com)_

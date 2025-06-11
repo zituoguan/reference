@@ -4,346 +4,346 @@ date: 2022-11-23 16:23:31.702312
 background: bg-[#397fe4]
 label:
 tags:
-  - tools
+  - 工具
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A cheat sheet for 1password's keyboard shortcuts in Mac, Windows, iOS, Linux.
+  一份适用于 Mac、Windows、iOS、Linux 系统中 1Password 键盘快捷键的速查表。
 ---
 
-## 1Password Keyboard Shortcuts for Mac
+## 适用于 Mac 的 1Password 键盘快捷键
 
-### Global keyboard shortcuts
+### 全局键盘快捷键
 
-| `Shortcut`               | Action             |
-| ------------------------ | ------------------ |
-| Enter your own shortcut. | Show 1Password.    |
-| `Shift` `cmd` `Space`    | Show Quick Access. |
-| `Shift` `cmd` `L`        | Lock 1Password.    |
-| `cmd` `\`                | Autofill.          |
+| `快捷键`             | 操作             |
+| -------------------- | ---------------- |
+| 输入您自己的快捷键。 | 显示 1Password。 |
+| `Shift` `cmd` `Space` | 显示快速访问。   |
+| `Shift` `cmd` `L`    | 锁定 1Password。 |
+| `cmd` `\`            | 自动填充。       |
 
 {.shortcuts}
 
-### 1Password app {.row-span-2}
+### 1Password 应用 {.row-span-2}
 
-| `Shortcut`         | Action                                                                                       |
+| `快捷键`         | 操作                                                                                       |
 | ------------------ | -------------------------------------------------------------------------------------------- |
-| `cmd` `/`          | View keyboard shortcuts.                                                                     |
-| `cmd` `,`          | Open preferences.                                                                            |
-| `cmd` `F`          | Search for items.                                                                            |
-| `Option` `cmd` `F` | Find items in the current list.                                                              |
-| `Esc`              | Clear the search field.                                                                      |
-| `cmd` `1`          | Switch to All Accounts.                                                                      |
-| `cmd` `2...9`      | Switch accounts and collections.                                                             |
-| `cmd` `[`          | Go back.                                                                                     |
-| `cmd` `]`          | Go forward.                                                                                  |
-| `Down Arrow`       | Focus next row.                                                                              |
-| `Up Arrow`         | Focus previous row.                                                                          |
-| `Right Arrow`      | Focus right section.                                                                         |
-| `Left Arrow`       | Focus left section.                                                                          |
-| `Return or Space`  | Activate focused element.                                                                    |
-| `cmd` `C`          | Copy the username or primary field of the selected.                                          |
-| `Shift` `cmd` `C`  | Copy the password of the selected.                                                           |
-| `Option` `cmd` `C` | Copy the one-time password of the selected.                                                  |
-| `Shift` `cmd` `F`  | Open the website for the selected login in your browser and fill your username and password. |
-| `cmd` `O`          | Open the selected in a new window.                                                           |
-| `cmd` `N`          | Create a new item.                                                                           |
-| `cmd` `E`          | Edit the selected.                                                                           |
-| `cmd` `S`          | Save changes to an item.                                                                     |
-| `Esc`              | Cancel an edit.                                                                              |
-| `cmd` `R`          | Reveal or conceal secure fields in the selected.                                             |
-| `Option`           | Temporarily reveal all secure fields in the selected.\*                                      |
-| `Delete`           | Move the selected(s) to the Archive.                                                         |
-| `cmd` `Delete`     | Delete the selected(s).                                                                      |
-| `Shift` `cmd` `D`  | Collapse or expand the sidebar.                                                              |
-| `cmd` `+`          | Zoom in.                                                                                     |
-| `cmd` `-`          | Zoom out.                                                                                    |
-| `cmd` `0`          | Revert to actual size.                                                                       |
-| `cmd` `M`          | Minimize the app to the Dock.                                                                |
-| `cmd` `W`          | Close the current window.                                                                    |
+| `cmd` `/`          | 查看键盘快捷键。                                                                             |
+| `cmd` `,`          | 打开偏好设置。                                                                               |
+| `cmd` `F`          | 搜索项目。                                                                                   |
+| `Option` `cmd` `F` | 在当前列表中查找项目。                                                                       |
+| `Esc`              | 清除搜索字段。                                                                               |
+| `cmd` `1`          | 切换到所有账户。                                                                             |
+| `cmd` `2...9`      | 切换账户和集合。                                                                             |
+| `cmd` `[`          | 返回。                                                                                       |
+| `cmd` `]`          | 前进。                                                                                       |
+| `Down Arrow`       | 聚焦下一行。                                                                                 |
+| `Up Arrow`         | 聚焦上一行。                                                                                 |
+| `Right Arrow`      | 聚焦右侧部分。                                                                               |
+| `Left Arrow`       | 聚焦左侧部分。                                                                               |
+| `Return 或 Space`  | 激活聚焦的元素。                                                                             |
+| `cmd` `C`          | 复制所选项目的用户名或主要字段。                                                             |
+| `Shift` `cmd` `C`  | 复制所选项目的密码。                                                                         |
+| `Option` `cmd` `C` | 复制所选项目的一次性密码。                                                                   |
+| `Shift` `cmd` `F`  | 在浏览器中打开所选登录项的网站并填充您的用户名和密码。                                       |
+| `cmd` `O`          | 在新窗口中打开所选项目。                                                                     |
+| `cmd` `N`          | 创建一个新项目。                                                                             |
+| `cmd` `E`          | 编辑所选项目。                                                                               |
+| `cmd` `S`          | 保存对项目的更改。                                                                           |
+| `Esc`              | 取消编辑。                                                                                   |
+| `cmd` `R`          | 显示或隐藏所选项目中的安全字段。                                                             |
+| `Option`           | 临时显示所选项目中的所有安全字段。\*                                                        |
+| `Delete`           | 将所选项目移动到归档。                                                                       |
+| `cmd` `Delete`     | 删除所选项目。                                                                               |
+| `Shift` `cmd` `D`  | 折叠或展开侧边栏。                                                                           |
+| `cmd` `+`          | 放大。                                                                                       |
+| `cmd` `-`          | 缩小。                                                                                       |
+| `cmd` `0`          | 恢复到实际大小。                                                                             |
+| `cmd` `M`          | 将应用最小化到程序坞。                                                                       |
+| `cmd` `W`          | 关闭当前窗口。                                                                               |
 
 {.shortcuts}
 
-### 1Password in the browser {.row-span-2}
+### 浏览器中的 1Password {.row-span-2}
 
-| `Shortcut`                  | Action                                                                                    |
+| `快捷键`                  | 操作                                                                                    |
 | --------------------------- | ----------------------------------------------------------------------------------------- |
-| `Shift` `cmd` `X`           | Open or close the 1Password pop-up in Chrome, Edge, Brave, or Safari.                     |
-| `cmd` `.`                   | Open or close the 1Password pop-up in Firefox.                                            |
-| `cmd` `F`                   | Search for items.                                                                         |
-| `Esc`                       | Clear the search field.                                                                   |
-| `cmd` `D`                   | Show the list of vaults.                                                                  |
-| `cmd` `Down Arrow`          | Open or close the category menu.                                                          |
-| `Down Arrow`                | Select the next category, item, or field.                                                 |
-| `Up Arrow`                  | Select the previous category, item, or field.                                             |
-| `Right Arrow`               | Select the item details.                                                                  |
-| `Left Arrow`                | Select the item list.                                                                     |
-| `Space`                     | Expand item overview banners.                                                             |
-| `Return`                    | Copy the selected detail.Perform the default action for the selected.                     |
-| `cmd` `C`                   | Copy the username of the selected.                                                        |
-| `Shift` `cmd` `C`           | Copy the password of the selected.                                                        |
-| `Control` `Shift` `cmd` `C` | Copy the one-time password of the selected.                                               |
-| `cmd` `Return`              | Open the website for the selected login in a new tab and fill your username and password. |
-| `cmd` `O`                   | Open the selected in a separate window.                                                   |
-| `cmd` `I`                   | Create a new item.                                                                        |
-| `cmd` `E`                   | Edit the selected.                                                                        |
-| `Control` `Option`          | Temporarily reveal all secure fields in the selected.                                     |
-| `cmd` `G`                   | Show the password generator.                                                              |
-| `cmd` `C`                   | Copy a password from the password generator.                                              |
-| `Shift` `cmd` `L`           | Lock 1Password.                                                                           |
-| `Esc`                       | Close the 1Password pop-up.                                                               |
+| `Shift` `cmd` `X`           | 在 Chrome、Edge、Brave 或 Safari 中打开或关闭 1Password 弹出窗口。                        |
+| `cmd` `.`                   | 在 Firefox 中打开或关闭 1Password 弹出窗口。                                              |
+| `cmd` `F`                   | 搜索项目。                                                                                |
+| `Esc`                       | 清除搜索字段。                                                                            |
+| `cmd` `D`                   | 显示保险库列表。                                                                          |
+| `cmd` `Down Arrow`          | 打开或关闭类别菜单。                                                                      |
+| `Down Arrow`                | 选择下一个类别、项目或字段。                                                              |
+| `Up Arrow`                  | 选择上一个类别、项目或字段。                                                              |
+| `Right Arrow`               | 选择项目详细信息。                                                                        |
+| `Left Arrow`                | 选择项目列表。                                                                            |
+| `Space`                     | 展开项目概览横幅。                                                                        |
+| `Return`                    | 复制所选详细信息。执行所选项目的默认操作。                                                |
+| `cmd` `C`                   | 复制所选项目的用户名。                                                                    |
+| `Shift` `cmd` `C`           | 复制所选项目的密码。                                                                      |
+| `Control` `Shift` `cmd` `C` | 复制所选项目的一次性密码。                                                                |
+| `cmd` `Return`              | 在新标签页中打开所选登录项的网站并填充您的用户名和密码。                                    |
+| `cmd` `O`                   | 在单独的窗口中打开所选项目。                                                              |
+| `cmd` `I`                   | 创建一个新项目。                                                                          |
+| `cmd` `E`                   | 编辑所选项目。                                                                            |
+| `Control` `Option`          | 临时显示所选项目中的所有安全字段。                                                        |
+| `cmd` `G`                   | 显示密码生成器。                                                                          |
+| `cmd` `C`                   | 从密码生成器复制密码。                                                                    |
+| `Shift` `cmd` `L`           | 锁定 1Password。                                                                          |
+| `Esc`                       | 关闭 1Password 弹出窗口。                                                                 |
 
 {.shortcuts}
 
-### Quick Access
+### 快速访问
 
-| `Shortcut`            | Action                                                                              |
+| `快捷键`            | 操作                                                                              |
 | --------------------- | ----------------------------------------------------------------------------------- |
-| `Shift` `cmd` `Space` | Open or close Quick Access.                                                         |
-| `Esc`                 | Clear the search field.                                                             |
-| `cmd` `1...9`         | Switch accounts or collections.                                                     |
-| `Right Arrow`         | View all available actions.                                                         |
-| `cmd` `C`             | Copy username or primary field.                                                     |
-| `Shift` `cmd` `C`     | Copy password.                                                                      |
-| `Option` `cmd` `C`    | Copy one-time password.                                                             |
-| `cmd` `O`             | Open item details in new window.                                                    |
-| `Option` `Return`     | Open the website for the login in your browser and fill your username and password. |
-| `Shift` `Return`      | Fill the item in the currently focused app.                                         |
-| `Shift` `cmd` `O`     | Open the item in the app.                                                           |
+| `Shift` `cmd` `Space` | 打开或关闭快速访问。                                                                |
+| `Esc`                 | 清除搜索字段。                                                                      |
+| `cmd` `1...9`         | 切换账户或集合。                                                                    |
+| `Right Arrow`         | 查看所有可用操作。                                                                  |
+| `cmd` `C`             | 复制用户名或主要字段。                                                              |
+| `Shift` `cmd` `C`     | 复制密码。                                                                          |
+| `Option` `cmd` `C`    | 复制一次性密码。                                                                    |
+| `cmd` `O`             | 在新窗口中打开项目详细信息。                                                        |
+| `Option` `Return`     | 在浏览器中打开登录项的网站并填充您的用户名和密码。                                  |
+| `Shift` `Return`      | 在当前聚焦的应用中填充项目。                                                        |
+| `Shift` `cmd` `O`     | 在应用中打开项目。                                                                  |
 
 {.shortcuts}
 
-## 1Password Keyboard Shortcuts for iOS
+## 适用于 iOS 的 1Password 键盘快捷键
 
-### 1Password app (I)
+### 1Password 应用 (I)
 
-| `Shortcut`    | Action                           |
+| `快捷键`    | 操作                           |
 | ------------- | -------------------------------- |
-| `cmd` `,`     | Open settings.                   |
-| `cmd` `F`     | Search for items.                |
-| `cmd` `.`     | Clear the search field.          |
-| `cmd` `1`     | Switch to All Accounts.          |
-| `cmd` `2...9` | Switch accounts and collections. |
-| `cmd` `[`     | Go back.                         |
-| `cmd` `]`     | Go forward.                      |
-| `Down Arrow`  | Focus next item.                 |
+| `cmd` `,`     | 打开设置。                       |
+| `cmd` `F`     | 搜索项目。                       |
+| `cmd` `.`     | 清除搜索字段。                   |
+| `cmd` `1`     | 切换到所有账户。                 |
+| `cmd` `2...9` | 切换账户和集合。                 |
+| `cmd` `[`     | 返回。                           |
+| `cmd` `]`     | 前进。                           |
+| `Down Arrow`  | 聚焦下一个项目。                 |
 
 {.shortcuts}
 
-### 1Password app (II)
+### 1Password 应用 (II)
 
-| `Shortcut`         | Action                                              |
+| `快捷键`         | 操作                                              |
 | ------------------ | --------------------------------------------------- |
-| `Up Arrow`         | Focus previous item.                                |
-| `Space`            | Activate focused item.                              |
-| `cmd` `C`          | Copy the username or primary field of the selected. |
-| `Shift` `cmd` `C`  | Copy the password of the selected.                  |
-| `Option` `cmd` `C` | Copy the one-time password of the selected.         |
-| `cmd` `O`          | Open the selected in a separate window.             |
-| `cmd` `E`          | Edit the selected.                                  |
+| `Up Arrow`         | 聚焦上一个项目。                                    |
+| `Space`            | 激活聚焦的项目。                                    |
+| `cmd` `C`          | 复制所选项目的用户名或主要字段。                    |
+| `Shift` `cmd` `C`  | 复制所选项目的密码。                                |
+| `Option` `cmd` `C` | 复制所选项目的一次性密码。                          |
+| `cmd` `O`          | 在单独的窗口中打开所选项目。                        |
+| `cmd` `E`          | 编辑所选项目。                                      |
 
 {.shortcuts}
 
-### 1Password app (III)
+### 1Password 应用 (III)
 
-| `Shortcut`        | Action                               |
+| `快捷键`        | 操作                               |
 | ----------------- | ------------------------------------ |
-| `cmd` `S`         | Save changes to an item.             |
-| `cmd` `.`         | Cancel an edit.                      |
-| `cmd` `D`         | Add the selected to your favorites.  |
-| `Delete`          | Move the selected(s) to the Archive. |
-| `cmd` `Delete`    | Delete the selected(s).              |
-| `Shift` `cmd` `D` | Collapse or expand the sidebar.      |
-| `Shift` `cmd` `L` | Lock 1Password.                      |
+| `cmd` `S`         | 保存对项目的更改。                   |
+| `cmd` `.`         | 取消编辑。                           |
+| `cmd` `D`         | 将所选项目添加到您的收藏夹。         |
+| `Delete`          | 将所选项目移动到归档。               |
+| `cmd` `Delete`    | 删除所选项目。                       |
+| `Shift` `cmd` `D` | 折叠或展开侧边栏。                   |
+| `Shift` `cmd` `L` | 锁定 1Password。                     |
 
 {.shortcuts}
 
-## 1Password Keyboard Shortcuts for Windows
+## 适用于 Windows 的 1Password 键盘快捷键
 
-### Global keyboard shortcuts
+### 全局键盘快捷键
 
-| `Shortcut`                 | Action             |
+| `快捷键`                 | 操作             |
 | -------------------------- | ------------------ |
-| `Enter your own shortcut.` | Show 1Password.    |
-| `Ctrl` `Shift` `Space`     | Show Quick Access. |
-| `Ctrl` `Shift` `L`         | Lock 1Password.    |
-| `Ctrl` `\`                 | Fill in Browser.   |
+| `输入您自己的快捷键。`     | 显示 1Password。   |
+| `Ctrl` `Shift` `Space`     | 显示快速访问。     |
+| `Ctrl` `Shift` `L`         | 锁定 1Password。   |
+| `Ctrl` `\`                 | 在浏览器中填充。   |
 
 {.shortcuts}
 
-### 1Password app {.row-span-2}
+### 1Password 应用 {.row-span-2}
 
-| `Shortcut`          | Action                                                                                       |
+| `快捷键`          | 操作                                                                                       |
 | ------------------- | -------------------------------------------------------------------------------------------- |
-| `Ctrl` `Shift` `/`  | View keyboard shortcuts.                                                                     |
-| `Ctrl` `,`          | Open settings.                                                                               |
-| `Ctrl` `F`          | Search for items.                                                                            |
-| `Ctrl` `Alt` `F`    | Find items in the current list.                                                              |
-| `Esc`               | Clear the search field.                                                                      |
-| `Ctrl` `1`          | Switch to All Accounts.                                                                      |
-| `Ctrl` `2...9`      | Switch accounts and collections.                                                             |
-| `Alt` `Left Arrow`  | Go back.                                                                                     |
-| `Alt` `Right Arrow` | Go forward.                                                                                  |
-| `Down Arrow`        | Focus next row.                                                                              |
-| `Up Arrow`          | Focus previous row.                                                                          |
-| `Right Arrow`       | Focus right section.                                                                         |
-| `Left Arrow`        | Focus left section.                                                                          |
-| `Space`             | Activate focused element.                                                                    |
-| `Ctrl` `C`          | Copy the username or primary field of the selected.                                          |
-| `Ctrl` `Shift` `C`  | Copy the password of the selected.                                                           |
-| `Ctrl` `Alt` `C`    | Copy the one-time password of the selected.                                                  |
-| `Ctrl` `Shift` `F`  | Open the website for the selected login in your browser and fill your username and password. |
-| `Ctrl` `O`          | Open the selected in a new window.                                                           |
-| `Ctrl` `N`          | Create a new item.                                                                           |
-| `Ctrl` `E`          | Edit the selected.                                                                           |
-| `Ctrl` `S`          | Save changes to an item.                                                                     |
-| `Esc`               | Cancel an edit.                                                                              |
-| `Ctrl` `R`          | Reveal or conceal secure fields in the selected.                                             |
-| `Ctrl` `Alt`        | Temporarily reveal all secure fields in the selected.\*                                      |
-| `Delete`            | Move the selected(s) to the Archive.                                                         |
-| `Ctrl` `Delete`     | Delete the selected(s).                                                                      |
-| `Ctrl` `Shift` `D`  | Collapse or expand the sidebar.                                                              |
-| `Ctrl` `+`          | Zoom in.                                                                                     |
-| `Ctrl` `-`          | Zoom out.                                                                                    |
-| `Ctrl` `0`          | Revert to actual size.                                                                       |
+| `Ctrl` `Shift` `/`  | 查看键盘快捷键。                                                                             |
+| `Ctrl` `,`          | 打开设置。                                                                                   |
+| `Ctrl` `F`          | 搜索项目。                                                                                   |
+| `Ctrl` `Alt` `F`    | 在当前列表中查找项目。                                                                       |
+| `Esc`               | 清除搜索字段。                                                                               |
+| `Ctrl` `1`          | 切换到所有账户。                                                                             |
+| `Ctrl` `2...9`      | 切换账户和集合。                                                                             |
+| `Alt` `Left Arrow`  | 返回。                                                                                       |
+| `Alt` `Right Arrow` | 前进。                                                                                       |
+| `Down Arrow`        | 聚焦下一行。                                                                                 |
+| `Up Arrow`          | 聚焦上一行。                                                                                 |
+| `Right Arrow`       | 聚焦右侧部分。                                                                               |
+| `Left Arrow`        | 聚焦左侧部分。                                                                               |
+| `Space`             | 激活聚焦的元素。                                                                             |
+| `Ctrl` `C`          | 复制所选项目的用户名或主要字段。                                                             |
+| `Ctrl` `Shift` `C`  | 复制所选项目的密码。                                                                         |
+| `Ctrl` `Alt` `C`    | 复制所选项目的一次性密码。                                                                   |
+| `Ctrl` `Shift` `F`  | 在浏览器中打开所选登录项的网站并填充您的用户名和密码。                                       |
+| `Ctrl` `O`          | 在新窗口中打开所选项目。                                                                     |
+| `Ctrl` `N`          | 创建一个新项目。                                                                             |
+| `Ctrl` `E`          | 编辑所选项目。                                                                               |
+| `Ctrl` `S`          | 保存对项目的更改。                                                                           |
+| `Esc`               | 取消编辑。                                                                                   |
+| `Ctrl` `R`          | 显示或隐藏所选项目中的安全字段。                                                             |
+| `Ctrl` `Alt`        | 临时显示所选项目中的所有安全字段。\*                                                        |
+| `Delete`            | 将所选项目移动到归档。                                                                       |
+| `Ctrl` `Delete`     | 删除所选项目。                                                                               |
+| `Ctrl` `Shift` `D`  | 折叠或展开侧边栏。                                                                           |
+| `Ctrl` `+`          | 放大。                                                                                       |
+| `Ctrl` `-`          | 缩小。                                                                                       |
+| `Ctrl` `0`          | 恢复到实际大小。                                                                             |
 
 {.shortcuts}
 
-### 1Password in the browser {.row-span-2}
+### 浏览器中的 1Password {.row-span-2}
 
-| `Shortcut`               | Action                                                                                    |
+| `快捷键`               | 操作                                                                                    |
 | ------------------------ | ----------------------------------------------------------------------------------------- |
-| `Ctrl` `Shift` `X`       | Open or close the 1Password pop-up in Chrome, Edge, or Brave.                             |
-| `Ctrl` `.`               | Open or close the 1Password pop-up in Firefox.                                            |
-| `Ctrl` `F`               | Search for items.                                                                         |
-| `Esc`                    | Clear the search field.                                                                   |
-| `Ctrl` `D`               | Show the list of vaults.                                                                  |
-| `Ctrl` `Down Arrow`      | Open or close the category menu.                                                          |
-| `Down Arrow`             | Select the next category, item, or field.                                                 |
-| `Up Arrow`               | Select the previous category, item, or field.                                             |
-| `Right Arrow`            | Select the item details.                                                                  |
-| `Left Arrow`             | Select the item list.                                                                     |
-| `Space`                  | Expand item overview banners.                                                             |
-| `Enter`                  | Copy the selected detail.Perform the default action for the selected.                     |
-| `Ctrl` `C`               | Copy the username of the selected.                                                        |
-| `Ctrl` `Shift` `C`       | Copy the password of the selected.                                                        |
-| `Ctrl` `Shift` `Win` `C` | Copy the one-time password of the selected.                                               |
-| `Ctrl` `Enter`           | Open the website for the selected login in a new tab and fill your username and password. |
-| `Ctrl` `O`               | Open the selected in a separate window.                                                   |
-| `Ctrl` `I`               | Create new item.                                                                          |
-| `Ctrl` `E`               | Edit the selected.                                                                        |
-| `Ctrl` `Alt`             | Temporarily reveal all secure fields in the selected.                                     |
-| `Ctrl` `G`               | Show the password generator.                                                              |
-| `Ctrl` `C`               | Copy a password from the password generator.                                              |
-| `Ctrl` `Shift` `L`       | Lock 1Password.                                                                           |
-| `Esc`                    | Close the 1Password pop-up.                                                               |
+| `Ctrl` `Shift` `X`       | 在 Chrome、Edge 或 Brave 中打开或关闭 1Password 弹出窗口。                                |
+| `Ctrl` `.`               | 在 Firefox 中打开或关闭 1Password 弹出窗口。                                              |
+| `Ctrl` `F`               | 搜索项目。                                                                                |
+| `Esc`                    | 清除搜索字段。                                                                            |
+| `Ctrl` `D`               | 显示保险库列表。                                                                          |
+| `Ctrl` `Down Arrow`      | 打开或关闭类别菜单。                                                                      |
+| `Down Arrow`             | 选择下一个类别、项目或字段。                                                              |
+| `Up Arrow`               | 选择上一个类别、项目或字段。                                                              |
+| `Right Arrow`            | 选择项目详细信息。                                                                        |
+| `Left Arrow`             | 选择项目列表。                                                                            |
+| `Space`                  | 展开项目概览横幅。                                                                        |
+| `Enter`                  | 复制所选详细信息。执行所选项目的默认操作。                                                |
+| `Ctrl` `C`               | 复制所选项目的用户名。                                                                    |
+| `Ctrl` `Shift` `C`       | 复制所选项目的密码。                                                                      |
+| `Ctrl` `Shift` `Win` `C` | 复制所选项目的一次性密码。                                                                |
+| `Ctrl` `Enter`           | 在新标签页中打开所选登录项的网站并填充您的用户名和密码。                                    |
+| `Ctrl` `O`               | 在单独的窗口中打开所选项目。                                                              |
+| `Ctrl` `I`               | 创建新项目。                                                                              |
+| `Ctrl` `E`               | 编辑所选项目。                                                                            |
+| `Ctrl` `Alt`             | 临时显示所选项目中的所有安全字段。                                                        |
+| `Ctrl` `G`               | 显示密码生成器。                                                                          |
+| `Ctrl` `C`               | 从密码生成器复制密码。                                                                    |
+| `Ctrl` `Shift` `L`       | 锁定 1Password。                                                                          |
+| `Esc`                    | 关闭 1Password 弹出窗口。                                                                 |
 
 {.shortcuts}
 
-### Quick Access
+### 快速访问
 
-| `Shortcut`             | Action                                                                              |
+| `快捷键`             | 操作                                                                              |
 | ---------------------- | ----------------------------------------------------------------------------------- |
-| `Ctrl` `Shift` `Space` | Open or close Quick Access.                                                         |
-| `Esc`                  | Clear the search field.                                                             |
-| `Ctrl` `1...9`         | Switch accounts or collections.                                                     |
-| `Right Arrow`          | View all available actions.                                                         |
-| `Ctrl` `C`             | Copy username or primary field.                                                     |
-| `Ctrl` `Shift` `C`     | Copy password.                                                                      |
-| `Ctrl` `Alt` `C`       | Copy one-time password.                                                             |
-| `Ctrl` `O`             | Open item details in new window.                                                    |
-| `Alt` `Enter`          | Open the website for the login in your browser and fill your username and password. |
-| `Ctrl` `Shift` `O`     | Open the item in the app.                                                           |
+| `Ctrl` `Shift` `Space` | 打开或关闭快速访问。                                                                |
+| `Esc`                  | 清除搜索字段。                                                                      |
+| `Ctrl` `1...9`         | 切换账户或集合。                                                                    |
+| `Right Arrow`          | 查看所有可用操作。                                                                  |
+| `Ctrl` `C`             | 复制用户名或主要字段。                                                              |
+| `Ctrl` `Shift` `C`     | 复制密码。                                                                          |
+| `Ctrl` `Alt` `C`       | 复制一次性密码。                                                                    |
+| `Ctrl` `O`             | 在新窗口中打开项目详细信息。                                                        |
+| `Alt` `Enter`          | 在浏览器中打开登录项的网站并填充您的用户名和密码。                                  |
+| `Ctrl` `Shift` `O`     | 在应用中打开项目。                                                                  |
 
 {.shortcuts}
 
-## 1Password Keyboard Shortcuts for Linux
+## 适用于 Linux 的 1Password 键盘快捷键
 
 ### X11
 
-| `Shortcut`              | Action             |
+| `快捷键`              | 操作             |
 | ----------------------- | ------------------ |
-| Enter your own shortcut | Show 1Password.    |
-| `Ctrl` `Shift` `Space`  | Show Quick Access. |
-| `Ctrl` `Shift` `L`      | Lock 1Password.    |
-| `Ctrl` `\`              | Fill in Browser.   |
+| 输入您自己的快捷键      | 显示 1Password。   |
+| `Ctrl` `Shift` `Space`  | 显示快速访问。     |
+| `Ctrl` `Shift` `L`      | 锁定 1Password。   |
+| `Ctrl` `\`              | 在浏览器中填充。   |
 
 {.shortcuts}
 
-### 1Password app {.row-span-4}
+### 1Password 应用 {.row-span-4}
 
-| `Shortcut`          | Action                                                                                       |
+| `快捷键`          | 操作                                                                                       |
 | ------------------- | -------------------------------------------------------------------------------------------- |
-| `Ctrl` `Shift` `/`  | View keyboard shortcuts.                                                                     |
-| `Alt`               | Show or hide the app menu in the title bar.                                                  |
-| `Ctrl` `,`          | Open settings.                                                                               |
-| `Ctrl` `F`          | Search for items.                                                                            |
-| `Ctrl` `Alt` `F`    | Find items in the current list.                                                              |
-| `Esc`               | Clear the search field.                                                                      |
-| `Ctrl` `1`          | Switch to All Accounts.                                                                      |
-| `Ctrl` `2...9`      | Switch accounts and collections.                                                             |
-| `Alt` `Left Arrow`  | Go back.                                                                                     |
-| `Alt` `Right Arrow` | Go forward.                                                                                  |
-| `Down Arrow`        | Focus next row.                                                                              |
-| `Up Arrow`          | Focus previous row.                                                                          |
-| `Right Arrow`       | Focus right section.                                                                         |
-| `Left Arrow`        | Focus left section.                                                                          |
-| `Space`             | Activate focused element.                                                                    |
-| `Ctrl` `C`          | Copy the username or primary field of the selected.                                          |
-| `Ctrl` `Shift` `C`  | Copy the password of the selected.                                                           |
-| `Ctrl` `Alt` `C`    | Copy the one-time password of the selected.                                                  |
-| `Ctrl` `Shift` `F`  | Open the website for the selected login in your browser and fill your username and password. |
-| `Ctrl` `O`          | Open the selected in a new window.                                                           |
-| `Ctrl` `N`          | Create a new item.                                                                           |
-| `Ctrl` `E`          | Edit the selected.                                                                           |
-| `Ctrl` `S`          | Save changes to an item.                                                                     |
-| `Esc`               | Cancel an edit.                                                                              |
-| `Ctrl` `R`          | Reveal or conceal secure fields in the selected.                                             |
-| `Ctrl` `Alt`        | Temporarily reveal all secure fields in the selected.                                        |
-| `Delete`            | Move the selected(s) to the Archive.                                                         |
-| `Ctrl` `Delete`     | Delete the selected(s).                                                                      |
-| `Ctrl` `Shift` `D`  | Collapse or expand the sidebar.                                                              |
-| `Ctrl` `+`          | Zoom in.                                                                                     |
-| `Ctrl` `-`          | Zoom out.                                                                                    |
-| `Ctrl` `0`          | Revert to actual size.                                                                       |
+| `Ctrl` `Shift` `/`  | 查看键盘快捷键。                                                                             |
+| `Alt`               | 在标题栏中显示或隐藏应用菜单。                                                               |
+| `Ctrl` `,`          | 打开设置。                                                                                   |
+| `Ctrl` `F`          | 搜索项目。                                                                                   |
+| `Ctrl` `Alt` `F`    | 在当前列表中查找项目。                                                                       |
+| `Esc`               | 清除搜索字段。                                                                               |
+| `Ctrl` `1`          | 切换到所有账户。                                                                             |
+| `Ctrl` `2...9`      | 切换账户和集合。                                                                             |
+| `Alt` `Left Arrow`  | 返回。                                                                                       |
+| `Alt` `Right Arrow` | 前进。                                                                                       |
+| `Down Arrow`        | 聚焦下一行。                                                                                 |
+| `Up Arrow`          | 聚焦上一行。                                                                                 |
+| `Right Arrow`       | 聚焦右侧部分。                                                                               |
+| `Left Arrow`        | 聚焦左侧部分。                                                                               |
+| `Space`             | 激活聚焦的元素。                                                                             |
+| `Ctrl` `C`          | 复制所选项目的用户名或主要字段。                                                             |
+| `Ctrl` `Shift` `C`  | 复制所选项目的密码。                                                                         |
+| `Ctrl` `Alt` `C`    | 复制所选项目的一次性密码。                                                                   |
+| `Ctrl` `Shift` `F`  | 在浏览器中打开所选登录项的网站并填充您的用户名和密码。                                       |
+| `Ctrl` `O`          | 在新窗口中打开所选项目。                                                                     |
+| `Ctrl` `N`          | 创建一个新项目。                                                                             |
+| `Ctrl` `E`          | 编辑所选项目。                                                                               |
+| `Ctrl` `S`          | 保存对项目的更改。                                                                           |
+| `Esc`               | 取消编辑。                                                                                   |
+| `Ctrl` `R`          | 显示或隐藏所选项目中的安全字段。                                                             |
+| `Ctrl` `Alt`        | 临时显示所选项目中的所有安全字段。                                                           |
+| `Delete`            | 将所选项目移动到归档。                                                                       |
+| `Ctrl` `Delete`     | 删除所选项目。                                                                               |
+| `Ctrl` `Shift` `D`  | 折叠或展开侧边栏。                                                                           |
+| `Ctrl` `+`          | 放大。                                                                                       |
+| `Ctrl` `-`          | 缩小。                                                                                       |
+| `Ctrl` `0`          | 恢复到实际大小。                                                                             |
 
 {.shortcuts}
 
-### 1Password in the browser {.row-span-4}
+### 浏览器中的 1Password {.row-span-4}
 
-| `Shortcut`                     | Action                                                                                    |
+| `快捷键`                     | 操作                                                                                    |
 | ------------------------------ | ----------------------------------------------------------------------------------------- |
-| `Ctrl` `Shift` `X`             | Open or close the 1Password pop-up in Chrome, Edge, or Brave.                             |
-| `Ctrl` `.`                     | Open or close the 1Password pop-up in Firefox.                                            |
-| `Ctrl` `F`                     | Search for items.                                                                         |
-| `Esc`                          | Clear the search field.                                                                   |
-| `Ctrl` `D`                     | Show the list of vaults.                                                                  |
-| `Ctrl` `Down Arrow`            | Open or close the category menu.                                                          |
-| `Down Arrow`                   | Select the next category, item, or field.                                                 |
-| `Up Arrow`                     | Select the previous category, item, or field.                                             |
-| `Right Arrow`                  | Select the item details.                                                                  |
-| `Left Arrow`                   | Select the item list.                                                                     |
-| `Space`                        | Expand item overview banners.                                                             |
-| `Enter`                        | Copy the selected detail.Perform the default action for the selected.                     |
-| `Ctrl` `C`                     | Copy the username of the selected.                                                        |
-| `Ctrl` `Shift` `C`             | Copy the password of the selected.                                                        |
-| `Ctrl` `Shift` `Super key` `C` | Copy the one-time password of the selected.                                               |
-| `Ctrl` `Enter`                 | Open the website for the selected login in a new tab and fill your username and password. |
-| `Ctrl` `O`                     | Open the selected in a separate window.                                                   |
-| `Ctrl` `I`                     | Create new item.                                                                          |
-| `Ctrl` `E`                     | Edit the selected.                                                                        |
-| `Ctrl` `Alt`                   | Temporarily reveal all secure fields in the selected.                                     |
-| `Ctrl` `G`                     | Show the password generator.                                                              |
-| `Ctrl` `C`                     | Copy a password from the password generator.                                              |
-| `Ctrl` `Shift` `L`             | Lock 1Password.                                                                           |
-| `Esc`                          | Close the 1Password pop-up.                                                               |
+| `Ctrl` `Shift` `X`             | 在 Chrome、Edge 或 Brave 中打开或关闭 1Password 弹出窗口。                                |
+| `Ctrl` `.`                     | 在 Firefox 中打开或关闭 1Password 弹出窗口。                                              |
+| `Ctrl` `F`                     | 搜索项目。                                                                                |
+| `Esc`                          | 清除搜索字段。                                                                            |
+| `Ctrl` `D`                     | 显示保险库列表。                                                                          |
+| `Ctrl` `Down Arrow`            | 打开或关闭类别菜单。                                                                      |
+| `Down Arrow`                   | 选择下一个类别、项目或字段。                                                              |
+| `Up Arrow`                     | 选择上一个类别、项目或字段。                                                              |
+| `Right Arrow`                  | 选择项目详细信息。                                                                        |
+| `Left Arrow`                   | 选择项目列表。                                                                            |
+| `Space`                        | 展开项目概览横幅。                                                                        |
+| `Enter`                        | 复制所选详细信息。执行所选项目的默认操作。                                                |
+| `Ctrl` `C`                     | 复制所选项目的用户名。                                                                    |
+| `Ctrl` `Shift` `C`             | 复制所选项目的密码。                                                                      |
+| `Ctrl` `Shift` `Super key` `C` | 复制所选项目的一次性密码。                                                                |
+| `Ctrl` `Enter`                 | 在新标签页中打开所选登录项的网站并填充您的用户名和密码。                                    |
+| `Ctrl` `O`                     | 在单独的窗口中打开所选项目。                                                              |
+| `Ctrl` `I`                     | 创建新项目。                                                                              |
+| `Ctrl` `E`                     | 编辑所选项目。                                                                            |
+| `Ctrl` `Alt`                   | 临时显示所选项目中的所有安全字段。                                                        |
+| `Ctrl` `G`                     | 显示密码生成器。                                                                          |
+| `Ctrl` `C`                     | 从密码生成器复制密码。                                                                    |
+| `Ctrl` `Shift` `L`             | 锁定 1Password。                                                                          |
+| `Esc`                          | 关闭 1Password 弹出窗口。                                                                 |
 
 {.shortcuts}
 
 ### GNOME
 
-| Shortcut               | Action                   |
+| 快捷键                 | 操作                     |
 | ---------------------- | ------------------------ |
 | `Ctrl` `P`             | 1password --show         |
 | `Ctrl` `Shift` `Space` | 1password --quick-access |
@@ -354,7 +354,7 @@ intro: |
 
 ### KDE Plasma
 
-| `Trigger`              | Action                   |
+| `触发器`               | 操作                     |
 | ---------------------- | ------------------------ |
 | `Ctrl` `P`             | 1password --show         |
 | `Ctrl` `Shift` `Space` | 1password --quick-access |
@@ -363,23 +363,23 @@ intro: |
 
 {.shortcuts}
 
-### Quick Access
+### 快速访问
 
-| `Shortcut`             | Action                                                                              |
+| `快捷键`             | 操作                                                                              |
 | ---------------------- | ----------------------------------------------------------------------------------- |
-| `Ctrl` `Shift` `Space` | Open or close Quick Access.                                                         |
-| `Esc`                  | Clear the search field.                                                             |
-| `Ctrl` `1...9`         | Switch accounts or collections.                                                     |
-| `Right Arrow`          | View all available actions.                                                         |
-| `Ctrl` `C`             | Copy username or primary field.                                                     |
-| `Ctrl` `Shift` `C`     | Copy password.                                                                      |
-| `Ctrl` `Alt` `C`       | Copy one-time password.                                                             |
-| `Ctrl` `O`             | Open item details in new window.                                                    |
-| `Alt` `Enter`          | Open the website for the login in your browser and fill your username and password. |
-| `Ctrl` `Shift` `O`     | Open the item in the app.                                                           |
+| `Ctrl` `Shift` `Space` | 打开或关闭快速访问。                                                                |
+| `Esc`                  | 清除搜索字段。                                                                      |
+| `Ctrl` `1...9`         | 切换账户或集合。                                                                    |
+| `Right Arrow`          | 查看所有可用操作。                                                                  |
+| `Ctrl` `C`             | 复制用户名或主要字段。                                                              |
+| `Ctrl` `Shift` `C`     | 复制密码。                                                                          |
+| `Ctrl` `Alt` `C`       | 复制一次性密码。                                                                    |
+| `Ctrl` `O`             | 在新窗口中打开项目详细信息。                                                        |
+| `Alt` `Enter`          | 在浏览器中打开登录项的网站并填充您的用户名和密码。                                  |
+| `Ctrl` `Shift` `O`     | 在应用中打开项目。                                                                  |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for 1Password](https://support.1password.com/keyboard-shortcuts/) _(support.1password.com)_
+- [1Password 键盘快捷键](https://support.1password.com/keyboard-shortcuts/) _(support.1password.com)_

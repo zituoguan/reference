@@ -7,25 +7,24 @@ tags:
   - NoSQL
   - DB
 categories:
-  - Database
+  - 数据库
 intro:
-  The MongoDB cheat sheet provides you with the most commonly used MongoDB commands and queries for your reference. the
-  cheatsheet is from mongodb developers website
+  MongoDB 速查表为您提供了最常用的 MongoDB 命令和查询以供参考。该速查表来自 MongoDB 开发者网站。
 plugins:
   - tooltip
   - copyCode
 ---
 
-## Getting Started {.cols-2}
+## 入门指南 {.cols-2}
 
-### Connect MongoDB Shell
+### 连接 MongoDB Shell
 
 ```mongosh
-mongo # connects to mongodb://127.0.0.1:27017 by default
+mongo # 默认连接到 mongodb://127.0.0.1:27017
 ```
 
 ```mongosh
-mongo --host <host> --port <port> -u <user> -p <pwd> # omit the password if you want a prompt
+mongo --host <主机> --port <端口> -u <用户> -p <密码> # 如果希望提示输入密码，则省略密码
 ```
 
 ```mongosh
@@ -33,30 +32,30 @@ mongo "mongodb://192.168.1.1:27017"
 ```
 
 ```mongosh
-mongo "mongodb+srv://cluster-name.abcde.mongodb.net/<dbname>" --username <username> # MongoDB Atlas
+mongo "mongodb+srv://集群名称.abcde.mongodb.net/<数据库名>" --username <用户名> # MongoDB Atlas
 ```
 
-### Helpers
+### 辅助命令
 
-Show dbs :
+显示数据库 :
 
 ```mongosh
-db // prints the current database
+db // 打印当前数据库
 ```
 
-Switch database :
+切换数据库 :
 
 ```mongosh
-use <database_name>
+use <数据库名>
 ```
 
-Show collections :
+显示集合 :
 
 ```mongosh
 show collections
 ```
 
-Run JavaScript file :
+运行 JavaScript 文件 :
 
 ```mongosh
 load("myScript.js")
@@ -64,33 +63,33 @@ load("myScript.js")
 
 ---
 
-## Crud
+## 增删改查 (CRUD)
 
-### Create
+### 创建 (Create)
 
 ```mongosh
 db.coll.insertOne({name: "Max"})
-db.coll.insertMany([{name: "Max"}, {name:"Alex"}]) // ordered bulk insert
-db.coll.insertMany([{name: "Max"}, {name:"Alex"}], {ordered: false}) // unordered bulk insert
+db.coll.insertMany([{name: "Max"}, {name:"Alex"}]) // 有序批量插入
+db.coll.insertMany([{name: "Max"}, {name:"Alex"}], {ordered: false}) // 无序批量插入
 db.coll.insertOne({date: ISODate()})
 db.coll.insertMany({name: "Max"}, {"writeConcern": {"w": "majority", "wtimeout": 5000}})
 ```
 
-### Delete
+### 删除 (Delete)
 
 ```mongosh
 db.coll.deleteOne({name: "Max"})
-db.coll.deleteMany( $and: [{name: "Max"}, {justOne: true}]) //delete all entries which contain both values
-db.coll.deleteMany( $or: [{name: "Max"}, {justOne: true}])  //delete all entries which contain any of the specified values
-db.coll.deleteMany({}) // WARNING! Deletes all the docs but not the collection itself and its index definitions
+db.coll.deleteMany( $and: [{name: "Max"}, {justOne: true}]) // 删除包含这两个值的所有条目
+db.coll.deleteMany( $or: [{name: "Max"}, {justOne: true}])  // 删除包含任一指定值的所有条目
+db.coll.deleteMany({}) // 警告！删除所有文档，但不会删除集合本身及其索引定义
 db.coll.deleteMany({name: "Max"}, {"writeConcern": {"w": "majority", "wtimeout": 5000}})
 db.coll.findOneAndDelete({"name": "Max"})
 ```
 
-### Update
+### 更新 (Update)
 
 ```mongosh
-db.coll.updateMany({"_id": 1}, {$set: {"year": 2016}}) // WARNING! Replaces the entire document where "_id" = 1
+db.coll.updateMany({"_id": 1}, {$set: {"year": 2016}}) // 警告！替换 "_id" = 1 的整个文档
 db.coll.updateOne({"_id": 1}, {$set: {"year": 2016, name: "Max"}})   
 db.coll.updateOne({"_id": 1}, {$unset: {"year": 1}})  
 db.coll.updateOne({"_id": 1}, {$rename: {"year": "date"} }) 
@@ -101,14 +100,14 @@ db.coll.updateOne({"_id": 1}, {$max: {"imdb": 8}})
 db.coll.updateMany({"_id": {$lt: 10}}, {$set: {"lastModified": ISODate()}})  
 ```
 
-### Array {.row-span-2}
+### 数组 {.row-span-2}
 
 ```mongosh
 db.coll.updateOne({"_id": 1}, {$push :{"array": 1}})
 db.coll.updateOne({"_id": 1}, {$pull :{"array": 1}})
 db.coll.updateOne({"_id": 1}, {$addToSet :{"array": 2}})
-db.coll.updateOne({"_id": 1}, {$pop: {"array": 1}})  // last element
-db.coll.updateOne({"_id": 1}, {$pop: {"array": -1}}) // first element
+db.coll.updateOne({"_id": 1}, {$pop: {"array": 1}})  // 最后一个元素
+db.coll.updateOne({"_id": 1}, {$pop: {"array": -1}}) // 第一个元素
 db.coll.updateOne({"_id": 1}, {$pullAll: {"array" :[3, 4, 5]}})
 db.coll.updateOne({"_id": 1}, {$push: {scores: {$each: [90, 92, 85]}}})
 db.coll.updateOne({"_id": 1, "grades": 80}, {$set: {"grades.$": 82}})
@@ -116,56 +115,56 @@ db.coll.updateMany({}, {$inc: {"grades.$[]": 10}})
 db.coll.updateMany({}, {$set: {"grades.$[element]": 100}}, {arrayFilters: [{"element": {$gte: 100}}]})
 ```
 
-### Update many {.row-span-1}
+### 更新多个文档 {.row-span-1}
 
 ```mongosh
 db.coll.updateMany({"year": 1999}, {$set: {"decade": "90's"}})
 ```
 
-### FindOneAndUpdate {.row-span-1}
+### 查找并更新一个文档 {.row-span-1}
 
 ```mongosh
 db.coll.findOneAndUpdate({"name": "Max"}, {$inc: {"points": 5}}, {returnNewDocument: true})
 ```
 
-### Upsert {.row-span-1}
+### 更新或插入 (Upsert) {.row-span-1}
 
 ```mongosh
 db.coll.updateOne({"_id": 1}, {$set: {item: "apple"}, $setOnInsert: {defaultQty: 100}}, {upsert: true})
 ```
 
-### Replace {.row-span-1}
+### 替换 {.row-span-1}
 
 ```mongosh
 db.coll.replaceOne({"name": "Max"}, {"firstname": "Maxime", "surname": "Beugnet"})
 ```
 
-### Write concern {.row-span-1}
+### 写关注 (Write Concern) {.row-span-1}
 
 ```mongosh
 db.coll.updateMany({}, {$set: {"x": 1}}, {"writeConcern": {"w": "majority", "wtimeout": 5000}})
 ```
 
-### Find {.row-span-2}
+### 查找 (Find) {.row-span-2}
 
 ```mongosh
-db.coll.findOne() // returns a single document
-db.coll.find()    // returns a cursor - show 20 results - "it" to display more
+db.coll.findOne() // 返回单个文档
+db.coll.find()    // 返回一个游标 - 显示20个结果 - 输入 "it" 显示更多
 db.coll.find().pretty()
-db.coll.find({name: "Max", age: 32}) // implicit logical "AND".
+db.coll.find({name: "Max", age: 32}) // 隐式的逻辑 "AND"
 db.coll.find({date: ISODate("2020-09-25T13:57:17.180Z")})
-db.coll.find({name: "Max", age: 32}).explain("executionStats") // or "queryPlanner" or "allPlansExecution"
+db.coll.find({name: "Max", age: 32}).explain("executionStats") // 或 "queryPlanner" 或 "allPlansExecution"
 db.coll.distinct("name")
 ```
 
-### Count
+### 计数 (Count)
 
 ```mongosh
-db.coll.estimatedDocumentCount()  // estimation based on collection metadata
-db.coll.countDocuments({age: 32}) // alias for an aggregation pipeline - accurate count
+db.coll.estimatedDocumentCount()  // 基于集合元数据的估算
+db.coll.countDocuments({age: 32}) // 聚合管道的别名 - 精确计数
 ```
 
-### Comparison
+### 比较运算符
 
 ```mongosh
 db.coll.find({"year": {$gt: 1970}})
@@ -177,7 +176,7 @@ db.coll.find({"year": {$in: [1958, 1959]}})
 db.coll.find({"year": {$nin: [1958, 1959]}})
 ```
 
-### Logical
+### 逻辑运算符
 
 ```mongosh
 db.coll.find({name:{$not: {$eq: "Max"}}})
@@ -191,7 +190,7 @@ $and: [
 })
 ```
 
-### Element
+### 元素运算符
 
 ```mongosh
 db.coll.find({name: {$exists: true}})
@@ -199,7 +198,7 @@ db.coll.find({"zipCode": {$type: 2 }})
 db.coll.find({"zipCode": {$type: "string"}})
 ```
 
-### Aggregation Pipeline
+### 聚合管道
 
 ```mongosh
 db.coll.aggregate([
@@ -209,57 +208,57 @@ db.coll.aggregate([
 ])
 ```
 
-### Text search with a "text" index
+### 使用 "text" 索引进行文本搜索
 
 ```mongosh
 db.coll.find({$text: {$search: "cake"}}, {score: {$meta: "textScore"}}).sort({score: {$meta: "textScore"}})
 ```
 
-### Regex
+### 正则表达式
 
 ```mongosh
-db.coll.find({name: /^Max/}) // regex: starts by letter "M"
-db.coll.find({name: /^Max$/i}) // regex case insensitive
+db.coll.find({name: /^Max/}) // 正则表达式：以字母 "M" 开头
+db.coll.find({name: /^Max$/i}) // 正则表达式不区分大小写
 ```
 
-### Array
+### 数组查询
 
 ```mongosh
 db.coll.find({tags: {$all: ["Realm", "Charts"]}})
-db.coll.find({field: {$size: 2}}) // impossible to index - prefer storing the size of the array & update it
+db.coll.find({field: {$size: 2}}) // 无法索引 - 最好存储数组大小并更新它
 db.coll.find({results: {$elemMatch: {product: "xyz", score: {$gte: 8}}}})
 ```
 
-### Projections
+### 投影 (Projections)
 
 ```mongosh
-db.coll.find({"x": 1}, {"actors": 1}) // actors + \_id
-db.coll.find({"x": 1}, {"actors": 1, "\_id": 0}) // actors
-db.coll.find({"x": 1}, {"actors": 0, "summary": 0}) // all but "actors" and "summary"
+db.coll.find({"x": 1}, {"actors": 1}) // actors + _id
+db.coll.find({"x": 1}, {"actors": 1, "_id": 0}) // actors
+db.coll.find({"x": 1}, {"actors": 0, "summary": 0}) // 除 "actors" 和 "summary" 外的所有字段
 ```
 
-### Sort, skip, limit
+### 排序、跳过、限制
 
 ```mongosh
 db.coll.find({}).sort({"year": 1, "rating": -1}).skip(10).limit(3)
 ```
 
-### Read Concern
+### 读关注 (Read Concern)
 
 ```mongosh
 db.coll.find().readConcern("majority")
 ```
 
-## Databases and Collections {.cols-2}
+## 数据库和集合 {.cols-2}
 
-### Drop {.row-span-1}
+### 删除 {.row-span-1}
 
 ```mongosh
-db.coll.drop()    // removes the collection and its index definitions
-db.dropDatabase() // double check that you are *NOT* on the PROD cluster... :-)
+db.coll.drop()    // 删除集合及其索引定义
+db.dropDatabase() // 仔细检查您当前是否*不在*生产集群上... :-) 
 ```
 
-### Create Collection {.row-span-2}
+### 创建集合 {.row-span-2}
 
 ```mongosh
 db.createCollection("contacts", {
@@ -269,23 +268,23 @@ db.createCollection("contacts", {
       properties: {
          phone: {
             bsonType: "string",
-            description: "must be a string and is required"
+            description: "必须是字符串且为必填项"
          },
          email: {
             bsonType: "string",
             pattern: "@mongodb\.com$",
-            description: "must be a string and match the regular expression pattern"
+            description: "必须是字符串并匹配正则表达式模式"
          },
          status: {
             enum: [ "Unknown", "Incomplete" ],
-            description: "can only be one of the enum values"
+            description: "只能是枚举值之一"
          }
       }
    }}
 })
 ```
 
-### Other Collection Functions {.row-span-1}
+### 其他集合函数 {.row-span-1}
 
 ```mongosh
 db.coll.stats()
@@ -293,57 +292,57 @@ db.coll.storageSize()
 db.coll.totalIndexSize()
 db.coll.totalSize()
 db.coll.validate({full: true})
-db.coll.renameCollection("new_coll", true) // 2nd parameter to drop the target collection if exists
+db.coll.renameCollection("new_coll", true) // 第二个参数表示如果目标集合存在则删除它
 ```
 
-## Indexes {.cols-2}
+## 索引 {.cols-2}
 
-### Basics
+### 基础操作
 
-#### List
+#### 列出索引
 
 ```mongosh
 db.coll.getIndexes()
 db.coll.getIndexKeys()
 ```
 
-#### Drop Indexes
+#### 删除索引
 
 ```mongosh
 db.coll.dropIndex("name_1")
 ```
 
-#### Hide/Unhide Indexes
+#### 隐藏/取消隐藏索引
 
 ```mongosh
 db.coll.hideIndex("name_1")
 db.coll.unhideIndex("name_1")
 ```
 
-### Create Indexes
+### 创建索引
 
 ```mongosh
-// Index Types
-db.coll.createIndex({"name": 1})                // single field index
-db.coll.createIndex({"name": 1, "date": 1})     // compound index
-db.coll.createIndex({foo: "text", bar: "text"}) // text index
-db.coll.createIndex({"$**": "text"})            // wildcard text index
-db.coll.createIndex({"userMetadata.$**": 1})    // wildcard index
-db.coll.createIndex({"loc": "2d"})              // 2d index
-db.coll.createIndex({"loc": "2dsphere"})        // 2dsphere index
-db.coll.createIndex({"_id": "hashed"})          // hashed index
+// 索引类型
+db.coll.createIndex({"name": 1})                // 单字段索引
+db.coll.createIndex({"name": 1, "date": 1})     // 复合索引
+db.coll.createIndex({foo: "text", bar: "text"}) // 文本索引
+db.coll.createIndex({"$**": "text"})            // 通配符文本索引
+db.coll.createIndex({"userMetadata.$**": 1})    // 通配符索引
+db.coll.createIndex({"loc": "2d"})              // 2D 索引
+db.coll.createIndex({"loc": "2dsphere"})        // 2dsphere 索引
+db.coll.createIndex({"_id": "hashed"})          // 哈希索引
 
-// Index Options
-db.coll.createIndex({"lastModifiedDate": 1}, {expireAfterSeconds: 3600})      // TTL index
+// 索引选项
+db.coll.createIndex({"lastModifiedDate": 1}, {expireAfterSeconds: 3600})      // TTL 索引
 db.coll.createIndex({"name": 1}, {unique: true})
-db.coll.createIndex({"name": 1}, {partialFilterExpression: {age: {$gt: 18}}}) // partial index
-db.coll.createIndex({"name": 1}, {collation: {locale: 'en', strength: 1}})    // case insensitive index with strength = 1 or 2
+db.coll.createIndex({"name": 1}, {partialFilterExpression: {age: {$gt: 18}}}) // 部分索引
+db.coll.createIndex({"name": 1}, {collation: {locale: 'en', strength: 1}})    // 不区分大小写的索引，strength = 1 或 2
 db.coll.createIndex({"name": 1 }, {sparse: true})
 ```
 
-## Others {.cols-2}
+## 其他命令 {.cols-2}
 
-### Handy commands {.row-span-3}
+### 常用命令 {.row-span-3}
 
 ```mongosh
 use admin
@@ -354,7 +353,7 @@ db.auth( "user", passwordPrompt() )
 use test
 db.getSiblingDB("dbname")
 db.currentOp()
-db.killOp(123) // opid
+db.killOp(123) // 操作ID (opid)
 
 db.fsyncLock()
 db.fsyncUnlock()
@@ -377,7 +376,7 @@ db.getSlaveOk()
 
 db.getProfilingLevel()
 db.getProfilingStatus()
-db.setProfilingLevel(1, 200) // 0 == OFF, 1 == ON with slowms, 2 == ON
+db.setProfilingLevel(1, 200) // 0 == 关闭, 1 == 开启 (记录慢查询), 2 == 开启 (记录所有操作)
 
 db.enableFreeMonitoring()
 db.disableFreeMonitoring()
@@ -386,7 +385,7 @@ db.getFreeMonitoringStatus()
 db.createView("viewName", "sourceColl", [{$project:{department: 1}}])
 ```
 
-### Replica Set {.row-span-2}
+### 副本集 {.row-span-2}
 
 ```mongosh
 rs.status()
@@ -405,10 +404,10 @@ rs.printReplicationInfo()
 rs.printSlaveReplicationInfo()
 rs.reconfig(<valid_conf>)
 rs.slaveOk()
-rs.stepDown(20, 5) // (stepDownSecs, secondaryCatchUpPeriodSecs)
+rs.stepDown(20, 5) // (降级等待秒数, 从节点追赶数据周期秒数)
 ```
 
-### Sharded Cluster {.row-span-2}
+### 分片集群 {.row-span-2}
 
 ```mongosh
 sh.status()
@@ -439,7 +438,7 @@ sh.removeShardFromZone("shard0000", "NYC")
 sh.removeRangeFromZone("mydb.coll", {a: 1, b: 1}, {a: 10, b: 10})
 ```
 
-### Change Streams {.row-span-1}
+### 变更流 (Change Streams) {.row-span-1}
 
 ```mongosh
 watchCursor = db.coll.watch( [ { $match : {"operationType" : "insert" } } ] )

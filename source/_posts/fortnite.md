@@ -1,5 +1,5 @@
 ---
-title: Fortnite
+title: 堡垒之夜
 date: 2022-11-23 16:23:31.699229
 background: bg-[#8d2fc9]
 label:
@@ -9,58 +9,58 @@ tags:
 categories:
   - Keyboard Shortcuts
 intro: |
-  A visual cheat-sheet for the 26 default keyboard shortcuts found in Fortnite
+  堡垒之夜中26个默认键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Main Controls
+### 主要控制
 
-| Shortcut     | Action                                    |
+| 快捷键      | 动作                                    |
 | ------------ | ----------------------------------------- |
-| `R`          | Reload                                    |
-| `Q`          | Switch between combat mode and build mode |
-| `Space`      | Jump                                      |
-| `Left Ctrl`  | Crouch                                    |
-| `Left Shift` | Sprint                                    |
-| `=`          | Auto run                                  |
-| `W`          | Move forward                              |
-| `S`          | Move backwards                            |
-| `A`          | Move left                                 |
-| `D`          | Move right                                |
-| `M`          | Toggle map                                |
-| `Tab`        | Toggle inventory                          |
-| `E`          | Use or interact with object               |
-| `F`          | Select pickaxe                            |
-| `1-5`        | Select weapon slot 1-5                    |
+| `R`          | 装弹                                      |
+| `Q`          | 在战斗模式和建造模式之间切换                |
+| `Space`      | 跳跃                                      |
+| `Left Ctrl`  | 蹲伏                                      |
+| `Left Shift` | 冲刺                                      |
+| `=`          | 自动奔跑                                  |
+| `W`          | 向前移动                                  |
+| `S`          | 向后移动                                  |
+| `A`          | 向左移动                                  |
+| `D`          | 向右移动                                  |
+| `M`          | 切换地图                                  |
+| `Tab`        | 切换物品栏                                |
+| `E`          | 使用或与对象互动                          |
+| `F`          | 选择镐                                    |
+| `1-5`        | 选择武器槽 1-5                            |
 
 {.shortcuts}
 
-### Building
+### 建筑
 
-| Shortcut | Action                                                  |
+| 快捷键 | 动作                                                  |
 | -------- | ------------------------------------------------------- |
-| `R`      | Rotate building piece                                   |
-| `Z`      | Wall mode                                               |
-| `X`      | Floor mode                                              |
-| `C`      | Stair mode                                              |
-| `V`      | Pyramid mode                                            |
-| `Y`      | Trap mode                                               |
-| `F3`     | Select trap                                             |
-| `H`      | Upgrade building piece of repair damaged building piece |
-| `G`      | Edit building piece                                     |
+| `R`      | 旋转建筑部件                                            |
+| `Z`      | 墙壁模式                                                |
+| `X`      | 地板模式                                                |
+| `C`      | 楼梯模式                                                |
+| `V`      | 金字塔模式                                              |
+| `Y`      | 陷阱模式                                                |
+| `F3`     | 选择陷阱                                                |
+| `H`      | 升级建筑部件或修复损坏的建筑部件                          |
+| `G`      | 编辑建筑部件                                            |
 
 {.shortcuts}
 
-### Communication
+### 交流
 
-| Shortcut | Action |
+| 快捷键 | 动作     |
 | -------- | ------ |
-| `Enter`  | Chat   |
-| `B`      | Emote  |
+| `Enter`  | 聊天     |
+| `B`      | 表情动作 |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Fortnite](https://fortnite.gamepedia.com/Controls) _(fortnite.gamepedia.com)_
+- [堡垒之夜键盘快捷键](https://fortnite.gamepedia.com/Controls) _(fortnite.gamepedia.com)_

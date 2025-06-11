@@ -1,5 +1,5 @@
 ---
-title: Twitter
+title: X（原 Twitter）
 date: 2022-11-23 16:23:31.705009
 background: bg-[#4894e2]
 label:
@@ -7,60 +7,60 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 26 keyboard shortcuts found on Twitter
+  Twitter 上 26 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Actions
+### 操作
 
-| Shortcut       | Action             |
+| 快捷键         | 操作               |
 | -------------- | ------------------ |
-| `N`            | New tweet          |
-| `L`            | Like tweet         |
-| `R`            | Reply to tweet     |
-| `T`            | Retweet            |
-| `M`            | Direct message     |
-| `U`            | Mute account       |
-| `B`            | Block account      |
-| `Enter`        | Open tweet details |
-| `O`            | Expand photos      |
-| `/`            | Search             |
-| `Ctrl` `Enter` | Send tweet         |
+| `N`            | 新建推文           |
+| `L`            | 喜欢推文           |
+| `R`            | 回复推文           |
+| `T`            | 转推               |
+| `M`            | 私信               |
+| `U`            | 静音账户           |
+| `B`            | 屏蔽账户           |
+| `Enter`        | 打开推文详情       |
+| `O`            | 展开图片           |
+| `/`            | 搜索               |
+| `Ctrl` `Enter` | 发送推文           |
 
 {.shortcuts}
 
-### Navigation
+### 导航
 
-| Shortcut | Action             |
-| -------- | ------------------ |
-| `?`      | Full keyboard menu |
-| `J`      | Next tweet         |
-| `K`      | Previous tweet     |
-| `Space`  | Page down          |
-| `.`      | Load new tweets    |
-
-{.shortcuts}
-
-### Timelines
-
-| Shortcut | Action                  |
-| -------- | ----------------------- |
-| `G` `N`  | Home timeline           |
-| `G` `O`  | Moments                 |
-| `G` `N`  | Notifications tab       |
-| `G` `R`  | Mentions                |
-| `G` `P`  | Profile                 |
-| `G` `L`  | Likes tab               |
-| `G` `I`  | Lists tab               |
-| `G` `M`  | Direct messages         |
-| `G` `S`  | Settings and privacy    |
-| `G` `U`  | Go to someone's profile |
+| 快捷键  | 操作               |
+| ------- | ------------------ |
+| `?`     | 完整键盘快捷键菜单 |
+| `J`     | 下一条推文         |
+| `K`     | 上一条推文         |
+| `Space` | 向下翻页           |
+| `.`     | 加载新推文         |
 
 {.shortcuts}
 
-## Also see
+### 时间线
 
-- [Keyboard shortcuts for Twitter](https://help.twitter.com/en/using-twitter/how-to-tweet) _(help.twitter.com)_
+| 快捷键  | 操作                   |
+| ------- | ---------------------- |
+| `G` `N` | 主页时间线             |
+| `G` `O` | 瞬间                   |
+| `G` `N` | 通知选项卡             |
+| `G` `R` | 提及                   |
+| `G` `P` | 个人资料               |
+| `G` `L` | 喜欢选项卡             |
+| `G` `I` | 列表选项卡             |
+| `G` `M` | 私信                   |
+| `G` `S` | 设置和隐私             |
+| `G` `U` | 转到用户的个人资料     |
+
+{.shortcuts}
+
+## 另请参阅
+
+- [Twitter 的键盘快捷键](https://help.twitter.com/en/using-twitter/how-to-tweet) _(help.twitter.com)_

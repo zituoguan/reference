@@ -1,49 +1,49 @@
 ---
-title: JavaScript
+title: JavaScript 教程
 date: 2020-12-24 17:12:25
 background: bg-[#ebd94e]
 tags:
   - js
   - web
 categories:
-  - Programming
+  - 编程
 intro: |
-  A JavaScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
+  一份 JavaScript 速查表，包含最重要的概念、函数、方法等。为初学者准备的完整快速参考。
 plugins:
   - copyCode
   - runCode
 ---
 
-## Getting Started
+## 入门指南
 
-### Introduction
+### 简介
 
-JavaScript is a lightweight, interpreted programming language.
+JavaScript 是一种轻量级的解释型编程语言。
 
-- [JSON cheatsheet](/json) _(cheatsheets.zip)_
-- [Regex in JavaScript](/regex#regex-in-javascript) _(cheatsheets.zip)_
+- [JSON 速查表](/json) _(r3f.cn)_
+- [JavaScript 中的正则表达式](/regex#regex-in-javascript) _(r3f.cn)_
 
-### Console
+### 控制台
 
 ```javascript
 // => Hello world!
 console.log("Hello world!");
 
-// => Hello CheatSheets.zip
-console.warn("hello %s", "CheatSheets.zip");
+// => Hello r3f.cn
+console.warn("hello %s", "r3f.cn");
 
-// Prints error message to stderr
+// 将错误消息打印到 stderr
 console.error(new Error("Oops!"));
 ```
 
-### Numbers
+### 数字
 
 ```javascript
 let amount = 6;
 let price = 4.99;
 ```
 
-### Variables
+### 变量
 
 ```javascript
 let x = null;
@@ -57,7 +57,7 @@ var a;
 console.log(a); // => undefined
 ```
 
-### Strings
+### 字符串
 
 ```javascript
 let single = "Wheres my bandit hat?";
@@ -67,33 +67,33 @@ let double = "Wheres my bandit hat?";
 console.log(single.length);
 ```
 
-### Arithmetic Operators
+### 算术运算符
 
 ```javascript
-5 + 5 = 10     // Addition
-10 - 5 = 5     // Subtraction
-5 * 10 = 50    // Multiplication
-10 / 5 = 2     // Division
-10 % 5 = 0     // Modulo
+5 + 5 = 10     // 加法
+10 - 5 = 5     // 减法
+5 * 10 = 50    // 乘法
+10 / 5 = 2     // 除法
+10 % 5 = 0     // 取模
 ```
 
-### Comments
+### 注释
 
 ```javascript
-// This line will denote a comment
+// 这一行表示注释
 
 /*
-The below configuration must be
-changed before deployment.
+以下配置必须在
+部署前更改。
 */
 ```
 
-### Assignment Operators
+### 赋值运算符
 
 ```javascript
 let number = 100;
 
-// Both statements will add 10
+// 两个语句都会加 10
 number = number + 10;
 number += 10;
 
@@ -101,19 +101,19 @@ console.log(number);
 // => 120
 ```
 
-### String Interpolation
+### 字符串插值
 
 ```javascript
 let age = 7;
 
-// String concatenation
+// 字符串连接
 "Tommy is " + age + " years old.";
 
-// String interpolation
+// 字符串插值
 `Tommy is ${age} years old.`;
 ```
 
-### let Keyword
+### let 关键字
 
 ```javascript
 let count;
@@ -122,28 +122,28 @@ count = 10;
 console.log(count); // => 10
 ```
 
-### const Keyword
+### const 关键字
 
 ```javascript
 const numberOfColumns = 4;
 
-// TypeError: Assignment to constant...
+// TypeError: Assignment to constant... (类型错误：给常量赋值...)
 numberOfColumns = 8;
 ```
 
-## JavaScript Conditionals
+## JavaScript 条件语句
 
-### if Statement
+### if 语句
 
 ```javascript
 const isMailSent = true;
 
 if (isMailSent) {
-  console.log("Mail sent to recipient");
+  console.log("邮件已发送给收件人");
 }
 ```
 
-### Ternary Operator
+### 三元运算符
 
 ```javascript
 var x = 1;
@@ -152,7 +152,7 @@ var x = 1;
 result = x == 1 ? true : false;
 ```
 
-### Operators {.row-span-2}
+### 运算符 {.row-span-2}
 
 ```javascript
 true || false; // true
@@ -161,7 +161,7 @@ false || false; // false
 10 > 100 || 10 > 20; // false
 ```
 
-#### Logical Operator &&
+#### 逻辑运算符 &&
 
 ```javascript
 true && true; // true
@@ -170,7 +170,7 @@ true && false; // false
 4 === 4 && 3 > 1; // true
 ```
 
-#### Comparison Operators
+#### 比较运算符
 
 ```javascript
 1 > 3; // false
@@ -181,7 +181,7 @@ true && false; // false
 1 === "1"; // false
 ```
 
-#### Logical Operator !
+#### 逻辑运算符 !
 
 ```javascript
 let lateToWork = true;
@@ -191,7 +191,7 @@ let oppositeValue = !lateToWork;
 console.log(oppositeValue);
 ```
 
-#### Nullish coalescing operator ??
+#### 空值合并运算符 ??
 
 ```javascript
 null ?? "I win"; //  'I win'
@@ -208,31 +208,31 @@ false ?? "I lose"; //  false
 const size = 10;
 
 if (size > 100) {
-  console.log("Big");
+  console.log("大");
 } else if (size > 20) {
-  console.log("Medium");
+  console.log("中");
 } else if (size > 4) {
-  console.log("Small");
+  console.log("小");
 } else {
-  console.log("Tiny");
+  console.log("微小");
 }
-// Print: Small
+// 输出: 小
 ```
 
-### switch Statement
+### switch 语句
 
 ```javascript
 const food = "salad";
 
 switch (food) {
   case "oyster":
-    console.log("The taste of the sea");
+    console.log("大海的味道");
     break;
   case "pizza":
-    console.log("A delicious pie");
+    console.log("美味的披萨");
     break;
   default:
-    console.log("Enjoy your meal");
+    console.log("祝您用餐愉快");
 }
 ```
 
@@ -240,48 +240,48 @@ switch (food) {
 
 ```javascript
 0 == false; // true
-0 === false; // false, different type
-1 == "1"; // true,  automatic type conversion
-1 === "1"; // false, different type
+0 === false; // false, 类型不同
+1 == "1"; // true,  自动类型转换
+1 === "1"; // false, 类型不同
 null == undefined; // true
 null === undefined; // false
 "0" == false; // true
 "0" === false; // false
 ```
 
-The `==` just check the value, `===` check both the value and the type.
+`==` 只检查值，`===` 检查值和类型。
 
-## JavaScript Functions
+## JavaScript 函数
 
-### Functions
+### 函数
 
 ```javascript
-// Defining the function:
+// 定义函数:
 function sum(num1, num2) {
   return num1 + num2;
 }
 
-// Calling the function:
+// 调用函数:
 sum(3, 6); // 9
 ```
 
-### Anonymous Functions
+### 匿名函数
 
 ```javascript
-// Named function
+// 命名函数
 function rocketToMars() {
   return "BOOM!";
 }
 
-// Anonymous function
+// 匿名函数
 const rocketToMars = function () {
   return "BOOM!";
 };
 ```
 
-### Arrow Functions (ES6) {.row-span-2}
+### 箭头函数 (ES6) {.row-span-2}
 
-#### With two arguments
+#### 带两个参数
 
 ```javascript
 const sum = (param1, param2) => {
@@ -290,7 +290,7 @@ const sum = (param1, param2) => {
 console.log(sum(2, 5)); // => 7
 ```
 
-#### With no arguments
+#### 不带参数
 
 ```javascript
 const printHello = () => {
@@ -299,7 +299,7 @@ const printHello = () => {
 printHello(); // => hello
 ```
 
-#### With a single argument
+#### 带单个参数
 
 ```javascript
 const checkWeight = (weight) => {
@@ -308,7 +308,7 @@ const checkWeight = (weight) => {
 checkWeight(25); // => Weight : 25
 ```
 
-#### Concise arrow functions
+#### 简洁箭头函数
 
 ```javascript
 const multiply = (a, b) => a * b;
@@ -316,36 +316,35 @@ const multiply = (a, b) => a * b;
 console.log(multiply(2, 30));
 ```
 
-[Arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) available
-starting ES2015
+[箭头函数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 从 ES2015 开始可用。
 
-### return Keyword
+### return 关键字
 
 ```javascript
-// With return
+// 带 return
 function sum(num1, num2) {
   return num1 + num2;
 }
 
-// The function doesn't output the sum
+// 函数不输出和
 function sum(num1, num2) {
   num1 + num2;
 }
 ```
 
-### Calling Functions
+### 调用函数
 
 ```javascript
-// Defining the function
+// 定义函数
 function sum(num1, num2) {
   return num1 + num2;
 }
 
-// Calling the function
+// 调用函数
 sum(2, 4); // 6
 ```
 
-### Function Expressions
+### 函数表达式
 
 ```javascript
 const dog = function () {
@@ -353,16 +352,16 @@ const dog = function () {
 };
 ```
 
-### Function Parameters
+### 函数参数
 
 ```javascript
-// The parameter is name
+// 参数是 name
 function sayHello(name) {
   return `Hello, ${name}!`;
 }
 ```
 
-### Function Declaration
+### 函数声明
 
 ```javascript
 function add(num1, num2) {
@@ -370,20 +369,20 @@ function add(num1, num2) {
 }
 ```
 
-## JavaScript Scope
+## JavaScript 作用域
 
-### Scope
+### 作用域
 
 ```javascript
 function myFunction() {
   var pizzaName = "Margarita";
-  // Code here can use pizzaName
+  // 这里的代码可以使用 pizzaName
 }
 
-// Code here can't use pizzaName
+// 这里的代码不能使用 pizzaName
 ```
 
-### Block Scoped Variables
+### 块级作用域变量
 
 ```javascript
 const isLoggedIn = true;
@@ -392,14 +391,14 @@ if (isLoggedIn == true) {
   const statusMessage = "Logged in.";
 }
 
-// Uncaught ReferenceError...
+// Uncaught ReferenceError... (未捕获的引用错误...)
 console.log(statusMessage);
 ```
 
-### Global Variables
+### 全局变量
 
 ```javascript
-// Variable declared globally
+// 全局声明的变量
 const color = "blue";
 
 function printColor() {
@@ -413,27 +412,27 @@ printColor(); // => blue
 
 ```javascript
 for (let i = 0; i < 3; i++) {
-  // This is the Max Scope for 'let'
-  // i accessible ✔️
+  // 这是 'let' 的最大作用域
+  // i 可访问 ✔️
 }
-// i not accessible ❌
+// i 不可访问 ❌
 ```
 
 ---
 
 ```javascript
 for (var i = 0; i < 3; i++) {
-  // i accessible ✔️
+  // i 可访问 ✔️
 }
-// i accessible ✔️
+// i 可访问 ✔️
 ```
 
-`var` is scoped to the nearest function block, and `let` is scoped to the nearest enclosing block.
+`var` 的作用域是最近的函数块，而 `let` 的作用域是最近的封闭块。
 
-### Loops with closures
+### 带闭包的循环
 
 ```javascript{.wrap}
-// Prints 3 thrice, not what we meant.
+// 打印三次 3，不是我们想要的。
 for (var i = 0; i < 3; i++) {
   setTimeout(_ => console.log(i), 10);
 }
@@ -442,26 +441,26 @@ for (var i = 0; i < 3; i++) {
 ---
 
 ```javascript{.wrap}
-// Prints 0, 1 and 2, as expected.
+// 按预期打印 0, 1 和 2。
 for (let j = 0; j < 3; j++) {
   setTimeout(_ => console.log(j), 10);
 }
 ```
 
-The variable has its own copy using `let`, and the variable has shared copy using `var`.
+使用 `let` 时变量有自己的副本，使用 `var` 时变量共享副本。
 
-## JavaScript Arrays
+## JavaScript 数组
 
-### Arrays
+### 数组
 
 ```javascript
 const fruits = ["apple", "orange", "banana"];
 
-// Different data types
+// 不同数据类型
 const data = [1, "chicken", false];
 ```
 
-### Property .length
+### 属性 .length
 
 ```javascript
 const numbers = [1, 2, 3, 4];
@@ -469,40 +468,40 @@ const numbers = [1, 2, 3, 4];
 numbers.length; // 4
 ```
 
-### Index
+### 索引
 
 ```javascript
-// Accessing an array element
+// 访问数组元素
 const myArray = [100, 200, 300];
 
 console.log(myArray[0]); // 100
 console.log(myArray[1]); // 200
 ```
 
-### Mutable chart
+### 可变方法表
 
-|           | add | remove | start | end |
-| :-------- | :-: | :----: | :---: | :-: |
-| `push`    | ✔  |        |       | ✔  |
-| `pop`     |     |   ✔   |       | ✔  |
-| `unshift` | ✔  |        |  ✔   |     |
-| `shift`   |     |   ✔   |  ✔   |     |
+|           | 添加 | 移除 | 开头 | 末尾 |
+| :-------- | :--: | :----: | :---: | :--: |
+| `push`    |  ✔   |        |       |  ✔   |
+| `pop`     |      |   ✔    |       |  ✔   |
+| `unshift` |  ✔   |        |   ✔   |      |
+| `shift`   |      |   ✔    |   ✔   |      |
 
 {.show-header}
 
 ### Array.push()
 
 ```javascript
-// Adding a single element:
+// 添加单个元素:
 const cart = ["apple", "orange"];
 cart.push("pear");
 
-// Adding multiple elements:
+// 添加多个元素:
 const numbers = [1, 2];
 numbers.push(3, 4, 5);
 ```
 
-Add items to the end and returns the new array length.
+向数组末尾添加项并返回新的数组长度。
 
 ### Array.pop()
 
@@ -513,7 +512,7 @@ const fruit = fruits.pop(); // 'banana'
 console.log(fruits); // ["apple", "orange"]
 ```
 
-Remove an item from the end and returns the removed item.
+从数组末尾移除一项并返回移除的项。
 
 ### Array.shift()
 
@@ -523,7 +522,7 @@ let cats = ["Bob", "Willy", "Mini"];
 cats.shift(); // ['Willy', 'Mini']
 ```
 
-Remove an item from the beginning and returns the removed item.
+从数组开头移除一项并返回移除的项。
 
 ### Array.unshift()
 
@@ -537,7 +536,7 @@ cats.unshift("Willy");
 cats.unshift("Puff", "George");
 ```
 
-Add items to the beginning and returns the new array length.
+向数组开头添加项并返回新的数组长度。
 
 ### Array.concat()
 
@@ -552,65 +551,65 @@ const newFirstNumber = 4;
 numbers.concat(newFirstNumber);
 ```
 
-If you want to avoid mutating your original array, you can use concat.
+如果你想避免修改原始数组，可以使用 concat。
 
 ## JavaScript Set
 
-### Create Set
+### 创建 Set
 
 ```javascript
-// Empty Set Object
+// 空 Set 对象
 const emptySet = new Set();
 
-// Set Object with values
+// 带值的 Set 对象
 const setObj = new Set([1, true, "hi"]);
 ```
 
-### Add
+### 添加
 
 ```javascript
 const emptySet = new Set();
 
-// add values
+// 添加值
 emptySet.add("a"); // 'a'
 emptySet.add(1); // 'a', 1
 emptySet.add(true); // 'a', 1, true
-emptySet.add("a"); // 'a', 1, true
+emptySet.add("a"); // 'a', 1, true (Set 中元素唯一)
 ```
 
-### Delete
+### 删除
 
 ```javascript
 const emptySet = new Set([1, true, "a"]);
 
-// delete values
+// 删除值
 emptySet.delete("a"); // 1, true
 emptySet.delete(true); // 1
 emptySet.delete(1); //
 ```
 
-### Has
+### 检查是否存在
 
 ```javascript
 const setObj = new Set([1, true, "a"]);
 
-// returns true or false
+// 返回 true 或 false
 setObj.has("a"); // true
 setObj.has(1); // true
 setObj.has(false); // false
 ```
 
-### Clear
+### 清空
 
 ```javascript
 const setObj = new Set([1, true, "a"]);
 
-// clears the set
+// 清空 set
 console.log(setObj); // 1, true, 'a'
 setObj.clear(); //
 ```
 
-### Size
+### 大小
 
 ```javascript
 const setObj = new Set([1, true, "a"]);
@@ -618,7 +617,7 @@ const setObj = new Set([1, true, "a"]);
 consoloe.log(setObj.size); // 3
 ```
 
-### ForEach
+### ForEach 遍历
 
 ```javascript
 const setObj = new Set([1, true, "a"]);
@@ -632,13 +631,13 @@ setObj.forEach(function (value) {
 // 'a'
 ```
 
-## JavaScript Loops
+## JavaScript 循环
 
-### While Loop
+### While 循环
 
 ```javascript
 while (condition) {
-  // code block to be executed
+  // 要执行的代码块
 }
 
 let i = 0;
@@ -648,7 +647,7 @@ while (i < 5) {
 }
 ```
 
-### Reverse Loop
+### 反向循环
 
 ```javascript
 const fruits = ["apple", "orange", "banana"];
@@ -662,7 +661,7 @@ for (let i = fruits.length - 1; i >= 0; i--) {
 // => 0. apple
 ```
 
-### Do…While Statement
+### Do…While 语句
 
 ```javascript
 x = 0;
@@ -676,7 +675,7 @@ do {
 // => 0 1 3 6 10
 ```
 
-### For Loop
+### For 循环
 
 ```javascript
 for (let i = 0; i < 4; i += 1) {
@@ -686,14 +685,14 @@ for (let i = 0; i < 4; i += 1) {
 // => 0, 1, 2, 3
 ```
 
-### Looping Through Arrays
+### 遍历数组
 
 ```javascript
 for (let i = 0; i < array.length; i++) {
   console.log(array[i]);
 }
 
-// => Every item in the array
+// => 数组中的每一项
 ```
 
 ### Break
@@ -719,7 +718,7 @@ for (i = 0; i < 10; i++) {
 }
 ```
 
-### Nested
+### 嵌套循环
 
 ```javascript
 for (let i = 0; i < 2; i += 1) {
@@ -729,7 +728,7 @@ for (let i = 0; i < 2; i += 1) {
 }
 ```
 
-### for...in loop
+### for...in 循环
 
 ```javascript
 const fruits = ["apple", "orange", "banana"];
@@ -742,7 +741,7 @@ for (let index in fruits) {
 // => 2
 ```
 
-### for...of loop
+### for...of 循环
 
 ```javascript
 const fruits = ["apple", "orange", "banana"];
@@ -755,23 +754,23 @@ for (let fruit of fruits) {
 // => banana
 ```
 
-## JavaScript Iterators {.cols-2}
+## JavaScript 迭代器 {.cols-2}
 
-### Functions Assigned to Variables
+### 赋值给变量的函数
 
 ```javascript
 let plusFive = (number) => {
   return number + 5;
 };
-// f is assigned the value of plusFive
+// f 被赋值为 plusFive
 let f = plusFive;
 
 plusFive(3); // 8
-// Since f has a function value, it can be invoked.
+// 因为 f 的值是一个函数，所以它可以被调用。
 f(9); // 14
 ```
 
-### Callback Functions
+### 回调函数
 
 ```javascript
 const isEven = (n) => {
@@ -780,12 +779,12 @@ const isEven = (n) => {
 
 let printMsg = (evenFunc, num) => {
   const isNumEven = evenFunc(num);
-  console.log(`${num} is an even number: ${isNumEven}.`);
+  console.log(`${num} 是偶数: ${isNumEven}.`);
 };
 
-// Pass in isEven as the callback function
+// 将 isEven 作为回调函数传入
 printMsg(isEven, 4);
-// => 4 is an even number: True.
+// => 4 是偶数: True.
 ```
 
 ### Array.reduce()
@@ -806,7 +805,7 @@ console.log(sum); // 10
 const members = ["Taylor", "Donald", "Don", "Natasha", "Bobby"];
 
 const announcements = members.map((member) => {
-  return member + " joined the contest.";
+  return member + " 加入了比赛。";
 });
 
 console.log(announcements);
@@ -831,9 +830,9 @@ const filteredArray = randomNumbers.filter((n) => {
 });
 ```
 
-## JavaScript Objects {.cols-2}
+## JavaScript 对象 {.cols-2}
 
-### Accessing Properties
+### 访问属性
 
 ```javascript
 const apple = {
@@ -844,21 +843,21 @@ console.log(apple.color); // => Green
 console.log(apple.price.bulk); // => $3/kg
 ```
 
-### Naming Properties
+### 命名属性
 
 ```javascript
-// Example of invalid key names
+// 无效键名的示例
 const trainSchedule = {
-  // Invalid because of the space between words.
+  // 无效，因为单词之间有空格。
   platform num: 10,
-  // Expressions cannot be keys.
+  // 表达式不能作为键。
   40 - 10 + 2: 30,
-  // A + sign is invalid unless it is enclosed in quotations.
+  // + 号无效，除非用引号括起来。
   +compartment: 'C'
 }
 ```
 
-### Non-existent properties
+### 不存在的属性
 
 ```javascript
 const classElection = {
@@ -868,7 +867,7 @@ const classElection = {
 console.log(classElection.place); // undefined
 ```
 
-### Mutable {.row-span-2}
+### 可变性 {.row-span-2}
 
 ```javascript
 const student = {
@@ -886,10 +885,10 @@ console.log(student);
 // { name: 'Sheldon', grade: 'F' }
 
 student = {};
-// TypeError: Assignment to constant variable.
+// TypeError: Assignment to constant variable. (类型错误：给常量赋值。)
 ```
 
-### Assignment shorthand syntax
+### 赋值简写语法
 
 ```javascript
 const person = {
@@ -901,7 +900,7 @@ console.log(name); // 'Tom'
 console.log(age); // '22'
 ```
 
-### Delete operator
+### delete 运算符
 
 ```javascript
 const person = {
@@ -911,7 +910,7 @@ const person = {
   goal: "learning JavaScript",
 };
 
-delete person.hobby; // or delete person[hobby];
+delete person.hobby; // 或者 delete person[hobby];
 
 console.log(person);
 /*
@@ -923,7 +922,7 @@ console.log(person);
 */
 ```
 
-### Objects as arguments
+### 对象作为参数
 
 ```javascript
 const origNum = 8;
@@ -936,15 +935,15 @@ const changeItUp = (num, obj) => {
 
 changeItUp(origNum, origObj);
 
-// Will output 8 since integers are passed by value.
+// 将输出 8，因为整数是按值传递的。
 console.log(origNum);
 
-// Will output 'red' since objects are passed
-// by reference and are therefore mutable.
+// 将输出 'red'，因为对象是按引用传递的，
+// 因此是可变的。
 console.log(origObj.color);
 ```
 
-### Shorthand object creation
+### 对象创建简写
 
 ```javascript
 const activity = "Surfing";
@@ -952,7 +951,7 @@ const beach = { activity };
 console.log(beach); // { activity: 'Surfing' }
 ```
 
-### this Keyword
+### this 关键字
 
 ```javascript
 const cat = {
@@ -965,12 +964,12 @@ const cat = {
 console.log(cat.whatName()); // => Pipey
 ```
 
-### Factory functions
+### 工厂函数
 
 ```javascript
-// A factory function that accepts 'name',
-// 'age', and 'breed' parameters to return
-// a customized dog object.
+// 一个工厂函数，接受 'name'、
+// 'age' 和 'breed' 参数来返回
+// 一个自定义的 dog 对象。
 const dogFactory = (name, age, breed) => {
   return {
     name: name,
@@ -983,17 +982,17 @@ const dogFactory = (name, age, breed) => {
 };
 ```
 
-### Object methods
+### 对象方法
 
 ```javascript
 const engine = {
-  // method shorthand, with one argument
+  // 方法简写，带一个参数
   start(adverb) {
-    console.log(`The engine starts up ${adverb}...`);
+    console.log(`引擎 ${adverb} 启动了...`);
   },
-  // anonymous arrow function expression with no arguments
+  // 匿名箭头函数表达式，不带参数
   sputter: () => {
-    console.log("The engine sputters...");
+    console.log("引擎 sputtering...");
   },
 };
 
@@ -1001,7 +1000,7 @@ engine.start("noisily");
 engine.sputter();
 ```
 
-### Getters and setters
+### Getters 和 Setters
 
 ```javascript
 const myCat = {
@@ -1014,16 +1013,16 @@ const myCat = {
   },
 };
 
-// Reference invokes the getter
+// 引用调用 getter
 console.log(myCat.name);
 
-// Assignment invokes the setter
+// 赋值调用 setter
 myCat.name = "Yankee";
 ```
 
-## JavaScript Classes
+## JavaScript 类
 
-### Static Methods
+### 静态方法
 
 ```javascript
 class Dog {
@@ -1035,7 +1034,7 @@ class Dog {
     console.log("This is " + this._name + " !");
   }
 
-  // A static method
+  // 静态方法
   static bark() {
     console.log("Woof!");
   }
@@ -1044,11 +1043,11 @@ class Dog {
 const myDog = new Dog("Buster");
 myDog.introduce();
 
-// Calling the static method
+// 调用静态方法
 Dog.bark();
 ```
 
-### Class
+### 类
 
 ```javascript
 class Song {
@@ -1058,7 +1057,7 @@ class Song {
   }
 
   play() {
-    console.log("Song playing!");
+    console.log("歌曲正在播放!");
   }
 }
 
@@ -1066,7 +1065,7 @@ const mySong = new Song();
 mySong.play();
 ```
 
-### Class Constructor
+### 类构造函数
 
 ```javascript
 class Song {
@@ -1080,16 +1079,16 @@ const mySong = new Song("Bohemian Rhapsody", "Queen");
 console.log(mySong.title);
 ```
 
-### Class Methods
+### 类方法
 
 ```javascript
 class Song {
   play() {
-    console.log("Playing!");
+    console.log("正在播放!");
   }
 
   stop() {
-    console.log("Stopping!");
+    console.log("正在停止!");
   }
 }
 ```
@@ -1097,7 +1096,7 @@ class Song {
 ### extends
 
 ```javascript
-// Parent class
+// 父类
 class Media {
   constructor(info) {
     this.publishDate = info.publishDate;
@@ -1105,7 +1104,7 @@ class Media {
   }
 }
 
-// Child class
+// 子类
 class Song extends Media {
   constructor(songData) {
     super(songData);
@@ -1120,24 +1119,24 @@ const mySong = new Song({
 });
 ```
 
-## JavaScript Modules {.cols-2}
+## JavaScript 模块 {.cols-2}
 
-### Export
+### 导出
 
 ```javascript
 // myMath.js
 
-// Default export
+// 默认导出
 export default function add(x, y) {
   return x + y;
 }
 
-// Normal export
+// 普通导出
 export function subtract(x, y) {
   return x - y;
 }
 
-// Multiple exports
+// 多个导出
 function multiply(x, y) {
   return x * y;
 }
@@ -1147,7 +1146,7 @@ function duplicate(x) {
 export { multiply, duplicate };
 ```
 
-### Import
+### 导入
 
 ```javascript
 // main.js
@@ -1162,7 +1161,7 @@ console.log(duplicate(5)) // 10
 <script type="module" src="main.js"></script>
 ```
 
-### Export Module
+### 导出模块 (Node.js)
 
 ```javascript
 // myMath.js
@@ -1180,7 +1179,7 @@ function duplicate(x) {
   return x * 2;
 }
 
-// Multiple exports in node.js
+// Node.js 中的多个导出
 module.exports = {
   add,
   subtract,
@@ -1189,7 +1188,7 @@ module.exports = {
 };
 ```
 
-### Require Module
+### 导入模块 (Node.js)
 
 ```javascript
 // main.js
@@ -1203,16 +1202,16 @@ console.log(myMath.duplicate(5)); // 10
 
 ## JavaScript Promises {.cols-2}
 
-### Promise states {.row-span-2}
+### Promise 状态 {.row-span-2}
 
 ```javascript
 const promise = new Promise((resolve, reject) => {
   const res = true;
-  // An asynchronous operation.
+  // 异步操作。
   if (res) {
-    resolve("Resolved!");
+    resolve("已解决!");
   } else {
-    reject(Error("Error"));
+    reject(Error("错误"));
   }
 });
 
@@ -1222,11 +1221,11 @@ promise.then(
 );
 ```
 
-### Executor function
+### 执行器函数
 
 ```javascript
 const executorFn = (resolve, reject) => {
-  resolve("Resolved!");
+  resolve("已解决!");
 };
 
 const promise = new Promise(executorFn);
@@ -1236,18 +1235,18 @@ const promise = new Promise(executorFn);
 
 ```javascript
 const loginAlert = () => {
-  console.log("Login");
+  console.log("登录");
 };
 
 setTimeout(loginAlert, 6000);
 ```
 
-### .then() method
+### .then() 方法
 
 ```javascript
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("Result");
+    resolve("结果");
   }, 200);
 });
 
@@ -1266,7 +1265,7 @@ promise.then(
 ```javascript
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    reject(Error("Promise Rejected Unconditionally."));
+    reject(Error("Promise 无条件拒绝。"));
   }, 1000);
 });
 
@@ -1299,7 +1298,7 @@ Promise.all([promise1, promise2]).then((res) => {
 });
 ```
 
-### Avoiding nested Promise and .then()
+### 避免嵌套 Promise 和 .then()
 
 ```javascript
 const promise = new Promise((resolve, reject) => {
@@ -1320,28 +1319,28 @@ const print = (val) => {
   console.log(val);
 };
 
-// Chaining them all together
+// 将它们链接在一起
 promise.then(twoStars).then(oneDot).then(print);
 ```
 
-### Creating
+### 创建 Promise
 
 ```javascript
 const executorFn = (resolve, reject) => {
-  console.log("The executor function of the promise!");
+  console.log("Promise 的执行器函数!");
 };
 
 const promise = new Promise(executorFn);
 ```
 
-### Chaining multiple .then()
+### 链接多个 .then()
 
 ```javascript
 const promise = new Promise((resolve) => setTimeout(() => resolve("dAlan"), 100));
 
 promise
   .then((res) => {
-    return res === "Alan" ? Promise.resolve("Hey Alan!") : Promise.reject("Who are you?");
+    return res === "Alan" ? Promise.resolve("Hey Alan!") : Promise.reject("你是谁?");
   })
   .then(
     (res) => {
@@ -1353,7 +1352,7 @@ promise
   );
 ```
 
-### Fake http Request with Promise
+### 使用 Promise 模拟 http 请求
 
 ```javascript
 const mock = (success, timeout = 1000) => {
@@ -1362,7 +1361,7 @@ const mock = (success, timeout = 1000) => {
       if (success) {
         resolve({ status: 200, data: {} });
       } else {
-        reject({ message: "Error" });
+        reject({ message: "错误" });
       }
     }, timeout);
   });
@@ -1378,7 +1377,7 @@ const someEvent = async () => {
 
 ## JavaScript Async-Await {.cols-2}
 
-### Asynchronous
+### 异步
 
 ```javascript
 function helloWorld() {
@@ -1390,22 +1389,22 @@ function helloWorld() {
 }
 
 const msg = async function () {
-  //Async Function Expression
+  //异步函数表达式
   const msg = await helloWorld();
-  console.log("Message:", msg);
+  console.log("消息:", msg);
 };
 
 const msg1 = async () => {
-  //Async Arrow Function
+  //异步箭头函数
   const msg = await helloWorld();
-  console.log("Message:", msg);
+  console.log("消息:", msg);
 };
 
-msg(); // Message: Hello World! <-- after 2 seconds
-msg1(); // Message: Hello World! <-- after 2 seconds
+msg(); // 消息: Hello World! <-- 2 秒后
+msg1(); // 消息: Hello World! <-- 2 秒后
 ```
 
-### Resolving Promises
+### 解析 Promises
 
 ```javascript
 let pro1 = Promise.resolve(5);
@@ -1417,7 +1416,7 @@ let pro3 = new Promise(function (resolve, reject) {
 Promise.all([pro1, pro2, pro3]).then(function (values) {
   console.log(values);
 });
-// expected => Array [5, 44, "foo"]
+// 预期 => Array [5, 44, "foo"]
 ```
 
 ### Async Await Promises
@@ -1433,26 +1432,26 @@ function helloWorld() {
 
 async function msg() {
   const msg = await helloWorld();
-  console.log("Message:", msg);
+  console.log("消息:", msg);
 }
 
-msg(); // Message: Hello World! <-- after 2 seconds
+msg(); // 消息: Hello World! <-- 2 秒后
 ```
 
-### Error Handling
+### 错误处理
 
 ```javascript
-let json = '{ "age": 30 }'; // incomplete data
+let json = '{ "age": 30 }'; // 不完整的数据
 
 try {
-  let user = JSON.parse(json); // <-- no errors
-  console.log(user.name); // no name!
+  let user = JSON.parse(json); // <-- 没有错误
+  console.log(user.name); // 没有 name!
 } catch (e) {
-  console.error("Invalid JSON data!");
+  console.error("无效的 JSON 数据!");
 }
 ```
 
-### Aysnc await operator
+### Async await 运算符
 
 ```javascript
 function helloWorld() {
@@ -1465,13 +1464,13 @@ function helloWorld() {
 
 async function msg() {
   const msg = await helloWorld();
-  console.log("Message:", msg);
+  console.log("消息:", msg);
 }
 
-msg(); // Message: Hello World! <-- after 2 seconds
+msg(); // 消息: Hello World! <-- 2 秒后
 ```
 
-## JavaScript Requests
+## JavaScript 请求
 
 ### JSON
 
@@ -1483,7 +1482,7 @@ const jsonObj = {
 };
 ```
 
-Also see: [JSON cheatsheet](/json)
+另请参阅: [JSON 速查表](/json)
 
 ### XMLHttpRequest
 
@@ -1492,8 +1491,7 @@ const xhr = new XMLHttpRequest();
 xhr.open("GET", "mysite.com/getjson");
 ```
 
-`XMLHttpRequest` is a browser-level API that enables the client to script data transfers via JavaScript, NOT part of the
-JavaScript language.
+`XMLHttpRequest` 是一个浏览器级别的 API，它使客户端能够通过 JavaScript 编写数据传输脚本，它不是 JavaScript 语言的一部分。
 
 ### GET
 
@@ -1540,24 +1538,24 @@ fetch(url, {
     if (response.ok) {
       return response.json();
     }
-    throw new Error('Request failed!');
+    throw new Error('请求失败!');
   }, networkError => {
     console.log(networkError.message)
   })
 }
 ```
 
-### JSON Formatted
+### JSON 格式化
 
 ```javascript
-fetch("url-that-returns-JSON")
+fetch("url-that-returns-JSON") // 获取返回 JSON 的 URL
   .then((response) => response.json())
   .then((jsonResponse) => {
     console.log(jsonResponse);
   });
 ```
 
-### promise url parameter fetch api
+### fetch api 的 promise url 参数
 
 ```javascript
 fetch('url')
@@ -1570,7 +1568,7 @@ fetch('url')
 );
 ```
 
-### Fetch API Function
+### Fetch API 函数
 
 ```javascript
 fetch("https://api-xxx.com/endpoint", {
@@ -1582,7 +1580,7 @@ fetch("https://api-xxx.com/endpoint", {
       if (response.ok) {
         return response.json();
       }
-      throw new Error("Request failed!");
+      throw new Error("请求失败!");
     },
     (networkError) => {
       console.log(networkError.message);
@@ -1593,14 +1591,14 @@ fetch("https://api-xxx.com/endpoint", {
   });
 ```
 
-### async await syntax {.col-span-2}
+### async await 语法 {.col-span-2}
 
 ```javascript
 const getSuggestions = async () => {
   const wordQuery = inputField.value;
   const endpoint = `${url}${queryParams}${wordQuery}`;
   try {
-    const response = await fetch(endpoint, { cache: "no-cache" });
+    const response = await fetch(endpoint, { cache: "no-cache" }); // 不使用缓存
     if (response.ok) {
       const jsonResponse = await response.json();
     }

@@ -3,28 +3,27 @@ title: Taskset
 date: 2023-04-07 14:25:44
 background: bg-[#8bbb55]
 tags:
-  - process
-  - process manager
+  - 进程
+  - 进程管理器
 categories:
-  - Linux Command
+  - Linux 命令
 intro:
-  The taskset command is used to set or retrieve the CPU affinity of a running process given its pid, or to launch a new
-  command with a given CPU affinity.
+  taskset 命令用于设置或检索正在运行进程的 CPU 亲和性（给定其 pid），或使用给定的 CPU 亲和性启动新命令。
 plugins:
   - copyCode
 ---
 
-## Getting Started {.cols-3}
+## 入门 {.cols-3}
 
-### Usage
+### 用法
 
-The default behavior is to run a new command with a given affinity mask
+默认行为是使用给定的亲和性掩码运行一个新命令。
 
 ```shell
-$ taskset [mask] [command] [arguments]
+$ taskset [掩码] [命令] [参数]
 ```
 
-#### Usage #2
+#### 用法 #2
 
 ```shell
 $ taskset -p [pid]
@@ -33,100 +32,99 @@ $ taskset -p [pid]
 ---
 
 ```shell
-$ taskset -p [mask] [pid]
+$ taskset -p [掩码] [pid]
 ```
 
-You can also retrieve the CPU affinity of an existing task
+您还可以检索现有任务的 CPU 亲和性。
 
-### Common Options {.col-span-2}
+### 常用选项 {.col-span-2}
 
-| Command | Alternavite | Meaning                                                                                                                                                  |
-| ------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `-a`    | --all-tasks | Set or retrieve the CPU affinity of all the task (threads) for a given PID.                                                                              |
-| `-c`    | --cpu-list  | Interpret mask as numerical list of processors instead of a bitmask.</br>Numbers are separated by commas and may include ranges. For example: `0,5,8-11` |
-| `-p`    | --pid       | Operate on an existing PID and do not launch a new task.                                                                                                 |
-| `-h`    | --help      | Display help text and exit.                                                                                                                              |
-| `-v`    | --version   | Print version and exit.                                                                                                                                  |
+| 命令 | 替代选项    | 含义                                                                                                                               |
+| ---- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `-a` | --all-tasks | 设置或检索给定 PID 的所有任务（线程）的 CPU 亲和性。                                                                                       |
+| `-c` | --cpu-list  | 将掩码解释为处理器的数字列表，而不是位掩码。</br>数字用逗号分隔，可以包含范围。例如：`0,5,8-11`                                                 |
+| `-p` | --pid       | 操作现有 PID，不启动新任务。                                                                                                               |
+| `-h` | --help      | 显示帮助文本并退出。                                                                                                                       |
+| `-v` | --version   | 打印版本信息并退出。                                                                                                                     |
 
 {.show-header}
 
-## Example
+## 示例
 
-### View CPU Affinity
+### 查看 CPU 亲和性
 
 ```shell
 $ taskset -cp 29523
-pid 29523's current affinity list: 0-15
+pid 29523 当前的亲和性列表：0-15
 ```
 
-That mean process with PID `29523` is active on CPU range from `[0,1,...,15]` which means `16` total.
+这意味着 PID 为 `29523` 的进程在 CPU 范围 `[0,1,...,15]` 上活动，总共 `16` 个 CPU。
 
-**PID**: Process Identifier - is a unique numerical identifier given to each running process, you can view PID of
-processes in `top` or `htop` tools
+**PID**：进程标识符 - 是分配给每个正在运行的进程的唯一数字标识符，您可以在 `top` 或 `htop` 工具中查看进程的 PID。
 
-_If you run the above command but get the message `bad usage`, try with PID = 1_
+_如果您运行上述命令但收到 `bad usage` 消息，请尝试使用 PID = 1_
 
 ```shell
 $ taskset -cp 1
 ```
 
-### Set CPU Affinity
+### 设置 CPU 亲和性
 
-Now let's try to set process in to a specify CPU. For example, we have a process has PID = 14846
+现在让我们尝试将进程设置到指定的 CPU。例如，我们有一个 PID = 14846 的进程。
 
-Let's see the CPU affinity list of this process first:
+首先让我们看看这个进程的 CPU 亲和性列表：
 
 ```shell
 $ taskset -cp 14846
-pid 14846's current affinity list: 0-15
+pid 14846 当前的亲和性列表：0-15
 ```
 
-#### Change CPU affinity to 1:
+#### 将 CPU 亲和性更改为 1：
 
 ```shell
 $ taskset -cp 1 14846
-pid 14846's current affinity list: 0-15
-pid 14846's new affinity list: 1
+pid 14846 当前的亲和性列表：0-15
+pid 14846 新的亲和性列表：1
 ```
 
-As we see, CPU affinity was changed
+如我们所见，CPU 亲和性已更改。
 
-### Set CPU Affinity with multiple value
+### 设置具有多个值的 CPU 亲和性
 
-That mean new CPU affinity list is `[0,1,2,3]`
+这意味着新的 CPU 亲和性列表是 `[0,1,2,3]`。
 
 ```shell
 $ taskset -cp 0-3 14846
-pid 14846's current affinity list: 1
-pid 14846's new affinity list: 0-3
+pid 14846 当前的亲和性列表：1
+pid 14846 新的亲和性列表：0-3
 ```
 
-You can set single CPU with the following command:
+您可以使用以下命令设置单个 CPU：
 
 ```shell
 $ taskset -cp 5,8,12 14846
-pid 14846's current affinity list: 0-3
-pid 14846's new affinity list: 5,8,12
+pid 14846 当前的亲和性列表：0-3
+pid 14846 新的亲和性列表：5,8,12
 ```
 
-That mean new CPU affinity list is `[5,8,12]`
+这意味着新的 CPU 亲和性列表是 `[5,8,12]`。
 
-### Other
+### 其他
 
-You can set affinity by range with other like a specify CPU
+您可以像指定 CPU 一样通过范围设置亲和性。
 
 ```shell
 $ taskset -cp 1-3,12 14846
 ```
 
-Or
+或者
 
 ```shell
 $ taskset -cp 1-6:2 14846
 ```
 
-The suffix ":N" specifies stride in the range, for example 0-10:3 is interpreted as 0,3,6,9 list.
+后缀 ":N" 指定范围中的步长，例如 0-10:3 被解释为列表 0,3,6,9。
 
-## Also see
+## 另请参阅
 
-[taskset — Linux manual page](https://man7.org/linux/man-pages/man1/taskset.1.html) _(man7.org)_
+[taskset — Linux 手册页](https://man7.org/linux/man-pages/man1/taskset.1.html) _(man7.org)_

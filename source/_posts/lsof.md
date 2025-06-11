@@ -1,5 +1,5 @@
 ---
-title: Lsof
+title: Lsof 命令
 date: 2021-02-05 16:12:47
 background: bg-blue-400
 tags:
@@ -7,25 +7,25 @@ tags:
   - processes
   - utility
 categories:
-  - Linux Command
+  - Linux 命令
 intro: |
-  This quick reference cheat sheet provides various for using lsof command.
+  本快速参考备忘单提供了 `lsof` 命令的各种用法。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门
 
-### Introduction
+### 简介
 
-**lsof** meaning `L`i`S`t `O`pen `F`iles is used to find out which files are open by which process
+**lsof** 的含义是 `L`i`S`t `O`pen `F`iles（列出打开的文件），用于找出哪些进程打开了哪些文件。
 
 ```shell script
 $ lsof
 $ sudo lsof -u root
 ```
 
-### Port-specific
+### 特定端口
 
 ```shell script
 $ lsof -i :8080
@@ -36,7 +36,7 @@ $ lsof -i UDP
 $ lsof -i @192.168.1.5
 ```
 
-### Process-specific
+### 特定进程
 
 ```shell script
 $ lsof -c mysql
@@ -46,44 +46,45 @@ $ lsof -c nginx
 $ lsof -c ssh -c httpd
 ```
 
-### User-specific
+### 特定用户
 
 ```shell script
 $ lsof -u www-data
 $ lsof -u www-data -u ubuntu
-$ lsof -i -u ^root # Except certain user
+$ lsof -i -u ^root # 排除特定用户
 ```
 
-### Network-specific
+### 特定网络
 
 ```shell script
-$ lsof -i 4   # IPv4 only
-$ lsof -i 6   # IPv6 only
+$ lsof -i 4   # 仅 IPv4
+$ lsof -i 6   # 仅 IPv6
 ```
 
-### PID-specific
+### 特定 PID
 
 ```shell script
 $ lsof -p 1753
-$ lsof -p ^3  # Except certain pids
+$ lsof -p ^3  # 排除特定 PID
 ```
 
-### Filename-specific
+### 特定文件名
 
 ```shell script
 $ lsof /var/log/messages
 $ lsof /etc/passwd
 ```
 
-### Directory-specific
+### 特定目录
 
 ```shell script
-$ lsof +D /var/log # Within a directory
+$ lsof +D /var/log # 目录内
 ```
 
-### Kill
+### 终止进程
 
 ```shell script
 $ kill -9 `lsof -t -u apache`
 $ kill -9 $(lsof -t -i :8080)
 ```
+

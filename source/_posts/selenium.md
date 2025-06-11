@@ -3,19 +3,19 @@ title: Selenium
 date: 2024-05-04 19:50:01
 background: bg-[#62ae41]
 tags:
-  - automation
-  - testing
+  - 自动化
+  - 测试
 categories:
-  - Programming
+  - 编程
 intro: |
-  This cheat sheet is a crash course for Selenium beginners and help to get the idea about the basic concepts of Selenium.
+  本速查表是为 Selenium初学者准备的速成课程，旨在帮助他们了解 Selenium 的基本概念。
 ---
 
-## Getting Started
+## 入门
 
-### Initialize Browser Drivers {.row-span-2}
+### 初始化浏览器驱动 {.row-span-2}
 
-| Browser   | Syntax                                  |
+| 浏览器    | 语法                                    |
 | --------- | --------------------------------------- |
 | `Chrome`  | WebDriver driver = new ChromeDriver();  |
 | `Edge`    | WebDriver driver = new EdgeDriver();    |
@@ -24,133 +24,133 @@ intro: |
 
 {.show-header .left-text}
 
-### Selenium Locators {.col-span-2}
+### Selenium 定位器 {.col-span-2}
 
-| Locator           | Syntax                                        |
+| 定位器            | 语法                                          |
 | ----------------- | --------------------------------------------- |
 | `className`       | driver.findElement(By.className (“key”))      |
 | `cssSelector`     | driver.findElement(By.cssSelector(key"))      |
 | `id `             | driver.findElement(By.id(key"))               |
 | `linkText`        | driver.findElement(By.linkText(key"))         |
 | `name`            | driver.findElement(By.name(“key"))            |
-| `partialLinkText` | driver.findElement(By.partialLinkText(“key")) |
+| `partialLinkText` | driver.findElement(By.partialLinkText(“key”)) |
 | `tagName `        | driver.findElement(By.tagName (“key”))        |
-| `xpath`           | driver.findElement(By.xpath(“key"))           |
+| `xpath`           | driver.findElement(By.xpath(“key”))           |
 
 {.show-header .left-text}
 
-### Navigate to URL
+### 导航到 URL
 
 ```shell script
 driver.get("https://www.example.com");
 ```
 
-### Close all browser windows
+### 关闭所有浏览器窗口
 
 ```shell script
 driver.quit();
 ```
 
-### Close the current browser window
+### 关闭当前浏览器窗口
 
 ```shell script
 driver.close();
 ```
 
-### Navigation {.col-span-2}
+### 导航 {.col-span-2}
 
-| Description                     | Syntax                                           |
+| 描述                     | 语法                                           |
 | ------------------------------- | ------------------------------------------------ |
-| `Navigate to a new URL`         | driver.navigate().to("https://www.newsite.com"); |
-| `Go forward to the next page`   | driver.navigate().forward();                     |
-| `Go back to the previous page ` | driver.navigate().back();                        |
-| `Refresh the current page`      | driver.navigate().refresh();                     |
+| `导航到一个新的 URL`         | driver.navigate().to("https://www.newsite.com"); |
+| `前进到下一页`   | driver.navigate().forward();                     |
+| `返回到上一页 ` | driver.navigate().back();                        |
+| `刷新当前页面`      | driver.navigate().refresh();                     |
 
 {.show-header .left-text}
 
-### Frame Handling {.col-span-2}
+### Frame 处理 {.col-span-2}
 
-| Description                       | Syntax                              |
+| 描述                       | 语法                              |
 | --------------------------------- | ----------------------------------- |
-| `Switch to a frame`               | driver.switchTo().frame("frameId"); |
-| `Switch back to the main content` | driver.switchTo().defaultContent(); |
+| `切换到一个 frame`               | driver.switchTo().frame("frameId"); |
+| `切换回主内容` | driver.switchTo().defaultContent(); |
 
 {.show-header .left-text}
 
-### Alerts/Pop-Ups
+### 警告/弹窗
 
 ```shell script
 Alert alert = driver.switchTo().alert();
 
-// Used to click on the ‘OK’ button of the alert.
+// 用于点击警告框的“确定”按钮。
 alert.accept();
 
-// Used when the ‘Cancel’ button is clicked in the alert box.
+// 用于点击警告框中的“取消”按钮。
 alert.dismiss();
 
-// Used to send text to an alert
+// 用于向警告框发送文本
 alert.sendKeys("text");
 
-// Used to capture the alert message.
+// 用于捕获警告消息。
 alert().getText();
 
 ```
 
-### Mouse and Keyboard Actions {.col-span-2}
+### 鼠标和键盘操作 {.col-span-2}
 
 ```shell script
 Actions actions = new Actions(driver);
 
-// Shifts the mouse pointer to the center of the element and click on it
+// 将鼠标指针移动到元素的中心并点击它
 actions.moveToElement(element).click().build().perform();
 
-// Performs double click on the element
+// 对元素执行双击操作
 actions.doubleClick(element).perform();
 
-// Drags the element from one point and drops to another
+// 将元素从一个点拖动到另一个点
 actions.dragAndDrop(source, target).perform();
 
-// Sends a series of keys to the element
+// 向元素发送一系列按键
 actions.sendKeys(element, "text").perform();
 
 ```
 
-### Page Information {.col-span-1}
+### 页面信息 {.col-span-1}
 
 ```shell script
-// Get the page title
+// 获取页面标题
 driver.getTitle();
 
-// Get the current page URL
+// 获取当前页面 URL
 driver.getCurrentUrl();
 
-// Get the entire page source code
+// 获取整个页面源代码
 driver.getPageSource();
 
 ```
 
-### Waits {.col-span-3}
+### 等待 {.col-span-3}
 
 ```shell script
-// Explicit Wait :- These are conditional waits can be applied to satisfy a particular condition
+// 显式等待：这些是条件等待，可以应用于满足特定条件
 WebDriverWait wait = new WebDriverWait(driver, 10);
 wait.until(ExpectedConditions.elementToBeClickable(element));
 ```
 
 ```shell script
-// Implicit Wait :- Once the command is run, Implicit Wait remains for the entire duration for which the browser is open.
+// 隐式等待：一旦命令运行，隐式等待将在浏览器打开的整个持续时间内保持。
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 ```
 
 ```shell script
-// Fluent Wait :- Fluent Wait in Selenium marks the maximum amount of time for Selenium WebDriver to wait for a certain condition (web element) becomes visible. It also defines how frequently WebDriver will check if the condition appears before throwing the “ElementNotVisibleException”.
+// 流畅等待：Selenium 中的流畅等待标记了 Selenium WebDriver 等待某个条件（Web 元素）变为可见的最长时间。它还定义了 WebDriver 在抛出“ElementNotVisibleException”之前检查条件出现的频率。
 FluentWait wait = new FluentWait(driver);
-//Specify the timeout of the wait
+//指定等待的超时时间
 wait.withTimeout(5000, TimeUnit.MILLISECONDS);
-//Specify polling time
+//指定轮询时间
 wait.pollingEvery(250, TimeUnit.MILLISECONDS);
-//Specify what exceptions to ignore
+//指定要忽略的异常
 wait.ignoring(NoSuchElementException.class)
-//This is how we specify the condition to wait on.
+//这是我们指定等待条件的方式。
 wait.until(ExpectedConditions.alertIsPresent());
 ```

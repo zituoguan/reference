@@ -1,55 +1,51 @@
 ---
-title: HTMX  
-date: 2025-06-07 19:30:00  
-background: bg-[#ff5f4d]  
+title: HTMX
+date: 2025-06-07 19:30:00
+background: bg-[#ff5f4d]
 tags:
-  - frontend
+  - 前端
   - javascript
   - htmx
 categories:
-  - Programming
+  - 编程
 intro: |
-  A modern, minimal JavaScript library that allows you to create dynamic web interfaces using HTML attributes.
+  一个现代、简约的 JavaScript 库，它允许您使用 HTML 属性来创建动态的 Web 界面。
 plugins:
   - copyCode
 ---
 
+## 开始使用 {.cols-3}
 
-
-## Getting Started {.cols-3}
-
-### CDN Import
+### CDN 导入
 
 ```html
 <script src="https://unpkg.com/htmx.org@1.9.2"></script>
 ```
 
-### Basic Usage
+### 基本用法
 
 ```html
-<button 
-  hx-get="/hello" 
+<button
+  hx-get="/hello"
   hx-target="#result">
-  Say Hi
+  打个招呼
 </button>
 <div id="result"></div>
 ```
 
-### Server Response
+### 服务器响应
 
 ```html
-<!-- /hello response -->
-<p>Hello from server</p>
+<!-- /hello 响应 -->
+<p>来自服务器的问候</p>
 ```
 
+## 核心属性 {.cols-3}
 
-
-## Core Attributes {.cols-3}
-
-### `hx-get`, `hx-post`, etc.
+### `hx-get`, `hx-post` 等
 
 ```html
-<a hx-get="/page">Load Page</a>
+<a hx-get="/page">加载页面</a>
 <form hx-post="/submit"></form>
 ```
 
@@ -63,28 +59,26 @@ plugins:
 ### `hx-trigger`
 
 ```html
-<input 
-  hx-get="/search" 
+<input
+  hx-get="/search"
   hx-trigger="keyup changed delay:300ms"
   hx-target="#results" />
 ```
 
-
-
-## Swap & Out of Band {.cols-3}
+## Swap（交换）与 Out of Band（带外） {.cols-3}
 
 ### `hx-swap`
 
 ```html
-<div 
-  hx-get="/frag" 
+<div
+  hx-get="/frag"
   hx-swap="innerHTML">
 </div>
 ```
 
 * `outerHTML`
 * `innerHTML`
-* `beforebegin`, `afterbegin`, etc.
+* `beforebegin`, `afterbegin` 等
 
 ### `hx-swap-oob`
 
@@ -92,24 +86,22 @@ plugins:
 <div hx-swap-oob="true" id="msg"></div>
 ```
 
-*Useful for global updates from partials.*
+*适用于通过局部视图进行全局更新。*
 
-### Swap Modifiers
+### Swap 修饰符
 
 ```html
 hx-swap="outerHTML transition:true swap:1s"
 ```
 
+## 表单与事件 {.cols-3}
 
-
-## Forms & Events {.cols-3}
-
-### Auto POST on Submit
+### 提交时自动 POST
 
 ```html
 <form hx-post="/submit" hx-target="#status">
   <input name="name" />
-  <button type="submit">Send</button>
+  <button type="submit">发送</button>
 </form>
 <div id="status"></div>
 ```
@@ -118,95 +110,88 @@ hx-swap="outerHTML transition:true swap:1s"
 
 ```html
 <input id="user-id" name="id" />
-<button 
-  hx-post="/update" 
+<button
+  hx-post="/update"
   hx-include="#user-id">
-  Update
+  更新
 </button>
 ```
 
 ### `hx-vals`
 
 ```html
-<button 
-  hx-post="/save" 
+<button
+  hx-post="/save"
   hx-vals='{"id": 42, "active": true}'>
-  Save
+  保存
 </button>
 ```
 
+## 高级功能 {.cols-3}
 
-
-## Advanced Features {.cols-3}
-
-### Loading Indicator
+### 加载指示器
 
 ```html
-<button 
-  hx-get="/load" 
+<button
+  hx-get="/load"
   hx-indicator="#spinner">
-  Load
+  加载
 </button>
-<div id="spinner" class="htmx-indicator">Loading...</div>
+<div id="spinner" class="htmx-indicator">加载中...</div>
 ```
 
 ### `hx-push-url`
 
 ```html
-<a hx-get="/page" hx-push-url="true">Go</a>
+<a hx-get="/page" hx-push-url="true">前往</a>
 ```
 
-### Polling
+### 轮询
 
 ```html
 <div hx-get="/time" hx-trigger="every 5s"></div>
 ```
 
+## 事件与扩展 {.cols-3}
 
-
-## Events & Extensions {.cols-3}
-
-### Listen to Events
+### 监听事件
 
 ```js
 document.body.addEventListener('htmx:afterSwap', e => {
-  console.log("Swap complete");
+  console.log("交换完成");
 });
 ```
 
-### Event Hooks
+### 事件钩子
 
 * `htmx:beforeRequest`
 * `htmx:afterSwap`
 * `htmx:responseError`
 
-### Extensions
+### 扩展
 
 ```html
 <script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>
 <form hx-post="/api" hx-ext="json-enc"></form>
 ```
 
+## 示例用例 {.cols-2}
 
-
-## Example Use Case {.cols-2}
-
-### Python Backend (Flask)
+### Python 后端 (Flask)
 
 ```python
 @app.route("/hello")
 def hello():
-    return "<p>Hello, HTMX!</p>"
+    return "<p>你好，HTMX！</p>"
 ```
 
-### HTML Client
+### HTML 客户端
 
 ```html
-<button 
-  hx-get="/hello" 
+<button
+  hx-get="/hello"
   hx-target="#msg">
-  Click
+  点击
 </button>
 <div id="msg"></div>
 ```
-

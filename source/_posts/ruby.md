@@ -3,20 +3,20 @@ title: Ruby
 date: 2024-04-25 09:50:25
 background: bg-red-500
 tags:
-  - script
-  - interpret
+  - 脚本
+  - 解释型
 categories:
-  - Programming
+  - 编程
 intro: |
-  The [Ruby](https://www.ruby-lang.org/) cheat sheet is a one-page reference sheet for the Ruby programming language.
+  [Ruby](https://www.ruby-lang.org/) 速查表是 Ruby 编程语言的单页参考表。
 plugins:
   - copyCode
   - runCode
 ---
 
-## Getting Started
+## 入门
 
-### Install
+### 安装
 
 ```bash
 # Debian, Ubuntu
@@ -27,13 +27,12 @@ $ brew install ruby # macOS
 $ docker run -it --rm ruby:latest # Docker
 ```
 
-### What is Gemfile and Gemfile.lock {.row-span-2}
+### Gemfile 和 Gemfile.lock 是什么 {.row-span-2}
 
-- [Gemfile](https://bundler.io/v2.3/man/gemfile.5.html) Is the Bundler (also gem) configuration file that contains the
-  project's gem list (dependencies)
+- [Gemfile](https://bundler.io/v2.3/man/gemfile.5.html) 是 Bundler（也是 gem）的配置文件，其中包含项目的 gem 列表（依赖项）。
 
 ```ruby
-# Specify gem in the Gemfile in the project root directory
+# 在项目根目录的 Gemfile 中指定 gem
 ruby '3.1.2'
 
 source 'https://rubygems.org'
@@ -42,93 +41,93 @@ gem 'rack', '~>3.0.10'
 gem 'rspec', :require => 'spec'
 ```
 
-Install all gems in Gemfile
+安装 Gemfile 中的所有 gem
 
 ```bash
 $ bundle install
 ```
 
-Solve the problem of Gemfile.lock inconsistency between mac for development and linux for production
+解决开发环境 mac 和生产环境 linux 之间 Gemfile.lock 不一致的问题
 
 ```bash
 bundle lock --add-platform x86_64-linux
 ```
 
-### Install a specific version of a specific ruby gem
+### 安装特定版本的特定 ruby gem
 
 ```bash
 $ gem install bundler -v 2.4.20
 $ gem install minitest -v 5.22.3
 ```
 
-### Update gems using Bundler
+### 使用 Bundler 更新 gem
 
 ```bash
-# Updating a single gem using Bundler
+# 使用 Bundler 更新单个 gem
 $ bundle update nokogiri
-# Use Bundler to update each gem in the Gemfile
+# 使用 Bundler 更新 Gemfile 中的每个 gem
 $ bundle update
 ```
 
-### Comment {.row-span-1}
+### 注释 {.row-span-1}
 
 ```ruby
-# This is a single line comments.
+# 这是单行注释。
 =begin
-Multi-line
-Comment
+多行
+注释
 =end
-puts "Hello world!"  # Inline comments for code
+puts "Hello world!"  # 代码的行内注释
 ```
 
-### reserved words {.col-span-1}
+### 保留字 {.col-span-1}
 
-| Reserved words | Description                                                                                                |
+| 保留字        | 描述                                                                                                |
 | :------------- | :--------------------------------------------------------------------------------------------------------- |
-| `__ENCODING__` | The script encoding of the current file                                                                    |
-| `__LINE__`     | The line number of this keyword in the current file                                                        |
-| `__FILE__`     | The path of the current file                                                                               |
-| `BEGIN`        | Code enclosed in { } is run before the program is run                                                      |
-| `END`          | Code enclosed in { } is run at the end of the program                                                      |
-| `alias`        | Create an alias for an existing method, operator, or global variable                                       |
-| `and`          | Logical AND operator                                                                                       |
-| `begin`        | Begin a block of code                                                                                      |
-| `break`        | Terminate a loop                                                                                           |
-| `case`         | Compare an expression with matching `when` clauses, terminated with <br/> `end`                            |
-| `class`        | Define a class                                                                                             |
-| `def`          | define a function/method                                                                                   |
-| `defined?`     | Check if a variable or function exist                                                                      |
-| `do`           | Start a block of code, terminated with the <br/> `end` keyword                                             |
-| `else`         | Execute the following code if previous conditions are not met                                              |
-| `elsif`        | Alternative condition for if expressions                                                                   |
-| `end`          | End blocks of code starting with keywords like `begin`, `class`,`def`,`do`,`if`, etc.                      |
-| `ensure`       | Always execute at the end of a block                                                                       |
-| `false`        | Logical boolean value false                                                                                |
-| `for`          | Start a `for` loop                                                                                         |
-| `if`           | Execute the code block `if` the condition is `true`                                                        |
-| `in`           | Used with `for` loop                                                                                       |
-| `module`       | Define a module                                                                                            |
-| `next`         | jump to the point before the evaluation of the loop condition                                              |
-| `nil`          | Stand for null, invalid, or always false                                                                   |
-| `not`          | Logical NOT operator                                                                                       |
-| `or`           | Logical OR operator                                                                                        |
-| `redo`         | Jump back to the loop condition evaluation                                                                 |
-| `rescue`       | Evaluate expressions after an exception is raised                                                          |
-| `retry`        | Repeat method calls when called outside `rescue`, jump to the top of the block when called inside `rescue` |
-| `return`       | Return a value from a method or block                                                                      |
-| `self`         | Refer to the current object                                                                                |
-| `super`        | Call the same-named method in the superclass                                                               |
-| `then`         | Used as a separator with`if`,`unless`,`when`,`case`,`rescue`                                               |
-| `true`         | Logical boolean value true                                                                                 |
-| `undef`        | Undefine methods/functions within the current class                                                        |
-| `until`        | Execute the code block until the condition is false                                                        |
-| `when`         | Begin a clause under a `case` statement                                                                    |
-| `while`        | Execute the code block while the condition is true                                                         |
-| `yield`        | Execute the code block passed to a method                                                                  |
+| `__ENCODING__` | 当前文件的脚本编码                                                                                    |
+| `__LINE__`     | 此关键字在当前文件中的行号                                                                               |
+| `__FILE__`     | 当前文件的路径                                                                                           |
+| `BEGIN`        | { } 中包含的代码在程序运行之前运行                                                                      |
+| `END`          | { } 中包含的代码在程序结束时运行                                                                        |
+| `alias`        | 为现有方法、运算符或全局变量创建别名                                                                      |
+| `and`          | 逻辑与运算符                                                                                             |
+| `begin`        | 开始一个代码块                                                                                             |
+| `break`        | 终止循环                                                                                                 |
+| `case`         | 将表达式与匹配的 `when` 子句进行比较，以 <br/> `end` 结尾                                                |
+| `class`        | 定义一个类                                                                                               |
+| `def`          | 定义一个函数/方法                                                                                         |
+| `defined?`     | 检查变量或函数是否存在                                                                                     |
+| `do`           | 开始一个代码块，以 <br/> `end` 关键字结尾                                                                 |
+| `else`         | 如果前面的条件不满足，则执行以下代码                                                                      |
+| `elsif`        | if 表达式的替代条件                                                                                       |
+| `end`          | 结束以 `begin`、`class`、`def`、`do`、`if` 等关键字开头的代码块                                          |
+| `ensure`       | 始终在代码块的末尾执行                                                                                     |
+| `false`        | 逻辑布尔值 false                                                                                         |
+| `for`          | 开始一个 `for` 循环                                                                                       |
+| `if`           | 如果条件为 `true`，则执行代码块                                                                          |
+| `in`           | 与 `for` 循环一起使用                                                                                       |
+| `module`       | 定义一个模块                                                                                             |
+| `next`         | 跳转到循环条件求值之前的点                                                                                 |
+| `nil`          | 表示 null、无效或始终为 false                                                                              |
+| `not`          | 逻辑非运算符                                                                                             |
+| `or`           | 逻辑或运算符                                                                                             |
+| `redo`         | 跳转回循环条件求值                                                                                         |
+| `rescue`       | 在引发异常后求值表达式                                                                                     |
+| `retry`        | 在 `rescue` 外部调用时重复方法调用，在 `rescue` 内部调用时跳转到代码块的顶部                                  |
+| `return`       | 从方法或代码块返回值                                                                                       |
+| `self`         | 引用当前对象                                                                                             |
+| `super`        | 调用超类中同名的方法                                                                                       |
+| `then`         | 用作 `if`、`unless`、`when`、`case`、`rescue` 的分隔符                                                    |
+| `true`         | 逻辑布尔值 true                                                                                          |
+| `undef`        | 取消定义当前类中的方法/函数                                                                                 |
+| `until`        | 执行代码块直到条件为 false                                                                                 |
+| `when`         | 在 `case` 语句下开始一个子句                                                                               |
+| `while`        | 当条件为 true 时执行代码块                                                                                 |
+| `yield`        | 执行传递给方法的代码块                                                                                     |
 
-### Operator {.row-span-7}
+### 运算符 {.row-span-7}
 
-#### Logical Operators
+#### 逻辑运算符
 
 - `and`
 - `or`
@@ -137,7 +136,7 @@ puts "Hello world!"  # Inline comments for code
 - `||`
 - `!`
 
-#### Bit operators
+#### 位运算符
 
 - `&`
 - `|`
@@ -146,7 +145,7 @@ puts "Hello world!"  # Inline comments for code
 - `<<`
 - `>>`
 
-#### Arithmetic operators
+#### 算术运算符
 
 - `+`
 - `-`
@@ -155,7 +154,7 @@ puts "Hello world!"  # Inline comments for code
 - `%`
 - `**`
 
-#### Comparison operator
+#### 比较运算符
 
 - `==`
 - `!=`
@@ -168,25 +167,25 @@ puts "Hello world!"  # Inline comments for code
 - `eql?`
 - `equal?`
 
-#### Operator examples
+#### 运算符示例
 
 ```bash
-# Addition
+# 加法
 1 + 1   #=> 2
-# Subtraction
+# 减法
 2 - 1   #=> 1
-# Multiplication
+# 乘法
 2 * 2   #=> 4
-# Division
+# 除法
 10 / 5  #=> 2
-17 / 5    #=> 3, not 3.4
+17 / 5    #=> 3, 而不是 3.4
 17 / 5.0  #=> 3.4
-# Exponentiation
+# 幂运算
 2 ** 2  #=> 4
 3 ** 4  #=> 81
-# Modulus (remainder of division)
-8 % 2   #=> 0  (8 / 2 = 4; no remainder)
-10 % 4  #=> 2  (10 / 4 = 2 remainder 2)
+# 模运算 (除法的余数)
+8 % 2   #=> 0  (8 / 2 = 4; 没有余数)
+10 % 4  #=> 2  (10 / 4 = 2 余 2)
 a = 10
 b = 20
 a == b #=> false
@@ -196,14 +195,14 @@ a < b #=> true
 a >= b #=> false
 a <= b #=> true
 
-# Comparison operators
+# 比较运算符
 a <=> b #=> -1
 c = 20
 c <=> b #=> 0
 c <=> a  #=> 1
-# Equality used in when clauses for case statements
+# case 语句中 when 子句使用的相等性判断
 (1...10) === 5 #=> true
-# True if the receiver and the argument have the same type and equal values
+# 如果接收者和参数具有相同的类型和相等的值，则为 True
 1.eql?(1.0) #=> false
 c = a + b  #=> 30
 c += a #=> 40
@@ -213,55 +212,52 @@ c /= a #=> 30
 c %= a #=> 3
 c **= a #=> 59049
 
-# Ruby parallel assignment
+# Ruby 并行赋值
 a = 10
 b = 20
 c = 30
 a, b, c = 10, 20, 30
-# Ruby bitwise operators
+# Ruby 位运算符
 a = 60
 b = 13
-# & Binary AND operator copies a bit to the result if it exists in both operands.
+# & 二进制与运算符，如果位同时存在于两个操作数中，则将该位复制到结果中。
 a & b #=> 12
-# | Binary OR operator copies a bit if it exists in either operand.
+# | 二进制或运算符，如果位存在于任一操作数中，则复制该位。
 a | b #=> 61
-# ^ Binary XOR operator copies a bit if it is set in one operand but not both.
+# ^ 二进制异或运算符，如果位设置在一个操作数中但不在两个操作数中，则复制该位。
 a ^ b #=> 49
-# ~ Binary Ones Complement is unary and has the effect of 'flipping' bits.
+# ~ 二进制一的补码是一元的，具有“翻转”位的效果。
 ~a
-# << Binary Left Shift Operator. The left operand's value is moved
-# left by the number of bits specified by the right operand.
+# << 二进制左移运算符。左操作数的值向左移动右操作数指定的位数。
 a << 2
-# >> Binary Right Shift Operator. The left operand's value is moved
-# right by the number of bits specified by the right operand.
+# >> 二进制右移运算符。左操作数的值向右移动右操作数指定的位数。
 a >> 2
 
-# Ruby logical operators
+# Ruby 逻辑运算符
 a and b #=> true.
 a or b #=> true.
 a && b #=> true.
 (a || b) #=> true.
 !(a && b) #=> false.
 not(a && b) #=> false.
-# Ruby ternary operator
+# Ruby 三元运算符
 # ? :
-# If condition is true ? Then value X : Otherwise value Y
-a == 10 ? puts 'Right' : puts 'Wrong'
-# Ruby range operators
-# .. Creates a range from the start point to the end point (inclusive)
-1..10 #=> Creates a range from 1 to 10 (inclusive of 1 and 10)
-# ... Creates an exclusive range from the start point to the end point
-1...10 #=> Creates an exclusive range from 1 to 10
+# 如果条件为 true ? 则值为 X : 否则值为 Y
+a == 10 ? puts '正确' : puts '错误'
+# Ruby 范围运算符
+# .. 创建从起点到终点（含）的范围
+1..10 #=> 创建从 1 到 10 的范围（包含 1 和 10）
+# ... 创建从起点到终点（不含）的范围
+1...10 #=> 创建从 1 到 10 的不包含端点的范围
 ```
 
-### Operator precedence table
+### 运算符优先级表
 
-From highest to lowest, this is the precedence table for ruby. High precedence operations happen before low precedence
-operations.
+从高到低，这是 ruby 的优先级表。高优先级操作在低优先级操作之前发生。
 
-- !, ~, unary +
+- !, ~, 一元 +
 - \*\*
-- unary -
+- 一元 -
 - \*, /, %
 - +, -
 - <<, >>
@@ -273,30 +269,29 @@ operations.
 - ||
 - .., ...
 - ?, :
-- modifier-rescue
-- =, +=, -=, etc.
+- 修饰符-rescue
+- =, +=, -=, 等.
 - defined?
 - not
 - or, and
-- modifier-if, modifier-unless, modifier-while, modifier-until
-- { } blocks
+- 修饰符-if, 修饰符-unless, 修饰符-while, 修饰符-until
+- { } 块
 
-### Variables and scope {.col-span-2}
+### 变量和作用域 {.col-span-2}
 
 | -              | -                 | -                             | -                                                                                                |
 | -------------- | ----------------- | ----------------------------- | :----------------------------------------------------------------------------------------------- |
-| Name           | Scope             | Example                       | Explanation                                                                                      |
-| `[a-z]` or `_` | Local             | `count = 10` or `_count = 10` | Local variables must be initialized                                                              |
-| `@`            | Instance variable | `@id = []`                    | Instance variables have a "nil" value before initialization                                      |
-| `@@`           | Class variable    | `@@name = []`                 | Class variables must be initialized                                                              |
-| `$`            | Global variable   | `$version = "0.8.9"`          | Global variables have a "nil" value before initialization                                        |
-| `[A-Z]`        | Constant          | `PI = 3.14`                   | Constant variables must be initialized, you can change constants, but you will receive a warning |
+| 名称           | 作用域             | 示例                       | 解释                                                                                      |
+| `[a-z]` 或 `_` | 局部             | `count = 10` 或 `_count = 10` | 局部变量必须初始化                                                              |
+| `@`            | 实例变量 | `@id = []`                    | 实例变量在初始化前的值为 "nil"                                      |
+| `@@`           | 类变量    | `@@name = []`                 | 类变量必须初始化                                                              |
+| `$`            | 全局变量   | `$version = "0.8.9"`          | 全局变量在初始化前的值为 "nil"                                        |
+| `[A-Z]`        | 常量          | `PI = 3.14`                   | 常量必须初始化，你可以更改常量，但会收到警告 |
 
-There are five different types of variables. The first character determines the range To read in deap about variables
-check [User Guide](https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/) cap 19,20,21,22,23
-[Pre-Defined Variables and Constants](https://ruby-doc.org/docs/ruby-doc-bundle/Manual/man-1.4/variable.html)
+有五种不同类型的变量。第一个字符决定了范围。要深入了解变量，请查看[用户指南](https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/)第 19、20、21、22、23 章。
+[预定义变量和常量](https://ruby-doc.org/docs/ruby-doc-bundle/Manual/man-1.4/variable.html)
 
-### Check the scope of a variable
+### 检查变量的作用域
 
 ```ruby
 defined? count
@@ -311,11 +306,11 @@ defined? PI
 "constant"
 ```
 
-### Data Types {.col-span-2}
+### 数据类型 {.col-span-2}
 
 | -         | -                            | -                                                  | -                                                                                                               |
 | :-------- | :--------------------------- | :------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
-| Type      | Example                      | Class                                              | Documentation                                                                                                   |
+| 类型      | 示例                      | 类                                              | 文档                                                                                                   |
 | `Integer` | a = 17                       | a.class > Integer <br>a.class.superclass > Numeric | [#](<(https://ruby-doc.org/3.3.1/Integer.html)>)                                                                |
 | `Float`   | a = 87.23                    | a.class > Float <br>a.class.superclass > Numeric   | [#](https://ruby-doc.org/3.3.1/Float.html)                                                                      |
 | `String`  | a = "Hello universe"         | a.class > String                                   | [#](https://ruby-doc.org/3.3.1/String.html)                                                                     |
@@ -326,12 +321,12 @@ defined? PI
 | `Range`   | a = 1..3                     | a.class > Range                                    | [#](https://ruby-doc.org/3.3.1/Range.html)                                                                      |
 | `Nil`     | a = nil                      | a.class > NilClass                                 | [#](https://ruby-doc.org/3.3.1/NilClass.html)                                                                   |
 
-[further reading](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)
+[进一步阅读](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)
 
-### Check data type
+### 检查数据类型
 
 ```ruby
-# Both are synonyms
+# 两者都是同义词
 a = 37
 a.kind_of? Integer
 # true
@@ -339,13 +334,13 @@ a.is_a? Integer
 # true
 ```
 
-### Symbol
+### 符号 (Symbol)
 
 ```ruby
 week_days = {sunday: 11, monday: 222}
 ```
 
-### Integer useful methods
+### 整数有用的方法
 
 ```ruby
 2.even?
@@ -354,27 +349,27 @@ week_days = {sunday: 11, monday: 222}
 # false
 ```
 
-### Range
+### 范围 (Range)
 
-`..` Used to create inclusive ranges
+`..` 用于创建包含性范围
 
 ```ruby
 range = 1..10
 range.to_a
-# output => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# 输出 => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-`...` Used to create exclusive ranges
+`...` 用于创建排除性范围
 
 ```ruby
 range = 1...10
 range.to_a
-# output => [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# 输出 => [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-some useful methods
+一些有用的方法
 
-| Method name | Output                                |
+| 方法名 | 输出                                |
 | :---------- | :------------------------------------ |
 | `cover?`    | `(1..5).cover?(5)` => `true`          |
 | `end`       | `('a'..'z').end` => `"z"`             |
@@ -382,11 +377,11 @@ some useful methods
 | `first(3)`  | `('A'..'Z').first(2)` => `["A", "B"]` |
 | `eql?`      | `((0..2).eql?(0..5)` => `false`       |
 
-### Using `step` in Range
+### 在范围中使用 `step`
 
 ```ruby
 (1..20).step(2) { |number| puts "#{number}"}
-# output
+# 输出
 # 1
 # 3
 # 5
@@ -399,7 +394,7 @@ some useful methods
 # 19
 ```
 
-## Ruby Flow control
+## Ruby 流程控制
 
 ### if
 
@@ -408,107 +403,107 @@ num = 2
 puts 'two' if num == 2
 ```
 
-If the condition is true, execute the code
+如果条件为真，则执行代码
 
 ### if elsif else
 
 ```ruby
 temp = 19
 if temp >= 25
-  puts "hot"
+  puts "热"
 elsif temp < 25 && temp >= 18
-  puts "normal"
+  puts "正常"
 else
-  puts "cold"
+  puts "冷"
 end
-# output => normal
+# 输出 => 正常
 ```
 
 ### unless
 
 ```ruby
-# Unless contrary to if , evaluates when the statement is false
+# Unless 与 if 相反，当语句为 false 时求值
 name = "rob"
 # if name != "bob"
 unless name == "bob"
-  puts "hello stranger"
+  puts "你好，陌生人"
 else
-  puts "hello bob"
+  puts "你好，bob"
 end
-# output => hello stranger
+# 输出 => 你好，陌生人
 num = 6
-puts 'not two' unless num == 2
-# output => not two
+puts '不是二' unless num == 2
+# 输出 => 不是二
 ```
 
 ### case {.row-span-2}
 
 ```ruby
-# case returns the value of the last expression executed
+# case 返回最后执行的表达式的值
 case input
-# Check for an integer, 19
+# 检查整数 19
 when 19
-  puts "It's 19"
+  puts "它是 19"
   # 检查一个确切的字符串，“Zaman”
 when "Zaman"
-  puts "Hi Zaman"
+  puts "嗨 Zaman"
 when 7..11
-  puts "It's between 7 and 11"
-  # Check multiple values, "coffee"
+  puts "它在 7 和 11 之间"
+  # 检查多个值，“coffee”
 when "tea", "coffee"
-  puts "Happy days"
+  puts "快乐的日子"
 end
 ```
 
-### case( short syntax )
+### case (短语法)
 
 ```ruby
 case input
-  when 19 then puts "It's 19"
+  when 19 then puts "它是 19"
 end
 ```
 
-### case( Optional failure )
+### case (可选失败)
 
 ```ruby
 case input
-  when 19 then puts "It's 19"
+  when 19 then puts "它是 19"
 else
-  puts "It's not 19"
+  puts "它不是 19"
 end
 ```
 
-### case( Get return value )
+### case (获取返回值)
 
 ```ruby
 marks = 86
 result = case marks
-        when 0..49 then "Fail"
-        when 50..64 then "Pass"
-        when 65..74 then "Credit"
-        when 75..84 then "Distinction"
-        when 85..100 then "High Distinction"
-        else "Invalid marks"
+        when 0..49 then "不及格"
+        when 50..64 then "及格"
+        when 65..74 then "良好"
+        when 75..84 then "优秀"
+        when 85..100 then "特优"
+        else "无效分数"
         end
 
 puts result
-# High Distinction
+# 特优
 ```
 
-## String
+## 字符串
 
-### String interpolation
+### 字符串插值
 
 ```ruby
 name = "World"
 puts "Hello #{name}"
-puts "The total is #{1+1}"
-# "the total is 2"
+puts "总数是 #{1+1}"
+# "总数是 2"
 ```
 
-String interpolation allows you to combine strings together
+字符串插值允许您将字符串组合在一起
 
-### Extract substring
+### 提取子字符串
 
 ```ruby
 string = "abc123"
@@ -518,16 +513,15 @@ string[3,3]
 # "123"
 string[0..-2]
 # "abc12"
-#remove or replace the substring
+#移除或替换子字符串
 string[0..2] = ""
 puts string
 # "123"
 ```
 
-A substring is a small part of a string, which is useful if you only want that specific part, like the beginning,
-middle, or end
+子字符串是字符串的一小部分，如果您只需要特定部分（例如开头、中间或结尾），则非常有用。
 
-### Convert a string to lowercase or uppercase
+### 将字符串转换为小写或大写
 
 ```ruby
 "HELLO World".downcase  # "hello world"
@@ -536,40 +530,40 @@ middle, or end
 "hEllo WOrlD".swapcase  # "HeLLO woRLd"
 ```
 
-### useful methods {.col-span-3}
+### 有用的方法 {.col-span-3}
 
-| Function Name                  | Output                                                                                                | Note                                                                                                                                                                                |
+| 函数名                  | 输出                                                                                                | 注意                                                                                                                                                                                |
 | :----------------------------- | :---------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| length or size                 | `"HELLO World".length` => `11` <br> `"HELLO World".size` => `11`                                      | Returns the length of the string                                                                                                                                                    |
-| reverse                        | `"hello worlD".reverse` => `"Dlrow olleh"`                                                            | Returns the reversed string                                                                                                                                                         |
-| include? other_str             | `"hEllo wOrlD".include? "w"` => `true`                                                                | Returns true if the string or character exists, otherwise returns false                                                                                                             |
-| gsub(pattern, replacement)     | `"hEllo wOrlD".gsub(" ", "_")` => `"hEllo_wOrlD"`                                                     | gsub or global substitute replaces one or more strings with the provided string                                                                                                     |
-| gsub(pattern, hash)            | `"organization".gsub("z", 'z' => 's')` => `"organisation"`                                            | gsub or global substitute replaces one or more strings with the provided hash                                                                                                       |
-| gsub(pattern) {\|match\|block} | `"Price of the phone is 1000 AUD".gsub(/\d+/) {\| s\| '$'+s }`<br>`"Price of the phone is $1000 AUD"` | gsub or global substitute replaces one or more strings with the provided block                                                                                                      |
-| strip                          | `" hEllo WOrlD ".strip` <br> `"hEllo WOrlD"`                                                          | It will remove (trim) any leading and trailing characters: null (“\x00”), horizontal tab (“\t”), newline (\n), vertical tab (“\v”), form feed (f), carriage return(\r), space (" ") |
-| prepend                        | `a = "world" <br> a.prepend("hello ")` <br> `"hello world"`                                           | Adds the string before another string                                                                                                                                               |
-| insert                         | `a = "hello" <br> a.insert(a.length, " world")` <br> `"hello world"`                                  | Inserts the string at a specific position                                                                                                                                           |
-| start_with?                    | `string = "ruby programming"` <br> `string.start_with? "ruby"` <br> `true`                            | Checks if the string starts with a specific prefix                                                                                                                                  |
-| end_with?                      | `string = "ruby programming"` <br> `string.end_with? "ruby"` <br> `false`                             | Checks if the string ends with a specific prefix                                                                                                                                    |
-| delete_suffix                  | `string = "sausage is expensive"` <br> `string.delete_suffix(" is expensive")` <br> `"sausage"`       | Deletes the suffix from the string                                                                                                                                                  |
-| delete_prefix                  | `string = "sausage is expensive"` <br> `string.delete_prefix("sausage")` <br> `" is expensive"`       | Deletes the prefix from the string                                                                                                                                                  |
-| split                          | `string = "a b c d" <br> string.split` <br> `["a", "b", "c", "d"]`                                    | Converts the string into an array of characters                                                                                                                                     |
-| join                           | `arr = ['a', 'b', 'c'] <br> arr.join` => `"abc"`                                                      | Converts an array into a string                                                                                                                                                     |
-| to_i                           | `a = "49" <br> a.to_i` => `49`                                                                        | Converts the string into an integer                                                                                                                                                 |
-| chop                           | `"abcd?".chop("?")` => `"abcd"`                                                                       | Deletes the last character from the string                                                                                                                                          |
-| count                          | `str = "aaab" <br> str.count("a")` <br> `3`                                                           | Counts the characters in the string                                                                                                                                                 |
-| to_f                           | `a = "49"` <br> `a.to_f` <br> `49.0`                                                                  | Converts the string into a floating point number                                                                                                                                    |
-| to_sym                         | `a = "key"` <br> `a.to_sym` <br> `:key`                                                               | Converts the string into a symbol                                                                                                                                                   |
-| match                          | `"abcd?".match(/ab/)` => `#<MatchData "ab">`                                                          | Converts the pattern into a regular expression and calls its match method on the string                                                                                             |
-| empty?                         | `"hello".empty?` => `false`                                                                           | Returns true if the length of the string is zero                                                                                                                                    |
-| squeeze                        | `"Booook".squeeze` => `"Bok"`                                                                         | Returns a copy of the string where runs of the same character are replaced by a single character                                                                                    |
-| \*                             | `puts "Ruby " * 4` => `Ruby Ruby Ruby Ruby`                                                           | Returns the concatenation of multiple copies of self                                                                                                                                |
-| +                              | `"sammy " + "shark"` => `"sammyshark"`                                                                | Returns the concatenation of self and the given other string                                                                                                                        |
-| eql?                           | `s = 'foo'` => `true` <br> `s.eql?('foo')` => `true`                                                  | Returns true if the objects have the same length and content; false otherwise                                                                                                       |
+| length 或 size                 | `"HELLO World".length` => `11` <br> `"HELLO World".size` => `11`                                      | 返回字符串的长度                                                                                                                                                    |
+| reverse                        | `"hello worlD".reverse` => `"Dlrow olleh"`                                                            | 返回反转后的字符串                                                                                                                                                         |
+| include? other_str             | `"hEllo wOrlD".include? "w"` => `true`                                                                | 如果字符串或字符存在则返回 true，否则返回 false                                                                                                             |
+| gsub(pattern, replacement)     | `"hEllo wOrlD".gsub(" ", "_")` => `"hEllo_wOrlD"`                                                     | gsub 或全局替换将一个或多个字符串替换为提供的字符串                                                                                                     |
+| gsub(pattern, hash)            | `"organization".gsub("z", 'z' => 's')` => `"organisation"`                                            | gsub 或全局替换将一个或多个字符串替换为提供的哈希表                                                                                                       |
+| gsub(pattern) {\|match\|block} | `"Price of the phone is 1000 AUD".gsub(/\d+/) {\| s\| '$'+s }`<br>`"Price of the phone is $1000 AUD"` | gsub 或全局替换将一个或多个字符串替换为提供的代码块                                                                                                      |
+| strip                          | `" hEllo WOrlD ".strip` <br> `"hEllo WOrlD"`                                                          | 它将删除（修剪）任何前导和尾随字符：null (“\x00”)、水平制表符 (“\t”)、换行符 (\n)、垂直制表符 (“\v”)、换页符 (f)、回车符(\r)、空格 (" ") |
+| prepend                        | `a = "world" <br> a.prepend("hello ")` <br> `"hello world"`                                           | 在另一个字符串之前添加字符串                                                                                                                                               |
+| insert                         | `a = "hello" <br> a.insert(a.length, " world")` <br> `"hello world"`                                  | 在特定位置插入字符串                                                                                                                                               |
+| start_with?                    | `string = "ruby programming"` <br> `string.start_with? "ruby"` <br> `true`                            | 检查字符串是否以特定前缀开头                                                                                                                                  |
+| end_with?                      | `string = "ruby programming"` <br> `string.end_with? "ruby"` <br> `false`                             | 检查字符串是否以特定前缀结尾                                                                                                                                  |
+| delete_suffix                  | `string = "sausage is expensive"` <br> `string.delete_suffix(" is expensive")` <br> `"sausage"`       | 从字符串中删除后缀                                                                                                                                                  |
+| delete_prefix                  | `string = "sausage is expensive"` <br> `string.delete_prefix("sausage")` <br> `" is expensive"`       | 从字符串中删除前缀                                                                                                                                                  |
+| split                          | `string = "a b c d" <br> string.split` <br> `["a", "b", "c", "d"]`                                    | 将字符串转换为字符数组                                                                                                                                     |
+| join                           | `arr = ['a', 'b', 'c'] <br> arr.join` => `"abc"`                                                      | 将数组转换为字符串                                                                                                                                                     |
+| to_i                           | `a = "49" <br> a.to_i` => `49`                                                                        | 将字符串转换为整数                                                                                                                                                 |
+| chop                           | `"abcd?".chop("?")` => `"abcd"`                                                                       | 从字符串中删除最后一个字符                                                                                                                                          |
+| count                          | `str = "aaab" <br> str.count("a")` <br> `3`                                                           | 计算字符串中的字符数                                                                                                                                               |
+| to_f                           | `a = "49"` <br> `a.to_f` <br> `49.0`                                                                  | 将字符串转换为浮点数                                                                                                                                               |
+| to_sym                         | `a = "key"` <br> `a.to_sym` <br> `:key`                                                               | 将字符串转换为符号                                                                                                                                                 |
+| match                          | `"abcd?".match(/ab/)` => `#<MatchData "ab">`                                                          | 将模式转换为正则表达式并在字符串上调用其 match 方法                                                                                                 |
+| empty?                         | `"hello".empty?` => `false`                                                                           | 如果字符串长度为零则返回 true                                                                                                                                    |
+| squeeze                        | `"Booook".squeeze` => `"Bok"`                                                                         | 返回字符串的副本，其中相同字符的连续出现被单个字符替换                                                                                                |
+| \*                             | `puts "Ruby " * 4` => `Ruby Ruby Ruby Ruby`                                                           | 返回自身多个副本的串联                                                                                                                                |
+| +                              | `"sammy " + "shark"` => `"sammyshark"`                                                                | 返回自身和给定其他字符串的串联                                                                                                                            |
+| eql?                           | `s = 'foo'` => `true` <br> `s.eql?('foo')` => `true`                                                  | 如果对象具有相同的长度和内容，则返回 true；否则返回 false                                                                                                       |
 
-## Methods
+## 方法
 
-### Declare a method {.row-span-3}
+### 声明一个方法 {.row-span-3}
 
 ```ruby
 def method_name(parameter1, parameter2)
@@ -582,30 +576,30 @@ end
 
 ```ruby
 res = method_name(20, 10)
-# output => 30
+# 输出 => 30
 def method_name(parameter1, parameter2)
     puts "#{parameter1} #{parameter2}"
     return parameter1 + parameter2
 end
-# output => 30
+# 输出 => 30
 ```
 
-### Call method
+### 调用方法
 
 ```ruby
 res = method_name(parameter1, parameter2)
-# Methods can be called without parentheses
+# 方法可以不带括号调用
 res = method_name parameter1, parameter2
 ```
 
-### Class method {.row-span-4}
+### 类方法 {.row-span-4}
 
-Class methods are class-level methods. There are multiple ways to define class methods
+类方法是类级别的方法。有多种定义类方法的方式
 
 ```ruby
 class Mobile
     def self.ring
-        "ring ring ring..."
+        "铃铃铃..."
     end
 end
 
@@ -617,7 +611,7 @@ Mobile.ring
 ```ruby
 class Mobile
     def Mobile.ring
-        "ring ring ring..."
+        "铃铃铃..."
     end
 end
 Mobile.ring
@@ -629,20 +623,19 @@ Mobile.ring
 class Mobile
     class << self
     def ring
-        "ring ring ring..."
+        "铃铃铃..."
        end
     end
 end
 Mobile.ring
 ```
 
-Class methods are instance methods of class objects. When a new class is created, an object of type "Class" is
-initialized and assigned to a global constant (in this case Mobile)
+类方法是类对象的实例方法。当创建一个新类时，会初始化一个类型为 "Class" 的对象并将其分配给一个全局常量（在本例中为 Mobile）
 
 ```ruby
 Mobile = Class.new do
     def self.ring
-        "ring ring ring..."
+        "铃铃铃..."
     end
 end
 Mobile.ring
@@ -652,23 +645,23 @@ Mobile.ring
 Mobile = Class.new
 class << Mobile
     def ring
-        "ring ring ring..."
+        "铃铃铃..."
     end
 end
 Mobile.ring
 ```
 
-### Use another parameter as default value
+### 使用另一个参数作为默认值
 
 ```ruby
 def method_name(num1, num2 = num1)
     return num1 + num2
 end
 res = method_name(10)
-# output => 20
+# 输出 => 20
 ```
 
-### Define default values for method parameters
+### 为方法参数定义默认值
 
 ```ruby
 def method_name(parameter1, parameter2, type = "ADD")
@@ -677,10 +670,10 @@ def method_name(parameter1, parameter2, type = "ADD")
     return parameter1 - parameter2 if type == "SUB"
 end
 res = method_name(20, 10)
-# output => 30
+# 输出 => 30
 ```
 
-### Pass variable length arguments to method parameters
+### 将可变长度参数传递给方法参数
 
 ```ruby
 def method_name(type, *values)
@@ -689,44 +682,44 @@ def method_name(type, *values)
 end
 numbers = [2, 2, 2, 3, 3, 3]
 res = method_name("ADD", *numbers)
-# output => 15
+# 输出 => 15
 res = method_name("SUB", *numbers)
-# output => -11
-# Or you can provide a value like this
+# 输出 => -11
+# 或者你可以像这样提供一个值
 res = method_name("ADD", 2, 2, 2, 3, 3, 3)
-# output => 15
+# 输出 => 15
 ```
 
-### Modify object
+### 修改对象
 
 ```ruby
-a = ["Drama", "Mystery", "Crime",
-"Sci-fi", "Disaster", "Thriller"]
+a = ["戏剧", "悬疑", "犯罪",
+"科幻", "灾难", "惊悚"]
 a.sort
 puts a
-# We did not modify the object
-# Drama
-# Mystery
-# Crime
-# Sci-fi
-# Disaster
-# Thriller
+# 我们没有修改对象
+# 戏剧
+# 悬疑
+# 犯罪
+# 科幻
+# 灾难
+# 惊悚
 a.sort!
 puts a
-# Modify object
-# Crime
-# Disaster
-# Drama
-# Mystery
-# Sci-fi
-# Thriller
+# 修改对象
+# 犯罪
+# 灾难
+# 戏剧
+# 悬疑
+# 科幻
+# 惊悚
 ```
 
-When you want to modify the object, use `!` after the method
+当您想修改对象时，请在方法后使用 `!`
 
-### Boolean method
+### 布尔方法
 
-In ruby, methods ending with a question mark (?) are called boolean methods, which return `true` or `false`
+在 ruby 中，以问号 (?) 结尾的方法称为布尔方法，它们返回 `true` 或 `false`
 
 ```ruby
 "some text".nil?
@@ -735,7 +728,7 @@ nil.nil?
 # true
 ```
 
-You can have your own boolean method
+你可以拥有自己的布尔方法
 
 ```ruby
 def is_vowel?(char)
@@ -747,33 +740,32 @@ is_vowel? 'b'
 # false
 ```
 
-## Blocks
+## 代码块
 
-### Block example
+### 代码块示例
 
 ```ruby
-# return value
+# 返回值
 def give_me_data
     data = yield
     puts "data = #{data}"
 end
-give_me_data { "Big data" }
-# output => data = Big data
+give_me_data { "大数据" }
+# 输出 => data = 大数据
 ```
 
-The code between `do` and `end` (for multiple lines) or curly braces `{` and `}` (for a single line) is called a block,
-and they can define multiple parameters between two pipes `( |arg1, arg2|)`
+`do` 和 `end`（用于多行）或花括号 `{` 和 `}`（用于单行）之间的代码称为代码块，它们可以在两个管道 `( |arg1, arg2|)` 之间定义多个参数。
 
-### Single line block
+### 单行代码块
 
 ```ruby
 salary = [399, 234, 566, 533, 233]
 salary.each { |s| puts s }
-# puts s = block body
-# |s| = block arguments
+# puts s = 代码块主体
+# |s| = 代码块参数
 ```
 
-### Multi-line block
+### 多行代码块
 
 ```ruby
 salary.each do |s|
@@ -781,51 +773,51 @@ salary.each do |s|
     res = a * s
     puts res
 end
-# Block
+# 代码块
 # a = 10
 # res = a * s
 # puts res
-# block parameters
+# 代码块参数
 # |s|
 ```
 
-Blocks can be passed as method parameters or associated with method calls. block returns the last evaluated statement
+代码块可以作为方法参数传递或与方法调用相关联。代码块返回最后求值的语句。
 
-### Implicitly passing a block
-
-```ruby
-def give_me_data
-    puts "I am inside give_me_data method"
-    yield
-    puts "I am back in give_me_data method"
-end
-
-give_me_data { puts "Big data" }
-
-# output
-# I am inside give_me_data method
-# Big data
-# I am back in give_me_data method
-```
-
-### Called multiple times
+### 隐式传递代码块
 
 ```ruby
 def give_me_data
+    puts "我在 give_me_data 方法内部"
+    yield
+    puts "我回到了 give_me_data 方法"
+end
+
+give_me_data { puts "大数据" }
+
+# 输出
+# 我在 give_me_data 方法内部
+# 大数据
+# 我回到了 give_me_data 方法
+```
+
+### 多次调用
+
+```ruby
+def give_me_data
     yield
     yield
     yield
 end
 
-give_me_data { puts "Big data" }
+give_me_data { puts "大数据" }
 
-# output
-# Big data
-# Big data
-# Big data
+# 输出
+# 大数据
+# 大数据
+# 大数据
 ```
 
-### Called with block parameters
+### 使用代码块参数调用
 
 ```ruby
 def give_me_data
@@ -834,53 +826,53 @@ def give_me_data
     yield 30
 end
 
-give_me_data { |data| puts "Big data #{data} TB" }
+give_me_data { |data| puts "大数据 #{data} TB" }
 
-# output
-# Big data 10 TB
-# Big data 100 TB
-# Big data 30 TB
+# 输出
+# 大数据 10 TB
+# 大数据 100 TB
+# 大数据 30 TB
 ```
 
-### Called with multiple block parameters
+### 使用多个代码块参数调用
 
 ```ruby
 def give_me_data
-    yield "Big data", 10, "TB"
-    yield "Big data", 100, "GB"
-    yield "Big data", 30, "MB"
+    yield "大数据", 10, "TB"
+    yield "大数据", 100, "GB"
+    yield "大数据", 30, "MB"
 end
 
 give_me_data { |text, data, unit| puts "#{text} #{data} #{unit}" }
 
-# output
-# Big data 10 TB
-# Big data 100 GB
-# Big data 30 MB
+# 输出
+# 大数据 10 TB
+# 大数据 100 GB
+# 大数据 30 MB
 ```
 
-### Block will attempt to return from the current context
+### 代码块将尝试从当前上下文中返回
 
 ```ruby
 give_me_data
-    puts "I'm inside the give_me_data method"
+    puts "我在 give_me_data 方法内部"
 end
 
 def test
-  puts "I'm inside the test method"
-  give_me_data { return 10 } # Code returns from here
-  puts "I am back in test method"
+  puts "我在 test 方法内部"
+  give_me_data { return 10 } # 代码从这里返回
+  puts "我回到了 test 方法"
 end
 
 return_value = test
 
-# output
-# I'm inside the test method
-# I'm inside the give_me_data method
+# 输出
+# 我在 test 方法内部
+# 我在 give_me_data 方法内部
 # 10
 ```
 
-### Pass the block explicitly by using the & parameter
+### 使用 & 参数显式传递代码块
 
 ```ruby
 def give_me_data(&block)
@@ -888,14 +880,14 @@ def give_me_data(&block)
     block.call
 end
 
-give_me_data { puts "Big data" }
+give_me_data { puts "大数据" }
 
-# output
-# Big data
-# Big data
+# 输出
+# 大数据
+# 大数据
 ```
 
-### Check if block is given
+### 检查是否给定了代码块
 
 ```ruby
 def give_me_data
@@ -904,23 +896,23 @@ end
 
 give_me_data
 
-# output
-# LocalJumpError: no block given (yield)
+# 输出
+# LocalJumpError: 没有给出代码块 (yield)
 ```
 
-### Ways to handle exceptions and make blocks optional
+### 处理异常并使代码块可选的方法
 
 ```ruby
 def give_me_data
-    return "no block" unless block_given?
+    return "没有代码块" unless block_given?
     yield
 end
 
-give_me_data { puts "Big data" }
+give_me_data { puts "大数据" }
 give_me_data
 
-# output
-# Big data
+# 输出
+# 大数据
 ```
 
 ## Procs
@@ -936,13 +928,13 @@ end
 
 give_me_data p
 
-# output
+# 输出
 # Hello World
 ```
 
-proc is like a block that can be stored in a variable
+proc 就像一个可以存储在变量中的代码块
 
-### any parameter {.col-span-2}
+### 任意参数 {.col-span-2}
 
 ```ruby
 p = Proc.new { |count| "Hello World " * count }
@@ -953,115 +945,115 @@ end
 
 give_me_data p
 
-# output
+# 输出
 # "Hello World Hello World Hello World Hello World Hello World "
 ```
 
-### proc will attempt to return from the current context
+### proc 将尝试从当前上下文中返回
 
 ```ruby
 p = Proc.new { return 10 }
 p.call
-# output
-LocalJumpError: unexpected return
+# 输出
+LocalJumpError: 意外的返回
 ```
 
-### Cannot return from top-level context
+### 无法从顶层上下文返回
 
 ```ruby
 def give_me_data
-    puts "I'm inside the give_me_data method"
+    puts "我在 give_me_data 方法内部"
     p = Proc.new { return 10 }
-    p.call # Code returns from here
-    puts "I am back in give_me_data method"
+    p.call # 代码从这里返回
+    puts "我回到了 give_me_data 方法"
 end
 
 return_value = give_me_data
 puts return_value
 
-# output
-# I'm inside the give_me_data method
+# 输出
+# 我在 give_me_data 方法内部
 # 10
 ```
 
 ## Lambdas
 
-### Declare a lambda{.row-span-2}
+### 声明一个 lambda {.row-span-2}
 
 ```ruby
 l = lambda { puts "Hello World" }
-# shorthand
+# 简写
 l = -> { puts "Hello World" }
-# transfer lambda
+# 调用 lambda
 l.call
-# output => Hello World
+# 输出 => Hello World
 ```
 
-There are multiple ways to call a lambda
+有多种调用 lambda 的方法
 
 ```ruby
 l.()
 l[]
 ```
 
-### strict arguments
+### 严格参数
 
 ```ruby
 l = -> (count) { "Hello World " * count }
 l.call 5
-# output
+# 输出
 # "Hello World Hello World Hello World Hello World Hello World "
 l.call 5, 2
-# output
-wrong number of arguments (given 2, expected 1)
+# 输出
+参数数量错误 (给出 2, 期望 1)
 ```
 
-### declare a lambda in block {.row-span-2}
+### 在代码块中声明 lambda {.row-span-2}
 
 ```ruby
 def give_me_data
-    puts "I am inside give_me_data method"
+    puts "我在 give_me_data 方法内部"
     l = -> { return 10 }
     l.call
-    puts "I am back in give_me_data method"
+    puts "我回到了 give_me_data 方法"
 end
 
 return_value = give_me_data
 puts return_value
 
-# output
-# I am inside give_me_data method
-# I am back in give_me_data method
-# nil # because puts return nil
+# 输出
+# 我在 give_me_data 方法内部
+# 我回到了 give_me_data 方法
+# nil # 因为 puts 返回 nil
 ```
 
-### lambdas are returned from the lambda itself, just like regular methods
+### lambda 从 lambda 本身返回，就像常规方法一样
 
 ```ruby
 l = -> { return 10 }
 l.call
 
-# output => 10
+# 输出 => 10
 ```
 
-## Array
+## 数组
 
-### Initialize an empty array
+### 初始化一个空数组
 
 ```ruby
 array = Array.new   #=> []
-# or
+# 或
 array = []
 ```
 
-### Array containing objects of different types
+### 包含不同类型对象的数组
 
 ```ruby
 array = [1, "two", 3.0]
 #=> [1, "two", 3.0]
 ```
 
-### Fill array with initial size and default objects {.row-span-2}
+### 用初始大小和默认对象填充数组 {.row-span-2}
 
 ```ruby
 numbers = Array.new(3)
@@ -1074,7 +1066,7 @@ numbers = []
 numbers.fill(7, 0..2)   #=> [7, 7, 7]
 ```
 
-### array of different hashes {.col-span-2}
+### 不同哈希的数组 {.col-span-2}
 
 ```ruby
 array_with_hashes = Array.new(2) { {} } #=> [{}, {}]
@@ -1082,7 +1074,7 @@ array_with_hashes[0][:name] = "Bob"
 array_with_hashes[0][:id] = 10          #=> [{:name=>"Bob", :id=>10}, {}]
 ```
 
-### Two-dimensional array
+### 二维数组
 
 ```ruby
 temperature_data = [
@@ -1095,7 +1087,7 @@ temperature_data[0][0] #=> "A908"
 temperature_data[0][1] #=> 38
 ```
 
-### array index
+### 数组索引
 
 ```ruby
 str_array = [
@@ -1106,20 +1098,20 @@ str_array[1]            #=> "is"
 str_array[4]            #=> "array"
 ```
 
-### negative index
+### 负数索引
 
 ```ruby
 str_array = [
   "This", "is", "a", "small", "array"
 ]
-# Index -1 represents the last element
+# 索引 -1 表示最后一个元素
 str_array[-1]        #=> "array"
-# Index -2 represents the second to last element
+# 索引 -2 表示倒数第二个元素
 str_array[-2]        #=> "small"
 str_array[-6]        #=> nil
 ```
 
-### array method at
+### 数组方法 at
 
 ```ruby
 str_array = [
@@ -1129,7 +1121,7 @@ str_array = [
 puts str_array.at(0)      #=> "This"
 ```
 
-### Range acquisition
+### 范围获取
 
 ```ruby
 arr = [1, 2, 3, 4, 5, 6]
@@ -1140,31 +1132,31 @@ arr[1..4]                 #=> [2, 3, 4, 5]
 arr[1..-3]                #=> [2, 3, 4]
 ```
 
-### Array method fetch
+### 数组方法 fetch
 
 ```ruby
 arr = ['a', 'b', 'c', 'd', 'e', 'f']
 arr.fetch(100)
-#=> IndexError: Index outside array bounds 100：-6...6
+#=> IndexError: 索引超出数组范围 100：-6...6
 arr.fetch(100, "oops")    #=> "oops"
 ```
 
-Out of bounds, give default value
+超出范围，给出默认值
 
-### Get array elements
+### 获取数组元素
 
 ```ruby
 arr = [1, 2, 3, 4, 5, 6]
 
-arr.first     # first value => 1
-arr.last      # last value => 6
-# take Returns the first n elements
+arr.first     # 第一个值 => 1
+arr.last      # 最后一个值 => 6
+# take 返回前 n 个元素
 arr.take(3)   #=> [1, 2, 3]
-# drop after n elements have been deleted
+# drop 删除 n 个元素后
 arr.drop(3)   #=> [4, 5, 6]
 ```
 
-### Add value to end of array push
+### 将值添加到数组末尾 push
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -1174,7 +1166,7 @@ numbers.push(12, 13, 14)
 #=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 ```
 
-### Delete the value at the end of the array pop
+### 删除数组末尾的值 pop
 
 ```ruby
 num_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -1183,7 +1175,7 @@ num_array
 #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-### Add value to beginning of array unshift
+### 将值添加到数组开头 unshift
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -1193,7 +1185,7 @@ numbers.unshift(-3, -2, -1)
 #=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### Retrieve and simultaneously delete the first element shift
+### 检索并同时删除第一个元素 shift
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -1202,7 +1194,7 @@ numbers
 #=> [2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### Remove element at specific index delete_at
+### 删除特定索引处的元素 delete_at
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -1211,7 +1203,7 @@ numbers
 #=> [2, 3, 5, 6, 7, 8, 9, 10]
 ```
 
-### Remove a specific element anywhere in an array
+### 删除数组中任何位置的特定元素
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -1219,7 +1211,7 @@ numbers.delete(2) #=> 2
 numbers           #=> [3, 5, 6, 7, 8, 9, 10]
 ```
 
-### Insert value at given index insert {.row-span-2}
+### 在给定索引处插入值 insert {.row-span-2}
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -1234,25 +1226,25 @@ numbers.insert(-4, 11)
 #=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 ```
 
-### A block to fill the array with values
+### 用值填充数组的代码块
 
 ```ruby
 numbers = Array.new(10) { |n| n = n * 2 }
 #=> [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 ```
 
-### Filling arrays becomes easier
+### 填充数组变得更容易
 
 ```ruby
 numbers = Array(100..110)
 #=> [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
 
-# Or we can convert the range to an array
+# 或者我们可以将范围转换为数组
 (100..110).to_a
 #=> [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
 ```
 
-### Remove nil value from array
+### 从数组中删除 nil 值
 
 ```ruby
 arr = ['foo', 0, nil, 'bar', 7, nil]
@@ -1262,7 +1254,7 @@ arr.compact! #=> ['foo', 0, 'bar', 7]
 arr      #=> ['foo', 0, 'bar', 7]
 ```
 
-### Remove duplicates uniq
+### 删除重复项 uniq
 
 ```ruby
 arr = [2, 5, 6, 556, 6, 6, 8, 9, 0, 123, 556]
@@ -1272,125 +1264,125 @@ arr.uniq! #=> [2, 5, 6, 556, 8, 9, 0, 123]
 arr #=> [2, 5, 6, 556, 8, 9, 0, 123]
 ```
 
-### Check if a value exists in an array（`include？`）
+### 检查数组中是否存在值（`include？`）
 
 ```ruby
-planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
-planets.include? "Mars"
-# output => true
-planets.include? "Pluto"
-# output => false
+planets = ["水星", "金星", "地球", "火星", "木星", "土星", "天王星", "海王星"]
+planets.include? "火星"
+# 输出 => true
+planets.include? "冥王星"
+# 输出 => false
 ```
 
-### Get array size
+### 获取数组大小
 
 ```ruby
-planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets = ["水星", "金星", "地球", "火星", "木星", "土星", "天王星", "海王星"]
 planets.size
-# output => 8
+# 输出 => 8
 planets.length
-# output => 8
+# 输出 => 8
 ```
 
-You can use size or length, both are synonyms
+您可以使用 size 或 length，两者都是同义词
 
-### clear array
+### 清空数组
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.clear
-# output => []
+# 输出 => []
 ```
 
-### Get the first element of the array
+### 获取数组的第一个元素
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers[0]
-# or
+# 或
 numbers.first
-# output => 1
+# 输出 => 1
 ```
 
-### Get the last element of the array
+### 获取数组的最后一个元素
 
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers[-1]
-# or
+# 或
 numbers.last
-# output => 10
+# 输出 => 10
 ```
 
-### Merge two arrays
+### 合并两个数组
 
 ```ruby
 a = ["tom", "mot", "otm"]
 b = [2, 3, 5]
 a.zip(b)
-# output
+# 输出
 # [["tom", 2], ["mot", 3], ["otm", 5]]
 ```
 
-### Sort array {.row-span-3}
+### 排序数组 {.row-span-3}
 
 ```ruby
 primes = [7, 2, 3, 5]
 sorted_primes = primes.sort
 puts "#{sorted_primes}"
-# output => [2, 3, 5, 7]
+# 输出 => [2, 3, 5, 7]
 ```
 
-or in-place sort
+或就地排序
 
 ```ruby
 primes = [7, 2, 3, 5]
 primes.sort!
 puts "#{primes}"
-# output => [2, 3, 5, 7]
+# 输出 => [2, 3, 5, 7]
 ```
 
 ```ruby
-planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets = ["水星", "金星", "地球", "火星", "木星", "土星", "天王星", "海王星"]
 planets.sort
-# output
-# ["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Saturn", "Uranus", "Venus"]
+# 输出
+# ["地球", "木星", "火星", "水星", "海王星", "土星", "天王星", "金星"]
 planets.sort_by { |p| p }
-# output
-# ["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Saturn", "Uranus", "Venus"]
+# 输出
+# ["地球", "木星", "火星", "水星", "海王星", "土星", "天王星", "金星"]
 planets.sort_by { |p| p.length }
-# output
-# ["Mars", "Earth", "Venus", "Saturn", "Uranus", "Neptune", "Jupiter", "Mercury"]
+# 输出
+# ["火星", "地球", "金星", "土星", "天王星", "海王星", "木星", "水星"]
 ```
 
-### Get maximum value from array
+### 从数组中获取最大值
 
 ```ruby
 primes = [7, 2, 3, 5]
 primes.max_by { |p| p }
-# output => 7
+# 输出 => 7
 ```
 
-### Get array elements using range {.row-span-2}
+### 使用范围获取数组元素 {.row-span-2}
 
 ```ruby
-# numbers[start..end], both index are inclusive
+# numbers[start..end]，两个索引都包含在内
 puts numbers[0..3]
 # 1
 # 2
 # 3
 # 4
-# numbers[start..end], end index is exclusive
+# numbers[start...end]，结束索引不包含在内
 puts numbers[0...3]
 # 1
 # 2
 # 3
-# or numbers[start..length]
+# 或 numbers[start, length]
 puts numbers[0, 1]
 # 1
 ```
 
-### Get the first n elements of the array
+### 获取数组的前 n 个元素
 
 ```ruby
 primes = [7, 2, 3, 5]
@@ -1398,21 +1390,21 @@ primes.take(3)
 # [7, 2, 3]
 ```
 
-### access element
+### 访问元素
 
 ```ruby
 primes = [7, 2, 3, 5]
 primes.fetch(3)
 # 5
-# Fetch will throw an error if the element does not exist
+# 如果元素不存在，Fetch 将引发错误
 primes.fetch(10)
-# (index 10 outside of array bounds: -4...4)
-# or get an default value
+# (索引 10 超出数组范围：-4...4)
+# 或获取默认值
 primes.fetch(10, -1)
 # -1
 ```
 
-### Delete first n elements
+### 删除前 n 个元素
 
 ```ruby
 primes = [7, 2, 3, 5]
@@ -1420,7 +1412,7 @@ primes.drop(3)
 # [5]
 ```
 
-### Delete the first element
+### 删除第一个元素
 
 ```ruby
 primes = [7, 2, 3, 5]
@@ -1428,7 +1420,7 @@ primes.shift
 # [2, 3, 5]
 ```
 
-### Remove last element
+### 删除最后一个元素
 
 ```ruby
 primes = [7, 2, 3, 5]
@@ -1436,7 +1428,7 @@ primes.pop
 # [7, 2, 3]
 ```
 
-### Delete element with index
+### 删除带索引的元素
 
 ```ruby
 primes = [7, 2, 3, 5]
@@ -1444,7 +1436,7 @@ primes.delete_at(-1)
 # [7, 2, 3]
 ```
 
-### Remove all occurrences of elements
+### 删除所有出现的元素
 
 ```ruby
 primes = [7, 2, 3, 5, 5]
@@ -1455,10 +1447,10 @@ primes.delete(5)
 ### each {.row-span-3}
 
 ```ruby
-# When you have single line blocks
+# 当你有单行代码块时
 salary = [399, 234, 566, 533, 233]
 salary.each { |s| puts s }
-# output
+# 输出
 # 399
 # 234
 # 566
@@ -1466,7 +1458,7 @@ salary.each { |s| puts s }
 # 233
 ```
 
-When you have a multi-line block, you can replace the curly braces `{}` with `do` and `end`
+当您有多行代码块时，可以用 `do` 和 `end` 替换花括号 `{}`
 
 ```ruby
 salary.each do |s|
@@ -1474,7 +1466,7 @@ salary.each do |s|
   res = a * s
   puts res
 end
-# output
+# 输出
 # 3990
 # 2340
 # 5660
@@ -1482,7 +1474,7 @@ end
 # 2330
 ```
 
-Or you can do the same thing using braces {} and semicolon as separator instead of newline
+或者您可以使用花括号 {} 和分号作为分隔符而不是换行符来执行相同的操作
 
 ```ruby
 salary.each { |s| a = 10 ; res = a * s ; puts res }
@@ -1493,7 +1485,7 @@ salary.each { |s| a = 10 ; res = a * s ; puts res }
 ```ruby
 salary = [399, 234, 566, 533, 233]
 salary.each_with_index { |value, index| puts "#{index} #{value}" }
-# output
+# 输出
 # 0 399
 # 1 234
 # 2 566
@@ -1506,7 +1498,7 @@ salary.each_with_index { |value, index| puts "#{index} #{value}" }
 ```ruby
 salary = [399, 234, 566, 533, 233]
 salary.each_index { |i| puts i}
-# output
+# 输出
 # 0
 # 1
 # 2
@@ -1519,12 +1511,12 @@ salary.each_index { |i| puts i}
 ```ruby
 salary = [399, 234, 566, 533, 233]
 salary.map { |s|  s * 10  }
-# return
+# 返回
 # [3990, 2340, 5660, 5330, 2330]
-# On the other hand, each returns the original value
+# 另一方面，each 返回原始值
 salary = [399, 234, 566, 533, 233]
 salary.each { |s|  s * 10  }
-# return
+# 返回
 # [399, 234, 566, 533, 233]
 ```
 
@@ -1533,7 +1525,7 @@ salary.each { |s|  s * 10  }
 ```ruby
 salary = [399, 234, 566, 533, 233]
 salary.collect { |s| s > 400 }
-# output
+# 输出
 # [false, false, true, true, false]
 ```
 
@@ -1552,19 +1544,19 @@ colors = [
   {color: "red", count: 3}, {color: "red", count: 5}, {color: "black", count: 4}
 ]
 colors.each_with_object(Hash.new(0)) { |color, hash| hash["color_"+color[:color]] = color[:color].upcase; hash["count_"+color[:color]] += color[:count] }
-# output
+# 输出
 {"color_red"=>"RED", "count_red"=>8, "color_black"=>"BLACK", "count_black"=>4}
 
 [1, 2, 3].each_with_object(0) { |number, sum| sum += number}
-# output
+# 输出
 # 0
-# Because 0 is immutable, and since the initial object is 0, the method returns 0
+# 因为 0 是不可变的，并且由于初始对象是 0，所以该方法返回 0
 ```
 
 ### while
 
 ```ruby
-planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets = ["水星", "金星", "地球", "火星", "木星", "土星", "天王星", "海王星"]
 index = 0
 while index < planets.size
     puts "#{planets[index]}"
@@ -1587,19 +1579,19 @@ end
 ### do while
 
 ```ruby
-planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets = ["水星", "金星", "地球", "火星", "木星", "土星", "天王星", "海王星"]
 index = 0
 loop do
     puts "#{planets[index]}"
     index += 1
-    break if planets[index] == "Mars" or index > planets.size
+    break if planets[index] == "火星" or index > planets.size
 end
 ```
 
 ### until
 
 ```ruby
-planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+planets = ["水星", "金星", "地球", "火星", "木星", "土星", "天王星", "海王星"]
 index = planets.size - 1
 until index < 0
     puts "#{planets[index]}"
@@ -1621,16 +1613,16 @@ end
 
 ```ruby
 10.times { puts "#{rand(1..100)}"}
-# output
-# will print 10 random numbers
+# 输出
+# 将打印 10 个随机数
 ```
 
-Just because you can doesn't mean you should iterate over an array like this
+仅仅因为你可以，并不意味着你应该像这样迭代数组
 
 ```ruby
 data_sample = [2, 3, 5, 7]
 data_sample.size.times { |index| puts "#{data_sample[index]}" }
-# output
+# 输出
 # 2
 # 3
 # 5
@@ -1642,7 +1634,7 @@ data_sample.size.times { |index| puts "#{data_sample[index]}" }
 ```ruby
 data_sample = [2, 3, 5, 7]
 0.upto((data_sample.size - 1) / 2) { |index| puts "#{data_sample[index]}" }
-# output
+# 输出
 # 2
 # 3
 ```
@@ -1652,7 +1644,7 @@ data_sample = [2, 3, 5, 7]
 ```ruby
 data_sample = [2, 3, 5, 7]
 (data_sample.size - 1).downto(data_sample.size / 2) { |index| puts "#{data_sample[index]}" }
-# output
+# 输出
 # 7
 # 5
 ```
@@ -1661,7 +1653,7 @@ data_sample = [2, 3, 5, 7]
 
 ```ruby
 1.step(20, 2) { |number| puts "#{number}"}
-# output
+# 输出
 # 1
 # 3
 # 5
@@ -1678,7 +1670,7 @@ data_sample = [2, 3, 5, 7]
 
 ```ruby
 19.step(1, -2) { |number| puts "#{number}"}
-# output
+# 输出
 # 19
 # 17
 # 15
@@ -1696,27 +1688,27 @@ data_sample = [2, 3, 5, 7]
 ```ruby
 numbers = [2, 2, 2, 2, 2]
 numbers.inject{ |res, n| res + n }
-# The output is the sum of all numbers
-# If no initial value is set for res, the first element of the array is used as the initial value of res.
+# 输出是所有数字的总和
+# 如果没有为 res 设置初始值，则数组的第一个元素用作 res 的初始值。
 #10
-# Now set the value of res to 11
+# 现在将 res 的值设置为 11
 numbers = [2, 2, 2, 2, 2]
 numbers.inject(11) { |res, n| res + n }
-# so 11 + 2, 13 + 2, 15 + 2, 17 + 2 and 19 + 2
+# 所以 11 + 2, 13 + 2, 15 + 2, 17 + 2 和 19 + 2
 # 21
-# using symbol
+# 使用符号
 numbers = [2, 2, 2, 2, 2]
 numbers.inject(:+)
-# output
+# 输出
 # 10
 ```
 
-Use initial values and symbols
+使用初始值和符号
 
 ```ruby
 numbers = [2, 2, 2, 2, 2]
 numbers.inject(11, :+)
-# output
+# 输出
 # 21
 ```
 
@@ -1725,30 +1717,30 @@ numbers.inject(11, :+)
 ```ruby
 numbers = [2, 2, 2, 2, 2]
 numbers.reduce(11, :+)
-# output
+# 输出
 # 21
 ```
 
 ### detect
 
 ```ruby
-planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
-planets.detect { |name| name.start_with?("E") and name.end_with?("h") }
-# output
-# Earth
+planets = ["水星", "金星", "地球", "火星", "木星", "土星", "天王星", "海王星"]
+planets.detect { |name| name.start_with?("地") and name.end_with?("球") }
+# 输出
+# 地球
 salary = [399, 234, 566, 533, 233]
 salary.detect { |s| s > 1000 }
-# output
+# 输出
 # nil
 ```
 
 ### find
 
 ```ruby
-planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
-planets.find { |name| name.start_with?("E") and name.end_with?("h") }
-# output
-# Earth
+planets = ["水星", "金星", "地球", "火星", "木星", "土星", "天王星", "海王星"]
+planets.find { |name| name.start_with?("地") and name.end_with?("球") }
+# 输出
+# 地球
 ```
 
 ### select
@@ -1756,11 +1748,11 @@ planets.find { |name| name.start_with?("E") and name.end_with?("h") }
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.select { |n| n % 2 == 0 }
-# Now you have an even array
+# 现在你有一个偶数数组
 # [2, 4, 6, 8, 10]
-# If there are no values that satisfy your logic, return an empty array
+# 如果没有满足你逻辑的值，则返回一个空数组
 [1, 1, 1].select { |n| n % 2 == 0 }
-# no even numbers
+# 没有偶数
 # []
 ```
 
@@ -1769,7 +1761,7 @@ numbers.select { |n| n % 2 == 0 }
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.reject { |n| n % 2 == 0 }
-# Reject if the number is even, so now we have an odd array
+# 如果数字是偶数则拒绝，所以现在我们有一个奇数数组
 # [1, 3, 5, 7, 9]
 ```
 
@@ -1778,7 +1770,7 @@ numbers.reject { |n| n % 2 == 0 }
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.keep_if { |n| n % 2 == 0 }
-# numbers Array contains only even numbers
+# numbers 数组只包含偶数
 # [2, 4, 6, 8, 10]
 ```
 
@@ -1787,7 +1779,7 @@ numbers.keep_if { |n| n % 2 == 0 }
 ```ruby
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 numbers.delete_if { |n| n % 2 == 0 }
-# numbers Array contains only odd numbers
+# numbers 数组只包含奇数
 # [1, 3, 5, 7, 9]
 ```
 
@@ -1796,31 +1788,31 @@ numbers.delete_if { |n| n % 2 == 0 }
 ```ruby
 numbers = [1, 2, 3, 1, 2, 3, 0]
 numbers.drop_while { |n| n < 3 }
-# is 3 less than 3, returns false, so delete 1, 2
+# 3 小于 3 吗？返回 false，所以删除 1, 2
 # [3, 1, 2, 3, 0]
 ```
 
 ### reverse_each
 
 ```ruby
-words = %w[first second third fourth fifth sixth]
+words = %w[第一 第二 第三 第四 第五 第六]
 str = ""
 words.reverse_each {|word| str += "#{word} "}
-p str #=> "sixth fifth fourth third second first "
+p str #=> "第六 第五 第四 第三 第二 第一 "
 ```
 
-## boolean enumerable method
+## 布尔可枚举方法
 
-### boolean enumerable method {.row-span-2}
+### 布尔可枚举方法 {.row-span-2}
 
-| Name       | When to use                                                              |
+| 名称       | 何时使用                                                              |
 | :--------- | :----------------------------------------------------------------------- |
-| `all?`     | When you want to check if all elements meet your condition               |
-| `any?`     | When you want to check if at least one item meets your condition         |
-| `one?`     | When you want to check if one element meets your requirement             |
-| `none?`    | When you want to check if no item meets your condition, the opposite of? |
-| `empty?`   | When you want to check if an object is empty                             |
-| `include?` | When you want to check if an element exists in the object                |
+| `all?`     | 当您想检查所有元素是否满足您的条件时               |
+| `any?`     | 当您想检查至少有一个项目满足您的条件时         |
+| `one?`     | 当您想检查一个元素是否满足您的要求时             |
+| `none?`    | 当您想检查没有项目满足您的条件时，与 any? 相反 |
+| `empty?`   | 当您想检查对象是否为空时                             |
+| `include?` | 当您想检查对象中是否存在元素时                |
 
 ### all?
 
@@ -1867,19 +1859,17 @@ p str #=> "sixth fifth fourth third second first "
 # false
 ```
 
-## Combination method
+## 组合方法
 
-### Combination method {.row-span-2}
+### 组合方法 {.row-span-2}
 
-- `&` Returns a new array containing each element found in array and array other_array; duplicates are omitted; use eql?
-  to compare items
-- `intersection` Returns a new array containing each element found in self and all given arrays other_arrays; duplicates
-  are omitted; use eql? to compare items
-- `+` Returns an array containing all elements of self followed by all elements of the given array
-- `-` Returns an array containing all elements of self not found in the given array
-- `union` Returns an array containing all elements of self and all elements of the given array, with duplicates removed
-- `difference` Returns an array containing all elements of self not found in any given array
-- `product` self Returns or produces all combinations of elements from self and the given array
+- `&` 返回一个新数组，其中包含在 array 和 array other_array 中找到的每个元素；省略重复项；使用 eql? 比较项目
+- `intersection` 返回一个新数组，其中包含在 self 和所有给定的 other_arrays 数组中找到的每个元素；省略重复项；使用 eql? 比较项目
+- `+` 返回一个数组，其中包含 self 的所有元素，后跟给定数组的所有元素
+- `-` 返回一个数组，其中包含 self 中未在给定数组中找到的所有元素
+- `union` 返回一个数组，其中包含 self 的所有元素和给定数组的所有元素，并删除重复项
+- `difference` 返回一个数组，其中包含 self 中未在任何给定数组中找到的所有元素
+- `product` self 返回或生成 self 和给定数组中元素的所有组合
 
 ### &
 
@@ -1947,88 +1937,88 @@ p.size # => 6 # a.size * a1.size
 p # => [[0, 3], [0, 4], [1, 3], [1, 4], [2, 3], [2, 4]]
 ```
 
-## Loops
+## 循环
 
-### while loop
+### while 循环
 
 ```ruby
-# variable count
+# 变量 count
 count = 4
-# using while loop
-# here conditional is count i.e. 4
+# 使用 while 循环
+# 这里的条件是 count 即 4
 while count >= 1
-  # statements to be executed
-  puts "Ruby Cheatsheet"
+  # 要执行的语句
+  puts "Ruby 速查表"
   count = count - 1
-  # while loop ends here
+  # while 循环在此结束
 end
 ```
 
-output
+输出
 
 ```
-Ruby Cheatsheet
-Ruby Cheatsheet
-Ruby Cheatsheet
-Ruby Cheatsheet
+Ruby 速查表
+Ruby 速查表
+Ruby 速查表
+Ruby 速查表
 ```
 
-### for loop
+### for 循环
 
 ```ruby
-# loop using range as expression
-text = "Ruby Cheatsheet"
-# using for loop with the range
+# 使用范围作为表达式的循环
+text = "Ruby 速查表"
+# 使用 for 循环和范围
 for count in 1..5 do
   puts text
 end
 ```
 
-output
+输出
 
 ```
-Ruby Cheatsheet
-Ruby Cheatsheet
-Ruby Cheatsheet
-Ruby Cheatsheet
-Ruby Cheatsheet
+Ruby 速查表
+Ruby 速查表
+Ruby 速查表
+Ruby 速查表
+Ruby 速查表
 ```
 
-### do..while loop
+### do..while 循环
 
 ```ruby
-# starting of do..while loop
+# do..while 循环的开始
 loop do
-  puts "Ruby Cheatsheet"
+  puts "Ruby 速查表"
   val = '7'
-  # using boolean expressions
+  # 使用布尔表达式
   if val == '7'
     break
   end
-  # ending of ruby do..while loop
+  # ruby do..while 循环的结束
 end
 ```
 
-output
+输出
 
 ```
-Ruby Cheatsheet
+Ruby 速查表
 ```
 
-### until loop
+### until 循环
 
 ```ruby
 var = 7
-# here do is optional
+# 这里的 do 是可选的
 until var == 11 do
-  # code to be executed
+  # 要执行的代码
   puts var * 10
   var = var + 1
-  # here loop ends
+  # 循环在此结束
 end
 ```
 
-output
+输出
 
 ```
 70
@@ -2037,7 +2027,7 @@ output
 100
 ```
 
-### Break out of loop
+### 跳出循环
 
 ```ruby
 salary = [399, 234, 566, 533, 233]
@@ -2045,14 +2035,14 @@ salary.each do |s|
   break if s == 566
   puts s
 end
-# output
+# 输出
 # 399
 # 234
 ```
 
-By using the `break` keyword
+通过使用 `break` 关键字
 
-### skip within loop
+### 在循环内跳过
 
 ```ruby
 salary = [399, 234, 566, 533, 233]
@@ -2060,41 +2050,41 @@ salary.each do |s|
   next if s == 533
   puts s
 end
-# output
+# 输出
 # 399
 # 234
 # 566
 # 233
 ```
 
-By using next keyword
+通过使用 next 关键字
 
-### Repeat current iteration
+### 重复当前迭代
 
 ```ruby
 data = [456, 3000]
 retry_count = 0
-status = "network failure"
+status = "网络故障"
 sum = 0
 data.each do |d|
     if retry_count == 3
-        status = "connection established"
+        status = "连接已建立"
         retry_count = 0
         redo
-    elsif status == "network failure" and retry_count < 5
-        puts "network failure #{retry_count}"
+    elsif status == "网络故障" and retry_count < 5
+        puts "网络故障 #{retry_count}"
         retry_count += 1
         redo
-    elsif status == "connection established"
+    elsif status == "连接已建立"
         puts d
         sum += d
     end
 end
-# output of sum
+# sum 的输出
 # 3456
 ```
 
-### Start the cycle again
+### 重新开始循环
 
 ```ruby
 numbers = [2, 2, 44, 44]
@@ -2102,9 +2092,9 @@ sum = 0
 begin
     numbers.each do |s|
         if rand(1..10) == 5
-            puts "hi 5, let's do it again!"
+            puts "嗨 5，让我们再来一次！"
             sum = 0
-            raise "hi 5"
+            raise "嗨 5"
         end
         puts s
         sum += s
@@ -2114,24 +2104,24 @@ rescue
 end
 ```
 
-## Classes
+## 类
 
-### Classes Example {.row-span-2}
+### 类示例 {.row-span-2}
 
 ```ruby
 class Person
-    # when you create a new object, it looks for a method named initialize and executes it, like a constructor in java
+    # 当你创建一个新对象时，它会查找一个名为 initialize 的方法并执行它，就像 java 中的构造函数一样
     # def initialize(name, number)
     #    @name = name
     #    @number = number
     # end
-    # instance variable
+    # 实例变量
     # @name
-    # class variable
+    # 类变量
     # @@count
-    # attr_accessor acts as a getter and setter for the following instance attributes
+    # attr_accessor 充当以下实例属性的 getter 和 setter
     attr_accessor :name, :number
-    # class variable must be initialized
+    # 类变量必须初始化
     @@count = 0
     def self.count
         @@count
@@ -2143,57 +2133,57 @@ class Person
         @@count += 1
     end
 end
-# create an instance of the Person class
+# 创建 Person 类的实例
 p1 = Person.new
-# set attributes of the Person class
-p1.name = "Yukihiro Matsumoto"
+# 设置 Person 类的属性
+p1.name = "松本行弘"
 p1.number = 9999999999
-# get attributes of the Person class
+# 获取 Person 类的属性
 puts "#{p1.name}"
 puts "#{p1.number}"
 puts "#{Person.count}"
-# Yukihiro Matsumoto
+# 松本行弘
 # 9999999999
 # 1
 p2 = Person.new
-p2.name = "Yukihiro Matsumoto"
+p2.name = "松本行弘"
 p2.number = 9999999999
-# get attributes of the Person class
+# 获取 Person 类的属性
 puts "#{p2.name}"
 puts "#{p2.number}"
 puts "#{Person.count}"
-# Yukihiro Matsumoto
+# 松本行弘
 # 9999999999
 # 2
-# set class variable
+# 设置类变量
 Person.count = 3
 puts "#{Person.count}"
 # 3
 ```
 
-### Inherit a class
+### 继承一个类
 
 ```ruby
 class Person
     attr_accessor :name, :number
 end
-# Inherit methods and properties from parent class using < symbol
+# 使用 < 符号从父类继承方法和属性
 class Student < Person
     attr_accessor :id
 end
 s = Student.new
-s.name = "James Bond"
+s.name = "詹姆斯·邦德"
 s.number = 700
 s.id = 678
-puts "#{p.name}"
-James Bond
-puts "#{p.number}"
-700
-puts "#{p.id}"
-678
+puts "#{s.name}" # 更正：应该是 s.name 而不是 p.name
+# 詹姆斯·邦德
+puts "#{s.number}" # 更正：应该是 s.number 而不是 p.number
+# 700
+puts "#{s.id}" # 更正：应该是 s.id 而不是 p.id
+# 678
 ```
 
-### Check instance type
+### 检查实例类型
 
 ```ruby
 class Vehicle; end
@@ -2213,17 +2203,17 @@ a.instance_of? Numeric
 false
 ```
 
-Returns true if the object is an instance of the given class and not a subclass or superclass
+如果对象是给定类的实例而不是子类或超类，则返回 true
 
-### Print all method names of a class
+### 打印类的所有方法名
 
 ```ruby
 puts (String.methods).sort
-# Exclude methods inherited from Object class
+# 排除从 Object 类继承的方法
 puts (String.methods - Object.public_instance_methods).sort
 ```
 
-### Check if a class has a specific method
+### 检查类是否具有特定方法
 
 ```ruby
 String.respond_to?(:prepend)
@@ -2232,7 +2222,8 @@ String.respond_to?(:append)
 false
 ```
 
-## See Also
+## 另请参阅
 
 - [Ruby](https://www.ruby-lang.org/en/) _(ruby-lang.org)_
-- [Ruby Cheatsheet](https://github.com/lifeparticle/Ruby-Cheatsheet) _(github.com)_
+- [Ruby 速查表](https://github.com/lifeparticle/Ruby-Cheatsheet) _(github.com)_
+

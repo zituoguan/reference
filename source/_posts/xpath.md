@@ -3,24 +3,24 @@ title: XPath
 date: 2020-12-19 22:15:43
 background: bg-[#77aeeb]
 tags:
-  - document
-  - expression
-  - select
+  - 文档
+  - 表达式
+  - 选择
 categories:
-  - Toolkit
+  - 工具箱
 intro: |
-  This is an [XPath](https://en.wikipedia.org/wiki/XPath) selectors cheat sheet, which lists commonly used XPath positioning methods and CSS selectors
+  这是一个 [XPath](https://en.wikipedia.org/wiki/XPath) 选择器速查表，列出了常用的 XPath 定位方法和 CSS 选择器
 plugins:
   - copyCode
 ---
 
-## XPath Selectors {.cols-6}
+## XPath 选择器 {.cols-6}
 
-### Getting started {.col-span-2}
+### 入门 {.col-span-2}
 
-- [Xpath test bed](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _(whitebeam.org)_
+- [Xpath 测试平台](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _(whitebeam.org)_
 
-Test in Firefox or Chromium based browser console:
+在 Firefox 或基于 Chromium 的浏览器控制台中测试：
 
 ```console
 $x('/html/body')
@@ -29,7 +29,7 @@ $x('//h1')[0].innerText
 $x('//a[text()="XPath"]')[0].click()
 ```
 
-### Descendant selectors {.col-span-2}
+### 后代选择器 {.col-span-2}
 
 | Xpath        | CSS          |
 | ------------ | ------------ |
@@ -43,7 +43,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 {.show-header}
 
-### Order selectors {.col-span-2}
+### 顺序选择器 {.col-span-2}
 
 | Xpath               | CSS                  |
 | ------------------- | -------------------- |
@@ -56,7 +56,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 {.show-header}
 
-### Attribute selectors {.col-span-3 .row-span-2}
+### 属性选择器 {.col-span-3 .row-span-2}
 
 | Xpath                           | CSS                  |
 | ------------------------------- | -------------------- |
@@ -72,7 +72,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 {.show-header}
 
-### Siblings {.col-span-3}
+### 同级元素选择器 {.col-span-3}
 
 | Xpath                                | CSS      |
 | ------------------------------------ | -------- |
@@ -93,56 +93,56 @@ $x('//a[text()="XPath"]')[0].click()
 
 {.show-header}
 
-### Misc selectors {.col-span-3}
+### 其他选择器 {.col-span-3}
 
-| Xpath                             | CSS                       |
+| Xpath                             | CSS / 含义                |                       |
 | --------------------------------- | ------------------------- | --------------------- |
-| `//h1[not(@id)]`                  | h1:not([id])              |
-| `//button[text()="Submit"]`       | Text match                |
-| `//button[contains(text(),"Go")]` | Text contains (substring) |
-| `//product[@price > 2.50]`        | Arithmetic                |
-| `//ul[*]`                         | Has children              |
-| `//ul[li]`                        | Has children (specific)   |
-| `//a[@name or @href]`             | Or logic                  |
-| `//a                              | //div`                    | Union (joins results) |
+| `//h1[not(@id)]`                  | h1:not([id])              |                       |
+| `//button[text()="Submit"]`       | 文本匹配                  |                       |
+| `//button[contains(text(),"Go")]` | 文本包含 (子字符串)       |                       |
+| `//product[@price > 2.50]`        | 算术运算                  |                       |
+| `//ul[*]`                         | 有子元素                  |                       |
+| `//ul[li]`                        | 有子元素 (特定)           |                       |
+| `//a[@name or @href]`             | 或逻辑                    |                       |
+| `//a                              | //div`                    | 并集 (合并结果)       |
 
 {.show-header}
 
-## XPath Expressions
+## XPath 表达式
 
-### Steps and axes {.secondary}
+### 步骤和轴 {.secondary}
 
 <br/>
 
 | -    | -    | -    | -               |
 | ---- | ---- | ---- | --------------- |
 | `//` | `ul` | `/`  | `a[@id='link']` |
-| Axis | Step | Axis | Step            |
+| 轴   | 步骤 | 轴   | 步骤            |
 
 {.left-text}
 
-### Prefixes
+### 前缀
 
-| Prefix | Example               | Means    |
+| 前缀   | 示例                  | 含义     |
 | ------ | --------------------- | -------- |
-| `//`   | `//hr[@class='edge']` | Anywhere |
-| `/`    | `/html/body/div`      | Root     |
-| `./`   | `./div/p`             | Relative |
+| `//`   | `//hr[@class='edge']` | 任意位置 |
+| `/`    | `/html/body/div`      | 根路径   |
+| `./`   | `./div/p`             | 相对路径 |
 
 {.show-header}
 
-### Axes
+### 轴 (Axes)
 
-| Axis | Example             | Means      |
-| ---- | ------------------- | ---------- |
-| `/`  | `//ul/li/a`         | Child      |
-| `//` | `//[@id="list"]//a` | Descendant |
+| 轴   | 示例                | 含义     |
+| ---- | ------------------- | -------- |
+| `/`  | `//ul/li/a`         | 子节点   |
+| `//` | `//[@id="list"]//a` | 后代节点 |
 
 {.show-header}
 
-## XPath Predicates
+## XPath 谓词
 
-### Predicates
+### 谓词
 
 ```bash
 //div[true()]
@@ -150,70 +150,70 @@ $x('//a[text()="XPath"]')[0].click()
 //div[@class="head"][@id="top"]
 ```
 
-Restricts a nodeset only if some condition is true. They can be chained.
+仅当某个条件为真时限制节点集。它们可以被链式调用。
 
-### Operators
+### 运算符
 
 ```bash
-# Comparison
+# 比较
 //a[@id = "xyz"]
 //a[@id != "xyz"]
 //a[@price > 25]
 ```
 
 ```bash
-# Logic (and/or)
+# 逻辑 (and/or)
 //div[@id="head" and position()=2]
 //div[(x and y) or not(z)]
 ```
 
-### Using nodes
+### 使用节点
 
 ```bash
-# Use them inside functions
+# 在函数内部使用它们
 //ul[count(li) > 2]
 //ul[count(li[@class='hide']) > 0]
 ```
 
 ```bash
-# Returns `<ul>` that has a `<li>` child
+# 返回拥有 <li> 子元素的 <ul>
 //ul[li]
 ```
 
-You can use nodes inside predicates.
+你可以在谓词内部使用节点。
 
-### Indexing
+### 索引
 
 ```bash
-//a[1]                # first <a>
-//a[last()]           # last <a>
-//ol/li[2]            # second <li>
-//ol/li[position()=2] # same as above
+//a[1]                # 第一个 <a>
+//a[last()]           # 最后一个 <a>
+//ol/li[2]            # 第二个 <li>
+//ol/li[position()=2] # 与上面相同
 //ol/li[position()>1] #:not(:first-child)
 ```
 
-Use `[]` with a number, or `last()` or `position()`.
+使用 `[]` 配合数字，或使用 `last()` 或 `position()`。
 
-### Chaining order
+### 链式顺序
 
 ```bash
 a[1][@href='/']
 a[@href='/'][1]
 ```
 
-Order is significant, these two are different.
+顺序很重要，这两个是不同的。
 
-### Nesting predicates
+### 嵌套谓词
 
 ```
 //section[.//h1[@id='hi']]
 ```
 
-This returns `<section>` if it has an `<h1>` descendant with `id='hi'`.
+如果 `<section>` 包含一个 id 为 'hi' 的 `<h1>` 后代元素，则返回该 `<section>`。
 
-## XPath Functions {.cols-2}
+## XPath 函数 {.cols-2}
 
-### Node functions
+### 节点函数
 
 ```bash
 name()            # //[starts-with(name(), 'h')]
@@ -228,7 +228,7 @@ count()           # //table[count(tr)=1]
 position()        # //ol/li[position()=2]
 ```
 
-### String functions
+### 字符串函数
 
 ```bash
 contains()        # font[contains(@class,"head")]
@@ -246,13 +246,13 @@ normalize-space()
 string-length()
 ```
 
-### Boolean functions
+### 布尔函数
 
 ```bash
 not(expr)         # button[not(starts-with(text(),"Submit"))]
 ```
 
-### Type conversion
+### 类型转换
 
 ```bash
 string()
@@ -260,13 +260,13 @@ number()
 boolean()
 ```
 
-## XPath Axes {.cols-2}
+## XPath 轴 (Axes) {.cols-2}
 
-### Using axes
+### 使用轴
 
 ```bash
 //ul/li                       # ul > li
-//ul/child::li                # ul > li (same)
+//ul/child::li                # ul > li (相同)
 //ul/following-sibling::li    # ul ~ li
 //ul/descendant-or-self::li   # ul li
 //ul/ancestor-or-self::li     # $('ul').closest('li')
@@ -277,65 +277,64 @@ boolean()
 |      |      |            |      |
 | ---- | ---- | ---------- | ---- |
 | `//` | `ul` | `/child::` | `li` |
-| Axis | Step | Axis       | Step |
+| 轴   | 步骤 | 轴         | 步骤 |
 
 {.left-text}
 
-Steps of an expression are separated by `/`, usually used to pick child nodes. That's not always true: you can specify a
-different "axis" with `::`.
+表达式的步骤由 `/` 分隔，通常用于选择子节点。但这并非总是如此：你可以使用 `::` 指定不同的“轴”。
 
-### Child axis
+### 子节点轴 (Child axis)
 
 ```bash
-# both the same
+# 两者相同
 //ul/li/a
 //child::ul/child::li/child::a
 ```
 
-`child::` is the default axis. This makes `//a/b/c` work.
+`child::` 是默认轴。这使得 `//a/b/c` 可以工作。
 
 ```bash
-# both the same
-# this works because `child::li` is truthy
+# 两者相同
+# 这之所以有效，是因为 `child::li` 为真值
 //ul[li]
 //ul[child::li]
 ```
 
 ```bash
-# both the same
+# 两者相同
 //ul[count(li) > 2]
 //ul[count(child::li) > 2]
 ```
 
-### Descendant-or-self axis
+### 后代或自身轴 (Descendant-or-self axis)
 
 ```bash
-# both the same
+# 两者相同
 //div//h4
 //div/descendant-or-self::h4
 ```
 
-`//` is short for the `descendant-or-self::` axis.
+`//` 是 `descendant-or-self::` 轴的简写。
 
 ```bash
-# both the same
+# 两者相同
 //ul//[last()]
 //ul/descendant-or-self::[last()]
 ```
 
-### Other axes {.row-span-2}
+### 其他轴 {.row-span-2}
 
-| Axis                 | Abbrev | Notes                                            |
+| 轴                   | 缩写   | 注释                                             |
 | -------------------- | ------ | ------------------------------------------------ |
 | `ancestor`           |        |                                                  |
 | `ancestor-or-self`   |        |                                                  |
-| `attribute`          | `@`    | `@href` is short for `attribute::href`           |
-| `child`              |        | `div` is short for `child::div`                  |
+| `attribute`          | `@`    | `@href` 是 `attribute::href` 的简写              |
+| `child`              |        | `div` 是 `child::div` 的简写                     |
 | `descendant`         |        |                                                  |
-| `descendant-or-self` | `//`   | `//` is short for `/descendant-or-self::node()/` |
+| `descendant-or-self` | `//`   | `//` 是 `/descendant-or-self::node()/` 的简写    |
 | `namespace`          |        |                                                  |
-| `self`               | `.`    | `.` is short for `self::node()`                  |
-| `parent`             | `..`   | `..` is short for `parent::node()`               |
+| `self`               | `.`    | `.` 是 `self::node()` 的简写                     |
+| `parent`             | `..`   | `..` 是 `parent::node()` 的简写                  |
 | `following`          |        |                                                  |
 | `following-sibling`  |        |                                                  |
 | `preceding`          |        |                                                  |
@@ -343,60 +342,60 @@ different "axis" with `::`.
 
 {.headers}
 
-There are other axes you can use.
+还有其他可以使用的轴。
 
-### Unions
+### 并集
 
 ```bash
 //a | //span
 ```
 
-Use `|` to join two expressions.
+使用 `|` 来连接两个表达式。
 
-## XPath More examples {.cols-2}
+## XPath 更多示例 {.cols-2}
 
-### Examples
+### 示例
 
 ```bash
-//*                 # all elements
-count(//*)          # count all elements
-(//h1)[1]/text()    # text of the first h1 heading
-//li[span]          # find a <li> with an <span> inside it
-                    # ...expands to //li[child::span]
-//ul/li/..          # use .. to select a parent
+//*                 # 所有元素
+count(//*)          # 计算所有元素的数量
+(//h1)[1]/text()    # 第一个 h1 标题的文本
+//li[span]          # 查找内部包含 <span> 的 <li>
+                    # ...展开为 //li[child::span]
+//ul/li/..          # 使用 .. 选择父元素
 ```
 
-### Find a parent
+### 查找父元素
 
 ```bash
 //section[h1[@id='section-name']]
 ```
 
-Finds a `<section>` that directly contains `h1#section-name`
+查找直接包含 `h1#section-name` 的 `<section>`
 
 ```bash
 //section[//h1[@id='section-name']]
 ```
 
-Finds a `<section>` that contains `h1#section-name`. (Same as above, but uses descendant-or-self instead of child)
+查找包含 `h1#section-name` 的 `<section>`。（与上面类似，但使用 descendant-or-self 而不是 child）
 
-### Closest
+### 最近的祖先元素 (Closest)
 
 ```bash
 ./ancestor-or-self::[@class="box"]
 ```
 
-Works like jQuery's `$().closest('.box')`.
+类似于 jQuery 的 `$().closest('.box')`。
 
-### Attributes
+### 属性
 
 ```bash
 //item[@price > 2*@discount]
 ```
 
-Finds `<item>` and check its attributes
+查找 `<item>` 并检查其属性
 
-## Also see
+## 另请参阅
 
 - [Devhints](https://devhints.io/xpath) _(devhints.io)_
-- [Xpath test bed](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _(whitebeam.org)_
+- [Xpath 测试平台](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _(whitebeam.org)_

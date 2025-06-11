@@ -7,51 +7,51 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 23 keyboard shortcuts found in Spotify
+  Spotify 中 23 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### General I
+### 常规操作 I
 
-| Shortcut         | Action                  |
+| 快捷键           | 操作                    |
 | ---------------- | ----------------------- |
-| `Ctrl` `N`       | Create new playlist     |
-| `Ctrl` `X`       | Cut                     |
-| `Ctrl` `C`       | Copy                    |
-| `Ctrl` `Alt` `C` | Copy (alternative link) |
-| `Ctrl` `V`       | Paste                   |
-| `Del`            | Delete                  |
-| `Ctrl` `A`       | Select all              |
-| `Space`          | Play/pause              |
-| `Ctrl` `Right`   | Next track              |
-| `Ctrl` `Left`    | Previous track          |
-| `Ctrl` `Up`      | Volume up               |
+| `Ctrl` `N`       | 创建新播放列表          |
+| `Ctrl` `X`       |剪切                     |
+| `Ctrl` `C`       | 复制                    |
+| `Ctrl` `Alt` `C` | 复制 (备用链接)         |
+| `Ctrl` `V`       | 粘贴                    |
+| `Del`            | 删除                    |
+| `Ctrl` `A`       | 全选                    |
+| `Space`          | 播放/暂停               |
+| `Ctrl` `Right`   | 下一首                  |
+| `Ctrl` `Left`    | 上一首                  |
+| `Ctrl` `Up`      | 音量增大                |
 
 {.shortcuts}
 
-### General II
+### 常规操作 II
 
-| Shortcut              | Action                          |
+| 快捷键                | 操作                            |
 | --------------------- | ------------------------------- |
-| `Ctrl` `Down`         | Volume down                     |
-| `Ctrl` `Shift` `Down` | Mute                            |
-| `Ctrl` `Shift` `Up`   | Max volume                      |
-| `F1`                  | Show help                       |
-| `Ctrl` `F`            | Filter (in Songs and Playlists) |
-| `Ctrl` `L`            | Give focus to search field      |
-| `Alt` `Left`          | Go back                         |
-| `Alt` `Right`         | Go forward                      |
-| `Enter`               | Play selected row               |
-| `Ctrl` `P`            | Preferences                     |
-| `Ctrl` `Shift` `W`    | Logout active user              |
-| `Alt` `F4`            | Quit                            |
+| `Ctrl` `Down`         | 音量减小                        |
+| `Ctrl` `Shift` `Down` | 静音                            |
+| `Ctrl` `Shift` `Up`   | 最大音量                        |
+| `F1`                  | 显示帮助                        |
+| `Ctrl` `F`            | 筛选 (在歌曲和播放列表中)       |
+| `Ctrl` `L`            | 聚焦到搜索框                    |
+| `Alt` `Left`          | 后退                            |
+| `Alt` `Right`         | 前进                            |
+| `Enter`               | 播放选定行                      |
+| `Ctrl` `P`            | 首选项                          |
+| `Ctrl` `Shift` `W`    | 注销当前用户                    |
+| `Alt` `F4`            | 退出                            |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Spotify](https://support.spotify.com/is/using_spotify/system_settings/keyboard-shortcuts/)
+- [Spotify 键盘快捷键](https://support.spotify.com/is/using_spotify/system_settings/keyboard-shortcuts/)
   _(support.spotify.com)_

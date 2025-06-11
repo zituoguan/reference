@@ -8,426 +8,426 @@ tags:
   - version
   - VCS
 categories:
-  - Linux Command
-intro: This cheat sheet summarizes commonly used Git command line instructions for quick reference.
+  - Linux 命令
+intro: 这份速查表总结了常用的 Git 命令行指令，以便快速参考。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门
 
-### Create a Repository
+### 创建仓库
 
-Create a new local repository
+创建一个新的本地仓库
 
 ```shell script
-$ git init [project name]
+$ git init [项目名称]
 ```
 
-Clone a repository
+克隆一个仓库
 
 ```shell script
 $ git clone git_url
 ```
 
-Clone a repository into a specified directory
+将仓库克隆到指定目录
 
 ```shell script
 $ git clone git_url my_directory
 ```
 
-### Make a change {.row-span-2}
+### 进行更改 {.row-span-2}
 
-Show modified files in working directory, staged for your next commit
+显示工作目录中已修改的文件，这些文件已暂存，准备进行下一次提交
 
 ```shell script
 $ git status
 ```
 
-Stages the file, ready for commit
+暂存文件，准备提交
 
 ```shell script
 $ git add [file]
 ```
 
-Stage all changed files, ready for commit
+暂存所有已更改的文件，准备提交
 
 ```shell script
 $ git add .
 ```
 
-Commit all staged files to version history
+将所有暂存的文件提交到版本历史
 
 ```shell script
-$ git commit -m "commit message"
+$ git commit -m "提交信息"
 ```
 
-Commit all your tracked files to version history
+将所有已跟踪的文件提交到版本历史
 
 ```shell script
-$ git commit -am "commit message"
+$ git commit -am "提交信息"
 ```
 
-Discard changes in working directory which is not staged
+丢弃工作目录中未暂存的更改
 
 ```shell script
 $ git restore [file]
 ```
 
-Unstage a staged file or file which is staged
+取消暂存一个已暂存的文件
 
 ```shell script
 $ git restore --staged [file]
 ```
 
-Unstage a file, keeping the file changes
+取消暂存文件，保留文件更改
 
 ```shell script
 $ git reset [file]
 ```
 
-Revert everything to the last commit
+将所有内容还原到最后一次提交
 
 ```shell script
 $ git reset --hard
 ```
 
-Diff of what is changed but not staged
+显示已更改但未暂存的内容的差异
 
 ```shell script
 $ git diff
 ```
 
-Diff of what is staged but not yet committed
+显示已暂存但尚未提交的内容的差异
 
 ```shell script
 $ git diff --staged
 ```
 
-Apply any commits of current branch ahead of specified one
+应用当前分支中领先于指定分支的任何提交
 
 ```shell script
 $ git rebase [branch]
 ```
 
-### Configuration
+### 配置
 
-Set the name that will be attached to your commits and tags
-
-```shell script
-$ git config --global user.name "name"
-```
-
-Set an email address that will be attached to your commits and tags
+设置将附加到您的提交和标签的名称
 
 ```shell script
-$ git config --global user.email "email"
+$ git config --global user.name "名称"
 ```
 
-Enable some colorization of Git output
+设置将附加到您的提交和标签的电子邮件地址
+
+```shell script
+$ git config --global user.email "邮箱"
+```
+
+启用 Git 输出的一些颜色化
 
 ```shell script
 $ git config --global color.ui auto
 ```
 
-Edit the global configuration file in a text editor
+在文本编辑器中编辑全局配置文件
 
 ```shell script
 $ git config --global --edit
 ```
 
-### Working with Branches
+### 使用分支
 
-List all local branches
+列出所有本地分支
 
 ```shell script
 $ git branch
 ```
 
-List all branches, local and remote
+列出所有分支，包括本地和远程
 
 ```shell script
 $ git branch -av
 ```
 
-Switch to my_branch, and update working directory
+切换到 my_branch 分支，并更新工作目录
 
 ```shell script
 $ git checkout my_branch
 ```
 
-Create a new branch called new_branch
+创建一个名为 new_branch 的新分支
 
 ```shell script
 $ git checkout -b new_branch
 ```
 
-Delete the branch called my_branch
+删除名为 my_branch 的分支
 
 ```shell script
 $ git branch -d my_branch
 ```
 
-Merge branchA into branchB
+将 branchA 合并到 branchB
 
 ```shell script
 $ git checkout branchB
 $ git merge branchA
 ```
 
-Tag the current commit
+标记当前提交
 
 ```shell script
 $ git tag my_tag
 ```
 
-### Observe your Repository
+### 查看您的仓库
 
-Show the commit history for the currently active branch
+显示当前活动分支的提交历史
 
 ```shell script
 $ git log
 ```
 
-Show the commits on branchA that are not on branchB
+显示 branchA 上但不在 branchB 上的提交
 
 ```shell script
 $ git log branchB..branchA
 ```
 
-Show the commits that changed file, even across renames
+显示更改了文件的提交，即使文件被重命名
 
 ```shell script
 $ git log --follow [file]
 ```
 
-Show the diff of what is in branchA that is not in branchB
+显示 branchA 中存在但 branchB 中不存在的内容的差异
 
 ```shell script
 $ git diff branchB...branchA
 ```
 
-Show any object in Git in human-readable format
+以人类可读的格式显示 Git 中的任何对象
 
 ```shell script
 $ git show [SHA]
 ```
 
-### Synchronize
+### 同步
 
-Fetch down all the branches from that Git remote
+从该 Git 远程仓库获取所有分支
 
 ```shell script
 $ git fetch [alias]
 ```
 
-Merge a remote branch into your current branch to bring it up to date
+将远程分支合并到当前分支以使其保持最新
 
 ```shell script
 $ git merge [alias]/[branch]
-# No fast-forward
+# 不快进合并
 $ git merge --no-ff [alias]/[branch]
-# Only fast-forward
+# 仅快进合并
 $ git merge --ff-only [alias]/[branch]
 ```
 
-Transmit local branch commits to the remote repository branch
+将本地分支的提交传输到远程仓库分支
 
 ```shell script
 $ git push [alias] [branch]
 ```
 
-Fetch and merge any commits from the tracking remote branch
+从跟踪的远程分支获取并合并任何提交
 
 ```shell script
 $ git pull
 ```
 
-Merge just one specific commit from another branch to your current branch
+仅将另一个分支的特定提交合并到当前分支
 
 ```shell script
 $ git cherry-pick [commit_id]
 ```
 
-### Remote
+### 远程
 
-Add a git URL as an alias
+添加一个 git URL 作为别名
 
 ```shell script
 $ git remote add [alias] [url]
 ```
 
-Show the names of the remote repositories you've set up
+显示您已设置的远程仓库的名称
 
 ```shell script
 $ git remote
 ```
 
-Show the names and URLs of the remote repositories
+显示远程仓库的名称和 URL
 
 ```shell script
 $ git remote -v
 ```
 
-Remove a remote repository
+移除一个远程仓库
 
 ```shell script
 $ git remote rm [remote repo name]
 ```
 
-Change the URL of the git repo
+更改 git 仓库的 URL
 
 ```shell script
 $ git remote set-url origin [git_url]
 ```
 
-### Temporary Commits
+### 临时提交
 
-Save modified and staged changes
+保存已修改和已暂存的更改
 
 ```shell script
 $ git stash
 ```
 
-List stack-order of stashed file changes
+列出已储藏文件更改的堆栈顺序
 
 ```shell script
 $ git stash list
 ```
 
-Write working from top of stash stack
+从储藏堆栈顶部恢复工作
 
 ```shell script
 $ git stash pop
 ```
 
-Discard the changes from top of stash stack
+丢弃储藏堆栈顶部的更改
 
 ```shell script
 $ git stash drop
 ```
 
-### Tracking path Changes
+### 跟踪路径更改
 
-Delete the file from project and stage the removal for commit
+从项目中删除文件并将删除操作暂存以供提交
 
 ```shell script
 $ git rm [file]
 ```
 
-Change an existing file path and stage the move
+更改现有文件路径并将移动操作暂存
 
 ```shell script
 $ git mv [existing-path] [new-path]
 ```
 
-Show all commit logs with indication of any paths that moved
+显示所有提交日志，并指示任何已移动的路径
 
 ```shell script
 $ git log --stat -M
 ```
 
-### Ignoring Files
+### 忽略文件
 
 ```
 /logs/*
 
-# "!" means don't ignore
+# "!" 表示不要忽略
 !logs/.gitkeep
 
-/# Ignore Mac system files
+/# 忽略 Mac 系统文件
 .DS_store
 
-# Ignore node_modules folder
+# 忽略 node_modules 文件夹
 node_modules
 
-# Ignore SASS config files
+# 忽略 SASS 配置文件
 .sass-cache
 ```
 
-A `.gitignore` file specifies intentionally untracked files that Git should ignore
+`.gitignore` 文件指定了 Git 应该忽略的、有意不跟踪的文件。
 
-## Git Tricks
+## Git 技巧
 
-### Rename branch
+### 重命名分支
 
-- #### **Renamed** to `new_name`
+- #### **重命名**为 `new_name`
   ```shell script
   $ git branch -m <new_name>
   ```
-- #### **Push** and reset
+- #### **推送**并重置上游
   ```shell script
   $ git push origin -u <new_name>
   ```
-- #### **Delete** remote branch
+- #### **删除**远程分支
   ```shell script
   $ git push origin --delete <old>
   ```
   {.marker-timeline}
 
-### Log
+### 日志
 
-Search change by content
+按内容搜索更改
 
 ```shell script
-$ git log -S'<a term in the source>'
+$ git log -S'<源中的术语>'
 ```
 
-Show changes over time for specific file
+显示特定文件随时间的变化
 
 ```shell script
 $ git log -p <file_name>
 ```
 
-Print out a cool visualization of your log
+打印出酷炫的日志可视化效果
 
 ```shell script {.wrap}
 $ git log --pretty=oneline --graph --decorate --all
 ```
 
-### Branch {.row-span-2}
+### 分支 {.row-span-2}
 
-List all branches and their upstreams
+列出所有分支及其上游分支
 
 ```shell script
 $ git branch -vv
 ```
 
-Quickly switch to the previous branch
+快速切换到上一个分支
 
 ```shell script
 $ git checkout -
 ```
 
-Get only remote branches
+仅获取远程分支
 
 ```shell script
 $ git branch -r
 ```
 
-Checkout a single file from another branch
+从另一个分支检出单个文件
 
 ```shell script
 $ git checkout <branch> -- <file>
 ```
 
-### Rewriting history
+### 改写历史
 
-Rewrite last commit message
+改写最后一次提交信息
 
 ```shell script
-$ git commit --amend -m "new message"
+$ git commit --amend -m "新信息"
 ```
 
-Amend the latest commit without changing the commit message.
+修改最新的提交，但不更改提交信息。
 
 ```shell script
 $ git commit --amend --no-edit
 ```
 
-See also: [Rewriting history](https://www.atlassian.com/git/tutorials/rewriting-history)
+另请参阅：[改写历史](https://www.atlassian.com/git/tutorials/rewriting-history)
 
-### Git Aliases
+### Git 别名
 
 ```cmd
 git config --global alias.co checkout
@@ -436,47 +436,47 @@ git config --global alias.ci commit
 git config --global alias.st status
 ```
 
-See also: [More Aliases](https://gist.github.com/johnpolacek/69604a1f6861129ef088)
+另请参阅：[更多别名](https://gist.github.com/johnpolacek/69604a1f6861129ef088)
 
-## Advanced Git
+## 高级 Git
 
-### Submodules
+### 子模块
 
-Create a new submodule within your repository:
+在您的仓库中创建一个新的子模块：
 
 ```shell script
 $ git submodule add <repository_url> <path>
 ```
 
-Clone a repository and initialize its submodules:
+克隆一个仓库并初始化其子模块：
 
 ```shell script
 $ git clone --recursive <repository_url>
 ```
 
-Update all the submodules in your repository to the latest commit of their respective branches:
+将仓库中的所有子模块更新到其各自自分支的最新提交：
 
 ```shell script
 $ git submodule update
 ```
 
-Pull the latest changes from the remote repositories of the submodules and update them in your main repository:
+从子模块的远程仓库拉取最新更改并在主仓库中更新它们：
 
 ```shell script
 $ git submodule update --remote
 ```
 
-Remove a submodule from your repository:
+从您的仓库中移除一个子模块：
 
 ```shell script
 $ git submodule deinit <path>
 $ git rm <path>
-$ git commit -m "Removed submodule"
+$ git commit -m "移除了子模块"
 ```
 
-### Cherry-picking
+### 遴选 (Cherry-picking)
 
-Cherry-picking allows you to apply a specific commit from one branch to another branch.
+遴选允许您将一个分支的特定提交应用到另一个分支。
 
 ```shell script
 $ git cherry-pick <commit_hash>
@@ -484,13 +484,13 @@ $ git cherry-pick <commit_hash>
 
 ### Reflog
 
-Display the reflog, showing the history of HEAD and branch movements:
+显示 reflog，展示 HEAD 和分支移动的历史记录：
 
 ```shell script
 $ git reflog
 ```
 
-Find the hash of the lost commit or branch using the reflog and then checkout to that hash to restore it:
+使用 reflog 找到丢失的提交或分支的哈希值，然后检出到该哈希值以恢复它：
 
 ```shell script
 $ git checkout <commit_or_branch_hash>

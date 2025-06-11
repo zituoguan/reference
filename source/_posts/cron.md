@@ -7,102 +7,102 @@ tags:
   - crontab
   - time
 categories:
-  - Linux Command
+  - Linux 命令
 intro: |
-  [Cron](https://en.wikipedia.org/wiki/Cron) is most suitable for scheduling repetitive tasks. Scheduling one-time tasks can be accomplished using the associated at utility.
+  [Cron](https://zh.wikipedia.org/wiki/Cron) 最适合用于调度重复性任务。一次性任务的调度可以使用相关的 `at` 工具来完成。
 plugins:
   - copyCode
 ---
 
-## Crontab Format {.cols-2}
+## Crontab 格式 {.cols-2}
 
-### Format
+### 格式
 
 ```
-Min  Hour Day  Mon  Weekday
+分  时 日  月  周
 ```
 
 ---
 
 ```
-*    *    *    *    *  command to be executed
+*    *    *    *    *  要执行的命令
 ```
 
 ```
 ┬    ┬    ┬    ┬    ┬
-│    │    │    │    └─  Day of Week   (0=Sun .. 6=Sat)
-│    │    │    └──────  Month         (1..12)
-│    │    └───────────  Day of Month  (1..31)
-│    └────────────────  Hour          (0..23)
-└─────────────────────  Minute        (0..59)
+│    │    │    │    └─  星期几 (0=周日 .. 6=周六)
+│    │    │    └──────  月份 (1..12)
+│    │    └───────────  日期 (1..31)
+│    └────────────────  小时 (0..23)
+└─────────────────────  分钟 (0..59)
 ```
 
 ---
 
-| Field        | Range  | Special characters |
+| 字段         | 范围   | 特殊字符           |
 | ------------ | ------ | ------------------ |
-| Minute       | 0 - 59 | , - \* /           |
-| Hour         | 0 - 23 | , - \* /           |
-| Day of Month | 1 - 31 | , - \* ? / L W     |
-| Month        | 1 - 12 | , - \* /           |
-| Day of Week  | 0 - 6  | , - \* ? / L #     |
+| 分钟         | 0 - 59 | , - \* /           |
+| 小时         | 0 - 23 | , - \* /           |
+| 日期         | 1 - 31 | , - \* ? / L W     |
+| 月份         | 1 - 12 | , - \* /           |
+| 星期几       | 0 - 6  | , - \* ? / L #     |
 
 {.show-header}
 
-### Examples
+### 示例
 
-| Example        | Description                                      |
-| -------------- | ------------------------------------------------ |
-| `*/15 * * * *` | Every 15 mins                                    |
-| `0 * * * *`    | Every hour                                       |
-| `0 */2 * * *`  | Every 2 hours                                    |
-| `15 2 * * *`   | At 2:15AM of every day                           |
-| `15 2 * * ?`   | At 2:15AM of every day                           |
-| `10 9 * * 5`   | At 9:10AM of every Friday                        |
-| `0 0 * * 0`    | At midnight of every Sunday                      |
-| `15 2 * * 1L`  | At 2:15am on the last monday of every month      |
-| `15 0 * * 4#2` | At 00:15am on the second thursday of every month |
-| `0 0 1 * *`    | Every 1st of month (monthly)                     |
-| `0 0 1 1 *`    | Every 1st of january (yearly)                    |
-| `@reboot`      | Every reboot <br>_(non-standard)_                |
+| 示例           | 描述                                         |
+| -------------- | -------------------------------------------- |
+| `*/15 * * * *` | 每 15 分钟                                   |
+| `0 * * * *`    | 每小时                                       |
+| `0 */2 * * *`  | 每 2 小时                                    |
+| `15 2 * * *`   | 每天凌晨 2:15                                |
+| `15 2 * * ?`   | 每天凌晨 2:15                                |
+| `10 9 * * 5`   | 每周五上午 9:10                              |
+| `0 0 * * 0`    | 每周日午夜                                   |
+| `15 2 * * 1L`  | 每月最后一个周一的凌晨 2:15                  |
+| `15 0 * * 4#2` | 每月第二个周四的凌晨 00:15                   |
+| `0 0 1 * *`    | 每月 1 号 (每月)                             |
+| `0 0 1 1 *`    | 每年 1 月 1 号 (每年)                        |
+| `@reboot`      | 每次重启时 <br>_(非标准)_                    |
 
-### Special strings
+### 特殊字符串
 
-| Special String | Meaning                                              |
+| 特殊字符串     | 含义                                                 |
 | -------------- | ---------------------------------------------------- |
-| @reboot        | Run once, at system startup _(non-standard)_         |
-| @yearly        | Run once every year, "0 0 1 1 \*" _(non-standard)_   |
-| @annually      | (same as @yearly) _(non-standard)_                   |
-| @monthly       | Run once every month, "0 0 1 \* \*" _(non-standard)_ |
-| @weekly        | Run once every week, "0 0 \* \* 0" _(non-standard)_  |
-| @daily         | Run once each day, "0 0 \* \* \*" _(non-standard)_   |
-| @midnight      | (same as @daily) _(non-standard)_                    |
-| @hourly        | Run once an hour, "0 \* \* \* \*" _(non-standard)_   |
+| @reboot        | 运行一次，在系统启动时 _(非标准)_                     |
+| @yearly        | 每年运行一次，"0 0 1 1 \*" _(非标准)_                 |
+| @annually      | (与 @yearly 相同) _(非标准)_                         |
+| @monthly       | 每月运行一次，"0 0 1 \* \*" _(非标准)_               |
+| @weekly        | 每周运行一次，"0 0 \* \* 0" _(非标准)_                |
+| @daily         | 每天运行一次，"0 0 \* \* \*" _(非标准)_               |
+| @midnight      | (与 @daily 相同) _(非标准)_                          |
+| @hourly        | 每小时运行一次，"0 \* \* \* \*" _(非标准)_             |
 
-### Crontab command
+### Crontab 命令
 
 | -            | -                                                                       |
 | ------------ | ----------------------------------------------------------------------- |
-| `crontab -e` | Edit or create a crontab file if doesn’t already exist.                 |
-| `crontab -l` | Display the crontab file.                                               |
-| `crontab -r` | Remove the crontab file.                                                |
-| `crontab -v` | Display the last time you edited your crontab file.<br>_(non-standard)_ |
+| `crontab -e` | 编辑或创建 crontab 文件（如果尚不存在）。                                 |
+| `crontab -l` | 显示 crontab 文件。                                                     |
+| `crontab -r` | 删除 crontab 文件。                                                     |
+| `crontab -v` | 显示上次编辑 crontab 文件的时间。<br>_(非标准)_                         |
 
 {.shortcuts}
 
-### Special characters {.col-span-2}
+### 特殊字符 {.col-span-2}
 
-| Special Character   | Description                                                                                                                                          |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Asterik(*)`        | Matches all values in the field or any possible value.                                                                                               |
-| `Hyphen(-)`         | Used to define a range.Ex: 1-5 in 5th field(Day Of Week) Every Weekday i.e., Monday to Friday                                                        |
-| `Slash (/)`         | 1st field(Minute) /15 meaning every fifteen minute or increment of range.                                                                            |
-| `Comma (,)`         | Used to separate items.Ex: 2,6,8 in 2nd fields(Hour) executes at 2am,6am and 8am                                                                     |
-| `L`                 | It is allowed only for Day of Month or Day Of Week field, 2L in Day of week indicates Last tuesday of every month                                    |
-| `Hash (#)`          | It is allowed only for Day Of Week field, which must be followed within range of 1 to 5. For example, 4#1 means "The first Thursday" of given month. |
-| `Question mark (?)` | Can be instead of '\*' and allowed for Day of Month and Day Of Week. Usage is restricted to either Day of Month or Day Of Week in a cron expression. |
+| 特殊字符       | 描述                                                                                                                                         |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `星号(*)`           | 匹配字段中的所有值或任何可能的值。                                                                                                           |
+| `连字符(-)`         | 用于定义范围。例如：第五个字段（星期几）中的 1-5 表示每个工作日，即周一到周五。                                                                |
+| `斜杠 (/)`         | 第一个字段（分钟）/15 表示每十五分钟或范围的增量。                                                                                             |
+| `逗号 (,)`         | 用于分隔项目。例如：第二个字段（小时）中的 2,6,8 表示在凌晨 2 点、早上 6 点和早上 8 点执行。                                                     |
+| `L`                 | 仅允许用于日期或星期几字段，星期几字段中的 2L 表示每月的最后一个周二。                                                                         |
+| `井号 (#)`          | 仅允许用于星期几字段，其后必须跟随 1 到 5 范围内的数字。例如，4#1 表示给定月份的“第一个周四”。                                                 |
+| `问号 (?)`         | 可以代替 '*'，并允许用于日期和星期几字段。在 cron 表达式中，使用限制为日期或星期几字段之一。                                                     |
 
-## Also see {.cols-1}
+## 另请参阅 {.cols-1}
 
 - [Devhints](https://devhints.io/cron) _(devhints.io)_
 - [Crontab Generator](https://crontab-generator.org/) _(crontab-generator.org)_

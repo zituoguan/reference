@@ -7,156 +7,156 @@ tags:
   -
   - mac
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 66 keyboard shortcuts found in Bear. This application is MacOS-only.
+  Bear 应用的 66 个键盘快捷键的可视化速查表。此应用程序仅适用于 MacOS。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Text Styles {.row-span-3}
+### 文本样式 {.row-span-3}
 
-| Shortcut             | Action             |
+| 快捷键             | 操作             |
 | -------------------- | ------------------ |
-| `Option` `Cmd` `1-6` | Headings           |
-| `Option` `Cmd` `S`   | Line separator     |
-| `Cmd` `B`            | Bold               |
-| `Cmd` `I`            | Italic             |
-| `Cmd` `U`            | Underline          |
-| `Shift` `Cmd` `E`    | Strikethrough      |
-| `Cmd` `K`            | Link               |
-| `Cmd` `L`            | Unordered list     |
-| `Shift` `Cmd` `L`    | Ordered list       |
-| `Shift` `Cmd` `U`    | Quote              |
-| `Cmd` `T`            | Todo               |
-| `Option` `Cmd` `C`   | Inline code        |
-| `Ctrl` `Option` `C`  | Code block         |
-| `Shift` `Cmd` `M`    | Marker/Highlighter |
-| `Shift` `Cmd` `V`    | Insert file        |
+| `Option` `Cmd` `1-6` | 标题           |
+| `Option` `Cmd` `S`   | 分隔线     |
+| `Cmd` `B`            | 粗体               |
+| `Cmd` `I`            | 斜体             |
+| `Cmd` `U`            | 下划线          |
+| `Shift` `Cmd` `E`    | 删除线      |
+| `Cmd` `K`            | 链接               |
+| `Cmd` `L`            | 无序列表     |
+| `Shift` `Cmd` `L`    | 有序列表       |
+| `Shift` `Cmd` `U`    | 引用              |
+| `Cmd` `T`            | 待办事项               |
+| `Option` `Cmd` `C`   | 行内代码        |
+| `Ctrl` `Option` `C`  | 代码块         |
+| `Shift` `Cmd` `M`    | 标记/高亮 |
+| `Shift` `Cmd` `V`    | 插入文件        |
 
 {.shortcuts}
 
-### Todos
+### 待办事项
 
-| Shortcut           | Action                  |
+| 快捷键           | 操作                  |
 | ------------------ | ----------------------- |
-| `Shift` `Cmd` `T`  | Toggle Todo             |
-| `Option` `Cmd` `T` | Mark Todo as completed  |
-| `Ctrl` `Cmd` `T`   | Mark Todo as incomplete |
+| `Shift` `Cmd` `T`  | 切换待办事项             |
+| `Option` `Cmd` `T` | 标记待办事项为已完成  |
+| `Ctrl` `Cmd` `T`   | 标记待办事项为未完成 |
 
 {.shortcuts}
 
-### Structure
+### 结构
 
-| Shortcut              | Action           |
+| 快捷键              | 操作           |
 | --------------------- | ---------------- |
-| `Cmd` `]`             | Shift line right |
-| `Cmd` `[`             | Shift line left  |
-| `Cmd` `Option` `Up`   | Move line up     |
-| `Cmd` `Option` `Down` | Move line down   |
+| `Cmd` `]`             | 右移此行 |
+| `Cmd` `[`             | 左移此行  |
+| `Cmd` `Option` `Up`   | 上移行     |
+| `Cmd` `Option` `Down` | 下移行   |
 
 {.shortcuts}
 
-### Lists
+### 列表
 
-| Shortcut        | Action                       |
+| 快捷键        | 操作                       |
 | --------------- | ---------------------------- |
-| `Tab`           | Shift the list element right |
-| `Shift` `Tab`   | Shift the list element left  |
-| `Shift` `Enter` | End the list                 |
+| `Tab`           | 右移列表项 |
+| `Shift` `Tab`   | 左移列表项  |
+| `Shift` `Enter` | 结束列表                 |
 
 {.shortcuts}
 
-### Dates
+### 日期
 
-| Shortcut          | Action                                        |
+| 快捷键          | 操作                                        |
 | ----------------- | --------------------------------------------- |
-| `Shift` `Cmd` `7` | Long Form Date with time (11 Jul 2017, 10:43) |
-| `Shift` `Cmd` `8` | Long Form Date (11 Jul 2017)                  |
-| `Shift` `Cmd` `9` | Short Form Date (11/07/2017)                  |
-| `Shift` `Cmd` `0` | Hours (11:43)                                 |
+| `Shift` `Cmd` `7` | 长日期格式带时间 (例如 2017年7月11日, 10:43) |
+| `Shift` `Cmd` `8` | 长日期格式 (例如 2017年7月11日)                  |
+| `Shift` `Cmd` `9` | 短日期格式 (例如 11/07/2017)                  |
+| `Shift` `Cmd` `0` | 小时 (例如 11:43)                                 |
 
 {.shortcuts}
 
-### Control
+### 控制
 
-| Shortcut      | Action      |
+| 快捷键      | 操作      |
 | ------------- | ----------- |
-| `Cmd` `A`     | Select all  |
-| `Cmd` `Enter` | End editing |
-| `Cmd` `P`     | Print note  |
+| `Cmd` `A`     | 全选  |
+| `Cmd` `Enter` | 结束编辑 |
+| `Cmd` `P`     | 打印笔记  |
 
 {.shortcuts}
 
-### Zoom
+### 缩放
 
-| Shortcut  | Action      |
+| 快捷键  | 操作      |
 | --------- | ----------- |
-| `Cmd` `+` | Zoom in     |
-| `Cmd` `-` | Zoom out    |
-| `Cmd` `0` | Actual size |
+| `Cmd` `+` | 放大     |
+| `Cmd` `-` | 缩小    |
+| `Cmd` `0` | 实际大小 |
 
 {.shortcuts}
 
-### Navigation {.row-span-2}
+### 导航 {.row-span-2}
 
-| Shortcut                  | Action                                                                |
+| 快捷键                  | 操作                                                                |
 | ------------------------- | --------------------------------------------------------------------- |
-| `Cmd` `N`                 | Create a new note                                                     |
-| `Option` `Cmd` `N`        | Create a new note in a new window                                     |
-| `Up/Down`                 | Move the selection in the note and tags list                          |
-| `Left/Right`              | Move the selection between the sidebar, the nost list, and the editor |
-| `Enter`                   | Edit the selected note                                                |
-| `Option` `Cmd` `F`        | Search in the current note list                                       |
-| `Cmd` `Backspace`         | Delete selected note                                                  |
-| `Shift` `Cmd` `R`         | Restore selected note                                                 |
-| `Shift` `Cmd` `P`         | Pin/unpin selected note                                               |
-| `Cmd` `A`                 | Select all the notes in the list                                      |
-| `Shift` `Cmd` `Backspace` | Empty Trash                                                           |
-| `Cmd` `1`                 | Select Notes in the sidebar                                           |
-| `Cmd` `2`                 | Select Untagged in the sidebar                                        |
-| `Cmd` `3`                 | Select ToDo in the sidebar                                            |
-| `Cmd` `4`                 | Select Today in the sidebar                                           |
-| `Cmd` `5`                 | Select Archive in the sidebar                                         |
-| `Cmd` `6`                 | Select Trash in the sidebar                                           |
-| `Option` `Cmd` `Left`     | Navigate back in visualized notes history                             |
-| `Option` `Cmd` `Right`    | Navigate forward in visualized notes history                          |
+| `Cmd` `N`                 | 创建新笔记                                                     |
+| `Option` `Cmd` `N`        | 在新窗口中创建新笔记                                     |
+| `Up/Down`                 | 在笔记和标签列表中移动选择项                          |
+| `Left/Right`              | 在侧边栏、笔记列表和编辑器之间移动选择项 |
+| `Enter`                   | 编辑所选笔记                                                |
+| `Option` `Cmd` `F`        | 在当前笔记列表中搜索                                       |
+| `Cmd` `Backspace`         | 删除所选笔记                                                  |
+| `Shift` `Cmd` `R`         | 恢复所选笔记                                                 |
+| `Shift` `Cmd` `P`         | 置顶/取消置顶所选笔记                                               |
+| `Cmd` `A`                 | 全选列表中的所有笔记                                      |
+| `Shift` `Cmd` `Backspace` | 清空废纸篓                                                           |
+| `Cmd` `1`                 | 在侧边栏中选择“笔记”                                           |
+| `Cmd` `2`                 | 在侧边栏中选择“未分类”                                        |
+| `Cmd` `3`                 | 在侧边栏中选择“待办事项”                                         |
+| `Cmd` `4`                 | 在侧边栏中选择“今天”                                           |
+| `Cmd` `5`                 | 在侧边栏中选择“归档”                                         |
+| `Cmd` `6`                 | 在侧边栏中选择“废纸篓”                                         |
+| `Option` `Cmd` `Left`     | 在已查看笔记历史中向后导航                             |
+| `Option` `Cmd` `Right`    | 在已查看笔记历史中向前导航                            |
 
 {.shortcuts}
 
-### Panels and search
+### 面板和搜索
 
-| Shortcut           | Action                                     |
+| 快捷键           | 操作                                     |
 | ------------------ | ------------------------------------------ |
-| `Shift` `Cmd` `I`  | Toggle information panel                   |
-| `Cmd` `F`          | Search inside the current note             |
-| `Option` `Cmd` `F` | Search and replace inside the current note |
-| `Shift` `Cmd` `F`  | Search inside the note list                |
+| `Shift` `Cmd` `I`  | 切换信息面板                   |
+| `Cmd` `F`          | 在当前笔记内搜索             |
+| `Option` `Cmd` `F` | 在当前笔记内搜索并替换 |
+| `Shift` `Cmd` `F`  | 在笔记列表中搜索                |
 
 {.shortcuts}
 
-### Saving and importing
+### 保存和导入
 
-| Shortcut          | Action                |
+| 快捷键          | 操作                |
 | ----------------- | --------------------- |
-| `Shift` `Cmd` `S` | Export selected notes |
-| `Shift` `Cmd` `O` | Import notes          |
+| `Shift` `Cmd` `S` | 导出所选笔记 |
+| `Shift` `Cmd` `O` | 导入笔记          |
 
 {.shortcuts}
 
-### Window
+### 窗口
 
-| Shortcut         | Action                             |
+| 快捷键         | 操作                             |
 | ---------------- | ---------------------------------- |
-| `Ctrl` `1`       | Show sidebar, note list and editor |
-| `Ctrl` `2`       | Show note list and editor          |
-| `Ctrl` `3`       | Show editor only                   |
-| `Cmd` `,`        | Show preferences                   |
-| `Ctrl` `Cmd` `F` | Enter fullscreen                   |
-| `Cmd` `\`        | Open main window                   |
+| `Ctrl` `1`       | 显示侧边栏、笔记列表和编辑器 |
+| `Ctrl` `2`       | 显示笔记列表和编辑器          |
+| `Ctrl` `3`       | 仅显示编辑器                   |
+| `Cmd` `,`        | 显示偏好设置                   |
+| `Ctrl` `Cmd` `F` | 进入全屏                   |
+| `Cmd` `\`        | 打开主窗口                   |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Bear notes app](https://bear.app/faq/Shortcuts%20and%20more/Mac%20shortcuts/) _(bear.app)_
+- [Bear 笔记应用的键盘快捷键](https://bear.app/faq/Shortcuts%20and%20more/Mac%20shortcuts/) _(bear.app)_

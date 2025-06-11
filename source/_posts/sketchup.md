@@ -7,71 +7,71 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 135 default keyboard shortcuts found in SketchUp Pro
+  SketchUp Pro 中 135 个默认键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### General I
+### 常规操作 I
 
-| Shortcut          | Action                                                                             |
+| 快捷键            | 操作                                                                               |
 | ----------------- | ---------------------------------------------------------------------------------- |
-| `A`               | 2 point arc tool                                                                   |
-| `C`               | Circle tool                                                                        |
-| `Shift` `C`       | Circle tool - lock current inferences                                              |
-| `E`               | Eraser tool                                                                        |
-| `Alt` `E`         | Eraser tool - soften or smooth (use on edges to make adjacent faces appear curved) |
-| `Shift` `E`       | Eraser tool - hide                                                                 |
-| `Alt` `Shift` `E` | Eraser tool - unsoften or unsmooth                                                 |
-| `L`               | Line tool                                                                          |
-| `Shift` `L`       | Line tool - lock in current inference direction                                    |
-| `(arrows)` `L`    | Line tool - lock direction                                                         |
-| `M`               | Move tool                                                                          |
-| `Alt` `M`         | Move tool - move a copy                                                            |
-| `Shift` `M`       | Move tool - hold down to lock in current inference direction                       |
-| `Ctrl` `M`        | Move tool - auto-fold (allow move even if it means adding extra edges and faces)   |
-| `(arrows)` `M`    | Move tool - lock direction                                                         |
-| `F`               | Offset tool                                                                        |
-| `O`               | Orbit tool                                                                         |
-| `Alt` `O`         | Orbit tool - disable 'gravity-weighted' orbiting                                   |
-| `Shift` `O`       | Orbit tool - activate pan tool                                                     |
-| `B`               | Paint bucket tool                                                                  |
-| `Alt` `B`         | Paint bucket tool - fill material, paint all matching adjacent faces               |
-| `Shift` `B`       | Paint bucket tool - replace material, paint all matching faces in the model        |
+| `A`               | 两点圆弧工具                                                                       |
+| `C`               | 圆形工具                                                                           |
+| `Shift` `C`       | 圆形工具 - 锁定当前推断                                                            |
+| `E`               | 橡皮擦工具                                                                         |
+| `Alt` `E`         | 橡皮擦工具 - 软化或平滑（用于边线，使相邻面显示为曲面）                              |
+| `Shift` `E`       | 橡皮擦工具 - 隐藏                                                                  |
+| `Alt` `Shift` `E` | 橡皮擦工具 - 取消软化或取消平滑                                                      |
+| `L`               | 直线工具                                                                           |
+| `Shift` `L`       | 直线工具 - 锁定当前推断方向                                                        |
+| `(方向键)` `L`    | 直线工具 - 锁定方向                                                                |
+| `M`               | 移动工具                                                                           |
+| `Alt` `M`         | 移动工具 - 移动副本                                                                |
+| `Shift` `M`       | 移动工具 - 按住以锁定当前推断方向                                                  |
+| `Ctrl` `M`        | 移动工具 - 自动折叠（即使意味着添加额外的边线和面也允许移动）                      |
+| `(方向键)` `M`    | 移动工具 - 锁定方向                                                                |
+| `F`               | 偏移工具                                                                           |
+| `O`               | 环绕观察工具                                                                       |
+| `Alt` `O`         | 环绕观察工具 - 禁用“重力感应”环绕                                                  |
+| `Shift` `O`       | 环绕观察工具 - 激活平移工具                                                        |
+| `B`               | 油漆桶工具                                                                         |
+| `Alt` `B`         | 油漆桶工具 - 填充材质，绘制所有匹配的相邻面                                        |
+| `Shift` `B`       | 油漆桶工具 - 替换材质，绘制模型中所有匹配的面                                      |
 
 {.shortcuts}
 
-### General II
+### 常规操作 II
 
-| Shortcut              | Action                                                                                      |
-| --------------------- | ------------------------------------------------------------------------------------------- |
-| `Shift` `B`           | Paint bucket tool - replace material, paint all matching faces in the model                 |
-| `Alt` `Shift` `B`     | Paint bucket tool - replace material on object, paint all matching faces on the same object |
-| `Ctrl` `B`            | Paint bucket tool - sample material                                                         |
-| `P`                   | Push and pull tool                                                                          |
-| `Alt` `P`             | Push and pull tool - push or pull a copy of the face, leaving original in place             |
-| `R`                   | Rectangle tool                                                                              |
-| `Alt` `R`             | Rectangle tool - start drawing from center                                                  |
-| `Q`                   | Rotate tool                                                                                 |
-| `Alt` `Q`             | Rotate tool - rotate a copy                                                                 |
-| `S`                   | Scale tool                                                                                  |
-| `Alt` `S`             | Scale tool - scale about center                                                             |
-| `Shift` `S`           | Scale tool - scale uniformly, don't distort                                                 |
-| `Space`               | Select tool                                                                                 |
-| `Alt` `Space`         | Select tool - add to selection                                                              |
-| `Shift`               | Select tool - add or subtract from selection                                                |
-| `Alt` `Shift` `Space` | Select tool - subtract from selection                                                       |
-| `T`                   | Tape measure tool                                                                           |
-| `Alt` `T`             | Tape measure tool - toggle create guide or measure only                                     |
-| `(arrows)` `T`        | Tape measure tool - lock direction                                                          |
-| `Z`                   | Zoom tool                                                                                   |
-| `Shift` `Z`           | Zoom tool - combine with click-drag mouse to change field of view                           |
+| 快捷键              | 操作                                                                               |
+| --------------------- | ---------------------------------------------------------------------------------- |
+| `Shift` `B`           | 油漆桶工具 - 替换材质，绘制模型中所有匹配的面                                      |
+| `Alt` `Shift` `B`     | 油漆桶工具 - 替换对象上的材质，绘制同一对象上所有匹配的面                            |
+| `Ctrl` `B`            | 油漆桶工具 - 取样材质                                                              |
+| `P`                   | 推拉工具                                                                           |
+| `Alt` `P`             | 推拉工具 - 推或拉面的副本，保留原位面                                                |
+| `R`                   | 矩形工具                                                                           |
+| `Alt` `R`             | 矩形工具 - 从中心开始绘制                                                          |
+| `Q`                   | 旋转工具                                                                           |
+| `Alt` `Q`             | 旋转工具 - 旋转副本                                                                |
+| `S`                   | 模型缩放工具                                                                       |
+| `Alt` `S`             | 模型缩放工具 - 围绕中心缩放                                                        |
+| `Shift` `S`           | 模型缩放工具 - 均匀缩放，不变形                                                    |
+| `Space`               | 选择工具                                                                           |
+| `Alt` `Space`         | 选择工具 - 添加到选择集                                                            |
+| `Shift`               | 选择工具 - 添加到选择集或从选择集中减去                                            |
+| `Alt` `Shift` `Space` | 选择工具 - 从选择集中减去                                                          |
+| `T`                   | 卷尺工具                                                                           |
+| `Alt` `T`             | 卷尺工具 - 切换创建参考线或仅测量                                                  |
+| `(方向键)` `T`        | 卷尺工具 - 锁定方向                                                                |
+| `Z`                   | 视图缩放工具                                                                       |
+| `Shift` `Z`           | 视图缩放工具 - 结合鼠标点击拖动更改视野                                            |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for SketchUp](https://help.sketchup.com/en/sketchup/getting-started-sketchup#qrc)
+- [SketchUp 键盘快捷键](https://help.sketchup.com/en/sketchup/getting-started-sketchup#qrc)
   _(help.sketchup.com)_

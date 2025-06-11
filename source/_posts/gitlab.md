@@ -7,134 +7,134 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 58 keyboard shortcuts found in GitLab
+  GitLab 中 58 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Global
+### 全局
 
-| Shortcut           | Action                                                                   |
+| 快捷键             | 操作                                                                     |
 | ------------------ | ------------------------------------------------------------------------ |
-| `?`                | Show or hide the shortcut reference sheet                                |
-| `Shift` `P`        | Go to your projects page                                                 |
-| `Shift` `G`        | Go to your groups page                                                   |
-| `Shift` `A`        | Go to your activity page                                                 |
-| `Shift` `L`        | Go to your milestones page                                               |
-| `Shift` `S`        | Go to your snippets page                                                 |
-| `S`                | Put the cursor in the issues or merge requests search                    |
-| `Shift` `I`        | Go to your issues page                                                   |
-| `Shift` `T`        | Go to your merge requests page                                           |
-| `P` `B`            | Show or hide the performance bar                                         |
-| `Up`               | Edit your last comment, you must be in a blank text field below a thread |
-| `Ctrl` `Shift` `P` | Toggle markdown preview when editing text in a text field                |
+| `?`                | 显示或隐藏快捷键参考表                                                     |
+| `Shift` `P`        | 转到您的项目页面                                                           |
+| `Shift` `G`        | 转到您的小组页面                                                           |
+| `Shift` `A`        | 转到您的活动页面                                                           |
+| `Shift` `L`        | 转到您的里程碑页面                                                         |
+| `Shift` `S`        | 转到您的代码片段页面                                                       |
+| `S`                | 将光标置于议题或合并请求搜索框中                                           |
+| `Shift` `I`        | 转到您的议题页面                                                           |
+| `Shift` `T`        | 转到您的合并请求页面                                                       |
+| `P` `B`            | 显示或隐藏性能栏                                                           |
+| `Up`               | 编辑您的最后一条评论，您必须位于讨论串下方的空白文本字段中                   |
+| `Ctrl` `Shift` `P` | 在文本字段中编辑文本时切换 Markdown 预览                                   |
 
 {.shortcuts}
 
-### Project
+### 项目
 
-| Shortcut | Action                                                |
-| -------- | ----------------------------------------------------- |
-| `G` `P`  | Go to the project home page                           |
-| `G` `V`  | Go to the project activity feed                       |
-| `G` `R`  | Go to the project releases list                       |
-| `G` `F`  | Go to the project files list                          |
-| `T`      | Go to the project file search page                    |
-| `G` `C`  | Go to the project commits list                        |
-| `G` `N`  | Go to the repository graph page                       |
-| `G` `D`  | Go to the repository charts                           |
-| `G` `I`  | Go to the project issues list                         |
-| `I`      | Go to the new issue page                              |
-| `G` `B`  | Go to the project issues boards list                  |
-| `G` `M`  | Go to the project merge requests list                 |
-| `G` `J`  | Go to the CI/CD jobs list                             |
-| `G` `L`  | Go to the project metrics                             |
-| `G` `E`  | Go to the project environments                        |
-| `G` `K`  | Go to the project Kubernetes cluster integration page |
-| `G` `S`  | Go to the project snippets list                       |
-| `G` `W`  | Go to the project wiki, if enabled                    |
+| 快捷键 | 操作                                                                 |
+| -------- | -------------------------------------------------------------------- |
+| `G` `P`  | 转到项目主页                                                         |
+| `G` `V`  | 转到项目活动源                                                       |
+| `G` `R`  | 转到项目发布列表                                                     |
+| `G` `F`  | 转到项目文件列表                                                     |
+| `T`      | 转到项目文件搜索页面                                                 |
+| `G` `C`  | 转到项目提交列表                                                     |
+| `G` `N`  | 转到存储库图表页面                                                   |
+| `G` `D`  | 转到存储库图表                                                       |
+| `G` `I`  | 转到项目议题列表                                                     |
+| `I`      | 转到新建议题页面                                                     |
+| `G` `B`  | 转到项目议题看板列表                                                 |
+| `G` `M`  | 转到项目合并请求列表                                                 |
+| `G` `J`  | 转到 CI/CD 作业列表                                                  |
+| `G` `L`  | 转到项目指标                                                         |
+| `G` `E`  | 转到项目环境                                                         |
+| `G` `K`  | 转到项目 Kubernetes 集群集成页面                                     |
+| `G` `S`  | 转到项目代码片段列表                                                 |
+| `G` `W`  | 转到项目 Wiki（如果已启用）                                          |
 
 {.shortcuts}
 
-### Issues and Merge Requests
+### 议题和合并请求
 
-| Shortcut | Action                                                             |
+| 快捷键 | 操作                                                               |
 | -------- | ------------------------------------------------------------------ |
-| `E`      | Edit description                                                   |
-| `A`      | Change assignee                                                    |
-| `M`      | Change milestone                                                   |
-| `L`      | Change label                                                       |
-| `R`      | Start writing a comment, if any text is selected it will be quoted |
-| `N`      | Move to next unresolved discussion, merge requests only            |
-| `P`      | Move to previous unresolved discussion, merge requests only        |
-| `]`      | Move to next file, merge requests only                             |
-| `[`      | Move to previous file, merge requests only                         |
+| `E`      | 编辑描述                                                           |
+| `A`      | 更改指派人                                                         |
+| `M`      | 更改里程碑                                                         |
+| `L`      | 更改标签                                                           |
+| `R`      | 开始撰写评论，如果选择了任何文本，则会引用该文本                     |
+| `N`      | 移动到下一个未解决的讨论，仅限合并请求                             |
+| `P`      | 移动到上一个未解决的讨论，仅限合并请求                             |
+| `]`      | 移动到下一个文件，仅限合并请求                                     |
+| `[`      | 移动到上一个文件，仅限合并请求                                     |
 
 {.shortcuts}
 
-### Project Files
+### 项目文件
 
-| Shortcut | Action                                                      |
-| -------- | ----------------------------------------------------------- |
-| `Up`     | Move selection up                                           |
-| `Down`   | Move selection down                                         |
-| `Enter`  | Open selection                                              |
-| `Esc`    | Go back to file list screen, only while searching for files |
-| `Y`      | Go to file permalink, only while viewing a file             |
+| 快捷键 | 操作                                                                |
+| -------- | ------------------------------------------------------------------- |
+| `Up`     | 向上移动选择                                                        |
+| `Down`   | 向下移动选择                                                        |
+| `Enter`  | 打开选择                                                            |
+| `Esc`    | 返回文件列表屏幕，仅在搜索文件时                                    |
+| `Y`      | 转到文件永久链接，仅在查看文件时                                    |
 
 {.shortcuts}
 
 ### Web IDE
 
-| Shortcut       | Action                                              |
-| -------------- | --------------------------------------------------- |
-| `Ctrl` `P`     | Search for, and then open, another file for editing |
-| `Ctrl` `Enter` | Commit, when editing the commit message             |
+| 快捷键       | 操作                                                              |
+| -------------- | ----------------------------------------------------------------- |
+| `Ctrl` `P`     | 搜索并打开另一个文件进行编辑                                      |
+| `Ctrl` `Enter` | 提交，在编辑提交消息时                                            |
 
 {.shortcuts}
 
-### Repository Graph
+### 存储库图表
 
-| Shortcut       | Action           |
+| 快捷键       | 操作             |
 | -------------- | ---------------- |
-| `Left`         | Scroll left      |
-| `Right`        | Scroll right     |
-| `Up`           | Scroll up        |
-| `Down`         | Scroll down      |
-| `Shift` `Up`   | Scroll to top    |
-| `Shift` `Down` | Scroll to bottom |
+| `Left`         |向左滚动          |
+| `Right`        | 向右滚动         |
+| `Up`           | 向上滚动         |
+| `Down`         | 向下滚动         |
+| `Shift` `Up`   | 滚动到顶部       |
+| `Shift` `Down` | 滚动到底部       |
 
 {.shortcuts}
 
-### Wiki Pages
+### Wiki 页面
 
-| Shortcut | Action         |
+| 快捷键 | 操作           |
 | -------- | -------------- |
-| `E`      | Edit wiki page |
+| `E`      | 编辑 Wiki 页面 |
 
 {.shortcuts}
 
-### Filtered Search
+### 筛选搜索
 
-| Shortcut           | Action                     |
+| 快捷键             | 操作                       |
 | ------------------ | -------------------------- |
-| `Ctrl` `Backspace` | Clear entire search filter |
-| `Alt` `Backspace`  | Clear one token at a time  |
+| `Ctrl` `Backspace` | 清除整个搜索筛选器           |
+| `Alt` `Backspace`  | 一次清除一个标记             |
 
 {.shortcuts}
 
-### Epics
+### 史诗
 
-| Shortcut | Action                                                             |
+| 快捷键 | 操作                                                               |
 | -------- | ------------------------------------------------------------------ |
-| `R`      | Start writing a comment, if any text is selected it will be quoted |
-| `E`      | Edit description                                                   |
-| `L`      | Change a label                                                     |
+| `R`      | 开始撰写评论，如果选择了任何文本，则会引用该文本                     |
+| `E`      | 编辑描述                                                           |
+| `L`      | 更改标签                                                           |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for GitLab](https://docs.gitlab.com/ee/user/shortcuts.html) _(docs.gitlab.com)_
+- [GitLab 键盘快捷键](https://docs.gitlab.com/ee/user/shortcuts.html) _(docs.gitlab.com)_

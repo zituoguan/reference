@@ -1,156 +1,156 @@
 ---
-title: Google Search
+title: 谷歌搜索
 date: 2023-01-10 09:51:44
 background: bg-[#d3594a]
 tags:
 categories:
-  - Other
+  - 其他
 intro: |
-  This quick reference cheat sheet lists of Google advanced search operators.
+  这份快速参考备忘单列出了谷歌高级搜索操作符。
 ---
 
-## Getting Started {.cols-2}
+## 入门指南 {.cols-2}
 
-### Google Advanced Search Operators
+### 谷歌高级搜索操作符
 
-| Operator    | Description                                                                                                                                                                                   | Category   |
+| 操作符      | 描述                                                                                                                                                                  | 类别     |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| `""`        | Allows searching for a specific phrase - exact match search. Individual word prevents synonyms                                                                                                | Basic,Mail |
-| `OR`/`AND`  | Boolean search function for OR searches as Google defaults to AND between words - must be all caps                                                                                            | Basic,Mail |
-| `\`         | Implements OR                                                                                                                                                                                 | Basic      |
-| `()`        | Allows grouping of operators and helps dictate order                                                                                                                                          | Basic,Mail |
-| `-`         | Excludes a word from results                                                                                                                                                                  | Basic,Mail |
-| `*`         | Acts as a wildcard and will match any word or phrase                                                                                                                                          | Basic      |
-| `#..#`      | # represents a number in this instance. Use to find numbers in a series.                                                                                                                      | Basic      |
-| `$`         | Allows for search of USD                                                                                                                                                                      | Basic      |
-| `€`         | Allows for search of Euro                                                                                                                                                                     | Basic      |
-| `in`        | Allows searches for unit conversion (currency, unit or measure)                                                                                                                               | Basic      |
-| `~`         | Prefix - Include synonyms (potentially defunct)                                                                                                                                               | Basic      |
-| `+`         | Prefix - Force exact match on single phrase                                                                                                                                                   | Basic,Mail |
-| `AROUND(X)` | This is sandwiched between two words and the X declares how many words they must be mentioned between. I.e. if it’s (4) then the two keywords must be mentioned within 4 words of each other. | Advanced   |
-| `_`         | Acts as wildcard for autocomplete                                                                                                                                                             | Advanced   |
+| `""`        | 允许搜索特定短语 - 完全匹配搜索。单个词可防止同义词                                                                                                                              | 基本,邮件 |
+| `OR`/`AND`  | 布尔搜索功能，用于 OR 搜索，因为谷歌默认在词语之间使用 AND - 必须全部大写                                                                                                                          | 基本,邮件 |
+| `\`         | 实现 OR                                                                                                                                                                                 | 基本     |
+| `()`        | 允许对操作符进行分组并帮助指定顺序                                                                                                                                                            | 基本,邮件 |
+| `-`         | 从结果中排除某个词                                                                                                                                                                | 基本,邮件 |
+| `*`         | 作为通配符，匹配任何单词或短语                                                                                                                                                              | 基本     |
+| `#..#`      | 此处 # 代表数字。用于查找序列中的数字。                                                                                                                                                     | 基本     |
+| `$`         | 允许搜索美元                                                                                                                                                                  | 基本     |
+| `€`         | 允许搜索欧元                                                                                                                                                                  | 基本     |
+| `in`        | 允许搜索单位换算（货币、单位或度量）                                                                                                                                                           | 基本     |
+| `~`         | 前缀 - 包括同义词（可能已失效）                                                                                                                                                             | 基本     |
+| `+`         | 前缀 - 强制对单个短语进行完全匹配                                                                                                                                                           | 基本,邮件 |
+| `AROUND(X)` | 位于两个词之间，X 声明它们之间必须提及多少个词。例如，如果是 (4)，则这两个关键词必须在彼此相差 4 个词的范围内提及。                                                                                                | 高级     |
+| `_`         | 作为自动完成的通配符                                                                                                                                                              | 高级     |
 
-### Search with url
+### 使用 URL 搜索
 
-| Operator    | Description                                                                                                                                | Category |
+| 操作符      | 描述                                                                                                                                | 类别   |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
-| `inurl:`    | Only returns results where the queried keyword(s) is present in the URL                                                                    | Advanced |
-| `allinurl:` | As above but only containing all of the specified words in the URL                                                                         | Advanced |
-| `blogurl:`  | Find blog URLs under a specific domain. This was used in Google blog search, but I’ve found it does return some results in regular search. | Advanced |
-| `site:`     | Limit results to those from one site                                                                                                       | Advanced |
-| `related:`  | Find similar domains to the queried domain                                                                                                 | Advanced |
+| `inurl:`    | 仅返回查询的关键词出现在 URL 中的结果                                                                                                                            | 高级   |
+| `allinurl:` | 同上，但仅包含 URL 中所有指定的词                                                                                                                             | 高级   |
+| `blogurl:`  | 在特定域名下查找博客 URL。这曾用于谷歌博客搜索，但我发现在常规搜索中它也会返回一些结果。                                                                                                   | 高级   |
+| `site:`     | 将结果限制在一个网站内                                                                                                                               | 高级   |
+| `related:`  | 查找与查询域名相似的域名                                                                                                                             | 高级   |
 
-### Search with dates
+### 按日期搜索
 
-| Operator     | Description                                                                                          | Category   |
+| 操作符       | 描述                                                                                             | 类别       |
 | ------------ | ---------------------------------------------------------------------------------------------------- | ---------- |
-| `daterange:` | Return results in a specified range (requires julian dates)                                          | Advanced   |
-| `after:`     | Allows you to search drive or mail for files modified or mail sent/received anytime after a set date | Drive,Mail |
-| `before:`    | Allows you to search drive or mail for files modified or mail sent/received before a certain date    | Drive,Mail |
-| `older:`     | Search for messages older than a certain date                                                        | Mail       |
-| `newer:`     | Search for messages newer than a certain date                                                        | Mail       |
+| `daterange:` | 返回指定范围内的结果（需要儒略日期）                                                                                                   | 高级       |
+| `after:`     | 允许您在云端硬盘或邮件中搜索在设定日期之后修改的文件或发送/接收的邮件                                                                                                 | 云端硬盘,邮件 |
+| `before:`    | 允许您在云端硬盘或邮件中搜索在某个日期之前修改的文件或发送/接收的邮件                                                                                                 | 云端硬盘,邮件 |
+| `older:`     | 搜索早于某个日期的邮件                                                                                                                             | 邮件       |
+| `newer:`     | 搜索晚于某个日期的邮件                                                                                                                             | 邮件       |
 
-### Search files
+### 搜索文件
 
-| Operator        | Description                                                                                          | Category   |
+| 操作符          | 描述                                                                                             | 类别       |
 | --------------- | ---------------------------------------------------------------------------------------------------- | ---------- |
-| `filename:`     | Search for messages with a particular type of file attached, or the exact name of a file             | Mail       |
-| `type:`         | Allows you to search drive by file type                                                              | Drive      |
-| `owner:`        | Allows you to search drive by owner of file or folder                                                | Drive      |
-| `to:`           | Allows you to search drive for files shared with a specific person                                   | Drive      |
-| `title:`        | Searches drive for files with the keyword in their title alone                                       | Drive      |
-| `source:domain` | Allows you to search for files or folders shared with everyone in your business                      | Drive      |
-| `filetype:`     | Returns only files of a particular type associated with the keyword searched                         | Advanced   |
-| `ext:`          | As above, based on extension                                                                         | Advanced   |
-| `after:`        | Allows you to search drive or mail for files modified or mail sent/received anytime after a set date | Drive,Mail |
-| `before:`       | Allows you to search drive or mail for files modified or mail sent/received before a certain date    | Drive,Mail |
-| `is:trashed`    | Searches for the item in the Drive bin                                                               | Drive      |
+| `filename:`     | 搜索带有特定类型附件的邮件，或文件的确切名称                                                                                                     | 邮件       |
+| `type:`         | 允许您按文件类型搜索云端硬盘                                                                                                                   | 云端硬盘     |
+| `owner:`        | 允许您按文件或文件夹的所有者搜索云端硬盘                                                                                                               | 云端硬盘     |
+| `to:`           | 允许您在云端硬盘中搜索与特定人员共享的文件                                                                                                             | 云端硬盘     |
+| `title:`        | 在云端硬盘中搜索标题中包含关键词的文件                                                                                                               | 云端硬盘     |
+| `source:domain` | 允许您搜索与企业中所有人共享的文件或文件夹                                                                                                             | 云端硬盘     |
+| `filetype:`     | 仅返回与搜索的关键词相关的特定类型的文件                                                                                                             | 高级       |
+| `ext:`          | 同上，基于扩展名                                                                                                                             | 高级       |
+| `after:`        | 允许您在云端硬盘或邮件中搜索在设定日期之后修改的文件或发送/接收的邮件                                                                                                 | 云端硬盘,邮件 |
+| `before:`       | 允许您在云端硬盘或邮件中搜索在某个日期之前修改的文件或发送/接收的邮件                                                                                                 | 云端硬盘,邮件 |
+| `is:trashed`    | 在云端硬盘回收站中搜索项目                                                                                                                       | 云端硬盘     |
 
-### Search with page content
+### 使用页面内容搜索
 
-| Operator       | Description                                                                                                         | Category |
+| 操作符         | 描述                                                                                                         | 类别   |
 | -------------- | ------------------------------------------------------------------------------------------------------------------- | -------- |
-| `link:`        | Find pages that link to the target domain                                                                           | Advanced |
-| `inanchor:`    | Find pages linked to with the specified anchor text/ phrase. Data is heavily sampled.                               | Advanced |
-| `allinanchor:` | Find pages with all individual terms after "inanchor:" in the inbound anchor text.                                  | Advanced |
-| `intitle:`     | Returns pages based on the searched query appearing in their title                                                  | Advanced |
-| `allintitle:`  | Similar to intitle: but only returns titles where all the words in the title match                                  | Advanced |
-| `inposttile:`  | Finds pages with keywords in their post titles (i.e. for researching blogs)                                         | &nbsp;   |
-| `intext:`      | Finds pages where the keyword(s) are mentioned within the page content.                                             | Advanced |
-| `allintext:`   | Similar to “intext,” but only results containing all of the specified words somewhere on the page will be returned. | Advanced |
+| `link:`        | 查找链接到目标域名的页面                                                                                                       | 高级   |
+| `inanchor:`    | 查找使用指定锚文本/短语链接的页面。数据经过大量抽样。                                                                                                 | 高级   |
+| `allinanchor:` | 查找入站锚文本中包含 "inanchor:" 之后所有单个词语的页面。                                                                                             | 高级   |
+| `intitle:`     | 根据标题中出现的搜索查询返回页面                                                                                                     | 高级   |
+| `allintitle:`  | 与 intitle: 类似，但仅返回标题中所有词语都匹配的结果                                                                                                 | 高级   |
+| `inposttile:`  | 查找帖子标题中包含关键词的页面（例如，用于研究博客）                                                                                                   | &nbsp;   |
+| `intext:`      | 查找页面内容中提及关键词的页面。                                                                                                     | 高级   |
+| `allintext:`   | 与 “intext” 类似，但仅返回页面某处包含所有指定词语的结果。                                                                                               | 高级   |
 
-### Keywords
+### 关键词
 
-| Operator          | Description                                                                                      | Category |
+| 操作符            | 描述                                                                                        | 类别 |
 | ----------------- | ------------------------------------------------------------------------------------------------ | -------- |
-| `Business`        | type E.g. cafe, restaurant, bar etc will return a selection of appropriate businesses in the are | Maps     |
-| `Petrol/Charging` | Station EV near me or perol station near me returns                                              | Maps     |
-| `Search`          | for a message with a google sheet attached                                                       | Mail     |
-| `Search`          | for a message with a google presentation attached                                                | Mail     |
+| `Business`        | 类型，例如咖啡馆、餐厅、酒吧等，将返回该区域内合适的商家选择                                                                                                 | 地图   |
+| `Petrol/Charging` | 我附近的加油站/充电站或我附近的加油站返回                                                                                                 | 地图   |
+| `Search`          | 搜索带有谷歌表格附件的邮件                                                                                                       | 邮件   |
+| `Search`          | 搜索带有谷歌幻灯片附件的邮件                                                                                                     | 邮件   |
 
-### Search on emails
+### 搜索邮件
 
-| Operator          | Description                                                                                           | Category   |
+| 操作符            | 描述                                                                                             | 类别       |
 | ----------------- | ----------------------------------------------------------------------------------------------------- | ---------- |
-| `+`               | Prefix - Force exact match on single phrase                                                           | Basic,Mail |
-| `()`              | Allows grouping of operators and helps dictate order                                                  | Basic,Mail |
-| `-`               | Excludes a word from results                                                                          | Basic,Mail |
-| `""`              | Allows searching for a specific phrase - exact match search. Individual word prevents synonyms        | Basic,Mail |
-| `OR`/`AND`        | Boolean search function for OR searches as Google defaults to AND between words - must be all caps    | Basic,Mail |
-| `after:`          | Allows you to search drive or mail for files modified or mail sent/received anytime after a set date  | Drive,Mail |
-| `before:`         | Allows you to search drive or mail for files modified or mail sent/received before a certain date     | Drive,Mail |
-| `is:starred`      | Searches only items that have been starred in drive                                                   | Drive,Mail |
-| `from:`           | Specify the sender in google mail                                                                     | Mail       |
-| `to:`             | Specify the recipient in google mail                                                                  | Mail       |
-| `cc:`             | Search by a recipient that was copied into an email                                                   | Mail       |
-| `bcc:`            | Search by a recipient that was blind copied into an email                                             | Mail       |
-| `older:`          | Search for messages older than a certain date                                                         | Mail       |
-| `newer:`          | Search for messages newer than a certain date                                                         | Mail       |
-| `Search`          | for a message with a google sheet attached                                                            | Mail       |
-| `Search`          | for a message with a google presentation attached                                                     | Mail       |
-| `AROUND`          | Similar to the normal google search function, allows you to search for keywords near each other.      | Mail       |
-| `subject:`        | Search by keywords featured in the subject line                                                       | Mail       |
-| `{}`              | Use for OR in mail instead of the OR function                                                         | Mail       |
-| `label:`          | Search for messages that have a certain label                                                         | Mail       |
-| `has:attachment`  | Search for messages that have an item attached                                                        | Mail       |
-| `has:drive`       | Search for messages with a google drive attached                                                      | Mail       |
-| `has:document`    | Search for messages with a google doc attached                                                        | Mail       |
-| `has:youtube`     | Search for a message containing a youtube video                                                       | Mail       |
-| `list:`           | Search for all messages from a particular mailing list                                                | Mail       |
-| `in:anywhere`     | Includes all folders in your search, including spam and bin                                           | Mail       |
-| `is:important`    | Search for messages that have been marked as important                                                | Mail       |
-| `label:important` | Same as is:important                                                                                  | Mail       |
-| `is:snoozed`      | Searches for messages that have been snoozed                                                          | Mail       |
-| `is:unread`       | Searches for unread messages                                                                          | Mail       |
-| `is:read`         | searches for read messages only                                                                       | Mail       |
-| `has:yellow-star` | Searches for messages with coloured star icon                                                         | Mail       |
-| `has:blue-info`   | Searches for messages with colourd icon                                                               | Mail       |
-| `is:chat`         | Searches for messagse from chat                                                                       | Mail       |
-| `deliveredto:`    | Search by email address for delivered messages                                                        | Mail       |
-| `category:`       | Searches by messages based on category. Follow the colon with the categoy name, i.e. category:primary | Mail       |
-| `size:`           | Messages larger than a certain size in bytes                                                          | Mail       |
-| `larger:`         | Messages larger than a certain size in bytes                                                          | Mail       |
-| `smaller:`        | Messages smaller than a certain size in bytes                                                         | Mail       |
-| `has:userlabels`  | Search for messages that have custom user labels                                                      | Mail       |
-| `has:nouserlabels`| Search for messages that have no custom user labels                                                   | Mail       |
+| `+`               | 前缀 - 强制对单个短语进行完全匹配                                                                                                   | 基本,邮件   |
+| `()`              | 允许对操作符进行分组并帮助指定顺序                                                                                                     | 基本,邮件   |
+| `-`               | 从结果中排除某个词                                                                                                                    | 基本,邮件   |
+| `""`              | 允许搜索特定短语 - 完全匹配搜索。单个词可防止同义词                                                                                                 | 基本,邮件   |
+| `OR`/`AND`        | 布尔搜索功能，用于 OR 搜索，因为谷歌默认在词语之间使用 AND - 必须全部大写                                                                                                    | 基本,邮件   |
+| `after:`          | 允许您在云端硬盘或邮件中搜索在设定日期之后修改的文件或发送/接收的邮件                                                                                                   | 云端硬盘,邮件 |
+| `before:`         | 允许您在云端硬盘或邮件中搜索在某个日期之前修改的文件或发送/接收的邮件                                                                                                   | 云端硬盘,邮件 |
+| `is:starred`      | 仅搜索在云端硬盘中已加星标的项目                                                                                                       | 云端硬盘,邮件 |
+| `from:`           | 在谷歌邮件中指定发件人                                                                                                                 | 邮件       |
+| `to:`             | 在谷歌邮件中指定收件人                                                                                                                 | 邮件       |
+| `cc:`             | 按抄送的收件人搜索邮件                                                                                                                 | 邮件       |
+| `bcc:`            | 按密送的收件人搜索邮件                                                                                                                 | 邮件       |
+| `older:`          | 搜索早于某个日期的邮件                                                                                                                   | 邮件       |
+| `newer:`          | 搜索晚于某个日期的邮件                                                                                                                   | 邮件       |
+| `Search`          | 搜索带有谷歌表格附件的邮件                                                                                                         | 邮件       |
+| `Search`          | 搜索带有谷歌幻灯片附件的邮件                                                                                                       | 邮件       |
+| `AROUND`          | 与常规谷歌搜索功能类似，允许您搜索彼此靠近的关键词。                                                                                                     | 邮件       |
+| `subject:`        | 按主题行中出现的关键词搜索                                                                                                               | 邮件       |
+| `{}`              | 在邮件中用于 OR 功能，而不是 OR 函数                                                                                                     | 邮件       |
+| `label:`          | 搜索具有特定标签的邮件                                                                                                                 | 邮件       |
+| `has:attachment`  | 搜索带有附件的邮件                                                                                                                   | 邮件       |
+| `has:drive`       | 搜索带有谷歌云端硬盘附件的邮件                                                                                                             | 邮件       |
+| `has:document`    | 搜索带有谷歌文档附件的邮件                                                                                                               | 邮件       |
+| `has:youtube`     | 搜索包含 YouTube 视频的邮件                                                                                                          | 邮件       |
+| `list:`           | 搜索来自特定邮件列表的所有邮件                                                                                                             | 邮件       |
+| `in:anywhere`     | 在搜索中包括所有文件夹，包括垃圾邮件和回收站                                                                                                       | 邮件       |
+| `is:important`    | 搜索已标记为重要的邮件                                                                                                                 | 邮件       |
+| `label:important` | 与 is:important 相同                                                                                                              | 邮件       |
+| `is:snoozed`      | 搜索已延后的邮件                                                                                                                     | 邮件       |
+| `is:unread`       | 搜索未读邮件                                                                                                                       | 邮件       |
+| `is:read`         | 仅搜索已读邮件                                                                                                                       | 邮件       |
+| `has:yellow-star` | 搜索带有黄色星形图标的邮件                                                                                                               | 邮件       |
+| `has:blue-info`   | 搜索带有蓝色信息图标的邮件                                                                                                               | 邮件       |
+| `is:chat`         | 搜索来自聊天的邮件                                                                                                                     | 邮件       |
+| `deliveredto:`    | 按电子邮件地址搜索已送达的邮件                                                                                                             | 邮件       |
+| `category:`       | 按类别搜索邮件。在冒号后跟类别名称，例如 category:primary                                                                                             | 邮件       |
+| `size:`           | 大于特定字节大小的邮件                                                                                                                 | 邮件       |
+| `larger:`         | 大于特定字节大小的邮件                                                                                                                 | 邮件       |
+| `smaller:`        | 小于特定字节大小的邮件                                                                                                                 | 邮件       |
+| `has:userlabels`  | 搜索具有自定义用户标签的邮件                                                                                                             | 邮件       |
+| `has:nouserlabels`| 搜索没有自定义用户标签的邮件                                                                                                             | 邮件       |
 
-### Some other useful search operators
+### 其他一些有用的搜索操作符
 
-| Operator    | Description                                                                                                                                                            | Category |
+| 操作符      | 描述                                                                                                                                                            | 类别   |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| `define:`   | Pulls a card response from Google displaying the dictionary definition of the word or phrase                                                                           | Advanced |
-| `cache:`    | Returns the most up to date cache of an indexed web page                                                                                                               | Advanced |
-| `weather:`  | Brings up the featured snipped for weather for that location                                                                                                           | Advanced |
-| `stocks:`   | Returns stock information for the specified ticker                                                                                                                     | Advanced |
-| `map:`      | Force google map results for a particular query                                                                                                                        | Advanced |
-| `movie:`    | Find information for the specified movie (particularly useful when that movie has an ambiguous name). If the movie is still in theatres it’ll also return screen times | Advanced |
-| `source:`   | Use in google news, returns results from the specified source                                                                                                          | Advanced |
-| `loc:`      | Returns results for a specific location                                                                                                                                | Advanced |
-| `location:` | As above but with Google news                                                                                                                                          | Advanced |
-| `info:`     | Returns information related to a domain (pages with domain text, similar on-site pages, cache etc)                                                                     | Advanced |
-| `near`      | Part of the google maps lazy searches e.g. book shops near work                                                                                                        | Maps     |
+| `define:`   | 从谷歌拉取卡片响应，显示单词或短语的词典定义                                                                                                                             | 高级   |
+| `cache:`    | 返回索引网页的最新缓存                                                                                                                                   | 高级   |
+| `weather:`  | 显示该位置天气的精选摘要                                                                                                                                 | 高级   |
+| `stocks:`   | 返回指定股票代码的股票信息                                                                                                                               | 高级   |
+| `map:`      | 强制对特定查询显示谷歌地图结果                                                                                                                               | 高级   |
+| `movie:`    | 查找指定电影的信息（当电影名称不明确时尤其有用）。如果电影仍在影院上映，它还会返回放映时间                                                                                                   | 高级   |
+| `source:`   | 在谷歌新闻中使用，返回指定来源的结果                                                                                                                               | 高级   |
+| `loc:`      | 返回特定位置的结果                                                                                                                                   | 高级   |
+| `location:` | 同上，但用于谷歌新闻                                                                                                                                   | 高级   |
+| `info:`     | 返回与域名相关的信息（包含域名文本的页面、类似的站内页面、缓存等）                                                                                                                     | 高级   |
+| `near`      | 谷歌地图惰性搜索的一部分，例如“工作地点附近的书店”                                                                                                                           | 地图   |
 
-## Also see
+## 另请参阅
 
-- [Google Search Operators Cheat Sheet](https://static.semrush.com/blog/uploads/files/39/12/39121580a18160d3587274faed6323e2.pdf)
+- [谷歌搜索操作符备忘单](https://static.semrush.com/blog/uploads/files/39/12/39121580a18160d3587274faed6323e2.pdf)
   _(static.semrush.com)_

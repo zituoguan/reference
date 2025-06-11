@@ -7,216 +7,216 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 119 keyboard shortcuts found in Figma
+  Figma 中 119 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Essential
+### 基础操作
 
-| Shortcut   | Action       |
+| 快捷键     | 操作         |
 | ---------- | ------------ |
-| `Ctrl` `\` | Show/Hide UI |
-| `Ctrl` `C` | Pick Color   |
-| `Ctrl` `/` | Search Menu  |
+| `Ctrl` `\` | 显示/隐藏界面 |
+| `Ctrl` `C` | 拾取颜色     |
+| `Ctrl` `/` | 搜索菜单     |
 
 {.shortcuts}
 
-### Tools
+### 工具
 
-| Shortcut    | Action            |
+| 快捷键      | 操作            |
 | ----------- | ----------------- |
-| `V`         | Move Tool         |
-| `F`         | Frame Tool        |
-| `P`         | Pen Tool          |
-| `Shift` `P` | Pencil Tool       |
-| `T`         | Text Tool         |
-| `R`         | Rectangle Tool    |
-| `O`         | Ellipse Tool      |
-| `L`         | Line Tool         |
-| `Shift` `L` | Arrow Tool        |
-| `C`         | Add/Show Comments |
-| `Ctrl` `C`  | Pick Color        |
-| `S`         | Slice Tool        |
+| `V`         | 移动工具        |
+| `F`         | 画板工具        |
+| `P`         | 钢笔工具        |
+| `Shift` `P` | 铅笔工具        |
+| `T`         | 文本工具        |
+| `R`         | 矩形工具        |
+| `O`         | 椭圆工具        |
+| `L`         | 直线工具        |
+| `Shift` `L` | 箭头工具        |
+| `C`         | 添加/显示评论   |
+| `Ctrl` `C`  | 拾取颜色        |
+| `S`         | 切片工具        |
 
 {.shortcuts}
 
-### View
+### 视图
 
-| Shortcut         | Action                   |
+| 快捷键           | 操作                   |
 | ---------------- | ------------------------ |
-| `Shift` `R`      | Toggle Rulers            |
-| `Ctrl` `Y`       | Show Outlines            |
-| `Ctrl` `P`       | Pixel Preview            |
-| `Ctrl` `G`       | Layout Grids             |
-| `Ctrl` `'`       | Pixel Grid               |
-| `Ctrl` `\`       | Show/Hide UI             |
-| `Ctrl` `Alt` `\` | Show Multiplayer Cursors |
-| `Alt` `1`        | Show Layers              |
-| `Alt` `2`        | Show Components          |
-| `Alt` `3`        | Show Team Library        |
+| `Shift` `R`      | 切换标尺               |
+| `Ctrl` `Y`       | 显示轮廓               |
+| `Ctrl` `P`       | 像素预览               |
+| `Ctrl` `G`       | 布局网格               |
+| `Ctrl` `'`       | 像素网格               |
+| `Ctrl` `\`       | 显示/隐藏界面           |
+| `Ctrl` `Alt` `\` | 显示协作成员光标         |
+| `Alt` `1`        | 显示图层面板           |
+| `Alt` `2`        | 显示组件面板           |
+| `Alt` `3`        | 显示团队库             |
 
 {.shortcuts}
 
-### Zoom
+### 缩放
 
-| Shortcut         | Action                 |
+| 快捷键           | 操作                   |
 | ---------------- | ---------------------- |
-| `Space` `(drag)` | Pan                    |
-| `+`              | Zoom In                |
-| `-`              | Zoom Out               |
-| `Shift` `0`      | Zoom to 100%           |
-| `Shift` `1`      | Zoom to Fit            |
-| `Shift` `2`      | Zoom to Selection      |
-| `Shift` `N`      | Zoom to Previous Frame |
-| `N`              | Zoom to Next Frame     |
-| `PgUp`           | Previous Page          |
-| `PgDown`         | Next Page              |
-| `Home`           | Find Previous Frame    |
-| `End`            | Find Next Frame        |
+| `Space` `(拖动)` | 平移                   |
+| `+`              | 放大                   |
+| `-`              | 缩小                   |
+| `Shift` `0`      | 缩放到 100%            |
+| `Shift` `1`      | 缩放以适应画布         |
+| `Shift` `2`      | 缩放以适应所选内容     |
+| `Shift` `N`      | 缩放到上一个画板       |
+| `N`              | 缩放到下一个画板       |
+| `PgUp`           | 上一页                 |
+| `PgDown`         | 下一页                 |
+| `Home`           | 查找上一个画板         |
+| `End`            | 查找下一个画板         |
 
 {.shortcuts}
 
-### Text
+### 文本
 
-| Shortcut             | Action                |
+| 快捷键               | 操作                |
 | -------------------- | --------------------- |
-| `Ctrl` `B`           | Bold                  |
-| `Ctrl` `I`           | Italic                |
-| `Ctrl` `U`           | Underline             |
-| `Ctrl` `Shift` `V`   | Paste and Match Style |
-| `Ctrl` `Alt` `L`     | Text Alight Left      |
-| `Ctrl` `Alt` `T`     | Text Align Center     |
-| `Ctrl` `Alt` `R`     | Text Align Right      |
-| `Ctrl` `Alt` `J`     | Text Align Justified  |
-| `Ctrl` `Shift` `</>` | Adjust Font Size      |
-| `Alt` `,/.`          | Adjust Letter Spacing |
-| `Alt` `Shift` `</>`  | Adjust Line Height    |
+| `Ctrl` `B`           | 加粗                  |
+| `Ctrl` `I`           | 斜体                  |
+| `Ctrl` `U`           | 下划线                |
+| `Ctrl` `Shift` `V`   | 粘贴并匹配样式        |
+| `Ctrl` `Alt` `L`     | 文本左对齐            |
+| `Ctrl` `Alt` `T`     | 文本居中对齐          |
+| `Ctrl` `Alt` `R`     | 文本右对齐            |
+| `Ctrl` `Alt` `J`     | 文本两端对齐          |
+| `Ctrl` `Shift` `</>` | 调整字号              |
+| `Alt` `,/.`          | 调整字间距            |
+| `Alt` `Shift` `</>`  | 调整行高              |
 
 {.shortcuts}
 
-### Shape
+### 形状
 
-| Shortcut            | Action                                             |
+| 快捷键              | 操作                                             |
 | ------------------- | -------------------------------------------------- |
-| `P`                 | Pen                                                |
-| `Shift` `P`         | Pencil                                             |
-| `B`                 | Paint Bucket (while editing shape)                 |
-| `Ctrl`              | Bend Tool (while editing shape)                    |
-| `Alt` `/`           | Remove Fill                                        |
-| `/`                 | Remove Stroke                                      |
-| `Shift` `X`         | Swap Fill and Stroke                               |
-| `Ctrl` `Shift` `O`  | Outline Stroke                                     |
-| `Ctrl` `E`          | Flatten Selection                                  |
-| `Ctrl` `J`          | Join Selection (after selecting points)            |
-| `Ctrl` `Shift` `J`  | Smooth Join Selection (after selecting points)     |
-| `Shift` `Backspace` | Delete and Heal Selection (after selecting points) |
+| `P`                 | 钢笔工具                                           |
+| `Shift` `P`         | 铅笔工具                                           |
+| `B`                 | 油漆桶 (编辑形状时)                                |
+| `Ctrl`              | 弯曲工具 (编辑形状时)                              |
+| `Alt` `/`           | 移除填充                                           |
+| `/`                 | 移除描边                                           |
+| `Shift` `X`         | 交换填充和描边                                     |
+| `Ctrl` `Shift` `O`  | 轮廓化描边                                         |
+| `Ctrl` `E`          | 扁平化所选内容                                     |
+| `Ctrl` `J`          | 连接所选锚点 (选中锚点后)                          |
+| `Ctrl` `Shift` `J`  | 平滑连接所选锚点 (选中锚点后)                      |
+| `Shift` `Backspace` | 删除并修复所选锚点 (选中锚点后)                    |
 
 {.shortcuts}
 
-### Selection
+### 选择
 
-| Shortcut               | Action                  |
+| 快捷键                 | 操作                  |
 | ---------------------- | ----------------------- |
-| `Ctrl` `A`             | Select All              |
-| `Ctrl` `Shift` `A`     | Select Inverse          |
-| `Esc`                  | Select None             |
-| `Ctrl` `(click)`       | Deep Select             |
-| `Ctrl` `(right click)` | Select Layer Menu       |
-| `Enter`                | Select Child            |
-| `Shift` `Enter`        | Select Parents          |
-| `Tab`                  | Select Next Sibling     |
-| `Shift` `Tab`          | Select Previous Sibling |
-| `Ctrl` `G`             | Group Selection         |
-| `Ctrl` `Shift` `G`     | Ungroup Selection       |
-| `Ctrl` `Alt` `G`       | Frame Selection         |
-| `Ctrl` `Shift` `H`     | Show/Hide Selection     |
-| `Ctrl` `Shift` `L`     | Lock/Unlock Selection   |
+| `Ctrl` `A`             | 全选                  |
+| `Ctrl` `Shift` `A`     | 反选                  |
+| `Esc`                  | 取消选择              |
+| `Ctrl` `(点击)`        | 深度选择              |
+| `Ctrl` `(右键点击)`    | 选择图层菜单          |
+| `Enter`                | 选择子级              |
+| `Shift` `Enter`        | 选择父级              |
+| `Tab`                  | 选择下一个同级          |
+| `Shift` `Tab`          | 选择上一个同级          |
+| `Ctrl` `G`             | 编组所选内容          |
+| `Ctrl` `Shift` `G`     | 取消编组所选内容      |
+| `Ctrl` `Alt` `G`       | 将所选内容转为画板    |
+| `Ctrl` `Shift` `H`     | 显示/隐藏所选内容     |
+| `Ctrl` `Shift` `L`     | 锁定/解锁所选内容     |
 
 {.shortcuts}
 
-### Cursor
+### 光标
 
-| Shortcut               | Action                                                  |
+| 快捷键                 | 操作                                                  |
 | ---------------------- | ------------------------------------------------------- |
-| `Alt`                  | Measure to Selection (while pointing)                   |
-| `Alt`                  | Duplicate Selection (while moving)                      |
-| `Ctrl` `(click)`       | Deep Select (while clicking)                            |
-| `Ctrl` `(right click)` | Select Layer Menu (while clicking)                      |
-| `Ctrl` `(drag)`        | Deep Select Within Rectangle (while dragging to select) |
-| `Alt`                  | Resize from Center (while resizing)                     |
-| `Shift`                | Resize Proportionally (while resizing)                  |
-| `Space`                | Move While Resizing                                     |
-| `Ctrl`                 | Ignore Constraints (Frames Only)                        |
+| `Alt`                  | 测量到所选内容 (指针悬停时)                             |
+| `Alt`                  | 复制所选内容 (移动时)                                   |
+| `Ctrl` `(点击)`        | 深度选择 (点击时)                                       |
+| `Ctrl` `(右键点击)`    | 选择图层菜单 (点击时)                                   |
+| `Ctrl` `(拖动)`        | 在矩形内深度选择 (拖动选择时)                           |
+| `Alt`                  | 从中心调整大小 (调整大小时)                             |
+| `Shift`                | 等比调整大小 (调整大小时)                               |
+| `Space`                | 调整大小时移动                                          |
+| `Ctrl`                 | 忽略约束 (仅限画板)                                     |
 
 {.shortcuts}
 
-### Edit
+### 编辑
 
-| Shortcut           | Action                       |
+| 快捷键             | 操作                       |
 | ------------------ | ---------------------------- |
-| `Ctrl` `C`         | Copy                         |
-| `Ctrl` `X`         | Cut                          |
-| `Ctrl` `V`         | Paste                        |
-| `Ctrl` `Shift` `V` | Paste Over Selection         |
-| `Ctrl` `D`         | Duplicate Selection in Place |
-| `Ctrl` `R`         | Rename Selection             |
-| `Ctrl` `Shift` `E` | Export                       |
-| `Ctrl` `Alt` `C`   | Copy Properties              |
-| `Ctrl` `Alt` `V`   | Paste Properties             |
+| `Ctrl` `C`         | 复制                         |
+| `Ctrl` `X`         | 剪切                         |
+| `Ctrl` `V`         | 粘贴                         |
+| `Ctrl` `Shift` `V` | 粘贴并覆盖所选内容           |
+| `Ctrl` `D`         | 原地复制所选内容             |
+| `Ctrl` `R`         | 重命名所选内容               |
+| `Ctrl` `Shift` `E` | 导出                         |
+| `Ctrl` `Alt` `C`   | 复制属性                     |
+| `Ctrl` `Alt` `V`   | 粘贴属性                     |
 
 {.shortcuts}
 
-### Transform
+### 变换
 
-| Shortcut           | Action              |
+| 快捷键             | 操作              |
 | ------------------ | ------------------- |
-| `Shift` `H`        | Flip Horizontal     |
-| `Shift` `V`        | Flip Vertical       |
-| `Ctrl` `M`         | Use as Mask         |
-| `Enter`            | Edit Shape or Image |
-| `Ctrl` `Shift` `K` | Place Image         |
-| `Alt` `(click x2)` | Crop Image          |
-| `1`                | Set Opacity to 10%  |
-| `5`                | Set Opacity to 50%  |
-| `0`                | Set Opacity to 100% |
+| `Shift` `H`        | 水平翻转            |
+| `Shift` `V`        | 垂直翻转            |
+| `Ctrl` `M`         | 用作蒙版            |
+| `Enter`            | 编辑形状或图像      |
+| `Ctrl` `Shift` `K` | 置入图像            |
+| `Alt` `(双击)`     | 裁剪图像            |
+| `1`                | 设置不透明度为 10%  |
+| `5`                | 设置不透明度为 50%  |
+| `0`                | 设置不透明度为 100% |
 
 {.shortcuts}
 
-### Arrange
+### 排列
 
-| Shortcut         | Action                        |
+| 快捷键           | 操作                        |
 | ---------------- | ----------------------------- |
-| `Ctrl` `]`       | Bring Forward                 |
-| `Ctrl` `[`       | Send Backward                 |
-| `Ctrl` `Alt` `]` | Bring to Front                |
-| `Ctrl` `Alt` `[` | Send to Back                  |
-| `Alt` `A`        | Align Left                    |
-| `Alt` `D`        | Align Right                   |
-| `Alt` `W`        | Align Top                     |
-| `Alt` `S`        | Align Bottom                  |
-| `Alt` `H`        | Align Horizontal Centers      |
-| `Alt` `V`        | Align Vertical Centers        |
-| `Ctrl` `Alt` `T` | Tidy Up                       |
-| `Ctrl` `Alt` `H` | Distribute Horizontal Spacing |
-| `Ctrl` `Alt` `V` | Distribute Vertical Spacing   |
+| `Ctrl` `]`       | 上移一层                      |
+| `Ctrl` `[`       | 下移一层                      |
+| `Ctrl` `Alt` `]` | 置于顶层                      |
+| `Ctrl` `Alt` `[` | 置于底层                      |
+| `Alt` `A`        | 左对齐                        |
+| `Alt` `D`        | 右对齐                        |
+| `Alt` `W`        | 顶对齐                        |
+| `Alt` `S`        | 底对齐                        |
+| `Alt` `H`        | 水平居中对齐                  |
+| `Alt` `V`        | 垂直居中对齐                  |
+| `Ctrl` `Alt` `T` | 智能整理                      |
+| `Ctrl` `Alt` `H` | 分布水平间距                  |
+| `Ctrl` `Alt` `V` | 分布垂直间距                  |
 
 {.shortcuts}
 
-### Components
+### 组件
 
-| Shortcut           | Action                                               |
+| 快捷键             | 操作                                               |
 | ------------------ | ---------------------------------------------------- |
-| `Alt` `2`          | Show Components                                      |
-| `Ctrl` `Shift` `O` | Team Library                                         |
-| `Ctrl` `Shift` `K` | Create Component                                     |
-| `Ctrl` `Shift` `B` | Detach Instance                                      |
-| `Alt`              | Swap Component Instance (while dragging from Assets) |
+| `Alt` `2`          | 显示组件面板                                         |
+| `Ctrl` `Shift` `O` | 团队库                                               |
+| `Ctrl` `Shift` `K` | 创建组件                                             |
+| `Ctrl` `Shift` `B` | 分离实例                                             |
+| `Alt`              | 替换组件实例 (从资源面板拖动时)                      |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
 - [Keyboard shortcuts for Figma](https://help.figma.com/article/77-keyboard-shortcuts) _(help.figma.com)_

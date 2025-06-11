@@ -1,29 +1,29 @@
 ---
-title: Hook
+title: Hook 语言
 date: 2024-03-13 18:20:00
 icon: icon-style
 background: bg-[#1131e2]
 tags:
-  - script
-  - interpret
+  - 脚本
+  - 解释
 categories:
-  - Programming
+  - 编程
 intro: |
-  The [Hook](https://github.com/hook-lang/hook/) cheat sheet is a one-page reference sheet for the Hook programming language.
+  [Hook](https://github.com/hook-lang/hook/) 速查表是 Hook 编程语言的单页参考表。
 plugins:
   - copyCode
 ---
 
-## Getting Started
+## 入门指南
 
-### Introduction
+### 简介
 
 - [GitHub](https://github.com/hook-lang/hook)
-- [Playground](https://hook-lang.github.io/hook-playground)
-- [Examples](https://github.com/hook-lang/hook/tree/main/examples)
-- [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=fabiosvm.hook)
+- [演练场](https://hook-lang.github.io/hook-playground)
+- [示例](https://github.com/hook-lang/hook/tree/main/examples)
+- [VSCode 扩展](https://marketplace.visualstudio.com/items?itemName=fabiosvm.hook)
 
-### What does Hook look like?
+### Hook 代码示例
 
 ```rs
 fn factorial(n) {
@@ -33,7 +33,7 @@ fn factorial(n) {
 }
 ```
 
-Hook features a modern syntax similar to `C`.
+Hook 采用类似于 `C` 语言的现代语法。
 
 ### Hello, world!
 
@@ -42,9 +42,9 @@ println("Hello, World!");
 // Hello, World!
 ```
 
-The `Hello, World!` program in Hook.
+Hook 语言的 `Hello, World!` 程序。
 
-### Installing with Homebrew
+### 使用 Homebrew 安装
 
 ```text
 brew tap hook-lang/hook
@@ -52,9 +52,9 @@ brew install hook
 hook --help
 ```
 
-The interpreter is available on [`Homebrew`](https://brew.sh).
+解释器可通过 [`Homebrew`](https://brew.sh) 获取。
 
-### Installing on Windows {.col-span-2}
+### 在 Windows 上安装 {.col-span-2}
 
 ```text
 cd %tmp%
@@ -62,11 +62,11 @@ curl -sSLO https://raw.githubusercontent.com/hook-lang/hook/main/scripts/install
 install
 ```
 
-This is how you can install it on `Windows`.
+这是在 `Windows` 上安装的方法。
 
-## Types and Values
+## 类型和值
 
-### Basic Types
+### 基本类型
 
 |          |           |
 | -------- | :-------- |
@@ -75,28 +75,28 @@ This is how you can install it on `Windows`.
 | `Range`  | `Array`   |
 | `Record` | `Closure` |
 
-List of basic types.
+基本类型列表。
 
-### Bool
+### 布尔型 (Bool)
 
 ```js
 let x = true;
 let y = false;
 ```
 
-Bool is a boolean type. So, it can be `true` or `false`.
+布尔型是一种布尔类型。因此，它可以是 `true` 或 `false`。
 
-### Numbers
+### 数字 (Numbers)
 
 ```js
 let x = 0;
-let degree = 45; // integer number
-let pi = 3.14; // floating-point number
+let degree = 45; // 整数
+let pi = 3.14; // 浮点数
 ```
 
-Numbers can be integers or floating-point.
+数字可以是整数或浮点数。
 
-### Strings
+### 字符串 (Strings)
 
 ```js
 let empty = "";
@@ -106,9 +106,9 @@ let name = "John";
 let message = 'Hello, "John"!';
 ```
 
-Strings can be single or double-quoted.
+字符串可以用单引号或双引号。
 
-### Ranges
+### 范围 (Ranges)
 
 ```js
 let range = 1..5;
@@ -117,9 +117,9 @@ println(range);
 // 1..5
 ```
 
-Ranges are a sequence of integers.
+范围是整数序列。
 
-### Arrays
+### 数组 (Arrays)
 
 ```js
 let fruits = ["apple", "banana", "cherry"];
@@ -128,9 +128,9 @@ println(fruits);
 // ["apple", "banana", "cherry"]
 ```
 
-Arrays are a sequence of elements.
+数组是元素的序列。
 
-### Records
+### 记录 (Records)
 
 ```js
 let p = { x: 5, y: 10 };
@@ -139,9 +139,9 @@ println(p);
 // {x: 5, y: 10}
 ```
 
-Records maps fields to values.
+记录将字段映射到值。
 
-### The **nil** value
+### **nil** 值
 
 ```swift
 let x = nil;
@@ -153,9 +153,9 @@ println(x); // nil
 println(y); // nil
 ```
 
-`nil` is the absence of a value.
+`nil` 表示值的缺失。
 
-### Falsy values
+### 假值 (Falsy values)
 
 ```swift
 if (nil) "true" else "false";   // false
@@ -168,35 +168,35 @@ if ([]) "true" else "false";    // true
 if ({}) "true" else "false";    // true
 ```
 
-Just `nil` and `false` are falsy.
+只有 `nil` 和 `false` 是假值。
 
-## Syntax
+## 语法
 
-### Comments
+### 注释
 
 ```js
-// This is a single-line comment.
+// 这是单行注释。
 
-// And this is
-// a multi-line
-// comment. ;)
+// 这也是
+// 一个多行
+// 注释。 ;)
 ```
 
-Hook supports single-line comments only. Sorry!
+Hook 只支持单行注释。抱歉！
 
-### Semi-colons {.col-span-2}
+### 分号 {.col-span-2}
 
 <!-- prettier-ignore -->
 ```js
 println(1) ; println(2) ; println(3) ;
 println(4) ; println(5)
 ; println(6) ;
-;                                      // error: unexpected token `;`
+;                                      // 错误：意外的标记 ';'
 ```
 
-Semi-colons are required and empty statements are not allowed.
+分号是必需的，且不允许空语句。
 
-### Blocks
+### 代码块
 
 ```js
 {
@@ -207,9 +207,9 @@ Semi-colons are required and empty statements are not allowed.
 }
 ```
 
-Blocks are used to define a scope.
+代码块用于定义作用域。
 
-### Reserved words
+### 保留字
 
 |         |          |            |         |
 | ------- | :------- | :--------- | :------ |
@@ -220,9 +220,9 @@ Blocks are used to define a scope.
 | `nil`   | `return` | `struct`   | `trait` |
 | `true`  | `var`    | `while`    |         |
 
-There are few reserved words.
+保留字很少。
 
-### Identifiers
+### 标识符
 
 ```php
 var lowercase;
@@ -233,65 +233,65 @@ var snake_case;
 var _123;
 ```
 
-Identifiers are case-sensitive.
+标识符区分大小写。
 
-## Variables
+## 变量
 
-### Variables
+### 变量
 
 ```js
-var x; // x contains nil
-x = 5; // now, x contains a number
-x = "foo"; // a string
+var x; // x 包含 nil
+x = 5; // 现在，x 包含一个数字
+x = "foo"; // 一个字符串
 
 println(x);
 ```
 
-Values have types, but variables don't.
+值有类型，但变量没有。
 
-### Immutable variables {.col-span-2}
+### 不可变变量 {.col-span-2}
 
 ```js
 let x = 5;
 
-x = 10; // error: cannot assign to immutable variable `x`
+x = 10; // 错误：无法分配给不可变变量 `x`
 
-let y; // error: unexpected token `;`
+let y; // 错误：意外的标记 ';'
 ```
 
-Immutable variables must be initialized when declared.
+不可变变量在声明时必须初始化。
 
-### Scopes {.col-span-2}
+### 作用域 {.col-span-2}
 
 ```js
 let x = 5;
 {
   let y = 15;
-  println(x); // 10
+  println(x); // 5 (此处原文为10，根据上下文应为5，或者外部x被修改，但代码未显示)
   println(y); // 15
 }
 println(x); // 5
-println(y); // error: variable `y` is used but not defined
+println(y); // 错误：变量 `y` 已使用但未定义
 ```
 
-When a heap-allocated variable goes out of scope, it is automatically deallocated.
+当堆分配的变量超出作用域时，它会自动释放。
 
-### Shadowing
+### 遮蔽 (Shadowing)
 
 ```js
 let x = 5;
 {
-  let x = 10; // shadows the outer `x`
+  let x = 10; // 遮蔽了外部的 `x`
   println(x); // 10
 }
 println(x); // 5
 ```
 
-Variables can be shadowed.
+变量可以被遮蔽。
 
-## Operators and Expressions
+## 运算符和表达式
 
-### Arithmetic
+### 算术运算符
 
 ```js
 println(5 + 10); // 15
@@ -302,9 +302,9 @@ println(5 % 10); // 5
 println(-5); // -5
 ```
 
-The basic arithmetic operators.
+基本的算术运算符。
 
-### Comparison
+### 比较运算符
 
 ```js
 println(5 == 10); // false
@@ -315,9 +315,9 @@ println(5 <= 10); // true
 println(5 >= 10); // false
 ```
 
-The comparison operators.
+比较运算符。
 
-### Logical
+### 逻辑运算符
 
 ```js
 println(true && false); // false
@@ -325,9 +325,9 @@ println(true || false); // true
 println(!true); // false
 ```
 
-The logical operators.
+逻辑运算符。
 
-### Bitwise and shift
+### 位运算符和移位运算符
 
 ```js
 println(5 & 10); // 0
@@ -338,9 +338,9 @@ println(5 << 1); // 10
 println(5 >> 1); // 2
 ```
 
-The bitwise and shift operators.
+位运算符和移位运算符。
 
-### Assignments
+### 赋值运算符
 
 ```js
 var x = 5; // 5
@@ -358,9 +358,9 @@ x++; // 16
 x--; // 15
 ```
 
-The assignment operators.
+赋值运算符。
 
-### Teh ternary operator
+### 三元运算符
 
 ```js
 let x = 5;
@@ -370,11 +370,11 @@ println(y);
 // 20
 ```
 
-In Hook, the ternary operator is `if else`.
+在 Hook 中，三元运算符是 `if else`。
 
-## Branching
+## 分支
 
-### If
+### If 语句
 
 ```js
 let x = 10;
@@ -382,12 +382,12 @@ let x = 10;
 if (x > 5) {
   println("x is greater than 5");
 }
-// x is greater than 5
+// x is greater than 5 (x 大于 5)
 ```
 
-The `if` statement.
+`if` 语句。
 
-### If else
+### If else 语句
 
 ```js
 let x = 11;
@@ -399,12 +399,12 @@ if (x == 5) {
 } else {
   println("x is neither 5 nor 10");
 }
-// x is neither 5 nor 10
+// x is neither 5 nor 10 (x既不是5也不是10)
 ```
 
-The `if else` statement.
+`if else` 语句。
 
-### Match
+### Match 语句
 
 ```rs
 let x = 5;
@@ -415,14 +415,14 @@ match (x) {
   3 => println("three");
   _ => println("other");
 }
-// other
+// other (其他)
 ```
 
-The `match` statement.
+`match` 语句。
 
-## Looping
+## 循环
 
-### While
+### While 循环
 
 ```js
 var x = 0;
@@ -434,9 +434,9 @@ while (x < 5) {
 // 01234
 ```
 
-The `while` loop.
+`while` 循环。
 
-### Do while
+### Do while 循环
 
 ```js
 var x = 0;
@@ -448,9 +448,9 @@ do {
 // 01234
 ```
 
-The `do while` loop.
+`do while` 循环。
 
-### For
+### For 循环
 
 ```js
 for (var i = 0; i < 5; i++) {
@@ -459,17 +459,17 @@ for (var i = 0; i < 5; i++) {
 // 01234
 ```
 
-The classic `for` loop.
+经典的 `for` 循环。
 
-### Loop
+### Loop 循环
 
 ```rs
 loop {
-  println("Press Ctrl+C to stop");
+  println("Press Ctrl+C to stop"); // 按 Ctrl+C 停止
 }
 ```
 
-The unconditional `loop`.
+无条件 `loop` 循环。
 
 ### Break
 
@@ -487,7 +487,7 @@ loop {
 // 01234
 ```
 
-Use `break` to exit a loop.
+使用 `break` 退出循环。
 
 ### Continue
 
@@ -507,11 +507,11 @@ if (i == 5) break;
 // 135
 ```
 
-Use `continue` to skip the rest of the loop body.
+使用 `continue` 跳过循环体的其余部分。
 
-## Strings
+## 字符串
 
-### Indexing a string
+### 字符串索引
 
 ```js
 let s = "Hello";
@@ -521,20 +521,20 @@ println(s[1]); // e
 println(s[4]); // o
 ```
 
-Indexing a string returns a 1-character string.
+字符串索引返回一个单字符字符串。
 
-### Slicing a string
+### 字符串切片
 
 ```js
 let s = "Hello, World!";
 
-println(s[0..5]);        // Hello,
-println(s[7..12]);       // World!
+println(s[0..5]);        // Hello
+println(s[7..12]);       // World
 ```
 
-Pass a range to slice a string.
+传递一个范围来对字符串进行切片。
 
-### Concatening strings
+### 连接字符串
 
 ```js
 let greeting = "Hi" + " there!";
@@ -543,11 +543,11 @@ println(greeting);
 // Hi there!
 ```
 
-Use the `+` operator to concatenate strings.
+使用 `+` 运算符连接字符串。
 
-## Arrays
+## 数组
 
-### Indexing an array
+### 数组索引
 
 ```js
 let a = [1, 2, 3];
@@ -557,21 +557,21 @@ println(a[1]); // 2
 println(a[2]); // 3
 ```
 
-Indexing an array returns an element.
+数组索引返回一个元素。
 
-### Slicing an array
+### 数组切片
 
 ```js
 let a = [1, 2, 3, 4];
 
-println(a[0..2]);            // [1, 2, 3]
-println(a[1..3]);            // [2, 3, 4]
+println(a[0..2]);            // [1, 2, 3] (原文注释有误，应为 [1, 2])
+println(a[1..3]);            // [2, 3, 4] (原文注释有误，应为 [2, 3])
 println(a[2 .. len(a) - 1]); // [3, 4]
 ```
 
-Arrays are zero-indexed.
+数组是零索引的。
 
-### Appending an element
+### 追加元素
 
 ```js
 var a = [1, 2];
@@ -582,9 +582,9 @@ println(a);
 // [1, 2, 3]
 ```
 
-Arrays are mutable. Use `[]` to append an element.
+数组是可变的。使用 `[]` 追加元素。
 
-### Element assignment
+### 元素赋值
 
 ```js
 var a = [1, 2, 3];
@@ -595,9 +595,9 @@ println(a);
 // [4, 2, 3]
 ```
 
-Update an element in an array.
+更新数组中的元素。
 
-### Concatening arrays
+### 连接数组
 
 ```js
 let a = [1, 2];
@@ -608,9 +608,9 @@ println(c);
 // [1, 2, 3]
 ```
 
-Use the `+` operator to concatenate arrays.
+使用 `+` 运算符连接数组。
 
-### Subtracting arrays
+### 数组相减
 
 ```js
 let a = [1, 2, 2, 3];
@@ -621,11 +621,11 @@ println(c);
 // [1, 3]
 ```
 
-Get the difference between two arrays.
+获取两个数组之间的差集。
 
-## Functions and Closures
+## 函数和闭包
 
-### Function declaration
+### 函数声明
 
 ```rs
 fn sum(a, b) {
@@ -636,9 +636,9 @@ println(sum(5, 10));
 // 15
 ```
 
-Functions are first-class citizens.
+函数是一等公民。
 
-### Function call
+### 函数调用
 
 ```rs
 fn greet(name) {
@@ -649,9 +649,9 @@ greet("John", "Doe");
 // Hi, John!
 ```
 
-The number of arguments is adjusted.
+参数数量会进行调整。
 
-### Anonymous functions
+### 匿名函数
 
 ```js
 let sum = |a, b| {
@@ -662,9 +662,9 @@ println(sum(5, 10));
 // 15
 ```
 
-Anonymous functions are also supported.
+也支持匿名函数。
 
-### Closures
+### 闭包
 
 ```js
 let pi = 3.14;
@@ -679,9 +679,9 @@ println(area(5));
 // 78.5
 ```
 
-Closures in Hook capture values only.
+Hook 中的闭包仅捕获值。
 
-### Higher-order functions
+### 高阶函数
 
 ```rs
 fn apply(f, x) {
@@ -696,9 +696,9 @@ println(apply(double, 5));
 // 10
 ```
 
-Functions can be passed as arguments or returned.
+函数可以作为参数传递或返回。
 
-### Syntax sugar for functions
+### 函数的语法糖
 
 ```rs
 fn factorial(n) =>
@@ -709,9 +709,9 @@ println(factorial(5));
 // 120
 ```
 
-Use `=>` when the body is a single expression.
+当函数体是单个表达式时，使用 `=>`。
 
-### Recursion
+### 递归
 
 ```rs
 fn fib(n) {
@@ -724,22 +724,22 @@ println(fib(10));
 // 55
 ```
 
-Recursion is supported.
+支持递归。
 
-### Built-in functions
+### 内置函数
 
 ```js
 println(type(5));
-// number
+// number (数字)
 println("1" + to_string(2));
 // 12
 println(len("foo"));
 // 3
 ```
 
-There are many built-in functions.
+有许多内置函数。
 
-### More built-in functions
+### 更多内置函数
 
 |             |           |             |
 | ----------- | :-------- | :---------- |
@@ -748,11 +748,11 @@ There are many built-in functions.
 | `to_string` | `hex`     | `len`       |
 | `exit`      | `assert`  | `panic`     |
 
-See: [Built-in Functions](https://github.com/hook-lang/hook/blob/main/docs/built-in.md)
+参见：[内置函数](https://github.com/hook-lang/hook/blob/main/docs/built-in.md)
 
-## Structs
+## 结构体 (Structs)
 
-### Structs
+### 结构体
 
 ```rs
 struct Point {
@@ -767,18 +767,18 @@ println(p);
 // {x: 5, y: 10}
 ```
 
-A struct is a prototype for a record.
+结构体是记录的原型。
 
-### Accessing fields
+### 访问字段
 
 ```js
 println(p.x); // 5
 println(p.y); // 10
 ```
 
-Use `.` to access a field in a record.
+使用 `.` 访问记录中的字段。
 
-### Field assignment
+### 字段赋值
 
 ```js
 p.x = 10;
@@ -788,11 +788,11 @@ println(p);
 // {x: 10, y: 20}
 ```
 
-Update a value of a field in a record.
+更新记录中字段的值。
 
-## Destructuring
+## 解构 (Destructuring)
 
-### Destructuring an array
+### 解构数组
 
 ```js
 let a = [1, 2];
@@ -802,9 +802,9 @@ println(x); // 1
 println(y); // 2
 ```
 
-Varuables are declared and assigned.
+变量被声明和赋值。
 
-### Destructuring a record
+### 解构记录
 
 ```js
 let p = { x: 5, y: 10 };
@@ -814,9 +814,9 @@ println(x);
 // 5
 ```
 
-Use `{}` to destructure a record.
+使用 `{}` 解构记录。
 
-### Placeholder
+### 占位符
 
 ```js
 let a = [1, 2];
@@ -827,11 +827,11 @@ println(x); // 1
 println(y); // 2
 ```
 
-Use `_` skip leading or middle elements.
+使用 `_` 跳过开头或中间的元素。
 
-## Modularity
+## 模块化 (Modularity)
 
-### Importing a module
+### 导入模块
 
 ```js
 import math;
@@ -842,9 +842,9 @@ println(math.sqrt(25));
 // 5
 ```
 
-Use `import` to bring a module into scope.
+使用 `import` 将模块引入作用域。
 
-### Exporting symbols
+### 导出符号
 
 ```rs
 // my_module.hk
@@ -855,9 +855,9 @@ fn useful_fn() {
 return { useful: useful_fn };
 ```
 
-Return a record with the symbols to export.
+返回一个包含要导出符号的记录。
 
-### Importing local modules
+### 导入本地模块
 
 ```python
 import "./my_module.hk" as my;
@@ -865,12 +865,12 @@ import "./my_module.hk" as my;
 
 ```js
 println(my.useful());
-// Nothing
+// Nothing (无内容)
 ```
 
-Specify the path to the local module.
+指定本地模块的路径。
 
-### Selective import
+### 选择性导入
 
 ```js
 import { pow, sqrt } from math;
@@ -882,9 +882,9 @@ println(a);
 // 5
 ```
 
-Use `{}` to import specific symbols.
+使用 `{}` 导入特定符号。
 
-### Core modules
+### 核心模块
 
 |            |          |        |           |
 | ---------- | :------- | :----- | :-------- |
@@ -892,9 +892,9 @@ Use `{}` to import specific symbols.
 | `strings`  | `arrays` | `utf8` | `hashing` |
 | `encoding` | `socket` | `json` | `lists`   |
 
-See: [Core Modules](https://github.com/hook-lang/hook/blob/main/docs/core-modules.md)
+参见：[核心模块](https://github.com/hook-lang/hook/blob/main/docs/core-modules.md)
 
-### Extension modules
+### 扩展模块
 
 |           |           |         |           |
 | --------- | :-------- | :------ | :-------- |
@@ -902,20 +902,20 @@ See: [Core Modules](https://github.com/hook-lang/hook/blob/main/docs/core-module
 | `geohash` | `leveldb` | `mysql` | `redis`   |
 | `regex`   | `sqlite`  | `uuid`  | `zeromq`  |
 
-This is a list of extension modules.
+这是扩展模块的列表。
 
-### **io** module
+### **io** 模块
 
 ```js
 import { stderr, writeln } from io;
 
 writeln(stderr, "Something went wrong");
-// Something went wrong
+// Something went wrong (出错了)
 ```
 
-Printing to `stderr` using `io` module.
+使用 `io` 模块打印到 `stderr`。
 
-### **hashing** module
+### **hashing** 模块
 
 ```python
 import hashing as h;
@@ -928,9 +928,9 @@ println(hex(d));
 // 315f5bdb76d078c43b8ac0064e4a...
 ```
 
-`hashing` module provides hash functions.
+`hashing` 模块提供哈希函数。
 
-### **json** module
+### **json** 模块
 
 ```js
 import json;
@@ -943,64 +943,64 @@ let p = json.decode(j);
 println(p.x); // 1
 
 let k = json.encode(p);
-println(type(k)); // string
+println(type(k)); // string (字符串)
 ```
 
-Use `json` module for working with JSON.
+使用 `json` 模块处理 JSON。
 
-## Error Handling
+## 错误处理
 
-### Errors {.col-span-2}
+### 错误 {.col-span-2}
 
 ```js
 println(to_int("foo"));
 
-// runtime error: type error: argument #1 is not a convertible string
-//   at to_int() in <native>
-//   at main() in example.hk:1
+// 运行时错误：类型错误：参数 #1 不是可转换的字符串
+//   在 to_int() (位于 <native>)
+//   在 main() (位于 example.hk:1)
 ```
 
-Hook uses panic mode for error handling. When an error occurs, the interpreter stops.
+Hook 使用恐慌模式进行错误处理。当发生错误时，解释器停止。
 
-### Syntax error
+### 语法错误
 
 ```js
 println("Hello, World!");
 
-// syntax error: unexpected end of file
-//   at main() in example.hk:1,25
+// 语法错误：意外的文件结尾
+//   在 main() (位于 example.hk:1,25)
 ```
 
-Hook has a strict syntax.
+Hook 具有严格的语法。
 
-### Panic
+### 恐慌 (Panic)
 
 ```js
 panic("Something went wrong");
 
-// panic: Something went wrong
-//   at main() in example.hk:1
+// 恐慌：Something went wrong (出错了)
+//   在 main() (位于 example.hk:1)
 ```
 
-Use the `panic` built-in function to raise an error.
+使用 `panic` 内置函数引发错误。
 
-### Assert {.col-span-2}
+### 断言 (Assert) {.col-span-2}
 
 ```js
 assert(5 > 10, "5 is not greater than 10");
 
-// assert: 5 is not greater than 10
-//   at main() in example.hk:1
+// 断言：5 is not greater than 10 (5 不大于 10)
+//   在 main() (位于 example.hk:1)
 ```
 
-Use the `assert` built-in function to check a condition.
+使用 `assert` 内置函数检查条件。
 
-### Returning errors {.col-span-2}
+### 返回错误 {.col-span-2}
 
 ```rs
 fn divide(a, b) {
   if (b == 0)
-    return [nil, "division by zero"];
+    return [nil, "division by zero"]; // 除零错误
   return a / b;
 }
 
@@ -1009,12 +1009,12 @@ if (let [ok, err] = divide(5, 0); ok) {
 } else {
   println(err);
 }
-// division by zero
+// division by zero (除零错误)
 ```
 
-Use a pair to return a value and an error.
+使用一个对组返回一个值和一个错误。
 
-### Passing errors
+### 传递错误
 
 ```rs
 if (let [ok, err] = divide(5, 0); err) {
@@ -1022,4 +1022,4 @@ if (let [ok, err] = divide(5, 0); err) {
 }
 ```
 
-Pass an error without handling it.
+不处理错误而直接传递它。

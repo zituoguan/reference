@@ -7,114 +7,114 @@ tags:
   -
   - mac
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 45 keyboard shortcuts found in Framer X. This application is MacOS-only.
+  Framer X 中 45 个键盘快捷键的可视化速查表。此应用程序仅适用于 MacOS。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Tools
+### 工具
 
-| Shortcut | Action     |
+| 快捷键    | 操作     |
 | -------- | ---------- |
-| `F`      | Frame      |
-| `U`      | Round      |
-| `T`      | Text       |
-| `S`      | Stack      |
-| `L`      | Link       |
-| `Space`  | Pan Canvas |
+| `F`      | 画框      |
+| `U`      | 圆角      |
+| `T`      | 文本       |
+| `S`      | 堆栈      |
+| `L`      | 链接       |
+| `Space`  | 平移画布 |
 
 {.shortcuts}
 
-### Graphics
+### 图形
 
-| Shortcut          | Action    |
+| 快捷键          | 操作    |
 | ----------------- | --------- |
-| `G`               | Graphic   |
-| `P`               | Path      |
-| `R`               | Rectangle |
-| `O`               | Oval      |
-| `V`               | Vector    |
-| `Cmd` `G`         | Group     |
-| `Cmd` `Shift` `G` | Ungroup   |
+| `G`               | 图形   |
+| `P`               | 路径      |
+| `R`               | 矩形 |
+| `O`               | 椭圆      |
+| `V`               | 矢量    |
+| `Cmd` `G`         | 编组     |
+| `Cmd` `Shift` `G` | 取消编组   |
 
 {.shortcuts}
 
-### Layout
+### 布局
 
-| Shortcut            | Action         |
+| 快捷键            | 操作         |
 | ------------------- | -------------- |
-| `Cmd` `Enter`       | Add Frame      |
-| `Cmd` `Opt` `Enter` | Add Stack      |
-| `Cmd` `Del`         | Remove Wrapper |
-| `Cmd` `Opt` `Up`    | Move Forward   |
-| `Cmd` `Opt` `Down`  | Move Backward  |
+| `Cmd` `Enter`       | 添加画框      |
+| `Cmd` `Opt` `Enter` | 添加堆栈      |
+| `Cmd` `Del`         | 移除包装器 |
+| `Cmd` `Opt` `Up`    | 向前移动   |
+| `Cmd` `Opt` `Down`  | 向后移动  |
 
 {.shortcuts}
 
-### Components
+### 组件
 
-| Shortcut          | Action             |
+| 快捷键          | 操作             |
 | ----------------- | ------------------ |
-| `Cmd` `K`         | Create from Design |
-| `Cmd` `Shift` `K` | Create from Code   |
+| `Cmd` `K`         | 从设计创建 |
+| `Cmd` `Shift` `K` | 从代码创建   |
 
 {.shortcuts}
 
-### Text
+### 文本
 
-| Shortcut  | Action          |
+| 快捷键  | 操作          |
 | --------- | --------------- |
-| `Cmd` `B` | Bold            |
-| `Cmd` `I` | Italic          |
-| `Cmd` `U` | Underline       |
-| `Cmd` `T` | Select Typeface |
+| `Cmd` `B` | 粗体            |
+| `Cmd` `I` | 斜体          |
+| `Cmd` `U` | 下划线       |
+| `Cmd` `T` | 选择字体 |
 
 {.shortcuts}
 
-### Editing
+### 编辑
 
-| Shortcut                 | Action              |
+| 快捷键                 | 操作              |
 | ------------------------ | ------------------- |
-| `Cmd` `(arrows)`         | Object Size         |
-| `Cmd` `Shift` `(arrows)` | Object Size by 10px |
-| `0-9`                    | Opacity             |
-| `Opt`                    | Show Distance       |
-| `Cmd` `D`                | Duplicate in Place  |
-| `Cmd` `Opt` `C`          | Copy Style          |
-| `Cmd` `Opt` `V`          | Paste Style         |
-| `Ctrl` `C`               | Color Picker        |
-| `Cmd` `A`                | Select All Layers   |
-| `Cmd` `Shift` `A`        | Select All Siblings |
-| `Cmd` `Opt` `A`          | Select All Children |
+| `Cmd` `(arrows)`         | 对象大小         |
+| `Cmd` `Shift` `(arrows)` | 对象大小（10像素） |
+| `0-9`                    | 不透明度             |
+| `Opt`                    | 显示距离       |
+| `Cmd` `D`                | 原地复制  |
+| `Cmd` `Opt` `C`          | 复制样式          |
+| `Cmd` `Opt` `V`          | 粘贴样式         |
+| `Ctrl` `C`               | 颜色选择器        |
+| `Cmd` `A`                | 选择所有图层   |
+| `Cmd` `Shift` `A`        | 选择所有同级 |
+| `Cmd` `Opt` `A`          | 选择所有子级 |
 
 {.shortcuts}
 
-### View
+### 视图
 
-| Shortcut   | Action                |
+| 快捷键   | 操作                |
 | ---------- | --------------------- |
-| `Z`        | Zoom                  |
-| `Cmd` `+`  | Zoom In               |
-| `Cmd` `-`  | Zoom Out              |
-| `Cmd` `1`  | Zoom to Fit           |
-| `Cmd` `2`  | Zoom to Fit Selection |
-| `Cmd` `0`  | Zoom to 100%          |
-| `Ctrl` `R` | Show Rulers           |
+| `Z`        | 缩放                  |
+| `Cmd` `+`  | 放大               |
+| `Cmd` `-`  | 缩小              |
+| `Cmd` `1`  | 缩放以适应           |
+| `Cmd` `2`  | 缩放以适应所选内容 |
+| `Cmd` `0`  | 缩放至 100%          |
+| `Ctrl` `R` | 显示标尺           |
 
 {.shortcuts}
 
-### Window
+### 窗口
 
-| Shortcut          | Action   |
+| 快捷键          | 操作   |
 | ----------------- | -------- |
-| `Cmd` `M`         | Minimize |
-| `Cmd` `Shift` `1` | Welcome  |
-| `Cmd` `P`         | Preview  |
+| `Cmd` `M`         | 最小化 |
+| `Cmd` `Shift` `1` | 欢迎  |
+| `Cmd` `P`         | 预览  |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Framer X](https://www.framer.com/support/using-framer-x/shortcuts/) _(www.framer.com)_
+- [Framer X 键盘快捷键](https://www.framer.com/support/using-framer-x/shortcuts/) _(www.framer.com)_

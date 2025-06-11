@@ -11,13 +11,14 @@ hexo.extend.helper.register("page_title", function () {
     title = `${this.page.title} - ${this.config.title}`;
   } else if (this.is_post()) {
     title = this.page.title;
-    let hasCommand = this.page.categories.findOne({ name: "Linux Command" });
+    let hasCommand = this.page.categories.findOne({ name: "Linux 命令" }); // 翻译 "Linux Command"
     if (hasCommand) {
-      title += " Command";
+      title += " 命令"; // 翻译 " Command"
     }
-    title = `${title} Cheat Sheet & Quick Reference`;
+    title = `${title} 速查表 & 快速参考 - ${this.config.title}`; // 翻译 "Quick Reference"
   } else if (this.page._isNotePagination) {
-    title = `Page ${this.page.current} of Notes - ${this.config.title}`;
+    // 翻译 "Page X of Notes"
+    title = `笔记 - 第 ${this.page.current} 页 - ${this.config.title}`;
   }
   return title;
 });
@@ -61,8 +62,9 @@ hexo.extend.helper.register("page_image", function () {
     // Generate image url
     imageURL = `${this.config.url}/assets/image/${postPng}?v=${version}`;
   } else {
-    // console.warn(`Warning: ${postPath} not Found!`);
+    // console.warn(`警告：${postPath} 未找到！`); // 翻译 "Warning: ... not Found!"
     imageURL = `${this.config.url}/assets/image/${homePng}?v=${version}`;
   }
   return imageURL;
 });
+

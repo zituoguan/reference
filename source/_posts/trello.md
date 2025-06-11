@@ -7,56 +7,56 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 29 keyboard shortcuts found on Trello
+  Trello 中 29 个键盘快捷键的可视化速查表
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### General I
+### 常规操作 I
 
-| Shortcut             | Action                     |
+| 快捷键             | 操作                     |
 | -------------------- | -------------------------- |
-| `Up/Down/Left/Right` | Navigate Cards             |
-| `B`                  | Open Header Boards Menu    |
-| `/`                  | Focus Search Box           |
-| `C`                  | Archive Card               |
-| `D`                  | Due Date                   |
-| `E`                  | Quick Edit Mode            |
-| `Esc`                | Close Menu/Cancel Editing  |
-| `Ctrl` `Enter`       | Save Text                  |
-| `Enter`              | Open Card                  |
-| `F`                  | Open Card Filter Menu      |
-| `L`                  | Label                      |
-| `;`                  | Toggle Label Names         |
-| `M`                  | Add/Remove Members         |
-| `N`                  | Insert New Card            |
-| `,/./</>`            | Move Card to Adjacent List |
+| `方向键` | 导航卡片             |
+| `B`                  | 打开看板导航菜单    |
+| `/`                  | 聚焦搜索框           |
+| `C`                  | 归档卡片               |
+| `D`                  | 截止日期                   |
+| `E`                  | 快速编辑模式            |
+| `Esc`                | 关闭菜单/取消编辑  |
+| `Ctrl` `Enter`       | 保存文本                  |
+| `Enter`              | 打开卡片                  |
+| `F`                  | 打开卡片筛选菜单      |
+| `L`                  | 标签                      |
+| `;`                  | 切换标签名称显示         |
+| `M`                  | 添加/移除成员         |
+| `N`                  | 添加新卡片            |
+| `,/./</>`            | 移动卡片到相邻列表 |
 
 {.shortcuts}
 
-### General II
+### 常规操作 II
 
-| Shortcut    | Action                |
+| 快捷键    | 操作                |
 | ----------- | --------------------- |
-| `Q`         | My Cards Filter       |
-| `S`         | Watch                 |
-| `Space`     | Assign Self           |
-| `T`         | Edit Title            |
-| `V`         | Vote                  |
-| `W`         | Toggle Board Menu     |
-| `X`         | Clear All Filters     |
-| `?`         | Open Shortcuts Page   |
-| `Shift` `2` | Autocomplete Members  |
-| `Shift` `3` | Autocomplete Labels   |
-| `Shift` `6` | Autocomplete Position |
-| `Ctrl` `C`  | Copy Card             |
-| `Ctrl` `V`  | Paste Card            |
-| `Ctrl` `X`  | Move Card             |
+| `Q`         | 筛选“我的卡片”       |
+| `S`         | 关注/取消关注卡片     |
+| `空格键`     | 分配给自己           |
+| `T`         | 编辑卡片标题        |
+| `V`         | 投票                  |
+| `W`         | 切换看板菜单     |
+| `X`         | 清除所有筛选器     |
+| `?`         | 打开快捷键页面   |
+| `Shift` `2` | 自动补全成员 (@)  |
+| `Shift` `3` | 自动补全标签 (#)   |
+| `Shift` `6` | 自动补全位置 (^) |
+| `Ctrl` `C`  | 复制卡片             |
+| `Ctrl` `V`  | 粘贴卡片            |
+| `Ctrl` `X`  | 移动卡片             |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Trello](https://trello.com/shortcuts) _(trello.com)_
+- [Trello 键盘快捷键](https://trello.com/shortcuts) _(trello.com)_

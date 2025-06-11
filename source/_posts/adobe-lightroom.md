@@ -7,363 +7,363 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 251 keyboard shortcuts found in Adobe Lightroom CC
+  Adobe Lightroom CC 中的 251 个键盘快捷键速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Working with panels {.row-span-2}
+### 使用面板 {.row-span-2}
 
-| Shortcut                  | Action                                                                    |
+| 快捷键                    | 操作                                                                      |
 | ------------------------- | ------------------------------------------------------------------------- |
-| `Tab`                     | Show/hide side panels                                                     |
-| `Shift` `Tab`             | Show/hide all panels                                                      |
-| `T`                       | Show/hide toolbar                                                         |
-| `F5`                      | Show/hide Module Picker                                                   |
-| `F6`                      | Show/hide Filmstrip                                                       |
-| `F7`                      | Show/hide left panels                                                     |
-| `F8`                      | Show/hide right panels                                                    |
-| `Alt` `(click a panel)`   | Toggle solo mode                                                          |
-| `Shift` `(click a panel)` | Open a new panel without closing soloed panel                             |
-| `Ctrl` `(click a panel)`  | Open/close all panels                                                     |
-| `Ctrl` `Shift` `0-5`      | Open/close left panels, top to bottom                                     |
-| `Ctrl` `0-9`              | Open/close right panels, Library and Develop modules, top to bottom       |
-| `Ctrl` `1-7`              | Open/close right panels, Slideshow, Print, and Web modules, top to bottom |
+| `Tab`                     | 显示/隐藏侧面板                                                               |
+| `Shift` `Tab`             | 显示/隐藏所有面板                                                             |
+| `T`                       | 显示/隐藏工具栏                                                               |
+| `F5`                      | 显示/隐藏模块选取器                                                           |
+| `F6`                      | 显示/隐藏胶片显示窗格                                                           |
+| `F7`                      | 显示/隐藏左侧面板                                                             |
+| `F8`                      | 显示/隐藏右侧面板                                                             |
+| `Alt` `(单击面板)`        | 切换独奏模式                                                                  |
+| `Shift` `(单击面板)`      | 打开新面板而不关闭独奏面板                                                      |
+| `Ctrl` `(单击面板)`       | 打开/关闭所有面板                                                             |
+| `Ctrl` `Shift` `0-5`      | 打开/关闭左侧面板，从上到下                                                     |
+| `Ctrl` `0-9`              | 打开/关闭右侧面板，“图库”和“修改照片”模块，从上到下                               |
+| `Ctrl` `1-7`              | 打开/关闭右侧面板，“幻灯片放映”、“打印”和“Web”模块，从上到下                       |
 
 {.shortcuts}
 
-### Navigating modules
+### 导航模块
 
-| Shortcut                  | Action                     |
+| 快捷键                    | 操作                       |
 | ------------------------- | -------------------------- |
-| `Ctrl` `Alt` `1`          | Go to Library module       |
-| `Ctrl` `Alt` `2`          | Go to Develop module       |
-| `Ctrl` `Alt` `3`          | Go to Slideshow module     |
-| `Ctrl` `Alt` `4`          | Go to Print module         |
-| `Ctrl` `Alt` `5`          | Go to Web module           |
-| `Ctrl` `Alt` `Left/Right` | Go back/go forward         |
-| `Ctrl` `Alt` `Up`         | Go back to previous module |
+| `Ctrl` `Alt` `1`          | 转到“图库”模块                 |
+| `Ctrl` `Alt` `2`          | 转到“修改照片”模块             |
+| `Ctrl` `Alt` `3`          | 转到“幻灯片放映”模块           |
+| `Ctrl` `Alt` `4`          | 转到“打印”模块                 |
+| `Ctrl` `Alt` `5`          | 转到“Web”模块                  |
+| `Ctrl` `Alt` `Left/Right` | 后退/前进                    |
+| `Ctrl` `Alt` `Up`         | 返回上一个模块                 |
 
 {.shortcuts}
 
-### Using a secondary window
+### 使用辅助窗口
 
-| Shortcut                     | Action                                           |
+| 快捷键                       | 操作                                             |
 | ---------------------------- | ------------------------------------------------ |
-| `F11`                        | Open secondary window                            |
-| `Shift` `G`                  | Enter Grid view                                  |
-| `Shift` `E`                  | Enter normal Loupe view                          |
-| `Ctrl` `Shift` `Enter`       | Enter locked Loupe view                          |
-| `Shift` `C`                  | Enter Compare view                               |
-| `Shift` `N`                  | Enter Survey view                                |
-| `Ctrl` `Alt` `Shift` `Enter` | Enter Slideshow view                             |
-| `Shift` `F11`                | Enter full-screen mode (requires second monitor) |
-| `Shift` `\`                  | Show/hide Filter bar                             |
-| `Ctrl` `Shift` `+/-`         | Zoom in/out                                      |
+| `F11`                        | 打开辅助窗口                                       |
+| `Shift` `G`                  | 进入网格视图                                       |
+| `Shift` `E`                  | 进入正常放大视图                                   |
+| `Ctrl` `Shift` `Enter`       | 进入锁定放大视图                                   |
+| `Shift` `C`                  | 进入比较视图                                       |
+| `Shift` `N`                  | 进入筛选视图                                       |
+| `Ctrl` `Alt` `Shift` `Enter` | 进入幻灯片放映视图                                 |
+| `Shift` `F11`                | 进入全屏模式（需要第二个显示器）                     |
+| `Shift` `\`                  | 显示/隐藏筛选器栏                                  |
+| `Ctrl` `Shift` `+/-`         | 放大/缩小                                        |
 
 {.shortcuts}
 
-### Working in the Develop module {.row-span-3}
+### 在“修改照片”模块中工作 {.row-span-3}
 
-| Shortcut                     | Action                                                                                |
+| 快捷键                       | 操作                                                                                  |
 | ---------------------------- | ------------------------------------------------------------------------------------- |
-| `V`                          | Convert to grayscale                                                                  |
-| `Ctrl` `U`                   | Auto tone                                                                             |
-| `Ctrl` `Shift` `U`           | Auto white balance                                                                    |
-| `Ctrl` `E`                   | Edit in Photoshop                                                                     |
-| `Ctrl` `Shift` `C/V`         | Copy/paste Develop settings                                                           |
-| `Ctrl` `Alt` `V`             | Paste settings from previous photo                                                    |
-| `Ctrl` `Alt` `Shift` `Left`  | Copy After settings to Before                                                         |
-| `Ctrl` `Alt` `Shift` `Right` | Copy Before settings to After                                                         |
-| `Ctrl` `Alt` `Shift` `Up`    | Swap Before and After settings                                                        |
-| `Up/Down`                    | Increase/decrease selected slider in small increments                                 |
-| `Shift` `Up/Down`            | Increase/decrease selected slider in larger increments                                |
-| `./,`                        | Cycle through Basic panel settings (forward/backward)                                 |
-| `(double-click slider name)` | Reset a slider                                                                        |
-| `Alt` `(click group name)`   | Reset a group of sliders                                                              |
-| `Ctrl` `Shift` `R`           | Reset all settings                                                                    |
-| `Ctrl` `Shift` `S`           | Sync settings                                                                         |
-| `Ctrl` `Alt` `S`             | Sync settings bypassing Synchronize Settings dialog box                               |
-| `Ctrl` `(click Sync button)` | Toggle Auto Sync                                                                      |
-| `Ctrl` `Alt` `Shift` `A`     | Enable Auto Sync                                                                      |
-| `Ctrl` `Alt` `Shift` `M`     | Match total exposures                                                                 |
-| `W`                          | Select White Balance tool (from any module)                                           |
-| `R`                          | Select the Crop tool (from any module)                                                |
-| `A`                          | Constrain aspect ratio when Crop tool is selected                                     |
-| `Shift` `A`                  | Crop to same aspect ratio as previous crop                                            |
-| `Alt` `(drag)`               | Crop from center of photo                                                             |
-| `O`                          | Cycle Crop grid overlay                                                               |
-| `Shift` `O`                  | Cycle Crop grid overlay orientation                                                   |
-| `X`                          | Switch crop between portrait and landscape orientation                                |
-| `Ctrl` `Alt` `R`             | Reset crop                                                                            |
-| `Shift` `T`                  | Select the Guided Upright tool                                                        |
-| `Q`                          | Select the Spot Removal tool                                                          |
-| `Shift` `T`                  | Toggle Brush between Clone and Heal modes when Spot Removal tool is selected          |
-| `K`                          | Select the Adjustment Brush tool (from any module)                                    |
-| `M`                          | Select the Graduated Filter tool                                                      |
-| `Shift` `T`                  | Toggle Mask between Edit and Brush modes when the Graduated/Radial Filter is selected |
-| `]/[`                        | Increase/decrease brush size                                                          |
-| `Shift` `]/[`                | Increase/decrease brush feathering                                                    |
-| `/`                          | Switch between local adjustment brush A and B                                         |
-| `Alt` `(drag)`               | Temporarily switch from brush A or B to Eraser                                        |
-| `Shift` `(drag)`             | Paint a horizontal or vertical line                                                   |
-| `H`                          | Show/hide local adjustment pin                                                        |
-| `O`                          | Show/hide local adjustment mask overlay                                               |
-| `Shift` `O`                  | Cycle local adjustment mask overlay colors                                            |
-| `Ctrl` `Alt` `Shift` `T`     | Select Targeted Adjustment tool to apply a Tone Curve adjustment                      |
-| `Ctrl` `Alt` `Shift` `H`     | Select Targeted Adjustment tool to apply a Hue adjustment                             |
-| `Ctrl` `Alt` `Shift` `S`     | Select Targeted Adjustment tool to apply a Saturation adjustment                      |
-| `Ctrl` `Alt` `Shift` `L`     | Select Targeted Adjustment tool to apply a Luminance adjustment                       |
-| `Ctrl` `Alt` `Shift` `G`     | Select Targeted Adjustment tool to apply a Grayscale Mix adjustment                   |
-| `Ctrl` `Alt` `Shift` `N`     | Deselect Targeted Adjustment tool                                                     |
-| `J`                          | Show clipping                                                                         |
-| `Ctrl` `]`                   | Rotate photo right (clockwise)                                                        |
-| `Ctrl` `[`                   | Rotate photo left (counterclockwise)                                                  |
-| `Space/Z`                    | Toggle between Loupe and 1:1 Zoom preview                                             |
-| `Ctrl` `+/-`                 | Zoom in/out                                                                           |
-| `Ctrl` `Enter`               | Play impromptu slide show                                                             |
-| `Y`                          | View Before and After left/right                                                      |
-| `Alt` `Y`                    | View Before and After top/bottom                                                      |
-| `Shift` `Y`                  | View Before and After in a split screen                                               |
-| `\`                          | View Before only                                                                      |
-| `Ctrl` `N`                   | Create a new snapshot                                                                 |
-| `Ctrl` `Shift` `N`           | Create a new preset                                                                   |
-| `Ctrl` `Alt` `N`             | Create a new preset folder                                                            |
-| `Ctrl` `J`                   | Open Develop view options                                                             |
+| `V`                          | 转换为灰度                                                                              |
+| `Ctrl` `U`                   | 自动色调                                                                              |
+| `Ctrl` `Shift` `U`           | 自动白平衡                                                                            |
+| `Ctrl` `E`                   | 在 Photoshop 中编辑                                                                   |
+| `Ctrl` `Shift` `C/V`         | 复制/粘贴“修改照片”设置                                                                 |
+| `Ctrl` `Alt` `V`             | 从上一张照片粘贴设置                                                                    |
+| `Ctrl` `Alt` `Shift` `Left`  | 将“之后”设置复制到“之前”                                                                |
+| `Ctrl` `Alt` `Shift` `Right` | 将“之前”设置复制到“之后”                                                                |
+| `Ctrl` `Alt` `Shift` `Up`    | 交换“之前”和“之后”设置                                                                  |
+| `Up/Down`                    | 小幅增加/减少所选滑块                                                                   |
+| `Shift` `Up/Down`            | 大幅增加/减少所选滑块                                                                   |
+| `./,`                        | 循环切换基本面板设置（向前/向后）                                                         |
+| `(双击滑块名称)`             | 重置滑块                                                                              |
+| `Alt` `(单击组名称)`         | 重置一组滑块                                                                            |
+| `Ctrl` `Shift` `R`           | 重置所有设置                                                                            |
+| `Ctrl` `Shift` `S`           | 同步设置                                                                              |
+| `Ctrl` `Alt` `S`             | 同步设置（绕过“同步设置”对话框）                                                         |
+| `Ctrl` `(单击“同步”按钮)`    | 切换自动同步                                                                          |
+| `Ctrl` `Alt` `Shift` `A`     | 启用自动同步                                                                            |
+| `Ctrl` `Alt` `Shift` `M`     | 匹配总曝光量                                                                            |
+| `W`                          | 选择白平衡工具（可从任何模块）                                                            |
+| `R`                          | 选择裁剪工具（可从任何模块）                                                              |
+| `A`                          | 裁剪工具选中时约束长宽比                                                                  |
+| `Shift` `A`                  | 裁剪为与上次裁剪相同的长宽比                                                              |
+| `Alt` `(拖动)`               | 从照片中心裁剪                                                                          |
+| `O`                          | 循环裁剪网格叠加                                                                        |
+| `Shift` `O`                  | 循环裁剪网格叠加方向                                                                    |
+| `X`                          | 在纵向和横向裁剪方向之间切换                                                              |
+| `Ctrl` `Alt` `R`             | 重置裁剪                                                                              |
+| `Shift` `T`                  | 选择引导式垂直工具                                                                      |
+| `Q`                          | 选择污点去除工具                                                                        |
+| `Shift` `T`                  | 污点去除工具选中时，在仿制和修复画笔模式之间切换                                            |
+| `K`                          | 选择调整画笔工具（可从任何模块）                                                          |
+| `M`                          | 选择渐变滤镜工具                                                                        |
+| `Shift` `T`                  | 渐变/径向滤镜选中时，在编辑和画笔模式之间切换                                               |
+| `]/[`                        | 增加/减小画笔大小                                                                       |
+| `Shift` `]/[`                | 增加/减小画笔羽化                                                                       |
+| `/`                          | 在局部调整画笔 A 和 B 之间切换                                                            |
+| `Alt` `(拖动)`               | 从画笔 A 或 B 临时切换到橡皮擦                                                            |
+| `Shift` `(拖动)`             | 绘制水平或垂直线                                                                        |
+| `H`                          | 显示/隐藏局部调整图钉                                                                     |
+| `O`                          | 显示/隐藏局部调整蒙版叠加                                                                 |
+| `Shift` `O`                  | 循环局部调整蒙版叠加颜色                                                                  |
+| `Ctrl` `Alt` `Shift` `T`     | 选择目标调整工具以应用色调曲线调整                                                          |
+| `Ctrl` `Alt` `Shift` `H`     | 选择目标调整工具以应用色相调整                                                              |
+| `Ctrl` `Alt` `Shift` `S`     | 选择目标调整工具以应用饱和度调整                                                            |
+| `Ctrl` `Alt` `Shift` `L`     | 选择目标调整工具以应用明亮度调整                                                            |
+| `Ctrl` `Alt` `Shift` `G`     | 选择目标调整工具以应用灰度混合调整                                                          |
+| `Ctrl` `Alt` `Shift` `N`     | 取消选择目标调整工具                                                                      |
+| `J`                          | 显示修剪                                                                                |
+| `Ctrl` `]`                   | 向右旋转照片（顺时针）                                                                    |
+| `Ctrl` `[`                   | 向左旋转照片（逆时针）                                                                    |
+| `Space/Z`                    | 在放大视图和 1:1 缩放预览之间切换                                                         |
+| `Ctrl` `+/-`                 | 放大/缩小                                                                               |
+| `Ctrl` `Enter`               | 播放即席幻灯片                                                                          |
+| `Y`                          | 查看之前/之后（左右对比）                                                                 |
+| `Alt` `Y`                    | 查看之前/之后（上下对比）                                                                 |
+| `Shift` `Y`                  | 在分屏中查看之前/之后                                                                     |
+| `\`                          | 仅查看“之前”                                                                            |
+| `Ctrl` `N`                   | 创建新快照                                                                              |
+| `Ctrl` `Shift` `N`           | 创建新预设                                                                              |
+| `Ctrl` `Alt` `N`             | 创建新预设文件夹                                                                          |
+| `Ctrl` `J`                   | 打开“修改照片”视图选项                                                                    |
 
 {.shortcuts}
 
-### Changing view and screen modes
+### 更改视图和屏幕模式
 
-| Shortcut           | Action                                             |
+| 快捷键             | 操作                                               |
 | ------------------ | -------------------------------------------------- |
-| `E`                | Enter Library Loupe view                           |
-| `G`                | Enter Library Grid view                            |
-| `C`                | Enter Library Compare view                         |
-| `N`                | Enter Library Survey view                          |
-| `D`                | Open selected photo in the Develop module          |
-| `L`                | Cycle forward through Lights Out modes             |
-| `Shift` `L`        | Cycle backward through Lights Out modes            |
-| `Ctrl` `Shift` `L` | Toggle Lights Dim mode                             |
-| `F`                | Cycle screen modes                                 |
-| `Ctrl` `Shift` `F` | Switch between Normal and full-screen, hide panels |
-| `Ctrl` `Alt` `F`   | Go to Normal screen mode                           |
-| `I`                | Cycle info overlay                                 |
-| `Ctrl` `I`         | Show/hide info overlay                             |
+| `E`                | 进入“图库”放大视图                                   |
+| `G`                | 进入“图库”网格视图                                   |
+| `C`                | 进入“图库”比较视图                                   |
+| `N`                | 进入“图库”筛选视图                                   |
+| `D`                | 在“修改照片”模块中打开所选照片                         |
+| `L`                | 向前循环切换“暗淡模式”                               |
+| `Shift` `L`        | 向后循环切换“暗淡模式”                               |
+| `Ctrl` `Shift` `L` | 切换“暗淡模式”                                     |
+| `F`                | 循环屏幕模式                                       |
+| `Ctrl` `Shift` `F` | 在正常和全屏模式之间切换，隐藏面板                     |
+| `Ctrl` `Alt` `F`   | 转到正常屏幕模式                                   |
+| `I`                | 循环信息叠加                                       |
+| `Ctrl` `I`         | 显示/隐藏信息叠加                                  |
 
 {.shortcuts}
 
-### Managing photos and catalogs
+### 管理照片和目录
 
-| Shortcut                         | Action                                                                                 |
+| 快捷键                           | 操作                                                                                   |
 | -------------------------------- | -------------------------------------------------------------------------------------- |
-| `Ctrl` `Shift` `I`               | Import photos from disk                                                                |
-| `Ctrl` `O`                       | Open catalog                                                                           |
-| `Ctrl` `,`                       | Open Preferences                                                                       |
-| `Ctrl` `Alt` `,`                 | Open Catalog Settings                                                                  |
-| `Ctrl` `Shift` `T`               | Create new subfolder (segmented tethered capture)                                      |
-| `Ctrl` `T`                       | Hide/show tether capture bar                                                           |
-| `Ctrl` `Shift` `N`               | Create a new folder in the Library module                                              |
-| `Ctrl` `'`                       | Create virtual copy (Library and Develop module only)                                  |
-| `Ctrl` `R`                       | Show in Explorer/Finder (Library and Develop module only)                              |
-| `Right/Left`                     | Go to next/previous photo in the Filmstrip                                             |
-| `Shift/Ctrl` `Click`             | Select multiple folders or collections (in Library, Slideshow, Print, and Web modules) |
-| `F2`                             | Rename photo (in Library module)                                                       |
-| `Delete`                         | Delete selected photo(s)                                                               |
-| `Alt` `Backspace`                | Remove selected photo(s) from catalog                                                  |
-| `Ctrl` `Alt` `Shift` `Backspace` | Delete selected photo(s) and move to Trash                                             |
-| `Ctrl` `Backspace`               | Delete rejected photo(s)                                                               |
-| `Ctrl` `E`                       | Edit in Photoshop                                                                      |
-| `Ctrl` `Alt` `E`                 | Open in other editor                                                                   |
-| `Ctrl` `Shift` `E`               | Export selected photo(s)                                                               |
-| `Ctrl` `Alt` `Shift` `E`         | Export with previous settings                                                          |
-| `Ctrl` `Alt` `Shift` `,`         | Open plug-in manager                                                                   |
-| `Ctrl` `P`                       | Print selected photo                                                                   |
-| `Ctrl` `Shift` `P`               | Open Page Setup dialog box                                                             |
+| `Ctrl` `Shift` `I`               | 从磁盘导入照片                                                                           |
+| `Ctrl` `O`                       | 打开目录                                                                               |
+| `Ctrl` `,`                       | 打开首选项                                                                             |
+| `Ctrl` `Alt` `,`                 | 打开目录设置                                                                           |
+| `Ctrl` `Shift` `T`               | 创建新子文件夹（分段联机拍摄）                                                           |
+| `Ctrl` `T`                       | 隐藏/显示联机拍摄栏                                                                    |
+| `Ctrl` `Shift` `N`               | 在“图库”模块中创建新文件夹                                                               |
+| `Ctrl` `'`                       | 创建虚拟副本（仅限“图库”和“修改照片”模块）                                                 |
+| `Ctrl` `R`                       | 在资源管理器/访达中显示（仅限“图库”和“修改照片”模块）                                      |
+| `Right/Left`                     | 转到胶片显示窗格中的下一张/上一张照片                                                      |
+| `Shift/Ctrl` `(单击)`            | 选择多个文件夹或收藏夹（在“图库”、“幻灯片放映”、“打印”和“Web”模块中）                        |
+| `F2`                             | 重命名照片（在“图库”模块中）                                                             |
+| `Delete`                         | 删除所选照片                                                                           |
+| `Alt` `Backspace`                | 从目录中移除所选照片                                                                     |
+| `Ctrl` `Alt` `Shift` `Backspace` | 删除所选照片并移至回收站                                                                 |
+| `Ctrl` `Backspace`               | 删除已拒绝的照片                                                                         |
+| `Ctrl` `E`                       | 在 Photoshop 中编辑                                                                    |
+| `Ctrl` `Alt` `E`                 | 在其他编辑器中打开                                                                       |
+| `Ctrl` `Shift` `E`               | 导出所选照片                                                                           |
+| `Ctrl` `Alt` `Shift` `E`         | 使用先前设置导出                                                                         |
+| `Ctrl` `Alt` `Shift` `,`         | 打开增效工具管理器                                                                       |
+| `Ctrl` `P`                       | 打印所选照片                                                                           |
+| `Ctrl` `Shift` `P`               | 打开页面设置对话框                                                                       |
 
 {.shortcuts}
 
-### Comparing photos in the Library module
+### 在“图库”模块中比较照片
 
-| Shortcut                 | Action                                                |
-| ------------------------ | ----------------------------------------------------- |
-| `E/Enter`                | Switch to Loupe view                                  |
-| `G/Esc`                  | Switch to Grid view                                   |
-| `C`                      | Switch to Compare view                                |
-| `N`                      | Switch to Survey view                                 |
-| `Space/E`                | Switch from Grid to Loupe view                        |
-| `Down`                   | Swap select and candidate photos in Compare view      |
-| `Up`                     | Make next photos select and candidate in Compare view |
-| `Z`                      | Toggle Zoom view                                      |
-| `Ctrl` `+/-`             | Zoom in/out in Loupe view                             |
-| `PgUp/PgDown`            | Scroll up/down zoomed photo in Loupe view             |
-| `Home/End`               | Go to beginning/end of Grid view                      |
-| `Ctrl` `Enter`           | Play impromptu slide show                             |
-| `Ctrl` `]`               | Rotate photo right (clockwise)                        |
-| `Ctrl` `[`               | Rotate photo left (counterclockwise)                  |
-| `=/-`                    | Increase/decrease Grid thumbnail size                 |
-| `PgUp/PgDown`            | Scroll up/down Grid thumbnails                        |
-| `Ctrl` `Shift` `H`       | Toggle cell extras                                    |
-| `Ctrl` `Alt` `Shift` `H` | Show/hide badges                                      |
-| `J`                      | Cycle Grid views                                      |
-| `Ctrl` `J`               | Open Library view options                             |
-| `Ctrl` `(click)`         | Select multiple discrete photos                       |
-| `Shift` `(click)`        | Select multiple contiguous photos                     |
-| `Ctrl` `A`               | Select all photos                                     |
-| `Ctrl` `D`               | Deselect all photos                                   |
-| `Ctrl` `Shift` `D`       | Select only active photo                              |
-| `/`                      | Deselect active photo                                 |
-| `Shift` `Left/Right`     | Add previous/next photo to selection                  |
-| `Ctrl` `Alt` `A`         | Select flagged photos                                 |
-| `Ctrl` `Alt` `Shift` `D` | Deselect unflagged photos                             |
-| `Ctrl` `G`               | Group into stack                                      |
-| `Ctrl` `Shift` `G`       | Unstack                                               |
-| `S`                      | Toggle stack                                          |
-| `Shift` `S`              | Move to top of stack                                  |
-| `Shift` `[`              | Move up in stack                                      |
-| `Shift` `]`              | Move down in stack                                    |
+| 快捷键                   | 操作                                                          |
+| ------------------------ | ------------------------------------------------------------- |
+| `E/Enter`                | 切换到放大视图                                                  |
+| `G/Esc`                  | 切换到网格视图                                                  |
+| `C`                      | 切换到比较视图                                                  |
+| `N`                      | 切换到筛选视图                                                  |
+| `Space/E`                | 从网格视图切换到放大视图                                        |
+| `Down`                   | 在比较视图中交换选定照片和候选照片                                |
+| `Up`                     | 在比较视图中将下一张照片设为选定照片和候选照片                      |
+| `Z`                      | 切换缩放视图                                                  |
+| `Ctrl` `+/-`             | 在放大视图中放大/缩小                                           |
+| `PgUp/PgDown`            | 在放大视图中向上/向下滚动缩放的照片                               |
+| `Home/End`               | 转到网格视图的开头/末尾                                         |
+| `Ctrl` `Enter`           | 播放即席幻灯片                                                  |
+| `Ctrl` `]`               | 向右旋转照片（顺时针）                                          |
+| `Ctrl` `[`               | 向左旋转照片（逆时针）                                          |
+| `=/-`                    | 增加/减小网格缩略图大小                                         |
+| `PgUp/PgDown`            | 向上/向下滚动网格缩略图                                         |
+| `Ctrl` `Shift` `H`       | 切换单元格附加信息                                              |
+| `Ctrl` `Alt` `Shift` `H` | 显示/隐藏标记                                                 |
+| `J`                      | 循环网格视图                                                  |
+| `Ctrl` `J`               | 打开“图库”视图选项                                              |
+| `Ctrl` `(单击)`          | 选择多个不连续的照片                                            |
+| `Shift` `(单击)`         | 选择多个连续的照片                                              |
+| `Ctrl` `A`               | 选择所有照片                                                  |
+| `Ctrl` `D`               | 取消选择所有照片                                                |
+| `Ctrl` `Shift` `D`       | 仅选择现用照片                                                  |
+| `/`                      | 取消选择现用照片                                                |
+| `Shift` `Left/Right`     | 将上一张/下一张照片添加到所选内容                                 |
+| `Ctrl` `Alt` `A`         | 选择已标记的照片                                                |
+| `Ctrl` `Alt` `Shift` `D` | 取消选择未标记的照片                                            |
+| `Ctrl` `G`               | 编组到堆叠                                                    |
+| `Ctrl` `Shift` `G`       | 取消堆叠                                                      |
+| `S`                      | 切换堆叠                                                      |
+| `Shift` `S`              | 移至堆叠顶部                                                  |
+| `Shift` `[`              | 在堆叠中上移                                                  |
+| `Shift` `]`              | 在堆叠中下移                                                  |
 
 {.shortcuts}
 
-### Rating and filtering photos
+### 评价和筛选照片
 
-| Shortcut                        | Action                                      |
+| 快捷键                          | 操作                                        |
 | ------------------------------- | ------------------------------------------- |
-| `1-5`                           | Set star rating                             |
-| `Shift` `1-5`                   | Set star rating and go to next photo        |
-| `0`                             | Remove star rating                          |
-| `Shift` `0`                     | Remove star rating and go to next photo     |
-| `]/[`                           | Increase/decrease rating by one star        |
-| `6`                             | Assign a red label                          |
-| `7`                             | Assign a yellow label                       |
-| `8`                             | Assign a green label                        |
-| `9`                             | Assign a blue label                         |
-| `Shift` `6-9`                   | Assign a color label and go to next photo   |
-| `P`                             | Flag photo as a pick                        |
-| `Shift` `P`                     | Flag photo as a pick and go to next photo   |
-| `X`                             | Flag photo as a reject                      |
-| `Shift` `X`                     | Flag photo as a reject and go to next photo |
-| `U`                             | Unflag photo                                |
-| `Shift` `U`                     | Unflag photo and go to next photo           |
-| `Ctrl` `Up/Down`                | Increase/decrease flag status               |
-| <code>\`</code>                 | Cycle flag settings                         |
-| `Ctrl` `Alt` `R`                | Refine photos                               |
-| `\`                             | Show/hide Library Filter bar                |
-| `Shift` `(click filter labels)` | Open multiple filters in the Filter bar     |
-| `Shift` `L`                     | Toggle filters on/off                       |
-| `Ctrl` `F`                      | Find photo in the Library module            |
+| `1-5`                           | 设置星级                                    |
+| `Shift` `1-5`                   | 设置星级并转到下一张照片                      |
+| `0`                             | 移除星级                                    |
+| `Shift` `0`                     | 移除星级并转到下一张照片                      |
+| `]/[`                           | 增加/减少一星评级                             |
+| `6`                             | 分配红色标签                                  |
+| `7`                             | 分配黄色标签                                  |
+| `8`                             | 分配绿色标签                                  |
+| `9`                             | 分配蓝色标签                                  |
+| `Shift` `6-9`                   | 分配颜色标签并转到下一张照片                    |
+| `P`                             | 将照片标记为“选取”                            |
+| `Shift` `P`                     | 将照片标记为“选取”并转到下一张照片              |
+| `X`                             | 将照片标记为“排除”                            |
+| `Shift` `X`                     | 将照片标记为“排除”并转到下一张照片              |
+| `U`                             | 取消标记照片                                  |
+| `Shift` `U`                     | 取消标记照片并转到下一张照片                    |
+| `Ctrl` `Up/Down`                | 增加/减少标记状态                             |
+| <code>\`</code>                 | 循环标记设置                                  |
+| `Ctrl` `Alt` `R`                | 优化照片                                    |
+| `\`                             | 显示/隐藏“图库”筛选器栏                       |
+| `Shift` `(单击筛选器标签)`      | 在筛选器栏中打开多个筛选器                      |
+| `Shift` `L`                     | 切换筛选器开/关                               |
+| `Ctrl` `F`                      | 在“图库”模块中查找照片                        |
 
 {.shortcuts}
 
-### Working with collections
+### 使用收藏夹
 
-| Shortcut                 | Action                                        |
+| 快捷键                   | 操作                                          |
 | ------------------------ | --------------------------------------------- |
-| `Ctrl` `N`               | Create a new collection in the Library module |
-| `B`                      | Add to Quick Collection                       |
-| `Shift` `B`              | Add to Quick Collection and go to next photo  |
-| `Ctrl` `B`               | Show Quick Collection                         |
-| `Ctrl` `Alt` `B`         | Save Quick Collection                         |
-| `Ctrl` `Shift` `B`       | Clear Quick Collection                        |
-| `Ctrl` `Alt` `Shift` `B` | Set as target collection                      |
+| `Ctrl` `N`               | 在“图库”模块中创建新收藏夹                      |
+| `B`                      | 添加到快速收藏夹                                |
+| `Shift` `B`              | 添加到快速收藏夹并转到下一张照片                  |
+| `Ctrl` `B`               | 显示快速收藏夹                                  |
+| `Ctrl` `Alt` `B`         | 保存快速收藏夹                                  |
+| `Ctrl` `Shift` `B`       | 清除快速收藏夹                                  |
+| `Ctrl` `Alt` `Shift` `B` | 设为目标收藏夹                                  |
 
 {.shortcuts}
 
-### Working with metadata and keywords in the Library module
+### 在“图库”模块中使用元数据和关键字
 
-| Shortcut                   | Action                                             |
+| 快捷键                     | 操作                                               |
 | -------------------------- | -------------------------------------------------- |
-| `Ctrl` `K`                 | Add keywords                                       |
-| `Ctrl` `Shift` `K`         | Edit keywords                                      |
-| `Ctrl` `Alt` `Shift` `K`   | Set a keyword shortcut                             |
-| `Shift` `K`                | Add/remove keyword shortcut from selected photo    |
-| `Ctrl` `Alt` `K`           | Enable painting                                    |
-| `Alt` `1-9`                | Add a keyword from a keyword set to selected photo |
-| `Alt` `0`                  | Cycle forward through keyword sets                 |
-| `Alt` `Shift` `0`          | Cycle backward through keyword sets                |
-| `Ctrl` `Alt` `Shift` `C/V` | Copy/paste metadata                                |
-| `Ctrl` `S`                 | Save metadata to file                              |
+| `Ctrl` `K`                 | 添加关键字                                         |
+| `Ctrl` `Shift` `K`         | 编辑关键字                                         |
+| `Ctrl` `Alt` `Shift` `K`   | 设置关键字快捷键                                     |
+| `Shift` `K`                | 从所选照片添加/移除关键字快捷键                      |
+| `Ctrl` `Alt` `K`           | 启用“喷涂”                                       |
+| `Alt` `1-9`                | 将关键字集中的关键字添加到所选照片                   |
+| `Alt` `0`                  | 向前循环切换关键字集                                 |
+| `Alt` `Shift` `0`          | 向后循环切换关键字集                                 |
+| `Ctrl` `Alt` `Shift` `C/V` | 复制/粘贴元数据                                    |
+| `Ctrl` `S`                 | 将元数据存储到文件                                   |
 
 {.shortcuts}
 
-### Working in the Slideshow module
+### 在“幻灯片放映”模块中工作
 
-| Shortcut           | Action                                  |
-| ------------------ | --------------------------------------- |
-| `Enter`            | Play slide show                         |
-| `Ctrl` `Enter`     | Play impromptu slide show               |
-| `Space`            | Pause slide show                        |
-| `Alt` `Enter`      | Preview slide show                      |
-| `Esc`              | End slide show                          |
-| `Right`            | Go to next slide                        |
-| `Left`             | Go to previous slide                    |
-| `Ctrl` `]`         | Rotate photo right (clockwise)          |
-| `Ctrl` `[`         | Rotate photo left (counterclockwise)    |
-| `Ctrl` `Shift` `H` | Show/hide guides                        |
-| `Ctrl` `J`         | Export PDF slide show                   |
-| `Ctrl` `Shift` `J` | Export JPEG slide show                  |
-| `Ctrl` `Alt` `J`   | Export video slide show                 |
-| `Ctrl` `N`         | Create a new slide show template        |
-| `Ctrl` `Shift` `N` | Create a new slide show template folder |
-| `Ctrl` `S`         | Save slide show settings                |
+| 快捷键             | 操作                                   |
+| ------------------ | -------------------------------------- |
+| `Enter`            | 播放幻灯片                               |
+| `Ctrl` `Enter`     | 播放即席幻灯片                             |
+| `Space`            | 暂停幻灯片                               |
+| `Alt` `Enter`      | 预览幻灯片                               |
+| `Esc`              | 结束幻灯片                               |
+| `Right`            | 转到下一张幻灯片                           |
+| `Left`             | 转到上一张幻灯片                           |
+| `Ctrl` `]`         | 向右旋转照片（顺时针）                     |
+| `Ctrl` `[`         | 向左旋转照片（逆时针）                     |
+| `Ctrl` `Shift` `H` | 显示/隐藏参考线                            |
+| `Ctrl` `J`         | 导出 PDF 幻灯片                          |
+| `Ctrl` `Shift` `J` | 导出 JPEG 幻灯片                         |
+| `Ctrl` `Alt` `J`   | 导出视频幻灯片                             |
+| `Ctrl` `N`         | 创建新幻灯片模板                           |
+| `Ctrl` `Shift` `N` | 创建新幻灯片模板文件夹                       |
+| `Ctrl` `S`         | 存储幻灯片设置                             |
 
 {.shortcuts}
 
-### Working in the Print module
+### 在“打印”模块中工作
 
-| Shortcut                 | Action                               |
+| 快捷键                   | 操作                                 |
 | ------------------------ | ------------------------------------ |
-| `Ctrl` `P`               | Print                                |
-| `Ctrl` `Alt` `P`         | Print one copy                       |
-| `Ctrl` `Shift` `P`       | Open Page Setup dialog box           |
-| `Ctrl` `Alt` `Shift` `P` | Open Print Settings dialog box       |
-| `Ctrl` `Shift` `Left`    | Go to first page                     |
-| `Ctrl` `Shift` `Right`   | Go to last page                      |
-| `Ctrl` `Left`            | Go to previous page                  |
-| `Ctrl` `Right`           | Go to next page                      |
-| `Ctrl` `Shift` `H`       | Show/hide guides                     |
-| `Ctrl` `R`               | Show/hide rulers                     |
-| `Ctrl` `Shift` `J`       | Show/hide page bleed                 |
-| `Ctrl` `Shift` `M`       | Show/hide margins and gutters        |
-| `Ctrl` `Shift` `K`       | Show/hide image cells                |
-| `Ctrl` `Shift` `U`       | Show/hide dimensions                 |
-| `Ctrl` `Enter`           | Play impromptu slide show            |
-| `Ctrl` `]`               | Rotate photo right (clockwise)       |
-| `Ctrl` `[`               | Rotate photo left (counterclockwise) |
-| `Ctrl` `N`               | Create a new print template          |
-| `Ctrl` `Shift` `N`       | Create a new print template folder   |
-| `Ctrl` `S`               | Save print settings                  |
+| `Ctrl` `P`               | 打印                                 |
+| `Ctrl` `Alt` `P`         | 打印一份副本                           |
+| `Ctrl` `Shift` `P`       | 打开页面设置对话框                       |
+| `Ctrl` `Alt` `Shift` `P` | 打开打印设置对话框                       |
+| `Ctrl` `Shift` `Left`    | 转到第一页                             |
+| `Ctrl` `Shift` `Right`   | 转到最后一页                             |
+| `Ctrl` `Left`            | 转到上一页                             |
+| `Ctrl` `Right`           | 转到下一页                             |
+| `Ctrl` `Shift` `H`       | 显示/隐藏参考线                          |
+| `Ctrl` `R`               | 显示/隐藏标尺                            |
+| `Ctrl` `Shift` `J`       | 显示/隐藏页面出血                        |
+| `Ctrl` `Shift` `M`       | 显示/隐藏页边距和辅助线                    |
+| `Ctrl` `Shift` `K`       | 显示/隐藏图像单元格                      |
+| `Ctrl` `Shift` `U`       | 显示/隐藏尺寸                            |
+| `Ctrl` `Enter`           | 播放即席幻灯片                           |
+| `Ctrl` `]`               | 向右旋转照片（顺时针）                   |
+| `Ctrl` `[`               | 向左旋转照片（逆时针）                   |
+| `Ctrl` `N`               | 创建新打印模板                           |
+| `Ctrl` `Shift` `N`       | 创建新打印模板文件夹                       |
+| `Ctrl` `S`               | 存储打印设置                             |
 
 {.shortcuts}
 
-### Working in the Web module
+### 在“Web”模块中工作
 
-| Shortcut           | Action                                   |
+| 快捷键             | 操作                                     |
 | ------------------ | ---------------------------------------- |
-| `Ctrl` `R`         | Reload web gallery                       |
-| `Ctrl` `Alt` `P`   | Preview in browser                       |
-| `Ctrl` `Enter`     | Play impromptu slide show                |
-| `Ctrl` `J`         | Export web gallery                       |
-| `Ctrl` `N`         | Create a new web gallery template        |
-| `Ctrl` `Shift` `N` | Create a new web gallery template folder |
-| `Ctrl` `S`         | Save web gallery settings                |
+| `Ctrl` `R`         | 重新加载 Web 画廊                          |
+| `Ctrl` `Alt` `P`   | 在浏览器中预览                             |
+| `Ctrl` `Enter`     | 播放即席幻灯片                             |
+| `Ctrl` `J`         | 导出 Web 画廊                              |
+| `Ctrl` `N`         | 创建新 Web 画廊模板                        |
+| `Ctrl` `Shift` `N` | 创建新 Web 画廊模板文件夹                    |
+| `Ctrl` `S`         | 存储 Web 画廊设置                          |
 
 {.shortcuts}
 
-### Using help
+### 使用帮助
 
-| Shortcut         | Action                           |
+| 快捷键           | 操作                             |
 | ---------------- | -------------------------------- |
-| `Ctrl` `/`       | Display current module shortcuts |
-| `(click)`        | Hide current module shortcuts    |
-| `Ctrl` `Alt` `/` | Go to current module Help        |
-| `F1`             | Open Community Help              |
+| `Ctrl` `/`       | 显示当前模块快捷键                   |
+| `(单击)`         | 隐藏当前模块快捷键                   |
+| `Ctrl` `Alt` `/` | 转到当前模块帮助                     |
+| `F1`             | 打开社区帮助                       |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Adobe Lightroom CC](https://helpx.adobe.com/lightroom/help/keyboard-shortcuts.html)
+- [Adobe Lightroom CC 键盘快捷键](https://helpx.adobe.com/cn/lightroom-cc/help/keyboard-shortcuts.html)
   _(helpx.adobe.com)_

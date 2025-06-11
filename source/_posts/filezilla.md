@@ -7,58 +7,58 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 30 keyboard shortcuts found on the FileZilla program
+  FileZilla 程序中 30 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts {.cols-2}
+## 键盘快捷键 {.cols-2}
 
-### General Shortcuts I
+### 常规快捷键 I
 
-| Shortcut           | Action                                                                              |
+| 快捷键             | 操作                                                                                |
 | ------------------ | ----------------------------------------------------------------------------------- |
-| `F2`               | Rename selected file                                                                |
-| `F3`               | Search remote files                                                                 |
-| `F5`               | Refreshes local and remote file and folder views                                    |
-| `Tab`              | Switches to the next view                                                           |
-| `Alt` `Down`       | Transfers the currently selected item to an item of the same name in the other pane |
-| `Alt` `Up`         | Navigates up one line in a tree view, navigates to parent folder in file view       |
-| `Ctrl` `B`         | Add bookmark                                                                        |
-| `Ctrl` `Shift` `B` | Manage bookmarks                                                                    |
-| `Ctrl` `C`         | Stops the current operation                                                         |
-| `Ctrl` `D`         | Disconnects from server                                                             |
-| `Ctrl` `E`         | Show files currently being edited                                                   |
-| `Ctrl` `I`         | Directory listing filters...                                                        |
-| `Ctrl` `M`         | Manual transfer                                                                     |
-| `Ctrl` `Shift` `N` | Create a new directory                                                              |
-| `Ctrl` `O`         | Enable directory comparison                                                         |
+| `F2`               | 重命名所选文件                                                                      |
+| `F3`               | 搜索远程文件                                                                        |
+| `F5`               | 刷新本地和远程文件及文件夹视图                                                      |
+| `Tab`              | 切换到下一个视图                                                                    |
+| `Alt` `Down`       | 将当前选定项传输到另一窗格中同名项目                                                  |
+| `Alt` `Up`         | 在树状视图中向上导航一行，在文件视图中导航到父文件夹                                  |
+| `Ctrl` `B`         | 添加书签                                                                            |
+| `Ctrl` `Shift` `B` | 管理书签                                                                            |
+| `Ctrl` `C`         | 停止当前操作                                                                        |
+| `Ctrl` `D`         | 与服务器断开连接                                                                    |
+| `Ctrl` `E`         | 显示当前正在编辑的文件                                                              |
+| `Ctrl` `I`         | 目录列表筛选器...                                                                   |
+| `Ctrl` `M`         | 手动传输                                                                            |
+| `Ctrl` `Shift` `N` | 创建新目录                                                                          |
+| `Ctrl` `O`         | 启用目录比较                                                                        |
 
 {.shortcuts}
 
-### General Shortcuts II
+### 常规快捷键 II
 
-| Shortcut      | Action                                                                                |
+| 快捷键        | 操作                                                                                |
 | ------------- | ------------------------------------------------------------------------------------- |
-| `Ctrl` `P`    | Process queue                                                                         |
-| `Ctrl` `Q`    | Exit                                                                                  |
-| `Ctrl` `R`    | Reconnects to server                                                                  |
-| `Ctrl` `S`    | Opens the site manager                                                                |
-| `Ctrl` `T`    | Opens a new tab                                                                       |
-| `Ctrl` `U`    | Preserve the timestamps of transferred files                                          |
-| `Ctrl` `Y`    | Toggle synchronized browsing                                                          |
-| `Ctrl` `W`    | Close tab                                                                             |
-| `Enter`       | Transfer the currently selected item if it is a file, or expands if it is a directory |
-| `Ctrl` `PgUp` | Switches to the next tab                                                              |
-| `Ctrl` `PgDn` | Switches to the previous tab                                                          |
-| `Up`          | Moves up one item in the current view                                                 |
-| `Down`        | Moves down one item in the current view                                               |
-| `Left`        | Nothing in a files view, up on level in a tree view                                   |
-| `Right`       | Down one level in a tree view if there are subfolders, nothing if there are none      |
+| `Ctrl` `P`    | 处理队列                                                                              |
+| `Ctrl` `Q`    | 退出                                                                                  |
+| `Ctrl` `R`    | 重新连接到服务器                                                                      |
+| `Ctrl` `S`    | 打开站点管理器                                                                        |
+| `Ctrl` `T`    | 打开新标签页                                                                          |
+| `Ctrl` `U`    | 保留传输文件的时间戳                                                                  |
+| `Ctrl` `Y`    | 切换同步浏览                                                                          |
+| `Ctrl` `W`    | 关闭标签页                                                                            |
+| `Enter`       | 如果是文件则传输当前选定项，如果是目录则展开                                          |
+| `Ctrl` `PgUp` | 切换到下一个标签页                                                                    |
+| `Ctrl` `PgDn` | 切换到上一个标签页                                                                    |
+| `Up`          | 在当前视图中向上移动一项                                                              |
+| `Down`        | 在当前视图中向下移动一项                                                              |
+| `Left`        | 在文件视图中无操作，在树状视图中向上一级                                              |
+| `Right`       | 如果有子文件夹，则在树状视图中向下一级，如果没有则无操作                                |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for FileZilla](https://wiki.filezilla-project.org/Keyboard_shortcuts)
+- [FileZilla 键盘快捷键](https://wiki.filezilla-project.org/Keyboard_shortcuts)
   _(wiki.filezilla-project.org)_

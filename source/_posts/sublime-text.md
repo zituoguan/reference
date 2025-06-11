@@ -7,112 +7,112 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 49 keyboard shortcuts found in Sublime Text
+  Sublime Text 中的 49 个键盘快捷键可视化速查表
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Editing {.row-span-3}
+### 编辑 {.row-span-3}
 
-| Shortcut               | Action                                                                    |
-| ---------------------- | ------------------------------------------------------------------------- |
-| `Ctrl` `X`             | Cut line                                                                  |
-| `Ctrl` `Enter`         | Insert line after                                                         |
-| `Ctrl` `Shift` `Enter` | Insert line before                                                        |
-| `Ctrl` `Shift` `Up`    | Move line/selection up                                                    |
-| `Ctrl` `Shift` `Down`  | Move line/selection down                                                  |
-| `Ctrl` `L`             | Select line - Repeat to select next lines                                 |
-| `Ctrl` `D`             | Select word - Repeat selects other occurrences                            |
-| `Ctrl` `M`             | Jump to closing parentheses - Repeat to jump to opening parentheses       |
-| `Ctrl` `Shift` `M`     | Select all contents of the current parentheses                            |
-| `Ctrl` `Shift` `K`     | Delete line                                                               |
-| `Ctrl` `K, K`          | Delete from cursor to end of line                                         |
-| `Ctrl` `K` `Backspace` | Delete from cursor to start of line                                       |
-| `Ctrl` `]`             | Indent current line(s)                                                    |
-| `Ctrl` `[`             | Un-indent current line(s)                                                 |
-| `Ctrl` `Shift` `D`     | Duplicate line(s)                                                         |
-| `Ctrl` `J`             | Join line below to the end of the current line                            |
-| `Ctrl` `/`             | Comment/un-comment current line                                           |
-| `Ctrl` `Shift` `/`     | Block comment current selection                                           |
-| `Ctrl` `Y`             | Redo, or repeat last keyboard shortcut command                            |
-| `Ctrl` `Shift` `V`     | Paste and indent correctly                                                |
-| `Ctrl` `Space`         | Select next auto-complete suggestion                                      |
-| `Ctrl` `U`             | Soft undo; jumps to your last change before undoing, change when repeated |
-| `Alt` `Shift` `W`      | Wrap selection in HTML tag                                                |
-| `Alt` `.`              | Close current HTML tag                                                    |
-| `Alt` `Q`              | Hard wrap line to ruler column setting                                    |
-
-{.shortcuts}
-
-### Navigation
-
-| Shortcut   | Action                    |
-| ---------- | ------------------------- |
-| `Ctrl` `P` | Quick-open files by name  |
-| `Ctrl` `R` | Goto symbol               |
-| `Ctrl` `;` | Goto word in current file |
-| `Ctrl` `G` | Goto line in current file |
+| 快捷键                 | 操作                                                              |
+| ---------------------- | ----------------------------------------------------------------- |
+| `Ctrl` `X`             | 剪切行                                                            |
+| `Ctrl` `Enter`         | 在下方插入行                                                      |
+| `Ctrl` `Shift` `Enter` | 在上方插入行                                                      |
+| `Ctrl` `Shift` `Up`    | 向上移动行/选区                                                   |
+| `Ctrl` `Shift` `Down`  | 向下移动行/选区                                                   |
+| `Ctrl` `L`             | 选择行 - 重复可选择后续的多行                                     |
+| `Ctrl` `D`             | 选择单词 - 重复可选择其他相同单词                                 |
+| `Ctrl` `M`             | 跳转到匹配的括号 - 重复可跳转到另一半括号                         |
+| `Ctrl` `Shift` `M`     | 选择当前括号内的所有内容                                          |
+| `Ctrl` `Shift` `K`     | 删除行                                                            |
+| `Ctrl` `K, K`          | 删除从光标到行尾的内容                                            |
+| `Ctrl` `K` `Backspace` | 删除从光标到行首的内容                                            |
+| `Ctrl` `]`             | 缩进当前行                                                        |
+| `Ctrl` `[`             | 取消缩进当前行                                                    |
+| `Ctrl` `Shift` `D`     | 复制行                                                            |
+| `Ctrl` `J`             | 将下一行连接到当前行尾                                            |
+| `Ctrl` `/`             | 注释/取消注释当前行                                               |
+| `Ctrl` `Shift` `/`     | 块注释当前选区                                                    |
+| `Ctrl` `Y`             | 重做，或重复上一个键盘快捷键命令                                  |
+| `Ctrl` `Shift` `V`     | 粘贴并正确缩进                                                    |
+| `Ctrl` `Space`         | 选择下一个自动完成建议                                            |
+| `Ctrl` `U`             | 软撤销；跳转到上一个编辑点，重复操作以跳转到更早的编辑点            |
+| `Alt` `Shift` `W`      | 使用 HTML 标签包裹选区                                            |
+| `Alt` `.`              | 闭合当前 HTML 标签                                                |
+| `Alt` `Q`              | 根据标尺设置强制换行                                              |
 
 {.shortcuts}
 
-### General
+### 导航
 
-| Shortcut                 | Action                   |
+| 快捷键   | 操作                         |
+| ---------- | ---------------------------- |
+| `Ctrl` `P` | 按名称快速打开文件           |
+| `Ctrl` `R` | 转到符号                     |
+| `Ctrl` `;` | 转到当前文件中的单词         |
+| `Ctrl` `G` | 转到当前文件中的指定行       |
+
+{.shortcuts}
+
+### 常规
+
+| 快捷键                 | 操作                     |
 | ------------------------ | ------------------------ |
-| `Ctrl` `Shift` `P`       | Command prompt           |
-| `Ctrl` `K, B`            | Toggle sidebar           |
-| `Ctrl` `Shift` `Alt` `P` | Show scope in status bar |
+| `Ctrl` `Shift` `P`       | 命令面板                 |
+| `Ctrl` `K, B`            | 切换侧边栏               |
+| `Ctrl` `Shift` `Alt` `P` | 在状态栏显示当前作用域   |
 
 {.shortcuts}
 
-### Find/Replace
+### 查找/替换
 
-| Shortcut           | Action        |
-| ------------------ | ------------- |
-| `Ctrl` `F`         | Find          |
-| `Ctrl` `H`         | Replace       |
-| `Ctrl` `Shift` `F` | Find in files |
-
-{.shortcuts}
-
-### Split window
-
-| Shortcut             | Action                                           |
-| -------------------- | ------------------------------------------------ |
-| `Alt` `Shift` `1`    | Revert view to single column                     |
-| `Alt` `Shift` `2`    | Split view into two columns                      |
-| `Alt` `Shift` `3`    | Split view into three columns                    |
-| `Alt` `Shift` `4`    | Split view into four columns                     |
-| `Alt` `Shift` `5`    | Set view to grid (4 groups)                      |
-| `Alt` `Shift` `8`    | Split view into two rows                         |
-| `Ctrl` `1-4`         | Jump to group where number is 1-4                |
-| `Ctrl` `Shift` `1-4` | Move file to specified group where number is 1-4 |
+| 快捷键           | 操作           |
+| ------------------ | -------------- |
+| `Ctrl` `F`         | 查找           |
+| `Ctrl` `H`         | 替换           |
+| `Ctrl` `Shift` `F` | 在文件中查找   |
 
 {.shortcuts}
 
-### Bookmarks
+### 拆分窗口
 
-| Shortcut            | Action            |
-| ------------------- | ----------------- |
-| `Ctrl` `F2`         | Toggle bookmark   |
-| `F2`                | Next bookmark     |
-| `Shift` `F2`        | Previous bookmark |
-| `Ctrl` `Shift` `F2` | Clear bookmarks   |
-
-{.shortcuts}
-
-### Text manipulation
-
-| Shortcut      | Action                 |
-| ------------- | ---------------------- |
-| `Ctrl` `K, U` | Transform to uppercase |
-| `Ctrl` `K, L` | Transform to lowercase |
+| 快捷键             | 操作                                   |
+| -------------------- | -------------------------------------- |
+| `Alt` `Shift` `1`    | 恢复为单列视图                         |
+| `Alt` `Shift` `2`    | 拆分为两列视图                         |
+| `Alt` `Shift` `3`    | 拆分为三列视图                         |
+| `Alt` `Shift` `4`    | 拆分为四列视图                         |
+| `Alt` `Shift` `5`    | 设置为网格视图 (4 组)                  |
+| `Alt` `Shift` `8`    | 拆分为两行视图                         |
+| `Ctrl` `1-4`         | 跳转到组 (编号 1-4)                    |
+| `Ctrl` `Shift` `1-4` | 将文件移动到指定组 (编号 1-4)          |
 
 {.shortcuts}
 
-## Also see
+### 书签
 
-- [Keyboard shortcuts for Sublime Text](http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html)
+| 快捷键            | 操作             |
+| ------------------- | ---------------- |
+| `Ctrl` `F2`         | 切换书签         |
+| `F2`                | 下一个书签       |
+| `Shift` `F2`        | 上一个书签       |
+| `Ctrl` `Shift` `F2` | 清除所有书签     |
+
+{.shortcuts}
+
+### 文本操作
+
+| 快捷键      | 操作         |
+| ------------- | ------------ |
+| `Ctrl` `K, U` | 转换为大写   |
+| `Ctrl` `K, L` | 转换为小写   |
+
+{.shortcuts}
+
+## 另请参阅
+
+- [Sublime Text 键盘快捷键](http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html)
   _(docs.sublimetext.info)_

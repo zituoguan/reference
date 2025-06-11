@@ -8,141 +8,142 @@ tags:
 categories:
   - Python
 intro: |
-  [NumPy](https://numpy.org/) is the fundamental package for scientific computing with Python. This cheat sheet is a quick reference for NumPy beginners.
+  [NumPy](https://numpy.org/) 是 Python 科学计算的基础包。本速查表为 NumPy 初学者提供快速参考。
 plugins:
   - copyCode
 ---
 
-## Getting Started {.cols-2}
+## 快速入门 {.cols-2}
 
-### Introduction
+### 简介
 
-You’ll also need to import numpy to get started:
+您还需要导入 numpy 才能开始：
 
 ```python
 import numpy as np
 ```
 
-### Importing/exporting
+### 导入/导出
 
 | -                                          | -                     |
 | ------------------------------------------ | --------------------- |
-| `np.loadtxt('file.txt')`                   | From a text file      |
-| `np.genfromtxt('file.csv',delimiter=',')`  | From a CSV file       |
-| `np.savetxt('file.txt',arr,delimiter=' ')` | Writes to a text file |
-| `np.savetxt('file.csv',arr,delimiter=',')` | Writes to a CSV file  |
+| `np.loadtxt('file.txt')`                   | 从文本文件加载      |
+| `np.genfromtxt('file.csv',delimiter=',')`  | 从 CSV 文件加载       |
+| `np.savetxt('file.txt',arr,delimiter=' ')` | 写入文本文件 |
+| `np.savetxt('file.csv',arr,delimiter=',')` | 写入 CSV 文件  |
 
-### Creating Arrays {.row-span-2}
+### 创建数组 {.row-span-2}
 
 | -                                 | -                                                                 |
 | --------------------------------- | ----------------------------------------------------------------- |
-| `np.array([1,2,3])`               | One dimensional array                                             |
-| `np.array([(1,2,3),(4,5,6)])`     | Two dimensional array                                             |
-| `np.zeros(3)`                     | 1D array of length 3 all values 0                                 |
-| `np.ones((3,4))`                  | 3x4 array with all values 1                                       |
-| `np.eye(5)`                       | 5x5 array of 0 with 1 on diagonal (Identity matrix)               |
-| `np.linspace(0,100,6)`            | Array of 6 evenly divided values from 0 to 100                    |
-| `np.arange(0,10,3)`               | Array of values from 0 to less than 10 with step 3 (eg [0,3,6,9]) |
-| `np.full((2,3),8)`                | 2x3 array with all values 8                                       |
-| `np.random.rand(4,5)`             | 4x5 array of random floats between 0–1                            |
-| `np.random.rand(6,7)*100`         | 6x7 array of random floats between 0–100                          |
-| `np.random.randint(5,size=(2,3))` | 2x3 array with random ints between 0–4                            |
+| `np.array([1,2,3])`               | 一维数组                                             |
+| `np.array([(1,2,3),(4,5,6)])`     | 二维数组                                             |
+| `np.zeros(3)`                     | 长度为 3，所有值为 0 的一维数组                                 |
+| `np.ones((3,4))`                  | 所有值为 1 的 3x4 数组                                       |
+| `np.eye(5)`                       | 5x5 的单位矩阵（对角线为1，其余为0）               |
+| `np.linspace(0,100,6)`            | 从 0 到 100 之间均匀分布的 6 个值组成的数组                    |
+| `np.arange(0,10,3)`               | 从 0 开始，小于 10，步长为 3 的值组成的数组 (例如 [0,3,6,9]) |
+| `np.full((2,3),8)`                | 所有值为 8 的 2x3 数组                                       |
+| `np.random.rand(4,5)`             | 0-1 之间随机浮点数的 4x5 数组                            |
+| `np.random.rand(6,7)*100`         | 0-100 之间随机浮点数的 6x7 数组                          |
+| `np.random.randint(5,size=(2,3))` | 0-4 之间随机整数的 2x3 数组                            |
 
-### Inspecting Properties
+### 检查属性
 
 | -                   | -                                        |
 | ------------------- | ---------------------------------------- |
-| `arr.size`          | Returns number of elements in arr        |
-| `arr.shape`         | Returns dimensions of arr (rows,columns) |
-| `arr.dtype`         | Returns type of elements in arr          |
-| `arr.astype(dtype)` | Convert arr elements to type dtype       |
-| `arr.tolist()`      | Convert arr to a Python list             |
-| `np.info(np.eye)`   | View documentation for np.eye            |
+| `arr.size`          | 返回数组中元素的数量        |
+| `arr.shape`         | 返回数组的维度 (行,列) |
+| `arr.dtype`         | 返回数组中元素的类型          |
+| `arr.astype(dtype)` | 将数组元素转换为 dtype 类型       |
+| `arr.tolist()`      | 将数组转换为 Python 列表             |
+| `np.info(np.eye)`   | 查看 np.eye 的文档            |
 
-### Copying/sorting/reshaping
+### 复制/排序/重塑
 
 | -                     | -                                                       |
 | --------------------- | ------------------------------------------------------- |
-| `np.copy(arr)`        | Copies arr to new memory                                |
-| `arr.view(dtype)`     | Creates view of arr elements with type dtype            |
-| `arr.sort()`          | Sorts arr                                               |
-| `arr.sort(axis=0)`    | Sorts specific axis of arr                              |
-| `two_d_arr.flatten()` | Flattens 2D array two_d_arr to 1D                       |
-| `arr.T`               | Transposes arr (rows become columns and vice versa)     |
-| `arr.reshape(3,4)`    | Reshapes arr to 3 rows, 4 columns without changing data |
-| `arr.resize((5,6))`   | Changes arr shape to 5x6 and fills new values with 0    |
+| `np.copy(arr)`        | 将 arr 复制到新的内存地址                                |
+| `arr.view(dtype)`     | 创建 arr 元素具有 dtype 类型的新视图            |
+| `arr.sort()`          | 对 arr 进行排序                                               |
+| `arr.sort(axis=0)`    | 对 arr 的特定轴进行排序                              |
+| `two_d_arr.flatten()` | 将二维数组 two_d_arr 展平为一维                       |
+| `arr.T`               | 转置 arr (行变列，列变行)     |
+| `arr.reshape(3,4)`    | 在不更改数据的情况下将 arr 重塑为 3 行 4 列 |
+| `arr.resize((5,6))`   | 将 arr 形状更改为 5x6 并用 0 填充新值    |
 
-### Adding/removing Elements
+### 添加/删除元素
 
 | -                         | -                                      |
 | ------------------------- | -------------------------------------- |
-| `np.append(arr,values)`   | Appends values to end of arr           |
-| `np.insert(arr,2,values)` | Inserts values into arr before index 2 |
-| `np.delete(arr,3,axis=0)` | Deletes row on index 3 of arr          |
-| `np.delete(arr,4,axis=1)` | Deletes column on index 4 of arr       |
+| `np.append(arr,values)`   | 将值附加到 arr 的末尾           |
+| `np.insert(arr,2,values)` | 在索引 2 之前将值插入 arr |
+| `np.delete(arr,3,axis=0)` | 删除 arr 中索引为 3 的行          |
+| `np.delete(arr,4,axis=1)` | 删除 arr 中索引为 4 的列       |
 
-### Combining/splitting
+### 合并/拆分
 
 | -                                    | -                                        |
 | ------------------------------------ | ---------------------------------------- |
-| `np.concatenate((arr1,arr2),axis=0)` | Adds arr2 as rows to the end of arr1     |
-| `np.concatenate((arr1,arr2),axis=1)` | Adds arr2 as columns to end of arr1      |
-| `np.split(arr,3)`                    | Splits arr into 3 sub-arrays             |
-| `np.hsplit(arr,5)`                   | Splits arr horizontally on the 5th index |
+| `np.concatenate((arr1,arr2),axis=0)` | 将 arr2 作为行添加到 arr1 的末尾     |
+| `np.concatenate((arr1,arr2),axis=1)` | 将 arr2 作为列添加到 arr1 的末尾      |
+| `np.split(arr,3)`                    | 将 arr 拆分为 3 个子数组             |
+| `np.hsplit(arr,5)`                   | 在第 5 个索引处水平拆分 arr |
 
-### Indexing/slicing/subsetting
+### 索引/切片/子集
 
 | -                     | -                                                                         |
 | --------------------- | ------------------------------------------------------------------------- |
-| `arr[5]`              | Returns the element at index 5                                            |
-| `arr[2,5]`            | Returns the 2D array element on index [2][5]                              |
-| `arr[1]=4`            | Assigns array element on index 1 the value 4                              |
-| `arr[1,3]=10`         | Assigns array element on index [1][3] the value 10                        |
-| `arr[0:3]`            | Returns the elements at indices 0,1,2 (On a 2D array: returns rows 0,1,2) |
-| `arr[0:3,4]`          | Returns the elements on rows 0,1,2 at column 4                            |
-| `arr[:2]`             | Returns the elements at indices 0,1 (On a 2D array: returns rows 0,1)     |
-| `arr[:,1]`            | Returns the elements at index 1 on all rows                               |
-| `arr<5`               | Returns an array with boolean values                                      |
-| `(arr1<3) & (arr2>5)` | Returns an array with boolean values                                      |
-| `~arr`                | Inverts a boolean array                                                   |
-| `arr[arr<5]`          | Returns array elements smaller than 5                                     |
+| `arr[5]`              | 返回索引为 5 的元素                                            |
+| `arr[2,5]`            | 返回索引 [2][5] 处的二维数组元素                              |
+| `arr[1]=4`            | 将索引为 1 的数组元素赋值为 4                              |
+| `arr[1,3]=10`         | 将索引 [1][3] 处的数组元素赋值为 10                        |
+| `arr[0:3]`            | 返回索引 0,1,2 处的元素 (对于二维数组：返回行 0,1,2) |
+| `arr[0:3,4]`          | 返回行 0,1,2 中第 4 列的元素                            |
+| `arr[:2]`             | 返回索引 0,1 处的元素 (对于二维数组：返回行 0,1)     |
+| `arr[:,1]`            | 返回所有行中索引为 1 的元素                               |
+| `arr<5`               | 返回一个布尔值数组                                      |
+| `(arr1<3) & (arr2>5)` | 返回一个布尔值数组                                      |
+| `~arr`                | 反转布尔数组                                                   |
+| `arr[arr<5]`          | 返回数组中小于 5 的元素                                     |
 
-### Vector Math
+### 向量运算
 
 | -                           | -                                                           |
 | --------------------------- | ----------------------------------------------------------- |
-| `np.add(arr1,arr2)`         | Elementwise add arr2 to arr1                                |
-| `np.subtract(arr1,arr2)`    | Elementwise subtract arr2 from arr1                         |
-| `np.multiply(arr1,arr2)`    | Elementwise multiply arr1 by arr2                           |
-| `np.divide(arr1,arr2)`      | Elementwise divide arr1 by arr2                             |
-| `np.power(arr1,arr2)`       | Elementwise raise arr1 raised to the power of arr2          |
-| `np.array_equal(arr1,arr2)` | Returns True if the arrays have the same elements and shape |
-| `np.sqrt(arr)`              | Square root of each element in the array                    |
-| `np.sin(arr)`               | Sine of each element in the array                           |
-| `np.log(arr)`               | Natural log of each element in the array                    |
-| `np.abs(arr)`               | Absolute value of each element in the array                 |
-| `np.ceil(arr)`              | Rounds up to the nearest int                                |
-| `np.floor(arr)`             | Rounds down to the nearest int                              |
-| `np.round(arr)`             | Rounds to the nearest int                                   |
+| `np.add(arr1,arr2)`         | 逐元素将 arr2 加到 arr1                                |
+| `np.subtract(arr1,arr2)`    | 逐元素从 arr1 中减去 arr2                         |
+| `np.multiply(arr1,arr2)`    | 逐元素将 arr1 乘以 arr2                           |
+| `np.divide(arr1,arr2)`      | 逐元素将 arr1 除以 arr2                             |
+| `np.power(arr1,arr2)`       | 逐元素计算 arr1 的 arr2 次幂          |
+| `np.array_equal(arr1,arr2)` | 如果数组具有相同的元素和形状，则返回 True |
+| `np.sqrt(arr)`              | 数组中每个元素的平方根                    |
+| `np.sin(arr)`               | 数组中每个元素的正弦值                           |
+| `np.log(arr)`               | 数组中每个元素的自然对数                 |
+| `np.abs(arr)`               | 数组中每个元素的绝对值                 |
+| `np.ceil(arr)`              | 向上取整到最近的整数                                |
+| `np.floor(arr)`             | 向下取整到最近的整数                              |
+| `np.round(arr)`             | 四舍五入到最近的整数                                   |
 
-### Scalar Math
+### 标量运算
 
 | -                    | -                                                                    |
 | -------------------- | -------------------------------------------------------------------- |
-| `np.add(arr,1)`      | Add 1 to each array element                                          |
-| `np.subtract(arr,2)` | Subtract 2 from each array element                                   |
-| `np.multiply(arr,3)` | Multiply each array element by 3                                     |
-| `np.divide(arr,4)`   | Divide each array element by 4 (returns np.nan for division by zero) |
-| `np.power(arr,5)`    | Raise each array element to the 5th power                            |
+| `np.add(arr,1)`      | 每个数组元素加 1                                          |
+| `np.subtract(arr,2)` | 每个数组元素减 2                                   |
+| `np.multiply(arr,3)` | 每个数组元素乘以 3                                     |
+| `np.divide(arr,4)`   | 每个数组元素除以 4 (除以零返回 np.nan) |
+| `np.power(arr,5)`    | 每个数组元素进行 5 次幂运算                            |
 
-### Statistics
+### 统计
 
 | -                     | -                                               |
 | --------------------- | ----------------------------------------------- |
-| `np.mean(arr,axis=0)` | Returns mean along specific axis                |
-| `arr.sum()`           | Returns sum of arr                              |
-| `arr.min()`           | Returns minimum value of arr                    |
-| `arr.max(axis=0)`     | Returns maximum value of specific axis          |
-| `np.var(arr)`         | Returns the variance of array                   |
-| `np.std(arr,axis=1)`  | Returns the standard deviation of specific axis |
-| `arr.corrcoef()`      | Returns correlation coefficient of array        |
+| `np.mean(arr,axis=0)` | 返回特定轴的平均值                |
+| `arr.sum()`           | 返回 arr 的总和                              |
+| `arr.min()`           | 返回 arr 的最小值                    |
+| `arr.max(axis=0)`     | 返回特定轴的最大值          |
+| `np.var(arr)`         | 返回数组的方差                   |
+| `np.std(arr,axis=1)`  | 返回特定轴的标准差 |
+| `arr.corrcoef()`      | 返回数组的相关系数        |
+

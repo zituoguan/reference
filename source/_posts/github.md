@@ -7,170 +7,170 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 80 keyboard shortcuts found on Github.com
+  Github.com 上 80 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Site wide shortcuts
+### 站点范围快捷键
 
-| Shortcut | Action                                                        |
+| 快捷键 | 操作                                                        |
 | -------- | ------------------------------------------------------------- |
-| `S`      | Focus the search bar                                          |
-| `G` `N`  | Go to your notifications                                      |
-| `H`      | Opens and focuses on a user, issue, or pull request hovercard |
-| `Esc`    | When focused on above, closes hovercard                       |
+| `S`      | 聚焦搜索栏                                          |
+| `G` `N`  | 转到你的通知                                      |
+| `H`      | 打开并聚焦于用户、议题或拉取请求的悬浮卡 |
+| `Esc`    | 当聚焦于上述内容时，关闭悬浮卡                       |
 
 {.shortcuts}
 
-### Repositories
+### 仓库
 
-| Shortcut | Action                      |
+| 快捷键 | 操作                      |
 | -------- | --------------------------- |
-| `G` `C`  | Go to the Code tab          |
-| `G` `I`  | Go to the Issues tab        |
-| `G` `P`  | Go to the Pull requests tab |
-| `G` `B`  | Go to the Projects tab      |
-| `G` `W`  | Go to the Wiki tab          |
+| `G` `C`  | 转到代码选项卡          |
+| `G` `I`  | 转到议题选项卡        |
+| `G` `P`  | 转到拉取请求选项卡 |
+| `G` `B`  | 转到项目选项卡      |
+| `G` `W`  | 转到 Wiki 选项卡          |
 
 {.shortcuts}
 
-### Source code editing
+### 源代码编辑
 
-| Shortcut           | Action                         |
+| 快捷键           | 操作                         |
 | ------------------ | ------------------------------ |
-| `Ctrl` `F`         | Start searching in file editor |
-| `Ctrl` `G`         | Find next                      |
-| `Ctrl` `Shift` `G` | Find previous                  |
-| `Ctrl` `Shift` `F` | Replace                        |
-| `Ctrl` `Shift` `R` | Replace all                    |
-| `Alt` `G`          | Jump to line                   |
-| `Ctrl` `Z`         | Undo                           |
-| `Ctrl` `Y`         | Redo                           |
+| `Ctrl` `F`         | 在文件编辑器中开始搜索 |
+| `Ctrl` `G`         | 查找下一个                      |
+| `Ctrl` `Shift` `G` | 查找上一个                      |
+| `Ctrl` `Shift` `F` | 替换                        |
+| `Ctrl` `Shift` `R` | 全部替换                    |
+| `Alt` `G`          | 跳转到行                   |
+| `Ctrl` `Z`         | 撤销                           |
+| `Ctrl` `Y`         | 重做                           |
 
 {.shortcuts}
 
-### Source code browsing
+### 源代码浏览
 
-| Shortcut | Action                             |
+| 快捷键 | 操作                             |
 | -------- | ---------------------------------- |
-| `T`      | Activates the file finder          |
-| `L`      | Jump to a line in your code        |
-| `W`      | Switch to a new branch or tag      |
-| `Y`      | Expand a URL to its canonical form |
-| `I`      | Show or hide comments on diffs     |
-| `B`      | Open blame view                    |
+| `T`      | 激活文件查找器          |
+| `L`      | 跳转到代码中的某一行        |
+| `W`      | 切换到新的分支或标签      |
+| `Y`      | 将 URL 展开为其规范形式 |
+| `I`      | 显示或隐藏差异注释     |
+| `B`      | 打开追溯视图                    |
 
 {.shortcuts}
 
-### Comments
+### 评论
 
-| Shortcut           | Action                                                                       |
+| 快捷键           | 操作                                                                       |
 | ------------------ | ---------------------------------------------------------------------------- |
-| `Ctrl` `B`         | Inserts Markdown formatting for bolding text                                 |
-| `Ctrl` `I`         | Inserts Markdown formatting for italicizing text                             |
-| `Ctrl` `K`         | Inserts Markdown formatting for creating a link                              |
-| `Ctrl` `Shift` `P` | Toggles between the Write and Preview comment tabs                           |
-| `Ctrl` `Enter`     | Submits a comment                                                            |
-| `Ctrl` `.`         | Opens saved replies menu and then autofills comment field with a saved reply |
-| `Ctrl` `G`         | Inserts a suggestions                                                        |
-| `R`                | Quote the selected text in your reply                                        |
+| `Ctrl` `B`         | 插入 Markdown 粗体格式                                 |
+| `Ctrl` `I`         | 插入 Markdown 斜体格式                             |
+| `Ctrl` `K`         | 插入 Markdown 链接格式                              |
+| `Ctrl` `Shift` `P` | 在“编写”和“预览”评论选项卡之间切换                           |
+| `Ctrl` `Enter`     | 提交评论                                                            |
+| `Ctrl` `.`         | 打开已保存回复菜单，然后使用已保存回复自动填充评论字段 |
+| `Ctrl` `G`         | 插入建议                                                        |
+| `R`                | 在你的回复中引用所选文本                                         |
 
 {.shortcuts}
 
-### Issue and pull request lists
+### 议题和拉取请求列表
 
-| Shortcut   | Action                                                      |
+| 快捷键   | 操作                                                      |
 | ---------- | ----------------------------------------------------------- |
-| `C`        | Create an issue                                             |
-| `Ctrl` `/` | Focus your cursor on the issues or pull requests search bar |
-| `U`        | Filter by author                                            |
-| `L`        | Filter by or edit labels                                    |
-| `M`        | Filter by or edit milestones                                |
-| `A`        | Filter by or edit assignee                                  |
-| `O`        | Open issue                                                  |
+| `C`        | 创建一个议题                                             |
+| `Ctrl` `/` | 将光标聚焦到议题或拉取请求的搜索栏 |
+| `U`        | 按作者筛选                                            |
+| `L`        | 按标签筛选或编辑标签                                    |
+| `M`        | 按里程碑筛选或编辑里程碑                                |
+| `A`        | 按指派人筛选或编辑指派人                                |
+| `O`        | 打开议题                                                  |
 
 {.shortcuts}
 
-### Issues and pull requests
+### 议题和拉取请求
 
-| Shortcut | Action             |
+| 快捷键 | 操作             |
 | -------- | ------------------ |
-| `Q`      | Request a reviewer |
-| `M`      | Set a milestone    |
-| `L`      | Apply a label      |
-| `A`      | Set an assignee    |
+| `Q`      | 请求审查者 |
+| `M`      | 设置里程碑    |
+| `L`      | 应用标签      |
+| `A`      | 设置指派人    |
 
 {.shortcuts}
 
-### Changes in pull requests
+### 拉取请求中的更改
 
-| Shortcut               | Action                                                                                 |
+| 快捷键               | 操作                                                                                 |
 | ---------------------- | -------------------------------------------------------------------------------------- |
-| `C`                    | Open the list of commits in the pull request                                           |
-| `T`                    | Open the list of changed files in the pull request                                     |
-| `J`                    | Move selection down in the list                                                        |
-| `K`                    | Move selection up in the list                                                          |
-| `Ctrl` `Shift` `Enter` | Add a single comment on a pull request diff                                            |
-| `Alt` `(click)`        | Toggle between collapsing and expanding all outdated review comments in a pull request |
+| `C`                    | 打开拉取请求中的提交列表                                           |
+| `T`                    | 打开拉取请求中已更改文件的列表                                     |
+| `J`                    | 在列表中向下移动选择                                                        |
+| `K`                    | 在列表中向上移动选择                                                        |
+| `Ctrl` `Shift` `Enter` | 在拉取请求差异上添加单个评论                                            |
+| `Alt` `(点击)`        | 在拉取请求中切换折叠和展开所有过时的审查评论 |
 
 {.shortcuts}
 
-### Project boards {.row-span-2}
+### 项目看板 {.row-span-2}
 
-| Shortcut                 | Action                                             |
+| 快捷键                 | 操作                                             |
 | ------------------------ | -------------------------------------------------- |
-| `Enter/Space`            | Start moving the focused column                    |
-| `Esc`                    | Cancel the move in progress                        |
-| `Enter`                  | Complete the move in progress                      |
-| `Left/H`                 | Move column to the left                            |
-| `Ctrl` `Left/H`          | Move column to the leftmost position               |
-| `Right/L`                | Move column to the right                           |
-| `Ctrl` `Right/L`         | Move column to the rightmost position              |
-| `Enter/Space`            | Start moving the focused card                      |
-| `Esc`                    | Cancel the move in progress                        |
-| `Enter`                  | Complete the move in progress                      |
-| `Down/J`                 | Move card down                                     |
-| `Ctrl` `Down/J`          | Move card to the bottom of the column              |
-| `Up/K`                   | Move card up                                       |
-| `Ctrl` `Up/K`            | Move card to the top of the column                 |
-| `Left/H`                 | Move card to the bottom of the column on the left  |
-| `Shift` `Left/H`         | Move card to the top of the column on the left     |
-| `Ctrl` `Left/H`          | Move card to the bottom of the leftmost column     |
-| `Ctrl` `Shift` `Left/H`  | Move card to the top of the leftmost column        |
-| `Right`                  | Move card to the bottom of the column on the right |
-| `Shift` `Right/L`        | Move card to the top of the column on the right    |
-| `Ctrl` `Right/L`         | Move card to the bottom of the rightmost column    |
-| `Ctrl` `Shift` `Right/L` | Move card to the top of the rightmost column       |
+| `Enter/Space`            | 开始移动聚焦的列                    |
+| `Esc`                    | 取消正在进行的移动                        |
+| `Enter`                  | 完成正在进行的移动                        |
+| `Left/H`                 |向左移动列                            |
+| `Ctrl` `Left/H`          | 将列移动到最左侧位置               |
+| `Right/L`                | 向右移动列                            |
+| `Ctrl` `Right/L`         | 将列移动到最右侧位置               |
+| `Enter/Space`            | 开始移动聚焦的卡片                      |
+| `Esc`                    | 取消正在进行的移动                        |
+| `Enter`                  | 完成正在进行的移动                        |
+| `Down/J`                 | 向下移动卡片                                     |
+| `Ctrl` `Down/J`          | 将卡片移动到列的底部              |
+| `Up/K`                   | 向上移动卡片                                     |
+| `Ctrl` `Up/K`            | 将卡片移动到列的顶部              |
+| `Left/H`                 | 将卡片移动到左侧列的底部  |
+| `Shift` `Left/H`         | 将卡片移动到左侧列的顶部     |
+| `Ctrl` `Left/H`          | 将卡片移动到最左侧列的底部         |
+| `Ctrl` `Shift` `Left/H`  | 将卡片移动到最左侧列的顶部    |
+| `Right`                  | 将卡片移动到右侧列的底部 |
+| `Shift` `Right/L`        | 将卡片移动到右侧列的顶部     |
+| `Ctrl` `Right/L`         | 将卡片移动到最右侧列的底部         |
+| `Ctrl` `Shift` `Right/L` | 将卡片移动到最右侧列的顶部    |
 
 {.shortcuts}
 
-### Notifications
+### 通知
 
-| Shortcut    | Action       |
+| 快捷键    | 操作       |
 | ----------- | ------------ |
-| `E/L/Y`     | Mark as read |
-| `Shift` `M` | Mute thread  |
+| `E/L/Y`     | 标记为已读 |
+| `Shift` `M` | 静音会话  |
 
 {.shortcuts}
 
-### Network graph
+### 网络图
 
-| Shortcut          | Action                   |
+| 快捷键          | 操作                   |
 | ----------------- | ------------------------ |
-| `Left/H`          | Scroll left              |
-| `Right/L`         | Scroll right             |
-| `Up/K`            | Scroll up                |
-| `Down/J`          | Scroll down              |
-| `Shift` `Left/H`  | Scroll all the way left  |
-| `Shift` `Right/L` | Scroll all the way right |
-| `Shift` `Up/K`    | Scroll all the way up    |
-| `Shift` `Down/J`  | Scroll all the way down  |
+| `Left/H`          |向左滚动              |
+| `Right/L`         | 向右滚动              |
+| `Up/K`            | 向上滚动                |
+| `Down/J`          | 向下滚动              |
+| `Shift` `Left/H`  |一直向左滚动  |
+| `Shift` `Right/L` | 一直向右滚动 |
+| `Shift` `Up/K`    | 一直向上滚动    |
+| `Shift` `Down/J`  | 一直向下滚动  |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Github](https://help.github.com/articles/using-keyboard-shortcuts/) _(help.github.com)_
+- [GitHub 的键盘快捷键](https://help.github.com/articles/using-keyboard-shortcuts/) _(help.github.com)_

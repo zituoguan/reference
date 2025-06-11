@@ -4,129 +4,128 @@ date: 2022-11-23 16:23:31.701510
 background: bg-[#ca9c3d]
 label: Mac
 tags:
-  -
   - mac
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 71 keyboard shortcuts found in Sequel Pro. This application is MacOS-only.
+  Sequel Pro 中 71 个键盘快捷键的可视化速查表。此应用程序仅适用于 MacOS。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Main Tabs
+### 主要选项卡
 
-| Shortcut  | Action          |
+| 快捷键  | 操作          |
 | --------- | --------------- |
-| `Cmd` `1` | Table Structure |
-| `Cmd` `2` | Table Content   |
-| `Cmd` `3` | Table Relations |
-| `Cmd` `4` | Table Info      |
-| `Cmd` `5` | Custom Query    |
-| `Cmd` `6` | Table Triggers  |
+| `Cmd` `1` | 表结构 |
+| `Cmd` `2` | 表内容   |
+| `Cmd` `3` | 表关系 |
+| `Cmd` `4` | 表信息      |
+| `Cmd` `5` | 自定义查询    |
+| `Cmd` `6` | 表触发器  |
 
 {.shortcuts}
 
-### General Shortcuts {.row-span-4}
+### 常规快捷键 {.row-span-4}
 
-| Shortcut               | Action                                     |
+| 快捷键               | 操作                                     |
 | ---------------------- | ------------------------------------------ |
-| `Cmd` `N`              | New window (connection file)               |
-| `Cmd` `T`              | New tab (connection file)                  |
-| `Cmd` `Shift` `A`      | Add connection to favorites                |
-| `Cmd` `O`              | Open (connection file or SQL file)         |
-| `Cmd` `Opt` `O`        | Open current connection file in new window |
-| `Cmd` `S`              | Save (connection file)                     |
-| `Cmd` `Shift` `S`      | Save as (connection file)                  |
-| `Cmd` `Ctrl` `S`       | Save query                                 |
-| `Cmd` `W`              | Close (connection file)                    |
-| `Cmd` `Opt` `W`        | Close all (connection file)                |
-| `Cmd` `P`              | Print                                      |
-| `Cmd` `Shift` `I`      | Import                                     |
-| `Cmd` `Shift` `K`      | Show console window                        |
-| `Cmd` `K`              | Clear console                              |
-| `Ctrl` `Opt` `Left`    | Back in history                            |
-| `Ctrl` `Opt` `Right`   | Forward in history                         |
-| `Ctrl` `Tab`           | Select next tab                            |
-| `Ctrl` `Shift` `Tab`   | Select previous tab                        |
-| `Ctrl` `Shift` `N`     | Insert NULL value                          |
-| `Cmd` `Shift` `C`      | Copy create table syntax                   |
-| `Cmd` `Opt` `S`        | Show create table syntax                   |
-| `Cmd` `Shift` `R`      | Refresh databases                          |
-| `Cmd` `Shift` `D`      | Choose database                            |
-| `Cmd` `Shift` `V`      | Show server variables                      |
-| `Cmd` `Opt` `P`        | Show server processes                      |
-| `Cmd` `Ctrl` `R`       | Refresh tables                             |
-| `Cmd` `Shift` `F`      | Flush privileges                           |
-| `Cmd` `U`              | User accounts...                           |
-| `Cmd` `C`              | Copy selection or selected row(s)          |
-| `Cmd` `Opt` `C`        | Copy selected row(s) with column names     |
-| `Cmd` `Opt` `Ctrl` `C` | Copy selected row(s) as SQL INSERT         |
-| `Cmd` `Shift` `T`      | Show/hide toolbar                          |
-| `Cmd` `Ctrl` `F`       | Filter table content                       |
-| `Cmd` `Opt` `Ctrl` `F` | Filter tables                              |
-| `Cmd` `Opt` `Ctrl` `B` | Bundle editor                              |
-| `Cmd` `Opt` `Ctrl` `N` | Navigator                                  |
+| `Cmd` `N`              | 新建窗口 (连接文件)               |
+| `Cmd` `T`              | 新建选项卡 (连接文件)                  |
+| `Cmd` `Shift` `A`      | 添加连接到收藏夹                |
+| `Cmd` `O`              | 打开 (连接文件或 SQL 文件)         |
+| `Cmd` `Opt` `O`        | 在新窗口中打开当前连接文件 |
+| `Cmd` `S`              | 保存 (连接文件)                     |
+| `Cmd` `Shift` `S`      | 另存为 (连接文件)                  |
+| `Cmd` `Ctrl` `S`       | 保存查询                                 |
+| `Cmd` `W`              | 关闭 (连接文件)                    |
+| `Cmd` `Opt` `W`        | 关闭所有 (连接文件)                |
+| `Cmd` `P`              | 打印                                      |
+| `Cmd` `Shift` `I`      | 导入                                     |
+| `Cmd` `Shift` `K`      | 显示控制台窗口                        |
+| `Cmd` `K`              | 清除控制台                              |
+| `Ctrl` `Opt` `Left`    | 后退历史记录                            |
+| `Ctrl` `Opt` `Right`   | 前进历史记录                         |
+| `Ctrl` `Tab`           | 选择下一个选项卡                            |
+| `Ctrl` `Shift` `Tab`   | 选择上一个选项卡                        |
+| `Ctrl` `Shift` `N`     | 插入 NULL 值                          |
+| `Cmd` `Shift` `C`      | 复制创建表语法                   |
+| `Cmd` `Opt` `S`        | 显示创建表语法                   |
+| `Cmd` `Shift` `R`      | 刷新数据库                          |
+| `Cmd` `Shift` `D`      | 选择数据库                            |
+| `Cmd` `Shift` `V`      | 显示服务器变量                      |
+| `Cmd` `Opt` `P`        | 显示服务器进程                      |
+| `Cmd` `Ctrl` `R`       | 刷新表                             |
+| `Cmd` `Shift` `F`      | 刷新权限                           |
+| `Cmd` `U`              | 用户账户...                           |
+| `Cmd` `C`              | 复制所选内容或选定行          |
+| `Cmd` `Opt` `C`        | 复制选定行 (带列名)     |
+| `Cmd` `Opt` `Ctrl` `C` | 复制选定行 (作为 SQL INSERT)         |
+| `Cmd` `Shift` `T`      | 显示/隐藏工具栏                          |
+| `Cmd` `Ctrl` `F`       | 筛选表内容                       |
+| `Cmd` `Opt` `Ctrl` `F` | 筛选表                              |
+| `Cmd` `Opt` `Ctrl` `B` | 包编辑器                              |
+| `Cmd` `Opt` `Ctrl` `N` | 导航器                                  |
 
 {.shortcuts}
 
-### Select
+### 选择
 
-| Shortcut          | Action                    |
+| 快捷键          | 操作                    |
 | ----------------- | ------------------------- |
-| `Ctrl` `W`        | Select current word       |
-| `Ctrl` `L`        | Select current line       |
-| `Cmd` `Shift` `B` | Select enclosing brackets |
-| `Cmd` `A`         | Select all                |
+| `Ctrl` `W`        | 选择当前单词       |
+| `Ctrl` `L`        | 选择当前行       |
+| `Cmd` `Shift` `B` | 选择包围的括号 |
+| `Cmd` `A`         | 全选                |
 
 {.shortcuts}
 
-### Table Structure Tab
+### 表结构选项卡
 
-| Shortcut        | Action                   |
+| 快捷键        | 操作                   |
 | --------------- | ------------------------ |
-| `Cmd` `Opt` `A` | Add a new field          |
-| `Del`           | Delete selected field    |
-| `Cmd` `D`       | Duplicate selected field |
-| `Cmd` `R`       | Refresh table structure  |
-| `Cmd` `4`       | Edit table details       |
+| `Cmd` `Opt` `A` | 添加新字段          |
+| `Del`           | 删除选定字段    |
+| `Cmd` `D`       | 复制选定字段 |
+| `Cmd` `R`       | 刷新表结构  |
+| `Cmd` `4`       | 编辑表详情       |
 
 {.shortcuts}
 
-### Table Content Tab
+### 表内容选项卡
 
-| Shortcut        | Action                 |
+| 快捷键        | 操作                 |
 | --------------- | ---------------------- |
-| `Cmd` `Opt` `A` | Add a new row          |
-| `Del`           | Delete selected row(s) |
-| `Cmd` `D`       | Duplicate selected row |
-| `Cmd` `R`       | Refresh table contents |
+| `Cmd` `Opt` `A` | 添加新行          |
+| `Del`           | 删除选定行 |
+| `Cmd` `D`       | 复制选定行 |
+| `Cmd` `R`       | 刷新表内容 |
 
 {.shortcuts}
 
-### Custom Query Tab
+### 自定义查询选项卡
 
-| Shortcut        | Action                                                              |
+| 快捷键        | 操作                                                              |
 | --------------- | ------------------------------------------------------------------- |
-| `Cmd` `Opt` `R` | Run all queries (1.0+) / Run current query or selection (<=0.9.9.1) |
-| `Cmd` `R`       | Run current query or selection (1.0+) / Run all queries (<=0.9.9.1) |
-| `Cmd` `[`       | Shift line or selection rightwards                                  |
-| `Cmd` `]`       | Shift line or selection leftwards                                   |
-| `Cmd` `/`       | Toggle comment line or selection                                    |
-| `Cmd` `Opt` `/` | Toggle comment current query                                        |
-| `F5`            | Spell checker completion (narrow-down list)                         |
-| `Ctrl` `Y`      | Select current query                                                |
-| `Ctrl` `H`      | Show MySQL help for current word or selection                       |
-| `Cmd` `Opt` `F` | Open query favorites popup menu                                     |
-| `Cmd` `Opt` `Y` | Open query history popup menu                                       |
-| `Ctrl` `Up`     | Insert previous history item (successively)                         |
-| `Ctrl` `Down`   | Insert next history item (successively)                             |
-| `Cmd` `Opt` `1` | Show all database names as completion list                          |
-| `Cmd` `Opt` `2` | Show all table and view names as completion list                    |
-| `Cmd` `Opt` `3` | Show all table names from current database as completion list       |
+| `Cmd` `Opt` `R` | 运行所有查询 (1.0+) / 运行当前查询或选区 (<=0.9.9.1) |
+| `Cmd` `R`       | 运行当前查询或选区 (1.0+) / 运行所有查询 (<=0.9.9.1) |
+| `Cmd` `[`       | 右移当前行或选区                                  |
+| `Cmd` `]`       | 左移当前行或选区                                   |
+| `Cmd` `/`       | 切换注释当前行或选区                                    |
+| `Cmd` `Opt` `/` | 切换注释当前查询                                        |
+| `F5`            | 拼写检查器补全 (缩小列表)                         |
+| `Ctrl` `Y`      | 选择当前查询                                                |
+| `Ctrl` `H`      | 显示当前单词或选区的 MySQL 帮助                       |
+| `Cmd` `Opt` `F` | 打开查询收藏夹弹出菜单                                     |
+| `Cmd` `Opt` `Y` | 打开查询历史弹出菜单                                       |
+| `Ctrl` `Up`     | 插入上一个历史项 (连续)                         |
+| `Ctrl` `Down`   | 插入下一个历史项 (连续)                             |
+| `Cmd` `Opt` `1` | 显示所有数据库名称作为补全列表                          |
+| `Cmd` `Opt` `2` | 显示所有表和视图名称作为补全列表                    |
+| `Cmd` `Opt` `3` | 显示当前数据库中所有表名作为补全列表       |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Sequel Pro](https://sequelpro.com/docs/get-started/keyboard-shortcuts) _(sequelpro.com)_
+- [Sequel Pro 键盘快捷键](https://sequelpro.com/docs/get-started/keyboard-shortcuts) _(sequelpro.com)_

@@ -7,451 +7,451 @@ tags:
   -
   -
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 283 keyboard shortcuts found in Adobe Photoshop
+  Adobe Photoshop 中 283 个键盘快捷键的可视化速查表。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Popular shortcuts
+### 常用快捷键
 
-| Shortcut           | Action                                                         |
+| 快捷键             | 操作                                                           |
 | ------------------ | -------------------------------------------------------------- |
-| `Ctrl` `T`         | Free transform                                                 |
-| `[`                | Decrease brush size                                            |
-| `]`                | Increase brush size                                            |
-| `Shift` `[`        | Decrease brush hardness                                        |
-| `Shift` `]`        | Increase brush hardness                                        |
-| `D`                | Default foreground/background colors                           |
-| `X`                | Switch foreground/background colors                            |
-| `Ctrl` `J`         | New layer via copy                                             |
-| `Ctrl` `Shift` `J` | New layer via cut                                              |
-| `Esc`              | Cancel any modal dialog window (including the Start Workspace) |
-| `Enter`            | Select the first edit field of the tool bar                    |
-| `Tab`              | Navigate between fields                                        |
-| `Shift` `Tab`      | Navigate between fields in the opposite direction              |
-| `Alt`              | Change cancel to reset                                         |
-| `Ctrl` `F`         | Invoke the search experience                                   |
+| `Ctrl` `T`         | 自由变换                                                       |
+| `[`                | 减小画笔大小                                                   |
+| `]`                | 增大画笔大小                                                   |
+| `Shift` `[`        | 降低画笔硬度                                                   |
+| `Shift` `]`        | 增加画笔硬度                                                   |
+| `D`                | 默认前景/背景色                                                |
+| `X`                | 切换前景/背景色                                                |
+| `Ctrl` `J`         | 通过拷贝新建图层                                               |
+| `Ctrl` `Shift` `J` | 通过剪切新建图层                                               |
+| `Esc`              | 取消任何模态对话框窗口（包括开始工作区）                         |
+| `Enter`            | 选择工具栏的第一个编辑字段                                     |
+| `Tab`              | 在字段之间导航                                                 |
+| `Shift` `Tab`      | 反向在字段之间导航                                             |
+| `Alt`              | 将取消更改为重置                                               |
+| `Ctrl` `F`         | 调用搜索体验                                                   |
 
 {.shortcuts}
 
-### Use function keys
+### 使用功能键
 
-| Shortcut     | Action                  |
-| ------------ | ----------------------- |
-| `F1`         | Start help              |
-| `F2`         | Cut                     |
-| `F3`         | Copy                    |
-| `F4`         | Paste                   |
-| `F5`         | Show/hide brush panel   |
-| `F6`         | Show/hide color panel   |
-| `F7`         | Show/hide layers panel  |
-| `F8`         | Show/hide info panel    |
-| `F9`         | Show/hide actions panel |
-| `F12`        | Revert                  |
-| `Shift` `F5` | Fill                    |
-| `Shift` `F6` | Feather selection       |
-| `Shift` `F7` | Inverse selection       |
-
-{.shortcuts}
-
-### Select tools {.row-span-2}
-
-| Shortcut    | Action                                                                                          |
-| ----------- | ----------------------------------------------------------------------------------------------- |
-| `V`         | Move tool                                                                                       |
-| `M`         | Rectangular marquee tool                                                                        |
-| `L`         | Lasso tool                                                                                      |
-| `W`         | Magic wand tool > quick selection tool                                                          |
-| `C`         | Crop tool > slice tool > slice select tool                                                      |
-| `I`         | Eyedropper tool > ruler tool > note tool                                                        |
-| `J`         | Spot healing brush tool > healing brush tool > patch tool > red eye tool                        |
-| `B`         | Brush tool > pencil tool > color replacement tool > mixer brush tool                            |
-| `S`         | Clone stamp tool > pattern stamp tool                                                           |
-| `Y`         | History brush tool > Art history brush tool                                                     |
-| `E`         | Eraser tool > background eraser tool > magic eraser tool                                        |
-| `G`         | Gradient tool > paint bucket tool                                                               |
-| `O`         | Dodge tool > burn tool > sponge tool                                                            |
-| `P`         | Pen tool > freeform pen tool                                                                    |
-| `T`         | Horizontal type tool > vertical type tool > horizontal type mask tool > vertical type mask tool |
-| `A`         | Path selection tool > direct selection tool                                                     |
-| `U`         | Rectangle tool > rounded rectangle tool > ellipse tool > polygon tool > line tool               |
-| `H`         | Hand tool                                                                                       |
-| `R`         | Rotate view tool                                                                                |
-| `Z`         | Zoom tool                                                                                       |
-| `D`         | Default foreground/background colors                                                            |
-| `X`         | Switch foreground/background colors                                                             |
-| `Q`         | Toggle standard/quick mask modes                                                                |
-| `J`         | Content-aware move tool                                                                         |
-| `C`         | Perspective crop tool                                                                           |
-| `V`         | Artboard tool                                                                                   |
-| `R`         | Rotate view tool                                                                                |
-| `/`         | Toggle preserve transparency                                                                    |
-| `,`         | Previous brush                                                                                  |
-| `.`         | Next brush                                                                                      |
-| `Shift` `,` | First brush                                                                                     |
-| `Shift` `.` | Last brush                                                                                      |
+| 快捷键       | 操作                   |
+| ------------ | ---------------------- |
+| `F1`         | 启动帮助               |
+| `F2`         | 剪切                   |
+| `F3`         | 复制                   |
+| `F4`         | 粘贴                   |
+| `F5`         | 显示/隐藏画笔面板      |
+| `F6`         | 显示/隐藏颜色面板      |
+| `F7`         | 显示/隐藏图层面板      |
+| `F8`         | 显示/隐藏信息面板      |
+| `F9`         | 显示/隐藏动作面板      |
+| `F12`        | 恢复                   |
+| `Shift` `F5` | 填充                   |
+| `Shift` `F6` | 羽化选区               |
+| `Shift` `F7` | 反向选择               |
 
 {.shortcuts}
 
-### View images {.row-span-2}
+### 选择工具 {.row-span-2}
 
-| Shortcut             | Action                                                                                   |
-| -------------------- | ---------------------------------------------------------------------------------------- |
-| `Ctrl` `Tab`         | Cycle through open documents                                                             |
-| `Ctrl` `Shift` `Tab` | Switch to previous document                                                              |
-| `Ctrl` `Shift` `W`   | Close a file in Photoshop and open Bridge                                                |
-| `F`                  | Toggle forward between Standard screen > Full screen with menu bar > Full screen modes   |
-| `Shift` `F`          | Toggle backwards between Standard screen > Full screen with menu bar > Full screen modes |
-| `Space` `F`          | Toggle forward canvas color                                                              |
-| `Shift` `Space` `F`  | Toggle backwards canvas color                                                            |
-| `Space`              | Switch to hand tool (when not in text-edit mode)                                         |
-| `Ctrl` `Space`       | Switch to zoom in tool                                                                   |
-| `Alt` `Space`        | Switch to zoom out tool                                                                  |
-| `Shift` `Enter`      | Apply zoom percentage, and keep zoom percentage box active                               |
-| `PgUp/PgDn`          | Scroll up or down 1 screen                                                               |
-| `Shift` `PgUp/PgDn`  | Scroll up or down 10 units                                                               |
-| `Home`               | Move view to upper-left corner                                                           |
-| `End`                | Move view to lower-right corner                                                          |
-| `\`                  | Toggle layer mask on/off as rubylith (layer mask must be selected)                       |
+| 快捷键      | 操作                                                                                             |
+| ----------- | ------------------------------------------------------------------------------------------------ |
+| `V`         | 移动工具                                                                                         |
+| `M`         | 矩形选框工具                                                                                     |
+| `L`         | 套索工具                                                                                         |
+| `W`         | 魔棒工具 > 快速选择工具                                                                          |
+| `C`         | 裁剪工具 > 切片工具 > 切片选择工具                                                               |
+| `I`         | 吸管工具 > 标尺工具 > 注释工具                                                                   |
+| `J`         | 污点修复画笔工具 > 修复画笔工具 > 修补工具 > 红眼工具                                              |
+| `B`         | 画笔工具 > 铅笔工具 > 颜色替换工具 > 混合器画笔工具                                                |
+| `S`         | 仿制图章工具 > 图案图章工具                                                                      |
+| `Y`         | 历史记录画笔工具 > 历史记录艺术画笔工具                                                          |
+| `E`         | 橡皮擦工具 > 背景橡皮擦工具 > 魔术橡皮擦工具                                                       |
+| `G`         | 渐变工具 > 油漆桶工具                                                                            |
+| `O`         | 减淡工具 > 加深工具 > 海绵工具                                                                   |
+| `P`         | 钢笔工具 > 自由钢笔工具                                                                          |
+| `T`         | 横排文字工具 > 直排文字工具 > 横排文字蒙版工具 > 直排文字蒙版工具                                  |
+| `A`         | 路径选择工具 > 直接选择工具                                                                      |
+| `U`         | 矩形工具 > 圆角矩形工具 > 椭圆工具 > 多边形工具 > 直线工具                                         |
+| `H`         | 抓手工具                                                                                         |
+| `R`         | 旋转视图工具                                                                                     |
+| `Z`         | 缩放工具                                                                                         |
+| `D`         | 默认前景/背景色                                                                                  |
+| `X`         | 切换前景/背景色                                                                                  |
+| `Q`         | 切换标准/快速蒙版模式                                                                            |
+| `J`         | 内容感知移动工具                                                                                 |
+| `C`         | 透视裁剪工具                                                                                     |
+| `V`         | 画板工具                                                                                         |
+| `R`         | 旋转视图工具                                                                                     |
+| `/`         | 切换保留透明度                                                                                   |
+| `,`         | 上一个画笔                                                                                       |
+| `.`         | 下一个画笔                                                                                       |
+| `Shift` `,` | 第一个画笔                                                                                       |
+| `Shift` `.` | 最后一个画笔                                                                                     |
 
 {.shortcuts}
 
-### Use Puppet Warp
+### 查看图像 {.row-span-2}
 
-| Shortcut   | Action                   |
+| 快捷键               | 操作                                                                                       |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| `Ctrl` `Tab`         | 在打开的文档之间循环切换                                                                   |
+| `Ctrl` `Shift` `Tab` | 切换到上一个文档                                                                           |
+| `Ctrl` `Shift` `W`   | 在 Photoshop 中关闭文件并在 Bridge 中打开                                                    |
+| `F`                  | 在标准屏幕 > 带菜单栏的全屏 > 全屏模式之间向前切换                                           |
+| `Shift` `F`          | 在标准屏幕 > 带菜单栏的全屏 > 全屏模式之间向后切换                                           |
+| `Space` `F`          | 向前切换画布颜色                                                                           |
+| `Shift` `Space` `F`  | 向后切换画布颜色                                                                           |
+| `Space`              | 切换到抓手工具（非文本编辑模式时）                                                         |
+| `Ctrl` `Space`       | 切换到放大工具                                                                             |
+| `Alt` `Space`        | 切换到缩小工具                                                                             |
+| `Shift` `Enter`      | 应用缩放百分比，并保持缩放百分比框激活                                                     |
+| `PgUp/PgDn`          | 向上或向下滚动 1 屏                                                                        |
+| `Shift` `PgUp/PgDn`  | 向上或向下滚动 10 个单位                                                                   |
+| `Home`               | 将视图移至左上角                                                                           |
+| `End`                | 将视图移至右下角                                                                           |
+| `\`                  | 以红膜形式打开/关闭图层蒙版（必须选择图层蒙版）                                              |
+
+{.shortcuts}
+
+### 使用操控变形
+
+| 快捷键     | 操作                     |
 | ---------- | ------------------------ |
-| `Esc`      | Cancel completely        |
-| `Ctrl` `Z` | Undo last pin adjustment |
-| `Ctrl` `A` | Select all pins          |
-| `Ctrl` `D` | Deselect all pins        |
-| `H`        | Temporarily hide pins    |
+| `Esc`      | 完全取消                 |
+| `Ctrl` `Z` | 撤销上一个图钉调整       |
+| `Ctrl` `A` | 选择所有图钉             |
+| `Ctrl` `D` | 取消选择所有图钉         |
+| `H`        | 暂时隐藏图钉             |
 
 {.shortcuts}
 
-### Use Refine Edge
+### 使用调整边缘
 
-| Shortcut         | Action                                                  |
-| ---------------- | ------------------------------------------------------- |
-| `Ctrl` `Alt` `R` | Open the Refine Edge dialog box                         |
-| `F`              | Cycle forward through preview modes                     |
-| `Shift` `F`      | Cycle backwards through preview modes                   |
-| `X`              | Toggle between original image and selection preview     |
-| `P`              | Toggle between original selection and refined version   |
-| `J`              | Toggle radius preview on and off                        |
-| `Shift` `E`      | Toggle between Refine Radius and Erase Refinement tools |
-
-{.shortcuts}
-
-### Use the Filter Gallery
-
-| Shortcut           | Action                          |
-| ------------------ | ------------------------------- |
-| `Ctrl` `Alt` `F`   | Reapply last-used filter        |
-| `Ctrl`             | Change Cancel button to Default |
-| `Alt`              | Change Cancel button to Reset   |
-| `Ctrl` `Z`         | Undo/Redo                       |
-| `Ctrl` `Shift` `Z` | Step forward                    |
-| `Ctrl` `Alt` `Z`   | Step backward                   |
+| 快捷键           | 操作                                                     |
+| ---------------- | -------------------------------------------------------- |
+| `Ctrl` `Alt` `R` | 打开调整边缘对话框                                       |
+| `F`              | 向前循环切换预览模式                                     |
+| `Shift` `F`      | 向后循环切换预览模式                                     |
+| `X`              | 在原始图像和选区预览之间切换                             |
+| `P`              | 在原始选区和调整后的版本之间切换                         |
+| `J`              | 打开/关闭半径预览                                        |
+| `Shift` `E`      | 在调整半径和抹除调整工具之间切换                         |
 
 {.shortcuts}
 
-### Use the Liquify filter
+### 使用滤镜库
 
-| Shortcut       | Action                                                           |
-| -------------- | ---------------------------------------------------------------- |
-| `W`            | Forward warp tool                                                |
-| `R`            | Reconstruct tool                                                 |
-| `C`            | Twirl clockwise tool                                             |
-| `S`            | Pucker tool                                                      |
-| `B`            | Bloat tool                                                       |
-| `O`            | Push left tool                                                   |
-| `M`            | Mirror tool                                                      |
-| `T`            | Turbulence tool                                                  |
-| `F`            | Freeze mask tool                                                 |
-| `D`            | Thaw mask tool                                                   |
-| `Alt` `(tool)` | Reverse direction for Bloat, Pucker, Push Left, and Mirror tools |
-| `Tab`          | Cycle through controls on right from top                         |
-| `Shift` `Tab`  | Cycle through controls on right from bottom                      |
-| `Alt`          | Change cancel to reset                                           |
+| 快捷键             | 操作                           |
+| ------------------ | ------------------------------ |
+| `Ctrl` `Alt` `F`   | 重新应用上次使用的滤镜         |
+| `Ctrl`             | 将取消按钮更改为默认           |
+| `Alt`              | 将取消按钮更改为重置           |
+| `Ctrl` `Z`         | 撤销/重做                      |
+| `Ctrl` `Shift` `Z` | 向前一步                       |
+| `Ctrl` `Alt` `Z`   | 向后一步                       |
 
 {.shortcuts}
 
-### Use Vanishing Point
+### 使用液化滤镜
 
-| Shortcut           | Action                                               |
+| 快捷键         | 操作                                                               |
+| -------------- | ------------------------------------------------------------------ |
+| `W`            | 向前变形工具                                                       |
+| `R`            | 重建工具                                                           |
+| `C`            | 顺时针旋转扭曲工具                                                 |
+| `S`            | 褶皱工具                                                           |
+| `B`            | 膨胀工具                                                           |
+| `O`            | 左推工具                                                           |
+| `M`            | 镜像工具                                                           |
+| `T`            | 湍流工具                                                           |
+| `F`            | 冻结蒙版工具                                                       |
+| `D`            | 解冻蒙版工具                                                       |
+| `Alt` `(tool)` | 反转膨胀、褶皱、左推和镜像工具的方向                                 |
+| `Tab`          | 从顶部开始在右侧控件之间循环切换                                   |
+| `Shift` `Tab`  | 从底部开始在右侧控件之间循环切换                                   |
+| `Alt`          | 将取消更改为重置                                                   |
+
+{.shortcuts}
+
+### 使用消失点
+
+| 快捷键             | 操作                                                 |
 | ------------------ | ---------------------------------------------------- |
-| `X`                | Zoom 2x (temporary)                                  |
-| `Ctrl` `+`         | Zoom in                                              |
-| `Ctrl` `-`         | Zoom out                                             |
-| `Ctrl` `0`         | Fit in view                                          |
-| `Ctrl` `Z`         | Undo last action                                     |
-| `Ctrl` `Shift` `Z` | Redo last action                                     |
-| `Ctrl` `D`         | Deselect all                                         |
-| `Ctrl` `H`         | Hide selection and panes                             |
-| `Arrows`           | Move selection 1 pixel                               |
-| `Shift` `Arrows`   | Move selection 10 pixels                             |
-| `Ctrl` `C`         | Copy                                                 |
-| `Ctrl` `V`         | Paste                                                |
-| `Ctrl` `Shift` `T` | Repeat last duplicate and move                       |
-| `Ctrl` `Alt` `T`   | Create floating selection from the current selection |
-| `Alt` `Shift`      | Constrain selection to a 15 degree rotation          |
-| `Backspace`        | Delete last node while creating plane                |
+| `X`                | 缩放 2 倍（临时）                                    |
+| `Ctrl` `+`         | 放大                                                 |
+| `Ctrl` `-`         | 缩小                                                 |
+| `Ctrl` `0`         | 适应视图                                             |
+| `Ctrl` `Z`         | 撤销上一个操作                                       |
+| `Ctrl` `Shift` `Z` | 重做上一个操作                                       |
+| `Ctrl` `D`         | 取消全选                                             |
+| `Ctrl` `H`         | 隐藏选区和面板                                       |
+| `Arrows`           | 移动选区 1 像素                                      |
+| `Shift` `Arrows`   | 移动选区 10 像素                                     |
+| `Ctrl` `C`         | 复制                                                 |
+| `Ctrl` `V`         | 粘贴                                                 |
+| `Ctrl` `Shift` `T` | 重复上次复制和移动                                   |
+| `Ctrl` `Alt` `T`   | 从当前选区创建浮动选区                               |
+| `Alt` `Shift`      | 将选区约束为 15 度旋转                               |
+| `Backspace`        | 创建平面时删除最后一个节点                           |
 
 {.shortcuts}
 
-### Use the Camera Raw dialog box {.row-span-4}
+### 使用 Camera Raw 对话框 {.row-span-4}
 
-| Shortcut                 | Action                                                                                             |
+| 快捷键                   | 操作                                                                                               |
 | ------------------------ | -------------------------------------------------------------------------------------------------- |
-| `Z`                      | Zoom tool                                                                                          |
-| `H`                      | Hand tool                                                                                          |
-| `I`                      | White balance tool                                                                                 |
-| `S`                      | Color sampler tool                                                                                 |
-| `C`                      | Crop tool                                                                                          |
-| `A`                      | Straighten tool                                                                                    |
-| `B`                      | Spot removal tool                                                                                  |
-| `E`                      | Red eye removal tool                                                                               |
-| `Ctrl` `Alt` `1`         | Basic panel                                                                                        |
-| `Ctrl` `Alt` `2`         | Tone curve panel                                                                                   |
-| `Ctrl` `Alt` `3`         | Detail panel                                                                                       |
-| `Ctrl` `Alt` `4`         | HSL/Greyscale panel                                                                                |
-| `Ctrl` `Alt` `5`         | Split toning panel                                                                                 |
-| `Ctrl` `Alt` `6`         | Lens corrections panel                                                                             |
-| `Ctrl` `Alt` `7`         | Camera calibration panel                                                                           |
-| `Ctrl` `Alt` `8`         | Presets panel                                                                                      |
-| `Ctrl` `Alt` `9`         | Open snapshots panel                                                                               |
-| `Ctrl` `Alt` `Shift` `T` | Parametric curve targeted adjustment tool                                                          |
-| `Ctrl` `Alt` `Shift` `H` | Hue targeted adjustment tool                                                                       |
-| `Ctrl` `Alt` `Shift` `S` | Saturation targeted adjustment tool                                                                |
-| `Ctrl` `Alt` `Shift` `L` | Luminance targeted adjustment tool                                                                 |
-| `Ctrl` `Alt` `Shift` `G` | Grayscale mix targeted adjustment tool                                                             |
-| `T`                      | Last-used targeted adjustment tool                                                                 |
-| `K`                      | Adjustment brush tool                                                                              |
-| `G`                      | Graduated filter tool                                                                              |
-| `Alt`                    | Temporarily switch from Add to Erase mode for the Adjustment brush tool, or from Erase to Add mode |
-| `Alt` `]/[`              | Increase/decrease temporary adjustment brush tool size                                             |
-| `Alt` `Shift` `]/[`      | Increase/decrease temporary adjustment brush tool feather                                          |
-| `Alt` `=/-`              | Increase/decrease temporary adjustment brush tool size flow in increments of 10                    |
-| `N`                      | Switch to New mode from Add or Erase mode of the Adjustment Brush tool or Graduated filter         |
-| `M`                      | Toggle Auto Mask for Adjustment Brush tool                                                         |
-| `Y`                      | Toggle Show Mask for Adjustment Brush tool                                                         |
-| `V`                      | Toggle pins for Adjustment Brush tool                                                              |
-| `L`                      | Rotate image left                                                                                  |
-| `R`                      | Rotate image right                                                                                 |
-| `Ctrl`                   | Temporarily switch to zoom in tool                                                                 |
-| `Alt`                    | Temporarily switch to zoom out tool and change the image open button to open copy                  |
-| `P`                      | Toggle preview                                                                                     |
-| `F`                      | Full screen mode                                                                                   |
-| `Shift`                  | Temporarily activate the White Balance tool and change the open image button to open object        |
-| `Arrows`                 | Move selected point in curves panel 1 pixel                                                        |
-| `Shift` `Arrows`         | Move selected point in curves panel 10 pixels                                                      |
-| `Ctrl` `R`               | Open selected images in Camera Raw dialog box from Bridge                                          |
-| `O`                      | Highlight clipping warning                                                                         |
-| `U`                      | Shadows clipping warning                                                                           |
-| `Ctrl` `1-5`             | Add 1-5 star rating (filmstrip mode)                                                               |
-| `Ctrl` `./,`             | Increase/decrease rating (filmstrip mode)                                                          |
-| `Ctrl` `6`               | Add red label (filmstrip mode)                                                                     |
-| `Ctrl` `7`               | Add yellow label (filmstrip mode)                                                                  |
-| `Ctrl` `8`               | Add green label (filmstrip mode)                                                                   |
-| `Ctrl` `9`               | Add blue label (filmstrip mode)                                                                    |
-| `Ctrl` `Shift` `0`       | Add purple label (filmstrip mode)                                                                  |
-| `Ctrl` `K`               | Camera Raw preferences                                                                             |
-| `Ctrl` `Alt`             | Delete Adobe Camera Raw preferences (on open)                                                      |
+| `Z`                      | 缩放工具                                                                                           |
+| `H`                      | 抓手工具                                                                                           |
+| `I`                      | 白平衡工具                                                                                         |
+| `S`                      | 颜色取样器工具                                                                                     |
+| `C`                      | 裁剪工具                                                                                           |
+| `A`                      | 拉直工具                                                                                           |
+| `B`                      | 污点去除工具                                                                                       |
+| `E`                      | 红眼去除工具                                                                                       |
+| `Ctrl` `Alt` `1`         | 基本面板                                                                                           |
+| `Ctrl` `Alt` `2`         | 色调曲线面板                                                                                       |
+| `Ctrl` `Alt` `3`         | 细节面板                                                                                           |
+| `Ctrl` `Alt` `4`         | HSL/灰度面板                                                                                       |
+| `Ctrl` `Alt` `5`         | 分离色调面板                                                                                       |
+| `Ctrl` `Alt` `6`         | 镜头校正面板                                                                                       |
+| `Ctrl` `Alt` `7`         | 相机校准面板                                                                                       |
+| `Ctrl` `Alt` `8`         | 预设面板                                                                                           |
+| `Ctrl` `Alt` `9`         | 打开快照面板                                                                                       |
+| `Ctrl` `Alt` `Shift` `T` | 参数曲线目标调整工具                                                                               |
+| `Ctrl` `Alt` `Shift` `H` | 色相目标调整工具                                                                                   |
+| `Ctrl` `Alt` `Shift` `S` | 饱和度目标调整工具                                                                                 |
+| `Ctrl` `Alt` `Shift` `L` | 明亮度目标调整工具                                                                                 |
+| `Ctrl` `Alt` `Shift` `G` | 灰度混合目标调整工具                                                                               |
+| `T`                      | 上次使用的目标调整工具                                                                             |
+| `K`                      | 调整画笔工具                                                                                       |
+| `G`                      | 渐变滤镜工具                                                                                       |
+| `Alt`                    | 调整画笔工具临时从添加模式切换到擦除模式，或从擦除模式切换到添加模式                                 |
+| `Alt` `]/[`              | 增大/减小临时调整画笔工具大小                                                                      |
+| `Alt` `Shift` `]/[`      | 增大/减小临时调整画笔工具羽化                                                                      |
+| `Alt` `=/-`              | 以 10 为增量增大/减小临时调整画笔工具流量                                                          |
+| `N`                      | 从调整画笔工具或渐变滤镜的添加或擦除模式切换到新建模式                                             |
+| `M`                      | 切换调整画笔工具的自动蒙版                                                                         |
+| `Y`                      | 切换调整画笔工具的显示蒙版                                                                         |
+| `V`                      | 切换调整画笔工具的图钉                                                                             |
+| `L`                      | 向左旋转图像                                                                                       |
+| `R`                      | 向右旋转图像                                                                                       |
+| `Ctrl`                   | 临时切换到放大工具                                                                                 |
+| `Alt`                    | 临时切换到缩小工具并将图像打开按钮更改为打开副本                                                     |
+| `P`                      | 切换预览                                                                                           |
+| `F`                      | 全屏模式                                                                                           |
+| `Shift`                  | 临时激活白平衡工具并将打开图像按钮更改为打开对象                                                     |
+| `Arrows`                 | 在曲线面板中移动选定点 1 像素                                                                      |
+| `Shift` `Arrows`         | 在曲线面板中移动选定点 10 像素                                                                     |
+| `Ctrl` `R`               | 从 Bridge 在 Camera Raw 对话框中打开选定的图像                                                     |
+| `O`                      | 高光修剪警告                                                                                       |
+| `U`                      | 阴影修剪警告                                                                                       |
+| `Ctrl` `1-5`             | 添加 1-5 星评级（胶片模式）                                                                        |
+| `Ctrl` `./,`             | 增加/减少评级（胶片模式）                                                                          |
+| `Ctrl` `6`               | 添加红色标签（胶片模式）                                                                           |
+| `Ctrl` `7`               | 添加黄色标签（胶片模式）                                                                           |
+| `Ctrl` `8`               | 添加绿色标签（胶片模式）                                                                           |
+| `Ctrl` `9`               | 添加蓝色标签（胶片模式）                                                                           |
+| `Ctrl` `Shift` `0`       | 添加紫色标签（胶片模式）                                                                           |
+| `Ctrl` `K`               | Camera Raw 首选项                                                                                  |
+| `Ctrl` `Alt`             | 删除 Adobe Camera Raw 首选项（打开时）                                                             |
 
 {.shortcuts}
 
-### Use the Black-and-White dialog box
+### 使用黑白对话框
 
-| Shortcut                 | Action                                  |
-| ------------------------ | --------------------------------------- |
-| `Ctrl` `Shift` `Alt` `B` | Open the Black-and-White dialog box     |
-| `Up/Down`                | Increase/decrease selected value by 1%  |
-| `Shift` `Up/Down`        | Increase/decrease selected value by 10% |
-
-{.shortcuts}
-
-### Use Curves
-
-| Shortcut         | Action                                 |
-| ---------------- | -------------------------------------- |
-| `Ctrl` `M`       | Open the Curves dialog box             |
-| `+`              | Select next point on the curve         |
-| `-`              | Select the previous point on the curve |
-| `Ctrl` `D`       | Deselect a point                       |
-| `Del`            | Delete a point on the curve            |
-| `Arrows`         | Move the selected point 1 pixel        |
-| `Shift` `Arrows` | Move the selected point 10 pixels      |
+| 快捷键                   | 操作                                     |
+| ------------------------ | ---------------------------------------- |
+| `Ctrl` `Shift` `Alt` `B` | 打开黑白对话框                           |
+| `Up/Down`                | 将所选值增加/减少 1%                     |
+| `Shift` `Up/Down`        | 将所选值增加/减少 10%                    |
 
 {.shortcuts}
 
-### Transform selections, selection borders, and paths
+### 使用曲线
 
-| Shortcut                 | Action                              |
-| ------------------------ | ----------------------------------- |
-| `Alt`                    | Transform from center or reflect    |
-| `Shift`                  | Constrain                           |
-| `Ctrl`                   | Distort                             |
-| `Enter`                  | Apply                               |
-| `Ctrl` `.`               | Cancel                              |
-| `Ctrl` `Alt` `T`         | Free transform with duplicate data  |
-| `Ctrl` `Shift` `Alt` `T` | Transform again with duplicate data |
-
-{.shortcuts}
-
-### Edit paths
-
-| Shortcut | Action                                                                                                                  |
-| -------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `Ctrl`   | Switch from path selection, pen, add anchor point, delete anchor point, or convert point tools to direct selection tool |
-| `Alt`    | Switch from pen tool to freeform pen tool to convert point tool when pointer is over anchor or direction point          |
+| 快捷键           | 操作                                     |
+| ---------------- | ---------------------------------------- |
+| `Ctrl` `M`       | 打开曲线对话框                           |
+| `+`              | 选择曲线上的下一个点                     |
+| `-`              | 选择曲线上的上一个点                     |
+| `Ctrl` `D`       | 取消选择一个点                           |
+| `Del`            | 删除曲线上的一个点                       |
+| `Arrows`         | 移动选定点 1 像素                        |
+| `Shift` `Arrows` | 移动选定点 10 像素                       |
 
 {.shortcuts}
 
-### Use for painting
+### 变换选区、选区边界和路径
 
-| Shortcut                 | Action                                               |
-| ------------------------ | ---------------------------------------------------- |
-| `Alt` `Shift` `0-9`      | Mixer brush changes mix setting                      |
-| `0-9`                    | Mixer brush changes wet setting                      |
-| `00`                     | Mixer brush changes wet and mix to zero              |
-| `Shift` `+/-`            | Cycle through blending modes                         |
-| `Backspace`              | Open fill dialog box on background or standard layer |
-| `Alt` `Backspace`        | Fill with foreground color                           |
-| `Ctrl` `Backspace`       | Fill with background color                           |
-| `Ctrl` `Alt` `Backspace` | Fill from history                                    |
-| `Shift` `Backspace`      | Displays fill dialog box                             |
-| `/`                      | Lock transparent pixels on/off                       |
+| 快捷键                   | 操作                                 |
+| ------------------------ | ------------------------------------ |
+| `Alt`                    | 从中心变换或反射                     |
+| `Shift`                  | 约束                                 |
+| `Ctrl`                   | 扭曲                                 |
+| `Enter`                  | 应用                                 |
+| `Ctrl` `.`               | 取消                                 |
+| `Ctrl` `Alt` `T`         | 使用重复数据自由变换                 |
+| `Ctrl` `Shift` `Alt` `T` | 再次使用重复数据变换                 |
 
 {.shortcuts}
 
-### Use for blending modes {.row-span-2}
+### 编辑路径
 
-| Shortcut          | Action                                                                        |
-| ----------------- | ----------------------------------------------------------------------------- |
-| `Ctrl` `-/+`      | Cycle through blending modes                                                  |
-| `Shift` `Alt` `N` | Normal                                                                        |
-| `Shift` `Alt` `I` | Dissolve                                                                      |
-| `Shift` `Alt` `Q` | Behind (brush tool only)                                                      |
-| `Shift` `Alt` `R` | Clear (brush tool only)                                                       |
-| `Shift` `Alt` `K` | Darken                                                                        |
-| `Shift` `Alt` `M` | Multiply                                                                      |
-| `Shift` `Alt` `B` | Color burn                                                                    |
-| `Shift` `Alt` `A` | Linear burn                                                                   |
-| `Shift` `Alt` `G` | Lighten                                                                       |
-| `Shift` `Alt` `S` | Screen                                                                        |
-| `Shift` `Alt` `D` | Color dodge                                                                   |
-| `Shift` `Alt` `W` | Linear dodge                                                                  |
-| `Shift` `Alt` `O` | Overlay                                                                       |
-| `Shift` `Alt` `F` | Soft light                                                                    |
-| `Shift` `Alt` `H` | Hard light                                                                    |
-| `Shift` `Alt` `V` | Vivid light                                                                   |
-| `Shift` `Alt` `J` | Linear light                                                                  |
-| `Shift` `Alt` `Z` | Pin light                                                                     |
-| `Shift` `Alt` `L` | Hard mix                                                                      |
-| `Shift` `Alt` `E` | Difference                                                                    |
-| `Shift` `Alt` `X` | Exclusion                                                                     |
-| `Shift` `Alt` `U` | Hue                                                                           |
-| `Shift` `Alt` `T` | Saturation                                                                    |
-| `Shift` `Alt` `C` | Color                                                                         |
-| `Shift` `Alt` `Y` | Luminosity                                                                    |
-| `Shift` `Alt` `N` | Set blending mode to Threshold for bitmap images, Normal for all other images |
+| 快捷键 | 操作                                                                                                       |
+| -------- | ---------------------------------------------------------------------------------------------------------- |
+| `Ctrl`   | 从路径选择、钢笔、添加锚点、删除锚点或转换点工具切换到直接选择工具                                         |
+| `Alt`    | 当指针位于锚点或方向点上时，从钢笔工具切换到自由钢笔工具再到转换点工具                                     |
 
 {.shortcuts}
 
-### Format type
+### 用于绘画
 
-| Shortcut                 | Action                                                             |
-| ------------------------ | ------------------------------------------------------------------ |
-| `Ctrl` `Shift` `L/C/R`   | Align left, center, or right                                       |
-| `Ctrl` `Shift` `X`       | Choose 100% horizontal scale                                       |
-| `Ctrl` `Shift` `Alt` `X` | Choose 100% vertical scale                                         |
-| `Ctrl` `Shift` `Alt` `A` | Choose auto leading                                                |
-| `Ctrl` `Shift` `Q`       | Choose 0 for tracking                                              |
-| `Ctrl` `Shift` `J`       | Justify paragraph, left aligns last line                           |
-| `Ctrl` `Shift` `F`       | Justify paragraph, justifies all                                   |
-| `Ctrl` `Shift` `Alt` `H` | Toggle paragraph hyphenation on/off                                |
-| `Ctrl` `Shift` `Alt` `T` | Toggle single/every-line composer on/off                           |
-| `Ctrl` `Shift` `</>`     | Decrease or increase type size of selected text 2 points or pixels |
-| `Alt` `Up/Down`          | Decrease or increase leading 2 points or pixels                    |
-| `Shift` `Alt` `Up/Down`  | Decrease or increase baseline shift 2 points or pixels             |
-| `Alt` `Left/Right`       | Decrease or increase kerning/tracking 20/1000 ems                  |
+| 快捷键                   | 操作                                                         |
+| ------------------------ | ------------------------------------------------------------ |
+| `Alt` `Shift` `0-9`      | 混合器画笔更改混合设置                                       |
+| `0-9`                    | 混合器画笔更改湿度设置                                       |
+| `00`                     | 混合器画笔将湿度和混合更改为零                               |
+| `Shift` `+/-`            | 循环切换混合模式                                             |
+| `Backspace`              | 在背景或标准图层上打开填充对话框                             |
+| `Alt` `Backspace`        | 用前景色填充                                                 |
+| `Ctrl` `Backspace`       | 用背景色填充                                                 |
+| `Ctrl` `Alt` `Backspace` | 从历史记录填充                                               |
+| `Shift` `Backspace`      | 显示填充对话框                                               |
+| `/`                      | 锁定/解锁透明像素                                            |
 
 {.shortcuts}
 
-### Use panels
+### 用于混合模式 {.row-span-2}
 
-| Shortcut          | Action                                                  |
-| ----------------- | ------------------------------------------------------- |
-| `Shift` `Enter`   | Apply value and keep text box active                    |
-| `Tab`             | Show/Hide all panels                                    |
-| `Shift` `Tab`     | Show/Hide all panels except the toolbox and options bar |
-| `Enter`           | Highlight options bar (select tool first)               |
-| `Shift` `Up/Down` | Increase/decrease selected values by 10                 |
+| 快捷键            | 操作                                                                         |
+| ----------------- | ------------------------------------------------------------------------------ |
+| `Ctrl` `-/+`      | 循环切换混合模式                                                               |
+| `Shift` `Alt` `N` | 正常                                                                           |
+| `Shift` `Alt` `I` | 溶解                                                                           |
+| `Shift` `Alt` `Q` | 背后（仅画笔工具）                                                             |
+| `Shift` `Alt` `R` | 清除（仅画笔工具）                                                             |
+| `Shift` `Alt` `K` | 变暗                                                                           |
+| `Shift` `Alt` `M` | 正片叠底                                                                       |
+| `Shift` `Alt` `B` | 颜色加深                                                                       |
+| `Shift` `Alt` `A` | 线性加深                                                                       |
+| `Shift` `Alt` `G` | 变亮                                                                           |
+| `Shift` `Alt` `S` | 滤色                                                                           |
+| `Shift` `Alt` `D` | 颜色减淡                                                                       |
+| `Shift` `Alt` `W` | 线性减淡                                                                       |
+| `Shift` `Alt` `O` | 叠加                                                                           |
+| `Shift` `Alt` `F` | 柔光                                                                           |
+| `Shift` `Alt` `H` | 强光                                                                           |
+| `Shift` `Alt` `V` | 亮光                                                                           |
+| `Shift` `Alt` `J` | 线性光                                                                         |
+| `Shift` `Alt` `Z` | 点光                                                                           |
+| `Shift` `Alt` `L` | 实色混合                                                                       |
+| `Shift` `Alt` `E` | 差值                                                                           |
+| `Shift` `Alt` `X` | 排除                                                                           |
+| `Shift` `Alt` `U` | 色相                                                                           |
+| `Shift` `Alt` `T` | 饱和度                                                                         |
+| `Shift` `Alt` `C` | 颜色                                                                           |
+| `Shift` `Alt` `Y` | 明度                                                                           |
+| `Shift` `Alt` `N` | 为位图图像设置混合模式为阈值，为所有其他图像设置混合模式为正常                 |
 
 {.shortcuts}
 
-### Use adjustment layers
+### 格式化文本
 
-| Shortcut    | Action                                  |
-| ----------- | --------------------------------------- |
-| `Alt` `3`   | Choose red channel for adjustment       |
-| `Alt` `4`   | Choose green channel for adjustment     |
-| `Alt` `5`   | Choose blue channel for adjustment      |
-| `Alt` `2`   | Choose composite channel for adjustment |
-| `Backspace` | Delete adjustment layer                 |
-
-{.shortcuts}
-
-### Use the Brush panel
-
-| Shortcut          | Action                                 |
-| ----------------- | -------------------------------------- |
-| `,/.`             | Select previous/next brush size        |
-| `Shift` `,/.`     | Select first/last brush                |
-| `Caps Lock`       | Display precise cross hair for brushes |
-| `Shift` `Alt` `P` | Toggle airbrush option                 |
+| 快捷键                   | 操作                                                                 |
+| ------------------------ | -------------------------------------------------------------------- |
+| `Ctrl` `Shift` `L/C/R`   | 左对齐、居中对齐或右对齐                                               |
+| `Ctrl` `Shift` `X`       | 选择 100% 水平缩放                                                   |
+| `Ctrl` `Shift` `Alt` `X` | 选择 100% 垂直缩放                                                   |
+| `Ctrl` `Shift` `Alt` `A` | 选择自动行距                                                         |
+| `Ctrl` `Shift` `Q`       | 选择 0 作为字距调整                                                  |
+| `Ctrl` `Shift` `J`       | 段落两端对齐，最后一行左对齐                                           |
+| `Ctrl` `Shift` `F`       | 段落两端对齐，所有行均两端对齐                                         |
+| `Ctrl` `Shift` `Alt` `H` | 打开/关闭段落连字                                                    |
+| `Ctrl` `Shift` `Alt` `T` | 打开/关闭单行/逐行书写器                                             |
+| `Ctrl` `Shift` `</>`     | 将所选文本的字号减小或增大 2 点或像素                                  |
+| `Alt` `Up/Down`          | 将行距减小或增大 2 点或像素                                          |
+| `Shift` `Alt` `Up/Down`  | 将基线偏移减小或增大 2 点或像素                                      |
+| `Alt` `Left/Right`       | 将字偶间距/字符间距减小或增大 20/1000 em                             |
 
 {.shortcuts}
 
-### Use the Clone Source panel
+### 使用面板
 
-| Shortcut                 | Action                                       |
+| 快捷键            | 操作                                                               |
+| ----------------- | ------------------------------------------------------------------ |
+| `Shift` `Enter`   | 应用值并保持文本框激活                                             |
+| `Tab`             | 显示/隐藏所有面板                                                  |
+| `Shift` `Tab`     | 显示/隐藏除工具箱和选项栏外的所有面板                              |
+| `Enter`           | 高亮选项栏（首先选择工具）                                         |
+| `Shift` `Up/Down` | 将所选值增加/减少 10                                               |
+
+{.shortcuts}
+
+### 使用调整图层
+
+| 快捷键      | 操作                                     |
+| ----------- | ---------------------------------------- |
+| `Alt` `3`   | 选择红色通道进行调整                     |
+| `Alt` `4`   | 选择绿色通道进行调整                     |
+| `Alt` `5`   | 选择蓝色通道进行调整                     |
+| `Alt` `2`   | 选择复合通道进行调整                     |
+| `Backspace` | 删除调整图层                             |
+
+{.shortcuts}
+
+### 使用画笔面板
+
+| 快捷键            | 操作                                     |
+| ----------------- | ---------------------------------------- |
+| `,/.`             | 选择上一个/下一个画笔大小                |
+| `Shift` `,/.`     | 选择第一个/最后一个画笔                  |
+| `Caps Lock`       | 为画笔显示精确十字光标                   |
+| `Shift` `Alt` `P` | 切换喷枪选项                             |
+
+{.shortcuts}
+
+### 使用仿制源面板
+
+| 快捷键                   | 操作                                         |
 | ------------------------ | -------------------------------------------- |
-| `Alt` `Shift`            | Show Clone Source (overlays iamge)           |
-| `Alt` `Shift` `(arrows)` | Nudge Clone Source                           |
-| `Alt` `Shift` `</>`      | Rotate Clone Source                          |
-| `Alt` `Shift` `[/]`      | Scale (increase or reduce size) Clone Source |
+| `Alt` `Shift`            | 显示仿制源（覆盖图像）                       |
+| `Alt` `Shift` `(arrows)` | 微移仿制源                                   |
+| `Alt` `Shift` `</>`      | 旋转仿制源                                   |
+| `Alt` `Shift` `[/]`      | 缩放（增大或减小尺寸）仿制源                 |
 
 {.shortcuts}
 
-### Use the Layers panel
+### 使用图层面板
 
-| Shortcut                 | Action                                                          |
-| ------------------------ | --------------------------------------------------------------- |
-| `Ctrl` `Shift` `N`       | New layer                                                       |
-| `Ctrl` `J`               | New layer via copy                                              |
-| `Ctrl` `Shift` `J`       | New layer via cut                                               |
-| `Ctrl` `G`               | Group layers                                                    |
-| `Ctrl` `Shift` `G`       | Ungroup layers                                                  |
-| `Ctrl` `Alt` `G`         | Create/release clipping mask                                    |
-| `Ctrl` `Alt` `A`         | Select all layers                                               |
-| `Ctrl` `Shift` `E`       | Merge visible layers                                            |
-| `Alt` `.`                | Select top layer                                                |
-| `Alt` `.`                | Select bottom layer                                             |
-| `Shift` `Alt` `[/]`      | Add to layer selection in Layers panel                          |
-| `Alt` `[/]`              | Select next layer down/up                                       |
-| `Ctrl` `[/]`             | Move target layer down/up                                       |
-| `Ctrl` `Shift` `Alt` `E` | Merge a copy of all visible layers into target layer            |
-| `Ctrl` `E`               | Merge layers (while layers are highlighted)                     |
-| `Ctrl` `Shift` `[/]`     | Move layer to bottom or top                                     |
-| `/`                      | Toggle lock transparency for target layer, or last applied lock |
-| `\`                      | Toggle rubylith mode for layer mask on/off                      |
+| 快捷键                   | 操作                                                               |
+| ------------------------ | ------------------------------------------------------------------ |
+| `Ctrl` `Shift` `N`       | 新建图层                                                           |
+| `Ctrl` `J`               | 通过拷贝新建图层                                                   |
+| `Ctrl` `Shift` `J`       | 通过剪切新建图层                                                   |
+| `Ctrl` `G`               | 图层编组                                                           |
+| `Ctrl` `Shift` `G`       | 取消图层编组                                                       |
+| `Ctrl` `Alt` `G`         | 创建/释放剪贴蒙版                                                  |
+| `Ctrl` `Alt` `A`         | 选择所有图层                                                       |
+| `Ctrl` `Shift` `E`       | 合并可见图层                                                       |
+| `Alt` `.`                | 选择顶层图层                                                       |
+| `Alt` `,`                | 选择底层图层  (注意：原文此处为 Alt . ，根据上下文应为 Alt ,)        |
+| `Shift` `Alt` `[/]`      | 在图层面板中添加到图层选择                                         |
+| `Alt` `[/]`              | 选择下一个向下/向上图层                                            |
+| `Ctrl` `[/]`             | 向下/向上移动目标图层                                              |
+| `Ctrl` `Shift` `Alt` `E` | 将所有可见图层的副本合并到目标图层                                 |
+| `Ctrl` `E`               | 合并图层（当图层高亮显示时）                                       |
+| `Ctrl` `Shift` `[/]`     | 将图层移至底部或顶部                                               |
+| `/`                      | 切换目标图层的锁定透明度，或上次应用的锁定                         |
+| `\`                      | 打开/关闭图层蒙版的红膜模式                                        |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Adobe Photoshop](https://helpx.adobe.com/photoshop/using/default-keyboard-shortcuts.html)
+- [Adobe Photoshop 键盘快捷键](https://helpx.adobe.com/photoshop/using/default-keyboard-shortcuts.html)
   _(helpx.adobe.com)_

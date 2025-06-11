@@ -6,61 +6,61 @@ tags:
   - container
   - virtual
 categories:
-  - Programming
+  - 编程
 intro: |
-  This is a quick reference cheat sheet for [Terraform](https://docs.docker.com/get-started/).
+  这是一个 [Terraform](https://docs.docker.com/get-started/) 的快速参考备忘单。
 plugins:
   - copyCode
 ---
 
-## HCL Syntax: {.cols-2}
+## HCL 语法：{.cols-2}
 
 ```
-(Block Name)  (Resource Type)  (Resource Name)
-      |           |                 |
-      ▽           ▽                 ▽
-  resource "aws_instance" "my_aws_server" {
-                                            --
-      ami           = "ami-1251351351513"    |<--(Arguments)
-      instance_type = "t2.micro"             |
-                                            --
+(块名称)    (资源类型)    (资源名称)
+    |           |             |
+    ▽           ▽             ▽
+resource "aws_instance" "my_aws_server" {
+                                        --
+    ami           = "ami-1251351351513"  |<--(参数)
+    instance_type = "t2.micro"           |
+                                        --
 
 }
 
 ```
 
-### Variable Types
+### 变量类型
 
-- Simple types: number, string, bool, null.
+- 简单类型：number, string, bool, null。
 
-- Complex types: Collection types: list, map, set Structural types: `object({<KEY> = <TYPE>, ...})`,
-  `tuple([<TYPE>, ...])`
+- 复杂类型：集合类型：list, map, set 结构类型：`object({<键> = <类型>, ...})`,
+  `tuple([<类型>, ...])`
 
-Order of Precedence: defaults < env vars < terraform.tfvars file < terraform.tfvars.json file < .auto.tfvars < command
-line (-var & -var-file)
+优先级顺序：defaults < 环境变量 < terraform.tfvars 文件 < terraform.tfvars.json 文件 < .auto.tfvars < 命令行
+(-var & -var-file)
 
 ```
-variable "<VAR NAME>" {
-    description = "<DESCRIPTION OF THE VAR>"
-    type        = <VAR TYPE>
-    default     = <DEFAULT VALUE>
+variable "<变量名>" {
+    description = "<变量描述>"
+    type        = <变量类型>
+    default     = <默认值>
 }
 
-# type string
+# 类型 string
 variable "aws_region" {
-    description = "AWS Region"
+    description = "AWS 区域"
     type        = string
     default     = "us-east-1"
 }
 
-# type list(string)
+# 类型 list(string)
 variable "azs" {
-    description = "AZs in the Region"
+    description = "区域中的可用区"
     type        = list(string)
     default     = [ "us-east-1a", "us-east-1b", "us-east-1c"]
 }
 
-# type map
+# 类型 map
 variable "amis" {
     type = map(string)
     default = {
@@ -69,7 +69,7 @@ variable "amis" {
     }
 }
 
-# type object
+# 类型 object
 variable "egress_dsg" {
     type = object({
         from_port = number
@@ -86,55 +86,55 @@ variable "egress_dsg" {
 }
 ```
 
-## Meta-Arguments
+## 元参数
 
-### Loops
+### 循环
 
 count, for_each, [for( o in var.list: o.id])
 
 ```
-# creating multiple EC2 instances using count
+# 使用 count 创建多个 EC2 实例
 resource "aws_instance" "server" {
   ami = "ami-06ec8443c2a35b0ba"
   instance_type = "t2.micro"
-  count = 3  # creating 3 resources
+  count = 3  # 创建 3 个资源
 }
 
-# declaring a variable
+# 声明一个变量
 variable "users" {
   type = list(string)
   default = ["demo-user", "admin1", "john"]
 }
 
-# creating IAM users using for_each
+# 使用 for_each 创建 IAM 用户
 resource "aws_iam_user" "test" {
-  for_each = toset(var.users) # converts a list to a set
+  for_each = toset(var.users) # 将列表转换为集合
   name = each.key
 }
 
-# A for expression creates a complex type value by transforming another complex type value.
+# for 表达式通过转换另一个复杂类型值来创建一个复杂类型值。
 variable "names" {
     type = list
     default = ["som", "john", "mary"]
 }
 
 output "show_names" {
-    # similar to Python's list comprehension
+    # 类似于 Python 的列表推导式
     value = [for n in var.names : upper(n)]
 }
 
 output "short_upper_names" {
-  # filter the resulting list by specifying a condition:
+  # 通过指定条件过滤结果列表：
   value = [for name in var.names : upper(name) if length(name) > 7]
 }
 ```
 
-### Splat
+### Splat 表达式
 
 `Splat(var.list[*].id)`
 
 ```
-# Launch an EC2 instance
+# 启动一个 EC2 实例
 resource "aws_instance" "server" {
   ami = "ami-05cafdf7c9f772ad2"
   instance_type = "t2.micro"
@@ -142,13 +142,13 @@ resource "aws_instance" "server" {
 }
 
 output "private_addresses"{
-  value = aws_instance.server[*].private_ip  # splat expression
+  value = aws_instance.server[*].private_ip  # splat 表达式
 }
 ```
 
 ### depends_on
 
-if two resources depends on each other, depends_on specifies that dependency to enforce ordering
+如果两个资源相互依赖，depends_on 指定该依赖关系以强制执行顺序
 
 ```
 resource "aws_iam_role_policy" "example" {
@@ -175,7 +175,7 @@ resource "aws_instance" "my_server" {
 
 ### lifecycle
 
-A set of meta arguments to control behavior specific resources
+一组用于控制特定资源行为的元参数
 
 ```
 resources "aws_instance" "server" {
@@ -185,8 +185,8 @@ resources "aws_instance" "server" {
   lifecycle {
     create_before_destroy = true
     ignore_changes = [
-      # Some resources have metadata
-      # modified automatically outside of TF
+      # 某些资源具有元数据
+      # 在 TF 外部自动修改
 
       tags
     ]
@@ -194,13 +194,13 @@ resources "aws_instance" "server" {
 }
 ```
 
-### Conditionals
+### 条件表达式
 
 `condition ? true_val : false_val`
 
-### Built-In functions
+### 内置函数
 
-| Function                                   | Result                  |
+| 函数                                     | 结果                    |
 | ------------------------------------------ | ----------------------- |
 | `max(5, 10, 9)`                            | 12                      |
 | `min(5, 10, 9)`                            | 5                       |
@@ -216,41 +216,40 @@ resources "aws_instance" "server" {
 | `cidr("10.1.2.240/28", 1)`                 | 10.1.2.241              |
 | `cidr("10.1.2.240/28", 14)`                | 10.1.2.254              |
 
-### Provider block
+### Provider 块
 
-Details of the provider(s) being used. Includes information like access mechanisms, regional options, profile touse etc.
+正在使用的提供程序的详细信息。包括访问机制、区域选项、要使用的配置文件等信息。
 
 ```
 provider "aws" {
   region = "us-east-1"
 }
 
-# Additional provider config reference as `aws.west`.
+# 附加的提供程序配置引用为 `aws.west`。
 provider "aws" {
   alias  = "west"
   region = "us-west-2"
 }
 ```
 
-### Requiring Providers
+### 请求提供程序
 
 ```
 terraform {
 
-  # required_providers block specifies source and version
+  # required_providers 块指定源和版本
   required_providers {
     aws = {
-      source  = "hashicorp/aws" # where to find the provider
-      version = "5.8.0" # which version of the provider is needed for this config
+      source  = "hashicorp/aws" # 在哪里找到提供程序
+      version = "5.8.0" # 此配置需要哪个版本的提供程序
     }
   }
 }
 ```
 
-### Locals block
+### Locals 块
 
-A local value assigns a name to an expression, so you can use the name multiple times within a module instead of
-repeating the expression
+本地值为表达式分配一个名称，因此您可以在模块中多次使用该名称，而不是重复表达式
 
 ```
 locals {
@@ -258,33 +257,33 @@ locals {
   owner        = "Community Team"
 }
 
-# once local declared you can reference it
+# 一旦声明了 local，就可以引用它
 locals {
   common_tags = {
     Service = local.service_name
     Owner   = local.owner
 ```
 
-### Output block
+### Output 块
 
 ```
 output "api_base_url" {
   value = "https://${aws_instance.example.private_dns}:8433/"
 
-  # The EC2 instance must have an encrypted root volume.
+  # EC2 实例必须具有加密的根卷。
   precondition {
     condition     = data.aws_ebs_volume.example.encrypted
-    error_message = "The server's root volume is not encrypted."
+    error_message = "服务器的根卷未加密。"
   }
 
-  # output can be marked as containing sensitive
-  sensitive = true # output can be marked as containing sensitive
+  # 输出可以标记为包含敏感信息
+  sensitive = true # 输出可以标记为包含敏感信息
 }
 ```
 
-### Data block
+### Data 块
 
-Data sources that can be queried (cloud provider, local list, etc.)
+可以查询的数据源（云提供商、本地列表等）
 
 ```
 data "aws_ami" "example" {
@@ -298,24 +297,24 @@ data "aws_ami" "example" {
 }
 ```
 
-### Modules
+### 模块
 
 ```
 module "myec2" {
   source = "../modules/ec2"
 
-  # module inputs
+  # 模块输入
   ami_id = var.ami_id
   instance_type = var.instance_type
   servers = var.servers
 }
 ```
 
-### Backends
+### 后端
 
-A backend defines where Terraform stores its state data files.
+后端定义了 Terraform 存储其状态数据文件的位置。
 
-Available backends: local(default), remote, azurerm, consul, cos, gcs, http, Kubernetes, oss, pg, s3
+可用后端：local(默认), remote, azurerm, consul, cos, gcs, http, Kubernetes, oss, pg, s3
 
 ```
 terraform {
@@ -329,101 +328,101 @@ terraform {
 }
 ```
 
-### Resource Addressing
+### 资源寻址
 
-| Example                                           | Description             |
-| ------------------------------------------------- | ----------------------- |
-| `[module path][resource info`                     | Resource path syntax    |
-| `module.<MODULE_PATH>[optional] module index`     | Module path syntax      |
-| `resource_type.user_defined_name[optional index]` | Resource spec syntax    |
-| `<RESOURCE_TYPE>.<NAME>`                          | List all images         |
-| `var.<NAME>`                                      | Input Variable          |
-| `local.<NAME>`                                    | Locals                  |
-| `module.<MODULE_NAME>`                            | Child module outputs    |
-| `data.<DATA TYPE>.<NAME>`                         | Data blocks             |
-| `path.module`                                     | Location of expresssion |
-| `path.root`                                       | Root Module location    |
-| `terraform.workspace`                             | Current workspace       |
+| 示例                                            | 描述                 |
+| ------------------------------------------------- | -------------------- |
+| `[模块路径][资源信息]`                             | 资源路径语法         |
+| `module.<模块路径>[可选] 模块索引`                  | 模块路径语法         |
+| `资源类型.用户定义名称[可选索引]`                    | 资源规范语法         |
+| `<资源类型>.<名称>`                               | 列出所有镜像         |
+| `var.<名称>`                                      | 输入变量             |
+| `local.<名称>`                                    | 本地变量             |
+| `module.<模块名称>`                               | 子模块输出           |
+| `data.<数据类型>.<名称>`                            | 数据块               |
+| `path.module`                                     | 表达式的位置         |
+| `path.root`                                       | 根模块位置           |
+| `terraform.workspace`                             | 当前工作区           |
 
 ---
 
 ## Terraform CLI
 
-<!-- I don't know what this means but it doesn't fit in a category and breaks the content -->
-<!-- I'm leaving it commented... -->
+<!-- 我不知道这是什么意思，但它不适合某个类别并且会破坏内容 -->
+<!-- 我把它注释掉了... -->
 
-<!-- Create/Edit TF config file -> init -> plan -> validate -> apply -> destroy -->
+<!-- 创建/编辑 TF 配置文件 -> init -> plan -> validate -> apply -> destroy -->
 
-### Initialization
+### 初始化
 
 ```sh
-terraform init [options]
+terraform init [选项]
 
-    -upgrade            # Install latest module & provider versions
-    -reconfigure        # reconfigure backend, ignoring any saved config
-    -backend=false      # Disable backend & use previous Initialization
-    -migrate-state      # reconfigure backend & attempt to migrate any existing state
+    -upgrade            # 安装最新的模块和提供程序版本
+    -reconfigure        # 重新配置后端，忽略任何已保存的配置
+    -backend=false      # 禁用后端并使用先前的初始化
+    -migrate-state      # 重新配置后端并尝试迁移任何现有状态
 ```
 
-### Planning
+### 计划
 
-Generates & review an execution plan
-
-```sh
-terraform plan [options]
-
-    -var 'user=john'    # set value for input vars in the root module of config
-    -var-file=filename  # load var values from the given file
-    -input=true         # ask for input for vars if not directly set
-    -out=path           # write a plan file to given path. can be used as input for "apply"
-    -refresh-only       # verifies remote object consistency without proposing actions to undo changes done outside TF
-    -destroy            # create plan to destroy all objects currenly managed
-    -target=resource    # target planning to given resouce & its dependencies only.
-
-terraform plan -refresh-only # updates state to match changes made outside of TF. Good for drift detection
-
-```
-
-### Validation
+生成并审查执行计划
 
 ```sh
-terraform validate      # Validates the config files for errors
+terraform plan [选项]
+
+    -var 'user=john'    # 为配置的根模块中的输入变量设置值
+    -var-file=filename  # 从给定文件加载变量值
+    -input=true         # 如果未直接设置，则请求输入变量
+    -out=path           # 将计划文件写入给定路径。可用作 "apply" 的输入
+    -refresh-only       # 验证远程对象的一致性，而不建议执行操作来撤消在 TF 外部所做的更改
+    -destroy            # 创建计划以销毁当前管理的所有对象
+    -target=resource    # 仅将计划目标限定为给定资源及其依赖项。
+
+terraform plan -refresh-only # 更新状态以匹配在 TF 外部所做的更改。适用于漂移检测
 
 ```
 
-### Apply
-
-Executes changes to infra
+### 验证
 
 ```sh
-terraform apply [options]
+terraform validate      # 验证配置文件是否存在错误
 
-    -auto-approve       # skip interactive approval of plan before applying
-    -replace            # force replacement of a particular resource instance
-    -var 'foo=bar'      # set a value for input vars in the root module of config
-    -var-file=filename  # load var values from the given file
-    -parallelism=n      # limit the no of concurrent operations. Default=10
+```
+
+### 应用
+
+执行对基础架构的更改
+
+```sh
+terraform apply [选项]
+
+    -auto-approve       # 在应用前跳过计划的交互式批准
+    -replace            # 强制替换特定资源实例
+    -var 'foo=bar'      # 为配置的根模块中的输入变量设置值
+    -var-file=filename  # 从给定文件加载变量值
+    -parallelism=n      # 限制并发操作的数量。默认=10
 
 terraform apply -auto-approve var-file=web-dev.tfvars
 terraform apply -replace="aws_instance.server"
-terraform plan -refresh-only # Updates statefile to accept changes made manually.
+terraform plan -refresh-only # 更新状态文件以接受手动进行的更改。
 ```
 
-### Destroy
+### 销毁
 
-Destroy (deletes) Terraform managed infra. Same as `terraform apply -destroy `
+销毁（删除）Terraform 管理的基础架构。与 `terraform apply -destroy` 相同
 
 ```sh
-terraform destroy [options]
+terraform destroy [选项]
 
-    -auto-approve        # skip interactive approval before destroying
-    -target              # limits destroy to only given resource & its dependencies
+    -auto-approve        # 在销毁前跳过交互式批准
+    -target              # 仅将销毁限制为给定资源及其依赖项
 
 
 terraform destroy -target aws_vpc.my_vpc -auto-approve
 ```
 
-Miscellaneous
+杂项
 
 ```sh
 terraform state show aws_instance.my_vm
@@ -437,17 +436,18 @@ sudo apt install graphviz
 terraform graph | dot -Tpng > graph.png
 ```
 
-Logging
+日志记录
 
-log levels = TRACE > DEBUG > INFO > WARN > ERROR
+日志级别 = TRACE > DEBUG > INFO > WARN > ERROR
 
 ```sh
-export TF_LOG_CORE=TRACE     # enable core logging
-export TF_LOG_PROVIDER=TRACE # enable provider logging
-export TF_LOG_PATH=logs.txt  # to persist logs
+export TF_LOG_CORE=TRACE     # 启用核心日志记录
+export TF_LOG_PROVIDER=TRACE # 启用提供程序日志记录
+export TF_LOG_PATH=logs.txt  # 持久化日志
 ```
 
-## Also See
+## 另请参阅
 
-- [Docs](https://developer.hashicorp.com/terraform/language)
-- [Good FCC Article](https://www.freecodecamp.org/news/terraform-certified-associate-003-study-notes/)
+- [文档](https://developer.hashicorp.com/terraform/language)
+- [不错的 FCC 文章](https://www.freecodecamp.org/news/terraform-certified-associate-003-study-notes/)
+

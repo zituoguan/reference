@@ -3,124 +3,124 @@ title: Tmux
 date: 2021-02-20 14:31:24
 background: bg-emerald-600
 tags:
-  - utility
-  - terminal
-  - session
+  - 实用工具
+  - 终端
+  - 会话
 categories:
-  - Linux Command
+  - Linux 命令
 intro: |
-  The tmux cheat sheet quick reference of most commonly used shortcuts and commands
+  Tmux 快捷键和常用命令速查表。
 plugins:
   - copyCode
 ---
 
-## Tmux CLI
+## Tmux 命令行界面
 
-### New session {.row-span-2}
+### 新建会话 {.row-span-2}
 
-Start a new session
+启动一个新会话
 
 ```shell script
 $ tmux
 ```
 
-Start a new named session
+启动一个命名的新会话
 
 ```shell script
 $ tmux new -s myname
 ```
 
-Show all sessions
+显示所有会话
 
 ```shell script
 $ tmux ls
 ```
 
-### Attach session
+### 附加会话
 
-Attach to last session
+附加到上一个会话
 
 ```shell script
 $ tmux a
 ```
 
-Attach to named
+附加到指定名称的会话
 
 ```shell script
 $ tmux a -t myname
 ```
 
-### Kill session {.row-span-2}
+### 终止会话 {.row-span-2}
 
-Kill a session by name
+按名称终止会话
 
 ```shell script
 $ tmux kill-ses -t myname
 ```
 
-Kill sessions but the current
+终止除当前会话外的所有会话
 
 ```shell script
 $ tmux kill-ses -a
 ```
 
-Kill sessions but 'myname'
+终止除 'myname' 会话外的所有会话
 
 ```shell script
 $ tmux kill-ses -a -t myname
 ```
 
-### Tmux help
+### Tmux 帮助
 
 ```shell script
 $ tmux info
 ```
 
-### Config
+### 配置
 
-Reload config
+重新加载配置
 
 ```shell script
 $ tmux source-file ~/.tmu­x.conf
 ```
 
-Show config
+显示配置
 
 ```shell script
 $ tmux show-options -g
 ```
 
-### Copy Mode
+### 复制模式
 
-| Command      | Description                |
+| 命令         | 描述                   |
 | ------------ | -------------------------- |
-| `Ctrl+b` `[` | Enter copy mode            |
-| `<Space>`    | Start selection            |
-| `Enter`      | Copy selection             |
-| `q`          | Quit copy mode             |
-| `Ctrl+b` `]` | Paste contents of buffer_0 |
+| `Ctrl+b` `[` | 进入复制模式               |
+| `<Space>`    | 开始选择                   |
+| `Enter`      | 复制选中内容               |
+| `q`          | 退出复制模式               |
+| `Ctrl+b` `]` | 粘贴缓冲区0的内容          |
 
 -------------
-For tmux version 3.5a on MacOS 15.3.1 Sequoia 'Copy Mode' functions lil bit differently
-Below I've written the differences
-| Command            | Description                |
+在 MacOS 15.3.1 Sequoia 上的 tmux 3.5a 版本中，“复制模式”的功能略有不同。
+下面我写出了不同之处：
+| 命令            | 描述                   |
 | ------------       | -------------------------- |
-| `Ctrl + <Space>`   | Start selection            |
-| `Ctrl + w`         | Copy selection             |
+| `Ctrl + <Space>`   | 开始选择                   |
+| `Ctrl + w`         | 复制选中内容               |
 
 -------------
 
 {.shortcuts}
 
-Mainly works like selecting text in [Vim](/vim#motions)
+主要操作方式类似于在 [Vim](/vim#motions) 中选择文本。
 
-## Tmux shortcuts
+## Tmux 快捷键
 
-### Getting started {.secondary}
+### 入门 {.secondary}
 
-| Shortcuts    | Description        |
+| 快捷键       | 描述           |
 | ------------ | ------------------ |
-| `Ctrl+b` `?` | List all shortcuts |
+| `Ctrl+b` `?` | 列出所有快捷键     |
 
 {.shortcuts .show-header}
 
@@ -128,110 +128,111 @@ Mainly works like selecting text in [Vim](/vim#motions)
 
 ---
 
-Show every session, window, pane, etc.
+显示每个会话、窗口、窗格等。
 
 ```shell script
 $ tmux info
 ```
 
-### Panes (Splits) {.row-span-2}
+### 窗格 (分割) {.row-span-2}
 
-| Shortcuts              | Description        |
+| 快捷键                 | 描述               |
 | ---------------------- | ------------------ |
-| `Ctrl+b` `"` _/_ `%`   | Split Horiz/Vert   |
-| `Ctrl+b` `!`           | Pane -> Window     |
-| `Ctrl+b` `x`           | Kill pane          |
-| `Ctrl+b` <Arrow\>      | Navigate panes     |
-| `Ctrl+b` <Space\>      | Toggle layouts     |
-| `Ctrl+b` `{` _/_ `}`   | Move to Left/Right |
-| `Ctrl+b` `o`           | Go to next panes   |
-| `Ctrl+b` `z`           | Toggle full-screen |
-| `Ctrl+b` `;`           | Toggle Last pane   |
-| `Ctrl+b` `q`           | Show numbers       |
-| `Ctrl+b` `q` `0`...`9` | Go to # pane       |
+| `Ctrl+b` `"` _/_ `%`   | 水平/垂直分割      |
+| `Ctrl+b` `!`           | 窗格 -> 窗口       |
+| `Ctrl+b` `x`           | 关闭窗格           |
+| `Ctrl+b` <方向键\>     | 导航窗格           |
+| `Ctrl+b` <Space\>      | 切换布局           |
+| `Ctrl+b` `{` _/_ `}`   | 移动到左侧/右侧    |
+| `Ctrl+b` `o`           | 转到下一个窗格     |
+| `Ctrl+b` `z`           | 切换全屏           |
+| `Ctrl+b` `;`           | 切换到上一个窗格   |
+| `Ctrl+b` `q`           | 显示编号           |
+| `Ctrl+b` `q` `0`...`9` | 转到编号 # 的窗格  |
 
 {.shortcuts}
 
-### Window (Tabs) {.row-span-2}
+### 窗口 (标签页) {.row-span-2}
 
 | -                    | -                    |
 | -------------------- | -------------------- |
-| `Ctrl+b` `c`         | Create window        |
-| `Ctrl+b` `p` _/_ `n` | Previous/Next window |
-| `Ctrl+b` `"` _/_ `%` | Split Horiz/Vert     |
-| `Ctrl+b` `w`         | List window          |
-| `Ctrl+b` `,`         | Rename window        |
-| `Ctrl+b` `f`         | Find window          |
-| `Ctrl+b` `l`         | Last window          |
-| `Ctrl+b` `.`         | Move window          |
-| `Ctrl+b` `&`         | Close window         |
-| `Ctrl+b` `0`...`9`   | Go to # window       |
+| `Ctrl+b` `c`         | 创建窗口             |
+| `Ctrl+b` `p` _/_ `n` | 上一个/下一个窗口    |
+| `Ctrl+b` `"` _/_ `%` | 水平/垂直分割      |
+| `Ctrl+b` `w`         | 列出窗口             |
+| `Ctrl+b` `,`         | 重命名窗口           |
+| `Ctrl+b` `f`         | 查找窗口             |
+| `Ctrl+b` `l`         | 上一个窗口           |
+| `Ctrl+b` `.`         | 移动窗口             |
+| `Ctrl+b` `&`         | 关闭窗口             |
+| `Ctrl+b` `0`...`9`   | 转到编号 # 的窗口    |
 
 {.shortcuts}
 
-### Session (Set of Windows)
+### 会话 (窗口集合)
 
 | -                    | -                              |
 | -------------------- | ------------------------------ |
-| `Ctrl+b` `d`         | <red>Detach from session</red> |
-| `Ctrl+b` `s`         | Show all sessions              |
-| `Ctrl+b` `$`         | Rename session                 |
-| `Ctrl+b` `(` _/_ `)` | Previous/Next session          |
+| `Ctrl+b` `d`         | <red>从会话中分离</red>        |
+| `Ctrl+b` `s`         | 显示所有会话                   |
+| `Ctrl+b` `$`         | 重命名会话                     |
+| `Ctrl+b` `(` _/_ `)` | 上一个/下一个会话              |
 
 {.shortcuts}
 
-## Tmux Command Mode
+## Tmux 命令模式
 
-### Usage {.secondary}
+### 用法 {.secondary}
 
-| Command      | Description        |
+| 命令         | 描述           |
 | ------------ | ------------------ |
-| `Ctrl+b` `:` | Enter command mode |
+| `Ctrl+b` `:` | 进入命令模式       |
 
 {.shortcuts}
 
-### Resizing
+### 调整大小
 
-| Command             | Description  |
+| 命令                | 描述     |
 | ------------------- | ------------ |
-| `resize-pane -D 20` | Resize down  |
-| `resize-pane -U 20` | Resize up    |
-| `resize-pane -L 20` | Resize left  |
-| `resize-pane -R 20` | Resize right |
+| `resize-pane -D 20` | 向下调整大小 |
+| `resize-pane -U 20` | 向上调整大小 |
+| `resize-pane -L 20` |向左调整大小 |
+| `resize-pane -R 20` |向右调整大小 |
 
-### Listing
+### 列表
 
-| Command        | Description  |
+| 命令           | 描述     |
 | -------------- | ------------ |
-| `list-keys`    | All commands |
-| `list-panes`   | All panes    |
-| `list-windows` | All Windows  |
+| `list-keys`    | 所有命令   |
+| `list-panes`   | 所有窗格   |
+| `list-windows` | 所有窗口   |
 
-### Copying
+### 复制
 
-| Command              | Description      |
+| 命令                 | 描述         |
 | -------------------- | ---------------- |
-| `list-buffers`       | List all buffers |
-| `show-buffer`        | Show #0 contents |
-| `capture-pane`       | Copy of pane     |
-| `choose-buffer`      | Show and paste   |
-| `save-buffer a.txt`  | Save to file     |
-| `delete-buffer -b 1` | Delete buffer 1  |
+| `list-buffers`       | 列出所有缓冲区   |
+| `show-buffer`        | 显示 #0 的内容   |
+| `capture-pane`       | 复制窗格内容     |
+| `choose-buffer`      | 显示并粘贴       |
+| `save-buffer a.txt`  | 保存到文件       |
+| `delete-buffer -b 1` | 删除缓冲区 1     |
 
-### Setting
+### 设置
 
-| Command                | Description          |
+| 命令                   | 描述             |
 | ---------------------- | -------------------- |
-| `set -g OPTION`        | Set for all sessions |
-| `setw -g OPTION`       | Set for all windows  |
-| `setw -g mode-keys vi` | Enable vi-mode       |
-| `set -g prefix C-a`    | Set prefix           |
+| `set -g OPTION`        | 为所有会话设置       |
+| `setw -g OPTION`       | 为所有窗口设置       |
+| `setw -g mode-keys vi` | 启用 vi 模式         |
+| `set -g prefix C-a`    | 设置前缀             |
 
-### Misc
+### 杂项
 
-| Command                  | Description  |
+| 命令                     | 描述         |
 | ------------------------ | ------------ |
-| `swap-pane -s 3 -t 1`    | Swap pane    |
-| `swap-window -t -1`      | Move to left |
-| `setw synchronize-panes` | Sync Panes   |
-| `join-pane -t :#`        | Join pane    |
+| `swap-pane -s 3 -t 1`    | 交换窗格     |
+| `swap-window -t -1`      | 向左移动窗口 |
+| `setw synchronize-panes` | 同步窗格     |
+| `join-pane -t :#`        | 合并窗格     |
+

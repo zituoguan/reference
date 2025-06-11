@@ -8,271 +8,271 @@ tags:
     - server
     - container
 categories:
-    - Operating System
-intro: A comprehensive cheatsheet for Alpine Linux, covering package management, system administration, networking, and more. Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.
+    - 操作系统
+intro: Alpine Linux 综合速查表，涵盖包管理、系统管理、网络等。Alpine Linux 是一个基于 musl libc 和 busybox 的、面向安全的轻量级 Linux 发行版。
 ---
 
-# Alpine Linux Cheatsheet
+# Alpine Linux 速查表
 
-## Package Management (apk)
+## 包管理 (apk)
 
-### Basic Package Operations
+### 基本包操作
 ```bash
-# Update package index
+# 更新包索引
 apk update
 
-# Upgrade all installed packages
+# 升级所有已安装的包
 apk upgrade
 
-# Install a package
+# 安装一个包
 apk add <package-name>
 
-# Remove a package
+# 移除一个包
 apk del <package-name>
 
-# Search for a package
+# 搜索一个包
 apk search <package-name>
 
-# Show package info
+# 显示包信息
 apk info <package-name>
 
-# List all installed packages
+# 列出所有已安装的包
 apk list --installed
 ```
 
-### Advanced Package Operations
+### 高级包操作
 ```bash
-# Add package from testing repository
+# 从测试仓库添加包
 apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing <package-name>
 
-# Add multiple packages
+# 添加多个包
 apk add package1 package2 package3
 
-# Clean package cache
+# 清理包缓存
 apk cache clean
 ```
 
-## System Administration
+## 系统管理
 
-### Service Management (OpenRC)
+### 服务管理 (OpenRC)
 ```bash
-# Start a service
+# 启动一个服务
 rc-service <service-name> start
 
-# Stop a service
+# 停止一个服务
 rc-service <service-name> stop
 
-# Restart a service
+# 重启一个服务
 rc-service <service-name> restart
 
-# Add service to default runlevel
+# 将服务添加到默认运行级别
 rc-update add <service-name> default
 
-# Remove service from default runlevel
+# 从默认运行级别移除服务
 rc-update del <service-name> default
 
-# List all services
+# 列出所有服务
 rc-status
 ```
 
-### System Information
+### 系统信息
 ```bash
-# Show system information
+# 显示系统信息
 uname -a
 
-# Show disk usage
+# 显示磁盘使用情况
 df -h
 
-# Show memory usage
+# 显示内存使用情况
 free -h
 
-# Show running processes
+# 显示运行中的进程
 ps aux
 
-# Show system uptime
+# 显示系统运行时间
 uptime
 ```
 
-### Network Configuration
+### 网络配置
 ```bash
-# Show network interfaces
+# 显示网络接口
 ip addr show
 
-# Configure network interface
+# 配置网络接口
 setup-interfaces
 
-# Test network connectivity
+# 测试网络连接
 ping -c 4 google.com
 
-# Show routing table
+# 显示路由表
 ip route show
 
-# Edit network configuration
+# 编辑网络配置
 vi /etc/network/interfaces
 ```
 
-### User Management
+### 用户管理
 ```bash
-# Add a new user
+# 添加一个新用户
 adduser <username>
 
-# Add user to group
+# 将用户添加到组
 addgroup <username> <groupname>
 
-# Change password
+# 更改密码
 passwd <username>
 
-# Delete user
+# 删除用户
 deluser <username>
 
-# List all users
+# 列出所有用户
 cat /etc/passwd
 ```
 
-## File System Operations
+## 文件系统操作
 
-### Basic File Operations
+### 基本文件操作
 ```bash
-# Create directory
+# 创建目录
 mkdir <directory-name>
 
-# Remove directory
+# 移除目录
 rm -r <directory-name>
 
-# Copy files
+# 复制文件
 cp <source> <destination>
 
-# Move/rename files
+# 移动/重命名文件
 mv <source> <destination>
 
-# Change permissions
+# 更改权限
 chmod <permissions> <file>
 
-# Change ownership
+# 更改所有权
 chown <user>:<group> <file>
 ```
 
-## Container Operations
+## 容器操作
 
-### Docker Support
+### Docker 支持
 ```bash
-# Install Docker
+# 安装 Docker
 apk add docker
 
-# Start Docker service
+# 启动 Docker 服务
 rc-service docker start
 
-# Enable Docker at boot
+# 开机启动 Docker
 rc-update add docker default
 ```
 
-## System Maintenance
+## 系统维护
 
-### Disk Operations
+### 磁盘操作
 ```bash
-# Check disk space
+# 检查磁盘空间
 df -h
 
-# Check directory size
+# 检查目录大小
 du -sh <directory>
 
-# Mount a device
+# 挂载设备
 mount /dev/<device> /mnt/<mountpoint>
 
-# Unmount a device
+# 卸载设备
 umount /mnt/<mountpoint>
 ```
 
-### Backup and Restore
+### 备份与恢复
 ```bash
-# Create tar archive
+# 创建 tar 归档文件
 tar -czf backup.tar.gz /path/to/backup
 
-# Extract tar archive
+# 解压 tar 归档文件
 tar -xzf backup.tar.gz
 
-# Create system backup (root required)
+# 创建系统备份 (需要 root 权限)
 lbu package /media/backup.apkovl.tar.gz
 ```
 
-## Tips and Tricks
+## 提示与技巧
 
-### Common Configuration Files
-- `/etc/apk/repositories` - Package repositories
-- `/etc/network/interfaces` - Network configuration
-- `/etc/hostname` - System hostname
-- `/etc/hosts` - Host mappings
-- `/etc/resolv.conf` - DNS configuration
+### 常用配置文件
+- `/etc/apk/repositories` - 包仓库
+- `/etc/network/interfaces` - 网络配置
+- `/etc/hostname` - 系统主机名
+- `/etc/hosts` - 主机映射
+- `/etc/resolv.conf` - DNS 配置
 
-### Environment Variables
+### 环境变量
 ```bash
-# Set environment variable
+# 设置环境变量
 export VARIABLE=value
 
-# View all environment variables
+# 查看所有环境变量
 env
 
-# Add permanent environment variable
+# 添加永久环境变量
 echo "export VARIABLE=value" >> ~/.profile
 ```
 
-### System Logs
+### 系统日志
 ```bash
-# View system logs
+# 查看系统日志
 less /var/log/messages
 
-# View boot messages
+# 查看启动信息
 dmesg
 
-# Follow log in real-time
+# 实时跟踪日志
 tail -f /var/log/messages
 ```
 
-## Security
+## 安全
 
-### Firewall (using iptables)
+### 防火墙 (使用 iptables)
 ```bash
-# Install iptables
+# 安装 iptables
 apk add iptables
 
-# Allow SSH (port 22)
+# 允许 SSH (端口 22)
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 
-# Save iptables rules
+# 保存 iptables 规则
 /etc/init.d/iptables save
 
-# Restore iptables rules
+# 恢复 iptables 规则
 /etc/init.d/iptables restart
 ```
 
-### SSH Configuration
+### SSH 配置
 ```bash
-# Generate SSH key
+# 生成 SSH 密钥
 ssh-keygen -t rsa -b 4096
 
-# Copy SSH key to remote server
+# 将 SSH 密钥复制到远程服务器
 ssh-copy-id user@remote-server
 
-# Edit SSH configuration
+# 编辑 SSH 配置
 vi /etc/ssh/sshd_config
 ```
 
-## Troubleshooting
+## 故障排除
 
-### Common Commands
+### 常用命令
 ```bash
-# Check system logs for errors
+# 检查系统日志中的错误
 dmesg | grep -i error
 
-# Check service status
+# 检查服务状态
 rc-service <service-name> status
 
-# Check system resource usage
+# 检查系统资源使用情况
 top
 
-# Check network connections
+# 检查网络连接
 netstat -tuln
 
-# Check disk health
-smartctl -a /dev/sda  # Requires smartmontools package
-``` 
+# 检查磁盘健康状况 (需要 smartmontools 包)
+smartctl -a /dev/sda
+```

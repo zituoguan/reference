@@ -3,33 +3,33 @@ title: Java
 date: 2021-03-10 19:50:01
 background: bg-[#d33731]
 tags:
-  - object-oriented
-  - class
+  - 面向对象
+  - 类
 categories:
-  - Programming
+  - 编程
 intro: |
-  This cheat sheet is a crash course for Java beginners and help review the basic syntax of the Java language.
+  本速查表是为 Java初学者准备的速成课程，有助于回顾 Java 语言的基本语法。
 plugins:
   - tooltip
   - copyCode
 ---
 
-## Getting Started
+## 入门
 
 ### Hello.java {.row-span-2}
 
 ```java
 public class Hello {
-  // main method
+  // main 方法
   public static void main(String[] args)
   {
-    // Output: Hello, world!
+    // 输出: Hello, world!
     System.out.println("Hello, world!");
   }
 }
 ```
 
-Compiling and running
+编译和运行
 
 ```bash
 $ javac Hello.java
@@ -37,32 +37,32 @@ $ java Hello
 Hello, world!
 ```
 
-### Variables
+### 变量
 
 ```java
 int num = 5;
 float floatNum = 5.99f;
 char letter = 'D';
 boolean bool = true;
-String site = "cheatsheets.zip";
+String site = "r3f.cn";
 ```
 
-### Primitive Data Types {.row-span-2}
+### 基本数据类型 {.row-span-2}
 
-| Data Type | Size   | Default | Range               |
+| 数据类型  | 大小   | 默认值  | 范围                |
 | --------- | ------ | ------- | :------------------ |
-| `byte`    | 1 byte | 0       | -128 ^to^ 127       |
-| `short`   | 2 byte | 0       | -2^15^ ^to^ 2^15^-1 |
-| `int`     | 4 byte | 0       | -2^31^ ^to^ 2^31^-1 |
-| `long`    | 8 byte | 0       | -2^63^ ^to^ 2^63^-1 |
-| `float`   | 4 byte | 0.0f    | _N/A_               |
-| `double`  | 8 byte | 0.0d    | _N/A_               |
-| `char`    | 2 byte | \\u0000 | 0 ^to^ 65535        |
+| `byte`    | 1 字节 | 0       | -128 到 127         |
+| `short`   | 2 字节 | 0       | -2^15^ 到 2^15^-1   |
+| `int`     | 4 字节 | 0       | -2^31^ 到 2^31^-1   |
+| `long`    | 8 字节 | 0       | -2^63^ 到 2^63^-1   |
+| `float`   | 4 字节 | 0.0f    | _N/A_               |
+| `double`  | 8 字节 | 0.0d    | _N/A_               |
+| `char`    | 2 字节 | \\u0000 | 0 到 65535          |
 | `boolean` | _N/A_  | false   | true / false        |
 
 {.show-header}
 
-### Strings
+### 字符串
 
 ```java
 String first = "John";
@@ -71,21 +71,21 @@ String name = first + " " + last;
 System.out.println(name);
 ```
 
-See: [Strings](#java-strings)
+参见: [字符串](#java-strings)
 
-### Loops
+### 循环
 
 ```java
 String word = "CheatSheets";
 for (char c: word.toCharArray()) {
   System.out.print(c + "-");
 }
-// Outputs: C-h-e-a-t-S-h-e-e-t-s-
+// 输出: C-h-e-a-t-S-h-e-e-t-s-
 ```
 
-See: [Loops](#java-loops)
+参见: [循环](#java-loops)
 
-### Arrays
+### 数组
 
 ```java
 char[] chars = new char[10];
@@ -97,9 +97,9 @@ int[] mylist = {100, 200};
 boolean[] answers = {true, false};
 ```
 
-See: [Arrays](#java-arrays)
+参见: [数组](#java-arrays)
 
-### Swap
+### 交换
 
 ```java
 int a = 1;
@@ -112,15 +112,15 @@ b = temp;
 System.out.println(a + " " + b); // 2 1
 ```
 
-### Type Casting
+### 类型转换
 
 ```java
-// Widening
+// 拓宽转换
 // byte<short<int<long<float<double
 int i = 10;
 long l = i;               // 10
 
-// Narrowing
+// 窄化转换
 double d = 10.02;
 long l = (long)d;         // 10
 
@@ -129,23 +129,23 @@ Integer.parseInt("10");   // 10
 Double.parseDouble("10"); // 10.0
 ```
 
-### Conditionals
+### 条件语句
 
 ```java
 int j = 10;
 
 if (j == 10) {
-  System.out.println("I get printed");
+  System.out.println("我会打印");
 } else if (j > 10) {
-  System.out.println("I don't");
+  System.out.println("我不会");
 } else {
-  System.out.println("I also don't");
+  System.out.println("我也不会");
 }
 ```
 
-See: [Conditionals](#java-conditionals)
+参见: [条件语句](#java-conditionals)
 
-### User Input
+### 用户输入
 
 ```java
 Scanner in = new Scanner(System.in);
@@ -156,9 +156,9 @@ int num = in.nextInt();
 System.out.println(num);
 ```
 
-## Java Strings
+## Java 字符串
 
-### Basic
+### 基本操作
 
 ```java
 String str1 = "value";
@@ -166,7 +166,7 @@ String str2 = new String("value");
 String str3 = String.valueOf(123);
 ```
 
-### Concatenation
+### 连接
 
 ```java
 String s = 3 + "str" + 3;     // 3str3
@@ -174,7 +174,7 @@ String s = 3 + 3 + "str";     // 6str
 String s = "3" + 3 + "str";   // 33str
 String s = "3" + "3" + "23";  // 3323
 String s = "" + 3 + 3 + "23"; // 3323
-String s = 3 + 3 + 23;        // Incompatible types
+String s = 3 + 3 + 23;        // 类型不兼容
 ```
 
 ### StringBuilder {.row-span-3}
@@ -224,11 +224,11 @@ String s = 3 + 3 + 23;        // Incompatible types
 0   1   2   3   4   5   6   7   8   9
 ```
 
-### Comparison
+### 比较
 
 ```java
-String s1 = new String("cheatsheets.zip");
-String s2 = new String("cheatsheets.zip");
+String s1 = new String("r3f.cn");
+String s2 = new String("r3f.cn");
 
 s1 == s2          // false
 s1.equals(s2)     // true
@@ -236,7 +236,7 @@ s1.equals(s2)     // true
 "AB".equalsIgnoreCase("ab")  // true
 ```
 
-### Manipulation
+### 操作
 
 ```java
 String str = "Abcd";
@@ -250,7 +250,7 @@ str.replace("b", "-"); // A-cd
 "ab".toCharArray();    // {'a', 'b'}
 ```
 
-### Information
+### 信息
 
 ```java
 String str = "abcd";
@@ -268,13 +268,13 @@ str.startsWith("a"); // true
 str.isEmpty();       // false
 ```
 
-### Immutable
+### 不可变性
 
 ```java
 String str = "hello";
 str.concat("world");
 
-// Outputs: hello
+// 输出: hello
 System.out.println(str);
 ```
 
@@ -284,15 +284,15 @@ System.out.println(str);
 String str = "hello";
 String concat = str.concat("world");
 
-// Outputs: helloworld
+// 输出: helloworld
 System.out.println(concat);
 ```
 
-Once created cannot be modified, any modification creates a new String
+一旦创建就不能修改，任何修改都会创建一个新的字符串
 
-## Java Arrays
+## Java 数组
 
-### Declare
+### 声明
 
 ```java
 int[] a1;
@@ -305,7 +305,7 @@ a4[2] = 2;
 a4[3] = 3;
 ```
 
-### Modify
+### 修改
 
 ```java
 int[] a = {1, 2, 3};
@@ -317,7 +317,7 @@ System.out.println(a[0]); // 9
 System.out.println(a.length); // 3
 ```
 
-### Loop (Read & Modify)
+### 循环 (读写)
 
 ```java
 int[] arr = {1, 2, 3};
@@ -325,20 +325,20 @@ for (int i=0; i < arr.length; i++) {
     arr[i] = arr[i] * 2;
     System.out.print(arr[i] + " ");
 }
-// Outputs: 2 4 6
+// 输出: 2 4 6
 ```
 
-### Loop (Read)
+### 循环 (只读)
 
 ```java
 String[] arr = {"a", "b", "c"};
 for (String a: arr) {
     System.out.print(a + " ");
 }
-// Outputs: a b c
+// 输出: a b c
 ```
 
-### Multidimensional Arrays
+### 多维数组
 
 ```java
 int[][] matrix = { {1, 2, 3}, {4, 5} };
@@ -353,10 +353,10 @@ for (int i = 0; i < a.length; ++i) {
     System.out.println(a[i][j]);
   }
 }
-// Outputs: 1 2 3 4 5 6 7
+// 输出: 1 2 3 4 5 6 7
 ```
 
-### Sort
+### 排序
 
 ```java
 char[] chars = {'b', 'a', 'c'};
@@ -366,56 +366,56 @@ Arrays.sort(chars);
 Arrays.toString(chars);
 ```
 
-## Java Conditionals
+## Java 条件语句
 
-### Operators {.row-span-2}
+### 运算符 {.row-span-2}
 
-- <a data-tooltip="Additive operator (also used for String concatenation)">+</a>
-- <a data-tooltip="Subtraction operator">-</a>
-- <a data-tooltip="Multiplication operator">\*</a>
-- <a data-tooltip="Division operator">/</a>
-- <a data-tooltip="Remainder operator">%</a>
-- <a data-tooltip="Simple assignment operator">=</a>
-- <a data-tooltip="Increment operator; increments a value by 1">++</a>
-- <a data-tooltip="Decrement operator; decrements a value by 1">--</a>
-- <a data-tooltip="Logical complement operator; inverts the value of a boolean">!</a>
-
-{.marker-none .cols-4}
-
----
-
-- <a data-tooltip="Equal to">==</a>
-- <a data-tooltip="Not equal to">!=</a>
-- <a data-tooltip="Greater than">></a>
-- <a data-tooltip="Greater than or equal to">>=</a>
-- <a data-tooltip="Less than"><</a>
-- <a data-tooltip="Less than or equal to"><=</a>
+- <a data-tooltip="加法运算符 (也用于字符串连接)">+</a>
+- <a data-tooltip="减法运算符">-</a>
+- <a data-tooltip="乘法运算符">\*</a>
+- <a data-tooltip="除法运算符">/</a>
+- <a data-tooltip="取余运算符">%</a>
+- <a data-tooltip="简单赋值运算符">=</a>
+- <a data-tooltip="自增运算符；将值加 1">++</a>
+- <a data-tooltip="自减运算符；将值减 1">--</a>
+- <a data-tooltip="逻辑非运算符；反转布尔值">!</a>
 
 {.marker-none .cols-4}
 
 ---
 
-- <a data-tooltip="Conditional-AND">&&</a>
-- <a data-tooltip="Conditional-OR">||</a>
-- [?:](#ternary-operator){data-tooltip="Ternary (shorthand for if-then-else statement)"}
+- <a data-tooltip="等于">==</a>
+- <a data-tooltip="不等于">!=</a>
+- <a data-tooltip="大于">></a>
+- <a data-tooltip="大于或等于">>=</a>
+- <a data-tooltip="小于"><</a>
+- <a data-tooltip="小于或等于"><=</a>
 
 {.marker-none .cols-4}
 
 ---
 
-- <a data-tooltip="Compares an object to a specified type">instanceof</a>
+- <a data-tooltip="条件与">&&</a>
+- <a data-tooltip="条件或">||</a>
+- [?:](#ternary-operator){data-tooltip="三元运算符 (if-then-else 语句的简写)"}
+
+{.marker-none .cols-4}
+
+---
+
+- <a data-tooltip="比较对象是否为指定类型">instanceof</a>
 
 {.marker-none}
 
 ---
 
-- <a data-tooltip="Unary bitwise complement">~</a>
-- <a data-tooltip="Signed left shift"><<</a>
-- <a data-tooltip="Signed right shift">>></a>
-- <a data-tooltip="Unsigned right shift">>>></a>
-- <a data-tooltip="Bitwise AND">&</a>
-- <a data-tooltip="Bitwise exclusive OR">^</a>
-- <a data-tooltip="Bitwise inclusive OR">|</a>
+- <a data-tooltip="按位取反">~</a>
+- <a data-tooltip="有符号左移"><<</a>
+- <a data-tooltip="有符号右移">>></a>
+- <a data-tooltip="无符号右移">>>></a>
+- <a data-tooltip="按位与">&</a>
+- <a data-tooltip="按位异或">^</a>
+- <a data-tooltip="按位或">|</a>
 
 {.marker-none .cols-4}
 
@@ -439,43 +439,43 @@ int month = 3;
 String str;
 switch (month) {
   case 1:
-    str = "January";
+    str = "一月";
     break;
   case 2:
-    str = "February";
+    str = "二月";
     break;
   case 3:
-    str = "March";
+    str = "三月";
     break;
   default:
-    str = "Some other month";
+    str = "其他月份";
     break;
 }
 
-// Outputs: Result March
-System.out.println("Result " + str);
+// 输出: 结果 三月
+System.out.println("结果 " + str);
 ```
 
-### Ternary operator
+### 三元运算符
 
 ```java
 int a = 10;
 int b = 20;
 int max = (a > b) ? a : b;
 
-// Outputs: 20
+// 输出: 20
 System.out.println(max);
 ```
 
-## Java Loops
+## Java 循环
 
-### For Loop
+### For 循环
 
 ```java
 for (int i = 0; i < 10; i++) {
   System.out.print(i);
 }
-// Outputs: 0123456789
+// 输出: 0123456789
 ```
 
 ---
@@ -484,10 +484,10 @@ for (int i = 0; i < 10; i++) {
 for (int i = 0,j = 0; i < 3; i++,j--) {
   System.out.print(j + "|" + i + " ");
 }
-// Outputs: 0|0 -1|1 -2|2
+// 输出: 0|0 -1|1 -2|2
 ```
 
-### Enhanced For Loop
+### 增强型 For 循环
 
 ```java
 int[] numbers = {1,2,3,4,5};
@@ -495,12 +495,12 @@ int[] numbers = {1,2,3,4,5};
 for (int number: numbers) {
   System.out.print(number);
 }
-// Outputs: 12345
+// 输出: 12345
 ```
 
-Used to loop around array's or List's
+用于遍历数组或列表
 
-### While Loop
+### While 循环
 
 ```java
 int count = 0;
@@ -509,10 +509,10 @@ while (count < 5) {
   System.out.print(count);
   count++;
 }
-// Outputs: 01234
+// 输出: 01234
 ```
 
-### Do While Loop
+### Do While 循环
 
 ```java
 int count = 0;
@@ -521,10 +521,10 @@ do {
   System.out.print(count);
   count++;
 } while (count < 5);
-// Outputs: 01234
+// 输出: 01234
 ```
 
-### Continue Statement
+### Continue 语句
 
 ```java
 for (int i = 0; i < 5; i++) {
@@ -533,10 +533,10 @@ for (int i = 0; i < 5; i++) {
   }
   System.out.print(i);
 }
-// Outputs: 0124
+// 输出: 0124
 ```
 
-### Break Statement
+### Break 语句
 
 ```java
 for (int i = 0; i < 5; i++) {
@@ -545,37 +545,37 @@ for (int i = 0; i < 5; i++) {
     break;
   }
 }
-// Outputs: 0123
+// 输出: 0123
 ```
 
-## Java Collections Framework
+## Java 集合框架
 
-### Java Collections {.col-span-2}
+### Java 集合 {.col-span-2}
 
-| Collection                                                                                                         | Interface   | Ordered | Sorted | Thread safe | Duplicate | Nullable           |
-| ------------------------------------------------------------------------------------------------------------------ | ----------- | ------- | ------ | ----------- | --------- | ------------------ |
-| [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)                                    | List        | Y       | _N_    | _N_         | Y         | Y                  |
-| [Vector](https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html)                                          | List        | Y       | _N_    | Y           | Y         | Y                  |
-| [LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)                                  | List, Deque | Y       | _N_    | _N_         | Y         | Y                  |
-| [CopyOnWriteArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArrayList.html)   | List        | Y       | _N_    | Y           | Y         | Y                  |
-| [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)                                        | Set         | _N_     | _N_    | _N_         | _N_       | One `null`         |
-| [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html)                            | Set         | Y       | _N_    | _N_         | _N_       | One `null`         |
-| [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html)                                        | Set         | Y       | Y      | _N_         | _N_       | _N_                |
-| [CopyOnWriteArraySet](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArraySet.html)     | Set         | Y       | _N_    | Y           | _N_       | One `null`         |
-| [ConcurrentSkipListSet](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentSkipListSet.html) | Set         | Y       | Y      | Y           | _N_       | _N_                |
-| [HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)                                        | Map         | _N_     | _N_    | _N_         | _N (key)_ | One `null` _(key)_ |
-| [HashTable](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html)                                    | Map         | _N_     | _N_    | Y           | _N (key)_ | _N (key)_          |
-| [LinkedHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html)                            | Map         | Y       | _N_    | _N_         | _N (key)_ | One `null` _(key)_ |
-| [TreeMap](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html)                                        | Map         | Y       | Y      | _N_         | _N (key)_ | _N (key)_          |
-| [ConcurrentHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html)         | Map         | _N_     | _N_    | Y           | _N (key)_ | _N_                |
-| [ConcurrentSkipListMap](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentSkipListMap.html) | Map         | Y       | Y      | Y           | _N (key)_ | _N_                |
-| [ArrayDeque](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html)                                  | Deque       | Y       | _N_    | _N_         | Y         | _N_                |
-| [PriorityQueue](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html)                            | Queue       | Y       | _N_    | _N_         | Y         | _N_                |
-| [ConcurrentLinkedQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedQueue.html) | Queue       | Y       | _N_    | Y           | Y         | _N_                |
-| [ConcurrentLinkedDeque](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedDeque.html) | Deque       | Y       | _N_    | Y           | Y         | _N_                |
-| [ArrayBlockingQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ArrayBlockingQueue.html)       | Queue       | Y       | _N_    | Y           | Y         | _N_                |
-| [LinkedBlockingDeque](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedBlockingDeque.html)     | Deque       | Y       | _N_    | Y           | Y         | _N_                |
-| [PriorityBlockingQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/PriorityBlockingQueue.html) | Queue       | Y       | _N_    | Y           | Y         | _N_                |
+| 集合                                                                                                               | 接口        | 有序 | 排序 | 线程安全 | 重复 | 可空               |
+| ------------------------------------------------------------------------------------------------------------------ | ----------- | ---- | ---- | -------- | ---- | ------------------ |
+| [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)                                    | List        | 是   | 否   | 否       | 是   | 是                 |
+| [Vector](https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html)                                          | List        | 是   | 否   | 是       | 是   | 是                 |
+| [LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)                                  | List, Deque | 是   | 否   | 否       | 是   | 是                 |
+| [CopyOnWriteArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArrayList.html)   | List        | 是   | 否   | 是       | 是   | 是                 |
+| [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)                                        | Set         | 否   | 否   | 否       | 否   | 一个 `null`        |
+| [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html)                            | Set         | 是   | 否   | 否       | 否   | 一个 `null`        |
+| [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html)                                        | Set         | 是   | 是   | 否       | 否   | 否                 |
+| [CopyOnWriteArraySet](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArraySet.html)     | Set         | 是   | 否   | 是       | 否   | 一个 `null`        |
+| [ConcurrentSkipListSet](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentSkipListSet.html) | Set         | 是   | 是   | 是       | 否   | 否                 |
+| [HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)                                        | Map         | 否   | 否   | 否       | 否 (键) | 一个 `null` (键)   |
+| [HashTable](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html)                                    | Map         | 否   | 否   | 是       | 否 (键) | 否 (键)            |
+| [LinkedHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html)                            | Map         | 是   | 否   | 否       | 否 (键) | 一个 `null` (键)   |
+| [TreeMap](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html)                                        | Map         | 是   | 是   | 否       | 否 (键) | 否 (键)            |
+| [ConcurrentHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html)         | Map         | 否   | 否   | 是       | 否 (键) | 否                 |
+| [ConcurrentSkipListMap](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentSkipListMap.html) | Map         | 是   | 是   | 是       | 否 (键) | 否                 |
+| [ArrayDeque](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html)                                  | Deque       | 是   | 否   | 否       | 是   | 否                 |
+| [PriorityQueue](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html)                            | Queue       | 是   | 否   | 否       | 是   | 否                 |
+| [ConcurrentLinkedQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedQueue.html) | Queue       | 是   | 否   | 是       | 是   | 否                 |
+| [ConcurrentLinkedDeque](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedDeque.html) | Deque       | 是   | 否   | 是       | 是   | 否                 |
+| [ArrayBlockingQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ArrayBlockingQueue.html)       | Queue       | 是   | 否   | 是       | 是   | 否                 |
+| [LinkedBlockingDeque](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedBlockingDeque.html)     | Deque       | 是   | 否   | 是       | 是   | 否                 |
+| [PriorityBlockingQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/PriorityBlockingQueue.html) | Queue       | 是   | 否   | 是       | 是   | 否                 |
 
 {.show-header .left-text}
 
@@ -584,21 +584,21 @@ for (int i = 0; i < 5; i++) {
 ```java
 List<Integer> nums = new ArrayList<>();
 
-// Adding
+// 添加
 nums.add(2);
 nums.add(5);
 nums.add(8);
 
-// Retrieving
+// 获取
 System.out.println(nums.get(0));
 
-// Indexed for loop iteration
+// 索引 for 循环迭代
 for (int i = 0; i < nums.size(); i++) {
     System.out.println(nums.get(i));
 }
 
 nums.remove(nums.size() - 1);
-nums.remove(0); // VERY slow
+nums.remove(0); // 非常慢
 
 for (Integer value : nums) {
     System.out.println(value);
@@ -615,7 +615,7 @@ m.put(6, "Six");
 m.put(4, "Four");
 m.put(2, "Two");
 
-// Retrieving
+// 获取
 System.out.println(m.get(6));
 
 // Lambda forEach
@@ -630,7 +630,7 @@ m.forEach((key, value) -> {
 ```java
 Set<String> set = new HashSet<>();
 if (set.isEmpty()) {
-    System.out.println("Empty!");
+    System.out.println("空!");
 }
 
 set.add("dog");
@@ -640,7 +640,7 @@ set.add("snake");
 set.add("bear");
 
 if (set.contains("cat")) {
-    System.out.println("Contains cat");
+    System.out.println("包含 cat");
 }
 
 set.remove("cat");
@@ -654,71 +654,70 @@ for (String element : set) {
 ```java
 Deque<String> a = new ArrayDeque<>();
 
-// Using add()
+// 使用 add()
 a.add("Dog");
 
-// Using addFirst()
+// 使用 addFirst()
 a.addFirst("Cat");
 
-// Using addLast()
+// 使用 addLast()
 a.addLast("Horse");
 
 // [Cat, Dog, Horse]
 System.out.println(a);
 
-// Access element
+// 访问元素
 System.out.println(a.peek());
 
-// Remove element
+// 移除元素
 System.out.println(a.pop());
 ```
 
-## Misc
+## 其他
 
-### Access Modifiers {.col-span-2}
+### 访问修饰符 {.col-span-2}
 
-| Modifier    | Class | Package | Subclass | World |
-| ----------- | ----- | ------- | -------- | ----- |
-| public      | Y     | Y       | Y        | Y     |
-| protected   | Y     | Y       | Y        | _N_   |
-| no modifier | Y     | Y       | _N_      | _N_   |
-| private     | Y     | _N_     | _N_      | _N_   |
+| 修饰符    | 类   | 包   | 子类 | 全局 |
+| ----------- | ---- | ---- | ---- | ---- |
+| public      | 是   | 是   | 是   | 是   |
+| protected   | 是   | 是   | 是   | 否   |
+| 无修饰符  | 是   | 是   | 否   | 否   |
+| private     | 是   | 否   | 否   | 否   |
 
 {.show-header .left-text}
 
-### Regular expressions
+### 正则表达式
 
 ```java
 String text = "I am learning Java";
-// Removing All Whitespace
+// 移除所有空格
 text.replaceAll("\\s+", "");
 
-// Splitting a String
+// 分割字符串
 text.split("\\|");
 text.split(Pattern.quote("|"));
 ```
 
-See: [Regex in java](/regex#regex-in-java)
+参见: [Java 中的正则表达式](/regex#regex-in-java)
 
-### Comment
+### 注释
 
 ```java
-// I am a single line comment!
+// 我是单行注释!
 
 /*
-And I am a
-multi-line comment!
+我是
+多行注释!
 */
 
 /**
- * This
- * is
- * documentation
- * comment
+ * 这是
+ * 文档
+ * 注释
  */
 ```
 
-### Keywords {.col-span-2}
+### 关键字 {.col-span-2}
 
 - `abstract`
 - `continue`
@@ -773,32 +772,33 @@ multi-line comment!
 
 {.marker-none .cols-6}
 
-### Math methods
+### Math 方法
 
-| Method                | Description            |
-| --------------------- | :--------------------- |
-| `Math.max(a,b)`       | Maximum of a and b     |
-| `Math.min(a,b)`       | Minimum of a and b     |
-| `Math.abs(a)`         | Absolute value a       |
-| `Math.sqrt(a)`        | Square-root of a       |
-| `Math.pow(a,b)`       | Power of b             |
-| `Math.round(a)`       | Closest integer        |
-| `Math.sin(ang)`       | Sine of ang            |
-| `Math.cos(ang)`       | Cosine of ang          |
-| `Math.tan(ang)`       | Tangent of ang         |
-| `Math.asin(ang)`      | Inverse sine of ang    |
-| `Math.log(a)`         | Natural logarithm of a |
-| `Math.toDegrees(rad)` | Angle rad in degrees   |
-| `Math.toRadians(deg)` | Angle deg in radians   |
+| 方法                  | 描述               |
+| --------------------- | :----------------- |
+| `Math.max(a,b)`       | a 和 b 的最大值    |
+| `Math.min(a,b)`       | a 和 b 的最小值    |
+| `Math.abs(a)`         | a 的绝对值         |
+| `Math.sqrt(a)`        | a 的平方根         |
+| `Math.pow(a,b)`       | a 的 b 次幂        |
+| `Math.round(a)`       | 最接近的整数       |
+| `Math.sin(ang)`       | ang 的正弦值       |
+| `Math.cos(ang)`       | ang 的余弦值       |
+| `Math.tan(ang)`       | ang 的正切值       |
+| `Math.asin(ang)`      | ang 的反正弦值     |
+| `Math.log(a)`         | a 的自然对数       |
+| `Math.toDegrees(rad)` | 角度 rad 转换为度数 |
+| `Math.toRadians(deg)` | 角度 deg 转换为弧度 |
 
 ### Try/Catch/Finally
 
 ```java
 try {
-  // something
+  // 一些操作
 } catch (Exception e) {
   e.printStackTrace();
 } finally {
-  System.out.println("always printed");
+  System.out.println("总是会打印");
 }
 ```
+

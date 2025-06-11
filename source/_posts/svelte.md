@@ -6,17 +6,17 @@ tags:
   - svelte
   - web
 categories:
-  - Programming
+  - 编程
 intro: |
-  A Svelte cheat sheet with the most important concepts, functions, reactivity, and more. A complete quick reference for beginners, updated for Svelte 5.
+  Svelte 速查表，包含最重要的概念、函数、响应式等等。为初学者准备的完整快速参考，已更新至 Svelte 5。
 plugins:
   - copyCode
   - runCode
 ---
 
-## Getting Started
+## 入门指南
 
-### Basic Syntax
+### 基本语法
 
 ```js
 <script>
@@ -26,7 +26,7 @@ plugins:
 <h1>Hello {name}!</h1>
 ```
 
-### Expressions
+### 表达式
 
 ```js
 <script>
@@ -41,7 +41,7 @@ plugins:
 <h1>Hello {fullName()}!</h1>
 ```
 
-### Attributes
+### 属性
 
 ```js
 <script>
@@ -52,7 +52,7 @@ plugins:
 <button class="btn">Click me</button>
 ```
 
-### Functions in Markup
+### 标记中的函数
 
 ```js
 <script>
@@ -64,7 +64,7 @@ plugins:
 <h1>Hi {name()}!</h1>
 ```
 
-### Conditional Rendering {.col-span-2}
+### 条件渲染 {.col-span-2}
 
 ```js
 <script>
@@ -79,11 +79,11 @@ plugins:
 {/if}
 ```
 
-Note: Svelte components must always return a root element or content.
+注意：Svelte 组件必须始终返回一个根元素或内容。
 
-## Components
+## 组件
 
-### Functional Component
+### 函数式组件
 
 ```js
 <script>
@@ -96,7 +96,7 @@ Note: Svelte components must always return a root element or content.
 </div>
 ```
 
-### Embed an internal Component
+### 嵌入内部组件
 
 ```js
 <script>
@@ -109,7 +109,7 @@ Note: Svelte components must always return a root element or content.
 </div>
 ```
 
-### Embed an external Component
+### 嵌入外部组件
 
 ```js
 <script>
@@ -121,9 +121,9 @@ Note: Svelte components must always return a root element or content.
 </div>
 ```
 
-Note: External components should be installed via npm first.
+注意：外部组件应首先通过 npm 安装。
 
-### Advanced Functional Components
+### 高级函数式组件
 
 ```js
 <script>
@@ -138,9 +138,9 @@ Note: External components should be installed via npm first.
 <p>{fullName()}</p>
 ```
 
-## Properties {.cols-2}
+## 属性 {.cols-2}
 
-### Passing Properties to a Component
+### 向组件传递属性
 
 ```js
 <Student
@@ -151,7 +151,7 @@ Note: External components should be installed via npm first.
 />
 ```
 
-### Assigning the Properties from a Component
+### 从组件分配属性
 
 ```js
 <script>
@@ -163,9 +163,9 @@ Note: External components should be installed via npm first.
 <h1>{firstName} {lastName} is {age}.</h1>
 ```
 
-## State {.cols-1}
+## 状态 {.cols-1}
 
-### Local State
+### 本地状态
 
 ```js
 <script>
@@ -180,9 +180,9 @@ Note: External components should be installed via npm first.
 <button on:click={updateName}>Update name</button>
 ```
 
-## Events {.cols-1}
+## 事件 {.cols-1}
 
-### Event Listener
+### 事件监听器
 
 ```js
 <script>
@@ -197,11 +197,11 @@ Note: External components should be installed via npm first.
 </a>
 ```
 
-Note: The most common event listeners are `on:click` and `on:submit`.
+注意：最常见的事件监听器是 `on:click` 和 `on:submit`。
 
-## Loops {.cols-2}
+## 循环 {.cols-2}
 
-### Looping through an Array
+### 遍历数组
 
 ```js
 <script>
@@ -215,7 +215,7 @@ Note: The most common event listeners are `on:click` and `on:submit`.
 </ul>
 ```
 
-### Looping through an Array of Objects
+### 遍历对象数组
 
 ```js
 <script>
@@ -235,9 +235,9 @@ Note: The most common event listeners are `on:click` and `on:submit`.
 </ul>
 ```
 
-## Forms {.cols-1}
+## 表单 {.cols-1}
 
-### Form Example
+### 表单示例
 
 ```js
 <script>
@@ -259,7 +259,7 @@ Note: The most common event listeners are `on:click` and `on:submit`.
 
 ## CSS {.cols-1}
 
-### Scoped CSS
+### 作用域 CSS
 
 ```js
 <style>
@@ -271,9 +271,9 @@ Note: The most common event listeners are `on:click` and `on:submit`.
 <div class="student">Zehan Khan</div>
 ```
 
-## Fetching Data {.cols-1}
+## 获取数据 {.cols-1}
 
-### Fetching Data with onMount
+### 使用 onMount 获取数据
 
 ```js
 <script>
@@ -299,9 +299,9 @@ Note: The most common event listeners are `on:click` and `on:submit`.
 {/if}
 ```
 
-Note: Use `onMount` for side effects like API calls.
+注意：使用 `onMount` 处理副作用，如 API 调用。
 
-## Lifecycle Hooks {.cols-1}
+## 生命周期钩子 {.cols-1}
 
 ### onMount
 ```js
@@ -346,12 +346,12 @@ Note: Use `onMount` for side effects like API calls.
   });
 </script>
 ```
-Note: Svelte lifecycle functions are similar to React Hooks, but they are imported individually and used directly in the `<script>` block.
+注意：Svelte 生命周期函数类似于 React Hooks，但它们是单独导入并直接在 `<script>` 块中使用的。
 
 
-## More Svelte Features {.cols-1}
+## 更多 Svelte 特性 {.cols-1}
 
-### Derived Store
+### 派生存储 (Derived Store)
 
 ```js
 // store.js
@@ -371,7 +371,7 @@ export const double = derived(count, $count => $count * 2);
 <p>Double: {$double}</p>
 ```
 
-### Readable Store
+### 可读存储 (Readable Store)
 
 ```js
 import { readable } from 'svelte/store';
@@ -387,7 +387,7 @@ export const time = readable(new Date(), function start(set) {
 });
 ```
 
-### Reactive Declarations
+### 响应式声明
 
 ```js
 <script>
@@ -399,7 +399,7 @@ export const time = readable(new Date(), function start(set) {
 <p>{sum}</p>
 ```
 
-### Reactive Statements with Side Effects
+### 带副作用的响应式语句
 
 ```js
 <script>
@@ -409,7 +409,7 @@ export const time = readable(new Date(), function start(set) {
 </script>
 ```
 
-### Bind to DOM Properties
+### 绑定到 DOM 属性
 
 ```js
 <script>
@@ -420,7 +420,7 @@ export const time = readable(new Date(), function start(set) {
 <p>{text.length} characters</p>
 ```
 
-### Bind Grouped Inputs (Radio, Checkbox)
+### 绑定分组输入 (单选框, 复选框)
 
 ```js
 <script>
@@ -432,7 +432,7 @@ export const time = readable(new Date(), function start(set) {
 <p>Selected: {selected}</p>
 ```
 
-### Class and Style Directives
+### 类和样式指令
 
 ```js
 <script>
@@ -450,7 +450,7 @@ export const time = readable(new Date(), function start(set) {
 <p style:font-size={`${size}px`}>Resizable text</p>
 ```
 
-### Await Blocks
+### Await 块
 
 ```js
 <script>
@@ -467,7 +467,7 @@ export const time = readable(new Date(), function start(set) {
 {/await}
 ```
 
-### SSR with SvelteKit (Basic Example)
+### 使用 SvelteKit 进行 SSR (基本示例)
 
 ```js
 // +page.server.js
@@ -487,5 +487,4 @@ export async function load({ fetch }) {
 <h1>{data.title}</h1>
 ```
 
-Note: Requires SvelteKit setup for SSR routes.
-
+注意：需要 SvelteKit 设置才能实现 SSR 路由。

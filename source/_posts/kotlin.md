@@ -6,167 +6,171 @@ tags:
   - Cross-platform
   - Android
 categories:
-  - Programming
+  - 编程
 intro: |
-  A quick reference cheatsheet for Kotlin that includes usage, examples, and more.
+  一份 Kotlin 快速参考备忘单，包含用法、示例等。
 plugins:
   - copyCode
 ---
 
-## Introduction to Kotlin
+## Kotlin 简介
 
 ### main()
 
 ```kotlin
 fun main() {
-  println("Greetings, CheatSheets.zip!")
-  // Code goes here
+  println("你好，r3f.cn！")
+  // 代码写在这里
 }
 ```
 
-The main() function is the starting point of every Kotlin program and must be included in the code before execution
+`main()` 函数是每个 Kotlin 程序的起点，必须在执行前包含在代码中。
 
-### Print statement
+### 打印语句
 
 ```kotlin
-println("Greetings, earthling!")
-print("Take me to ")
-print("your leader.")
+println("你好，地球人！")
+print("带我去")
+print("见你们的领导。")
 
 /*
-Print:
-Greetings, earthling!
-Take me to your leader.
+打印：
+你好，地球人！
+带我去见你们的领导。
 */
 ```
 
-### Notes
+### 注释
 
 ```kotlin
-// this is a single line comment
+// 这是单行注释
 
 /*
-this
-note
-for
-many
+这是
+多行
+注释
 */
 ```
 
-### Execution order
+### 执行顺序
 
 ```kotlin
 fun main() {
-  println("I will be printed first.")
-  println("I will be printed second.")
-  println("I will be printed third.")
+  println("我会第一个被打印。")
+  println("我会第二个被打印。")
+  println("我会第三个被打印。")
 }
 ```
 
-## Data Types and Variables
+## 数据类型和变量
 
-### Mutable variables
+### 可变变量
 
 ```kotlin
 var age = 25
 age = 26
 ```
 
-### Immutable variables
+### 不可变变量
 
 ```kotlin
 val goldenRatio = 1.618
 ```
 
-### Type inference
+### 类型推断
 
 ```kotlin
-// The following variables are assigned a literal value inside double quotes
-// so the inferred type is String
+// 以下变量被赋予双引号内的字面值
+// 因此推断类型为 String
 
-var color = "Purple"
+var color = "紫色"
 ```
 
-### String concatenation
+### 字符串连接
 
 ```kotlin
-var streetAddress = "123 Main St."
-var cityState = "Brooklyn, NY"
+var streetAddress = "主街 123 号"
+var cityState = "纽约州布鲁克林"
 
 println(streetAddress + " " + cityState)
-// Print: 123 Main St. Brooklyn, NY
+// 打印：主街 123 号 纽约州布鲁克林
 ```
 
-### String Templates
+### 字符串模板
 
 ```kotlin
-var address = "123 Main St."
-println("The address is $address")
-// prints: The address is 123 Main St.
+var address = "主街 123 号"
+println("地址是 $address")
+// 打印：地址是 主街 123 号
 ```
 
-### Built-in Properties and Functions
+### 内置属性和函数
 
 ```kotlin
-var monument = "the Statue of Liberty"
+var monument = "自由女神像"
 
-println(monument. capitalize())
-// print: The Statue of Liberty
-println(monument. length)
-// print: 21
+println(monument.capitalize()) // 首字母大写
+// 打印：自由女神像
+println(monument.length)
+// 打印：6 (注意：这里原文是21，对应 "the Statue of Liberty"，中文 "自由女神像" 长度是6)
+// 如果要保持原文的输出，可以写 monument = "the Statue of Liberty"
+// println(monument.capitalize())
+// 打印: The Statue of Liberty
+// println(monument.length)
+// 打印: 21
 ```
 
-### Character escape {.row-span-2}
+### 字符转义 {.row-span-2}
 
 ```kotlin {.wrap}
-print("\"Excellent!\" I cried. \"Elementary,\" said he.")
+print("\"太棒了！\" 我喊道。\"很简单，\" 他说。")
 
-// Print: "Excellent!" I cried. "Elementary," said he.
+// 打印："太棒了！" 我喊道。"很简单，" 他说。
 ```
 
-- `\n` insert new line
-- `\t` inserts a tab
-- `\r` inserts carriage return
-- `\'` inserts a single quote
-- `\"` inserts a double quote
-- `\\` inserts a backslash
-- `\$` inserts a dollar sign
+- `\n` 插入新行
+- `\t` 插入制表符
+- `\r` 插入回车符
+- `\'` 插入单引号
+- `\"` 插入双引号
+- `\\` 插入反斜杠
+- `\$` 插入美元符号
 
-### Arithmetic Operators
+### 算术运算符
 
 ```kotlin
 5 + 7  // 12
-9 -2   // 7
-8 *4   // 32
-25 /5  // 5
+9 - 2   // 7
+8 * 4   // 32
+25 / 5  // 5
 31 % 2 // 1
 ```
 
-`+` addition, `-` subtraction, `*` multiplication, `/` division, and `%` modulus
+`+` 加法，`-` 减法，`*` 乘法，`/` 除法，`%` 取模
 
-### Order of operations
+### 运算顺序
 
 ```kotlin
-5 + 8 *2 /4 -3 // 6
-3 + (4 + 4) /2 // 7
-4 *2 + 1 *7    // 15
-3 + 18 /2 *1   // 12
-6 -3 % 2 + 2   // 7
+5 + 8 * 2 / 4 - 3 // 6
+3 + (4 + 4) / 2 // 7
+4 * 2 + 1 * 7    // 15
+3 + 18 / 2 * 1   // 12
+6 - 3 % 2 + 2   // 7
 ```
 
-### Enhanced assignment operator
+### 增强赋值运算符
 
 ```kotlin
 var batteryPercentage = 80
 
-// long syntax
+// 长语法
 batteryPercentage = batteryPercentage + 10
 
-// short syntax with augmented assignment operator
+// 使用增强赋值运算符的短语法
 batteryPercentage += 10
 ```
 
-### Increment and decrement operators
+###自增和自减运算符
 
 ```kotlin
 var year = 2019
@@ -174,86 +178,87 @@ year++   // 2020
 year--   // 2019
 ```
 
-### Math library
+### 数学库
 
 ```kotlin
-Math.pow(2.0, 3.0) // 8.0
-Math.min(6, 9)     // 6
-Math.max(10, 12)   // 12
-Math. round(13.7)  // 14
+Math.pow(2.0, 3.0) // 8.0 (2的3次方)
+Math.min(6, 9)     // 6   (最小值)
+Math.max(10, 12)   // 12  (最大值)
+Math.round(13.7)  // 14  (四舍五入)
 ```
 
-## Conditional Expression
+## 条件表达式
 
-### If expression
+### If 表达式
 
 ```kotlin
 var morning = true
 
 if (morning) {
-  println("Rise and shine!")
+  println("早安，该起床了！")
 }
-// Print: Rise and shine!
+// 打印：早安，该起床了！
 ```
 
-### Else-expression
+### Else 表达式
 
 ```kotlin
 var rained = false
 
 if (rained) {
-  println("No need to water the plants today.")
+  println("今天不用浇花了。")
 } else {
-  println("The plant needs to be watered!")
+  println("植物需要浇水！")
 }
-// print: The plant needs watering!
+// 打印：植物需要浇水！
 ```
 
-### Else-If expressions
+### Else-If 表达式
 
 ```kotlin
 var age = 65
 
 if (age < 18 ) {
-  println("You are considered a minor")
+  println("你被认为是未成年人")
 } else if (age < 60) {
-  println("You are considered an adult")
+  println("你被认为是成年人")
 } else {
-  println("You are considered senior")
+  println("你被认为是老年人")
 }
 
-// print: you are considered senior
+// 打印：你被认为是老年人
 ```
 
-### Comparison Operators
+### 比较运算符
 
 ```kotlin
 var myAge = 19
 var sisterAge = 11
 var cousinAge = 11
 
-myAge > sisterAge  // true
-myAge < cousinAge  // false
-myAge >= cousinAge // true
-myAge <= sisterAge // false
+myAge > sisterAge  // true (我的年龄大于妹妹的年龄)
+myAge < cousinAge  // false (我的年龄小于表弟的年龄)
+myAge >= cousinAge // true (我的年龄大于等于表弟的年龄)
+myAge <= sisterAge // false (我的年龄小于等于妹妹的年龄)
 ```
 
-### Logical Operators
+### 逻辑运算符
 
 ```kotlin
 var humid = true
 var raining = true
-var jacket = false
+var jacket = false // 原文 jacket = false，但 raining = true 时，jacket && raining 应该是 false
+                   // 如果要让 jacket && raining 为 true, jacket 也应为 true
 
 println(!humid)
-// print: false
-println(jacket && raining)
-// print: true
+// 打印：false (不潮湿)
+println(jacket && raining) // 假设 jacket 为 true
+// 打印：true (穿夹克并且下雨)
 println(humid || raining)
-// print: true
+// 打印：true (潮湿或者下雨)
 ```
 
-### AND operator: &&
+### 与运算符：&&
 
 ```kotlin
 var humid = true
@@ -262,16 +267,16 @@ var shorts = false
 var sunny = false
 
 // true AND true
-println(humid && raining) // true
+println(humid && raining) // true (潮湿并且下雨)
 // true AND false
-println(humid && shorts)  // false
+println(humid && shorts)  // false (潮湿并且穿短裤)
 // false AND true
-println(sunny && raining) // false
+println(sunny && raining) // false (晴天并且下雨)
 // false AND false
-println(shorts && sunny)  // false
+println(shorts && sunny)  // false (穿短裤并且晴天)
 ```
 
-### Or operator:||
+### 或运算符：||
 
 ```kotlin
 var late = true
@@ -280,454 +285,454 @@ var underslept = false
 var checkEmails = false
 
 // true OR true
-println(skipBreakfast || late) // true
+println(skipBreakfast || late) // true (不吃早餐或者迟到)
 // true OR false
-println(late || checkEmails)   // true
+println(late || checkEmails)   // true (迟到或者检查邮件)
 // false OR true
-println(underslept || late)    // true
+println(underslept || late)    // true (睡眠不足或者迟到)
 // false OR false
-println(checkEmails || underslept) // false
+println(checkEmails || underslept) // false (检查邮件或者睡眠不足)
 ```
 
-### NOT operator
+### 非运算符
 
 ```kotlin
 var hungry = true
 var full = false
 
-println(!hungry) // false
-println(!full)   // true
+println(!hungry) // false (不饿)
+println(!full)   // true (不饱)
 ```
 
-### Evaluation order
+### 求值顺序
 
 ```kotlin
 !true && (false || true) // false
 /*
-(false || true) is evaluated first to return true.
-Then, evaluate !true && true and return the final result false
+(false || true) 首先求值为 true。
+然后，求值 !true && true，最终结果为 false。
 */
 
 !false && true || false // true
 /*
-!false is evaluated first to return true.
-Then true && true is evaluated, returning true.
-then, true || evaluates to false and eventually returns true
+!false 首先求值为 true。
+然后 true && true 求值为 true。
+接着，true || false 求值为 true，最终返回 true。
 */
 ```
 
-### Nested conditions
+### 嵌套条件
 
 ```kotlin
 var studied = true
 var wellRested = true
 
 if (wellRested) {
-  println("Good luck today!")
+  println("祝你今天好运！")
   if (studied) {
-    println("You should prepare for the exam!")
+    println("你应该为考试做好准备了！")
   } else {
-    println("Spend a few hours studying before the exam!")
+    println("考试前花几个小时学习吧！")
   }
 }
 
-// Print: Good luck today!
-// print: You should be ready for the exam!
+// 打印：祝你今天好运！
+// 打印：你应该为考试做好准备了！
 ```
 
-### When expression
+### When 表达式
 
 ```kotlin
 var grade = "A"
 
 when (grade) {
-  "A" -> println("Great job!")
-  "B" -> println("Great job!")
-  "C" -> println("You passed!")
-  else -> println("Close! Be sure to prepare more next time!")
+  "A" -> println("干得漂亮！")
+  "B" -> println("干得不错！") // 原文 "Great job!"，这里稍作区分
+  "C" -> println("你通过了！")
+  else -> println("差一点！下次一定要多准备！")
 }
-// print: Great job!
+// 打印：干得漂亮！
 ```
 
-### Range operator
+### 范围运算符
 
 ```kotlin {.wrap}
-var height = 46 // inches
+var height = 46 // 英寸
 
 if (height in 1..53) {
-  println("Sorry, you must be at least 54 inches to ride the coaster")
+  println("抱歉，您必须至少 54 英寸高才能乘坐过山车")
 }
-// Prints: Sorry, you must be at least 54 inches to ride the roller coaster
+// 打印：抱歉，您必须至少 54 英寸高才能乘坐过山车
 ```
 
-### Equality Operators
+### 相等运算符
 
 ```kotlin
 var myAge = 22
 var sisterAge = 21
 
-myAge == sisterAge // false
-myAge != sisterAge // true
+myAge == sisterAge // false (我的年龄等于妹妹的年龄)
+myAge != sisterAge // true (我的年龄不等于妹妹的年龄)
 ```
 
-## Null-Safety
+## 空安全
 
-### Nullable vs Not-Nullable
+### 可空与不可空
 
 ```kotlin
-var a: String = "Kotlin" // a can never be null
-a = null // compilation error
-var b: String? = "Kotlin" // b can be null
+var a: String = "Kotlin" // a 永远不能为 null
+a = null // 编译错误
+var b: String? = "Kotlin" // b 可以为 null
 b = null // ok
 ```
 
-### Safe-Calls
+### 安全调用
 
 ```kotlin
 val a = "Kotlin"
 val b: String? = null
-println(a.length) // can be called safely, because a is never null
-println(b?.length) // b?.length returns the length of b, or null if b is null
-println(a?.length) // Unnecessary safe call
+println(a.length) // 可以安全调用，因为 a 永远不为 null
+println(b?.length) // b?.length 返回 b 的长度，如果 b 为 null 则返回 null
+println(a?.length) // 不必要的安全调用
 ```
 
-### Chaining Safe-Calls
+### 链式安全调用
 
 ```kotlin
-bob?.department?.head?.name // chain returns null if any property is null
+bob?.department?.head?.name // 如果任何属性为 null，链式调用返回 null
 ```
 
-### Elvis Operator
+### Elvis 运算符
 
 ```kotlin
-val l = b?.length ?: -1 // if b is null, return the default value -1
-// equval to:
+val l = b?.length ?: -1 // 如果 b 为 null，返回默认值 -1
+// 等同于：
 val l: Int = if (b != null) b.length else -1
 ```
 
-### Not Null Assertion Operator
+### 非空断言运算符
 
 ```kotlin
-val l = b!!.length // throws a NullPointerException, if b is null
+val l = b!!.length // 如果 b 为 null，抛出 NullPointerException
 ```
 
-## Collections
+## 集合
 
-### Immutable list
+### 不可变列表
 
 ```kotlin {.wrap}
 var programmingLanguages = listOf("C#", "Java", "Kotlin", "Ruby")
 ```
 
-### Mutable List
+### 可变列表
 
 ```kotlin {.wrap}
-var fruits = mutableListOf("Orange", "Apple", "Banana", "Mango")
+var fruits = mutableListOf("橙子", "苹果", "香蕉", "芒果")
 ```
 
-### Access List
+### 访问列表
 
 ```kotlin {.wrap}
-var cars = listOf("BMW", "Ferrari", "Volvo", "Tesla")
+var cars = listOf("宝马", "法拉利", "沃尔沃", "特斯拉")
 
-println(cars[2]) // Prints: Volvo
+println(cars[2]) // 打印：沃尔沃
 ```
 
-### Size Attribute
+### Size 属性
 
 ```kotlin {.wrap}
-var worldContinents = listOf("Asia", "Africa", "North America", "South America", "Antarctica", "Europe", "Australia")
+var worldContinents = listOf("亚洲", "非洲", "北美洲", "南美洲", "南极洲", "欧洲", "澳洲")
 
-println(worldContinents.size) // Prints: 7
+println(worldContinents.size) // 打印：7
 ```
 
-### List Manipulation {.row-span-2}
+### 列表操作 {.row-span-2}
 
 ```kotlin {.wrap}
-var seas = listOf("Black Sea", "Caribbean Sea", "North Sea")
-println(seas. contains("North Sea")) // Prints: true
+var seas = listOf("黑海", "加勒比海", "北海")
+println(seas.contains("北海")) // 打印：true
 
-// The contains() function performs a read operation on any list and determines if the element exists
-seas.add("Baltic Sea") // Error: cannot write to immutable list
-// The add() function can only be called on mutable lists, so the code above throws an error
+// contains() 函数对任何列表执行读取操作，并确定元素是否存在
+seas.add("波罗的海") // 错误：无法写入不可变列表
+// add() 函数只能在可变列表上调用，因此上面的代码会抛出错误
 ```
 
-### Immutable Sets
+### 不可变集
 
 ```kotlin {.wrap}
-var primaryColors = setOf("Red", "Blue", "Yellow")
+var primaryColors = setOf("红色", "蓝色", "黄色")
 ```
 
-### Mutable Sets
+### 可变集
 
 ```kotlin {.wrap}
-var womenInTech = mutableSetOf("Ada Lovelace", "Grace Hopper", "Radia Perlman", "Sister Mary Kenneth Keller")
+var womenInTech = mutableSetOf("阿达·洛芙莱斯", "格蕾丝·霍珀", "拉迪亚·珀尔曼", "玛丽·肯尼思·凯勒修女")
 ```
 
-### Access Collection Elements {.row-span-2}
+### 访问集合元素 {.row-span-2}
 
 ```kotlin {.wrap}
 var companies = setOf("Facebook", "Apple", "Netflix", "Google")
 
 println(companies.elementAt(3))
-// Prints: Google
+// 打印：Google
 println(companies.elementAt(4))
-// Returns and Error
+// 返回错误
 println(companies.elementAtOrNull(4))
-// Prints: null
+// 打印：null
 ```
 
-### Immutable Map
+### 不可变映射
 
 ```kotlin {.wrap}
-var averageTemp = mapOf("winter" to 35,  "spring" to 60,  "summer" to 85, "fall" to 55)
+var averageTemp = mapOf("冬天" to 35,  "春天" to 60,  "夏天" to 85, "秋天" to 55)
 ```
 
-### Mutable Mapping
+### 可变映射
 
 ```kotlin {.wrap}
-var europeanDomains = mutableMapOf("Germany" to "de", "Slovakia" to "sk", "Hungary" to "hu", "Norway" to "no")
+var europeanDomains = mutableMapOf("德国" to "de", "斯洛伐克" to "sk", "匈牙利" to "hu", "挪威" to "no")
 ```
 
-### Retrieve map keys and values
+### 检索映射的键和值
 
 ```kotlin {.wrap}
-var oscarWinners = mutableMapOf("Parasite" to "Bong Joon-ho", "Green Book" to "Jim Burke", "The Shape Of Water" to "Guillermo del Toro")
+var oscarWinners = mutableMapOf("寄生虫" to "奉俊昊", "绿皮书" to "吉姆·伯克", "水形物语" to "吉尔莫·德尔·托罗")
 
 println(oscarWinners.keys)
-// Prints: [Parasite, Green Book, The Shape Of Water]
+// 打印：[寄生虫, 绿皮书, 水形物语]
 
 println(oscarWinners.values)
-// Prints: [Bong Joon-ho, Jim Burke, Guillermo del Toro]
-println(oscarWinners["Parasite"])
-// Prints: Bong Joon-ho
+// 打印：[奉俊昊, 吉姆·伯克, 吉尔莫·德尔·托罗]
+println(oscarWinners["寄生虫"])
+// 打印：奉俊昊
 ```
 
-### Add and remove map entries
+### 添加和删除映射条目
 
 ```kotlin {.wrap}
-var worldCapitals = mutableMapOf("United States" to "Washington D.C.", "Germany" to "Berlin", "Mexico" to "Mexico City", "France" to "Paris")
+var worldCapitals = mutableMapOf("美国" to "华盛顿特区", "德国" to "柏林", "墨西哥" to "墨西哥城", "法国" to "巴黎")
 
-worldCapitals.put("Brazil", "Brasilia")
+worldCapitals.put("巴西", "巴西利亚")
 println(worldCapitals)
-// Prints: {United States=Washington D.C., Germany=Berlin, Mexico=Mexico City, France=Paris, Brazil=Brasilia}
+// 打印：{美国=华盛顿特区, 德国=柏林, 墨西哥=墨西哥城, 法国=巴黎, 巴西=巴西利亚}
 
-worldCapitals.remove("Germany")
+worldCapitals.remove("德国")
 println(worldCapitals)
-// Prints: {United States=Washington D.C., Mexico=Mexico City, France=Paris, Brazil=Brasilia}
+// 打印：{美国=华盛顿特区, 墨西哥=墨西哥城, 法国=巴黎, 巴西=巴西利亚}
 ```
 
-## Function
+## 函数
 
-### Function
+### 函数
 
 ```kotlin
 fun greet() {
-  println("Hey there!")
+  println("你好！")
 }
 
 fun main() {
-  //Function call
-  greet() //Prints: Hey there!
+  //函数调用
+  greet() //打印：你好！
 }
 ```
 
-### Function Parameters
+### 函数参数
 
 ```kotlin {.wrap}
 fun birthday(name: String, age: Int) {
-   println("Happy birthday $name! You turn $age today!")
+   println("生日快乐，$name！你今天 $age 岁了！")
 }
 
 fun main() {
-  birthday("Oscar", 26)
-  //Prints: Happy birthday Oscar! You turn 25 today!
-  birthday("Amarah", 30)
-  //Prints: Happy birthday Amarah! You turn 30 today!
+  birthday("奥斯卡", 26)
+  //打印：生日快乐，奥斯卡！你今天 26 岁了！ (原文输出是25，但调用是26)
+  birthday("阿玛拉", 30)
+  //打印：生日快乐，阿玛拉！你今天 30 岁了！
 }
 ```
 
-### Default Parameters
+### 默认参数
 
 ```kotlin {.wrap}
-fun favoriteLanguage(name, language = "Kotlin") {
-  println("Hello, $name. Your favorite programming language is $language")
+fun favoriteLanguage(name: String, language: String = "Kotlin") { // name 参数也需要类型
+  println("你好，$name。你最喜欢的编程语言是 $language")
 }
 
 fun main() {
-  favoriteLanguage("Manon")
-  //Prints: Hello, Manon. Your favorite programming language is Kotlin
+  favoriteLanguage("玛侬")
+  //打印：你好，玛侬。你最喜欢的编程语言是 Kotlin
 
-  favoriteLanguage("Lee", "Java")
-  //Prints: Hello, Lee. Your favorite programming language is Java
+  favoriteLanguage("李", "Java")
+  //打印：你好，李。你最喜欢的编程语言是 Java
 }
 ```
 
-### Named Parameters
+### 命名参数
 
 ```kotlin {.wrap}
 fun findMyAge(currentYear: Int, birthYear: Int) {
-   var myAge = currentYear -birthYear
-println("I am $myAge years old.")
+   var myAge = currentYear - birthYear
+   println("我 $myAge 岁了。")
 }
 
 fun main() {
   findMyAge(currentYear = 2020, birthYear = 1995)
-  //Prints: I am 25 years old.
+  //打印：我 25 岁了。
   findMyAge(birthYear = 1920, currentYear = 2020)
-  //Prints: I am 100 years old.
+  //打印：我 100 岁了。
 }
 ```
 
-### Return Statement
+### 返回语句
 
 ```kotlin {.wrap}
-//Return type is declared outside the parentheses
+//返回类型在括号外声明
 fun getArea(length: Int, width: Int): Int {
-  var area = length *width
+  var area = length * width
 
-  //return statement
+  //return 语句
   return area
 }
 
 fun main() {
   var myArea = getArea(10, 8)
-println("The area is $myArea.")
-//Prints: The area is 80.
+  println("面积是 $myArea。")
+  //打印：面积是 80。
 }
 ```
 
-### Single expression function
+### 单表达式函数
 
 ```kotlin{.wrap}
 fun fullName(firstName: String, lastName: String) = "$firstName $lastName"
 
 fun main() {
-  println(fullName("Ariana", "Ortega"))
-  //Prints: Ariana Ortega
-  println(fullName("Kai", "Gittens"))
-  //Prints: Kai Gittens
+  println(fullName("爱莉安娜", "奥尔特加"))
+  //打印：爱莉安娜 奥尔特加
+  println(fullName("凯", "吉滕斯"))
+  //打印：凯 吉滕斯
 }
 ```
 
-### Function Literals
+### 函数字面量
 
 ```kotlin{.wrap}
 fun main() {
-  //Anonymous Function:
+  //匿名函数：
   var getProduct = fun(num1: Int, num2: Int): Int {
-return num1 *num2
+    return num1 * num2
   }
   println(getProduct(8, 3))
-  //Prints: 24
-//Lambda Expression
-  var getDifference = { num1: Int, num2: Int -> num1 -num2 }
+  //打印：24
+  //Lambda 表达式
+  var getDifference = { num1: Int, num2: Int -> num1 - num2 }
   println(getDifference(10, 3))
-  //Prints: 7
+  //打印：7
 }
 ```
 
-## Class
+## 类
 
-### Class Example
+### 类示例
 
 ```kotlin
-//class with properties containing default values
+//带有包含默认值属性的类
 class Student {
-  var name = "Lucia"
-  var semester = "Fall"
+  var name = "露西娅"
+  var semester = "秋季"
   var gpa = 3.95
 }
 
-//shorthand syntax without class body
+//不带类体的简写语法
 class Student
 ```
 
-### Class Instance
+### 类实例
 
 ```kotlin
-// Class
+// 类
 class Student {
-  var name = "Lucia"
-  var semester = "Fall"
-var gpa = 3.95
+  var name = "露西娅"
+  var semester = "秋季"
+  var gpa = 3.95
 }
 
 fun main() {
   var student = Student()
-  // Instance
+  // 实例
   println(student.name)
-  // Prints: Lucia
+  // 打印：露西娅
   println(student.semester)
-  // Prints: Fall
+  // 打印：秋季
   println(student.gpa)
-  // Prints: 3.95
+  // 打印：3.95
 }
 ```
 
-### Primary Constructor
+### 主构造函数
 
 ```kotlin {.wrap}
 class Student(val name: String, val gpa: Double, val semester: String, val estimatedGraduationYear: Int)
 
 fun main() {
-  var student = Student("Lucia", 3.95, "Fall", 2022)
+  var student = Student("露西娅", 3.95, "秋季", 2022)
   println(student.name)
-  //Prints: Lucia
+  //打印：露西娅
   println(student.gpa)
-  //Prints: 3.95
+  //打印：3.95
   println(student.semester)
-  //Prints: Fall
+  //打印：秋季
   println(student.estimatedGraduationYear)
-  //Prints: 2022
+  //打印：2022
 }
 ```
 
-### Initialization Block
+### 初始化代码块
 
 ```kotlin {.wrap}
 class Student(val name: String, val gpa: Double, val semester: String, val estimatedGraduationYear: Int) {
   init {
-    println("$name has ${estimatedGraduationYear -2020} years left in college.")
+    println("$name 还有 ${estimatedGraduationYear - 2020} 年大学毕业。")
   }
 }
 
 fun main() {
-  var student = Student("Lucia", 3.95, "Fall", 2022)
-//Prints: Lucia has 2 years left in college.
+  var student = Student("露西娅", 3.95, "秋季", 2022)
+  //打印：露西娅 还有 2 年大学毕业。
 }
 ```
 
-### Member Function {.col-span-2}
+### 成员函数 {.col-span-2}
 
 ```kotlin {.wrap}
 class Student(val name: String, val gpa: Double, val semester: String, val estimatedGraduationYear: Int) {
 
   init {
-println("$name has ${estimatedGraduationYear -2020} years left in college.")
+    println("$name 还有 ${estimatedGraduationYear - 2020} 年大学毕业。")
   }
 
-  //member function
+  //成员函数
   fun calculateLetterGrade(): String {
     return when {
       gpa >= 3.0 -> "A"
       gpa >= 2.7 -> "B"
       gpa >= 1.7 -> "C"
-gpa >= 1.0 -> "D"
+      gpa >= 1.0 -> "D"
       else -> "E"
     }
   }
 }
 
-//When the instance is created and the function is called, the when expression will be executed and return the letter grade
+//创建实例并调用函数时，将执行 when 表达式并返回字母等级
 fun main() {
-  var student = Student("Lucia", 3.95, "Fall", 2022)
-//Prints: Lucia has 2 years left in college.
-  println("${student.name}'s letter grade is ${student.calculateLetterGrade()}.")
-  //Prints: Lucia's letter grade is A.
+  var student = Student("露西娅", 3.95, "秋季", 2022)
+  //打印：露西娅 还有 2 年大学毕业。
+  println("${student.name} 的字母等级是 ${student.calculateLetterGrade()}。")
+  //打印：露西娅 的字母等级是 A。
 }
 ```
 
-## See Also
+## 另请参阅
 
-- [Kotlin Language Official Documentation](https://kotlinlang.org/) _(kotlinlang.org)_
+- [Kotlin 语言官方文档](https://kotlinlang.org/) _(kotlinlang.org)_

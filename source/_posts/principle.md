@@ -7,78 +7,78 @@ tags:
   -
   - mac
 categories:
-  - Keyboard Shortcuts
+  - 键盘快捷键
 intro: |
-  A visual cheat-sheet for the 30 keyboard shortcuts found in Principle. This application is MacOS-only.
+  Principle 中 30 个键盘快捷键的可视化速查表。此应用程序仅适用于 MacOS。
 ---
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-### Layers {.row-span-2}
+### 图层 {.row-span-2}
 
-| Shortcut          | Action                   |
+| 快捷键            | 操作                   |
 | ----------------- | ------------------------ |
-| `R`               | Add rectangle            |
-| `Opt` `R`         | Add rectangle as a child |
-| `T`               | Add text                 |
-| `Opt` `T`         | Add text as a child      |
-| `A`               | Add artboard             |
-| `Cmd` `G`         | Group                    |
-| `Cmd` `Shift` `G` | Ungroup                  |
-| `Cmd` `]`         | Bring forward            |
-| `Cmd` `Shift` `]` | Bring to front           |
-| `Cmd` `[`         | Send backward            |
-| `Cmd` `Shift` `[` | Send to back             |
+| `R`               | 添加矩形                 |
+| `Opt` `R`         | 添加矩形作为子级         |
+| `T`               | 添加文本                 |
+| `Opt` `T`         | 添加文本作为子级         |
+| `A`               | 添加画板                 |
+| `Cmd` `G`         | 编组                     |
+| `Cmd` `Shift` `G` | 取消编组                 |
+| `Cmd` `]`         | 上移一层                 |
+| `Cmd` `Shift` `]` | 置于顶层                 |
+| `Cmd` `[`         | 下移一层                 |
+| `Cmd` `Shift` `[` | 置于底层                 |
 
 {.shortcuts}
 
-### Editing
+### 编辑
 
-| Shortcut           | Action       |
+| 快捷键             | 操作         |
 | ------------------ | ------------ |
-| `(arrows)`         | Nudge        |
-| `Shift` `(arrows)` | Large nudge  |
-| `Cmd` `D`          | Duplicate    |
-| `Cmd` `R`          | Rename layer |
+| `(arrows)`         | 微移         |
+| `Shift` `(arrows)` | 大幅微移     |
+| `Cmd` `D`          | 复制         |
+| `Cmd` `R`          | 重命名图层   |
 
 {.shortcuts}
 
-### Canvas Navigation
+### 画布导航
 
-| Shortcut         | Action              |
+| 快捷键           | 操作                |
 | ---------------- | ------------------- |
-| `Space` `(drag)` | Pan                 |
-| `Cmd` `=`        | Zoom in             |
-| `Cmd` `-`        | Zoom out            |
-| `Cmd` `1`        | Zoom all            |
-| `Cmd` `2`        | Zoom selection      |
-| `Cmd` `3`        | Center selection    |
-| `Cmd` `0`        | Zoom to actual size |
+| `Space` `(drag)` | 平移                |
+| `Cmd` `=`        | 放大                |
+| `Cmd` `-`        | 缩小                |
+| `Cmd` `1`        | 缩放以显示全部      |
+| `Cmd` `2`        | 缩放以显示所选内容  |
+| `Cmd` `3`        | 居中所选内容        |
+| `Cmd` `0`        | 缩放到实际大小      |
 
 {.shortcuts}
 
-### Selection
+### 选择
 
-| Shortcut      | Action                  |
+| 快捷键        | 操作                  |
 | ------------- | ----------------------- |
-| `Esc`         | Select parent           |
-| `Enter`       | Select child            |
-| `Tab`         | Select next sibling     |
-| `Shift` `Tab` | Select previous sibling |
-| `Cmd` `A`     | Select all siblings     |
+| `Esc`         | 选择父级                |
+| `Enter`       | 选择子级                |
+| `Tab`         | 选择下一个同级          |
+| `Shift` `Tab` | 选择上一个同级          |
+| `Cmd` `A`     | 选择所有同级            |
 
 {.shortcuts}
 
-### Preview
+### 预览
 
-| Shortcut         | Action                               |
+| 快捷键           | 操作                                 |
 | ---------------- | ------------------------------------ |
-| `W`              | Rewind prototype                     |
-| `Ctrl` `V`       | Start recording video                |
-| `Ctrl` `Opt` `V` | Start recording video without cursor |
+| `W`              | 重置原型                             |
+| `Ctrl` `V`       | 开始录制视频                         |
+| `Ctrl` `Opt` `V` | 开始录制视频（不含光标）             |
 
 {.shortcuts}
 
-## Also see
+## 另请参阅
 
-- [Keyboard shortcuts for Principle](https://principleformac.com/docs.html#shortcuts) _(principleformac.com)_
+- [Principle 键盘快捷键](https://principleformac.com/docs.html#shortcuts) _(principleformac.com)_
